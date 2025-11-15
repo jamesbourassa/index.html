@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About the Founder | QDL Physics Institute</title>
+  <title>QDL Physics | About the Founder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="About the founder of the QDL Physics Institute, James D. Bourassa, and the Quantized Dimensional Ledger research program."
+    content="About the founder of the QDL Physics Institute and the Quantized Dimensional Ledger research program."
   />
   <style>
     :root {
@@ -139,6 +139,46 @@
       padding: 1.5rem 1.25rem 3rem;
     }
 
+    .hero {
+      padding: 2.5rem 0 1.8rem;
+    }
+
+    .hero-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      font-weight: 650;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 38rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-chip {
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
     section {
       margin-top: 2.5rem;
       padding-top: 1.5rem;
@@ -151,55 +191,92 @@
     }
 
     .section-header {
-      margin-bottom: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
     .section-title {
-      font-size: 1.3rem;
-      font-weight: 650;
-      letter-spacing: 0.05em;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #e5e7eb;
     }
 
     .section-kicker {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       color: var(--muted);
-      margin-top: 0.35rem;
+      max-width: 28rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 860px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
       background: rgba(15, 23, 42, 0.96);
       border-radius: 16px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      padding: 1.4rem 1.2rem;
-      margin-bottom: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.2rem 1.1rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
+    }
+
+    .card + .card {
+      margin-top: 0.9rem;
     }
 
     .card-title {
-      font-size: 1rem;
-      font-weight: 550;
+      font-size: 0.98rem;
+      font-weight: 560;
       margin-bottom: 0.4rem;
     }
 
     .card-meta {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--muted);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.45rem;
     }
 
     .card p {
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       color: #d1d5db;
-      margin-bottom: 0.5rem;
     }
 
     ul {
       padding-left: 1.1rem;
+      font-size: 0.86rem;
     }
 
     ul li {
       margin-bottom: 0.25rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      color: #cbd5f5;
     }
 
     footer {
@@ -220,24 +297,6 @@
       align-items: center;
     }
   </style>
-
-  <!-- MathJax (kept for consistency if equations are added) -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']],
-        displayMath: [['\\[', '\\]'], ['$$', '$$']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-  </script>
-  <script
-    id="MathJax-script"
-    async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js">
-  </script>
 </head>
 <body>
 <header>
@@ -250,175 +309,183 @@
       </div>
     </div>
     <nav class="nav-links">
-      <a href="index.html#framework">Framework</a>
-      <a href="index.html#experiments">Experiments</a>
-      <a href="index.html#publications">Publications</a>
-      <a href="index.html#institute">Institute</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="index.html#publications">Publications</a>
       <a href="index.html#contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-kicker">About the Founder</div>
+    <h1 class="hero-title">James D. Bourassa · QDL Physics Institute</h1>
+    <p class="hero-sub">
+      James D. Bourassa is the founder and director of the QDL Physics Institute, an independent
+      research program focused on the Quantized Dimensional Ledger (QDL): a unified, length–frequency
+      dimensional framework linking gravitation, electromagnetism, and precision metrology.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-chip">Quantized Dimensional Ledger (QDL)</div>
+      <div class="hero-chip">Dimensional closure &amp; QMU ledgers</div>
+      <div class="hero-chip">Scalar–tensor gravity &amp; metrology</div>
+    </div>
+  </section>
+
+  <!-- Founder bio -->
+  <section id="founder">
     <div class="section-header">
-      <h1 class="section-title">About the Founder</h1>
+      <h2 class="section-title">Research Profile</h2>
       <p class="section-kicker">
-        James D. Bourassa &middot; Founder and Director, QDL Physics Institute
+        Dimensional ontology, quantum metrology, and unified frameworks for physical constants.
+      </p>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3 class="card-title">Overview</h3>
+        <p>
+          Bourassa’s current work develops the Quantized Dimensional Ledger (QDL), a unified
+          <em>3L + 2F</em> length–frequency basis intended to bring algebraic closure and conceptual
+          clarity to mechanical, electromagnetic, gravitational, and thermodynamic quantities.
+          Within this framework, mass and time are treated as derived constructs, while the
+          Quantum Measurement Unit (QMU) provides a common dimensional reference cell.
+        </p>
+        <p style="margin-top:0.6rem;">
+          His research focuses on:
+        </p>
+        <ul style="margin-top:0.3rem;">
+          <li>Constructing a 100-entry QMU ledger with cross-domain dimensional closure.</li>
+          <li>Classifying fundamental constants into invariants, couplings, and emergent ratios.</li>
+          <li>Exploring scalar–tensor extensions of Einstein–Maxwell theory aligned with QDL.</li>
+          <li>Designing laboratory-scale tests (torsion balances, NV centers) sensitive to QDL effects.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Contact & IDs</h3>
+        <p>
+          <strong>Affiliation:</strong> QDL Physics Institute, Huntley, IL 60142, USA<br />
+          <strong>Email:</strong>
+          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a><br />
+          <strong>ORCID:</strong>
+          <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">
+            0009-0008-0155-0051
+          </a>
+        </p>
+        <p style="margin-top:0.6rem;">
+          Bourassa’s work is positioned at the intersection of dimensional analysis, metrology,
+          and theoretical physics. He is particularly interested in collaborations that
+          bring together precision experiments and foundational dimensional frameworks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Canonical QDL papers -->
+  <section id="canonical">
+    <div class="section-header">
+      <h2 class="section-title">Canonical QDL Papers</h2>
+      <p class="section-kicker">
+        Core references for the Quantized Dimensional Ledger research program.
       </p>
     </div>
 
     <div class="card">
-      <h2 class="card-title">Scientific Background</h2>
+      <h3 class="card-title">
+        The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
+      </h3>
       <p class="card-meta">
-        For journal editors, reviewers, and collaborators seeking context on the QDL research program.
-      </p>
-      <p>
-        <strong>James D. Bourassa</strong> is the founder and director of the QDL Physics Institute,
-        where he leads the development of the <em>Quantized Dimensional Ledger (QDL)</em>—a unified
-        physical framework grounded in dimensional closure, geometric consistency, and predictive
-        experimental design.
-      </p>
-      <p>
-        His current research advances the <em>Quantum Measurement Unit (QMU)</em> audit into a
-        comprehensive theoretical system that integrates:
-      </p>
-      <ul>
-        <li>a covariant field-theoretic Lagrangian,</li>
-        <li><strong>3 + 2 dimensional (length–frequency) metric geometry</strong>,</li>
-        <li>scalar–tensor extensions of Einstein–Maxwell theory,</li>
-        <li>and <strong>cross-domain retrodictions</strong> linking atomic, electromagnetic,
-            gravitational, and cosmological regimes.</li>
-      </ul>
-      <p>
-        Bourassa’s recent work introduces geometric dynamics built on variational principles with
-        field symmetries under <strong>SO(3,2)</strong>, enabling a coherent mapping between
-        dimensional structure and physical ontology. Within this construction, the legacy
-        <em>Aether Unit</em> is reinterpreted as a <strong>quantized SO(3,2) space–time fiber</strong>,
-        providing a mathematically transparent foundation for the QDL’s unified treatment of
-        constants, fields, and interactions.
-      </p>
-      <p>
-        His research program emphasizes mathematically rigorous ledger-style dimensional closure,
-        parameter-free or minimally parameterized predictions, and <strong>falsifiable laboratory
-        experiments</strong> spanning torsion balances, NV centers, electromagnetic stress modulation,
-        and precision metrology.
-      </p>
-      <p>
-        Through the QDL Physics Institute, Bourassa is developing a modern, experimentally grounded
-        approach to unification that connects geometry, electromagnetism, gravitation, and measurement
-        science within a single dimensional and variational framework.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2 class="card-title">For Journal Editors &amp; Reviewers</h2>
-      <p class="card-meta">
-        Affiliation consistency, contact details, and indexing-relevant information.
-      </p>
-      <p>
-        When processing manuscripts related to the Quantized Dimensional Ledger framework, the
-        following author and affiliation format can be used:
-      </p>
-      <ul>
-        <li><strong>Author:</strong> James D. Bourassa</li>
-        <li><strong>Affiliation:</strong> QDL Physics Institute</li>
-        <li><strong>Address:</strong> 11731 Woodcreek Drive, Huntley, IL 60142, USA</li>
-        <li><strong>Email:</strong> <a href="mailto:james@qdlphysics.org">james@qdlphysics.org</a></li>
-        <li><strong>Website:</strong> <a href="https://qdlphysics.org" target="_blank" rel="noopener noreferrer">https://qdlphysics.org</a></li>
-      </ul>
-      <p>
-        The QDL Physics Institute is an independent research institute focused on unified dimensional
-        physics, scalar–tensor extensions of Einstein–Maxwell theory, and precision experimental tests.
-        Theoretical work is accompanied, where possible, by clear experimental proposals and
-        parameter-transparent predictions suitable for laboratory falsification.
-      </p>
-      <p>
-        For verification of identity, contribution history, and citation tracking, editors and reviewers
-        may consult the ORCID and Zenodo links provided below. Additional technical documentation,
-        ledger tables, and simulation scripts are made available as supplementary material when required
-        by the journal.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2 class="card-title">Research Focus Areas</h2>
-      <p>
-        The QDL research program currently includes:
-      </p>
-      <ul>
-        <li>
-          <strong>Scalar–tensor extensions of Einstein–Maxwell theory</strong> with a single
-          coherence field \(\sigma(x)\) and two independent coupling functions \(Y(\sigma)\) and
-          \(Z(\sigma)\).
-        </li>
-        <li>
-          <strong>Dimensional ledger methods</strong> that tie physical constants, units, and
-          field equations to a unified 3 + 2 (length–frequency) basis with strict dimensional closure.
-        </li>
-        <li>
-          <strong>Laboratory-scale tests</strong> including torsion-balance torque measurements and
-          NV-center frequency shifts that provide binary, falsifiable signatures for QDL-style
-          scalar–tensor models.
-        </li>
-        <li>
-          <strong>Metrology and standards</strong> applications, where ledger-style audits are used
-          to clarify how fundamental constants and measurement units participate in coherent physical
-          models.
-        </li>
-      </ul>
-      <p>
-        These themes converge on a single objective: a coherent, testable framework in which
-        geometry, fields, and measurement are expressed within the same dimensional and variational
-        language.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2 class="card-title">Links for Editors, Collaborators &amp; Indexing</h2>
-      <p class="card-meta">
-        Persistent identifiers and key preprints.
-      </p>
-      <p>
-        <strong>ORCID:</strong><br />
-        <!-- Replace the dummy ID below with your actual ORCID ID when ready -->
-        <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">
-          https://orcid.org/0009-0008-0155-0051&nbsp;[author ORCID profile]
+        Bourassa, J. D. (2025). Zenodo. DOI:
+        <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
+          10.5281/zenodo.17619526
         </a>
       </p>
-      <p style="margin-top:0.5rem;">
-        <strong>Zenodo (QDL preprint):</strong><br />
+      <p>
+        Establishes the QDL framework as a unified 3L + 2F dimensional basis and presents a
+        100-entry Quantum Measurement Unit (QMU) ledger spanning mechanics, electromagnetism,
+        gravitation, and thermodynamics. The work develops a dimensional ontology for physical
+        constants, separating them into dimensionless invariants, dimensional couplings, and
+        emergent geometric–frequency ratios. The Zenodo record includes the full ledger in CSV
+        format and documentation suitable for independent audit and reuse.
+      </p>
+      <div class="pill-row">
+        <span class="pill">3L + 2F basis</span>
+        <span class="pill">QMU ledger (100 entries)</span>
+        <span class="pill">Fundamental constants</span>
+        <span class="pill">Metrology</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        A Quantized Dimensional Ledger Framework for Gravitation, Electromagnetism, and Metrology
+      </h3>
+      <p class="card-meta">
+        Bourassa, J. D. (2025). Zenodo. DOI:
         <a href="https://doi.org/10.5281/zenodo.17515009" target="_blank" rel="noopener noreferrer">
-          A Quantized Dimensional Ledger Framework for Gravitation, Electromagnetism, and Metrology
-          (Zenodo, DOI: 10.5281/zenodo.17515009)
+          10.5281/zenodo.17515009
         </a>
       </p>
-      <p style="margin-top:0.5rem;">
-        As journal versions stabilize, additional preprints, datasets, and supplementary materials
-        will be linked from both Zenodo and the main
-        <a href="https://qdlphysics.org" target="_blank" rel="noopener noreferrer">QDL Physics Institute</a>
-        website.
+      <p>
+        Earlier, broader preprint outlining the QDL framework as a unifying dimensional scaffold
+        for gravitation, electromagnetism, and precision measurement. This manuscript provides
+        the conceptual bridge from traditional dimensional analysis to a ledger-based treatment
+        of physical quantities and motivates the more refined metrology-focused work in the
+        later QDL Metrology paper.
       </p>
-      <p style="margin-top:0.5rem;">
-        For formal correspondence regarding manuscript evaluation, replication questions, or data
-        access, please contact:
-        <br />
-        <strong>Email:</strong> <a href="mailto:james@qdlphysics.org">james@qdlphysics.org</a>
+      <div class="pill-row">
+        <span class="pill">Unified dimensional scaffold</span>
+        <span class="pill">Gravitation &amp; EM</span>
+        <span class="pill">Metrological interpretation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- For journal editors -->
+  <section id="editors">
+    <div class="section-header">
+      <h2 class="section-title">For Journal Editors &amp; Collaborators</h2>
+      <p class="section-kicker">
+        Notes on scope, reproducibility, and how the QDL work fits within theoretical and applied physics.
       </p>
     </div>
 
     <div class="card">
-      <h2 class="card-title">Contact</h2>
+      <h3 class="card-title">Scope &amp; Reproducibility</h3>
       <p>
-        <strong>Institute:</strong> QDL Physics Institute<br />
-        <strong>Location:</strong> 11731 Woodcreek Drive, Huntley, IL 60142, USA<br />
-        <strong>Email:</strong> <a href="mailto:james@qdlphysics.org">james@qdlphysics.org</a>
+        The QDL program is intended as a dimensional ontology and metrological framework rather
+        than a competing dynamical theory. The emphasis is on:
       </p>
-      <p style="margin-top:0.5rem;">
-        For scientific collaboration (torsion balances, NV centers, metrology, or scalar–tensor
-        modeling), please also see the
-        <a href="index.html#contact">Contact &amp; Collaboration</a> section on the main page.
+      <ul style="margin-top:0.3rem;">
+        <li>Algebraic closure across mechanical, electromagnetic, and gravitational quantities.</li>
+        <li>Ledger-style documentation of exponents and units for transparent audit.</li>
+        <li>Clear separation of dimensional structure from specific field equations.</li>
+      </ul>
+      <p style="margin-top:0.6rem;">
+        All ledger data supporting recent manuscripts are publicly available via Zenodo, with
+        machine-readable CSV files and explanatory README documentation to facilitate independent
+        analysis, replication, and critical review.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Collaboration Interests</h3>
+      <p>
+        Collaboration is particularly welcome with:
+      </p>
+      <ul style="margin-top:0.3rem;">
+        <li>Metrology institutes and standards laboratories.</li>
+        <li>Groups working on fundamental constants and CODATA-related analysis.</li>
+        <li>Torsion-balance and precision-force experiment teams.</li>
+        <li>Quantum sensing groups (NV centers, atomic clocks, optical frequency standards).</li>
+      </ul>
+      <p style="margin-top:0.6rem;">
+        Prospective collaborators and journal editors may contact
+        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+        for additional derivations, extended ledger tables, or tailored dimensional audits.
       </p>
     </div>
   </section>
@@ -426,20 +493,15 @@
 
 <footer>
   <div class="footer-grid">
-    <div>
-      &copy; <span id="year"></span> QDL Physics Institute. All rights reserved.
-    </div>
-    <div>
-      Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Precision Tests
-    </div>
+    <div>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</div>
+    <div>Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Metrology</div>
   </div>
 </footer>
 
 <script>
-  // Set current year in footer
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
+
 
