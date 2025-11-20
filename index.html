@@ -70,20 +70,35 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
-    .logo-icon {
-      width: 28px;
-      height: 28px;
+    .logo-mark {
+      width: 32px;
+      height: 32px;
       border-radius: 999px;
       border: 1px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+      overflow: hidden;
+      background: radial-gradient(circle at top, #020617, #020617 60%, #000);
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Fallback letter if logo image is not present */
+    .logo-fallback {
       font-size: 0.9rem;
       color: var(--accent);
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+      font-weight: 600;
+      letter-spacing: 0.06em;
     }
 
     .logo-text-main {
@@ -338,6 +353,13 @@
       color: var(--muted);
     }
 
+    .section-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
@@ -428,7 +450,10 @@
 <header>
   <div class="nav">
     <div class="logo">
-      <div class="logo-icon">Q</div>
+      <div class="logo-mark">
+        <!-- Replace qdl-logo.png with the path to your new logo asset -->
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" class="logo-img" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=&quot;logo-fallback&quot;>QDL</div>';">
+      </div>
       <div>
         <div class="logo-text-main">QDL Physics Institute</div>
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
@@ -438,6 +463,9 @@
       <a href="#framework">Framework</a>
       <a href="#experiments">Experiments</a>
       <a href="#publications">Publications</a>
+      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+        Zenodo
+      </a>
       <a href="#institute">Institute</a>
       <a href="about.html">About</a>
       <a href="#contact" class="nav-cta">Contact</a>
@@ -464,11 +492,11 @@
         <li><span>●</span> Concrete signatures: torsion-balance torques and NV-center frequency shifts.</li>
       </ul>
       <div class="hero-actions">
-        <a href="#publications" class="btn btn-primary">
-          View QDL papers
+        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          View Zenodo community
         </a>
-        <a href="#experiments" class="btn btn-secondary">
-          Experimental proposals
+        <a href="#publications" class="btn btn-secondary">
+          Selected QDL papers
         </a>
       </div>
       <p class="hero-tagline">
@@ -616,11 +644,96 @@
   <section id="publications">
     <div class="section-header">
       <h2 class="section-title">Publications & Preprints</h2>
-      <p class="section-kicker">
-        Canonical QDL papers and companion datasets hosted via Zenodo.
+      <div class="section-actions">
+        <p class="section-kicker">
+          Canonical QDL papers and companion datasets hosted via Zenodo.
+        </p>
+        <a
+          href="https://zenodo.org/communities/qdl-physics-institute/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          View all records on Zenodo
+        </a>
+      </div>
+    </div>
+
+    <!-- Newer QDL papers (hosted via community) -->
+    <div class="card">
+      <h3 class="card-title">
+        A Minimal Length–Frequency Basis for Physical Quantities: An Inverse-Length Cavity Scaling Lab
+      </h3>
+      <p class="card-meta">
+        Bourassa, J. D. (2025). Hosted via the
+        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+          QDL Physics Institute Zenodo community
+        </a>.
+      </p>
+      <p>
+        Pedagogical treatment of dimensional analysis in a length–frequency basis, using an inverse-length
+        cavity scaling experiment as a concrete lab context. Connects directly to the QDL metrology
+        primitives and provides an education-ready bridge from conventional M–L–T analysis to a 3L+2F
+        ledger language.
       </p>
     </div>
 
+    <div class="card">
+      <h3 class="card-title">
+        A Dimensional Closure Framework for the Ontology of Physical Constants
+      </h3>
+      <p class="card-meta">
+        Bourassa, J. D. (2025). Hosted via the
+        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+          QDL Physics Institute Zenodo community
+        </a>.
+      </p>
+      <p>
+        Introduces a five-dimensional 3L+2F exponent basis and a canonical 100-entry Quantized Dimensional
+        Ledger (QDL) for physical quantities. Classifies constants into invariants, couplings, and emergent
+        ratios, and demonstrates how quantities such as the vacuum impedance and the Rydberg constant
+        acquire transparent structural roles in the ledger.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        Structural Constraints on Fundamental Constants in a Five-Dimensional Integer-Exponent Framework
+      </h3>
+      <p class="card-meta">
+        Bourassa, J. D. (2025). Hosted via the
+        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+          QDL Physics Institute Zenodo community
+        </a>.
+      </p>
+      <p>
+        Develops the QDL lattice into a precise algebraic tool for analyzing the independence structure of
+        physical constants. Proves a trichotomy into Type I (dimensionless invariants), Type II (dimensional
+        generators), and Type III (emergent ratios), and shows that only the first class can vary independently
+        without breaking dimensional neutrality of the field equations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">
+        Toroidal Coordinate Representation of the Schrödinger Equation with Cross-Domain Structural Applications
+      </h3>
+      <p class="card-meta">
+        Bourassa, J. D. (2025). Hosted via the
+        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+          QDL Physics Institute Zenodo community
+        </a>.
+      </p>
+      <p>
+        Presents a fully separated toroidal-coordinate representation of the time-independent Schrödinger
+        equation and a unitary map back to the spherical basis. Couples this Toroidal Orbit Model (TOM)
+        to the QDL dimensional ledger and a seat-tiling grammar, reproducing shell capacities, magic numbers,
+        and angular patterns in atomic, nuclear, and molecular domains under equal-parameter statistical
+        comparisons.
+      </p>
+    </div>
+
+    <!-- Existing ledger-focused Zenodo records -->
     <div class="card">
       <h3 class="card-title">
         The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
@@ -661,9 +774,9 @@
       <h3 class="card-title">Ledger Data and Supplementary Material</h3>
       <p>
         The QDL Metrology Zenodo record includes the full 100-entry QMU ledger in CSV form, with a
-        README documenting column definitions and usage notes. Additional derivation notes and
-        supplementary materials will be linked from that record and from this site as the QDL
-        research program progresses.
+        README documenting column definitions and usage notes. Additional derivation notes, code,
+        and supplementary materials are linked from the relevant Zenodo records and from this site
+        as the QDL research program progresses.
       </p>
     </div>
   </section>
@@ -768,4 +881,6 @@
 
 </body>
 </html>
+
+
 
