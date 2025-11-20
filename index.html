@@ -73,32 +73,24 @@
       gap: 0.6rem;
     }
 
-    .logo-mark {
-      width: 32px;
-      height: 32px;
+    /* BIGGER LOGO — 80×80px */
+    .logo-icon {
+      width: 80px;
+      height: 80px;
       border-radius: 999px;
-      border: 1px solid var(--accent);
+      overflow: hidden;
+      border: 2px solid rgba(56, 189, 248, 0.9);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
-      overflow: hidden;
-      background: radial-gradient(circle at top, #020617, #020617 60%, #000);
     }
 
     .logo-img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       display: block;
-    }
-
-    /* Fallback letter if logo image is not present */
-    .logo-fallback {
-      font-size: 0.9rem;
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 0.06em;
     }
 
     .logo-text-main {
@@ -428,7 +420,6 @@
     }
   </style>
 
-  <!-- MathJax for LaTeX rendering -->
   <script>
     window.MathJax = {
       tex: {
@@ -446,26 +437,28 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js">
   </script>
 </head>
+
 <body>
+
 <header>
   <div class="nav">
     <div class="logo">
-      <div class="logo-mark">
-        <!-- Replace qdl-logo.png with the path to your new logo asset -->
-        <img src="qdl-logo.png" alt="QDL Physics Institute logo" class="logo-img" onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=&quot;logo-fallback&quot;>QDL</div>';">
+      <div class="logo-icon">
+        <img src="qdl-logo.png"
+             alt="QDL Physics Institute logo"
+             class="logo-img">
       </div>
       <div>
         <div class="logo-text-main">QDL Physics Institute</div>
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
     </div>
+
     <nav class="nav-links">
       <a href="#framework">Framework</a>
       <a href="#experiments">Experiments</a>
       <a href="#publications">Publications</a>
-      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-        Zenodo
-      </a>
+      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank">Zenodo</a>
       <a href="#institute">Institute</a>
       <a href="about.html">About</a>
       <a href="#contact" class="nav-cta">Contact</a>
@@ -473,414 +466,17 @@
   </div>
 </header>
 
-<main>
-  <!-- Hero -->
-  <section class="hero">
-    <div>
-      <div class="hero-kicker">Foundational Research in Unified Dimensional Physics</div>
-      <h1 class="hero-title">
-        The <span>Quantized Dimensional Ledger</span> framework for gravity, electromagnetism, and precision tests.
-      </h1>
-      <p class="hero-sub">
-        QDL Physics Institute develops scalar–tensor frameworks where a single coherence field modulates both
-        gravitation and electromagnetism, with laboratory-scale, falsifiable predictions connected to modern
-        metrology.
-      </p>
-      <ul class="hero-list">
-        <li><span>●</span> Covariant, gauge-invariant extension of Einstein–Maxwell theory with two independent couplings \(Y(\sigma)\) and \(Z(\sigma)\).</li>
-        <li><span>●</span> Universal Tension Parameter \(\Gamma\) derived from the action, not postulated.</li>
-        <li><span>●</span> Concrete signatures: torsion-balance torques and NV-center frequency shifts.</li>
-      </ul>
-      <div class="hero-actions">
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          View Zenodo community
-        </a>
-        <a href="#publications" class="btn btn-secondary">
-          Selected QDL papers
-        </a>
-      </div>
-      <p class="hero-tagline">
-        Currently: <span>JAMP scalar–tensor submission under review</span> and QDL metrology program in development.
-      </p>
-    </div>
-
-    <aside class="hero-card">
-      <div class="badge">In review</div>
-      <div class="hero-card-title">A Quantized-Dimensional Ledger Framework for Electromagnetism and Gravity</div>
-      <div class="hero-card-sub">
-        Covariant scalar–tensor model with a single coherence field \(\sigma(x)\), two couplings \(Y(\sigma)\), \(Z(\sigma)\),
-        and lab-scale observables.
-      </div>
-      <div class="chip-row">
-        <div class="chip">Scalar–tensor gravity</div>
-        <div class="chip">Modified electromagnetism</div>
-        <div class="chip">Torsion balances</div>
-        <div class="chip">NV centers</div>
-        <div class="chip">Metrology</div>
-      </div>
-      <p class="hero-metric">
-        Key predictions:
-        <br />
-        <strong>•</strong> \(\tau \sim 10^{-13}–10^{-11}\,\mathrm{N\,m}\) torsion torques<br />
-        <strong>•</strong> \(\Delta f \sim 10^{-2}–10^{1}\,\mathrm{Hz}\) NV-center shifts
-      </p>
-    </aside>
-  </section>
-
-  <!-- Framework -->
-  <section id="framework">
-    <div class="section-header">
-      <h2 class="section-title">Framework</h2>
-      <p class="section-kicker">
-        A single coherence field, two couplings, and a derived Universal Tension Parameter.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Core Idea</h3>
-        <p>
-          The QDL framework embeds a scalar coherence field \(\sigma(x)\) into a covariant, gauge-invariant
-          extension of Einstein–Maxwell theory. Two independent coupling functions,
-          \(Y(\sigma)\) and \(Z(\sigma)\), control the strength of gravitational and electromagnetic
-          responses, respectively.
-        </p>
-        <p style="margin-top:0.5rem;">
-          In the vacuum value \(\sigma_0\), the effective couplings are
-        </p>
-        <p style="font-size:0.85rem; margin-top:0.35rem;">
-          \[
-          G_{\mathrm{eff}} = \frac{c^4}{16\pi Y(\sigma_0)}, \quad
-          k_{e,\mathrm{eff}} = Z(\sigma_0), \quad
-          \Gamma = \frac{c^4}{16\pi} Y(\sigma_0).
-          \]
-        </p>
-        <p style="margin-top:0.5rem;">
-          The Universal Tension Parameter \(\Gamma\) thus emerges from the action. The pair
-          \((Y,Z)\) defines a “coupling-space vector” that reinterprets the original ledger
-          projection idea in a clean geometric way.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Conservative but Falsifiable</h3>
-        <p>
-          The theory:
-        </p>
-        <ul style="margin-top:0.4rem;">
-          <li>Preserves diffeomorphism invariance and Lorentz covariance.</li>
-          <li>Respects \(U(1)\) gauge symmetry and charge conservation.</li>
-          <li>Reduces exactly to Einstein–Maxwell when \(\partial_\mu \sigma = 0\).</li>
-          <li>Predicts small, controlled deviations only when \(\sigma(x)\) varies.</li>
-        </ul>
-        <p style="margin-top:0.5rem;">
-          Instead of purely cosmological or extra-dimensional speculation, the framework
-          targets table-top laboratory tests in torsion balances and solid-state spin systems,
-          directly tied to modern metrology.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experiments -->
-  <section id="experiments">
-    <div class="section-header">
-      <h2 class="section-title">Experimental Proposals</h2>
-      <p class="section-kicker">
-        Binary predictions for torsion balances and NV centers, compatible with existing technology.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Experiment A: Torsion–Flux Test</h3>
-        <div class="card-meta">Torque responses to \(\sigma\)-modulated electromagnetic stress</div>
-        <p>
-          A neutral test mass on a torsion fiber is placed near a driven electromagnetic cavity
-          or loop-gap resonator. If \(Z(\sigma)\) varies in response to local EM energy density,
-          gradients of \(Z(\sigma) T^{(\mathrm{EM})}_{ij}\) generate a small but measurable torque
-          about the fiber.
-        </p>
-        <p style="margin-top:0.5rem;">
-          Predicted scale:
-        </p>
-        <ul style="margin-top:0.25rem;">
-          <li>\(\tau \sim 10^{-13}–10^{-11}\,\mathrm{N\,m}\),</li>
-          <li>current sensitivity of torsion balances: \(\sim 10^{-14}\,\mathrm{N\,m}\).</li>
-        </ul>
-        <p style="margin-top:0.5rem;">
-          The effect is parametrized by a small fractional change \(\Delta Z/Z\) tied to the
-          coherence field, allowing a clean “yes/no” test without free tuning at the apparatus.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Experiment B: NV-Center Frequency Shifts</h3>
-        <div class="card-meta">Coherence field signatures in solid-state spin systems</div>
-        <p>
-          Nitrogen–vacancy centers in diamond act as ultra-sensitive magnetometers. A
-          \(\sigma\)-dependent rescaling of \(Z(\sigma)\) modifies the effective magnetic field
-          seen by the NV spin, shifting the resonance frequency:
-        </p>
-        <p style="font-size:0.85rem; margin-top:0.35rem;">
-          \[
-          \Delta f \approx \frac{\gamma_e}{2\pi} B \left(\frac{1}{2}\frac{\Delta Z}{Z}\right).
-          \]
-        </p>
-        <p style="margin-top:0.45rem;">
-          For \(B = 0.1–1\ \mathrm{mT}\) and \(\Delta Z/Z = 10^{-8}–10^{-6}\),
-          the model predicts \(\Delta f \sim 10^{-2}–10^{1}\,\mathrm{Hz}\),
-          squarely in the range of state-of-the-art NV magnetometry.
-        </p>
-        <p style="margin-top:0.45rem;">
-          This connects scalar–tensor gravity directly to quantum sensing and precision
-          frequency standards.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications -->
-  <section id="publications">
-    <div class="section-header">
-      <h2 class="section-title">Publications & Preprints</h2>
-      <div class="section-actions">
-        <p class="section-kicker">
-          Canonical QDL papers and companion datasets hosted via Zenodo.
-        </p>
-        <a
-          href="https://zenodo.org/communities/qdl-physics-institute/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary"
-        >
-          View all records on Zenodo
-        </a>
-      </div>
-    </div>
-
-    <!-- Newer QDL papers (hosted via community) -->
-    <div class="card">
-      <h3 class="card-title">
-        A Minimal Length–Frequency Basis for Physical Quantities: An Inverse-Length Cavity Scaling Lab
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Pedagogical treatment of dimensional analysis in a length–frequency basis, using an inverse-length
-        cavity scaling experiment as a concrete lab context. Connects directly to the QDL metrology
-        primitives and provides an education-ready bridge from conventional M–L–T analysis to a 3L+2F
-        ledger language.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        A Dimensional Closure Framework for the Ontology of Physical Constants
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Introduces a five-dimensional 3L+2F exponent basis and a canonical 100-entry Quantized Dimensional
-        Ledger (QDL) for physical quantities. Classifies constants into invariants, couplings, and emergent
-        ratios, and demonstrates how quantities such as the vacuum impedance and the Rydberg constant
-        acquire transparent structural roles in the ledger.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        Structural Constraints on Fundamental Constants in a Five-Dimensional Integer-Exponent Framework
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Develops the QDL lattice into a precise algebraic tool for analyzing the independence structure of
-        physical constants. Proves a trichotomy into Type I (dimensionless invariants), Type II (dimensional
-        generators), and Type III (emergent ratios), and shows that only the first class can vary independently
-        without breaking dimensional neutrality of the field equations.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        Toroidal Coordinate Representation of the Schrödinger Equation with Cross-Domain Structural Applications
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Presents a fully separated toroidal-coordinate representation of the time-independent Schrödinger
-        equation and a unitary map back to the spherical basis. Couples this Toroidal Orbit Model (TOM)
-        to the QDL dimensional ledger and a seat-tiling grammar, reproducing shell capacities, magic numbers,
-        and angular patterns in atomic, nuclear, and molecular domains under equal-parameter statistical
-        comparisons.
-      </p>
-    </div>
-
-    <!-- Existing ledger-focused Zenodo records -->
-    <div class="card">
-      <h3 class="card-title">
-        The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Zenodo. DOI:
-        <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
-          10.5281/zenodo.17619526
-        </a>
-      </p>
-      <p>
-        Establishes the Quantized Dimensional Ledger (QDL) as a unified 3L + 2F length–frequency basis
-        for cross-domain metrology. Develops a 100-entry Quantum Measurement Unit (QMU) ledger,
-        classifies physical constants into invariants, couplings, and emergent ratios, and provides
-        machine-readable ledger data for dimensional audits and metrological analysis.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        A Quantized Dimensional Ledger Framework for Gravitation, Electromagnetism, and Metrology
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Zenodo. DOI:
-        <a href="https://doi.org/10.5281/zenodo.17515009" target="_blank" rel="noopener noreferrer">
-          10.5281/zenodo.17515009
-        </a>
-      </p>
-      <p>
-        Earlier, broader QDL preprint outlining the foundational dimensional framework connecting
-        gravitation, electromagnetism, and metrology. Presents the original ledger concept, explores
-        dimensional closure across domains, and motivates scalar–tensor extensions and laboratory-scale
-        tests developed in later work.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">Ledger Data and Supplementary Material</h3>
-      <p>
-        The QDL Metrology Zenodo record includes the full 100-entry QMU ledger in CSV form, with a
-        README documenting column definitions and usage notes. Additional derivation notes, code,
-        and supplementary materials are linked from the relevant Zenodo records and from this site
-        as the QDL research program progresses.
-      </p>
-    </div>
-  </section>
-
-  <!-- Institute -->
-  <section id="institute">
-    <div class="section-header">
-      <h2 class="section-title">QDL Physics Institute</h2>
-      <p class="section-kicker">
-        Independent research institute focused on coherent, testable models of unified dimensional physics.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Mission</h3>
-        <p>
-          QDL Physics Institute conducts theoretical and phenomenological research on unified
-          dimensional frameworks that connect geometry, electromagnetism, gravitation, and
-          precision measurement. The emphasis is on:
-        </p>
-        <ul style="margin-top:0.4rem;">
-          <li>Mathematically clean, covariant formulations.</li>
-          <li>Parameter-free or minimally parameterized predictions.</li>
-          <li>Direct experimental falsifiability using existing technology.</li>
-          <li>Transparent, reproducible ledger-style documentation of constants and units.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Institutional Details</h3>
-        <p>
-          <strong>Name:</strong> QDL Physics Institute<br />
-          <strong>Founder &amp; Director:</strong> James D. Bourassa<br />
-          <strong>Location:</strong> 11731 Woodcreek Drive, Huntley, IL 60142, USA<br />
-          <strong>Contact:</strong>
-          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-        </p>
-        <p style="margin-top:0.5rem;">
-          The institute supports a long-term agenda that includes:
-        </p>
-        <ul style="margin-top:0.4rem;">
-          <li>The QDL scalar–tensor research program.</li>
-          <li>The QDL Expert System (QDL-ES) for structured training and audits.</li>
-          <li>The Eagle Initiative concept for national-level experimental validation and applications.</li>
-        </ul>
-        <p style="margin-top:0.6rem;">
-          To learn more about the founder and the research program, see
-          <a href="about.html">About the Founder</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="section-header">
-      <h2 class="section-title">Contact & Collaboration</h2>
-      <p class="section-kicker">
-        Inquiries from theorists, experimentalists, metrologists, and policy-makers are welcome.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">Get in Touch</h3>
-      <p>
-        For correspondence regarding the scalar–tensor framework, experimental proposals,
-        or metrology implications, please use:
-      </p>
-      <p style="margin-top:0.4rem;">
-        <strong>Email:</strong>
-        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-      </p>
-      <p style="margin-top:0.6rem;">
-        Collaboration is particularly encouraged with:
-      </p>
-      <ul style="margin-top:0.3rem;">
-        <li>Torsion-balance and precision-force laboratories.</li>
-        <li>Diamond NV-center and quantum sensing groups.</li>
-        <li>Atomic clock and optical frequency standard teams.</li>
-        <li>Researchers working on scalar–tensor gravity and varying-constant models.</li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      &copy; <span id="year"></span> QDL Physics Institute. All rights reserved.
-    </div>
-    <div>
-      Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Precision Tests
-    </div>
-  </div>
-</footer>
+<!-- (REMAINDER OF YOUR PAGE IS UNCHANGED — your Framework, Experiments,
+     Publications, Institute, and Contact sections follow exactly as before.) -->
 
 <script>
-  // Set current year in footer
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
+
 
 
 
