@@ -8,6 +8,25 @@
     name="description"
     content="QDL Physics Institute – foundational research in unified dimensional analysis, quantized ledger structures, and geometric frameworks linking gravitation, electromagnetism, and precision metrology."
   />
+
+  <!-- MathJax for TeX-style equations -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+
   <style>
     :root {
       --bg: #050816;
@@ -1268,6 +1287,8 @@
   </div>
 </body>
 </html>
+
+
 
 
 
