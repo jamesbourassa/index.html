@@ -247,7 +247,7 @@
       border-radius: 18px;
       border: 1px solid var(--border-soft);
       box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
-      padding: 0.9rem 1rem; /* slightly tighter */
+      padding: 0.9rem 1rem;
       font-size: 0.84rem;
     }
 
@@ -266,6 +266,18 @@
       background: #eff6ff;
       color: #1d4ed8;
       margin-bottom: 0.4rem;
+    }
+
+    .hero-card-list {
+      margin: 0.45rem 0 0.3rem 1rem;
+      padding: 0;
+      list-style: disc;
+      font-size: 0.82rem;
+      color: #4b5563;
+    }
+
+    .hero-card-list li {
+      margin-bottom: 0.2rem;
     }
 
     .hero-card-footer {
@@ -516,19 +528,32 @@
       </p>
     </div>
 
+    <!-- ENRICHED HERO CARD -->
     <aside class="hero-card">
       <div class="hero-card-title">Quantized Dimensional Ledger (QDL)</div>
       <div class="hero-card-chip">Conserved \(3L + 2F\) dimensional cell</div>
-      <p style="margin-bottom:0.45rem; line-height:1.45;">
-        QDL treats dimensional exponents as a ledger over a two-base space of Length (L)
-        and Frequency (F), with a conserved \(3L + 2F\) Quantized Dimensional Cell that
-        constrains admissible fields, couplings, and constants.
+
+      <p style="margin-bottom:0.4rem; line-height:1.45;">
+        QDL treats dimensional exponents as entries in a ledger over a two-base space of
+        Length (L) and Frequency (F), with a conserved \(3L + 2F\) Quantized Dimensional
+        Cell constraining admissible fields, couplings, and constants.
       </p>
-      <p style="line-height:1.45;">
-        The Institute develops this structure, its scalar–tensor extensions, and an
-        explicit experimental roadmap spanning torsion balances, NV centers, cavity
-        scaling, and metamaterials.
+
+      <p style="margin-bottom:0.2rem; line-height:1.45;">
+        The same cell structure underlies:
       </p>
+      <ul class="hero-card-list">
+        <li>Standard Model fields and gauge couplings in a closure rule.</li>
+        <li>Scalar–tensor gravitation and cosmological sectors.</li>
+        <li>Metrology ledgers for physical constants and units.</li>
+        <li>Proposed experimental scalings in torsion, NV, cavity, and metamaterials.</li>
+      </ul>
+
+      <p style="margin-top:0.3rem; line-height:1.45;">
+        Together, these elements turn dimensional analysis from bookkeeping into a
+        structural principle for unified physics and precision measurement.
+      </p>
+
       <div class="hero-card-footer">
         <span>Unified physics &amp; metrology</span>
         <a
@@ -769,42 +794,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
