@@ -6,33 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="QDL Physics Institute – foundational research in unified dimensional physics and scalar–tensor frameworks linking gravitation, electromagnetism, and precision metrology."
+    content="QDL Physics Institute – foundational research in unified dimensional analysis, quantized ledger structures, and geometric frameworks linking gravitation, electromagnetism, and precision metrology."
   />
+
+  <!-- MathJax for TeX-style equations -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+
   <style>
     :root {
       --bg: #050816;
       --bg-alt: #0b1020;
       --card: #111827;
       --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.08);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: #1f2933;
-      --highlight: #22c55e;
+      --accent-soft: rgba(56, 189, 248, 0.14);
+      --accent-strong: rgba(56, 189, 248, 0.24);
+      --accent-soft-2: rgba(129, 140, 248, 0.16);
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.3);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --blur-soft: 20px;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -44,27 +67,34 @@
       text-decoration: underline;
     }
 
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 10;
       backdrop-filter: blur(16px);
       background: linear-gradient(
         to bottom,
-        rgba(15, 23, 42, 0.9),
-        rgba(15, 23, 42, 0.75),
+        rgba(2, 6, 23, 0.96),
+        rgba(2, 6, 23, 0.85),
         transparent
       );
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
     }
 
-    .nav {
-      max-width: 1100px;
+    .nav-inner {
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 0.75rem 1.25rem;
+      padding: 0.6rem 1.2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
 
     .logo {
@@ -73,146 +103,152 @@
       gap: 0.6rem;
     }
 
-    /* SQUARE LOGO INSTEAD OF CIRCLE */
+    /* SQUARE LOGO */
     .logo-icon {
       width: 80px;
       height: 80px;
-      border-radius: 8px; /* set to 0 for perfectly sharp square */
+      border-radius: 8px;
       border: 2px solid rgba(56, 189, 248, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: radial-gradient(circle at 30% 20%, #1d4ed8, #020617 60%, #000 100%);
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.9);
       overflow: hidden;
-      background: #020617;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
     }
 
-    /* Show entire logo without cropping */
-    .logo-img {
+    .logo-icon img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       display: block;
-      background: #020617;
     }
 
-    .logo-text-main {
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .logo-text span:first-child {
+      font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 0.8rem;
-      color: #e5e7eb;
     }
 
-    .logo-text-sub {
-      font-size: 0.7rem;
-      color: var(--muted);
+    .logo-text span:last-child {
+      font-size: 0.8rem;
+      color: var(--text-soft);
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .nav-links {
+    nav {
       display: flex;
+      gap: 0.8rem;
+      font-size: 0.9rem;
       align-items: center;
-      gap: 1rem;
-      font-size: 0.85rem;
     }
 
-    .nav-links a {
-      color: var(--muted);
-      padding: 0.25rem 0.5rem;
+    nav a {
+      padding: 0.4rem 0.8rem;
       border-radius: 999px;
       border: 1px solid transparent;
+      color: var(--text-soft);
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-      border-color: rgba(148, 163, 184, 0.4);
+    nav a:hover {
+      border-color: rgba(148, 163, 184, 0.6);
       background: rgba(15, 23, 42, 0.9);
       text-decoration: none;
+      color: var(--text-main);
     }
 
-    .nav-cta {
-      border-radius: 999px;
-      padding: 0.3rem 0.9rem;
-      border: 1px solid var(--accent);
-      color: #e0f2fe;
-      background: radial-gradient(circle at top left, var(--accent-soft), transparent);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .nav-highlight {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: var(--accent);
+      background: radial-gradient(
+        circle at 0 0,
+        rgba(56, 189, 248, 0.28),
+        transparent 55%
+      );
+    }
+
+    .nav-highlight:hover {
+      background: radial-gradient(
+        circle at 0 0,
+        rgba(56, 189, 248, 0.36),
+        transparent 60%
+      );
     }
 
     main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
+      flex: 1;
     }
 
     .hero {
+      max-width: 1040px;
+      margin: 1.75rem auto 1.25rem;
+      padding: 0 1.2rem;
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.1fr);
-      gap: 2.5rem;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 2rem;
       align-items: center;
-      padding: 2.5rem 0 2rem;
     }
 
-    @media (max-width: 860px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+    .hero-left h1 {
+      font-size: 2.35rem;
+      line-height: 1.15;
+      margin: 0 0 0.6rem;
     }
 
     .hero-kicker {
-      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-title {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
-      font-weight: 650;
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-title span {
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 32rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-list {
-      list-style: none;
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-list li {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 0.35rem;
-      color: #cbd5f5;
-    }
-
-    .hero-list li span {
-      color: var(--highlight);
+      letter-spacing: 0.18em;
       font-size: 0.8rem;
-      margin-top: 0.25rem;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      margin: 0 0 0.75rem;
+      color: var(--text-soft);
+      max-width: 36rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .badge-accent {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: var(--accent);
+      background: radial-gradient(
+        circle at 0 0,
+        rgba(56, 189, 248, 0.25),
+        rgba(15, 23, 42, 0.98)
+      );
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
     }
 
     .btn {
@@ -220,648 +256,1039 @@
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      border-radius: 999px;
-      padding: 0.55rem 1.1rem;
-      font-size: 0.85rem;
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-pill);
       border: 1px solid transparent;
+      font-size: 0.85rem;
+      font-weight: 500;
       cursor: pointer;
-      background: none;
-      color: inherit;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .btn-primary {
-      background: radial-gradient(circle at top left, #0ea5e9, #0369a1);
-      border-color: #38bdf8;
-      color: #e0f2fe;
-      box-shadow: 0 12px 40px rgba(8, 47, 73, 0.6);
+      background: radial-gradient(circle at 0 0, #38bdf8, #2563eb);
+      color: #0b1120;
+      box-shadow: 0 16px 45px rgba(37, 99, 235, 0.55);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.04);
+      text-decoration: none;
     }
 
     .btn-secondary {
-      border-color: rgba(148, 163, 184, 0.5);
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.98);
+      color: var(--text-main);
+      border-color: rgba(148, 163, 184, 0.6);
     }
 
-    .hero-tagline {
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(248, 250, 252, 0.7);
+      text-decoration: none;
+    }
+
+    .hero-note {
       font-size: 0.8rem;
-      color: var(--muted);
+      color: var(--text-soft);
+      max-width: 32rem;
     }
 
-    .hero-tagline span {
-      color: var(--accent);
+    .hero-note strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-right {
+      position: relative;
     }
 
     .hero-card {
-      background: radial-gradient(circle at top, #0b1120, #020617);
-      border-radius: 18px;
-      padding: 1.4rem 1.3rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.8);
       position: relative;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #1f2937, #020617 55%, #000);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      padding: 1rem;
       overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12), transparent 55%),
+        radial-gradient(circle at 85% 10%, rgba(129, 140, 248, 0.18), transparent 55%);
+      opacity: 0.95;
+      z-index: -1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
     }
 
     .hero-card-title {
       font-size: 0.9rem;
       font-weight: 600;
-      margin-bottom: 0.4rem;
     }
 
-    .hero-card-sub {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.7rem;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .chip {
-      font-size: 0.7rem;
-      padding: 0.15rem 0.55rem;
+    .hero-card-chip {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      color: var(--accent);
+      background: rgba(15, 23, 42, 0.96);
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.55rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .metric {
+      border-radius: 12px;
+      padding: 0.4rem 0.55rem;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.7rem;
+    }
+
+    .metric-label {
+      color: var(--text-soft);
+      margin-bottom: 0.15rem;
+    }
+
+    .metric-value {
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    .metric-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.98);
       border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #cbd5f5;
-      background: rgba(15, 23, 42, 0.85);
-    }
-
-    .hero-metric {
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-metric strong {
-      color: #e5e7eb;
-    }
-
-    .badge {
-      position: absolute;
-      top: 0.75rem;
-      right: 0.85rem;
       font-size: 0.7rem;
-      padding: 0.15rem 0.55rem;
+      color: var(--text-soft);
+    }
+
+    .metric-dot {
+      width: 6px;
+      height: 6px;
       border-radius: 999px;
-      border: 1px solid rgba(52, 211, 153, 0.7);
-      background: rgba(22, 163, 74, 0.1);
-      color: #bbf7d0;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      background: rgba(74, 222, 128, 0.9);
+    }
+
+    .hero-card-body {
+      border-radius: 14px;
+      background: rgba(2, 6, 23, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.65rem 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card-body p {
+      margin: 0.25rem 0;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      border-top: 1px dashed rgba(148, 163, 184, 0.5);
+      padding-top: 0.45rem;
+      margin-top: 0.35rem;
+    }
+
+    .hero-card-footer a {
+      font-size: 0.75rem;
+      text-decoration: none;
+    }
+
+    .hero-card-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 1.2rem 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.15fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     section {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at 0 -80px, #020617, #020617 55%, #000);
+      border: 1px solid var(--border-subtle);
+      padding: 1.1rem 1.2rem 1.15rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
     }
 
-    section:first-of-type {
-      border-top: none;
-      padding-top: 0;
+    section::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.08), transparent 60%),
+        radial-gradient(circle at 100% 0, rgba(129, 140, 248, 0.08), transparent 55%);
+      opacity: 0.85;
+      z-index: -1;
+      pointer-events: none;
     }
 
     .section-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 1rem;
       gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
     }
 
     .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-size: 1rem;
       text-transform: uppercase;
-      color: #e5e7eb;
+      letter-spacing: 0.16em;
+      margin: 0;
     }
 
     .section-kicker {
-      font-size: 0.8rem;
-      color: var(--muted);
+      margin: 0;
+      font-size: 0.78rem;
+      color: var(--text-soft);
     }
 
     .section-actions {
       display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.3rem;
+    }
+
+    .section-content {
+      font-size: 0.84rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .pill-row {
+      display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 0.4rem;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 860px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .card {
+    .pill {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
       background: rgba(15, 23, 42, 0.96);
-      border-radius: 16px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      padding: 1.1rem 1rem;
+      color: var(--text-soft);
     }
 
-    .card + .card {
-      margin-top: 0.8rem;
+    .pill-strong {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: var(--accent);
+      background: radial-gradient(
+        circle at 0 0,
+        rgba(56, 189, 248, 0.24),
+        rgba(15, 23, 42, 0.98)
+      );
+    }
+
+    .key-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+
+    .key-list li {
+      margin-bottom: 0.25rem;
+      padding-left: 0.9rem;
+      position: relative;
+    }
+
+    .key-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0.2rem;
+      top: 0;
+      color: rgba(148, 163, 184, 0.9);
+    }
+
+    .key-term {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .equation-box {
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      color: #e5e7eb;
+    }
+
+    .equation-label {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      margin-top: 0.3rem;
+    }
+
+    .note {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .callout {
+      margin-top: 0.4rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      font-size: 0.76rem;
+      color: var(--text-soft);
+    }
+
+    #publications .card {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.7rem 0.8rem;
+      margin-top: 0.65rem;
+      font-size: 0.8rem;
     }
 
     .card-title {
-      font-size: 0.98rem;
-      font-weight: 550;
-      margin-bottom: 0.4rem;
+      margin: 0 0 0.25rem;
+      font-size: 0.9rem;
     }
 
     .card-meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
+      margin: 0 0 0.3rem;
+      font-size: 0.76rem;
+      color: var(--text-soft);
     }
 
     .card p {
-      font-size: 0.86rem;
-      color: #d1d5db;
+      margin: 0.25rem 0;
     }
 
-    ul {
-      padding-left: 1.1rem;
+    #experiments .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-top: 0.35rem;
     }
 
-    ul li {
+    #experiments .card {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.65rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    #institute .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    #institute .contact-list li {
       margin-bottom: 0.25rem;
     }
 
     footer {
-      border-top: 1px solid rgba(148, 163, 184, 0.25);
-      margin-top: 3rem;
-      padding: 1.5rem 1.25rem 2rem;
-      font-size: 0.8rem;
-      color: var(--muted);
+      border-top: 1px solid rgba(15, 23, 42, 0.95);
+      background: radial-gradient(circle at top, #020617, #020617 50%, #000);
+      padding: 0.85rem 1.2rem 1.4rem;
+      margin-top: auto;
     }
 
-    .footer-grid {
-      max-width: 1100px;
+    .footer-inner {
+      max-width: 1040px;
       margin: 0 auto;
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
-      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      color: #e5e7eb;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 1.3rem;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-actions {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 0 1rem;
+      }
+
+      .layout {
+        padding: 0 1rem 2rem;
+      }
+
+      header {
+        backdrop-filter: blur(12px);
+      }
     }
   </style>
-
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']],
-        displayMath: [['\\[', '\\]'], ['$$', '$$']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-  </script>
-  <script
-    id="MathJax-script"
-    async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js">
-  </script>
 </head>
-
 <body>
-<header>
-  <div class="nav">
-    <div class="logo">
-      <div class="logo-icon">
-        <img src="qdl-logo.png" alt="QDL Physics Institute logo" class="logo-img">
+  <div class="page">
+    <header>
+      <div class="nav-inner">
+        <div class="logo">
+          <div class="logo-icon">
+            <!-- Logo in site root -->
+            <img src="qdl-logo.png" alt="QDL Physics Institute Logo" />
+          </div>
+          <div class="logo-text">
+            <span>QDL Physics Institute</span>
+            <span>Quantized Dimensional Ledger</span>
+          </div>
+        </div>
+        <nav>
+          <a href="#framework">Framework</a>
+          <a href="#experiments">Experiments</a>
+          <a href="#publications" class="nav-highlight">Publications</a>
+          <a href="#institute">Institute</a>
+          <a href="about.html">About</a>
+          <a
+            href="https://zenodo.org/communities/qdl-physics-institute/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Zenodo
+          </a>
+        </nav>
       </div>
-      <div>
-        <div class="logo-text-main">QDL Physics Institute</div>
-        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-kicker">Quantized Dimensional Ledger (QDL)</div>
+          <h1>
+            A Dimensional Cell Framework<br />
+            for Unified Physics and Metrology
+          </h1>
+          <p class="hero-subtitle">
+            QDL expresses all physical quantities in a two-base dimensional space,
+            using Length (L) and Frequency (F) with a conserved ledger cell
+            structure. It provides a compact, integer-exponent representation for
+            gravitation, electromagnetism, precision constants, and experimental
+            scaling laws.
+          </p>
+          <div class="hero-badges">
+            <span class="badge badge-accent">3L + 2F dimensional basis</span>
+            <span class="badge">Quantized Dimensional Cell (QDC)</span>
+            <span class="badge">Metrology &amp; constants</span>
+            <span class="badge">Geometric &amp; scalar–tensor structure</span>
+          </div>
+          <div class="hero-actions">
+            <a
+              href="https://doi.org/10.5281/zenodo.17704896"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Read the Unified Framework
+            </a>
+            <a
+              href="https://zenodo.org/communities/qdl-physics-institute/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              Browse QDL Papers on Zenodo
+            </a>
+          </div>
+          <p class="hero-note">
+            <strong>QDL Physics Institute</strong> is an independent research
+            initiative, based in Huntley, Illinois, focused on dimensional
+            closure, ledger structures, and testable geometric models for
+            precision physics.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <div>
+                <div class="hero-card-title">Dimensional Cell Snapshot</div>
+                <div class="hero-card-chip">QDC: 3L + 2F Ledger Unit</div>
+              </div>
+              <span class="metric-pill">
+                <span class="metric-dot"></span>
+                Coherent ledger cell
+              </span>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric">
+                <div class="metric-label">Base dimensions</div>
+                <div class="metric-value">L, F</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Conserved cell</div>
+                <div class="metric-value">L³F²</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Domains</div>
+                <div class="metric-value">Gravity, EM, metrology</div>
+              </div>
+            </div>
+
+            <div class="hero-card-body">
+              <p>
+                The Quantized Dimensional Cell (QDC) is a 3L + 2F volume element
+                that enforces dimensional closure across all ledger entries.
+                Mechanical, electromagnetic, and geometric quantities are all
+                encoded as integer-exponent combinations of L and F.
+              </p>
+              <p>
+                Recent work extends QDC structure into an SO(3,2) setting and
+                scalar–tensor field frameworks, linking precision metrology to
+                geometric models of space–time and field couplings.
+              </p>
+            </div>
+
+            <div class="hero-card-footer">
+              <span>Ledger geometry → magnetic moments, constants, scaling laws</span>
+              <a
+                href="https://doi.org/10.5281/zenodo.17683786"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                QDC SO(3,2) paper
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout">
+        <div class="column">
+          <section id="framework">
+            <div class="section-header">
+              <h2 class="section-title">Framework</h2>
+              <div class="section-actions">
+                <p class="section-kicker">
+                  A two-base dimensional ledger with a conserved cell structure.
+                </p>
+                <a
+                  href="https://doi.org/10.5281/zenodo.17704896"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                >
+                  Unified framework DOI
+                </a>
+              </div>
+            </div>
+            <div class="section-content">
+              <p>
+                The Quantized Dimensional Ledger (QDL) replaces conventional
+                MLTQ dimensional analysis with a two-base <strong>L–F</strong>
+                basis:
+              </p>
+              <div class="pill-row">
+                <span class="pill pill-strong">Length (L)</span>
+                <span class="pill pill-strong">Frequency (F)</span>
+                <span class="pill">Mass derived: \(m = hF/c^2\)</span>
+                <span class="pill">Charge as rotational phase</span>
+              </div>
+              <p>
+                QDL enforces a conserved ledger cell with dimensional content
+                \(L^{3}F^{2}\). We refer to the quantized \(3L + 2F\) geometric
+                volume element as the
+                <strong>Quantized Dimensional Cell (QDC)</strong>, which serves
+                as the fundamental structural unit for field and geometric
+                configurations.
+              </p>
+              <div class="equation-box">
+                Core cell identity:<br />
+                &nbsp;&nbsp;\( [\text{QDC}] = L^{3}F^{2} \)<br /><br />
+                Example mappings:<br />
+                &nbsp;&nbsp;Energy density: \( [E] \sim L^{3}F^{2} \)<br />
+                &nbsp;&nbsp;Curvature: \( [\mathcal{R}] = L^{-2} \)<br />
+                &nbsp;&nbsp;Velocity: \( [v] = LF \)<br />
+                &nbsp;&nbsp;Mass: \( [m] = L^{-1}F^{-1} \) (in QDL ledger units)
+              </div>
+              <p class="equation-label">
+                All physical quantities are expressed as integer-exponent ledger
+                entries in L and F, with QDC providing the closure constraint.
+              </p>
+              <p>
+                Recent work develops a scalar–tensor action in which QDC
+                coherence is tied to two coupling functions \(Y(\sigma)\) and
+                \(Z(\sigma)\), providing a path from dimensional analysis to
+                effective field descriptions of gravity and electromagnetism.
+              </p>
+              <div class="callout">
+                <strong>Key idea:</strong> instead of tracking units in
+                MLTQ-space, QDL uses integer-ledger combinations in a 3L + 2F
+                basis. The preserved QDC cell becomes the organizing geometry
+                behind constants, fields, and experimental scaling laws.
+              </div>
+            </div>
+          </section>
+
+          <section id="publications">
+            <div class="section-header">
+              <h2 class="section-title">Publications & Preprints</h2>
+              <div class="section-actions">
+                <p class="section-kicker">
+                  Canonical QDL papers and companion datasets hosted via Zenodo.
+                </p>
+                <a
+                  href="https://zenodo.org/communities/qdl-physics-institute/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                >
+                  View all records on Zenodo
+                </a>
+              </div>
+            </div>
+
+            <!-- Unified Ledger-Based Framework -->
+            <div class="card">
+              <h3 class="card-title">
+                A Unified Ledger-Based Framework for Physical Theories: From Dimensional Cells to Scalar–Tensor Field Structure
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17704896
+                </a>
+              </p>
+              <p>
+                Defines the Quantized Dimensional Cell (QDC) and develops a covariant scalar–tensor action with
+                two couplings \(Y(\sigma)\), \(Z(\sigma)\), providing a unified geometric basis for gravitation,
+                electromagnetism, and metrology.
+              </p>
+            </div>
+
+            <!-- Magnetic Moments -->
+            <div class="card">
+              <h3 class="card-title">
+                The Ledger Geometry of Magnetic Moments: A Quantized Dimensional Ledger Derivation of the Electron and Muon g-2 Factors
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17693061" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17693061
+                </a>
+              </p>
+              <p>
+                Geometric torsion-frequency interpretation of the electron and muon anomalous magnetic moments
+                using QDL/QDC structure in a 3L + 2F dimensional ledger.
+              </p>
+            </div>
+
+            <!-- QDC SO(3,2) -->
+            <div class="card">
+              <h3 class="card-title">
+                The Quantized Dimensional Cell as an SO(3,2) Space–Time Structure
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17683786
+                </a>
+              </p>
+              <p>
+                Establishes the QDC as a 3L + 2F geometric structure embedded in SO(3,2), linking ledger geometry
+                to higher-dimensional space-time and conformal symmetry.
+              </p>
+            </div>
+
+            <!-- Inverse-Length Teaching Lab -->
+            <div class="card">
+              <h3 class="card-title">
+                Teaching Dimensional Analysis with a Length–Frequency Basis: An Inverse-Length Cavity Scaling Lab
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. D. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17663340
+                </a>
+              </p>
+              <p>
+                Pedagogical introduction to QDL dimensional analysis via a cavity-scaling experiment in the 3L + 2F basis.
+              </p>
+            </div>
+
+            <!-- QDL Experimental Protocol -->
+            <div class="card">
+              <h3 class="card-title">
+                QDL Experimental Validation Protocol: A Unified Roadmap for Torsion, NV-Center, Cavity, and Metamaterial Tests
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17654442
+                </a>
+              </p>
+              <p>
+                Comprehensive falsifiability program for QDL/QDC physics including torsion-balance torques,
+                NV-center shifts, cavity scaling, and metamaterial resonances.
+              </p>
+            </div>
+
+            <!-- QDL for Metrology -->
+            <div class="card">
+              <h3 class="card-title">
+                The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. D. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17619526
+                </a>
+              </p>
+              <p>
+                Introduces the 100-entry Quantized Measurement Unit (QMU) ledger for dimensional audits and
+                metrology, classifying constants into invariants, couplings, and emergent ratios.
+              </p>
+            </div>
+
+            <!-- Gravitation, EM, Metrology -->
+            <div class="card">
+              <h3 class="card-title">
+                A Quantized Dimensional Ledger Framework for Gravitation, Electromagnetism, and Metrology
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. D. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17515009" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17515009
+                </a>
+              </p>
+              <p>
+                Foundational overview of the original dimensional ledger model tying gravitation, electromagnetism,
+                and modern metrology through an integer-exponent ledger structure.
+              </p>
+            </div>
+
+            <!-- Dimensional Closure -->
+            <div class="card">
+              <h3 class="card-title">
+                A Dimensional Closure Framework for the Ontology of Physical Constants
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. D. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17663436
+                </a>
+              </p>
+              <p>
+                Analyzes independence relations among physical constants in a 3L + 2F dimensional basis and
+                establishes structural constraints on their allowed variations.
+              </p>
+            </div>
+
+            <!-- Structural Constants Ledger -->
+            <div class="card">
+              <h3 class="card-title">
+                Structural Constraints on Fundamental Constants from a Five-Dimensional Ledger Basis
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. D. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17663501" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17663501
+                </a>
+              </p>
+              <p>
+                Derives formal constraints on Type I, II, and III constants in the QDL framework and provides
+                algebraic criteria for consistency within the ledger basis.
+              </p>
+            </div>
+
+            <!-- Toroidal Schrödinger -->
+            <div class="card">
+              <h3 class="card-title">
+                Toroidal Coordinate Representation of the Schrödinger Equation with Cross-Domain Structural Applications
+              </h3>
+              <p class="card-meta">
+                Bourassa, J. D. (2025). Zenodo. DOI:
+                <a href="https://doi.org/10.5281/zenodo.17663608" target="_blank" rel="noopener noreferrer">
+                  10.5281/zenodo.17663608
+                </a>
+              </p>
+              <p>
+                Derives a fully separated toroidal-coordinate solution of the Schrödinger equation and demonstrates
+                structural mapping to QDL, atomic shell structure, and cross-domain regularities.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="column">
+          <section id="experiments">
+            <div class="section-header">
+              <h2 class="section-title">Experimental Roadmap</h2>
+              <div class="section-actions">
+                <p class="section-kicker">
+                  QDL-derived tests across torsion, spin systems, cavities, and
+                  metamaterials.
+                </p>
+                <a
+                  href="https://doi.org/10.5281/zenodo.17654442"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                >
+                  Protocol DOI
+                </a>
+              </div>
+            </div>
+            <div class="section-content">
+              <p>
+                The QDL Experimental Validation Protocol outlines four primary
+                experimental families designed to stress-test the ledger and QDC
+                structure:
+              </p>
+              <ul class="key-list">
+                <li>
+                  <span class="key-term">Torsion-balance scaling:</span>
+                  searches for anomalous torque signatures under geometric
+                  scaling, consistent with QDL’s treatment of gravitation and
+                  curvature-ledger relations.
+                </li>
+                <li>
+                  <span class="key-term">NV-center frequency shifts:</span>
+                  probes for subtle frequency offsets in spin defects under
+                  engineered field configurations motivated by QDL corrections.
+                </li>
+                <li>
+                  <span class="key-term">Cavity scaling collapse:</span>
+                  tests whether resonances respect QDL’s L–F ledger scaling,
+                  particularly in inverse-length cavity experiments.
+                </li>
+                <li>
+                  <span class="key-term">Metamaterial resonances:</span>
+                  explores engineered structures that mimic QDC-like coherence
+                  and investigate potential deviations from standard EM
+                  expectations.
+                </li>
+              </ul>
+              <div class="note">
+                Each of these platforms is designed to be <strong>falsifiable</strong>
+                in the Popper sense: QDL makes explicit claims about how
+                frequency, length, and curvature must scale if the ledger model
+                is correct.
+              </div>
+              <div class="card-list">
+                <div class="card">
+                  <strong>Torsion experiments</strong>
+                  <p>
+                    Looks for systematic deviations in torque scaling as arm
+                    length, mass distribution, and environmental fields are
+                    varied, using QDL’s \(L^{3}F^{2}\) closure as the organizing
+                    constraint.
+                  </p>
+                </div>
+                <div class="card">
+                  <strong>Spin and NV systems</strong>
+                  <p>
+                    Uses spin defects and precision frequency readout to search
+                    for QDC-motivated offset terms, potentially distinguishing
+                    QDL corrections from standard spin–orbit and Zeeman
+                    contributions.
+                  </p>
+                </div>
+                <div class="card">
+                  <strong>Cavity and metamaterial tests</strong>
+                  <p>
+                    Applies QDL’s ledger to resonant structures, asking whether
+                    measured mode patterns and scaling relationships align with
+                    standard EM or hint at additional QDC-structured degrees of
+                    freedom.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="institute">
+            <div class="section-header">
+              <h2 class="section-title">Institute & Contact</h2>
+              <div class="section-actions">
+                <p class="section-kicker">
+                  Independent research program, publishing via Zenodo and
+                  peer-reviewed journals.
+                </p>
+              </div>
+            </div>
+            <div class="section-content">
+              <p>
+                The <strong>QDL Physics Institute</strong> is an independent
+                research effort run by
+                <strong>James D. Bourassa</strong>, focused on:
+              </p>
+              <ul class="key-list">
+                <li>
+                  Developing the QDL / QDC framework for gravitation,
+                  electromagnetism, and metrology.
+                </li>
+                <li>
+                  Publishing formal derivations, experimental protocols, and
+                  teaching resources in open-access form via
+                  <a
+                    href="https://zenodo.org/communities/qdl-physics-institute/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Zenodo</a
+                  >
+                  and traditional journals.
+                </li>
+                <li>
+                  Building a fully auditable ledger for constants, units, and
+                  dimensional structure, tied to real experimental proposals.
+                </li>
+              </ul>
+              <p class="note">
+                The institute is currently based in Huntley, Illinois (USA),
+                with a focus on rigorous, falsifiable claims rather than
+                speculative numerology. All core technical artifacts, including
+                code and dimensional tables, are intended to be archived with
+                DOIs.
+              </p>
+              <ul class="contact-list">
+                <li>
+                  <strong>Contact:</strong>
+                  <a href="mailto:james.bourassa@qdlphysics.org"
+                    >james.bourassa@qdlphysics.org</a
+                  >
+                </li>
+                <li>
+                  <strong>Zenodo Community:</strong>
+                  <a
+                    href="https://zenodo.org/communities/qdl-physics-institute/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >QDL Physics Institute</a
+                  >
+                </li>
+                <li>
+                  <strong>Affiliation:</strong> QDL Physics Institute, Huntley,
+                  Illinois 60142, USA
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-    <nav class="nav-links">
-      <a href="#framework">Framework</a>
-      <a href="#experiments">Experiments</a>
-      <a href="#publications">Publications</a>
-      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-        Zenodo
-      </a>
-      <a href="#institute">Institute</a>
-      <a href="about.html">About</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>&copy; 2025 QDL Physics Institute. All rights reserved.</span>
+        <div class="footer-links">
+          <a
+            href="https://zenodo.org/communities/qdl-physics-institute/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Zenodo Community
+          </a>
+          <a
+            href="mailto:james.bourassa@qdlphysics.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div>
-      <div class="hero-kicker">Foundational Research in Unified Dimensional Physics</div>
-      <h1 class="hero-title">
-        The <span>Quantized Dimensional Ledger</span> framework for gravity, electromagnetism, and precision tests.
-      </h1>
-      <p class="hero-sub">
-        QDL Physics Institute develops scalar–tensor frameworks where a single coherence field modulates both
-        gravitation and electromagnetism, with laboratory-scale, falsifiable predictions connected to modern
-        metrology.
-      </p>
-      <ul class="hero-list">
-        <li><span>●</span> Covariant, gauge-invariant extension of Einstein–Maxwell theory with two independent couplings \(Y(\sigma)\) and \(Z(\sigma)\).</li>
-        <li><span>●</span> Universal Tension Parameter \(\Gamma\) derived from the action, not postulated.</li>
-        <li><span>●</span> Concrete signatures: torsion-balance torques and NV-center frequency shifts.</li>
-      </ul>
-      <div class="hero-actions">
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          View Zenodo community
-        </a>
-        <a href="#publications" class="btn btn-secondary">
-          Selected QDL papers
-        </a>
-      </div>
-      <p class="hero-tagline">
-        Currently: <span>JAMP scalar–tensor submission under review</span> and QDL metrology program in development.
-      </p>
-    </div>
-
-    <aside class="hero-card">
-      <div class="badge">In review</div>
-      <div class="hero-card-title">A Quantized-Dimensional Ledger Framework for Electromagnetism and Gravity</div>
-      <div class="hero-card-sub">
-        Covariant scalar–tensor model with a single coherence field \(\sigma(x)\), two couplings \(Y(\sigma)\), \(Z(\sigma)\),
-        and lab-scale observables.
-      </div>
-      <div class="chip-row">
-        <div class="chip">Scalar–tensor gravity</div>
-        <div class="chip">Modified electromagnetism</div>
-        <div class="chip">Torsion balances</div>
-        <div class="chip">NV centers</div>
-        <div class="chip">Metrology</div>
-      </div>
-      <p class="hero-metric">
-        Key predictions:
-        <br />
-        <strong>•</strong> \(\tau \sim 10^{-13}–10^{-11}\,\mathrm{N\,m}\) torsion torques<br />
-        <strong>•</strong> \(\Delta f \sim 10^{-2}–10^{1}\,\mathrm{Hz}\) NV-center shifts
-      </p>
-    </aside>
-  </section>
-
-  <section id="framework">
-    <div class="section-header">
-      <h2 class="section-title">Framework</h2>
-      <p class="section-kicker">
-        A single coherence field, two couplings, and a derived Universal Tension Parameter.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Core Idea</h3>
-        <p>
-          The QDL framework embeds a scalar coherence field \(\sigma(x)\) into a covariant, gauge-invariant
-          extension of Einstein–Maxwell theory. Two independent coupling functions,
-          \(Y(\sigma)\) and \(Z(\sigma)\), control the strength of gravitational and electromagnetic
-          responses, respectively.
-        </p>
-        <p style="margin-top:0.5rem;">
-          In the vacuum value \(\sigma_0\), the effective couplings are
-        </p>
-        <p style="font-size:0.85rem; margin-top:0.35rem;">
-          \[
-          G_{\mathrm{eff}} = \frac{c^4}{16\pi Y(\sigma_0)}, \quad
-          k_{e,\mathrm{eff}} = Z(\sigma_0), \quad
-          \Gamma = \frac{c^4}{16\pi} Y(\sigma_0).
-          \]
-        </p>
-        <p style="margin-top:0.5rem;">
-          The Universal Tension Parameter \(\Gamma\) thus emerges from the action. The pair
-          \((Y,Z)\) defines a “coupling-space vector” that reinterprets the original ledger
-          projection idea in a clean geometric way.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Conservative but Falsifiable</h3>
-        <p>
-          The theory:
-        </p>
-        <ul style="margin-top:0.4rem;">
-          <li>Preserves diffeomorphism invariance and Lorentz covariance.</li>
-          <li>Respects \(U(1)\) gauge symmetry and charge conservation.</li>
-          <li>Reduces exactly to Einstein–Maxwell when \(\partial_\mu \sigma = 0\).</li>
-          <li>Predicts small, controlled deviations only when \(\sigma(x)\) varies.</li>
-        </ul>
-        <p style="margin-top:0.5rem;">
-          Instead of purely cosmological or extra-dimensional speculation, the framework
-          targets table-top laboratory tests in torsion balances and solid-state spin systems,
-          directly tied to modern metrology.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experiments">
-    <div class="section-header">
-      <h2 class="section-title">Experimental Proposals</h2>
-      <p class="section-kicker">
-        Binary predictions for torsion balances and NV centers, compatible with existing technology.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Experiment A: Torsion–Flux Test</h3>
-        <div class="card-meta">Torque responses to \(\sigma\)-modulated electromagnetic stress</div>
-        <p>
-          A neutral test mass on a torsion fiber is placed near a driven electromagnetic cavity
-          or loop-gap resonator. If \(Z(\sigma)\) varies in response to local EM energy density,
-          gradients of \(Z(\sigma) T^{(\mathrm{EM})}_{ij}\) generate a small but measurable torque
-          about the fiber.
-        </p>
-        <p style="margin-top:0.5rem;">
-          Predicted scale:
-        </p>
-        <ul style="margin-top:0.25rem;">
-          <li>\(\tau \sim 10^{-13}–10^{-11}\,\mathrm{N\,m}\),</li>
-          <li>current sensitivity of torsion balances: \(\sim 10^{-14}\,\mathrm{N\,m}\).</li>
-        </ul>
-        <p style="margin-top:0.5rem;">
-          The effect is parametrized by a small fractional change \(\Delta Z/Z\) tied to the
-          coherence field, allowing a clean “yes/no” test without free tuning at the apparatus.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Experiment B: NV-Center Frequency Shifts</h3>
-        <div class="card-meta">Coherence field signatures in solid-state spin systems</div>
-        <p>
-          Nitrogen–vacancy centers in diamond act as ultra-sensitive magnetometers. A
-          \(\sigma\)-dependent rescaling of \(Z(\sigma)\) modifies the effective magnetic field
-          seen by the NV spin, shifting the resonance frequency:
-        </p>
-        <p style="font-size:0.85rem; margin-top:0.35rem;">
-          \[
-          \Delta f \approx \frac{\gamma_e}{2\pi} B \left(\frac{1}{2}\frac{\Delta Z}{Z}\right).
-          \]
-        </p>
-        <p style="margin-top:0.45rem;">
-          For \(B = 0.1–1\ \mathrm{mT}\) and \(\Delta Z/Z = 10^{-8}–10^{-6}\),
-          the model predicts \(\Delta f \sim 10^{-2}–10^{1}\,\mathrm{Hz}\),
-          squarely in the range of state-of-the-art NV magnetometry.
-        </p>
-        <p style="margin-top:0.45rem;">
-          This connects scalar–tensor gravity directly to quantum sensing and precision
-          frequency standards.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="section-header">
-      <h2 class="section-title">Publications & Preprints</h2>
-      <div class="section-actions">
-        <p class="section-kicker">
-          Canonical QDL papers and companion datasets hosted via Zenodo.
-        </p>
-        <a
-          href="https://zenodo.org/communities/qdl-physics-institute/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary"
-        >
-          View all records on Zenodo
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        A Minimal Length–Frequency Basis for Physical Quantities: An Inverse-Length Cavity Scaling Lab
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Pedagogical treatment of dimensional analysis in a length–frequency basis, using an inverse-length
-        cavity scaling experiment as a concrete lab context. Connects directly to the QDL metrology
-        primitives and provides an education-ready bridge from conventional M–L–T analysis to a 3L+2F
-        ledger language.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        A Dimensional Closure Framework for the Ontology of Physical Constants
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Introduces a five-dimensional 3L+2F exponent basis and a canonical 100-entry Quantized Dimensional
-        Ledger (QDL) for physical quantities. Classifies constants into invariants, couplings, and emergent
-        ratios, and demonstrates how quantities such as the vacuum impedance and the Rydberg constant
-        acquire transparent structural roles in the ledger.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        Structural Constraints on Fundamental Constants in a Five-Dimensional Integer-Exponent Framework
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Develops the QDL lattice into a precise algebraic tool for analyzing the independence structure of
-        physical constants. Proves a trichotomy into Type I (dimensionless invariants), Type II (dimensional
-        generators), and Type III (emergent ratios), and shows that only the first class can vary independently
-        without breaking dimensional neutrality of the field equations.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        Toroidal Coordinate Representation of the Schrödinger Equation with Cross-Domain Structural Applications
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Hosted via the
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute Zenodo community
-        </a>.
-      </p>
-      <p>
-        Presents a fully separated toroidal-coordinate representation of the time-independent Schrödinger
-        equation and a unitary map back to the spherical basis. Couples this Toroidal Orbit Model (TOM)
-        to the QDL dimensional ledger and a seat-tiling grammar, reproducing shell capacities, magic numbers,
-        and angular patterns in atomic, nuclear, and molecular domains under equal-parameter statistical
-        comparisons.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Zenodo. DOI:
-        <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
-          10.5281/zenodo.17619526
-        </a>
-      </p>
-      <p>
-        Establishes the Quantized Dimensional Ledger (QDL) as a unified 3L + 2F length–frequency basis
-        for cross-domain metrology. Develops a 100-entry Quantum Measurement Unit (QMU) ledger,
-        classifies physical constants into invariants, couplings, and emergent ratios, and provides
-        machine-readable ledger data for dimensional audits and metrological analysis.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">
-        A Quantized Dimensional Ledger Framework for Gravitation, Electromagnetism, and Metrology
-      </h3>
-      <p class="card-meta">
-        Bourassa, J. D. (2025). Zenodo. DOI:
-        <a href="https://doi.org/10.5281/zenodo.17515009" target="_blank" rel="noopener noreferrer">
-          10.5281/zenodo.17515009
-        </a>
-      </p>
-      <p>
-        Earlier, broader QDL preprint outlining the foundational dimensional framework connecting
-        gravitation, electromagnetism, and metrology. Presents the original ledger concept, explores
-        dimensional closure across domains, and motivates scalar–tensor extensions and laboratory-scale
-        tests developed in later work.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">Ledger Data and Supplementary Material</h3>
-      <p>
-        The QDL Metrology Zenodo record includes the full 100-entry QMU ledger in CSV form, with a
-        README documenting column definitions and usage notes. Additional derivation notes, code,
-        and supplementary materials are linked from the relevant Zenodo records and from this site
-        as the QDL research program progresses.
-      </p>
-    </div>
-  </section>
-
-  <section id="institute">
-    <div class="section-header">
-      <h2 class="section-title">QDL Physics Institute</h2>
-      <p class="section-kicker">
-        Independent research institute focused on coherent, testable models of unified dimensional physics.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Mission</h3>
-        <p>
-          QDL Physics Institute conducts theoretical and phenomenological research on unified
-          dimensional frameworks that connect geometry, electromagnetism, gravitation, and
-          precision measurement. The emphasis is on:
-        </p>
-        <ul style="margin-top:0.4rem;">
-          <li>Mathematically clean, covariant formulations.</li>
-          <li>Parameter-free or minimally parameterized predictions.</li>
-          <li>Direct experimental falsifiability using existing technology.</li>
-          <li>Transparent, reproducible ledger-style documentation of constants and units.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Institutional Details</h3>
-        <p>
-          <strong>Name:</strong> QDL Physics Institute<br />
-          <strong>Founder &amp; Director:</strong> James D. Bourassa<br />
-          <strong>Location:</strong> 11731 Woodcreek Drive, Huntley, IL 60142, USA<br />
-          <strong>Contact:</strong>
-          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-        </p>
-        <p style="margin-top:0.5rem;">
-          The institute supports a long-term agenda that includes:
-        </p>
-        <ul style="margin-top:0.4rem;">
-          <li>The QDL scalar–tensor research program.</li>
-          <li>The QDL Expert System (QDL-ES) for structured training and audits.</li>
-          <li>The Eagle Initiative concept for national-level experimental validation and applications.</li>
-        </ul>
-        <p style="margin-top:0.6rem;">
-          To learn more about the founder and the research program, see
-          <a href="about.html">About the Founder</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="section-header">
-      <h2 class="section-title">Contact & Collaboration</h2>
-      <p class="section-kicker">
-        Inquiries from theorists, experimentalists, metrologists, and policy-makers are welcome.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="card-title">Get in Touch</h3>
-      <p>
-        For correspondence regarding the scalar–tensor framework, experimental proposals,
-        or metrology implications, please use:
-      </p>
-      <p style="margin-top:0.4rem;">
-        <strong>Email:</strong>
-        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-      </p>
-      <p style="margin-top:0.6rem;">
-        Collaboration is particularly encouraged with:
-      </p>
-      <ul style="margin-top:0.3rem;">
-        <li>Torsion-balance and precision-force laboratories.</li>
-        <li>Diamond NV-center and quantum sensing groups.</li>
-        <li>Atomic clock and optical frequency standard teams.</li>
-        <li>Researchers working on scalar–tensor gravity and varying-constant models.</li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      &copy; <span id="year"></span> QDL Physics Institute. All rights reserved.
-    </div>
-    <div>
-      Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Precision Tests
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
 </body>
 </html>
+
+
 
 
 
