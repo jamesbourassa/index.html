@@ -27,8 +27,11 @@
     header {
       background: #0f172a;
       color: #f9fafb;
-      padding: 1rem 1.5rem;
+      padding: 0.75rem 1.5rem;
       border-bottom: 1px solid #1f2937;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .header-inner {
@@ -49,13 +52,14 @@
     .brand-logo {
       width: 64px;
       height: 64px;
-      border-radius: 16px;
+      border-radius: 12px;
       overflow: hidden;
-      background: #111827;
+      background: #020617;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      border: 1px solid #38bdf8;
     }
 
     .brand-logo img {
@@ -68,7 +72,7 @@
     .brand-text {
       display: flex;
       flex-direction: column;
-      gap: 0.2rem;
+      gap: 0.15rem;
     }
 
     .brand-text h1 {
@@ -78,38 +82,58 @@
     }
 
     .brand-text span {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #9ca3af;
     }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.25rem;
-      font-size: 0.95rem;
+      gap: 0.9rem;
+      font-size: 0.85rem;
+      align-items: center;
     }
 
     nav a {
       color: #e5e7eb;
-      padding-bottom: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
       border-bottom: 2px solid transparent;
+      border: 1px solid transparent;
     }
 
     nav a:hover {
-      border-color: #38bdf8;
+      border-color: rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      text-decoration: none;
     }
 
     .active-link {
       border-color: #38bdf8;
     }
 
+    .nav-cta {
+      border-color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 2.25rem 1.5rem 3rem;
+      padding: 2rem 1.5rem 3rem;
       display: grid;
       grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.1fr);
       gap: 2rem;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
     }
 
     h2 {
@@ -158,7 +182,7 @@
 
     .note-box {
       background: #eef2ff;
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 0.9rem 1rem;
       border-left: 4px solid #4f46e5;
       font-size: 0.9rem;
@@ -181,7 +205,8 @@
       background: #ffffff;
       border-radius: 18px;
       padding: 1.4rem 1.5rem;
-      box-shadow: 0 12px 30px rgba(148, 163, 184, 0.4);
+      box-shadow: 0 8px 24px rgba(148,163,184,0.5);
+      border: 1px solid #e5e7eb;
       height: fit-content;
     }
 
@@ -220,6 +245,11 @@
       color: #6b7280;
     }
 
+    footer a {
+      color: #0369a1;
+      text-decoration: underline;
+    }
+
     @media (max-width: 900px) {
       .header-inner {
         flex-direction: column;
@@ -228,6 +258,7 @@
 
       nav ul {
         padding-top: 0.5rem;
+        flex-wrap: wrap;
       }
 
       main {
@@ -241,7 +272,6 @@
     <div class="header-inner">
       <div class="brand">
         <div class="brand-logo">
-          <!-- Update the src path/filename to match your logo file -->
           <img src="qdl-logo.png" alt="QDL Physics Institute logo">
         </div>
         <div class="brand-text">
@@ -252,8 +282,12 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="framework.html" class="active-link">QDL Framework</a></li>
+          <li><a href="framework.html" class="active-link">Framework</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="institute.html">Institute</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="mailto:james.bourassa@qdlphysics.org" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -414,7 +448,8 @@
 
   <footer>
     &copy; 2025 QDL Physics Institute · Huntley, Illinois · Contact:
-    <a href="mailto:james.bourassa@qdlphysics.org" style="color:#0369a1;text-decoration:underline;">james.bourassa@qdlphysics.org</a>
+    <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
   </footer>
 </body>
 </html>
+
