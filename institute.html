@@ -2,43 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>QDL Physics | The Institute</title>
+  <title>Institute | QDL Physics Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Overview of the QDL Physics Institute, its mission, research focus, and contact information."
+    content="QDL Physics Institute mission, research themes, location, and collaboration interests for the Quantized Dimensional Ledger program."
   />
   <style>
     :root {
-      --bg-page: #f3f4f6;
+      --bg-page: #ffffff;
       --bg-card: #ffffff;
       --border-soft: #e5e7eb;
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
+      --accent-soft: #eff6ff;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: #0369a1;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     header {
       background: #0f172a;
@@ -50,7 +41,7 @@
     }
 
     .nav {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
@@ -66,11 +57,11 @@
     }
 
     .logo-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 8px;
-      border: 1px solid #38bdf8;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       background: #020617;
+      border: 1px solid #38bdf8;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,18 +72,17 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      display: block;
     }
 
     .logo-text-main {
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
     }
 
     .logo-text-sub {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       color: #9ca3af;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -100,164 +90,95 @@
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.85rem;
       flex-wrap: wrap;
+      gap: 0.7rem;
+      font-size: 0.82rem;
+      align-items: center;
     }
 
     .nav-links a {
       color: #e5e7eb;
-      padding: 0.25rem 0.6rem;
+      padding: 0.22rem 0.6rem;
       border-radius: 999px;
       border: 1px solid transparent;
     }
 
     .nav-links a:hover {
-      color: #f9fafb;
-      border-color: rgba(148, 163, 184, 0.5);
+      border-color: rgba(148, 163, 184, 0.7);
       background: rgba(15, 23, 42, 0.9);
       text-decoration: none;
     }
 
     .nav-cta {
-      border-radius: 999px;
-      padding: 0.3rem 0.9rem;
-      border: 1px solid #38bdf8;
-      color: #e0f2fe;
+      border-color: #38bdf8;
       background: #0b1120;
-      font-size: 0.78rem;
+      color: #e0f2fe !important;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      font-size: 0.75rem;
     }
 
     main {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem;
+      padding: 2rem 1.25rem 2.5rem;
     }
 
-    .hero {
-      margin-bottom: 2rem;
-      background: var(--bg-card);
-      border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      padding: 1.6rem 1.5rem;
-    }
-
-    .hero-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
+    .kicker {
       font-size: 0.78rem;
-      color: #6b7280;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-title {
-      font-size: clamp(1.9rem, 3vw, 2.3rem);
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-sub {
-      font-size: 0.95rem;
-      color: #4b5563;
-      max-width: 40rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .hero-chip {
-      padding: 0.15rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-    }
-
-    section {
-      margin-top: 2rem;
-    }
-
-    .section-header {
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #111827;
-      margin-bottom: 0.25rem;
+      color: #6b7280;
+      margin-bottom: 0.3rem;
     }
 
-    .section-kicker {
-      font-size: 0.82rem;
-      color: var(--text-soft);
-      max-width: 28rem;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 1.25rem;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 880px) {
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card {
-      background: var(--bg-card);
-      border-radius: 16px;
-      border: 1px solid var(--border-soft);
-      padding: 1.1rem 1.1rem;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      font-size: 0.88rem;
-      color: #374151;
-    }
-
-    .card-title {
-      font-size: 0.95rem;
-      font-weight: 600;
+    h1 {
+      font-size: 1.7rem;
       margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+      max-width: 40rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-top: 1.3rem;
+      margin-bottom: 0.3rem;
     }
 
     ul {
-      margin-left: 1.1rem;
-      margin-top: 0.35rem;
-      font-size: 0.86rem;
-      color: #374151;
+      margin: 0.3rem 0 0.7rem 1.2rem;
+      padding: 0;
     }
 
-    li + li {
-      margin-top: 0.15rem;
+    li {
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 0.25rem;
     }
 
     footer {
-      border-top: 1px solid var(--border-soft);
-      margin-top: 3rem;
-      padding: 1.2rem 1.25rem 1.8rem;
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0.9rem 1.25rem 1.3rem;
       font-size: 0.8rem;
       color: #6b7280;
+      margin-top: 1.8rem;
     }
 
-    .footer-grid {
-      max-width: 1100px;
+    .footer-inner {
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
       justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
       align-items: center;
     }
   </style>
@@ -274,7 +195,6 @@
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
     </div>
-
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="framework.html">Framework</a>
@@ -282,112 +202,69 @@
       <a href="publications.html">Publications</a>
       <a href="institute.html">Institute</a>
       <a href="about.html">About</a>
-      <a href="mailto:james.bourassa@qdlphysics.org" class="nav-cta">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-kicker">Institute</div>
-    <h1 class="hero-title">The QDL Physics Institute</h1>
-    <p class="hero-sub">
-      The QDL Physics Institute is an independent research initiative based in Huntley,
-      Illinois, dedicated to the Quantized Dimensional Ledger (QDL): a unified dimensional
-      framework for gravitation, electromagnetism, metrology, and physical constants.
-    </p>
+  <div class="kicker">Institute</div>
+  <h1>QDL Physics Institute</h1>
+  <p>
+    The QDL Physics Institute is an independent research program based in Huntley,
+    Illinois, USA. Its purpose is to develop, formalize, and experimentally test the
+    Quantized Dimensional Ledger (QDL) as a unified framework for physical theories and
+    precision metrology.
+  </p>
 
-    <div class="hero-meta">
-      <div class="hero-chip">Dimensional closure &amp; ledger geometry</div>
-      <div class="hero-chip">Scalar–tensor gravity &amp; field structure</div>
-      <div class="hero-chip">Precision metrology &amp; constants</div>
-    </div>
-  </section>
+  <h2>Mission</h2>
+  <p>
+    The Institute’s mission is to:
+  </p>
+  <ul>
+    <li>Establish QDL as a rigorous, mathematically coherent dimensional closure framework.</li>
+    <li>Embed the Standard Model, gravitation, and metrology into a common 3L + 2F ledger.</li>
+    <li>Design and disseminate falsifiable experimental tests of QDL predictions.</li>
+    <li>Make all derivations, tables, and protocols publicly accessible and auditable.</li>
+  </ul>
 
-  <!-- Mission & Focus -->
-  <section id="mission">
-    <div class="section-header">
-      <h2 class="section-title">Mission &amp; Focus</h2>
-      <p class="section-kicker">
-        A small, focused program aimed at building a transparent, falsifiable dimensional
-        foundation for modern physics.
-      </p>
-    </div>
+  <h2>Research themes</h2>
+  <ul>
+    <li>Dimensional analysis and ledger geometry in an L–F basis.</li>
+    <li>Scalar–tensor gravitation and geometric structures linked to the Quantized Dimensional Cell.</li>
+    <li>Ledger-based treatments of fundamental constants and quantum measurement units.</li>
+    <li>Precision tabletop experiments in torsion balances, NV centers, cavities, and metamaterials.</li>
+    <li>Educational materials for teaching dimensional analysis using QDL concepts.</li>
+  </ul>
 
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Mission</h3>
-        <p>
-          The Institute develops the Quantized Dimensional Ledger and Quantized Dimensional
-          Cell (QDC) as organizing principles for field theory, gravitation, and metrology.
-          The emphasis is on:
-        </p>
-        <ul>
-          <li>Formal dimensional closure and ledger-based field structures</li>
-          <li>Transparent derivations with auditable ledgers and tables</li>
-          <li>Concrete, falsifiable predictions tied to tabletop experiments</li>
-          <li>Open dissemination of manuscripts, data, and teaching materials</li>
-        </ul>
-      </div>
+  <h2>Location and contact</h2>
+  <p>
+    <strong>Location:</strong> Huntley, Illinois, USA<br />
+    <strong>Contact:</strong> via the dedicated <a href="contact.html">contact page</a>,
+    which includes email and a simple contact form for journal editors, experimental
+    collaborators, and students.
+  </p>
 
-      <div class="card">
-        <h3 class="card-title">Research Themes</h3>
-        <ul>
-          <li>3L + 2F ledger formulation of physical quantities</li>
-          <li>QDC as an SO(3,2)-like space–time structure</li>
-          <li>Scalar–tensor gravitation constrained by QDL closure</li>
-          <li>Ledger geometry of magnetic moments and g–2</li>
-          <li>QMU ledgers for physical constants and metrology</li>
-          <li>Experimental protocols: torsion, NV centers, cavities, metamaterials</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location & Contact -->
-  <section id="contact">
-    <div class="section-header">
-      <h2 class="section-title">Location &amp; Contact</h2>
-      <p class="section-kicker">
-        Independent theoretical and metrological research, open to dialogue with
-        experimental groups and interested collaborators.
-      </p>
-    </div>
-
-    <div class="two-col">
-      <div class="card">
-        <h3 class="card-title">Location</h3>
-        <p>
-          QDL Physics Institute<br/>
-          Huntley, Illinois 60142<br/>
-          United States
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Contact</h3>
-        <p>
-          Email:<br/>
-          <a href="mailto:james.bourassa@qdlphysics.org">
-            james.bourassa@qdlphysics.org
-          </a>
-        </p>
-        <p style="margin-top:0.6rem;">
-          Zenodo community:<br/>
-          <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank">
-            https://zenodo.org/communities/qdl-physics-institute/
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
+  <h2>Collaboration interests</h2>
+  <p>
+    The Institute welcomes constructive engagement from:
+  </p>
+  <ul>
+    <li>Journal editors and referees in gravitation, mathematical physics, and metrology.</li>
+    <li>Experimental groups working on torsion balances, NV centers, cavity resonators, or metamaterials.</li>
+    <li>Researchers interested in dimensional analysis, units systems, and geometric foundations of physics.</li>
+    <li>Educators seeking to incorporate length–frequency dimensional analysis into teaching materials.</li>
+  </ul>
+  <p>
+    For collaboration inquiries, please use the <a href="contact.html">contact page</a>
+    and briefly describe your research context and interest in QDL.
+  </p>
 </main>
 
 <footer>
-  <div class="footer-grid">
-    <div>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</div>
-    <div>Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Metrology</div>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
+    <span>Quantized Dimensional Ledger · Unified Dimensional Physics and Metrology</span>
   </div>
 </footer>
 
@@ -396,5 +273,3 @@
 </script>
 </body>
 </html>
-
-
