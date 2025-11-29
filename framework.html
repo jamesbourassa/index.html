@@ -31,8 +31,6 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ===== HEADER, MATCHING THE NEW MULTI-PAGE STYLE ===== */
-
     header {
       background: #0f172a;
       color: #e5e7eb;
@@ -83,7 +81,7 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
     }
 
     .logo-text-sub {
@@ -96,14 +94,14 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.9rem;
-      font-size: 0.85rem;
+      gap: 0.7rem;
+      font-size: 0.82rem;
       align-items: center;
     }
 
     .nav-links a {
       color: #e5e7eb;
-      padding: 0.22rem 0.7rem;
+      padding: 0.22rem 0.6rem;
       border-radius: 999px;
       border: 1px solid transparent;
     }
@@ -114,17 +112,14 @@
       text-decoration: none;
     }
 
-    .nav-links a.active,
     .nav-cta {
       border-color: #38bdf8;
       background: #0b1120;
       color: #e0f2fe !important;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
     }
-
-    /* ===== PAGE CONTENT ===== */
 
     main {
       max-width: 900px;
@@ -202,6 +197,30 @@
       color: #2563eb;
     }
 
+    /* Comparison table styles for QDL vs. aether section */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      margin-top: 0.5rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .comparison-table thead {
+      background: #f3f4f6;
+    }
+
+    .comparison-table th {
+      font-weight: 600;
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -220,21 +239,13 @@
       flex-wrap: wrap;
       align-items: center;
     }
-
-    @media (max-width: 720px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-      }
-    }
   </style>
 </head>
 
 <body>
 <header>
   <div class="nav">
-    <div class="logo">
+    <a href="index.html" class="logo">
       <div class="logo-icon">
         <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
       </div>
@@ -242,15 +253,13 @@
         <div class="logo-text-main">QDL Physics Institute</div>
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
-    </div>
-
+    </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-       <a href="framework.html">Framework</a>
-          <a href="experiments.html">Experiments</a>
+      <a href="framework.html">Framework</a>
+      <a href="experiments.html">Experiments</a>
       <a href="publications.html">Publications</a>
       <a href="institute.html">Institute</a>
-      <a href="benefits.html">Benefits</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
@@ -369,7 +378,7 @@
     <ol>
       <li>
         <strong>Definition of the Quantized Dimensional Cell (QDC).</strong><br />
-        <span class="equation-snippet">A<sub>QDC</sub> ≈ L<sup>3</sup>F<sup>2</sup></span>
+        <span class="equation-snippet">A<sub>QDC</sub> &sim; L<sup>3</sup>F<sup>2</sup></span>
         <p>
           The QDC acts as the conserved dimensional “cell” of the ledger. Every
           admissible action or interaction is required to close onto an integer
@@ -383,7 +392,7 @@
 
       <li>
         <strong>Ledger vector for a physical quantity.</strong><br />
-        <span class="equation-snippet">X ↦ ℓ(X) = (ℓ₁, ℓ₂, ℓ₃, ℓ₄, ℓ₅)</span>
+        <span class="equation-snippet">X &rarr; <b>&ell;</b>(X) = (&ell;<sub>1</sub>, &ell;<sub>2</sub>, &ell;<sub>3</sub>, &ell;<sub>4</sub>, &ell;<sub>5</sub>)</span>
         <p>
           Any field, observable, or constant is mapped to a 5-component integer vector in the
           3L + 2F ledger. This provides a unified representation space for the Standard Model,
@@ -399,7 +408,8 @@
       <li>
         <strong>Dimensional-closure condition for an interaction.</strong><br />
         <span class="equation-snippet">
-          Σ<sub>i</sub> ℓ(field<sub>i</sub>) + ℓ(couplings) = n · ℓ(A<sub>QDC</sub>), n ∈ ℤ
+          &Sigma;<sub>i</sub> <b>&ell;</b>(field<sub>i</sub>) + <b>&ell;</b>(couplings)
+          = n&nbsp;<b>&ell;</b>(A<sub>QDC</sub>), &nbsp;n &in; &Z;
         </span>
         <p>
           This expresses the QDL closure rule for an interaction vertex: the ledger sum of all
@@ -414,7 +424,7 @@
       <li>
         <strong>Ledger-based gravitational action (schematic).</strong><br />
         <span class="equation-snippet">
-          S<sub>grav</sub> = ∫ d⁴x √−g · ℒ<sub>QDL</sub>[g<sub>μν</sub>, Φ; ℓ]
+          S<sub>grav</sub> = &int; d<sup>4</sup>x &nbsp;&radic;-g &nbsp; &Lscr;<sub>QDL</sub>[g<sub>&mu;&nu;</sub>, &Phi;; <b>&ell;</b>]
         </span>
         <p>
           The scalar–tensor gravitation sector is constructed so that each term in the
@@ -430,11 +440,11 @@
       <li>
         <strong>SO(3,2) metric relation for the QDC.</strong><br />
         <span class="equation-snippet">
-          η<sub>AB</sub> X<sup>A</sup> X<sup>B</sup> = ± A<sub>QDC</sub>
+          &eta;<sub>AB</sub> X<sup>A</sup> X<sup>B</sup> = &plusmn; A<sub>QDC</sub>
         </span>
         <p>
           The QDC is embedded into a five-dimensional pseudo-orthogonal geometry with
-          SO(3,2) metric η<sub>AB</sub>, giving the ledger a geometric interpretation
+          SO(3,2) metric &eta;<sub>AB</sub>, giving the ledger a geometric interpretation
           as a discrete space–time–frequency structure.
         </p>
         <div class="details">
@@ -446,7 +456,7 @@
       <li>
         <strong>Cavity scaling law in L–F basis (schematic).</strong><br />
         <span class="equation-snippet">
-          ℓ(f<sub>mode</sub>) + ℓ(L<sub>cavity</sub>) = 0
+          <b>&ell;</b>(f<sub>mode</sub>) + <b>&ell;</b>(L<sub>cavity</sub>) = 0
         </span>
         <p>
           In the teaching lab, cavity-mode frequencies and cavity length are related in the
@@ -462,7 +472,7 @@
       <li>
         <strong>Prototype ledger relation for experimental tests.</strong><br />
         <span class="equation-snippet">
-          ℓ(Δω<sub>NV</sub>) = F(ℓ(fields), ℓ(constants), ℓ(geometry))
+          <b>&ell;</b>(&Delta;&omega;<sub>NV</sub>) = F(<b>&ell;</b>(fields), <b>&ell;</b>(constants), <b>&ell;</b>(geometry))
         </span>
         <p>
           Torsion-balance, NV-center, cavity, and metamaterial experiments are expressed as
@@ -475,6 +485,94 @@
         </div>
       </li>
     </ol>
+  </section>
+
+  <section class="section" id="qdl-aether-clarification">
+    <h2>QDL and Aether Models: Clarification</h2>
+    <p>
+      The Quantized Dimensional Ledger (QDL) is <strong>not</strong> an aether theory and has no
+      conceptual, mathematical, or physical dependence on classical or modern “ether” frameworks.
+      QDL does not propose a medium, substrate, fluid, or microphysical lattice underlying space,
+      and it does not describe electrons, photons, or forces as excitations of an aether or as
+      structures built from “aether units.”
+    </p>
+    <p>
+      Instead, QDL introduces a <strong>dimensional-closure principle</strong> based on a minimal
+      Length–Frequency (L–F) basis and a conserved geometric invariant known as the
+      <strong>Quantized Dimensional Cell (QDC)</strong>. This structure constrains the
+      <em>dimensional</em> and <em>geometric</em> consistency of physical laws, not the
+      <em>material</em> composition of space. The QDC is embedded in an SO(3,2) geometric framework,
+      integrates with variational field theory, and remains compatible with the Standard Model and
+      modern gravitational theory.
+    </p>
+    <p>
+      <strong>In short:</strong> QDL is a dimensional–geometric framework for physics, not a material
+      theory of space. It does not revive, depend on, or resemble the Aether Physics Model or any
+      aether-medium hypothesis.
+    </p>
+
+    <div style="overflow-x:auto;">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Standard Model + GR</th>
+            <th>QDL (Quantized Dimensional Ledger)</th>
+            <th>Aether-Based Models</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ontology of space</strong></td>
+            <td>Continuous spacetime; no mechanical medium.</td>
+            <td><strong>No medium; dimensional geometry (3L + 2F ledger and QDC).</strong></td>
+            <td>Mechanical medium filling space (“aether”) or vacuum substance.</td>
+          </tr>
+          <tr>
+            <td><strong>Foundational basis</strong></td>
+            <td>Gauge theory, QFT, GR, variational principles.</td>
+            <td><strong>Dimensional closure, QDC invariant, ledger algebra, SO(3,2) embedding.</strong></td>
+            <td>Heuristic unit constructs, metaphoric geometry, medium-based intuition.</td>
+          </tr>
+          <tr>
+            <td><strong>Electrons &amp; photons</strong></td>
+            <td>Excitations of quantum fields (spinor and gauge fields).</td>
+            <td><strong>Respects SM field content; does not posit internal aether sub-units.</strong></td>
+            <td>Particles and light often treated as structures or waves in an aether medium.</td>
+          </tr>
+          <tr>
+            <td><strong>Mathematical framework</strong></td>
+            <td>Lagrangians, tensors, operators, renormalized QFT.</td>
+            <td><strong>Integer ledger vectors, closure rules for actions, scalar–tensor gravitation in the ledger.</strong></td>
+            <td>Ad-hoc algebra, geometric sketches, rarely embedded in modern field theory.</td>
+          </tr>
+          <tr>
+            <td><strong>Experimental status</strong></td>
+            <td>Extensively tested and quantitatively successful.</td>
+            <td><strong>Proposes falsifiable scaling laws (torsion, NV-centers, cavity modes, metamaterials).</strong></td>
+            <td>No confirmed predictions; often in tension with relativity and precision tests.</td>
+          </tr>
+          <tr>
+            <td><strong>Role of L–F structure</strong></td>
+            <td>Implicit in unit choices; not treated as fundamental.</td>
+            <td><strong>Derived minimal dimensional basis; closure is required globally.</strong></td>
+            <td>Appears, if at all, as incidental patterns in unit manipulations.</td>
+          </tr>
+          <tr>
+            <td><strong>View of vacuum</strong></td>
+            <td>Quantum vacuum; fields and fluctuations, no classical medium.</td>
+            <td><strong>Abstract dimensional geometry; no vacuum substance.</strong></td>
+            <td>Physical substance or energetic background filling space.</td>
+          </tr>
+          <tr>
+            <td><strong>Scientific position</strong></td>
+            <td>Mainstream physics framework.</td>
+            <td><strong>Foundational unification and metrological clarity within a dimensional-ledger program.</strong></td>
+            <td>Non-mainstream, generally incompatible with SR/QFT constraints.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 </main>
 
