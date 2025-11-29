@@ -2,43 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>QDL Physics | Experimental Program</title>
+  <title>Experiments | QDL Physics Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Experimental roadmap for the Quantized Dimensional Ledger, including torsion, NV-center, cavity, and metamaterial tests."
+    content="QDL Experimental Validation Program: torsion balances, NV centers, cavity scaling, and metamaterial tests designed as falsifiable probes of Quantized Dimensional Ledger predictions."
   />
   <style>
     :root {
-      --bg-page: #f3f4f6;
+      --bg-page: #ffffff;
       --bg-card: #ffffff;
       --border-soft: #e5e7eb;
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
+      --accent-soft: #eff6ff;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: #0369a1;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     header {
       background: #0f172a;
@@ -50,7 +41,7 @@
     }
 
     .nav {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
@@ -66,11 +57,11 @@
     }
 
     .logo-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 8px;
-      border: 1px solid #38bdf8;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       background: #020617;
+      border: 1px solid #38bdf8;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,18 +72,17 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      display: block;
     }
 
     .logo-text-main {
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
     }
 
     .logo-text-sub {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       color: #9ca3af;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -100,168 +90,112 @@
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 0.85rem;
       flex-wrap: wrap;
+      gap: 0.7rem;
+      font-size: 0.82rem;
+      align-items: center;
     }
 
     .nav-links a {
       color: #e5e7eb;
-      padding: 0.25rem 0.6rem;
+      padding: 0.22rem 0.6rem;
       border-radius: 999px;
       border: 1px solid transparent;
     }
 
     .nav-links a:hover {
-      color: #f9fafb;
-      border-color: rgba(148, 163, 184, 0.5);
+      border-color: rgba(148, 163, 184, 0.7);
       background: rgba(15, 23, 42, 0.9);
       text-decoration: none;
     }
 
     .nav-cta {
-      border-radius: 999px;
-      padding: 0.3rem 0.9rem;
-      border: 1px solid #38bdf8;
-      color: #e0f2fe;
+      border-color: #38bdf8;
       background: #0b1120;
-      font-size: 0.78rem;
+      color: #e0f2fe !important;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      font-size: 0.75rem;
     }
 
     main {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem;
+      padding: 2rem 1.25rem 2.5rem;
     }
 
-    .hero {
-      margin-bottom: 2rem;
-      background: var(--bg-card);
-      border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      padding: 1.6rem 1.5rem;
-    }
-
-    .hero-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
+    .kicker {
       font-size: 0.78rem;
-      color: #6b7280;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-title {
-      font-size: clamp(1.9rem, 3vw, 2.3rem);
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-sub {
-      font-size: 0.95rem;
-      color: #4b5563;
-      max-width: 40rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .hero-chip {
-      padding: 0.15rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-    }
-
-    section {
-      margin-top: 2rem;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5rem;
-      align-items: baseline;
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #111827;
-    }
-
-    .section-kicker {
-      font-size: 0.82rem;
-      color: var(--text-soft);
-      max-width: 26rem;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    @media (max-width: 880px) {
-      .card-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card {
-      background: var(--bg-card);
-      border-radius: 16px;
-      border: 1px solid var(--border-soft);
-      padding: 0.9rem 1rem;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      font-size: 0.9rem;
-      color: #374151;
-    }
-
-    .card-title {
-      font-size: 0.95rem;
-      font-weight: 600;
+      color: #6b7280;
       margin-bottom: 0.3rem;
     }
 
-    .card-meta {
-      font-size: 0.8rem;
-      color: var(--text-soft);
+    h1 {
+      font-size: 1.7rem;
       margin-bottom: 0.4rem;
     }
 
-    .note {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      margin-top: 1rem;
+    .lede {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 1.2rem;
       max-width: 40rem;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 0.45rem;
+    }
+
+    ul {
+      margin: 0.3rem 0 0.7rem 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 0.25rem;
+    }
+
+    .callout {
+      margin-top: 1.1rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      font-size: 0.9rem;
+      color: #4b5563;
     }
 
     footer {
-      border-top: 1px solid var(--border-soft);
-      margin-top: 3rem;
-      padding: 1.2rem 1.25rem 1.8rem;
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0.9rem 1.25rem 1.3rem;
       font-size: 0.8rem;
       color: #6b7280;
+      margin-top: 1.8rem;
     }
 
-    .footer-grid {
-      max-width: 1100px;
+    .footer-inner {
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
       justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
       align-items: center;
     }
   </style>
@@ -278,7 +212,6 @@
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
     </div>
-
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="framework.html">Framework</a>
@@ -286,99 +219,89 @@
       <a href="publications.html">Publications</a>
       <a href="institute.html">Institute</a>
       <a href="about.html">About</a>
-      <a href="mailto:james.bourassa@qdlphysics.org" class="nav-cta">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-kicker">Experimental Roadmap</div>
-    <h1 class="hero-title">QDL Experimental Validation Program</h1>
-    <p class="hero-sub">
-      The QDL Experimental Validation Protocol proposes four independent tabletop platforms—
-      torsion balances, NV centers, cavity scaling, and metamaterials—to test how a
-      \(3L + 2F\) Quantized Dimensional Cell constrains physical scaling laws.
-    </p>
+  <div class="kicker">Experimental validation program</div>
+  <h1>QDL Experimental Validation Protocol</h1>
+  <p class="lede">
+    The QDL Experimental Validation Protocol outlines how a conserved 3L + 2F Quantized
+    Dimensional Cell could leave measurable signatures in precision tabletop experiments.
+    The goal is to design tests where conventional theories and the Quantized Dimensional
+    Ledger make distinguishable scaling predictions, allowing QDL to be evaluated as a
+    falsifiable framework.
+  </p>
 
-    <div class="hero-meta">
-      <div class="hero-chip">Torsion-balance scaling</div>
-      <div class="hero-chip">NV-center frequency shifts</div>
-      <div class="hero-chip">Cavity mode L–F scaling</div>
-      <div class="hero-chip">Metamaterial dispersion tests</div>
-    </div>
-  </section>
+  <h2>1. Precision torsion-balance scaling</h2>
+  <p>
+    Torsion balances provide an exquisitely sensitive probe of force and torque scaling.
+    In the QDL program, structured changes in arm length, mass distribution, and geometry
+    are used to isolate ledger-driven scaling relations.
+  </p>
+  <ul>
+    <li>Vary arm length and mass separation while keeping conventional parameters fixed.</li>
+    <li>Look for systematic deviations in torque vs. geometry predicted by QDL closure.</li>
+    <li>Exploit high-quality factors and low-noise environments to resolve small effects.</li>
+  </ul>
 
-  <!-- Platforms -->
-  <section id="platforms">
-    <div class="section-header">
-      <h2 class="section-title">Platforms</h2>
-      <p class="section-kicker">
-        Each platform targets a different corner of the QDL framework, with emphasis on
-        falsifiable predictions and practical laboratory implementation.
-      </p>
-    </div>
+  <h2>2. NV-center frequency-shift measurements</h2>
+  <p>
+    Nitrogen–vacancy (NV) centers in diamond offer a well-characterized spin-resonance
+    platform. QDL-motivated field configurations are used to test whether the ledger
+    structure implies structured offsets in resonance frequencies.
+  </p>
+  <ul>
+    <li>Apply controlled magnetic and electric field configurations tied to L–F scaling.</li>
+    <li>Compare measured resonance shifts against standard spin Hamiltonians.</li>
+    <li>Search for reproducible departures consistent with QDL dimensional closure.</li>
+  </ul>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3 class="card-title">Torsion-Balance Scaling</h3>
-        <p class="card-meta">Gravitational / mechanical sector</p>
-        <p>
-          Precision torsion-balance experiments probe whether torque and deflection follow
-          QDL-predicted scaling when arm length, mass distribution, and environmental
-          parameters are systematically varied in a \(3L + 2F\) ledger.
-        </p>
-      </div>
+  <h2>3. Cavity-mode length–frequency scaling</h2>
+  <p>
+    Resonant cavities convert geometry directly into frequency spectra. QDL predicts
+    specific scaling patterns in mode structure when cavity dimensions are varied in
+    ways that respect or violate the underlying 3L + 2F cell.
+  </p>
+  <ul>
+    <li>Systematically scale cavity length and aspect ratio while tracking resonance modes.</li>
+    <li>Test for scaling collapses or splits that align with QDL ledger predictions.</li>
+    <li>Use high-stability oscillators and precise metrology to control frequency error bars.</li>
+  </ul>
 
-      <div class="card">
-        <h3 class="card-title">NV-Center Frequency Shifts</h3>
-        <p class="card-meta">Spin and quantum-defect sector</p>
-        <p>
-          Nitrogen–vacancy centers in diamond offer narrow spin resonances. QDL-motivated
-          field configurations are used to search for small, structured frequency offsets
-          that cannot be accounted for by standard Zeeman or crystal-field models alone.
-        </p>
-      </div>
+  <h2>4. Metamaterial dispersion-collapse tests</h2>
+  <p>
+    Engineered metamaterials can be designed to approximate target dispersion relations.
+    QDL suggests that certain “ledger-aligned” structures may exhibit dispersion
+    collapses or coherence patterns that differ from standard effective-medium models.
+  </p>
+  <ul>
+    <li>Design metamaterial lattices to approximate QDC-inspired dimensional structures.</li>
+    <li>Measure dispersion curves and effective indices across frequency bands.</li>
+    <li>Look for organized departures from conventional models matching QDL scaling.</li>
+  </ul>
 
-      <div class="card">
-        <h3 class="card-title">Cavity L–F Scaling</h3>
-        <p class="card-meta">Optical / microwave resonators</p>
-        <p>
-          Tunable cavities provide a direct way to test QDL’s length–frequency basis.
-          Mode structure and resonance scaling are compared against standard EM expectations
-          and the integer-exponent ledger implied by the Quantized Dimensional Cell.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="card-title">Metamaterial Dispersion</h3>
-        <p class="card-meta">Engineered media and dispersion</p>
-        <p>
-          Metamaterial lattices are designed to approximate QDC-like coherence. Their
-          dispersion, resonance collapse, and anomalous modes are analyzed through the
-          QDL ledger to search for signatures of additional structured degrees of freedom.
-        </p>
-      </div>
-    </div>
-
-    <p class="note">
-      Full protocol preprint:<br/>
-      Bourassa, J. (2025).
-      <em>QDL Experimental Validation Protocol: A Unified Roadmap
-      for Torsion, NV-Center, Cavity, and Metamaterial Tests.</em> Zenodo.
-      DOI:
-      <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank">
-        10.5281/zenodo.17654442
-      </a>.
-    </p>
-  </section>
+  <div class="callout">
+    <strong>Reference protocol and collaboration.</strong><br />
+    The full validation roadmap is described in:<br />
+    Bourassa, J. (2025). <em>QDL Experimental Validation Protocol: A Unified Roadmap for
+    Torsion, NV-Center, Cavity, and Metamaterial Tests</em>. Zenodo.
+    DOI:
+    <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">
+      10.5281/zenodo.17654442
+    </a>.
+    Experimental groups working with torsion balances, NV centers, resonant cavities, or
+    metamaterials and interested in testing QDL predictions are warmly invited to contact
+    the Institute via the <a href="contact.html">contact page</a>.
+  </div>
 </main>
 
 <footer>
-  <div class="footer-grid">
-    <div>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</div>
-    <div>Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Metrology</div>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
+    <span>Quantized Dimensional Ledger · Unified Dimensional Physics and Metrology</span>
   </div>
 </footer>
 
@@ -387,5 +310,3 @@
 </script>
 </body>
 </html>
-
-
