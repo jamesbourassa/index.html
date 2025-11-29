@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="About the QDL Physics Institute and James D. Bourassa, including research focus, background, and information for journal editors and collaborators."
+    content="About the QDL Physics Institute and the Quantized Dimensional Ledger research program."
   />
   <style>
     :root {
@@ -22,10 +22,10 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -104,9 +104,8 @@
     }
 
     .nav-links a:hover {
-      border-color: rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-      text-decoration: none;
+      border-color: rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
     }
 
     .nav-cta {
@@ -137,30 +136,37 @@
       margin-bottom: 0.4rem;
     }
 
-    p {
-      font-size: 0.92rem;
-      color: #374151;
+    .lede {
+      font-size: 0.94rem;
+      color: #4b5563;
+      margin-bottom: 1.2rem;
+      max-width: 42rem;
       line-height: 1.6;
-      margin-bottom: 0.5rem;
-      max-width: 40rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
     }
 
     h2 {
-      font-size: 1rem;
-      margin-top: 1.3rem;
-      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 0.7rem;
     }
 
     ul {
-      margin: 0.3rem 0 0.7rem 1.2rem;
-      padding: 0;
-    }
-
-    li {
-      font-size: 0.9rem;
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
       color: #374151;
-      line-height: 1.5;
-      margin-bottom: 0.25rem;
+      line-height: 1.55;
+      font-size: 0.9rem;
     }
 
     footer {
@@ -169,7 +175,7 @@
       padding: 0.9rem 1.25rem 1.3rem;
       font-size: 0.8rem;
       color: #6b7280;
-      margin-top: 1.8rem;
+      margin-top: 2rem;
     }
 
     .footer-inner {
@@ -181,8 +187,20 @@
       flex-wrap: wrap;
       align-items: center;
     }
+
+    .orcid-link {
+      font-weight: 500;
+      color: #1d4ed8;
+      background: #eff6ff;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(37,99,235,0.35);
+      display: inline-block;
+      margin-top: 0.2rem;
+    }
   </style>
 </head>
+
 <body>
 <header>
   <div class="nav">
@@ -209,58 +227,50 @@
 
 <main>
   <div class="kicker">About</div>
-  <h1>About the QDL Physics Institute and James D. Bourassa</h1>
+  <h1>About the QDL Physics Institute</h1>
 
-  <p>
-    The QDL Physics Institute is led by James D. Bourassa, an independent researcher
-    focused on dimensional analysis, metrology, and foundational physics. The Institute
-    develops the Quantized Dimensional Ledger (QDL) as a unified 3L + 2F length–frequency
-    basis for physical theories, with an emphasis on clear derivations, reproducibility,
-    and experimental testability.
-  </p>
-
-  <h2>Research focus</h2>
-  <p>
-    The current program centers on:
-  </p>
-  <ul>
-    <li>Formulating QDL as a dimensional closure framework spanning the Standard Model and gravitation.</li>
-    <li>Interpreting the Quantized Dimensional Cell as a geometric structure (SO(3,2) space–time).</li>
-    <li>Developing ledger-based treatments of electron and muon g–2 and other precision observables.</li>
-    <li>Building metrology ledgers for physical constants and quantum measurement units.</li>
-    <li>Designing falsifiable tabletop experiments to probe QDL scaling predictions.</li>
-  </ul>
-
-  <h2>Background and identifiers</h2>
-  <p>
-    James D. Bourassa works under the institutional label “QDL Physics Institute” for
-    publications, correspondence, and archiving. The Institute maintains a Zenodo
-    community for QDL-related manuscripts and supporting materials.
-  </p>
-  <p>
-    <strong>ORCID:</strong>
-    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer">
-      (ORCID profile link can be added here)
-    </a><br />
-    <strong>Zenodo community:</strong>
-    <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-      https://zenodo.org/communities/qdl-physics-institute/
-    </a>
+  <p class="lede">
+    The QDL Physics Institute conducts theoretical and metrological research centered on the
+    Quantized Dimensional Ledger (QDL) framework: a unified 3L + 2F dimensional basis,
+    the conserved Quantized Dimensional Cell (QDC), and associated structures in gravitation,
+    field theory, precision metrology, and experimental validation.
   </p>
 
-  <h2>For journal editors and collaborators</h2>
-  <p>
-    The Institute is actively submitting QDL manuscripts to peer-reviewed journals in
-    gravitation, mathematical physics, and metrology. All submissions are supported by
-    detailed derivations, dimensional tables, and, where appropriate, experimental
-    protocols archived on Zenodo.
-  </p>
-  <p>
-    Journal editors, referees, and potential experimental collaborators are encouraged to
-    reach out via the <a href="contact.html">contact page</a>. Including the journal
-    name, manuscript title (if applicable), and any specific questions about the QDL
-    framework will help ensure clear and efficient correspondence.
-  </p>
+  <section class="section">
+    <h2>Founder</h2>
+    <p>
+      The Institute was founded by <strong>James D. Bourassa</strong>, an independent
+      researcher based in Huntley, Illinois, USA. His work focuses on dimensional closure,
+      ledger-based unification of physical theories, and falsifiable experimental strategies.
+    </p>
+
+    <p>
+      <strong>ORCID:</strong>
+      <a class="orcid-link" href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">
+        https://orcid.org/0009-0008-0155-0051
+      </a>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Research Themes</h2>
+    <ul>
+      <li>3L + 2F dimensional basis and QDC structure</li>
+      <li>Standard Model field ledgers and scalar–tensor gravitation</li>
+      <li>Metrology: quantum measurement units and dimensional constants</li>
+      <li>SO(3,2) geometric interpretation of the QDC</li>
+      <li>Experimental validation: torsion, NV centers, cavity scaling, metamaterials</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>For Journal Editors & Collaborators</h2>
+    <p>
+      Manuscripts under review include unified dimensional closure (Standard Model +
+      gravity), scalar–tensor extensions, QDC geometry, dimensional-constants analysis,
+      magnetic-moment structure, and the QDL experimental protocol.
+    </p>
+  </section>
 </main>
 
 <footer>
