@@ -8,13 +8,11 @@
     name="description"
     content="The Quantized Dimensional Ledger (QDL) framework: 3L + 2F dimensional basis, Quantized Dimensional Cell (QDC), and unified closure structure for the Standard Model, gravitation, and metrology."
   />
-
   <style>
     :root {
       --bg-page: #ffffff;
       --bg-card: #ffffff;
       --border-soft: #e5e7eb;
-      --text-main: #000;      
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
@@ -33,7 +31,7 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ===== HEADER (MATCHES INDEX.HTML LAYOUT) ===== */
+    /* ===== HEADER, MATCHING THE NEW MULTI-PAGE STYLE ===== */
 
     header {
       background: #0f172a;
@@ -45,16 +43,15 @@
     }
 
     .nav {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* Important: Align logo + nav to the left */
+      justify-content: flex-start;
       gap: 1.5rem;
     }
 
-    /* Clickable full logo block */
     .logo {
       display: flex;
       align-items: center;
@@ -86,23 +83,22 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 0.80rem;
+      font-size: 0.8rem;
     }
 
     .logo-text-sub {
-      font-size: 0.70rem;
+      font-size: 0.72rem;
       color: #9ca3af;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    /* Navigation links */
     .nav-links {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
       gap: 0.9rem;
       font-size: 0.85rem;
+      align-items: center;
     }
 
     .nav-links a {
@@ -118,18 +114,17 @@
       text-decoration: none;
     }
 
-    /* Active + CTA button */
     .nav-links a.active,
     .nav-cta {
-      border-color: #38bdf8 !important;
-      background: #0b1120 !important;
+      border-color: #38bdf8;
+      background: #0b1120;
       color: #e0f2fe !important;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-size: 0.78rem;
     }
 
-    /* ===== PAGE CONTENT STYLES (unchanged) ===== */
+    /* ===== PAGE CONTENT ===== */
 
     main {
       max-width: 900px;
@@ -189,7 +184,8 @@
 
     .equation-snippet {
       display: inline-block;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
       font-size: 0.86rem;
       background: #f3f4f6;
       border-radius: 6px;
@@ -224,15 +220,20 @@
       flex-wrap: wrap;
       align-items: center;
     }
+
+    @media (max-width: 720px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+    }
   </style>
 </head>
 
 <body>
-
 <header>
   <div class="nav">
-
-    <!-- Full logo is clickable back to homepage -->
     <a href="index.html" class="logo">
       <div class="logo-icon">
         <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
@@ -242,8 +243,6 @@
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
     </a>
-
-    <!-- NAVIGATION (Left aligned) -->
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="framework.html" class="active">Framework</a>
@@ -253,18 +252,228 @@
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
-
   </div>
 </header>
 
-<!-- ====== PAGE CONTENT (UNCHANGED) ====== -->
-
 <main>
-  <!-- Your entire framework content unchanged -->
-  <!-- (I preserved every single section — only header was modified) -->
+  <div class="kicker">Framework</div>
+  <h1>The Quantized Dimensional Ledger Framework</h1>
 
-  <!-- CONTENT OMITTED HERE ONLY FOR SPACE IN CHAT —
-       Your full content is preserved exactly as in your file -->
+  <p class="lede">
+    The Quantized Dimensional Ledger (QDL) is a unified dimensional-closure framework built on a
+    minimal two-basis system, Length (L) and Frequency (F), extended to a 3L + 2F ledger.
+    All fields, couplings, and constants are expressed as integer-exponent vectors in this
+    ledger, closing onto a conserved Quantized Dimensional Cell (QDC) with dimensional
+    content approximately L<sup>3</sup>F<sup>2</sup>. This closure principle reorganizes the
+    Standard Model, gravitation, and metrology into a single structural program with
+    falsifiable experimental predictions.
+  </p>
+
+  <section class="section">
+    <h2>Key Concepts of QDL</h2>
+    <ol>
+      <li>
+        <strong>3L + 2F dimensional basis.</strong>
+        QDL replaces the traditional MLT system with a minimal Length–Frequency basis,
+        expanded to a five-slot ledger (3L + 2F), so every quantity is represented as a
+        fixed integer-exponent vector. This supports a global view of all fields and
+        observables on one lattice.
+        <div class="details">
+          Details: <em>Quantized Dimensional Ledger as a Unified Dimensional Closure Framework for the Standard Model and Gravity</em>
+          (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">Zenodo 17742903</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Quantized Dimensional Cell (QDC).</strong>
+        The QDC is a conserved “volume element” in the ledger with dimensional structure
+        L<sup>3</sup>F<sup>2</sup>. It acts as the closure target: allowed actions and
+        interactions are those whose net ledger content is an integer multiple of the QDC.
+        <div class="details">
+          Details: <em>The Quantized Dimensional Cell as an SO(3,2) Space–Time Structure</em>
+          (<a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">Zenodo 17683786</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Dimensional-closure principle.</strong>
+        Instead of “dimensional consistency” as a loose check, QDL imposes an exact
+        ledger-closure condition: sums of field and coupling exponents must map onto
+        integer multiples of the QDC. This provides a structural filter on admissible
+        Lagrangian terms and interaction vertices.
+        <div class="details">
+          Details: unified framework and metrology/constant papers
+          (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>,
+          <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>,
+          <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">17663436</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Ledger representation of Standard Model fields.</strong>
+        Gauge fields, matter fields, and couplings are each assigned a 5-component ledger
+        vector. Gauge invariance, anomaly cancellation, and interaction structure are
+        rephrased as integer relations between these vectors under the closure principle.
+        <div class="details">
+          Details: unified Standard Model + gravity framework
+          (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Scalar–tensor gravitation in QDL.</strong>
+        The gravitational sector is built as a scalar–tensor theory whose fields and
+        couplings live in the QDL ledger, enforcing dimensional closure across cosmological
+        and local terms and tying the gravitation sector back into the same QDC structure
+        as the Standard Model.
+        <div class="details">
+          Details: <em>A Unified Ledger-Based Framework for Physical Theories: From Dimensional Cells to Scalar–Tensor Field Structure</em>
+          (<a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">17704896</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Ledger-based ontology of constants and metrology.</strong>
+        Fundamental constants (c, ħ, G, etc.) and metrological chains are re-expressed
+        as ledger vectors and combinations that close onto the QDC, clarifying which
+        constants represent structural geometry versus unit conventions, and providing
+        a practical Quantum Measurement Units (QMU) scheme.
+        <div class="details">
+          Details: metrology and constants papers
+          (<a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>,
+          <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">17663436</a>,
+          <a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener noreferrer">17663340</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Experimental validation roadmap.</strong>
+        QDL is tied to falsifiable predictions in four main experimental channels:
+        torsion-balance scaling, NV-center frequency shifts, cavity-mode L–F scaling,
+        and metamaterial dispersion-collapse tests, each expressed directly in the
+        ledger.
+        <div class="details">
+          Details: <em>QDL Experimental Validation Protocol</em>
+          (<a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">17654442</a>) and
+          <em>Teaching dimensional analysis with a length–frequency basis</em>
+          (<a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener noreferrer">17663340</a>).
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>Key Structural Equations</h2>
+    <ol>
+      <li>
+        <strong>Definition of the Quantized Dimensional Cell (QDC).</strong><br />
+        <span class="equation-snippet">A<sub>QDC</sub> ≈ L<sup>3</sup>F<sup>2</sup></span>
+        <p>
+          The QDC acts as the conserved dimensional “cell” of the ledger. Every
+          admissible action or interaction is required to close onto an integer
+          multiple of this cell.
+        </p>
+        <div class="details">
+          Details: SO(3,2) QDC structure
+          (<a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">17683786</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Ledger vector for a physical quantity.</strong><br />
+        <span class="equation-snippet">X ↦ ℓ(X) = (ℓ₁, ℓ₂, ℓ₃, ℓ₄, ℓ₅)</span>
+        <p>
+          Any field, observable, or constant is mapped to a 5-component integer vector in the
+          3L + 2F ledger. This provides a unified representation space for the Standard Model,
+          gravitation, and metrology.
+        </p>
+        <div class="details">
+          Details: unified framework and metrology papers
+          (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>,
+          <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Dimensional-closure condition for an interaction.</strong><br />
+        <span class="equation-snippet">
+          Σ<sub>i</sub> ℓ(field<sub>i</sub>) + ℓ(couplings) = n · ℓ(A<sub>QDC</sub>), n ∈ ℤ
+        </span>
+        <p>
+          This expresses the QDL closure rule for an interaction vertex: the ledger sum of all
+          participating fields and couplings must equal an integer multiple of the QDC vector.
+        </p>
+        <div class="details">
+          Details: unified framework
+          (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Ledger-based gravitational action (schematic).</strong><br />
+        <span class="equation-snippet">
+          S<sub>grav</sub> = ∫ d⁴x √−g · ℒ<sub>QDL</sub>[g<sub>μν</sub>, Φ; ℓ]
+        </span>
+        <p>
+          The scalar–tensor gravitation sector is constructed so that each term in the
+          Lagrangian density has a ledger assignment that closes onto the QDC, enforcing
+          dimensional closure across the gravitational theory.
+        </p>
+        <div class="details">
+          Details: scalar–tensor framework
+          (<a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">17704896</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>SO(3,2) metric relation for the QDC.</strong><br />
+        <span class="equation-snippet">
+          η<sub>AB</sub> X<sup>A</sup> X<sup>B</sup> = ± A<sub>QDC</sub>
+        </span>
+        <p>
+          The QDC is embedded into a five-dimensional pseudo-orthogonal geometry with
+          SO(3,2) metric η<sub>AB</sub>, giving the ledger a geometric interpretation
+          as a discrete space–time–frequency structure.
+        </p>
+        <div class="details">
+          Details: SO(3,2) paper
+          (<a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">17683786</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Cavity scaling law in L–F basis (schematic).</strong><br />
+        <span class="equation-snippet">
+          ℓ(f<sub>mode</sub>) + ℓ(L<sub>cavity</sub>) = 0
+        </span>
+        <p>
+          In the teaching lab, cavity-mode frequencies and cavity length are related in the
+          ledger so that the combined dimensional content closes to zero, illustrating how
+          QDL organizes resonance scaling and experimental design.
+        </p>
+        <div class="details">
+          Details: teaching lab paper
+          (<a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener noreferrer">17663340</a>).
+        </div>
+      </li>
+
+      <li>
+        <strong>Prototype ledger relation for experimental tests.</strong><br />
+        <span class="equation-snippet">
+          ℓ(Δω<sub>NV</sub>) = F(ℓ(fields), ℓ(constants), ℓ(geometry))
+        </span>
+        <p>
+          Torsion-balance, NV-center, cavity, and metamaterial experiments are expressed as
+          explicit ledger relations between measured shifts and the underlying fields,
+          constants, and geometry, providing QDL-based scaling predictions.
+        </p>
+        <div class="details">
+          Details: experimental protocol
+          (<a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">17654442</a>).
+        </div>
+      </li>
+    </ol>
+  </section>
 </main>
 
 <footer>
