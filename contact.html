@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <title>Contact | QDL Physics Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Contact the QDL Physics Institute for journal, collaboration, and general inquiries about the Quantized Dimensional Ledger program."
-  />
+  <meta name="description" content="Contact the QDL Physics Institute for inquiries about the Quantized Dimensional Ledger program." />
   <style>
     :root {
       --bg-page: #ffffff;
@@ -20,12 +17,10 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -50,29 +45,17 @@
       gap: 1rem;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
+    .logo { display: flex; align-items: center; gap: 0.6rem; }
     .logo-icon {
       width: 44px;
       height: 44px;
       border-radius: 10px;
       background: #020617;
       border: 1px solid #38bdf8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
-
-    .logo-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
 
     .logo-text-main {
       font-weight: 600;
@@ -80,7 +63,6 @@
       text-transform: uppercase;
       font-size: 0.78rem;
     }
-
     .logo-text-sub {
       font-size: 0.72rem;
       color: #9ca3af;
@@ -95,20 +77,16 @@
       font-size: 0.82rem;
       align-items: center;
     }
-
     .nav-links a {
       color: #e5e7eb;
       padding: 0.22rem 0.6rem;
       border-radius: 999px;
       border: 1px solid transparent;
     }
-
     .nav-links a:hover {
-      border-color: rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-      text-decoration: none;
+      border-color: rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
     }
-
     .nav-cta {
       border-color: #38bdf8;
       background: #0b1120;
@@ -132,10 +110,7 @@
       margin-bottom: 0.3rem;
     }
 
-    h1 {
-      font-size: 1.7rem;
-      margin-bottom: 0.4rem;
-    }
+    h1 { font-size: 1.7rem; margin-bottom: 0.4rem; }
 
     .lede {
       font-size: 0.94rem;
@@ -145,81 +120,31 @@
       line-height: 1.6;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
     .card {
       background: var(--bg-card);
       border-radius: 16px;
       border: 1px solid var(--border-soft);
-      padding: 1rem 1.1rem;
+      padding: 1.2rem 1.4rem;
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-    }
-
-    h2 {
-      font-size: 1rem;
-      margin-bottom: 0.6rem;
-    }
-
-    p {
-      font-size: 0.9rem;
-      color: #374151;
-      line-height: 1.6;
-      margin-bottom: 0.5rem;
-    }
-
-    .info-block {
-      font-size: 0.9rem;
-      color: #374151;
-      margin-bottom: 0.4rem;
+      max-width: 600px;
     }
 
     .info-label {
       font-weight: 600;
       display: inline-block;
-      width: 4.5rem;
+      width: 5.2rem;
     }
 
-    .email-highlight {
+    .email-button {
       display: inline-block;
-      padding: 0.35rem 0.65rem;
+      margin-top: 0.6rem;
+      padding: 0.55rem 1rem;
       border-radius: 999px;
       background: var(--accent-soft);
       color: #1d4ed8;
-      font-weight: 500;
-      font-size: 0.9rem;
       border: 1px solid rgba(37, 99, 235, 0.4);
-      margin-top: 0.2rem;
-    }
-
-    .template-box {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #d1d5db;
-      padding: 0.6rem 0.7rem;
-      font-size: 0.86rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-        "Courier New", monospace;
-      color: #111827;
-      background: #f9fafb;
-      line-height: 1.5;
-      white-space: pre-wrap;
-    }
-
-    .small-note {
-      font-size: 0.78rem;
-      color: #6b7280;
-      margin-top: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     footer {
@@ -228,7 +153,7 @@
       padding: 0.9rem 1.25rem 1.3rem;
       font-size: 0.8rem;
       color: #6b7280;
-      margin-top: 1.8rem;
+      margin-top: 2rem;
     }
 
     .footer-inner {
@@ -271,80 +196,25 @@
   <h1>Contact the QDL Physics Institute</h1>
   <p class="lede">
     For questions about the Quantized Dimensional Ledger framework, journal submissions,
-    or potential experimental collaborations, please use the email address below.
-    Messages are read directly by James D. Bourassa.
+    or experimental collaboration inquiries, please contact the Institute directly.
   </p>
 
-  <div class="contact-grid">
-    <section class="card">
-      <h2>Primary contact</h2>
-      <p class="info-block">
-        <span class="info-label">Email</span>
-        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-      </p>
-      <p class="info-block">
-        <span class="info-label">Location</span>
-        Huntley, Illinois, USA
-      </p>
-      <p class="info-block">
-        <span class="info-label">Institute</span>
-        QDL Physics Institute
-      </p>
-      <p class="info-block">
-        <span class="info-label">Zenodo</span>
-        <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-          QDL Physics Institute community
-        </a>
-      </p>
+  <section class="card">
+    <p><span class="info-label">Email</span>
+      <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+    </p>
+    <p><span class="info-label">Location</span>Huntley, Illinois, USA</p>
+    <p><span class="info-label">Institute</span>QDL Physics Institute</p>
 
-      <p style="margin-top:0.7rem;">
-        You can click this address to open your email client:
-      </p>
-      <p>
-        <a class="email-highlight" href="mailto:james.bourassa@qdlphysics.org?subject=QDL%20Physics%20inquiry">
-          Email: james.bourassa@qdlphysics.org
-        </a>
-      </p>
-      <p class="small-note">
-        If clicking does not open an email window, please copy the address and paste it
-        into your preferred email service (Gmail, Outlook, etc.).
-      </p>
-    </section>
+    <a class="email-button" href="mailto:james.bourassa@qdlphysics.org?subject=QDL%20Physics%20Inquiry">
+      Email James D. Bourassa
+    </a>
 
-    <aside class="card">
-      <h2>Suggested message template</h2>
-      <p>
-        You can copy and adapt this template for journal, referee, or collaboration
-        inquiries.
-      </p>
-      <div class="template-box">
-Subject: [QDL] &lt;Your topic here&gt;
-
-Dear Dr. Bourassa,
-
-I am writing regarding the Quantized Dimensional Ledger (QDL) framework.
-
-Context:
-- Name: &lt;Your name&gt;
-- Affiliation: &lt;Your institution / group&gt;
-- Topic: &lt;Journal/editorial, experimental collaboration, teaching, or other&gt;
-
-Message:
-&lt;Brief description of your question, interest, or proposal&gt;
-
-Thank you for your time and consideration.
-
-Sincerely,
-&lt;Your name&gt;
-&lt;Optional: website or ORCID&gt;
-      </div>
-      <p class="small-note">
-        For experimental collaboration inquiries, a short description of your setup
-        (torsion balance, NV centers, cavity, metamaterials, etc.) and current sensitivity
-        is especially helpful.
-      </p>
-    </aside>
-  </div>
+    <p style="margin-top:0.8rem; font-size:0.82rem; color:#6b7280;">
+      If clicking the button does not open your email program automatically,
+      please copy the address above and paste it into your email client.
+    </p>
+  </section>
 </main>
 
 <footer>
