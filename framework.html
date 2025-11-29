@@ -46,14 +46,16 @@
       padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+      justify-content: flex-start;
+      gap: 1.5rem;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      text-decoration: none;
+      color: #e5e7eb;
     }
 
     .logo-icon {
@@ -66,6 +68,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .logo-icon img {
@@ -218,7 +221,7 @@
 <body>
 <header>
   <div class="nav">
-    <div class="logo">
+    <a href="index.html" class="logo">
       <div class="logo-icon">
         <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
       </div>
@@ -226,7 +229,7 @@
         <div class="logo-text-main">QDL Physics Institute</div>
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
-    </div>
+    </a>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="framework.html">Framework</a>
@@ -254,7 +257,7 @@
   </p>
 
   <section class="section">
-    <h2>Key Concepts of QDL (Top 7)</h2>
+    <h2>Key Concepts of QDL</h2>
     <ol>
       <li>
         <strong>3L + 2F dimensional basis.</strong>
@@ -347,7 +350,7 @@
   </section>
 
   <section class="section">
-    <h2>Key Structural Equations (Top 7)</h2>
+    <h2>Key Structural Equations</h2>
     <ol>
       <li>
         <strong>Definition of the Quantized Dimensional Cell (QDC).</strong><br />
@@ -365,7 +368,7 @@
 
       <li>
         <strong>Ledger vector for a physical quantity.</strong><br />
-        <span class="equation-snippet">X &rarr; <b>&ell;</b>(X) = (\ell<sub>1</sub>, \ell<sub>2</sub>, \ell<sub>3</sub>, \ell<sub>4</sub>, \ell<sub>5</sub>)</span>
+        <span class="equation-snippet">X &rarr; <b>&ell;</b>(X) = (&ell;<sub>1</sub>, &ell;<sub>2</sub>, &ell;<sub>3</sub>, &ell;<sub>4</sub>, &ell;<sub>5</sub>)</span>
         <p>
           Any field, observable, or constant is mapped to a 5-component integer vector in the
           3L + 2F ledger. This provides a unified representation space for the Standard Model,
