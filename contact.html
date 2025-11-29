@@ -271,7 +271,8 @@
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: 
+center;
     }
   </style>
 </head>
@@ -311,8 +312,7 @@
   <div class="contact-grid">
     <section class="card">
       <h2>Contact form</h2>
-      <!-- Replace the action URL with your preferred form handler or service -->
-      <form action="mailto:james.bourassa@qdlphysics.org" method="post" enctype="text/plain">
+      <form id="contact-form">
         <div>
           <label for="name">Name</label>
           <input type="text" id="name" name="Name" required />
@@ -351,7 +351,8 @@
 
         <button type="submit" class="btn-submit">Send message</button>
         <p class="small-note">
-          This form uses your email client to send the message. You can also email directly at
+          This form opens your email client with the details pre-filled. You can also email
+          directly at
           <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
         </p>
       </form>
@@ -401,6 +402,45 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Simple JS mailto handler for the form
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var affiliation = document.getElementById("affiliation").value.trim();
+    var topic = document.getElementById("topic").value;
+    var subject = document.getElementById("subject").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    var to = "james.bourassa@qdlphysics.org";
+
+    var fullSubject = "[QDL Contact – " + topic + "] " + subject;
+
+    var bodyParts = [];
+    bodyParts.push("Name: " + name);
+    bodyParts.push("Email: " + email);
+    if (affiliation) {
+      bodyParts.push("Affiliation: " + affiliation);
+    }
+    bodyParts.push("Topic: " + topic);
+    bodyParts.push("");
+    bodyParts.push("Message:");
+    bodyParts.push(message);
+
+    var body = bodyParts.join("\n");
+
+    var mailtoLink =
+      "mailto:" +
+      encodeURIComponent(to) +
+      "?subject=" +
+      encodeURIComponent(fullSubject) +
+      "&body=" +
+      encodeURIComponent(body);
+
+    window.location.href = mailtoLink;
+  });
 </script>
 </body>
 </html>
