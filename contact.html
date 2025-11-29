@@ -147,7 +147,7 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 1.5rem;
       align-items: flex-start;
     }
@@ -190,69 +190,36 @@
       width: 4.5rem;
     }
 
-    form {
-      display: grid;
-      gap: 0.75rem;
+    .email-highlight {
+      display: inline-block;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #1d4ed8;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border: 1px solid rgba(37, 99, 235, 0.4);
+      margin-top: 0.2rem;
     }
 
-    label {
-      font-size: 0.86rem;
-      color: #374151;
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea {
+    .template-box {
       width: 100%;
       border-radius: 10px;
       border: 1px solid #d1d5db;
-      padding: 0.45rem 0.55rem;
-      font-size: 0.9rem;
-      font-family: inherit;
+      padding: 0.6rem 0.7rem;
+      font-size: 0.86rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
       color: #111827;
-      background: #ffffff;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 1px #2563eb22;
-    }
-
-    .btn-submit {
-      margin-top: 0.3rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.55rem 1.2rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
-      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-submit:hover {
-      filter: brightness(1.03);
+      background: #f9fafb;
+      line-height: 1.5;
+      white-space: pre-wrap;
     }
 
     .small-note {
       font-size: 0.78rem;
       color: #6b7280;
-      margin-top: 0.5rem;
+      margin-top: 0.4rem;
     }
 
     footer {
@@ -271,8 +238,7 @@
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
-      align-items: 
-center;
+      align-items: center;
     }
   </style>
 </head>
@@ -305,61 +271,13 @@ center;
   <h1>Contact the QDL Physics Institute</h1>
   <p class="lede">
     For questions about the Quantized Dimensional Ledger framework, journal submissions,
-    or potential experimental collaborations, please use the details below or the contact
-    form. Messages are read directly by James D. Bourassa.
+    or potential experimental collaborations, please use the email address below.
+    Messages are read directly by James D. Bourassa.
   </p>
 
   <div class="contact-grid">
     <section class="card">
-      <h2>Contact form</h2>
-      <form id="contact-form">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="Name" required />
-        </div>
-
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="Email" required />
-        </div>
-
-        <div>
-          <label for="affiliation">Affiliation (optional)</label>
-          <input type="text" id="affiliation" name="Affiliation" />
-        </div>
-
-        <div>
-          <label for="topic">Topic</label>
-          <select id="topic" name="Topic">
-            <option value="General inquiry">General inquiry</option>
-            <option value="Journal/editorial">Journal/editorial</option>
-            <option value="Experimental collaboration">Experimental collaboration</option>
-            <option value="Teaching/education">Teaching / education</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="Subject" required />
-        </div>
-
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="Message" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Send message</button>
-        <p class="small-note">
-          This form opens your email client with the details pre-filled. You can also email
-          directly at
-          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
-        </p>
-      </form>
-    </section>
-
-    <aside class="card">
-      <h2>Direct contact and details</h2>
+      <h2>Primary contact</h2>
       <p class="info-block">
         <span class="info-label">Email</span>
         <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
@@ -379,15 +297,51 @@ center;
         </a>
       </p>
 
-      <h2 style="margin-top:1.1rem;">When you write</h2>
-      <p>
-        For journal or referee-related correspondence, please include the journal name,
-        manuscript title, and any specific questions about the QDL framework.
+      <p style="margin-top:0.7rem;">
+        You can click this address to open your email client:
       </p>
       <p>
-        For experimental collaboration inquiries, a brief description of your setup
+        <a class="email-highlight" href="mailto:james.bourassa@qdlphysics.org?subject=QDL%20Physics%20inquiry">
+          Email: james.bourassa@qdlphysics.org
+        </a>
+      </p>
+      <p class="small-note">
+        If clicking does not open an email window, please copy the address and paste it
+        into your preferred email service (Gmail, Outlook, etc.).
+      </p>
+    </section>
+
+    <aside class="card">
+      <h2>Suggested message template</h2>
+      <p>
+        You can copy and adapt this template for journal, referee, or collaboration
+        inquiries.
+      </p>
+      <div class="template-box">
+Subject: [QDL] &lt;Your topic here&gt;
+
+Dear Dr. Bourassa,
+
+I am writing regarding the Quantized Dimensional Ledger (QDL) framework.
+
+Context:
+- Name: &lt;Your name&gt;
+- Affiliation: &lt;Your institution / group&gt;
+- Topic: &lt;Journal/editorial, experimental collaboration, teaching, or other&gt;
+
+Message:
+&lt;Brief description of your question, interest, or proposal&gt;
+
+Thank you for your time and consideration.
+
+Sincerely,
+&lt;Your name&gt;
+&lt;Optional: website or ORCID&gt;
+      </div>
+      <p class="small-note">
+        For experimental collaboration inquiries, a short description of your setup
         (torsion balance, NV centers, cavity, metamaterials, etc.) and current sensitivity
-        is helpful.
+        is especially helpful.
       </p>
     </aside>
   </div>
@@ -402,45 +356,6 @@ center;
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Simple JS mailto handler for the form
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    var name = document.getElementById("name").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var affiliation = document.getElementById("affiliation").value.trim();
-    var topic = document.getElementById("topic").value;
-    var subject = document.getElementById("subject").value.trim();
-    var message = document.getElementById("message").value.trim();
-
-    var to = "james.bourassa@qdlphysics.org";
-
-    var fullSubject = "[QDL Contact – " + topic + "] " + subject;
-
-    var bodyParts = [];
-    bodyParts.push("Name: " + name);
-    bodyParts.push("Email: " + email);
-    if (affiliation) {
-      bodyParts.push("Affiliation: " + affiliation);
-    }
-    bodyParts.push("Topic: " + topic);
-    bodyParts.push("");
-    bodyParts.push("Message:");
-    bodyParts.push(message);
-
-    var body = bodyParts.join("\n");
-
-    var mailtoLink =
-      "mailto:" +
-      encodeURIComponent(to) +
-      "?subject=" +
-      encodeURIComponent(fullSubject) +
-      "&body=" +
-      encodeURIComponent(body);
-
-    window.location.href = mailtoLink;
-  });
 </script>
 </body>
 </html>
