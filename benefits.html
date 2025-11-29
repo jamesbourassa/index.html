@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QDL Benefits | QDL Physics Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Top potential benefits of the Quantized Dimensional Ledger (QDL) framework across unification, metrology, experimental tests, and coherence-based physics."
+  />
+  <style>
+    :root {
+      --bg-page: #ffffff;
+      --bg-card: #ffffff;
+      --border-soft: #e5e7eb;
+      --text-main: #0f172a;
+      --text-soft: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-bottom: 1px solid #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      background: #020617;
+      border: 1px solid #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      border-color: #38bdf8;
+      background: #0b1120;
+      color: #e0f2fe !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 2.5rem;
+    }
+
+    .hero {
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.4rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      max-width: 40rem;
+      line-height: 1.55;
+    }
+
+    .hero-meta {
+      margin-top: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+    }
+
+    .hero-chip {
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #4b5563;
+    }
+
+    .section {
+      margin-bottom: 2.1rem;
+    }
+
+    .section-header {
+      margin-bottom: 0.7rem;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #111827;
+      margin-bottom: 0.2rem;
+    }
+
+    .section-sub {
+      font-size: 0.86rem;
+      color: #6b7280;
+      max-width: 38rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 1.8rem;
+    }
+
+    @media (max-width: 880px) {
+      .benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      padding: 1rem 1.1rem 1.1rem;
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0.4rem;
+      color: #374151;
+    }
+
+    .benefits-list {
+      list-style: decimal;
+      margin: 0.4rem 0 0 1.2rem;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .benefits-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-title {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .pill-row {
+      margin-top: 0.3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 0.12rem 0.55rem;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #4b5563;
+    }
+
+    .ref-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.4rem 0 0;
+      font-size: 0.84rem;
+      color: #374151;
+    }
+
+    .ref-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0.9rem 1.25rem 1.3rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <div class="logo-icon">
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
+      </div>
+      <div>
+        <div class="logo-text-main">QDL Physics Institute</div>
+        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="publications.html">Publications</a>
+      <a href="institute.html">Institute</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-kicker">Why QDL matters</div>
+    <h1 class="hero-title">Top Potential Benefits of the Quantized Dimensional Ledger</h1>
+    <p class="hero-sub">
+      QDL is designed as a structural simplification of physics: a 3L + 2F ledger with a
+      conserved Quantized Dimensional Cell (QDC) that unifies dimensional analysis,
+      clarifies constants, and provides falsifiable predictions across multiple
+      experimental platforms.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-chip">Unification &amp; dimensional closure</span>
+      <span class="hero-chip">Metrology &amp; constants</span>
+      <span class="hero-chip">Testable predictions</span>
+      <span class="hero-chip">Coherence &amp; energy</span>
+    </div>
+  </section>
+
+  <!-- BENEFITS GRID -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Seven potential benefits</h2>
+      <p class="section-sub">
+        These points summarize how QDL could reshape theory, metrology, experimentation,
+        and cross-domain thinking if the framework is borne out by peer review and
+        experiment.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="card">
+        <ol class="benefits-list">
+          <li>
+            <span class="benefit-title">Structural unification across physics.</span>
+            QDL expresses mechanical, electromagnetic, and gravitational quantities in a
+            single 3L + 2F grammar, replacing fragmented MKS/CGS families with a unified
+            dimensional language.
+          </li>
+          <li>
+            <span class="benefit-title">Clarified role of fundamental constants.</span>
+            Constants such as <em>c</em>, <em>ħ</em>, particle masses, and couplings are
+            treated as dimensional ratios emerging from ledger structure, not arbitrary
+            inputs added by hand.
+          </li>
+          <li>
+            <span class="benefit-title">Testable, falsifiable predictions.</span>
+            QDL’s closure rules generate distinct scaling behavior in torsion balances,
+            NV-center shifts, cavity-mode patterns, and metamaterial dispersion, with no
+            new free parameters introduced.
+          </li>
+          <li>
+            <span class="benefit-title">Simpler equations and dimensional consistency.</span>
+            When written in the length–frequency ledger, many equations compress, nuisance
+            constants cancel, and long-standing dimensional mismatches become impossible to
+            hide.
+          </li>
+          <li>
+            <span class="benefit-title">Linked view of gravity and electromagnetism.</span>
+            EM and gravity can be interpreted as two modes of one structural framework:
+            geometry and vibration described in the same QDC-based ledger rather than as
+            separate unit systems.
+          </li>
+          <li>
+            <span class="benefit-title">New pathways for energy and coherence engineering.</span>
+            By framing energy as configuration and coherence, QDL suggests design spaces in
+            magnetic domains, cavities, and resonant structures that emphasize reversible,
+            low-loss geometric storage.
+          </li>
+          <li>
+            <span class="benefit-title">A coherence framework for life and mind.</span>
+            Biological organization, neural oscillations, and multi-scale coherence can be
+            analyzed as ledger-constrained vibrational networks, offering a common
+            dimensional language from physics into biology and neuroscience.
+          </li>
+        </ol>
+      </div>
+
+      <aside class="card">
+        <h3>Where these benefits come from</h3>
+        <p>
+          The benefits are synthesized from the QDL unified framework, metrology ledger,
+          QDC–SO(3,2) geometry, magnetic-moment work, teaching materials, and the
+          experimental validation roadmap.
+        </p>
+        <p>
+          Together, these manuscripts propose that a conserved 3L + 2F cell can serve as a
+          structural principle for both theory and experiment, not just as a bookkeeping
+          convenience.
+        </p>
+
+        <h3 style="margin-top:0.8rem;">Related QDL papers</h3>
+        <ul class="ref-list">
+          <li>
+            Unified SM + gravity closure:<br />
+            <a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.17742903
+            </a>
+          </li>
+          <li>
+            Scalar–tensor &amp; framework overview:<br />
+            <a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.17704896
+            </a>
+          </li>
+          <li>
+            g–2 ledger geometry:<br />
+            <a href="https://doi.org/10.5281/zenodo.17693061" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.17693061
+            </a>
+          </li>
+          <li>
+            SO(3,2) QDC structure:<br />
+            <a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.17683786
+            </a>
+          </li>
+          <li>
+            Experimental validation protocol:<br />
+            <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.17654442
+            </a>
+          </li>
+        </ul>
+
+        <div class="pill-row">
+          <span class="pill">3L + 2F ledger</span>
+          <span class="pill">Quantized Dimensional Cell</span>
+          <span class="pill">Unified constants</span>
+          <span class="pill">Falsifiable experiments</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
+    <span>Quantized Dimensional Ledger · Unified Dimensional Physics and Metrology</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
