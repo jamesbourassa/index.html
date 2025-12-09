@@ -2,34 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Institute | QDL Physics Institute</title>
+  <title>QDL Physics | Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="QDL Physics Institute mission, research themes, location, and collaboration interests for the Quantized Dimensional Ledger program."
+    content="The QDL Physics Institute: an independent research program in Huntley, Illinois, developing and testing the Quantized Dimensional Ledger (QDL) framework for unified dimensional closure, EFT structure, gravity, metrology, and experimental validation."
   />
   <style>
     :root {
-      --bg-page: #ffffff;
+      --bg-page: #f3f4f6;
       --bg-card: #ffffff;
       --border-soft: #e5e7eb;
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
-      --accent-soft: #eff6ff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: #0369a1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
     header {
       background: #0f172a;
@@ -41,7 +50,7 @@
     }
 
     .nav {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
@@ -57,8 +66,8 @@
     }
 
     .logo-icon {
-      width: 44px;
-      height: 44px;
+      width: 60px;
+      height: 60px;
       border-radius: 10px;
       background: #020617;
       border: 1px solid #38bdf8;
@@ -72,17 +81,18 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      display: block;
     }
 
     .logo-text-main {
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
     }
 
     .logo-text-sub {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       color: #9ca3af;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -91,14 +101,14 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
-      font-size: 0.82rem;
+      gap: 0.8rem;
+      font-size: 0.85rem;
       align-items: center;
     }
 
     .nav-links a {
       color: #e5e7eb;
-      padding: 0.22rem 0.6rem;
+      padding: 0.25rem 0.6rem;
       border-radius: 999px;
       border: 1px solid transparent;
     }
@@ -115,74 +125,158 @@
       color: #e0f2fe !important;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
     }
 
     main {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 2rem 1.25rem 2.5rem;
+      padding: 1.75rem 1.25rem 3rem;
     }
 
-    .kicker {
-      font-size: 0.78rem;
+    .hero {
+      margin-bottom: 2rem;
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      padding: 1.6rem 1.5rem;
+    }
+
+    .hero-kicker {
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
       color: #6b7280;
-      margin-bottom: 0.3rem;
-    }
-
-    h1 {
-      font-size: 1.7rem;
       margin-bottom: 0.4rem;
     }
 
-    p {
-      font-size: 0.92rem;
-      color: #374151;
-      line-height: 1.6;
+    .hero-title {
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
       margin-bottom: 0.5rem;
-      max-width: 40rem;
     }
 
-    h2 {
-      font-size: 1rem;
-      margin-top: 1.3rem;
-      margin-bottom: 0.3rem;
+    .hero-sub {
+      font-size: 0.95rem;
+      color: #4b5563;
+      max-width: 44rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-chip {
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #111827;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      max-width: 26rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 880px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      padding: 1rem 1.1rem;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .card + .card {
+      margin-top: 0.8rem;
+    }
+
+    .card-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0.5rem;
     }
 
     ul {
-      margin: 0.3rem 0 0.7rem 1.2rem;
-      padding: 0;
+      padding-left: 1.1rem;
+      font-size: 0.88rem;
+      color: #374151;
     }
 
-    li {
-      font-size: 0.9rem;
-      color: #374151;
-      line-height: 1.5;
-      margin-bottom: 0.25rem;
+    ul li {
+      margin-bottom: 0.28rem;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      margin-top: 1.1rem;
+      max-width: 44rem;
     }
 
     footer {
-      border-top: 1px solid #e5e7eb;
-      background: #f9fafb;
-      padding: 0.9rem 1.25rem 1.3rem;
+      border-top: 1px solid var(--border-soft);
+      margin-top: 3rem;
+      padding: 1.2rem 1.25rem 1.8rem;
       font-size: 0.8rem;
       color: #6b7280;
-      margin-top: 1.8rem;
     }
 
-    .footer-inner {
-      max-width: 900px;
+    .footer-grid {
+      max-width: 1100px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
       align-items: center;
     }
   </style>
 </head>
+
 <body>
 <header>
   <div class="nav">
@@ -210,61 +304,197 @@
 </header>
 
 <main>
-  <div class="kicker">Institute</div>
-  <h1>QDL Physics Institute</h1>
-  <p>
-    The QDL Physics Institute is an independent research program based in Huntley,
-    Illinois, USA. Its purpose is to develop, formalize, and experimentally test the
-    Quantized Dimensional Ledger (QDL) as a unified framework for physical theories and
-    precision metrology.
-  </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-kicker">Institute</div>
+    <h1 class="hero-title">QDL Physics Institute</h1>
+    <p class="hero-sub">
+      The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA.
+      Its purpose is to develop, formalize, and experimentally test the
+      <strong>Quantized Dimensional Ledger (QDL)</strong> as a unified
+      <em>3L + 2F prediction-filter framework</em> for effective field theories, gravitation,
+      physical constants, and precision metrology, anchored on a conserved Quantized Dimensional Cell (QDC).
+    </p>
+    <div class="hero-meta">
+      <span class="hero-chip">Independent research institute</span>
+      <span class="hero-chip">3L + 2F dimensional closure</span>
+      <span class="hero-chip">Prediction-filter architecture</span>
+      <span class="hero-chip">Falsifiable experiments</span>
+    </div>
+  </section>
 
-  <h2>Mission</h2>
-  <p>
-    The Institute’s mission is to:
-  </p>
-  <ul>
-    <li>Establish QDL as a rigorous, mathematically coherent dimensional closure framework.</li>
-    <li>Embed the Standard Model, gravitation, and metrology into a common 3L + 2F ledger.</li>
-    <li>Design and disseminate falsifiable experimental tests of QDL predictions.</li>
-    <li>Make all derivations, tables, and protocols publicly accessible and auditable.</li>
-  </ul>
+  <!-- MISSION & THEMES -->
+  <section id="mission">
+    <div class="section-header">
+      <h2 class="section-title">Mission &amp; research themes</h2>
+      <p class="section-kicker">
+        From dimensional coherence and QDC geometry to SMEFT structure, metrology, and tabletop tests.
+      </p>
+    </div>
 
-  <h2>Research themes</h2>
-  <ul>
-    <li>Dimensional analysis and ledger geometry in an L–F basis.</li>
-    <li>Scalar–tensor gravitation and geometric structures linked to the Quantized Dimensional Cell.</li>
-    <li>Ledger-based treatments of fundamental constants and quantum measurement units.</li>
-    <li>Precision tabletop experiments in torsion balances, NV centers, cavities, and metamaterials.</li>
-    <li>Educational materials for teaching dimensional analysis using QDL concepts.</li>
-  </ul>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Mission</div>
+        <p>
+          The Institute’s mission is to:
+        </p>
+        <ul>
+          <li>
+            Establish QDL as a rigorous, mathematically coherent
+            <strong>dimensional-closure and prediction-filter framework</strong>.
+          </li>
+          <li>
+            Embed the Standard Model, gravitation, and metrology into a common 3L + 2F
+            ledger that closes onto a conserved QDC.
+          </li>
+          <li>
+            Design and disseminate falsifiable experimental tests of QDL predictions
+            across torsion balances, NV centers, cavity resonators, and metamaterials.
+          </li>
+          <li>
+            Make all derivations, ledger tables, and protocols publicly accessible and auditable
+            via open repositories.
+          </li>
+        </ul>
+      </div>
 
-  <h2>Location and contact</h2>
-  <p>
-    <strong>Location:</strong> Huntley, Illinois, USA<br />
-    <strong>Contact:</strong> via the dedicated <a href="contact.html">contact page</a>.
-  </p>
+      <div class="card">
+        <div class="card-title">Research themes</div>
+        <ul>
+          <li>
+            <strong>Dimensional analysis and ledger geometry in a length–frequency basis</strong>,
+            including the 3L + 2F Quantized Dimensional Cell and its SO(3,2)-like geometry.
+          </li>
+          <li>
+            <strong>Scalar–tensor gravitation and quantum gravity from dimensional coherence</strong>,
+            built on QDL closure conditions and minimum-length geometry.
+          </li>
+          <li>
+            <strong>Ledger-based treatments of fundamental constants and Quantum Measurement Units (QMU)</strong>,
+            clarifying the ontology of constants under QDL.
+          </li>
+          <li>
+            <strong>EFT and SMEFT structure as ledger lattices</strong>, using QDL closure to
+            constrain operator content and Wilson-coefficient relations.
+          </li>
+          <li>
+            <strong>Precision tabletop experiments</strong> in torsion balances, NV centers,
+            cavities, and metamaterials as direct tests of QDL scaling laws and coherence criteria.
+          </li>
+          <li>
+            <strong>Educational materials</strong> for teaching dimensional analysis using
+            a length–frequency ledger and QDL concepts.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <h2>Collaboration interests</h2>
-  <p>
-    The Institute welcomes constructive engagement from:
-  </p>
-  <ul>
-    <li>Journal editors and referees in gravitation, mathematical physics, and metrology.</li>
-    <li>Experimental groups working on torsion balances, NV centers, cavity resonators, or metamaterials.</li>
-    <li>Researchers interested in dimensional analysis, units systems, and geometric foundations of physics.</li>
-    <li>Educators seeking to incorporate length–frequency dimensional analysis into teaching materials.</li>
-  </ul>
-  <p>
-    For collaboration inquiries, please use the <a href="contact.html">contact page</a>
-    and briefly describe your research context and interest in QDL.
-  </p>
+  <!-- LOCATION & CONTACT -->
+  <section id="location-contact">
+    <div class="section-header">
+      <h2 class="section-title">Location &amp; contact</h2>
+      <p class="section-kicker">
+        Administrative base and primary communication channels for QDL-related inquiries.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Location</div>
+        <p>
+          <strong>QDL Physics Institute</strong><br />
+          Huntley, Illinois 60142<br />
+          United States
+        </p>
+        <p style="margin-top:0.5rem;">
+          The Institute currently operates as an independent research program with a focus on
+          open-access dissemination via Zenodo, arXiv, and the QDLPhysics.org website.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Contact</div>
+        <p>
+          For editorial, collaborative, or technical inquiries related to QDL, please use the
+          dedicated <a href="contact.html">contact page</a>.
+        </p>
+        <p style="margin-top:0.4rem;">
+          To facilitate routing, include:
+        </p>
+        <ul>
+          <li>Your institutional affiliation (if any).</li>
+          <li>The relevant domain (e.g., gravitation, EFT/SMEFT, metrology, torsion/NV/cavity/metamaterials).</li>
+          <li>Whether you are inquiring as an editor/referee, experimentalist, theorist, or educator.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATION -->
+  <section id="collaboration">
+    <div class="section-header">
+      <h2 class="section-title">Collaboration interests</h2>
+      <p class="section-kicker">
+        Who the Institute is hoping to engage with, and how.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Editorial &amp; theoretical collaborations</div>
+        <p>
+          The Institute welcomes constructive engagement from:
+        </p>
+        <ul>
+          <li>
+            Journal editors and referees in gravitation, mathematical physics, EFT/SMEFT,
+            and metrology, interested in dimensional-closure and prediction-filter approaches.
+          </li>
+          <li>
+            Theorists working on effective field theories, SMEFT, scalar–tensor gravity,
+            dimensional regularization, or the ontology of physical constants.
+          </li>
+          <li>
+            Researchers exploring alternative unit systems, ledger-based dimensional analysis,
+            or geometric foundations of physics linked to SO(3,2)-like structures.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Experimental &amp; educational collaborations</div>
+        <p>
+          Collaboration is especially encouraged with:
+        </p>
+        <ul>
+          <li>
+            Experimental groups working on torsion balances, NV centers, cavity resonators,
+            or metamaterials who are interested in testing QDL-specific scaling predictions.
+          </li>
+          <li>
+            Metrology and standards laboratories seeking structured dimensional audits of
+            constants, units, and measurement chains.
+          </li>
+          <li>
+            Educators looking to incorporate length–frequency dimensional analysis and
+            QDL-style ledger methods into curricula or laboratory courses.
+          </li>
+        </ul>
+        <p class="note">
+          For collaboration inquiries, please use the <a href="contact.html">contact page</a> and
+          briefly describe your research context, experimental or theoretical interests,
+          and any specific QDL papers or concepts you wish to discuss.
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
-    <span>Quantized Dimensional Ledger · Unified Dimensional Physics and Metrology</span>
+  <div class="footer-grid">
+    <div>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</div>
+    <div>Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Metrology</div>
   </div>
 </footer>
 
