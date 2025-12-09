@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Contact the QDL Physics Institute for inquiries about the Quantized Dimensional Ledger program."
+    content="Contact the QDL Physics Institute regarding research inquiries, editorial correspondence, collaboration, or technical questions related to the Quantized Dimensional Ledger (QDL) framework."
   />
+
   <style>
     :root {
-      --bg-page: #ffffff;
+      --bg-page: #f3f4f6;
       --bg-card: #ffffff;
       --border-soft: #e5e7eb;
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
-      --accent-soft: #eff6ff;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,28 +25,30 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* HEADER / NAV */
     header {
       background: #0f172a;
       color: #e5e7eb;
       border-bottom: 1px solid #111827;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
     }
 
     .nav {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 1.4rem;
     }
 
     .logo {
@@ -65,113 +67,143 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
-    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
     .logo-text-main {
       font-weight: 600;
-      letter-spacing: 0.06em;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      font-size: 0.78rem;
+      letter-spacing: 0.06em;
     }
 
     .logo-text-sub {
       font-size: 0.72rem;
-      color: #9ca3af;
-      letter-spacing: 0.08em;
+      color: #94a3b8;
       text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
-      font-size: 0.82rem;
+      font-size: 0.83rem;
       align-items: center;
     }
 
     .nav-links a {
       color: #e5e7eb;
-      padding: 0.22rem 0.6rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 999px;
       border: 1px solid transparent;
     }
+
     .nav-links a:hover {
       border-color: rgba(148,163,184,0.7);
       background: rgba(15,23,42,0.9);
+      text-decoration: none;
     }
 
     .nav-cta {
-      border-color: #38bdf8;
       background: #0b1120;
+      border-color: #38bdf8 !important;
       color: #e0f2fe !important;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
     }
 
+    /* MAIN CONTENT */
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 1.25rem 2.5rem;
+      padding: 2rem 1.25rem 3rem;
     }
 
     .kicker {
-      font-size: 0.78rem;
       text-transform: uppercase;
+      font-size: 0.78rem;
       letter-spacing: 0.16em;
-      color: #6b7280;
-      margin-bottom: 0.3rem;
+      color: var(--text-soft);
+      margin-bottom: 0.4rem;
     }
 
-    h1 { font-size: 1.7rem; margin-bottom: 0.4rem; }
+    h1 {
+      font-size: clamp(2rem, 3vw, 2.3rem);
+      margin-bottom: 0.8rem;
+    }
 
     .lede {
-      font-size: 0.94rem;
+      font-size: 0.96rem;
       color: #4b5563;
-      margin-bottom: 1.2rem;
-      max-width: 40rem;
+      max-width: 46rem;
+      margin-bottom: 1.6rem;
       line-height: 1.6;
     }
 
-    .card {
+    .contact-card {
       background: var(--bg-card);
+      padding: 1.4rem 1.4rem 1.6rem;
       border-radius: 16px;
       border: 1px solid var(--border-soft);
-      padding: 1.2rem 1.4rem;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.06);
-      max-width: 600px;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.08);
+      margin-bottom: 1.8rem;
+      font-size: 0.92rem;
     }
 
-    .info-label {
-      font-weight: 600;
-      display: inline-block;
-      width: 6rem;
+    .contact-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-card p {
+      margin-bottom: 0.7rem;
+      line-height: 1.55;
+      color: #374151;
+    }
+
+    ul {
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+      color: #374151;
+    }
+
+    li + li {
+      margin-top: 0.3rem;
     }
 
     footer {
-      border-top: 1px solid #e5e7eb;
-      background: #f9fafb;
-      padding: 0.9rem 1.25rem 1.3rem;
+      border-top: 1px solid var(--border-soft);
+      padding: 1.2rem 1.25rem 1.6rem;
       font-size: 0.8rem;
       color: #6b7280;
-      margin-top: 2rem;
+      background: #f9fafb;
+      margin-top: 3rem;
     }
 
     .footer-inner {
       max-width: 900px;
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 1rem;
-      flex-wrap: wrap;
       align-items: center;
     }
   </style>
 </head>
 
 <body>
+
+<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">
@@ -197,31 +229,71 @@
   </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <main>
   <div class="kicker">Contact</div>
   <h1>Contact the QDL Physics Institute</h1>
+
   <p class="lede">
-    For inquiries regarding the Quantized Dimensional Ledger framework,
-    collaborations, invitations, manuscript discussion, or general correspondence,
-    please use the contact information below.
+    For inquiries regarding research, editorial correspondence, collaboration,
+    experimental proposals, clarification of QDL framework components, or public-communication
+    matters, please use the information below. Responses are prioritized for
+    scientific, editorial, and technical questions.
   </p>
 
-  <section class="card">
+  <div class="contact-card">
+    <h2>Email</h2>
     <p>
-      <span class="info-label">Email</span>
-      <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+      For all QDL-related correspondence:  
+      <strong>james.bourassa@qdlphysics.org</strong>
     </p>
 
     <p>
-      <span class="info-label">Address</span><br>
-      QDL Physics Institute<br>
-      Attn: James D. Bourassa<br>
-      11731 Woodcreek Drive<br>
-      Huntley, IL 60142, USA
+      When emailing, please include:
     </p>
-  </section>
+    <ul>
+      <li>Your name and (if applicable) institutional affiliation</li>
+      <li>The topic area (e.g., gravitation, EFT/SMEFT, constants, metrology, experimental tests)</li>
+      <li>Any relevant DOI numbers for the papers you’re referencing</li>
+      <li>Whether the inquiry is editorial, collaborative, or technical</li>
+    </ul>
+  </div>
+
+  <div class="contact-card">
+    <h2>Mailing & Administrative Location</h2>
+    <p>
+      <strong>QDL Physics Institute</strong><br />
+      Huntley, Illinois 60142<br />
+      United States
+    </p>
+    <p>
+      The Institute operates as an independent research program with open-access release
+      of theoretical, metrological, and experimental materials through Zenodo,
+      arXiv, and QDLPhysics.org.
+    </p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Collaboration & Editorial Engagement</h2>
+    <p>
+      Collaboration inquiries are welcome from:
+    </p>
+    <ul>
+      <li>Journal editors and referees</li>
+      <li>Experimental groups (torsion, NV-center, cavity, metamaterials)</li>
+      <li>Gravitation, EFT/SMEFT, and metrology researchers</li>
+      <li>Educators developing dimensional-analysis or QDL-based teaching materials</li>
+    </ul>
+
+    <p style="margin-top:0.6rem;">
+      Please briefly describe your research context or editorial question, and specify
+      the paper(s) or QDL components relevant to your inquiry.
+    </p>
+  </div>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
