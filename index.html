@@ -444,6 +444,77 @@
       margin-bottom: 0.2rem;
     }
 
+    /* QDL MEANING (NEW) */
+
+    .qdl-meaning-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    @media (max-width: 980px) {
+      .qdl-meaning-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .qdl-meaning-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      padding: 0.85rem 0.95rem;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+      height: 100%;
+    }
+
+    .qdl-meaning-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .qdl-meaning-title h3 {
+      font-size: 0.98rem;
+      font-weight: 650;
+      margin: 0;
+    }
+
+    .qdl-meaning-chip {
+      font-size: 0.74rem;
+      display: inline-flex;
+      padding: 0.16rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      background: #eff6ff;
+      color: #1d4ed8;
+      white-space: nowrap;
+    }
+
+    .qdl-meaning-text {
+      font-size: 0.86rem;
+      color: #374151;
+      line-height: 1.55;
+    }
+
+    .qdl-callout {
+      margin-top: 1rem;
+      background: #0b1120;
+      color: #e5e7eb;
+      border-radius: 18px;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .qdl-callout p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #e5e7eb;
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -575,6 +646,61 @@
         </a>
       </div>
     </aside>
+  </section>
+
+  <!-- WHAT QDL MEANS (NEW) -->
+  <section class="section" id="qdl-meaning">
+    <div class="section-header">
+      <h2 class="section-title">What “Quantized Dimensional Ledger” means</h2>
+      <p class="section-sub">
+        The name is operational: each word encodes a specific modeling commitment.
+      </p>
+    </div>
+
+    <div class="qdl-meaning-grid">
+      <div class="qdl-meaning-card">
+        <div class="qdl-meaning-title">
+          <h3>Quantized</h3>
+          <span class="qdl-meaning-chip">Discrete exponents</span>
+        </div>
+        <p class="qdl-meaning-text">
+          Physical quantities are represented by discrete, integer-valued exponents, not
+          continuous dimensional scalings—so admissible models must respect exact dimensional
+          countability rather than arbitrary parameter tuning.
+        </p>
+      </div>
+
+      <div class="qdl-meaning-card">
+        <div class="qdl-meaning-title">
+          <h3>Dimensional</h3>
+          <span class="qdl-meaning-chip">Base dimensions only</span>
+        </div>
+        <p class="qdl-meaning-text">
+          All physical content is expressed solely in terms of base dimensions, eliminating
+          hidden assumptions tied to mass, charge, or unit conventions and making dimensional
+          consistency an explicit structural requirement.
+        </p>
+      </div>
+
+      <div class="qdl-meaning-card">
+        <div class="qdl-meaning-title">
+          <h3>Ledger</h3>
+          <span class="qdl-meaning-chip">Auditable closure</span>
+        </div>
+        <p class="qdl-meaning-text">
+          Physical theories are treated as auditable records: every interaction, constant, and
+          operator must balance exactly within a conserved dimensional accounting system,
+          enabling model verification, exclusion, and falsification.
+        </p>
+      </div>
+    </div>
+
+    <div class="qdl-callout">
+      <p>
+        The Quantized Dimensional Ledger reframes physics as a closed dimensional accounting system,
+        where theoretical consistency is structural, explicit, and testable.
+      </p>
+    </div>
   </section>
 
   <!-- PROGRAM OVERVIEW -->
