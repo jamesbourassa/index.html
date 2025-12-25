@@ -1,185 +1,573 @@
-<!-- INSERTED / UPDATED CONTENT ONLY — rest of file unchanged -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QDL Physics | Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="The QDL Physics Institute: an independent research program in Huntley, Illinois, developing and testing the Quantized Dimensional Ledger (QDL) framework for unified dimensional closure, EFT structure, gravity, metrology, and experimental validation."
+  />
+  <style>
+    :root {
+      --bg-page: #f3f4f6;
+      --bg-card: #ffffff;
+      --border-soft: #e5e7eb;
+      --text-main: #0f172a;
+      --text-soft: #6b7280;
+      --accent: #2563eb;
+    }
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-kicker">Institute</div>
-  <h1 class="hero-title">QDL Physics Institute</h1>
-  <p class="hero-sub">
-    The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA.
-    Its purpose is to develop, formalize, and test the
-    <strong>Quantized Dimensional Ledger (QDL)</strong> as a
-    <em>dimensional-closure and model-admissibility framework</em>.
-    QDL functions as a prediction-filter and validation layer that constrains admissible
-    field content, couplings, operators, and measurement relations prior to phenomenological fitting,
-    anchored on a conserved <strong>3L + 2F Quantized Dimensional Cell (QDC)</strong>.
-  </p>
-  <div class="hero-meta">
-    <span class="hero-chip">Independent research institute</span>
-    <span class="hero-chip">Dimensional closure &amp; admissibility</span>
-    <span class="hero-chip">Prediction-filter architecture</span>
-    <span class="hero-chip">Falsifiable experimental program</span>
-  </div>
-</section>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<!-- MISSION & THEMES -->
-<section id="mission">
-  <div class="section-header">
-    <h2 class="section-title">Mission &amp; research themes</h2>
-    <p class="section-kicker">
-      Framework-first physics: from dimensional admissibility to testable structure.
-    </p>
-  </div>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
 
-  <div class="grid-2">
-    <div class="card">
-      <div class="card-title">Mission</div>
-      <p>The Institute’s mission is to:</p>
-      <ul>
-        <li>
-          Establish QDL as a rigorous <strong>dimensional-closure and admissibility framework</strong>
-          for physical theories and measurement pipelines.
-        </li>
-        <li>
-          Provide a <strong>framework-first validation layer</strong> that precedes phenomenology,
-          data fitting, or numerical modeling.
-        </li>
-        <li>
-          Embed the Standard Model, gravitation, EFT/SMEFT, and metrology into a shared
-          <strong>3L + 2F ledger</strong> closing onto a conserved QDC.
-        </li>
-        <li>
-          Develop explicit, falsifiable experimental tests of QDL predictions across
-          torsion balances, NV centers, cavity resonators, and metamaterials.
-        </li>
-        <li>
-          Maintain full transparency via open-access publications, ledger tables,
-          and experimental protocols.
-        </li>
-      </ul>
+    a {
+      color: #0369a1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-bottom: 1px solid #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      background: #020617;
+      border: 1px solid #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      border-color: #38bdf8;
+      background: #0b1120;
+      color: #e0f2fe !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      padding: 1.6rem 1.5rem;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3vw, 2.3rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: #4b5563;
+      max-width: 44rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-chip {
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #111827;
+    }
+
+    .section-kicker {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      max-width: 26rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 880px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      padding: 1rem 1.1rem;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .card + .card {
+      margin-top: 0.8rem;
+    }
+
+    .card-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      font-size: 0.88rem;
+      color: #374151;
+    }
+
+    ul li {
+      margin-bottom: 0.28rem;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      margin-top: 1.1rem;
+      max-width: 44rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-soft);
+      margin-top: 3rem;
+      padding: 1.2rem 1.25rem 1.8rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <div class="logo-icon">
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
+      </div>
+      <div>
+        <div class="logo-text-main">QDL Physics Institute</div>
+        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+      </div>
     </div>
 
-    <div class="card">
-      <div class="card-title">Research themes</div>
-      <ul>
-        <li>
-          <strong>Dimensional analysis as admissibility</strong>, reconstructed via a length–frequency
-          ledger and Quantized Dimensional Cell.
-        </li>
-        <li>
-          <strong>Prediction-filter methods</strong> constraining EFT, SMEFT, gravity,
-          and constant structure before fitting.
-        </li>
-        <li>
-          <strong>Technical rigor</strong> through ledger-constrained renormalization
-          and operator pruning.
-        </li>
-        <li>
-          <strong>Real-world applications</strong> in metrology, engineering models,
-          and measurement-pipeline auditing.
-        </li>
-        <li>
-          <strong>Falsifiable tabletop experiments</strong> probing QDL-driven scaling laws
-          and coherence criteria.
-        </li>
-      </ul>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="publications.html">Publications</a>
+      <a href="institute.html">Institute</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-kicker">Institute</div>
+    <h1 class="hero-title">QDL Physics Institute</h1>
+    <p class="hero-sub">
+      The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA.
+      Its purpose is to develop, formalize, and experimentally test the
+      <strong>Quantized Dimensional Ledger (QDL)</strong> as a unified
+      <em>dimensional-closure and model-admissibility framework</em>.
+      In this formulation, QDL functions as a prediction-filter and validation layer that constrains
+      admissible terms, couplings, operators, and measurement relations prior to phenomenological fitting,
+      anchored on a conserved <strong>Quantized Dimensional Cell (QDC)</strong> in a <strong>3L + 2F</strong> basis.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-chip">Independent research institute</span>
+      <span class="hero-chip">Dimensional closure &amp; admissibility</span>
+      <span class="hero-chip">Prediction-filter architecture</span>
+      <span class="hero-chip">Falsifiable experiments</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- NEW SECTION: PROGRAM STRUCTURE -->
-<section id="program-structure">
-  <div class="section-header">
-    <h2 class="section-title">Program structure &amp; canonical references</h2>
-    <p class="section-kicker">
-      The Institute’s work follows a framework-first ordering reflected across the website.
-    </p>
-  </div>
-
-  <div class="card">
-    <p>
-      The QDL program is organized around a small set of canonical papers that define the framework,
-      its methodological role, technical rigor, and real-world applicability:
-    </p>
-    <ul>
-      <li>
-        <strong>Dimensional Closure as a National-Scale Model Validation Layer</strong> —
-        canonical framework definition (Zenodo: 10.5281/zenodo.17979789).
-      </li>
-      <li>
-        <strong>Structural Reconstruction of Dimensional Analysis</strong> —
-        foundational reformulation of dimensional reasoning (10.5281/zenodo.17882709).
-      </li>
-      <li>
-        <strong>QDL as a Prediction Filter</strong> —
-        admissibility constraints across EFT, gravity, constants, and metrology
-        (10.5281/zenodo.17848782).
-      </li>
-      <li>
-        <strong>Ledger-Constrained Renormalization</strong> —
-        technical rigor via operator pruning and discrete RG structure
-        (10.5281/zenodo.18025072).
-      </li>
-      <li>
-        <strong>Dimensional-Closure Auditing</strong> —
-        real-world application to engineering models and measurement pipelines
-        (10.5281/zenodo.18025343).
-      </li>
-    </ul>
-    <p class="note">
-      Domain-specific applications (cosmology, unified SM + gravity, coherent ledger fields,
-      SMEFT case studies, and experimental protocols) are developed downstream of this core structure.
-    </p>
-  </div>
-</section>
-
-<!-- COLLABORATION -->
-<section id="collaboration">
-  <div class="section-header">
-    <h2 class="section-title">Collaboration interests</h2>
-    <p class="section-kicker">
-      Engagement centered on framework evaluation, rigor, and testability.
-    </p>
-  </div>
-
-  <div class="grid-2">
-    <div class="card">
-      <div class="card-title">Editorial &amp; theoretical engagement</div>
-      <ul>
-        <li>
-          Journal editors and referees evaluating dimensional-closure,
-          admissibility, and prediction-filter frameworks.
-        </li>
-        <li>
-          Theorists working in EFT/SMEFT, gravitation, renormalization,
-          or the foundations of dimensional analysis.
-        </li>
-        <li>
-          Researchers interested in structural constraints that precede
-          phenomenological or numerical modeling.
-        </li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Experimental &amp; applied collaboration</div>
-      <ul>
-        <li>
-          Experimental groups testing QDL-specific scaling predictions
-          in torsion, NV centers, cavities, or metamaterials.
-        </li>
-        <li>
-          Metrology and standards laboratories interested in
-          ledger-based dimensional auditing.
-        </li>
-        <li>
-          Engineering and applied-physics groups seeking pre-verification
-          methods for model and measurement integrity.
-        </li>
-      </ul>
-      <p class="note">
-        Collaboration inquiries should reference specific QDL papers or
-        experimental protocols via the <a href="contact.html">contact page</a>.
+  <!-- MISSION & THEMES -->
+  <section id="mission">
+    <div class="section-header">
+      <h2 class="section-title">Mission &amp; research themes</h2>
+      <p class="section-kicker">
+        Framework-first physics: from admissibility to testable structure.
       </p>
     </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Mission</div>
+        <p>
+          The Institute’s mission is to:
+        </p>
+        <ul>
+          <li>
+            Establish QDL as a rigorous, mathematically coherent
+            <strong>dimensional-closure and admissibility framework</strong>.
+          </li>
+          <li>
+            Provide a <strong>framework-first validation layer</strong> that precedes phenomenology,
+            data fitting, or numerical modeling.
+          </li>
+          <li>
+            Embed the Standard Model, gravitation, EFT/SMEFT structure, and metrology into a common
+            <strong>3L + 2F ledger</strong> that closes onto a conserved QDC.
+          </li>
+          <li>
+            Design and disseminate falsifiable experimental tests of QDL predictions
+            across torsion balances, NV centers, cavity resonators, and metamaterials.
+          </li>
+          <li>
+            Make derivations, ledger tables, and protocols publicly accessible and auditable
+            via open repositories.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Research themes</div>
+        <ul>
+          <li>
+            <strong>Dimensional analysis and ledger geometry</strong> in a length–frequency basis,
+            including the 3L + 2F Quantized Dimensional Cell and its geometric interpretations.
+          </li>
+          <li>
+            <strong>Prediction-filter methods</strong> constraining EFT, gravity, constants,
+            and precision metrology prior to model fitting.
+          </li>
+          <li>
+            <strong>Technical rigor</strong> via ledger-constrained renormalization, operator pruning,
+            and discrete RG structure.
+          </li>
+          <li>
+            <strong>Real-world applications</strong> in metrology, engineering models, and measurement-pipeline auditing.
+          </li>
+          <li>
+            <strong>Precision tabletop experiments</strong> as direct tests of QDL scaling laws and coherence criteria.
+          </li>
+          <li>
+            <strong>Educational materials</strong> for teaching dimensional analysis using
+            a length–frequency ledger and QDL methods.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM STRUCTURE (NEW, STYLED) -->
+  <section id="program-structure">
+    <div class="section-header">
+      <h2 class="section-title">Program structure &amp; canonical references</h2>
+      <p class="section-kicker">
+        A framework-first ordering used consistently across the website.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Framework-first Top 5 (safe ordering)</div>
+      <p>
+        The Institute’s public-facing entry path emphasizes definition → reconstruction → method → rigor → application:
+      </p>
+      <ul>
+        <li>
+          <strong>Dimensional Closure as a National-Scale Model Validation Layer</strong> (canonical framework definition).<br />
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.17979789
+          </a>
+        </li>
+        <li>
+          <strong>The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis and Its Role in Modern Physics</strong> (reconstruction).<br />
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.17882709
+          </a>
+        </li>
+        <li>
+          <strong>The Quantized Dimensional Ledger as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement</strong> (method).<br />
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.17848782
+          </a>
+        </li>
+        <li>
+          <strong>Ledger-Constrained Renormalization: Operator Pruning and Discrete RG Structure from Dimensional Closure</strong> (technical rigor).<br />
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.18025072
+          </a>
+        </li>
+        <li>
+          <strong>Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines: A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies</strong> (real-world application).<br />
+          DOI:
+          <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.18025343
+          </a>
+        </li>
+      </ul>
+
+      <p class="note">
+        Domain-specific applications (including cosmology, unified SM + gravity, coherent ledger fields, SMEFT case studies,
+        and experimental protocols) are developed downstream of these core references and are listed on the Publications page.
+      </p>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT -->
+  <section id="location-contact">
+    <div class="section-header">
+      <h2 class="section-title">Location &amp; contact</h2>
+      <p class="section-kicker">
+        Administrative base and primary communication channels for QDL-related inquiries.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Location</div>
+        <p>
+          <strong>QDL Physics Institute</strong><br />
+          11731 Woodcreek Drive<br />
+          Huntley, Illinois 60142<br />
+          United States
+        </p>
+        <p style="margin-top:0.5rem;">
+          The Institute currently operates as an independent research program with a focus on
+          open-access dissemination via Zenodo and the QDLPhysics.org website.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Contact</div>
+        <p>
+          For editorial, collaborative, or technical inquiries related to QDL, please use the
+          dedicated <a href="contact.html">contact page</a>.
+        </p>
+        <p style="margin-top:0.4rem;">
+          To facilitate routing, include:
+        </p>
+        <ul>
+          <li>Your institutional affiliation (if any).</li>
+          <li>The relevant domain (e.g., gravitation, EFT/SMEFT, metrology, torsion/NV/cavity/metamaterials).</li>
+          <li>Whether you are inquiring as an editor/referee, experimentalist, theorist, or educator.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATION -->
+  <section id="collaboration">
+    <div class="section-header">
+      <h2 class="section-title">Collaboration interests</h2>
+      <p class="section-kicker">
+        Who the Institute is hoping to engage with, and how.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Editorial &amp; theoretical collaborations</div>
+        <p>
+          The Institute welcomes constructive engagement from:
+        </p>
+        <ul>
+          <li>
+            Journal editors and referees in gravitation, mathematical physics, EFT/SMEFT,
+            and metrology, interested in dimensional-closure and prediction-filter approaches.
+          </li>
+          <li>
+            Theorists working on effective field theories, SMEFT, scalar–tensor gravity,
+            dimensional regularization, renormalization, or the ontology of physical constants.
+          </li>
+          <li>
+            Researchers exploring structural constraints that precede phenomenological modeling,
+            including alternative dimensional bases and closure conditions.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Experimental &amp; educational collaborations</div>
+        <p>
+          Collaboration is especially encouraged with:
+        </p>
+        <ul>
+          <li>
+            Experimental groups working on torsion balances, NV centers, cavity resonators,
+            or metamaterials who are interested in testing QDL-specific scaling predictions.
+          </li>
+          <li>
+            Metrology and standards laboratories seeking structured dimensional audits of
+            constants, units, and measurement chains.
+          </li>
+          <li>
+            Engineering and applied-physics groups interested in pre-verification methods for
+            model and measurement integrity.
+          </li>
+          <li>
+            Educators looking to incorporate length–frequency dimensional analysis and
+            QDL-style ledger methods into curricula or laboratory courses.
+          </li>
+        </ul>
+        <p class="note">
+          For collaboration inquiries, please use the <a href="contact.html">contact page</a> and
+          briefly describe your research context, experimental or theoretical interests,
+          and any specific QDL papers or concepts you wish to discuss.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</div>
+    <div>Quantized Dimensional Ledger &middot; Unified Dimensional Physics and Metrology</div>
   </div>
-</section>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
