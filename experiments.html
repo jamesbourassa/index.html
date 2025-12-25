@@ -627,12 +627,82 @@
     </div>
   </section>
 
+  <!-- BENCHMARKS -->
+  <section id="benchmarks">
+    <div class="section-header">
+      <h2 class="section-title">Benchmarks &amp; null tests</h2>
+      <p class="section-kicker">
+        Direct data confrontation: QDL predictions vs baseline models using public datasets
+        and reanalyzed measurements.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">What “benchmark” means here</div>
+        <p>
+          Benchmarks are explicit, falsifiable comparisons between QDL-admissible scaling relations
+          and standard dimensional or EFT parameterizations. Each benchmark is designed to be auditable:
+          dataset provenance, model forms, fit controls, and residuals are published alongside the analysis.
+        </p>
+        <ul>
+          <li><strong>Binary or near-binary outcomes</strong> where possible (pass / fail).</li>
+          <li><strong>No hidden tuning:</strong> all adjustable parameters are declared.</li>
+          <li><strong>Ledger-form transparency:</strong> intermediate quantities expressed in 3L + 2F form.</li>
+          <li><strong>Reproducibility:</strong> CSV tables + scripts/notebooks + plotted residuals.</li>
+        </ul>
+        <p class="note">
+          The goal is to make it easy for an external group to replicate (or refute) each claim using the
+          same dataset and the same declared analysis choices.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Initial benchmark targets</div>
+        <p class="card-meta">
+          Suggested first wave (chosen for public availability and clear null expectations):
+        </p>
+        <ul>
+          <li>
+            <strong>Torsion / null tests:</strong> residual plots comparing QDL-inspired torque scaling vs baseline fits.
+          </li>
+          <li>
+            <strong>NV-center magnetometry:</strong> frequency-shift residuals under controlled field/geometry variations.
+          </li>
+          <li>
+            <strong>Cavity scaling:</strong> length–frequency invariants and fit residuals across cavity geometries.
+          </li>
+        </ul>
+
+        <p style="margin-top:0.6rem;">
+          Each benchmark record (Zenodo) will include:
+        </p>
+        <ul class="ref-list">
+          <li>Dataset reference (or upload if redistribution is permitted)</li>
+          <li>Analysis CSVs (cleaned inputs + derived ledger quantities)</li>
+          <li>Fit scripts/notebook</li>
+          <li>Residual plots (PNG/SVG) and a short README</li>
+        </ul>
+
+        <!-- Replace placeholders with your actual Zenodo DOIs when ready -->
+        <p style="margin-top:0.7rem;" class="card-meta">
+          Benchmark records (coming online):
+        </p>
+        <ul class="ref-list">
+          <li>Torsion benchmark (residuals): <em>Zenodo DOI pending</em></li>
+          <li>NV-center benchmark (residuals): <em>Zenodo DOI pending</em></li>
+          <li>Cavity benchmark (residuals): <em>Zenodo DOI pending</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- GET INVOLVED -->
   <section id="collaboration">
     <div class="section-header">
       <h2 class="section-title">Collaboration &amp; data</h2>
       <p class="section-kicker">
-        How experimental groups can engage with the QDL program.
+        How experimental groups can engage with the QDL program, including benchmark datasets and residual analyses.
       </p>
     </div>
 
