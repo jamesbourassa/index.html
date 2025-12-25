@@ -17,6 +17,7 @@
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
+      --accent-soft: #eff6ff;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,7 +32,6 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* HEADER / NAV */
     header {
       background: #0f172a;
       color: #e5e7eb;
@@ -120,7 +120,6 @@
       font-size: 0.78rem;
     }
 
-    /* MAIN CONTENT */
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -154,7 +153,7 @@
       border-radius: 16px;
       border: 1px solid var(--border-soft);
       box-shadow: 0 10px 24px rgba(15,23,42,0.08);
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.2rem;
       font-size: 0.92rem;
     }
 
@@ -180,6 +179,41 @@
       margin-top: 0.3rem;
     }
 
+    .pill-row {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      color: #4b5563;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 0.14rem 0.6rem;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    .callout {
+      margin-top: 0.8rem;
+      background: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      border-radius: 12px;
+      padding: 0.85rem 0.9rem;
+      font-size: 0.88rem;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      padding: 0.1rem 0.35rem;
+      border-radius: 6px;
+      font-size: 0.86rem;
+    }
+
     footer {
       border-top: 1px solid var(--border-soft);
       padding: 1.2rem 1.25rem 1.6rem;
@@ -202,8 +236,6 @@
 </head>
 
 <body>
-
-<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">
@@ -229,7 +261,6 @@
   </div>
 </header>
 
-<!-- MAIN CONTENT -->
 <main>
   <div class="kicker">Contact</div>
   <h1>Contact the QDL Physics Institute</h1>
@@ -244,19 +275,38 @@
   <div class="contact-card">
     <h2>Email</h2>
     <p>
-      For all QDL-related correspondence:  
-      <strong>james.bourassa@qdlphysics.org</strong>
+      For all QDL-related correspondence:
+      <strong>
+        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+      </strong>
     </p>
 
-    <p>
+    <div class="callout">
+      <strong>Subject line routing (recommended):</strong><br />
+      Use one of the following prefixes to help triage: <span class="mono">[EDITOR/REFEREE]</span>,
+      <span class="mono">[COLLABORATION]</span>, <span class="mono">[TECHNICAL QUESTION]</span>,
+      <span class="mono">[MEDIA]</span>.
+    </div>
+
+    <p style="margin-top:0.9rem;">
       When emailing, please include:
     </p>
     <ul>
       <li>Your name and (if applicable) institutional affiliation</li>
-      <li>The topic area (e.g., gravitation, EFT/SMEFT, constants, metrology, experimental tests)</li>
-      <li>Any relevant DOI numbers for the papers you’re referencing</li>
+      <li>The topic area (e.g., gravitation, EFT/SMEFT, dimensional closure, constants, metrology, experimental tests)</li>
+      <li>Relevant DOI numbers (or direct paper titles) you’re referencing</li>
       <li>Whether the inquiry is editorial, collaborative, or technical</li>
+      <li>Any specific question(s) you want answered (bullet points are ideal)</li>
     </ul>
+
+    <div class="pill-row">
+      <span class="pill">Editorial</span>
+      <span class="pill">Collaboration</span>
+      <span class="pill">Technical</span>
+      <span class="pill">Experiments</span>
+      <span class="pill">Metrology</span>
+      <span class="pill">EFT/SMEFT</span>
+    </div>
   </div>
 
   <div class="contact-card">
@@ -289,11 +339,23 @@
       Please briefly describe your research context or editorial question, and specify
       the paper(s) or QDL components relevant to your inquiry.
     </p>
-  </div>
 
+    <p style="margin-top:0.6rem;">
+      Useful identifiers:
+      <br />
+      <strong>ORCID:</strong>
+      <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">
+        0009-0008-0155-0051
+      </a>
+      <br />
+      <strong>Zenodo community:</strong>
+      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+        QDL Physics Institute
+      </a>
+    </p>
+  </div>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
@@ -304,6 +366,5 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
