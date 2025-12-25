@@ -51,16 +51,25 @@
     }
     .brand{
       display:flex; align-items:center; gap:12px;
-      min-width: 240px;
+      min-width: 260px;
     }
-    .logo{
-      width:34px; height:34px; border-radius:10px;
+    .logoWrap{
+      width:38px; height:38px; border-radius:12px;
+      display:grid; place-items:center;
       background:linear-gradient(135deg, rgba(125,211,252,.9), rgba(167,139,250,.9));
       box-shadow:0 8px 25px rgba(125,211,252,.18);
+      overflow:hidden;
       flex:none;
+    }
+    .logoWrap img{
+      width:100%; height:100%;
+      object-fit:contain;
+      background:transparent;
+      display:block;
     }
     .brand .name{font-weight:700; letter-spacing:.2px}
     .brand .tag{font-size:12px; color:var(--faint); margin-top:2px}
+
     nav ul{
       margin:0; padding:0;
       list-style:none;
@@ -190,7 +199,6 @@
       margin-top:10px;
       padding-top:12px;
       border-top:1px dashed var(--line);
-      conspiracy: none; /* noop */
     }
     .pill{
       display:inline-flex;
@@ -266,7 +274,10 @@
     <div class="wrap">
       <div class="nav">
         <div class="brand" aria-label="QDL Physics Institute">
-          <div class="logo" aria-hidden="true"></div>
+          <div class="logoWrap" aria-hidden="true">
+            <!-- Put your logo at /assets/logo.png (or change this path) -->
+            <img src="assets/logo.png" alt="" onerror="this.style.display='none';" />
+          </div>
           <div>
             <div class="name">QDL Physics Institute</div>
             <div class="tag">Quantized Dimensional Ledger (QDL)</div>
@@ -274,14 +285,15 @@
         </div>
 
         <nav aria-label="Primary">
-          <ul>
-            <li><a href="/framework">Framework</a></li>
-            <li><a href="/experiments">Experiments</a></li>
-            <li><a href="/publications">Publications</a></li>
-            <li><a href="/institute">Institute</a></li>
-            <li><a href="/benefits">Benefits</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+          <!-- Default: explicit .html links (most compatible) -->
+          <ul id="navLinks">
+            <li><a href="framework.html">Framework</a></li>
+            <li><a href="experiments.html">Experiments</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="institute.html">Institute</a></li>
+            <li><a href="benefits.html">Benefits</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -300,9 +312,9 @@
         </p>
 
         <div class="ctaRow" role="group" aria-label="Primary actions">
-          <a class="btn" href="/publications">Read the canonical paper</a>
-          <a class="btn secondary" href="/framework">Explore the framework</a>
-          <a class="btn secondary" href="/experiments">Falsifiability & tests</a>
+          <a class="btn" href="publications.html">Read the canonical paper</a>
+          <a class="btn secondary" href="framework.html">Explore the framework</a>
+          <a class="btn secondary" href="experiments.html">Falsifiability & tests</a>
         </div>
       </div>
 
@@ -335,19 +347,19 @@
           <p>Navigate directly to the pages most relevant to your interest.</p>
 
           <div class="quicklinks" style="margin-top:12px;">
-            <a class="ql" href="/framework">
+            <a class="ql" href="framework.html">
               <span><strong>Framework</strong><br><span class="small">Conceptual structure and admissibility rules</span></span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
-            <a class="ql" href="/publications">
+            <a class="ql" href="publications.html">
               <span><strong>Publications</strong><br><span class="small">Canonical framework paper and applications</span></span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
-            <a class="ql" href="/experiments">
+            <a class="ql" href="experiments.html">
               <span><strong>Experiments</strong><br><span class="small">Falsifiability and observational tests</span></span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
-            <a class="ql" href="/institute">
+            <a class="ql" href="institute.html">
               <span><strong>Institute</strong><br><span class="small">Mission and research scope</span></span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
@@ -410,8 +422,8 @@
           For correspondence, collaboration inquiries, or access to supporting materials, please use the Contact page.
         </p>
         <div class="ctaRow" style="margin-top:12px;">
-          <a class="btn" href="/contact">Contact</a>
-          <a class="btn secondary" href="/about">About QDL Physics Institute</a>
+          <a class="btn" href="contact.html">Contact</a>
+          <a class="btn secondary" href="about.html">About QDL Physics Institute</a>
         </div>
       </section>
     </div>
@@ -427,7 +439,31 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Optional: auto-upgrade to pretty URLs if your site supports folder routing.
+    // If /framework/ exists, rewrite links from framework.html -> /framework/
+    (async function () {
+      try {
+        const res = await fetch("framework/", { method: "HEAD" });
+        if (res && (res.ok || res.status === 200)) {
+          const map = {
+            "framework.html": "framework/",
+            "experiments.html": "experiments/",
+            "publications.html": "publications/",
+            "institute.html": "institute/",
+            "benefits.html": "benefits/",
+            "about.html": "about/",
+            "contact.html": "contact/"
+          };
+          document.querySelectorAll('a[href]').forEach(a => {
+            const h = a.getAttribute("href");
+            if (map[h]) a.setAttribute("href", map[h]);
+          });
+        }
+      } catch (e) { /* ignore */ }
+    })();
   </script>
 </body>
 </html>
