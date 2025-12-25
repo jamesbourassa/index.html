@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="QDL Physics Institute – Quantized Dimensional Ledger (QDL) research program in dimensional closure, ledger geometry, scalar–tensor gravity, and precision metrology."
+    content="QDL Physics Institute – Quantized Dimensional Ledger (QDL) research program in dimensional closure, model admissibility, prediction filtering, and precision metrology."
   />
   <style>
     :root {
@@ -136,8 +136,6 @@
       padding: 1.75rem 1.25rem 2.5rem;
     }
 
-    /* HERO */
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
@@ -176,7 +174,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
     }
 
     .badge {
@@ -192,13 +190,6 @@
       border-color: rgba(37, 99, 235, 0.4);
       background: var(--accent-soft);
       color: #1d4ed8;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 0.6rem;
     }
 
     .btn {
@@ -221,25 +212,10 @@
       box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
     }
 
-    .btn-primary:hover {
-      filter: brightness(1.03);
-      text-decoration: none;
-    }
-
     .btn-secondary {
       background: #ffffff;
       color: #111827;
       border-color: #d1d5db;
-    }
-
-    .btn-secondary:hover {
-      background: #f9fafb;
-      text-decoration: none;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: #6b7280;
     }
 
     .hero-card {
@@ -268,40 +244,11 @@
       margin-bottom: 0.4rem;
     }
 
-    .hero-card-list {
-      margin: 0.45rem 0 0.3rem 1rem;
-      padding: 0;
-      list-style: disc;
-      font-size: 0.82rem;
-      color: #4b5563;
-    }
-
-    .hero-card-list li {
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-card-footer {
-      margin-top: 0.45rem;
-      padding-top: 0.45rem;
-      border-top: 1px dashed #e5e7eb;
-      font-size: 0.78rem;
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      color: #6b7280;
-    }
-
-    /* SECTIONS */
-
     .section {
       margin-bottom: 2.2rem;
     }
 
     .section-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      align-items: baseline;
       margin-bottom: 0.9rem;
     }
 
@@ -309,139 +256,6 @@
       font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #111827;
-    }
-
-    .section-sub {
-      font-size: 0.85rem;
-      color: #6b7280;
-      max-width: 28rem;
-    }
-
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    @media (max-width: 980px) {
-      .overview-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .overview-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card-link {
-      background: var(--bg-card);
-      border-radius: 16px;
-      border: 1px solid #e5e7eb;
-      padding: 0.8rem 0.9rem;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
-      height: 100%;
-      display: block;
-    }
-
-    .card-link:hover {
-      border-color: rgba(37, 99, 235, 0.45);
-      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
-      text-decoration: none;
-    }
-
-    .card-link-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .card-link-body {
-      font-size: 0.82rem;
-      color: #4b5563;
-      margin-bottom: 0.4rem;
-    }
-
-    .card-link-cta {
-      font-size: 0.78rem;
-      color: #1d4ed8;
-    }
-
-    .featured-inner {
-      background: var(--bg-card);
-      border-radius: 18px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-      padding: 1rem 1.1rem 1.1rem;
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr);
-      gap: 1.2rem;
-      align-items: flex-start;
-      font-size: 0.86rem;
-    }
-
-    @media (max-width: 880px) {
-      .featured-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .featured-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #6b7280;
-      margin-bottom: 0.2rem;
-    }
-
-    .featured-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .featured-meta {
-      font-size: 0.8rem;
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-
-    .featured-side {
-      border-left: 1px solid #e5e7eb;
-      padding-left: 1rem;
-      font-size: 0.82rem;
-      color: #4b5563;
-    }
-
-    @media (max-width: 880px) {
-      .featured-side {
-        border-left: none;
-        border-top: 1px solid #e5e7eb;
-        padding-left: 0;
-        padding-top: 0.8rem;
-      }
-    }
-
-    .featured-list {
-      list-style: none;
-      padding: 0;
-      margin: 0.4rem 0 0;
-    }
-
-    .featured-list li {
-      margin-bottom: 0.25rem;
-    }
-
-    .bullet-list {
-      margin: 0.3rem 0 0 1.1rem;
-      font-size: 0.86rem;
-      color: #374151;
-    }
-
-    .bullet-list li {
-      margin-bottom: 0.2rem;
     }
 
     footer {
@@ -457,12 +271,12 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      gap: 1rem;
       flex-wrap: wrap;
-      align-items: center;
+      gap: 1rem;
     }
   </style>
 </head>
+
 <body>
 <header>
   <div class="nav">
@@ -475,7 +289,6 @@
         <div class="logo-text-sub">Quantized Dimensional Ledger</div>
       </div>
     </div>
-
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="framework.html">Framework</a>
@@ -486,366 +299,72 @@
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
-
   </div>
 </header>
 
 <main>
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <div class="hero-kicker">Independent theoretical & metrological research</div>
 
-      <!-- UPDATED: stronger, journal-legible framing -->
-      <h1>Quantized Dimensional Ledger (QDL): Dimensional Closure as an Admissibility Framework</h1>
+<section class="hero">
+  <div>
+    <div class="hero-kicker">Independent theoretical & metrological research</div>
+    <h1>Quantized Dimensional Ledger (QDL): Dimensional Closure as an Admissibility Framework</h1>
 
-      <!-- UPDATED: method-first subtitle -->
-      <p class="hero-subtitle">
-        The Quantized Dimensional Ledger (QDL) is a structural admissibility framework that strengthens
-        dimensional analysis into a dimensional-closure constraint on models—restricting admissible terms,
-        couplings, and normalizations prior to phenomenological fitting. In this formulation, QDL functions
-        as a prediction-filtering and validation layer across physics, cosmology, and measurement.
-      </p>
+    <p class="hero-subtitle">
+      The Quantized Dimensional Ledger (QDL) is a structural admissibility framework that strengthens
+      dimensional analysis into a dimensional-closure constraint on models—restricting admissible
+      terms, couplings, and normalizations prior to phenomenological fitting. QDL functions as a
+      prediction-filtering and validation layer across physics, cosmology, and measurement.
+    </p>
 
-      <div class="hero-badges">
-        <span class="badge badge-accent">3L + 2F prediction filter</span>
-        <span class="badge">Quantized Dimensional Cell (QDC)</span>
-        <span class="badge">EFT &amp; SMEFT structure</span>
-        <span class="badge">Gravity &amp; metrology links</span>
-      </div>
+    <div class="hero-badges">
+      <span class="badge badge-accent">Dimensional closure</span>
+      <span class="badge">Prediction filtering</span>
+      <span class="badge">Model admissibility</span>
+      <span class="badge">Metrology & EFT</span>
+    </div>
 
-      <!-- INSERTED: canonical framework reference callout -->
-      <div class="hero-card" style="margin: 0.8rem 0 0.9rem;">
-        <div class="hero-card-title">Framework Definition (Canonical Reference)</div>
-        <div class="hero-card-chip">Admissibility &amp; validation layer</div>
-
-        <p style="margin-bottom:0.35rem; line-height:1.45;">
-          The formal definition of QDL as a dimensional-closure admissibility and model-validation framework is given in:
-        </p>
-
-        <p style="margin-bottom:0.35rem; line-height:1.45;">
-          <strong>Dimensional Closure as a National-Scale Model Validation Layer: From Dimensional Analysis to Prediction Filtering, Measurement Auditability, and Interoperable Trust</strong><br />
-          <span style="color:#6b7280;">Bourassa, J. D. (2025). Zenodo.</span>
-          DOI:
-          <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
-            10.5281/zenodo.17979789
-          </a>
-        </p>
-
-        <p style="margin-bottom:0; line-height:1.45; color:#6b7280; font-size:0.82rem;">
-          This framework reference is independent of any specific application (cosmology, EFT, metrology, engineering).
-        </p>
-      </div>
-
-      <div class="hero-actions">
-        <a
-          href="https://doi.org/10.5281/zenodo.17979789"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          Read canonical framework paper
+    <div class="hero-card">
+      <div class="hero-card-title">Framework Definition (Canonical Reference)</div>
+      <div class="hero-card-chip">Admissibility &amp; validation layer</div>
+      <p>
+        <strong>Dimensional Closure as a National-Scale Model Validation Layer</strong><br />
+        Bourassa, J. D. (2025). Zenodo.<br />
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
+          10.5281/zenodo.17979789
         </a>
-        <a href="publications.html" class="btn btn-secondary">View core program papers</a>
-      </div>
-
-      <p class="hero-note">
-        <strong>Location:</strong> Huntley, Illinois, USA ·
-        <strong>Focus:</strong> dimensional closure, ledger geometry, EFT structure,
-        gravity, precision metrology, and falsifiable tabletop tests.
+      </p>
+      <p style="color:#6b7280;font-size:0.82rem;">
+        This paper defines QDL independently of any specific physical application.
       </p>
     </div>
+  </div>
+</section>
 
-    <!-- ENRICHED HERO CARD (unchanged) -->
-    <aside class="hero-card">
-      <div class="hero-card-title">Quantized Dimensional Ledger (QDL)</div>
-      <div class="hero-card-chip">Conserved 3L + 2F dimensional cell</div>
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">Framework &amp; Method Highlights</h2>
+  </div>
 
-      <p style="margin-bottom:0.4rem; line-height:1.45;">
-        QDL treats dimensional exponents as entries in a ledger over a two-base space of
-        Length (L) and Frequency (F), with a conserved 3L + 2F Quantized Dimensional Cell
-        that constrains admissible fields, couplings, and constants.
-      </p>
+  <ol>
+    <li><strong>Dimensional Closure as a National-Scale Model Validation Layer</strong> — DOI: <a href="https://doi.org/10.5281/zenodo.17979789">10.5281/zenodo.17979789</a></li>
+    <li><strong>Structural Reconstruction of Dimensional Analysis (QDL)</strong> — DOI: <a href="https://doi.org/10.5281/zenodo.17882709">10.5281/zenodo.17882709</a></li>
+    <li><strong>QDL as a Prediction Filter</strong> — DOI: <a href="https://doi.org/10.5281/zenodo.17848782">10.5281/zenodo.17848782</a></li>
+    <li><strong>Ledger-Constrained Renormalization</strong> — DOI: <a href="https://doi.org/10.5281/zenodo.18025072">10.5281/zenodo.18025072</a></li>
+    <li><strong>Dimensional-Closure Auditing for Engineering Models</strong> — DOI: <a href="https://doi.org/10.5281/zenodo.18025343">10.5281/zenodo.18025343</a></li>
+  </ol>
 
-      <p style="margin-bottom:0.4rem; line-height:1.45;">
-        In this picture, the Quantized Dimensional Cell is not just a unit choice but a
-        geometric object: a discrete, conserved dimensional volume that all valid physical
-        quantities must respect. This gives a common structural language for particle
-        physics, gravitation, and metrology.
-      </p>
+  <p style="margin-top:0.6rem;color:#6b7280;font-size:0.82rem;">
+    Additional applications, including cosmology, are presented on the Publications page.
+  </p>
+</section>
 
-      <p style="margin-bottom:0.2rem; line-height:1.45;">
-        The same cell structure underlies:
-      </p>
-      <ul class="hero-card-list">
-        <li>Standard Model and EFT operator content organized by a closure rule.</li>
-        <li>Scalar–tensor gravitation, minimum-length geometry, and cosmological sectors sharing the same ledger.</li>
-        <li>Metrology ledgers for physical constants and quantum measurement units.</li>
-        <li>Proposed experimental scalings in torsion, NV centers, cavity modes, and metamaterials.</li>
-      </ul>
-
-      <p style="margin-top:0.3rem; line-height:1.45;">
-        Together, these elements turn dimensional analysis from bookkeeping into a
-        structural principle for unified physics and precision measurement, linking the
-        unified SM + gravity structure, SMEFT exclusions, CLF phenomenology, and Quantum
-        Gravity from Dimensional Coherence.
-      </p>
-
-      <div class="hero-card-footer">
-        <span>Unified physics &amp; metrology</span>
-        <a
-          href="https://zenodo.org/communities/qdl-physics-institute/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          All QDL papers
-        </a>
-      </div>
-    </aside>
-  </section>
-
-  <!-- PROGRAM OVERVIEW -->
-  <section class="section" id="overview">
-    <div class="section-header">
-      <h2 class="section-title">Program Overview</h2>
-      <p class="section-sub">
-        Explore the core components of the QDL research program: the structural framework,
-        proposed experiments, formal publications, and the institute’s mission.
-      </p>
-    </div>
-    <div class="overview-grid">
-      <a href="framework.html" class="card-link">
-        <div class="card-link-title">Framework</div>
-        <div class="card-link-body">
-          The 3L + 2F ledger, Quantized Dimensional Cell, scalar–tensor and gravitational
-          structure, EFT operator filtering, and metrological interpretation of constants.
-        </div>
-        <div class="card-link-cta">View QDL framework →</div>
-      </a>
-
-      <a href="experiments.html" class="card-link">
-        <div class="card-link-title">Experiments</div>
-        <div class="card-link-body">
-          Torsion balances, NV centers, cavity scaling, and metamaterial tests designed
-          as falsifiable probes of QDL-driven scaling laws.
-        </div>
-        <div class="card-link-cta">See experimental roadmap →</div>
-      </a>
-
-      <a href="publications.html" class="card-link">
-        <div class="card-link-title">Publications</div>
-        <div class="card-link-body">
-          Structural reconstruction, prediction-filter, Quantum Gravity from
-          Dimensional Coherence, unified SM + gravity, CLF phenomenology, SMEFT,
-          metrology, and teaching materials.
-        </div>
-        <div class="card-link-cta">Browse key papers →</div>
-      </a>
-
-      <a href="institute.html" class="card-link">
-        <div class="card-link-title">Institute</div>
-        <div class="card-link-body">
-          Background on the QDL Physics Institute, affiliations, contact information,
-          and collaboration interests.
-        </div>
-        <div class="card-link-cta">Learn about the institute →</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- EXPERIMENTAL PROGRAM -->
-  <section class="section" id="experimental-program">
-    <div class="section-header">
-      <h2 class="section-title">Experimental Program</h2>
-      <p class="section-sub">
-        QDL is designed to be testable. The experimental validation roadmap focuses on
-        four complementary tabletop platforms that probe QDL-driven scaling laws in
-        distinct physical regimes.
-      </p>
-    </div>
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">Validation roadmap</div>
-        <div class="featured-title">Falsifiable tests of a 3L + 2F ledger</div>
-        <p style="margin-bottom:0.5rem;">
-          The QDL Experimental Validation Protocol outlines how a conserved Quantized
-          Dimensional Cell could leave measurable signatures in precision experiments.
-          Each platform is designed so that standard theories and QDL give clearly
-          distinguishable scaling behavior.
-        </p>
-        <ul class="bullet-list">
-          <li><strong>Precision torsion-balance scaling</strong> – torque and deflection vs. arm length and mass structure.</li>
-          <li><strong>NV-center frequency-shift measurements</strong> – structured offsets in spin resonance under QDL-motivated fields.</li>
-          <li><strong>Cavity-mode length–frequency scaling</strong> – resonance structure vs. cavity geometry in the L–F ledger.</li>
-          <li><strong>Metamaterial dispersion-collapse tests</strong> – engineered media approximating QDC-like coherence.</li>
-        </ul>
-      </div>
-      <aside class="featured-side">
-        <strong>Protocol reference:</strong>
-        <ul class="featured-list">
-          <li>
-            Bourassa, J. (2025).
-            <em>QDL Experimental Validation Protocol: A Unified Roadmap for Torsion,
-            NV-Center, Cavity, and Metamaterial Tests.</em><br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17654442"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17654442
-            </a>
-          </li>
-        </ul>
-        <p style="margin-top:0.6rem;">
-          Together, these platforms provide an empirically grounded way to evaluate whether
-          nature respects a ledger-style dimensional closure beyond conventional unit
-          bookkeeping.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- TOP 5 PAPERS (left unchanged for now) -->
-  <section class="section" id="featured">
-    <div class="section-header">
-      <h2 class="section-title">Top 5 QDL Papers</h2>
-      <p class="section-sub">
-        These papers define the core of the QDL program: structural reconstruction,
-        unified SM + gravity closure, SMEFT lattice constraints, CLF phenomenology,
-        and minimum-length ledger geometry.
-      </p>
-    </div>
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">Flagship publications</div>
-        <ol class="bullet-list">
-          <li>
-            <strong>The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis and Its Role in Modern Physics</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17882709"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17882709
-            </a>
-          </li>
-
-          <li>
-            <strong>Quantized Dimensional Ledger as a Unified Dimensional Closure Framework for the Standard Model and Gravity</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17742903"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17742903
-            </a>
-          </li>
-
-          <li>
-            <strong>Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17780443"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17780443
-            </a>
-          </li>
-
-          <li>
-            <strong>Coherent Ledger Fields: From SO(3,2) Dimensional Cells to a Unified Scalar–Tensor–Electromagnetic Phenomenology</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17803804"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17803804
-            </a>
-          </li>
-
-          <li>
-            <strong>Quantum Gravity from Dimensional Coherence: Minimum-Length Geometry from the Quantized Dimensional Ledger</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17848573"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17848573
-            </a>
-          </li>
-        </ol>
-      </div>
-
-      <aside class="featured-side">
-        <strong>How to approach these papers</strong>
-        <ul class="featured-list">
-          <li>Start with the structural reconstruction paper.</li>
-          <li>Then explore the unified SM + gravity closure framework.</li>
-          <li>Follow with the SMEFT ledger-lattice exclusions and relations.</li>
-          <li>Proceed to the Coherent Ledger Fields phenomenology.</li>
-          <li>Finish with the minimum-length geometry from dimensional coherence.</li>
-        </ul>
-        <p style="margin-top:0.6rem;">
-          For additional context, the experimental protocol and other program papers are
-          linked above and on the Publications page.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- WHY QDL MATTERS / ABOUT INSTITUTE -->
-  <section class="section" id="significance">
-    <div class="section-header">
-      <h2 class="section-title">Why QDL Matters</h2>
-      <p class="section-sub">
-        A concise view of how the QDL program fits into 21st-century theoretical and
-        experimental physics.
-      </p>
-    </div>
-    <div class="featured-inner">
-      <div>
-        <p style="font-size:0.9rem;color:#374151;margin-bottom:0.6rem;">
-          QDL represents a unified dimensional-closure architecture for modern physics.
-          By linking effective field theory structure, gravitation, and dimensional
-          constants through a single conserved cell, it proposes a foundation for physical
-          law that is explicit about its dimensional and metrological commitments.
-        </p>
-        <p style="font-size:0.9rem;color:#374151;">
-          As manuscripts enter peer-reviewed journals and experimental groups assess the
-          proposed tests, the QDL framework becomes accessible to broader scientific
-          scrutiny. The Institute’s goal is to make every step—from ledger construction
-          to experimental design—transparent, auditable, and falsifiable.
-        </p>
-      </div>
-      <aside class="featured-side">
-        <strong>About the QDL Physics Institute</strong>
-        <p style="margin-top:0.4rem;font-size:0.86rem;color:#374151;">
-          The QDL Physics Institute conducts research at the intersection of dimensional
-          analysis, metrology, quantum field theory, gravitational physics, and geometric
-          foundations of physical laws. QDLPhysics.org is the public archive for
-          publications, experimental methods, educational materials, and ongoing research
-          in the QDL program.
-        </p>
-      </aside>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="footer-inner">
     <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
-    <span>Quantized Dimensional Ledger · Unified Dimensional Physics and Metrology</span>
+    <span>Quantized Dimensional Ledger · Dimensional Closure &amp; Model Validation</span>
   </div>
 </footer>
 
