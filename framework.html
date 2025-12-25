@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="The Quantized Dimensional Ledger (QDL) framework: 3L + 2F dimensional basis, Quantized Dimensional Cell (QDC), and unified closure structure for the Standard Model, gravitation, and metrology."
+    content="The Quantized Dimensional Ledger (QDL) framework: dimensional closure as an admissibility and validation layer, 3L + 2F ledger basis, Quantized Dimensional Cell (QDC), and the framework-first reading order for QDL core papers."
   />
   <style>
     :root {
@@ -48,6 +48,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -80,6 +81,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-size: 0.78rem;
+      line-height: 1.1;
     }
 
     .logo-text-sub {
@@ -87,6 +89,8 @@
       color: #9ca3af;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      line-height: 1.1;
+      margin-top: 0.12rem;
     }
 
     .nav-links {
@@ -95,6 +99,7 @@
       gap: 0.7rem;
       font-size: 0.82rem;
       align-items: center;
+      justify-content: flex-end;
     }
 
     .nav-links a {
@@ -120,7 +125,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 2rem 1.25rem 2.5rem;
     }
@@ -136,24 +141,102 @@
     h1 {
       font-size: clamp(2rem, 3vw, 2.4rem);
       margin-bottom: 0.7rem;
+      line-height: 1.15;
     }
 
     .lede {
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       color: #4b5563;
-      margin-bottom: 1.2rem;
-      line-height: 1.6;
+      margin-bottom: 1.05rem;
+      line-height: 1.65;
+      max-width: 55rem;
     }
 
     .tagline {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: #6b7280;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.35rem;
+      line-height: 1.6;
+      max-width: 55rem;
     }
 
-    section {
-      margin-bottom: 1.8rem;
+    .hero-card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      padding: 1rem 1.1rem;
+      margin: 0.9rem 0 1.4rem;
+      font-size: 0.9rem;
     }
+
+    .hero-card-title {
+      font-weight: 650;
+      margin-bottom: 0.35rem;
+      font-size: 0.98rem;
+    }
+
+    .chiprow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.4rem 0 0.65rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #4b5563;
+      white-space: nowrap;
+    }
+
+    .chip-accent {
+      border-color: rgba(37, 99, 235, 0.35);
+      background: var(--accent-soft);
+      color: #1d4ed8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-primary:hover { filter: brightness(1.03); text-decoration: none; }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #111827;
+      border-color: #d1d5db;
+    }
+
+    .btn-secondary:hover { background: #f9fafb; text-decoration: none; }
+
+    section { margin-bottom: 1.75rem; }
 
     .section-title {
       font-size: 0.95rem;
@@ -167,7 +250,8 @@
       font-size: 0.86rem;
       color: #6b7280;
       margin-bottom: 0.7rem;
-      max-width: 38rem;
+      max-width: 46rem;
+      line-height: 1.55;
     }
 
     .card {
@@ -179,44 +263,51 @@
       font-size: 0.9rem;
     }
 
-    .card + .card {
-      margin-top: 0.75rem;
-    }
+    .card + .card { margin-top: 0.75rem; }
 
     p {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
       color: #374151;
       font-size: 0.9rem;
+      line-height: 1.6;
     }
 
     ul {
       padding-left: 1.1rem;
-      margin: 0.2rem 0 0.35rem;
+      margin: 0.25rem 0 0.35rem;
       font-size: 0.9rem;
+      line-height: 1.55;
+      color: #374151;
     }
 
-    li + li {
-      margin-top: 0.25rem;
-    }
+    li + li { margin-top: 0.3rem; }
 
     .equation-snippet {
       display: inline-block;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-        "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
       font-size: 0.86rem;
       background: #f3f4f6;
       border-radius: 6px;
       padding: 0.15rem 0.35rem;
+      margin: 0.15rem 0;
     }
 
     .details {
       font-size: 0.82rem;
       color: #6b7280;
       margin-top: 0.15rem;
+      line-height: 1.5;
     }
 
-    .details a {
-      color: #2563eb;
+    .details a { color: #2563eb; }
+
+    .reading {
+      margin: 0.4rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .reading li {
+      margin-bottom: 0.35rem;
     }
 
     footer {
@@ -229,7 +320,7 @@
     }
 
     .footer-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -245,7 +336,7 @@
   <div class="nav">
     <div class="logo">
       <div class="logo-icon">
-        <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" onerror="this.style.display='none';" />
       </div>
       <div>
         <div class="logo-text-main">QDL Physics Institute</div>
@@ -268,41 +359,92 @@
 
 <main>
   <div class="kicker">Framework</div>
-  <h1>The Quantized Dimensional Ledger Framework</h1>
+  <h1>Quantized Dimensional Ledger (QDL): Dimensional Closure as an Admissibility Framework</h1>
 
   <p class="lede">
-    The Quantized Dimensional Ledger (QDL) framework treats dimensional analysis as a
-    <strong>prediction-filter architecture</strong>, not just a consistency check.
-    Every physical quantity is represented by a five-component integer ledger vector in a
-    <strong>3L + 2F</strong> length–frequency basis, and all admissible interactions must
-    close onto a conserved <strong>Quantized Dimensional Cell (QDC)</strong>. This framework
-    links the Standard Model, gravitation, metrology, and precision experiments through a
-    common dimensional-closure structure.
+    QDL treats dimensional analysis as a <strong>model-admissibility and validation layer</strong>:
+    not merely “units consistent,” but “structurally allowed.” Physical quantities are represented as integer
+    ledger vectors in a <strong>3L + 2F</strong> length–frequency basis, and admissible constructions are required
+    to close onto a conserved <strong>Quantized Dimensional Cell (QDC)</strong>.
   </p>
 
   <p class="tagline">
-    This page summarizes the core elements of the QDL framework and points to primary
-    references for deeper technical detail.
+    This page summarizes the core ideas and, crucially, aligns the reading order with the “Top 5” used on the Home and Publications pages.
   </p>
 
-  <!-- Section 1: Core dimensional structure -->
+  <!-- NEW: Canonical reference + reading order -->
+  <div class="hero-card" id="reading-order">
+    <div class="hero-card-title">Canonical Definition &amp; Recommended Reading Order (Framework-first)</div>
+
+    <div class="chiprow">
+      <span class="chip chip-accent">#1 Canonical framework</span>
+      <span class="chip">#2 Reconstruction</span>
+      <span class="chip">#3 Prediction filter</span>
+      <span class="chip">#4 Renormalization</span>
+      <span class="chip">#5 Auditing / application</span>
+    </div>
+
+    <p style="margin-bottom:0.55rem;">
+      If you want the cleanest entry path (and the one reflected across the site), start here:
+    </p>
+
+    <ul class="reading">
+      <li>
+        <strong>Dimensional Closure as a National-Scale Model Validation Layer</strong> (canonical framework definition).<br />
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17979789</a>
+      </li>
+      <li>
+        <strong>The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis</strong> (foundational reframe).<br />
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17882709</a>
+      </li>
+      <li>
+        <strong>QDL as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement</strong> (method).<br />
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17848782</a>
+      </li>
+      <li>
+        <strong>Ledger-Constrained Renormalization</strong> (technical rigor anchor).<br />
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025072</a>
+      </li>
+      <li>
+        <strong>Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines</strong> (real-world application).<br />
+        DOI:
+        <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025343</a>
+      </li>
+    </ul>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="publications.html#top5">Top 5 on Publications</a>
+      <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">Read canonical paper</a>
+    </div>
+
+    <p class="details" style="margin-top:0.7rem;">
+      Domain applications (unified SM+gravity, minimum-length geometry, coherent ledger fields, SMEFT, metrology, experiments, cosmology)
+      are best read after this core path.
+    </p>
+  </div>
+
+  <!-- Section 1 -->
   <section>
     <h2 class="section-title">1. Core dimensional structure</h2>
     <p class="section-sub">
-      QDL begins with a length–frequency dimensional basis and a conserved Quantized
-      Dimensional Cell. From these ingredients, a ledger representation for physical
-      quantities is defined and used as the backbone for closure rules.
+      QDL begins with a length–frequency dimensional basis and a conserved Quantized Dimensional Cell.
+      These define the ledger representation and the closure target used by the admissibility rule.
     </p>
 
     <div class="card">
       <ul>
         <li>
           <strong>3L + 2F length–frequency basis.</strong><br />
-          The framework uses a three-length, two-frequency exponent space instead of the
-          conventional M–L–T system. Physical quantities are expanded in this basis
-          with integer exponents.
+          The framework uses a three-length, two-frequency exponent space rather than M–L–T.
+          Physical quantities are expanded in this basis with integer exponents.
           <div class="details">
-            Details: metrology and QMU ledger paper
+            Accessible entry: structural reconstruction paper
+            (<a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">17882709</a>).
+            Technical support: metrology/QMU ledger
             (<a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>).
           </div>
         </li>
@@ -312,82 +454,24 @@
           The QDC is a conserved dimensional “cell”:
           <span class="equation-snippet">A<sub>QDC</sub> &sim; L<sup>3</sup>F<sup>2</sup></span>
           <p>
-            The QDC acts as the conserved dimensional “cell” of the ledger. Every
-            admissible action or interaction is required to close onto an integer
-            multiple of this cell.
+            QDL treats closure onto integer multiples of this cell as the admissibility target for actions,
+            interactions, and (in metrology) measurement-chain relations.
           </p>
           <div class="details">
-            Details: SO(3,2) QDC structure
+            Geometry support: SO(3,2) QDC structure
             (<a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">17683786</a>).
           </div>
         </li>
 
         <li>
-          <strong>Ledger vector for a physical quantity.</strong><br />
-          <span class="equation-snippet">
-  X &rarr; [L<sub>1</sub>, L<sub>2</sub>, L<sub>3</sub>, F<sub>1</sub>, F<sub>2</sub>]
-</span>
-
+          <strong>Ledger vector representation.</strong><br />
+          <span class="equation-snippet">X &rarr; [L<sub>1</sub>, L<sub>2</sub>, L<sub>3</sub>, F<sub>1</sub>, F<sub>2</sub>]</span>
           <p>
-            Each physical quantity is mapped to a five-component integer vector in the
-            3L + 2F basis. These ledger vectors are then combined according to simple
-            integer rules when constructing actions, Lagrangians, or measurement chains.
+            Each physical quantity maps to a five-component integer vector in the 3L + 2F basis.
+            Ledger vectors combine by integer addition when constructing admissible terms or tracing measurement chains.
           </p>
           <div class="details">
-            Details: unified framework and QMU papers
-            (<a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">17704896</a>,
-            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>).
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Section 2: Ledger closure and field content -->
-  <section>
-    <h2 class="section-title">2. Ledger closure &amp; field content</h2>
-    <p class="section-sub">
-      With a ledger representation in place, QDL introduces a strict closure condition:
-      admissible actions, interactions, and measurement relations must close onto integer
-      multiples of the QDC. This turns dimensional analysis into a structural filter
-      on field content and constants.
-    </p>
-
-    <div class="card">
-      <ul>
-        <li>
-          <strong>Ledger-closure principle.</strong>
-          Instead of “dimensional consistency” as a loose check, QDL imposes an exact
-          ledger-closure condition: sums of field and coupling exponents must map onto
-          integer multiples of the QDC. This provides a structural filter on admissible
-          Lagrangian terms and interaction vertices.
-          <div class="details">
-            Details: unified framework and metrology/constant papers
-            (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>,
-            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>,
-            <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">17663436</a>).
-          </div>
-        </li>
-
-        <li>
-          <strong>Ledger representation of Standard Model fields.</strong>
-          Gauge fields, matter fields, and couplings are each assigned a 5-component ledger
-          vector. Gauge invariance, anomaly cancellation, and interaction structure are
-          rephrased as integer relations between these vectors under the closure principle.
-          <div class="details">
-            Details: unified Standard Model + gravity framework
-            (<a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>).
-          </div>
-        </li>
-
-        <li>
-          <strong>Prediction-filter role.</strong>
-          Because only certain combinations of fields, couplings, and constants are compatible
-          with QDL closure, the framework acts as a <em>prediction filter</em> on EFT and
-          SMEFT operator content, as well as on which constant combinations may appear in
-          measurable relations.
-          <div class="details">
-            Details: prediction-filter capstone
+            Method-first reference: prediction filter paper
             (<a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">17848782</a>).
           </div>
         </li>
@@ -395,195 +479,214 @@
     </div>
   </section>
 
-  <!-- Section 3: Gravity, scalar–tensor structure, and quantum coherence -->
+  <!-- Section 2 -->
   <section>
-    <h2 class="section-title">3. Gravity, scalar–tensor structure, and quantum coherence</h2>
+    <h2 class="section-title">2. Ledger closure as an admissibility rule</h2>
     <p class="section-sub">
-      QDL extends the ledger framework to gravitation by imposing dimensional coherence
-      at the level of the action and by linking gravitational terms to the same QDC that
-      constrains Standard Model fields and constants.
+      QDL replaces “dimensional consistency” as a loose check with a strict closure constraint:
+      admissible constructions must close onto integer multiples of the QDC. This is what makes QDL a prediction filter.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>Scalar–tensor gravitation in a QDL basis.</strong>
-          The gravitational sector is reformulated with scalar–tensor terms whose dimensional
-          content is tied to the QDC. This leads to constraints on allowable couplings and
-          on how gravitational and electromagnetic sectors can be unified.
+          <strong>Ledger-closure principle.</strong><br />
+          Instead of simply matching units, QDL imposes an exact closure condition:
+          sums of field and coupling exponents must map onto integer multiples of the QDC.
           <div class="details">
-            Details: scalar–tensor framework and unified SM + gravity
-            (<a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">17704896</a>,
-            <a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>).
+            Canonical definition: validation-layer paper
+            (<a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">17979789</a>).
           </div>
         </li>
 
         <li>
-          <strong>Quantum gravity from dimensional coherence.</strong>
-          A dedicated quantum-gravity construction uses QDL closure as a guiding principle
-          for minimum-length geometry and coherence structure, again tied back to the same
-          dimensional cell that governs EFT and constants.
+          <strong>Prediction-filter role.</strong><br />
+          Closure restricts admissible terms, operators, and constant combinations before phenomenological fitting.
+          This provides a structural “allowed / disallowed” filter across EFT, gravity sectors, and metrology relations.
           <div class="details">
-            Details: quantum-gravity from dimensional coherence
-            (<a href="https://doi.org/10.5281/zenodo.17848573" target="_blank" rel="noopener noreferrer">17848573</a>).
+            Core method: prediction filter paper
+            (<a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">17848782</a>).
           </div>
         </li>
 
         <li>
-          <strong>Coherent ledger fields.</strong>
-          The Coherent Ledger Fields (CLF) formulation connects SO(3,2)-like QDC geometry
-          to scalar–tensor–electromagnetic phenomenology, suggesting signatures in torsion
-          balances, NV centers, cavity scaling, and metamaterials.
+          <strong>Technical anchor: renormalization and operator pruning.</strong><br />
+          The closure rule can be applied as an explicit pruning constraint, sharpening the admissibility framework into a technical operator rule set.
           <div class="details">
-            Details: CLF paper
-            (<a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener noreferrer">17803804</a>).
+            Technical anchor: renormalization paper
+            (<a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">18025072</a>).
           </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Section 4: EFT / SMEFT and lattice structure -->
+  <!-- Section 3 -->
   <section>
-    <h2 class="section-title">4. EFT / SMEFT and lattice structure</h2>
+    <h2 class="section-title">3. Gravity, coherence, and phenomenology (applications)</h2>
     <p class="section-sub">
-      When EFT or SMEFT operators are expressed in ledger form, their dimensional content
-      lies on an integer lattice. QDL uses this to derive constraints on admissible operators
-      and on possible relations between Wilson coefficients.
+      Once the framework core is in place, QDL can be applied to gravity and quantum-coherence constructions,
+      and then to phenomenology via coherent ledger fields.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>Ledger lattice for operators.</strong>
-          Each operator in an EFT or SMEFT basis is associated with a ledger vector
-          determined by the exponents of the fields and couplings it contains. These
-          vectors populate a discrete lattice within the 3L + 2F space.
+          <strong>Quantum gravity from dimensional coherence.</strong><br />
+          Uses closure and coherence constraints to motivate minimum-length geometry and related structure, tied back to the QDC.
           <div class="details">
-            Details: ledger-lattice EFT work
-            (<a href="https://doi.org/10.5281/zenodo.17773324" target="_blank" rel="noopener noreferrer">17773324</a>).
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17848573" target="_blank" rel="noopener noreferrer">17848573</a>.
           </div>
         </li>
 
         <li>
-          <strong>Operator exclusions and relations.</strong>
-          Ledger-closure rules can exclude operators whose ledger vectors are incompatible
-          with the QDC structure, and they can impose integer relations among Wilson
-          coefficients when multiple operators share related ledger patterns.
+          <strong>Unified SM + gravity (field content under closure).</strong><br />
+          Applies the closure rule to Standard Model and scalar–tensor gravity sectors under a shared ledger.
           <div class="details">
-            Details: SMEFT ledger-closure paper
-            (<a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">17780443</a>).
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>.
           </div>
         </li>
 
         <li>
-          <strong>Connection to precision measurements.</strong>
-          Because QDL ties operator content to dimensional closure with constants and
-          metrology, precision experiments can be used to test which ledger-compatible
-          operator sets are realized in nature.
+          <strong>Coherent ledger fields (CLF).</strong><br />
+          Connects QDC geometry to scalar–tensor–electromagnetic phenomenology, suggesting signatures in torsion balances,
+          NV centers, cavity scaling, and metamaterials.
           <div class="details">
-            Details: prediction-filter capstone and metrology paper
-            (<a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">17848782</a>,
-            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>).
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener noreferrer">17803804</a>.
           </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Section 5: Metrology, constants, and experimental roadmap -->
+  <!-- Section 4 -->
   <section>
-    <h2 class="section-title">5. Metrology, constants, and experimental roadmap</h2>
+    <h2 class="section-title">4. EFT / SMEFT as ledger lattices (applications)</h2>
     <p class="section-sub">
-      QDL is built to be testable. The metrology and constants work provides ledger
-      descriptions of measurement chains and constant combinations, while the experimental
-      roadmap outlines specific torsion, NV-center, cavity, and metamaterial tests.
+      Expressing EFT and SMEFT operator bases in ledger form yields an integer lattice.
+      Closure can exclude operators and impose relations among Wilson coefficients.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>QMU ledgers and dimensional audits.</strong>
-          The Quantized Measurement Unit (QMU) ledger provides a structured dimensional
-          audit for mechanical, electromagnetic, gravitational, and thermodynamic quantities,
-          with a tabulated 100-entry ledger covering standard units and constants.
+          <strong>Ledger lattice for EFT operators.</strong><br />
+          Operator content becomes a discrete lattice in 3L + 2F space, enabling structural organization and exclusions.
           <div class="details">
-            Details: QMU and metrology paper
-            (<a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>).
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17773324" target="_blank" rel="noopener noreferrer">17773324</a>.
           </div>
         </li>
 
         <li>
-          <strong>Ontology of physical constants.</strong>
-          Constants are classified according to their ledger roles and whether they
-          represent ratios, conversion factors, or deeper structural parameters, all
-          referenced back to the QDC.
+          <strong>SMEFT exclusions and relations.</strong><br />
+          Closure-derived constraints can exclude incompatible operators and yield structured relations among Wilson coefficients.
           <div class="details">
-            Details: ontology of constants and dimensional-closure framework
-            (<a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">17663436</a>,
-            <a href="https://doi.org/10.5281/zenodo.17663501" target="_blank" rel="noopener noreferrer">17663501</a>).
-          </div>
-        </li>
-
-        <li>
-          <strong>Experimental validation roadmap.</strong>
-          A structured roadmap lays out how torsion balances, NV centers, cavity experiments,
-          and metamaterials can be used to test QDL’s ledger predictions and to search
-          for coherence signatures.
-          <div class="details">
-            Details: experimental validation protocol and CLF paper
-            (<a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">17654442</a>,
-            <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener noreferrer">17803804</a>).
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">17780443</a>.
           </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Section 6: How to read the QDL program -->
+  <!-- Section 5 -->
   <section>
-    <h2 class="section-title">6. How to read the QDL program</h2>
+    <h2 class="section-title">5. Metrology, constants, and experimental validation (applications)</h2>
     <p class="section-sub">
-      For readers encountering QDL for the first time, the recommended entry points
-      are the capstone prediction-filter paper, the quantum-gravity coherence paper,
-      the unified SM + gravity framework, and the Coherent Ledger Fields (CLF) paper.
+      QDL is built to be testable. Metrology and constants work provides ledger descriptions of measurement chains,
+      while the validation protocol specifies falsifiable tabletop experiments.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>Start with the prediction-filter capstone.</strong><br />
+          <strong>QMU ledgers and dimensional audits.</strong><br />
+          Structured dimensional audits for units and constants; supports practical measurement-chain reasoning under closure.
+          <div class="details">
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>.
+          </div>
+        </li>
+
+        <li>
+          <strong>Ontology of constants.</strong><br />
+          Classifies constants by ledger role and structural meaning under closure.
+          <div class="details">
+            References:
+            <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">17663436</a>,
+            <a href="https://doi.org/10.5281/zenodo.17663501" target="_blank" rel="noopener noreferrer">17663501</a>.
+          </div>
+        </li>
+
+        <li>
+          <strong>Experimental validation roadmap.</strong><br />
+          Torsion balances, NV centers, cavity experiments, and metamaterials as falsifiable probes of ledger-driven scaling laws.
+          <div class="details">
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">17654442</a>.
+          </div>
+        </li>
+
+        <li>
+          <strong>Engineering and pipeline auditing (practical layer).</strong><br />
+          Demonstrates closure as a pre-verification method for real modeling and measurement pipelines.
+          <div class="details">
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">18025343</a>.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 6 -->
+  <section>
+    <h2 class="section-title">6. Quick-start summary</h2>
+    <p class="section-sub">
+      If you only take one thing from this page: QDL is a closure-based admissibility framework that turns dimensional analysis into a structural filter.
+      For first-time readers, follow the framework-first Top 5 and then branch into applications.
+    </p>
+
+    <div class="card">
+      <ul>
+        <li>
+          <strong>Framework definition:</strong>
+          <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
+            Dimensional Closure as a National-Scale Model Validation Layer
+          </a>.
+        </li>
+        <li>
+          <strong>Reconstruction:</strong>
+          <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">
+            Structural Reconstruction of Dimensional Analysis
+          </a>.
+        </li>
+        <li>
+          <strong>Method:</strong>
           <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger as a Prediction Filter for Field Content,
-            EFT Structure, Constants, Gravity, and Precision Measurement
-          </a>
-          (17848782).
+            Prediction Filter for Field Content, EFT, Constants, Gravity, and Precision Measurement
+          </a>.
         </li>
-
         <li>
-          <strong>Then read the quantum-gravity from dimensional coherence paper.</strong><br />
-          <a href="https://doi.org/10.5281/zenodo.17848573" target="_blank" rel="noopener noreferrer">
-            Quantum Gravity from Dimensional Coherence: Minimum-Length Geometry from the Quantized Dimensional Ledger
-          </a>
-          (17848573).
+          <strong>Technical rigor:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">
+            Ledger-Constrained Renormalization
+          </a>.
         </li>
-
         <li>
-          <strong>Use the unified SM + gravity framework and CLF for structural context.</strong><br />
-          <a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">
-            Quantized Dimensional Ledger as a Unified Dimensional Closure Framework for the Standard Model and Gravity
-          </a>
-          (17742903) and
-          <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener noreferrer">
-            Coherent Ledger Fields: From SO(3,2) Dimensional Cells to a Unified Scalar–Tensor–Electromagnetic Phenomenology
-          </a>
-          (17803804).
+          <strong>Application:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">
+            Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines
+          </a>.
         </li>
-
         <li>
-          <strong>Consult the SMEFT and metrology papers for detailed applications.</strong><br />
-          Ledger-closure constraints on SMEFT, QMU ledgers, and the ontology-of-constants
-          papers provide applied case studies in EFT and metrology.
+          <strong>Browse the full library:</strong>
+          <a href="publications.html">Publications page</a> or
+          <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">Zenodo community</a>.
         </li>
       </ul>
     </div>
