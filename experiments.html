@@ -187,38 +187,6 @@
       color: #111827;
     }
 
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-top: 0.4rem;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      font-size: 0.78rem;
-      color: #374151;
-      white-space: nowrap;
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #9ca3af;
-      display: inline-block;
-    }
-
-    .badge.executed .badge-dot { background: #16a34a; }
-    .badge.planned .badge-dot { background: #f59e0b; }
-    .badge.inprogress .badge-dot { background: #2563eb; }
-
     section {
       margin-top: 2rem;
     }
@@ -229,7 +197,6 @@
       gap: 1.5rem;
       align-items: baseline;
       margin-bottom: 1rem;
-      flex-wrap: wrap;
     }
 
     .section-title {
@@ -242,7 +209,7 @@
     .section-kicker {
       font-size: 0.82rem;
       color: var(--text-soft);
-      max-width: 30rem;
+      max-width: 26rem;
     }
 
     .grid-2 {
@@ -312,63 +279,6 @@
       color: var(--text-soft);
       margin-top: 1.1rem;
       max-width: 44rem;
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 0.7rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.45rem 0.75rem;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      color: #0f172a;
-      font-size: 0.86rem;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      text-decoration: none;
-      border-color: rgba(148, 163, 184, 0.9);
-      background: #ffffff;
-    }
-
-    .btn.primary {
-      border-color: rgba(37, 99, 235, 0.35);
-      background: rgba(37, 99, 235, 0.06);
-      color: #0b1f5a;
-    }
-
-    details {
-      margin-top: 0.8rem;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 0.6rem 0.75rem;
-      background: #ffffff;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: #0f172a;
-      font-size: 0.88rem;
-      list-style: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-
-    .pdf-frame {
-      width: 100%;
-      height: 520px;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      margin-top: 0.7rem;
     }
 
     footer {
@@ -575,13 +485,7 @@
 
       <div class="card">
         <div class="card-title">Status and next steps</div>
-
-        <div class="badge-row" aria-label="torsion status badges">
-          <span class="badge executed"><span class="badge-dot"></span>Executed benchmark: Eöt-Wash limits</span>
-          <span class="badge planned"><span class="badge-dot"></span>Planned: geometry-sweep torsion scaling</span>
-        </div>
-
-        <p style="margin-top:0.65rem;">
+        <p>
           The QDL Experimental Validation Protocol outlines torsion-balance setups in which QDL and standard
           theory give distinguishable length- and mass-scaling predictions. Experimental collaborations are invited to:
         </p>
@@ -626,13 +530,7 @@
 
       <div class="card">
         <div class="card-title">Status and next steps</div>
-
-        <div class="badge-row" aria-label="nv status badges">
-          <span class="badge inprogress"><span class="badge-dot"></span>In progress: benchmark design</span>
-          <span class="badge planned"><span class="badge-dot"></span>Planned: residuals vs field/geometry controls</span>
-        </div>
-
-        <p style="margin-top:0.65rem;">
+        <p>
           The Coherent Ledger Fields paper outlines NV-center scenarios where QDL coherence requirements may
           produce detectable shifts or patterns not captured by conventional parameterizations.
         </p>
@@ -676,13 +574,7 @@
 
       <div class="card">
         <div class="card-title">Status and next steps</div>
-
-        <div class="badge-row" aria-label="cavity status badges">
-          <span class="badge inprogress"><span class="badge-dot"></span>In progress: dataset selection</span>
-          <span class="badge planned"><span class="badge-dot"></span>Planned: geometry-family residuals</span>
-        </div>
-
-        <p style="margin-top:0.65rem;">
+        <p>
           Existing undergraduate and graduate cavity experiments can be repurposed as low-barrier tests of
           QDL scaling by rewriting the analysis in an L–F basis and comparing residual structure.
         </p>
@@ -726,13 +618,7 @@
 
       <div class="card">
         <div class="card-title">Status and next steps</div>
-
-        <div class="badge-row" aria-label="metamaterial status badges">
-          <span class="badge planned"><span class="badge-dot"></span>Planned: dispersion-collapse tests</span>
-          <span class="badge planned"><span class="badge-dot"></span>Planned: engineered exponent-locking</span>
-        </div>
-
-        <p style="margin-top:0.65rem;">
+        <p>
           The Coherent Ledger Fields paper outlines metamaterial regimes where QDL may produce distinctive
           signatures, especially in dispersion-collapse or critical scaling scenarios.
         </p>
@@ -753,14 +639,7 @@
   <!-- BENCHMARKS -->
   <section id="benchmarks">
     <div class="section-header">
-      <div>
-        <h2 class="section-title">Benchmarks &amp; null tests</h2>
-        <div class="badge-row" aria-label="benchmarks status badges">
-          <span class="badge executed"><span class="badge-dot"></span>Executed: Torsion (Eöt-Wash limits)</span>
-          <span class="badge inprogress"><span class="badge-dot"></span>In progress: NV-center</span>
-          <span class="badge inprogress"><span class="badge-dot"></span>In progress: Cavity scaling</span>
-        </div>
-      </div>
+      <h2 class="section-title">Benchmarks &amp; null tests</h2>
       <p class="section-kicker">
         Direct data confrontation: QDL predictions vs baseline models using public datasets
         and reanalyzed measurements.
@@ -788,57 +667,39 @@
       </div>
 
       <div class="card">
-        <div class="card-title">Benchmark 1 (executed): Eöt-Wash torsion-balance limits</div>
+        <div class="card-title">Published benchmark (executed)</div>
         <p class="card-meta">
-          Residual-first benchmark using a leading public precision dataset.
+          Benchmark 1 is live: torsion-balance limits analyzed with residual-first diagnostics.
         </p>
 
         <p>
-          Benchmark 1 uses published Eöt-Wash torsion-balance limits on Yukawa-type deviations from gravity.
-          The analysis compares a flexible baseline fit against a constrained, ledger-motivated comparison family,
-          with residual plots as the primary diagnostic.
+          The first QDL benchmark has been executed using published Eöt-Wash torsion-balance limits on
+          Yukawa-type deviations from gravity. The analysis compares a flexible baseline fit against a
+          constrained, ledger-motivated comparison family, with residual plots as the primary diagnostic.
         </p>
 
         <ul>
-          <li>Public curve digitized from Eöt-Wash results</li>
+          <li>Public dataset digitized from Eöt-Wash results</li>
           <li>Declared model freedom (no hidden tuning)</li>
           <li>Residual-first reporting (structured residuals yes/no)</li>
           <li>Outcome: null confirmation (no additional structured residuals introduced)</li>
         </ul>
 
-        <div class="btn-row">
-          <a class="btn primary" href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
-            Open Zenodo record (DOI)
-          </a>
-          <a class="btn" href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
-            Cite / reference
-          </a>
-        </div>
-
-        <p style="margin-top:0.65rem;">
+        <p style="margin-top:0.6rem;">
           <strong>Reference:</strong><br />
           Bourassa, J. D. (2025).
           <em>Benchmarks and Null Tests for the Quantized Dimensional Ledger:
           Direct Data Confrontation via Residual-First, Auditable Comparisons</em>
-          (v1.0). Zenodo.
+          (v1.0). Zenodo.<br />
           <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
             https://doi.org/10.5281/zenodo.18057668
           </a>
         </p>
 
-        <details>
-          <summary>Preview the benchmark PDF (optional embed)</summary>
-          <p class="note" style="margin-top:0.55rem;">
-            If you host a direct PDF file link (recommended for clean embedding), set it in the script at the bottom
-            as <code>BENCHMARK_PDF_URL</code>. Otherwise, the DOI remains the canonical access point.
-          </p>
-          <iframe class="pdf-frame" id="benchPdfFrame" title="Benchmark manuscript preview"></iframe>
-        </details>
-
         <p class="note">
-          Plain-English takeaway: QDL survives an initial, auditable null test on a leading precision dataset
-          without introducing artifacts or hidden tuning. Future benchmarks must be independently discriminating
-          to establish added explanatory power.
+          Plain-English takeaway: the framework survives an initial, auditable null test on a leading precision
+          dataset without introducing artifacts or hidden tuning. Future benchmarks must be independently
+          discriminating to establish added explanatory power.
         </p>
       </div>
     </div>
@@ -971,23 +832,6 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  /**
-   * Optional: provide a DIRECT PDF URL for clean embedding.
-   * Recommended: host the PDF on qdlphysics.org (e.g., /assets/benchmarks-null-tests-v1.pdf)
-   * or use the Zenodo direct file URL (Records -> Files -> right-click file -> copy link).
-   *
-   * If you leave this empty, the embed will fall back to the DOI landing page (which may not render as a PDF iframe).
-   */
-  const BENCHMARK_PDF_URL = ""; // e.g., "https://qdlphysics.org/assets/benchmarks_null_tests_v1.pdf"
-
-  const iframe = document.getElementById("benchPdfFrame");
-  if (BENCHMARK_PDF_URL && iframe) {
-    iframe.src = BENCHMARK_PDF_URL;
-  } else if (iframe) {
-    // Fallback (canonical): DOI landing page
-    iframe.src = "https://doi.org/10.5281/zenodo.18057668";
-  }
 </script>
 </body>
 </html>
