@@ -177,6 +177,14 @@
       border-radius: 999px;
       border: 1px solid #e5e7eb;
       background: #f9fafb;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .hero-chip strong {
+      font-weight: 700;
+      color: #111827;
     }
 
     section {
@@ -338,6 +346,7 @@
       <div class="hero-chip">Ledger-Based Scaling Laws</div>
       <div class="hero-chip">Independent Experimental Platforms</div>
       <div class="hero-chip">Falsifiable Structure</div>
+      <div class="hero-chip"><strong>Benchmarks:</strong> 1 executed · 2 in progress</div>
     </div>
   </section>
 
@@ -658,9 +667,48 @@
       </div>
 
       <div class="card">
+        <div class="card-title">Published benchmark (executed)</div>
+        <p class="card-meta">
+          Benchmark 1 is live: torsion-balance limits analyzed with residual-first diagnostics.
+        </p>
+
+        <p>
+          The first QDL benchmark has been executed using published Eöt-Wash torsion-balance limits on
+          Yukawa-type deviations from gravity. The analysis compares a flexible baseline fit against a
+          constrained, ledger-motivated comparison family, with residual plots as the primary diagnostic.
+        </p>
+
+        <ul>
+          <li>Public dataset digitized from Eöt-Wash results</li>
+          <li>Declared model freedom (no hidden tuning)</li>
+          <li>Residual-first reporting (structured residuals yes/no)</li>
+          <li>Outcome: null confirmation (no additional structured residuals introduced)</li>
+        </ul>
+
+        <p style="margin-top:0.6rem;">
+          <strong>Reference:</strong><br />
+          Bourassa, J. D. (2025).
+          <em>Benchmarks and Null Tests for the Quantized Dimensional Ledger:
+          Direct Data Confrontation via Residual-First, Auditable Comparisons</em>
+          (v1.0). Zenodo.<br />
+          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
+            https://doi.org/10.5281/zenodo.18057668
+          </a>
+        </p>
+
+        <p class="note">
+          Plain-English takeaway: the framework survives an initial, auditable null test on a leading precision
+          dataset without introducing artifacts or hidden tuning. Future benchmarks must be independently
+          discriminating to establish added explanatory power.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:1.4rem;" class="grid-2">
+      <div class="card">
         <div class="card-title">Initial benchmark targets</div>
         <p class="card-meta">
-          Suggested first wave (chosen for public availability and clear null expectations):
+          First wave (chosen for public availability and clear null expectations):
         </p>
         <ul>
           <li>
@@ -675,7 +723,7 @@
         </ul>
 
         <p style="margin-top:0.6rem;">
-          Each benchmark record (Zenodo) will include:
+          Each benchmark record (Zenodo) includes:
         </p>
         <ul class="ref-list">
           <li>Dataset reference (or upload if redistribution is permitted)</li>
@@ -683,16 +731,28 @@
           <li>Fit scripts/notebook</li>
           <li>Residual plots (PNG/SVG) and a short README</li>
         </ul>
+      </div>
 
-        <!-- Replace placeholders with your actual Zenodo DOIs when ready -->
-        <p style="margin-top:0.7rem;" class="card-meta">
-          Benchmark records (coming online):
+      <div class="card">
+        <div class="card-title">Benchmark record index</div>
+        <p class="card-meta">
+          Versioned records with declared analysis choices and replication materials.
         </p>
         <ul class="ref-list">
-          <li>Torsion benchmark (residuals): <em>Zenodo DOI pending</em></li>
+          <li>
+            Torsion benchmark (residuals):
+            <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
+              10.5281/zenodo.18057668
+            </a>
+          </li>
           <li>NV-center benchmark (residuals): <em>Zenodo DOI pending</em></li>
           <li>Cavity benchmark (residuals): <em>Zenodo DOI pending</em></li>
         </ul>
+
+        <p class="note">
+          Each record is designed for external replication: same dataset, same declared preprocessing,
+          same model forms, and residual plots that make success/failure visually obvious.
+        </p>
       </div>
     </div>
   </section>
