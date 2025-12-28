@@ -444,6 +444,35 @@
       margin-bottom: 0.2rem;
     }
 
+    /* ADDED: Latest Results card styling */
+    .latest-card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      padding: 1rem 1.1rem 1.1rem;
+      font-size: 0.86rem;
+      color: #374151;
+    }
+
+    .ref-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      font-size: 0.84rem;
+      color: #374151;
+    }
+
+    .ref-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .note {
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -650,6 +679,50 @@
         </div>
         <div class="card-link-cta">Learn about the institute →</div>
       </a>
+    </div>
+  </section>
+
+  <!-- ADDED: LATEST RESULTS / BENCHMARKS STRIP -->
+  <section class="section" id="latest-results">
+    <div class="section-header">
+      <h2 class="section-title">Latest Results</h2>
+      <p class="section-sub">
+        Three executed, reproducible residual-first benchmarks using public data across metrology-relevant domains.
+      </p>
+    </div>
+
+    <div class="latest-card">
+      <p style="line-height:1.55; margin-bottom:0.45rem;">
+        <strong>Residual-first benchmarking</strong> treats coherent residual structure as the primary model-adequacy
+        diagnostic under declared model families and a stated parameter budget. These records are designed for
+        straightforward external replication. No new physical effects are claimed; the contribution is methodological.
+      </p>
+
+      <ul class="ref-list">
+        <li>
+          Optical cavity benchmark (v1.0):
+          <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.18076864
+          </a>
+        </li>
+        <li>
+          NV-center ODMR benchmark (v1.0):
+          <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.18069870
+          </a>
+        </li>
+        <li>
+          Benchmarks &amp; null tests (v1.0):
+          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">
+            10.5281/zenodo.18057668
+          </a>
+        </li>
+      </ul>
+
+      <p class="note">
+        Full benchmark summaries, replication materials, and the broader validation roadmap are on the
+        <a href="experiments.html"><strong>Experiments</strong></a> page.
+      </p>
     </div>
   </section>
 
