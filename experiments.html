@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Experimental validation roadmap for the Quantized Dimensional Ledger (QDL): torsion-balance, NV-center, cavity, and metamaterial tests of 3L + 2F dimensional closure, model admissibility, and ledger-based scaling."
+    content="Residual-first benchmarks and experimental validation roadmap for the Quantized Dimensional Ledger (QDL): torsion-balance, NV-center, cavity, and metamaterial tests of 3L + 2F dimensional closure, model admissibility, and ledger-based scaling."
   />
   <style>
     :root {
@@ -330,8 +330,8 @@
 <main>
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-kicker">Experimental validation roadmap</div>
-    <h1 class="hero-title">Testing the Quantized Dimensional Ledger in the Lab</h1>
+    <div class="hero-kicker">Benchmarks &amp; residual-first validation roadmap</div>
+    <h1 class="hero-title">Testing the Quantized Dimensional Ledger with Auditable Benchmarks</h1>
     <p class="hero-sub">
       The QDL framework is built to be falsifiable.
       A conserved 3L + 2F Quantized Dimensional Cell (QDC) and ledger-closure rules generate
@@ -339,6 +339,11 @@
       This page outlines four complementary platforms—torsion balances, NV-center frequency shifts,
       cavity scaling, and metamaterials—that can test whether nature exhibits QDL-style closure and
       ledger-based scaling beyond standard dimensional expectations alone.
+      <br /><br />
+      <strong>Update:</strong> Three residual-first benchmarks and null tests are now executed using public data.
+      These are designed as auditable, reproducible comparisons with explicitly declared model families and
+      residual structure as the primary pass/fail diagnostic. No new physical effects are claimed; the focus
+      is methodological: transparent model adequacy testing across multiple measurement domains.
     </p>
 
     <div class="hero-meta">
@@ -346,7 +351,7 @@
       <div class="hero-chip">Ledger-Based Scaling Laws</div>
       <div class="hero-chip">Independent Experimental Platforms</div>
       <div class="hero-chip">Falsifiable Structure</div>
-      <div class="hero-chip"><strong>Benchmarks:</strong> 1 executed · 2 in progress</div>
+      <div class="hero-chip"><strong>Benchmarks:</strong> 3 executed · 0 pending</div>
     </div>
   </section>
 
@@ -537,6 +542,7 @@
         <ul>
           <li>Start by reanalyzing existing NV datasets in ledger form.</li>
           <li>Design runs that vary geometry and field configurations to isolate QDL-specific exponent signatures.</li>
+          <li><strong>Executed benchmark:</strong> residual-first ODMR benchmarking using public data (record below).</li>
         </ul>
         <p class="card-meta">
           Reference: Coherent Ledger Fields –
@@ -581,6 +587,7 @@
         <ul>
           <li>Recast the lab pipeline as a ledger-auditable measurement chain.</li>
           <li>Run geometry sweeps designed to separate standard vs. ledger-admissible parameterizations.</li>
+          <li><strong>Executed benchmark:</strong> residual-first cavity trace benchmarking using public data (record below).</li>
         </ul>
         <p class="card-meta">
           Reference: Teaching Dimensional Analysis with a Length–Frequency Basis –
@@ -641,8 +648,7 @@
     <div class="section-header">
       <h2 class="section-title">Benchmarks &amp; null tests</h2>
       <p class="section-kicker">
-        Direct data confrontation: QDL predictions vs baseline models using public datasets
-        and reanalyzed measurements.
+        Direct data confrontation: residual-first, auditable comparisons using public datasets and reanalyzed measurements.
       </p>
     </div>
 
@@ -650,56 +656,119 @@
       <div class="card">
         <div class="card-title">What “benchmark” means here</div>
         <p>
-          Benchmarks are explicit, falsifiable comparisons between QDL-admissible scaling relations
-          and standard dimensional or EFT parameterizations. Each benchmark is designed to be auditable:
-          dataset provenance, model forms, fit controls, and residuals are published alongside the analysis.
+          Benchmarks are explicit, falsifiable comparisons between declared model families under a stated parameter budget,
+          evaluated primarily by residual structure rather than aggregate fit magnitude. Each benchmark is designed to be auditable:
+          dataset provenance, model forms, fit controls, and residual plots are published alongside the analysis.
         </p>
         <ul>
-          <li><strong>Binary or near-binary outcomes</strong> where possible (pass / fail).</li>
-          <li><strong>No hidden tuning:</strong> all adjustable parameters are declared.</li>
-          <li><strong>Ledger-form transparency:</strong> intermediate quantities expressed in 3L + 2F form.</li>
-          <li><strong>Reproducibility:</strong> CSV tables + scripts/notebooks + plotted residuals.</li>
+          <li><strong>Residual-first decision rule:</strong> coherent residual structure indicates model inadequacy.</li>
+          <li><strong>Declared parameter budget:</strong> model families are specified before fitting.</li>
+          <li><strong>No hidden tuning:</strong> preprocessing and all adjustable parameters are stated.</li>
+          <li><strong>Reproducibility:</strong> scripts, CSVs, and figures are published with versioned records.</li>
         </ul>
         <p class="note">
-          The goal is to make it easy for an external group to replicate (or refute) each claim using the
-          same dataset and the same declared analysis choices.
+          The goal is to make it easy for an external group to replicate (or refute) each result using the
+          same dataset and the same declared analysis choices. These benchmarks make no claims of new physical effects;
+          they are designed as a transferable methodology for model adequacy testing in metrology.
         </p>
       </div>
 
       <div class="card">
-        <div class="card-title">Published benchmark (executed)</div>
+        <div class="card-title">Benchmark suite (executed)</div>
         <p class="card-meta">
-          Benchmark 1 is live: torsion-balance limits analyzed with residual-first diagnostics.
+          Three executed benchmarks across distinct measurement domains (torsion, NV ODMR, optical cavity).
         </p>
 
         <p>
-          The first QDL benchmark has been executed using published Eöt-Wash torsion-balance limits on
-          Yukawa-type deviations from gravity. The analysis compares a flexible baseline fit against a
-          constrained, ledger-motivated comparison family, with residual plots as the primary diagnostic.
+          The benchmark suite now includes:
         </p>
 
         <ul>
-          <li>Public dataset digitized from Eöt-Wash results</li>
-          <li>Declared model freedom (no hidden tuning)</li>
-          <li>Residual-first reporting (structured residuals yes/no)</li>
-          <li>Outcome: null confirmation (no additional structured residuals introduced)</li>
+          <li>
+            <strong>Torsion / null test:</strong> residual-first, auditable comparisons on leading precision limits datasets.
+          </li>
+          <li>
+            <strong>NV-center ODMR:</strong> baseline spin-Hamiltonian fits versus a strictly reduced comparison family using public data.
+          </li>
+          <li>
+            <strong>Optical cavity trace:</strong> constant-response null tests versus low-order trend baselines using public data.
+          </li>
         </ul>
 
-        <p style="margin-top:0.6rem;">
-          <strong>Reference:</strong><br />
-          Bourassa, J. D. (2025).
-          <em>Benchmarks and Null Tests for the Quantized Dimensional Ledger:
-          Direct Data Confrontation via Residual-First, Auditable Comparisons</em>
-          (v1.0). Zenodo.<br />
-          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
-            https://doi.org/10.5281/zenodo.18057668
+        <p class="note">
+          Plain-English takeaway: across three different experimental contexts, residual-first diagnostics separate cases where
+          reduced models are adequate from cases where residual structure persists and motivates more physical modeling.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:1.4rem;" class="grid-2">
+      <div class="card">
+        <div class="card-title">Benchmark record index</div>
+        <p class="card-meta">
+          Versioned records with declared analysis choices and replication materials.
+        </p>
+        <ul class="ref-list">
+          <li>
+            Benchmarks &amp; Null Tests (torsion / framework record):
+            <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
+              10.5281/zenodo.18057668
+            </a>
+          </li>
+          <li>
+            NV-center ODMR benchmark (residuals; public data):
+            <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">
+              10.5281/zenodo.18069870
+            </a>
+          </li>
+          <li>
+            Optical cavity benchmark (residuals; public data):
+            <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">
+              10.5281/zenodo.18076864
+            </a>
+          </li>
+        </ul>
+
+        <p class="note">
+          Each record is designed for external replication: same dataset, same declared preprocessing,
+          same model families, and residual plots that make structural adequacy (or failure) visually obvious.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Executed benchmark summaries</div>
+        <p class="card-meta">
+          Short, consistent summaries designed for quick orientation and cross-domain comparison.
+        </p>
+
+        <p>
+          <strong>1) Optical Cavity Resonance Benchmark</strong><br />
+          <span class="card-meta">Domain: precision photonics / metrology</span><br />
+          Residual-first diagnostics distinguish stabilized traces (noise-like residuals under the reduced family)
+          from uncontrolled resonance scans (coherent residual structure persists under both reduced and low-order baseline families).<br />
+          <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">
+            https://doi.org/10.5281/zenodo.18076864
           </a>
         </p>
 
-        <p class="note">
-          Plain-English takeaway: the framework survives an initial, auditable null test on a leading precision
-          dataset without introducing artifacts or hidden tuning. Future benchmarks must be independently
-          discriminating to establish added explanatory power.
+        <p>
+          <strong>2) NV-Center ODMR Benchmark</strong><br />
+          <span class="card-meta">Domain: solid-state quantum sensing</span><br />
+          Residual-first benchmarking compares baseline spin-Hamiltonian fits with a strictly reduced comparison family
+          using public ODMR data, emphasizing transparency and structural adequacy rather than fit magnitude alone.<br />
+          <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">
+            https://doi.org/10.5281/zenodo.18069870
+          </a>
+        </p>
+
+        <p>
+          <strong>3) Benchmarks &amp; Null Tests (Framework / Torsion Anchor)</strong><br />
+          <span class="card-meta">Domain: cross-domain methodology and null-test discipline</span><br />
+          Establishes residual-first, auditable comparisons as a general benchmarking framework and provides executed null-test anchors
+          for precision datasets in which a transparent reduced family is expected to pass if no additional structure is present.<br />
+          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
+            https://doi.org/10.5281/zenodo.18057668
+          </a>
         </p>
       </div>
     </div>
@@ -712,7 +781,7 @@
         </p>
         <ul>
           <li>
-            <strong>Torsion / null tests:</strong> residual plots comparing QDL-inspired torque scaling vs baseline fits.
+            <strong>Torsion / null tests:</strong> residual plots comparing constrained comparison families vs baseline fits.
           </li>
           <li>
             <strong>NV-center magnetometry:</strong> frequency-shift residuals under controlled field/geometry variations.
@@ -727,31 +796,27 @@
         </p>
         <ul class="ref-list">
           <li>Dataset reference (or upload if redistribution is permitted)</li>
-          <li>Analysis CSVs (cleaned inputs + derived ledger quantities)</li>
+          <li>Analysis CSVs (cleaned inputs + derived quantities)</li>
           <li>Fit scripts/notebook</li>
           <li>Residual plots (PNG/SVG) and a short README</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="card-title">Benchmark record index</div>
+        <div class="card-title">Publishing discipline</div>
         <p class="card-meta">
-          Versioned records with declared analysis choices and replication materials.
+          What is held constant across benchmarks to preserve auditability.
         </p>
-        <ul class="ref-list">
-          <li>
-            Torsion benchmark (residuals):
-            <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
-              10.5281/zenodo.18057668
-            </a>
-          </li>
-          <li>NV-center benchmark (residuals): <em>Zenodo DOI pending</em></li>
-          <li>Cavity benchmark (residuals): <em>Zenodo DOI pending</em></li>
+        <ul>
+          <li>Public provenance: datasets are linked with stable identifiers.</li>
+          <li>Declared preprocessing: no hidden filtering, windowing, or cherry-picked segments.</li>
+          <li>Declared model families: reduced vs baseline comparisons are explicit.</li>
+          <li>Residual-first reporting: structure in residuals is treated as primary evidence.</li>
         </ul>
 
         <p class="note">
-          Each record is designed for external replication: same dataset, same declared preprocessing,
-          same model forms, and residual plots that make success/failure visually obvious.
+          This discipline is designed to avoid ambiguous “fit improvement” narratives and instead enable clear
+          success/failure judgments that other groups can independently reproduce.
         </p>
       </div>
     </div>
