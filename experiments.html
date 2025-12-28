@@ -16,29 +16,23 @@
       --text-main: #0f172a;
       --text-soft: #6b7280;
       --accent: #2563eb;
+      --badge-green: #16a34a;
+      --badge-amber: #d97706;
+      --badge-blue: #2563eb;
+      --badge-bg: #f8fafc;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: #0369a1;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #0369a1; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     header {
       background: #0f172a;
@@ -59,11 +53,7 @@
       gap: 1rem;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
+    .logo { display: flex; align-items: center; gap: 0.6rem; }
 
     .logo-icon {
       width: 60px;
@@ -77,12 +67,7 @@
       overflow: hidden;
     }
 
-    .logo-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
     .logo-text-main {
       font-weight: 600;
@@ -182,14 +167,9 @@
       gap: 0.45rem;
     }
 
-    .hero-chip strong {
-      font-weight: 700;
-      color: #111827;
-    }
+    .hero-chip strong { font-weight: 700; color: #111827; }
 
-    section {
-      margin-top: 2rem;
-    }
+    section { margin-top: 2rem; }
 
     .section-header {
       display: flex;
@@ -219,9 +199,7 @@
     }
 
     @media (max-width: 880px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+      .grid-2 { grid-template-columns: 1fr; }
     }
 
     .card {
@@ -234,9 +212,7 @@
       color: #374151;
     }
 
-    .card + .card {
-      margin-top: 0.8rem;
-    }
+    .card + .card { margin-top: 0.8rem; }
 
     .card-title {
       font-size: 0.98rem;
@@ -250,36 +226,45 @@
       margin-bottom: 0.5rem;
     }
 
-    .card p {
-      margin-bottom: 0.5rem;
+    .card p { margin-bottom: 0.5rem; }
+
+    ul { padding-left: 1.1rem; font-size: 0.88rem; color: #374151; }
+    ul li { margin-bottom: 0.28rem; }
+
+    .ref-list { list-style: none; padding-left: 0; font-size: 0.86rem; }
+    .ref-list li { margin-bottom: 0.35rem; }
+
+    .note { font-size: 0.8rem; color: var(--text-soft); margin-top: 1.1rem; max-width: 44rem; }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.25rem 0 0.8rem;
     }
 
-    ul {
-      padding-left: 1.1rem;
-      font-size: 0.88rem;
-      color: #374151;
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.18rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: var(--badge-bg);
+      font-size: 0.78rem;
+      color: #334155;
     }
 
-    ul li {
-      margin-bottom: 0.28rem;
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      display: inline-block;
     }
 
-    .ref-list {
-      list-style: none;
-      padding-left: 0;
-      font-size: 0.86rem;
-    }
-
-    .ref-list li {
-      margin-bottom: 0.35rem;
-    }
-
-    .note {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      margin-top: 1.1rem;
-      max-width: 44rem;
-    }
+    .dot.green { background: var(--badge-green); }
+    .dot.blue { background: var(--badge-blue); }
+    .dot.amber { background: var(--badge-amber); }
 
     footer {
       border-top: 1px solid var(--border-soft);
@@ -652,6 +637,13 @@
       </p>
     </div>
 
+    <div class="badge-row" aria-label="Benchmark status badges">
+      <div class="badge"><span class="dot green"></span><strong>Executed:</strong>&nbsp;Torsion</div>
+      <div class="badge"><span class="dot green"></span><strong>Executed:</strong>&nbsp;NV ODMR</div>
+      <div class="badge"><span class="dot green"></span><strong>Executed:</strong>&nbsp;Optical Cavity</div>
+      <div class="badge"><span class="dot blue"></span><strong>Roadmap:</strong>&nbsp;4-platform program</div>
+    </div>
+
     <div class="grid-2">
       <div class="card">
         <div class="card-title">What “benchmark” means here</div>
@@ -674,55 +666,25 @@
       </div>
 
       <div class="card">
-        <div class="card-title">Benchmark suite (executed)</div>
+        <div class="card-title">Quick links (records)</div>
         <p class="card-meta">
-          Three executed benchmarks across distinct measurement domains (torsion, NV ODMR, optical cavity).
-        </p>
-
-        <p>
-          The benchmark suite now includes:
-        </p>
-
-        <ul>
-          <li>
-            <strong>Torsion / null test:</strong> residual-first, auditable comparisons on leading precision limits datasets.
-          </li>
-          <li>
-            <strong>NV-center ODMR:</strong> baseline spin-Hamiltonian fits versus a strictly reduced comparison family using public data.
-          </li>
-          <li>
-            <strong>Optical cavity trace:</strong> constant-response null tests versus low-order trend baselines using public data.
-          </li>
-        </ul>
-
-        <p class="note">
-          Plain-English takeaway: across three different experimental contexts, residual-first diagnostics separate cases where
-          reduced models are adequate from cases where residual structure persists and motivates more physical modeling.
-        </p>
-      </div>
-    </div>
-
-    <div style="margin-top:1.4rem;" class="grid-2">
-      <div class="card">
-        <div class="card-title">Benchmark record index</div>
-        <p class="card-meta">
-          Versioned records with declared analysis choices and replication materials.
+          Stable DOIs for immediate citation and replication.
         </p>
         <ul class="ref-list">
           <li>
-            Benchmarks &amp; Null Tests (torsion / framework record):
+            Torsion / framework record:
             <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
               10.5281/zenodo.18057668
             </a>
           </li>
           <li>
-            NV-center ODMR benchmark (residuals; public data):
+            NV-center ODMR benchmark:
             <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">
               10.5281/zenodo.18069870
             </a>
           </li>
           <li>
-            Optical cavity benchmark (residuals; public data):
+            Optical cavity trace benchmark:
             <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">
               10.5281/zenodo.18076864
             </a>
@@ -730,11 +692,13 @@
         </ul>
 
         <p class="note">
-          Each record is designed for external replication: same dataset, same declared preprocessing,
-          same model families, and residual plots that make structural adequacy (or failure) visually obvious.
+          Each record contains public provenance, declared preprocessing, declared model families, and residual plots that make adequacy
+          (or failure) visually obvious.
         </p>
       </div>
+    </div>
 
+    <div style="margin-top:1.4rem;" class="grid-2">
       <div class="card">
         <div class="card-title">Executed benchmark summaries</div>
         <p class="card-meta">
@@ -771,36 +735,6 @@
           </a>
         </p>
       </div>
-    </div>
-
-    <div style="margin-top:1.4rem;" class="grid-2">
-      <div class="card">
-        <div class="card-title">Initial benchmark targets</div>
-        <p class="card-meta">
-          First wave (chosen for public availability and clear null expectations):
-        </p>
-        <ul>
-          <li>
-            <strong>Torsion / null tests:</strong> residual plots comparing constrained comparison families vs baseline fits.
-          </li>
-          <li>
-            <strong>NV-center magnetometry:</strong> frequency-shift residuals under controlled field/geometry variations.
-          </li>
-          <li>
-            <strong>Cavity scaling:</strong> length–frequency invariants and fit residuals across cavity geometries.
-          </li>
-        </ul>
-
-        <p style="margin-top:0.6rem;">
-          Each benchmark record (Zenodo) includes:
-        </p>
-        <ul class="ref-list">
-          <li>Dataset reference (or upload if redistribution is permitted)</li>
-          <li>Analysis CSVs (cleaned inputs + derived quantities)</li>
-          <li>Fit scripts/notebook</li>
-          <li>Residual plots (PNG/SVG) and a short README</li>
-        </ul>
-      </div>
 
       <div class="card">
         <div class="card-title">Publishing discipline</div>
@@ -817,6 +751,42 @@
         <p class="note">
           This discipline is designed to avoid ambiguous “fit improvement” narratives and instead enable clear
           success/failure judgments that other groups can independently reproduce.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:1.4rem;" class="grid-2">
+      <div class="card">
+        <div class="card-title">Initial benchmark targets</div>
+        <p class="card-meta">
+          First wave (chosen for public availability and clear null expectations):
+        </p>
+        <ul>
+          <li><strong>Torsion / null tests:</strong> residual plots comparing constrained comparison families vs baseline fits.</li>
+          <li><strong>NV-center magnetometry:</strong> frequency-shift residuals under controlled field/geometry variations.</li>
+          <li><strong>Cavity scaling:</strong> length–frequency invariants and fit residuals across cavity geometries.</li>
+        </ul>
+
+        <p style="margin-top:0.6rem;">
+          Each benchmark record (Zenodo) includes:
+        </p>
+        <ul class="ref-list">
+          <li>Dataset reference (or upload if redistribution is permitted)</li>
+          <li>Analysis CSVs (cleaned inputs + derived quantities)</li>
+          <li>Fit scripts/notebook</li>
+          <li>Residual plots (PNG/SVG) and a short README</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">A note on interpretation</div>
+        <p>
+          These benchmarks are intentionally conservative. Passing a null test does not “prove” QDL; it shows that a declared reduced family
+          can survive an auditable comparison without hidden tuning. Failing a benchmark is equally valuable: it indicates structural incompleteness
+          and motivates more physical modeling or improved experimental controls.
+        </p>
+        <p class="note">
+          This framing is designed to encourage replication and to keep success/failure criteria transparent and falsifiable.
         </p>
       </div>
     </div>
@@ -857,13 +827,9 @@
         </p>
         <p>
           <strong>Email:</strong>
-          <a href="mailto:james.bourassa@qdlphysics.org">
-            james.bourassa@qdlphysics.org
-          </a>
+          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
         </p>
-        <p>
-          Additional materials:
-        </p>
+        <p>Additional materials:</p>
         <ul class="ref-list">
           <li>
             QDL Physics Institute Zenodo community:
