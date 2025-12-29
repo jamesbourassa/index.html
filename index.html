@@ -161,14 +161,63 @@
 
     .hero h1 {
       font-size: clamp(2rem, 3vw, 2.4rem);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
+      line-height: 1.15;
     }
 
     .hero-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: var(--text-soft);
-      margin-bottom: 0.9rem;
-      max-width: 36rem;
+      margin-bottom: 0.75rem;
+      max-width: 40rem;
+      line-height: 1.6;
+    }
+
+    /* NEW: hero equation block */
+    .hero-eq {
+      margin: 0.65rem 0 0.85rem;
+      padding: 0.7rem 0.9rem;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      max-width: 42rem;
+    }
+
+    .eq {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      font-size: 0.98rem;
+      color: #111827;
+      display: block;
+      text-align: center;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    .eq kbd {
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0.08rem 0.35rem;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      color: #111827;
+    }
+
+    .eq-caption {
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-micro {
+      font-size: 0.86rem;
+      color: #4b5563;
+      margin-bottom: 0.85rem;
+      max-width: 42rem;
       line-height: 1.55;
     }
 
@@ -444,7 +493,7 @@
       margin-bottom: 0.2rem;
     }
 
-    /* ADDED: Latest Results card styling */
+    /* Latest Results card styling */
     .latest-card {
       background: var(--bg-card);
       border-radius: 18px;
@@ -525,25 +574,33 @@
     <div>
       <div class="hero-kicker">Independent theoretical & metrological research</div>
 
-      <!-- UPDATED: stronger, journal-legible framing -->
-      <h1>Quantized Dimensional Ledger (QDL): Dimensional Closure as an Admissibility Framework</h1>
+      <!-- UPDATED: home-page thesis framing -->
+      <h1>Quantized Dimensional Ledger (QDL)</h1>
 
-      <!-- UPDATED: method-first subtitle -->
+      <!-- UPDATED: final thesis sentence (primary) -->
       <p class="hero-subtitle">
-        The Quantized Dimensional Ledger (QDL) is a structural admissibility framework that strengthens
-        dimensional analysis into a dimensional-closure constraint on models—restricting admissible terms,
-        couplings, and normalizations prior to phenomenological fitting. In this formulation, QDL functions
-        as a prediction-filtering and validation layer across physics, cosmology, and measurement.
+        QDL is the minimal representational framework capable of expressing all physical theories within a single dimensional language.
+      </p>
+
+      <!-- NEW: equation anchor + micro-caption -->
+      <div class="hero-eq" aria-label="QDL dimensional basis equation">
+        <span class="eq"><kbd>𝒟</kbd> = ⟨<kbd>L</kbd>, <kbd>F</kbd>⟩<sub>3+2</sub></span>
+        <div class="eq-caption">Dimensional closure basis</div>
+      </div>
+
+      <!-- NEW: optional micro-line (small, supports admissibility without clutter) -->
+      <p class="hero-micro">
+        Dimensional closure enforces admissibility across models and domains.
       </p>
 
       <div class="hero-badges">
-        <span class="badge badge-accent">3L + 2F prediction filter</span>
+        <span class="badge badge-accent">3L + 2F ledger</span>
         <span class="badge">Quantized Dimensional Cell (QDC)</span>
         <span class="badge">EFT &amp; SMEFT structure</span>
         <span class="badge">Gravity &amp; metrology links</span>
       </div>
 
-      <!-- INSERTED: canonical framework reference callout -->
+      <!-- Canonical framework reference callout (kept, slightly tightened) -->
       <div class="hero-card" style="margin: 0.8rem 0 0.9rem;">
         <div class="hero-card-title">Framework Definition (Canonical Reference)</div>
         <div class="hero-card-chip">Admissibility &amp; validation layer</div>
@@ -585,7 +642,7 @@
       </p>
     </div>
 
-    <!-- ENRICHED HERO CARD (unchanged) -->
+    <!-- RIGHT HERO CARD (kept; lightly tightened for congruence with new hero) -->
     <aside class="hero-card">
       <div class="hero-card-title">Quantized Dimensional Ledger (QDL)</div>
       <div class="hero-card-chip">Conserved 3L + 2F dimensional cell</div>
@@ -599,7 +656,7 @@
       <p style="margin-bottom:0.4rem; line-height:1.45;">
         In this picture, the Quantized Dimensional Cell is not just a unit choice but a
         geometric object: a discrete, conserved dimensional volume that all valid physical
-        quantities must respect. This gives a common structural language for particle
+        quantities must respect. This provides a shared structural language for particle
         physics, gravitation, and metrology.
       </p>
 
@@ -614,10 +671,8 @@
       </ul>
 
       <p style="margin-top:0.3rem; line-height:1.45;">
-        Together, these elements turn dimensional analysis from bookkeeping into a
-        structural principle for unified physics and precision measurement, linking the
-        unified SM + gravity structure, SMEFT exclusions, CLF phenomenology, and Quantum
-        Gravity from Dimensional Coherence.
+        Together, these elements elevate dimensional analysis from bookkeeping into a structural
+        admissibility principle for theory construction and precision measurement.
       </p>
 
       <div class="hero-card-footer">
@@ -682,7 +737,7 @@
     </div>
   </section>
 
-  <!-- ADDED: LATEST RESULTS / BENCHMARKS STRIP -->
+  <!-- LATEST RESULTS / BENCHMARKS -->
   <section class="section" id="latest-results">
     <div class="section-header">
       <h2 class="section-title">Latest Results</h2>
@@ -779,7 +834,7 @@
     </div>
   </section>
 
-  <!-- TOP 5 PAPERS (UPDATED: safe ordering; cosmology held off home) -->
+  <!-- TOP 5 PAPERS -->
   <section class="section" id="featured">
     <div class="section-header">
       <h2 class="section-title">Framework &amp; Method Highlights</h2>
