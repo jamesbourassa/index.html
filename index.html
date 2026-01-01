@@ -522,6 +522,58 @@
       color: #6b7280;
     }
 
+    /* NEW: standards / admissibility section styling */
+    .callout {
+      margin-top: 0.75rem;
+      padding: 0.85rem 0.95rem;
+      border-radius: 16px;
+      border: 1px solid rgba(37, 99, 235, 0.25);
+      background: #f8fafc;
+      color: #374151;
+      line-height: 1.55;
+    }
+
+    .quote {
+      margin-top: 0.65rem;
+      padding: 0.75rem 0.85rem;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      font-size: 0.86rem;
+      color: #111827;
+    }
+
+    .quote strong {
+      display: block;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 0.25rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.65rem;
+    }
+
+    .pill {
+      font-size: 0.74rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      color: #4b5563;
+    }
+
+    .pill-accent {
+      border-color: rgba(37, 99, 235, 0.35);
+      background: var(--accent-soft);
+      color: #1d4ed8;
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -734,6 +786,90 @@
         </div>
         <div class="card-link-cta">Learn about the institute →</div>
       </a>
+    </div>
+  </section>
+
+  <!-- NEW: DIMENSIONAL ADMISSIBILITY & MEASUREMENT INTEGRITY -->
+  <section class="section" id="admissibility-standards">
+    <div class="section-header">
+      <h2 class="section-title">Dimensional Admissibility &amp; Measurement Integrity</h2>
+      <p class="section-sub">
+        A framework-independent, standards-ready audit layer for model-driven energy and infrastructure systems.
+      </p>
+    </div>
+
+    <div class="featured-inner">
+      <div>
+        <div class="featured-label">Standards-ready translation</div>
+        <div class="featured-title">From QDL-origin insight to national-scale model governance</div>
+
+        <p style="margin-bottom:0.55rem; line-height:1.55;">
+          This work originated in the Quantized Dimensional Ledger (QDL) research program, where strict dimensional
+          bookkeeping repeatedly exposed decision-level inconsistencies in otherwise well-posed models. By separating
+          that observation from QDL’s broader physical claims, the paper extracts a general, falsifiable principle—
+          <strong>dimensional admissibility</strong>—and translates it into a standards-ready audit framework applicable to
+          model-driven energy and infrastructure systems. <strong>No QDL assumptions are required for its use.</strong>
+        </p>
+
+        <div class="quote" aria-label="Dimensional admissibility principle">
+          <strong>Falsifiable principle</strong>
+          Physically equivalent representations must yield identical model-derived decisions.
+        </div>
+
+        <div class="pill-row" aria-label="Audit-layer highlights">
+          <span class="pill pill-accent">Pre-verification audit layer</span>
+          <span class="pill">Unit/base invariance tests</span>
+          <span class="pill">Model card + waiver templates</span>
+          <span class="pill">Procurement-ready artifacts</span>
+          <span class="pill">NIST/DOE pilot pathway</span>
+        </div>
+
+        <div class="callout" role="note" aria-label="Zenodo record for national standards paper">
+          <p style="margin-bottom:0.35rem;">
+            <strong>Reference (v1.0):</strong><br />
+            Bourassa, J. D. (2026). <em>Dimensional Admissibility and Measurement Integrity as National Standards for Model-Driven
+            Energy and Infrastructure Systems</em> (v1.0). Zenodo.
+          </p>
+          <p style="margin-bottom:0;">
+            DOI:
+            <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.18112158
+            </a>
+          </p>
+        </div>
+
+        <div class="hero-actions" style="margin-top:0.85rem;">
+          <a
+            href="https://doi.org/10.5281/zenodo.18112158"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Read the national standards paper
+          </a>
+          <a href="benefits.html" class="btn btn-secondary">Why this matters →</a>
+        </div>
+
+        <p style="margin-top:0.7rem; color:#6b7280; font-size:0.82rem; line-height:1.55;">
+          This standards framing is intentionally independent of QDL’s broader theoretical program. Its purpose is to make
+          representational invariance testable, reportable, and auditable across real-world optimization and planning pipelines.
+        </p>
+      </div>
+
+      <aside class="featured-side">
+        <strong>What it enables</strong>
+        <ul class="featured-list" style="margin-top:0.45rem;">
+          <li><strong>Decision robustness:</strong> detect representation fragility that changes dispatch, sizing, or planning outcomes.</li>
+          <li><strong>Measurement integrity:</strong> separate physical dynamics from pipeline artifacts before decisions are made.</li>
+          <li><strong>Procurement clarity:</strong> model cards and documented waivers for legacy constraints.</li>
+          <li><strong>Standards adoption:</strong> NISTIR → voluntary guidance → procurement → consensus standard.</li>
+        </ul>
+
+        <p style="margin-top:0.6rem;">
+          This section provides an on-ramp for agency, infrastructure, and metrology audiences without requiring any commitment
+          to QDL’s broader physics claims.
+        </p>
+      </aside>
     </div>
   </section>
 
