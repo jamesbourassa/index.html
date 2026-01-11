@@ -574,6 +574,42 @@
       color: #1d4ed8;
     }
 
+    /* NEW: benchmark hub chip on Home page */
+    .bench-hub {
+      margin: 0.55rem 0 0.15rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+    }
+
+    .bench-hub .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      background: var(--accent-soft);
+      color: #1d4ed8;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .bench-hub .chip:hover {
+      border-color: rgba(37, 99, 235, 0.55);
+      text-decoration: none;
+    }
+
+    .bench-hub .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      display: inline-block;
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -638,6 +674,17 @@
         <div class="eq-caption">Ledger basis (representation)</div>
       </div>
 
+      <!-- NEW: One-click benchmark hub pointer (Publications ↔ Experiments) -->
+      <div class="bench-hub" aria-label="Benchmark hub links">
+        <a class="chip" href="publications.html#phenomenology-experiments" title="Benchmarks hub on Publications">
+          <span class="dot" aria-hidden="true"></span>
+          Executed Benchmarks (hub) →
+        </a>
+        <a class="chip" href="experiments.html#benchmarks" title="Benchmarks section on Experiments">
+          Benchmarks &amp; Null Tests →
+        </a>
+      </div>
+
       <!-- Scope & limits callout (above the fold) -->
       <div class="callout" style="margin-top:0.75rem;" role="note" aria-label="Scope and limits">
         <p style="margin-bottom:0.35rem;">
@@ -695,7 +742,7 @@
           Read canonical framework paper
         </a>
         <a href="publications.html" class="btn btn-secondary">View core program papers</a>
-        <a href="experiments.html#falsification" class="btn btn-secondary">Falsification criteria →</a>
+        <a href="experiments.html#benchmarks" class="btn btn-secondary">Benchmarks →</a>
       </div>
 
       <p class="hero-note">
@@ -788,13 +835,12 @@
         <div class="card-link-cta">Browse key papers →</div>
       </a>
 
-      <a href="institute.html" class="card-link">
-        <div class="card-link-title">Institute</div>
+      <a href="publications.html#phenomenology-experiments" class="card-link">
+        <div class="card-link-title">Executed Benchmarks (Hub)</div>
         <div class="card-link-body">
-          Background on the QDL Physics Institute, affiliations, contact information,
-          and collaboration interests.
+          One-click access to the three executed residual-first benchmark records and the experiment-facing roadmap pointers.
         </div>
-        <div class="card-link-cta">Learn about the institute →</div>
+        <div class="card-link-cta">Go to benchmark hub →</div>
       </a>
     </div>
   </section>
@@ -922,7 +968,8 @@
 
       <p class="note">
         Full benchmark summaries, replication materials, and the broader validation roadmap are on the
-        <a href="experiments.html"><strong>Experiments</strong></a> page.
+        <a href="experiments.html"><strong>Experiments</strong></a> page — and the one-click hub is on
+        <a href="publications.html#phenomenology-experiments"><strong>Publications → Phenomenology &amp; Experiments</strong></a>.
       </p>
     </div>
   </section>
