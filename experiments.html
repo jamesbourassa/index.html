@@ -371,6 +371,167 @@
       color:#334155;
     }
 
+    /* NEW: TOC / QUICK NAV */
+    .toc{
+      margin-top:1rem;
+      background:#ffffff;
+      border:1px solid var(--border-soft);
+      border-radius:16px;
+      box-shadow:0 10px 24px rgba(15,23,42,0.05);
+      padding:0.9rem 1rem;
+    }
+    .toc-title{
+      font-weight:650;
+      color:#111827;
+      margin-bottom:0.45rem;
+      font-size:0.9rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.75rem;
+      flex-wrap:wrap;
+    }
+    .toc-sub{
+      font-size:0.8rem;
+      color:var(--text-soft);
+      line-height:1.45;
+      margin-bottom:0.55rem;
+      max-width:62rem;
+    }
+    .toc-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:0.55rem;
+    }
+    @media (max-width: 980px){
+      .toc-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    @media (max-width: 560px){
+      .toc-grid{grid-template-columns:1fr;}
+    }
+    .toc-link{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.6rem;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      padding:0.55rem 0.7rem;
+      border-radius:14px;
+      color:#0f172a;
+      font-size:0.84rem;
+      text-decoration:none;
+    }
+    .toc-link:hover{
+      border-color:rgba(37,99,235,0.35);
+      background:#eff6ff;
+      text-decoration:none;
+    }
+    .toc-right{
+      color:#64748b;
+      font-size:0.78rem;
+      white-space:nowrap;
+    }
+
+    /* NEW: PLATFORM CARDS */
+    .platform-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+      margin-top:0.2rem;
+    }
+    @media (max-width: 880px){
+      .platform-grid{grid-template-columns:1fr;}
+    }
+    .platform-card{
+      background:#ffffff;
+      border:1px solid var(--border-soft);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:1rem 1.1rem;
+      color:#374151;
+      font-size:0.9rem;
+    }
+    .platform-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:0.8rem;
+      margin-bottom:0.35rem;
+    }
+    .platform-title{
+      font-weight:650;
+      color:#111827;
+      font-size:1rem;
+      line-height:1.2;
+      margin-bottom:0.15rem;
+    }
+    .platform-badges{display:flex;gap:0.35rem;flex-wrap:wrap;}
+    .mini-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:0.35rem;
+      padding:0.14rem 0.55rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:var(--badge-bg);
+      font-size:0.74rem;
+      color:#334155;
+      white-space:nowrap;
+    }
+    .mini-badge.blue{border-color:rgba(37,99,235,0.28);background:#eff6ff;color:#1d4ed8;}
+    .mini-badge.green{border-color:rgba(22,163,74,0.28);background:#f0fdf4;color:#166534;}
+    .mini-badge.slate{border-color:rgba(100,116,139,0.25);background:#f8fafc;color:#334155;}
+
+    .platform-meta{
+      font-size:0.82rem;
+      color:var(--text-soft);
+      margin-bottom:0.6rem;
+      line-height:1.45;
+    }
+
+    .steps{
+      margin:0.45rem 0 0;
+      padding-left:1.1rem;
+      font-size:0.88rem;
+      color:#374151;
+      line-height:1.55;
+    }
+    .steps li{margin-bottom:0.3rem;}
+
+    .cta-row{
+      margin-top:0.75rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0.5rem 0.9rem;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-size:0.84rem;
+      font-weight:600;
+      cursor:pointer;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#ffffff;
+      box-shadow:0 10px 24px rgba(37,99,235,0.25);
+    }
+    .btn-primary:hover{filter:brightness(1.03);text-decoration:none;}
+    .btn-secondary{
+      background:#ffffff;
+      border-color:#d1d5db;
+      color:#111827;
+    }
+    .btn-secondary:hover{background:#f9fafb;text-decoration:none;}
+
     /* FOOTER */
     footer{
       border-top:1px solid var(--border-soft);
@@ -487,6 +648,27 @@
       </div>
     </div>
 
+    <!-- NEW: QUICK NAV / TOC -->
+    <div class="toc" aria-label="Quick navigation">
+      <div class="toc-title">
+        Jump to what you want
+        <span class="gate-badge"><span class="dot slate"></span>Quick nav</span>
+      </div>
+      <div class="toc-sub">
+        Use Track A for executed residual-first records. Use Track B for falsifiable discriminants by platform (each has a stated failure condition).
+      </div>
+      <div class="toc-grid">
+        <a class="toc-link" href="#track-a"><span><strong>Track A</strong> — Benchmarks</span><span class="toc-right">Executed →</span></a>
+        <a class="toc-link" href="#track-b"><span><strong>Track B</strong> — Roadmap</span><span class="toc-right">Proposed →</span></a>
+        <a class="toc-link" href="#benchmarks"><span>Benchmarks &amp; DOIs</span><span class="toc-right">List →</span></a>
+        <a class="toc-link" href="#interpretation"><span>Interpretation logic</span><span class="toc-right">How to read →</span></a>
+        <a class="toc-link" href="#torsion"><span>Torsion balance</span><span class="toc-right">Platform →</span></a>
+        <a class="toc-link" href="#nv-centers"><span>NV centers</span><span class="toc-right">Platform →</span></a>
+        <a class="toc-link" href="#cavities"><span>Cavities</span><span class="toc-right">Platform →</span></a>
+        <a class="toc-link" href="#metamaterials"><span>Metamaterials</span><span class="toc-right">Platform →</span></a>
+      </div>
+    </div>
+
     <!-- NEW: TRACKBAR -->
     <div class="trackbar" aria-label="Two-track structure">
       <div>
@@ -582,7 +764,7 @@
         </p>
       </div>
 
-      <div class="card">
+      <div class="card" id="benchmarks">
         <div class="card-title">Quick links (executed records)</div>
         <p class="card-meta">Stable DOIs for immediate citation and replication.</p>
         <ul class="ref-list">
@@ -695,7 +877,94 @@
       </p>
     </div>
 
-    <div class="card" style="margin-bottom:1.1rem;">
+    <!-- NEW: Platform overview cards (fast scan) -->
+    <div class="platform-grid" aria-label="Platform overview cards">
+      <div class="platform-card">
+        <div class="platform-top">
+          <div>
+            <div class="platform-title">Torsion balance</div>
+            <div class="platform-meta">Scaling discriminants vs. geometry &amp; mass configuration.</div>
+          </div>
+          <div class="platform-badges">
+            <span class="mini-badge blue"><span class="dot blue"></span>Proposed</span>
+            <span class="mini-badge slate">geometry sweep</span>
+          </div>
+        </div>
+        <ul class="steps">
+          <li>Declare constrained vs standard family (budgets fixed).</li>
+          <li>Run geometry/configuration sweep.</li>
+          <li>Residual-first: scaling must appear without ad hoc flexibility.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-secondary" href="#torsion">Go to torsion →</a>
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-top">
+          <div>
+            <div class="platform-title">NV centers</div>
+            <div class="platform-meta">Frequency-shift discriminants under field/geometry sweeps.</div>
+          </div>
+          <div class="platform-badges">
+            <span class="mini-badge green"><span class="dot green"></span>Benchmark exists</span>
+            <span class="mini-badge blue"><span class="dot blue"></span>Proposed test</span>
+          </div>
+        </div>
+        <ul class="steps">
+          <li>Benchmark shows workflow (no new effects claimed).</li>
+          <li>Pre-register a sweep and constrained discriminant.</li>
+          <li>Hold calibration degrees fixed; report residual-first.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-secondary" href="#nv-centers">Go to NV →</a>
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-top">
+          <div>
+            <div class="platform-title">Cavities</div>
+            <div class="platform-meta">Length–frequency sweeps as a clean L–F probe.</div>
+          </div>
+          <div class="platform-badges">
+            <span class="mini-badge green"><span class="dot green"></span>Benchmark exists</span>
+            <span class="mini-badge blue"><span class="dot blue"></span>Proposed test</span>
+          </div>
+        </div>
+        <ul class="steps">
+          <li>Use existing apparatus for a geometry/material sweep.</li>
+          <li>Test constrained scaling vs standard family.</li>
+          <li>Failure = no discriminant or only via extra flexibility.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-secondary" href="#cavities">Go to cavities →</a>
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-top">
+          <div>
+            <div class="platform-title">Metamaterials</div>
+            <div class="platform-meta">Dispersion-collapse candidates as discriminant signatures.</div>
+          </div>
+          <div class="platform-badges">
+            <span class="mini-badge blue"><span class="dot blue"></span>Proposed</span>
+            <span class="mini-badge slate">sweep/collapse</span>
+          </div>
+        </div>
+        <ul class="steps">
+          <li>Find/construct a dataset with a clean sweep axis.</li>
+          <li>Declare constrained collapse target.</li>
+          <li>Residual-first: collapse must beat flexible refits.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-secondary" href="#metamaterials">Go to metamaterials →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
       <div class="card-title">Roadmap anchor</div>
       <p class="card-meta">
         QDL Experimental Validation Protocol:
