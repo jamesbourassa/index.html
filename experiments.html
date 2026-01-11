@@ -6,282 +6,388 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Residual-first benchmarks and experimental validation roadmap for the Quantized Dimensional Ledger (QDL): torsion-balance, NV-center, cavity, and metamaterial tests of 3L + 2F dimensional closure, model admissibility, and ledger-based scaling."
+    content="Residual-first benchmarks (executed) and falsifiable experimental roadmap (proposed) for the Quantized Dimensional Ledger (QDL): torsion-balance, NV-center, cavity, and metamaterial tests of 3L + 2F dimensional closure and ledger-based scaling."
   />
   <style>
-    :root {
-      --bg-page: #f3f4f6;
-      --bg-card: #ffffff;
-      --border-soft: #e5e7eb;
-      --text-main: #0f172a;
-      --text-soft: #6b7280;
-      --accent: #2563eb;
-      --badge-green: #16a34a;
-      --badge-amber: #d97706;
-      --badge-blue: #2563eb;
-      --badge-bg: #f8fafc;
+    :root{
+      --bg-page:#f3f4f6;
+      --bg-card:#ffffff;
+      --border-soft:#e5e7eb;
+      --text-main:#0f172a;
+      --text-soft:#6b7280;
+      --accent:#2563eb;
+      --link:#0369a1;
+
+      --badge-green:#16a34a;
+      --badge-amber:#d97706;
+      --badge-blue:#2563eb;
+      --badge-slate:#64748b;
+      --badge-bg:#f8fafc;
+
+      --shadow:0 8px 24px rgba(15,23,42,0.06);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0;}
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg-page);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg-page);
+      color:var(--text-main);
+      -webkit-font-smoothing:antialiased;
     }
 
-    a { color: #0369a1; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a{color:var(--link);text-decoration:none;}
+    a:hover{text-decoration:underline;}
 
-    header {
-      background: #0f172a;
-      color: #e5e7eb;
-      border-bottom: 1px solid #111827;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    header{
+      background:#0f172a;
+      color:#e5e7eb;
+      border-bottom:1px solid #111827;
+      position:sticky;
+      top:0;
+      z-index:10;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+    .nav{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0.75rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
     }
 
-    .logo { display: flex; align-items: center; gap: 0.6rem; }
+    .logo{display:flex;align-items:center;gap:0.6rem;}
 
-    .logo-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 10px;
-      background: #020617;
-      border: 1px solid #38bdf8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+    .logo-icon{
+      width:60px;height:60px;border-radius:10px;
+      background:#020617;border:1px solid #38bdf8;
+      display:flex;align-items:center;justify-content:center;
+      overflow:hidden;
     }
 
-    .logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .logo-icon img{width:100%;height:100%;object-fit:contain;display:block;}
 
-    .logo-text-main {
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-size: 0.82rem;
+    .logo-text-main{
+      font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-size:0.82rem;
     }
 
-    .logo-text-sub {
-      font-size: 0.75rem;
-      color: #9ca3af;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .logo-text-sub{
+      font-size:0.75rem;color:#9ca3af;letter-spacing:0.08em;text-transform:uppercase;
     }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      font-size: 0.85rem;
-      align-items: center;
+    .nav-links{
+      display:flex;flex-wrap:wrap;gap:0.8rem;font-size:0.85rem;align-items:center;
     }
 
-    .nav-links a {
-      color: #e5e7eb;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
+    .nav-links a{
+      color:#e5e7eb;
+      padding:0.25rem 0.6rem;
+      border-radius:999px;
+      border:1px solid transparent;
     }
 
-    .nav-links a:hover {
-      border-color: rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-      text-decoration: none;
+    .nav-links a:hover{
+      border-color:rgba(148,163,184,0.7);
+      background:rgba(15,23,42,0.9);
+      text-decoration:none;
     }
 
-    .nav-cta {
-      border-color: #38bdf8;
-      background: #0b1120;
-      color: #e0f2fe !important;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.78rem;
+    .nav-cta{
+      border-color:#38bdf8;
+      background:#0b1120;
+      color:#e0f2fe !important;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      font-size:0.78rem;
     }
 
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem;
+    main{max-width:1100px;margin:0 auto;padding:1.75rem 1.25rem 3rem;}
+
+    /* HERO */
+    .hero{
+      margin-bottom:1.2rem;
+      background:var(--bg-card);
+      border-radius:18px;
+      border:1px solid var(--border-soft);
+      box-shadow:var(--shadow);
+      padding:1.6rem 1.5rem 1.2rem;
     }
 
-    .hero {
-      margin-bottom: 2rem;
-      background: var(--bg-card);
-      border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      padding: 1.6rem 1.5rem;
+    .hero-kicker{
+      text-transform:uppercase;
+      letter-spacing:0.18em;
+      font-size:0.78rem;
+      color:#6b7280;
+      margin-bottom:0.4rem;
     }
 
-    .hero-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.78rem;
-      color: #6b7280;
-      margin-bottom: 0.4rem;
+    .hero-title{font-size:clamp(1.9rem,3vw,2.3rem);margin-bottom:0.5rem;}
+
+    .hero-sub{
+      font-size:0.95rem;
+      color:#4b5563;
+      max-width:52rem;
+      margin-bottom:0.9rem;
+      line-height:1.6;
     }
 
-    .hero-title {
-      font-size: clamp(1.9rem, 3vw, 2.3rem);
-      margin-bottom: 0.5rem;
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      font-size:0.8rem;
+      color:#6b7280;
     }
 
-    .hero-sub {
-      font-size: 0.95rem;
-      color: #4b5563;
-      max-width: 44rem;
-      margin-bottom: 1rem;
-      line-height: 1.6;
+    .hero-chip{
+      padding:0.15rem 0.7rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      color:#334155;
     }
 
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      color: #6b7280;
+    /* NEW: STATUS GATE */
+    .status-gate{
+      margin-top:1rem;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:0.9rem;
     }
 
-    .hero-chip {
-      padding: 0.15rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
+    @media (max-width: 980px){
+      .status-gate{grid-template-columns:minmax(0,1fr);}
     }
 
-    .hero-chip strong { font-weight: 700; color: #111827; }
-
-    section { margin-top: 2rem; }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5rem;
-      align-items: baseline;
-      margin-bottom: 1rem;
+    .gate-card{
+      background:#ffffff;
+      border:1px solid var(--border-soft);
+      border-radius:16px;
+      box-shadow:0 10px 24px rgba(15,23,42,0.05);
+      padding:0.95rem 1rem;
+      font-size:0.88rem;
+      color:#374151;
     }
 
-    .section-title {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #111827;
+    .gate-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.6rem;
+      margin-bottom:0.45rem;
+      font-weight:650;
+      color:#111827;
+      font-size:0.92rem;
     }
 
-    .section-kicker {
-      font-size: 0.82rem;
-      color: var(--text-soft);
-      max-width: 26rem;
+    .gate-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:0.4rem;
+      padding:0.16rem 0.55rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:var(--badge-bg);
+      font-size:0.76rem;
+      color:#334155;
+      white-space:nowrap;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-      gap: 1.4rem;
+    .dot{width:8px;height:8px;border-radius:999px;display:inline-block;}
+    .dot.green{background:var(--badge-green);}
+    .dot.amber{background:var(--badge-amber);}
+    .dot.blue{background:var(--badge-blue);}
+    .dot.slate{background:var(--badge-slate);}
+
+    .gate-list{list-style:none;padding-left:0;margin:0.35rem 0 0;}
+    .gate-list li{margin-bottom:0.35rem;line-height:1.45;}
+    .gate-list a{color:var(--link);}
+
+    .gate-note{
+      margin-top:0.55rem;
+      font-size:0.8rem;
+      color:var(--text-soft);
+      line-height:1.45;
     }
 
-    @media (max-width: 880px) {
-      .grid-2 { grid-template-columns: 1fr; }
+    /* SECTIONS */
+    section{margin-top:2rem;}
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      gap:1.5rem;
+      align-items:baseline;
+      margin-bottom:1rem;
     }
 
-    .card {
-      background: var(--bg-card);
-      border-radius: 16px;
-      border: 1px solid var(--border-soft);
-      padding: 1rem 1.1rem;
-      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
-      font-size: 0.9rem;
-      color: #374151;
+    .section-title{
+      font-size:0.95rem;
+      text-transform:uppercase;
+      letter-spacing:0.16em;
+      color:#111827;
     }
 
-    .card + .card { margin-top: 0.8rem; }
-
-    .card-title {
-      font-size: 0.98rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
+    .section-kicker{
+      font-size:0.82rem;
+      color:var(--text-soft);
+      max-width:30rem;
+      line-height:1.5;
     }
 
-    .card-meta {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      margin-bottom: 0.5rem;
+    .grid-2{
+      display:grid;
+      grid-template-columns:minmax(0,1.6fr) minmax(0,1.4fr);
+      gap:1.4rem;
     }
 
-    .card p { margin-bottom: 0.5rem; }
-
-    ul { padding-left: 1.1rem; font-size: 0.88rem; color: #374151; }
-    ul li { margin-bottom: 0.28rem; }
-
-    .ref-list { list-style: none; padding-left: 0; font-size: 0.86rem; }
-    .ref-list li { margin-bottom: 0.35rem; }
-
-    .note { font-size: 0.8rem; color: var(--text-soft); margin-top: 1.1rem; max-width: 44rem; }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.25rem 0 0.8rem;
+    @media (max-width: 880px){
+      .grid-2{grid-template-columns:1fr;}
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.18rem 0.65rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: var(--badge-bg);
-      font-size: 0.78rem;
-      color: #334155;
+    .card{
+      background:var(--bg-card);
+      border-radius:16px;
+      border:1px solid var(--border-soft);
+      padding:1rem 1.1rem;
+      box-shadow:var(--shadow);
+      font-size:0.9rem;
+      color:#374151;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      display: inline-block;
+    .card + .card{margin-top:0.8rem;}
+
+    .card-title{
+      font-size:0.98rem;
+      font-weight:600;
+      margin-bottom:0.35rem;
     }
 
-    .dot.green { background: var(--badge-green); }
-    .dot.blue { background: var(--badge-blue); }
-    .dot.amber { background: var(--badge-amber); }
-
-    footer {
-      border-top: 1px solid var(--border-soft);
-      margin-top: 3rem;
-      padding: 1.2rem 1.25rem 1.8rem;
-      font-size: 0.8rem;
-      color: #6b7280;
+    .card-meta{
+      font-size:0.8rem;
+      color:var(--text-soft);
+      margin-bottom:0.55rem;
+      line-height:1.45;
     }
 
-    .footer-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
-      align-items: center;
+    .card p{margin-bottom:0.55rem;line-height:1.6;}
+
+    ul{padding-left:1.1rem;font-size:0.88rem;color:#374151;line-height:1.55;}
+    ul li{margin-bottom:0.28rem;}
+
+    .ref-list{list-style:none;padding-left:0;font-size:0.86rem;margin:0.25rem 0 0;}
+    .ref-list li{margin-bottom:0.35rem;line-height:1.45;}
+
+    .note{
+      font-size:0.8rem;
+      color:var(--text-soft);
+      margin-top:0.8rem;
+      max-width:56rem;
+      line-height:1.55;
+    }
+
+    /* NEW: TRACK SWITCH */
+    .trackbar{
+      background:#ffffff;
+      border:1px solid var(--border-soft);
+      border-radius:16px;
+      box-shadow:0 10px 24px rgba(15,23,42,0.05);
+      padding:0.9rem 1rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.9rem;
+      margin-top:0.9rem;
+    }
+
+    .trackbar strong{font-weight:650;color:#111827;}
+    .track-links{display:flex;flex-wrap:wrap;gap:0.45rem;}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:0.4rem;
+      padding:0.18rem 0.6rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      font-size:0.78rem;
+      color:#334155;
+      white-space:nowrap;
+    }
+    .pill:hover{border-color:rgba(37,99,235,0.4);background:#eff6ff;text-decoration:none;}
+    .pill a{color:inherit;}
+
+    /* NEW: FALSIFIABILITY / INTERPRETATION */
+    .callout{
+      background:#ffffff;
+      border-radius:16px;
+      border:1px solid rgba(37,99,235,0.25);
+      box-shadow:0 10px 24px rgba(15,23,42,0.05);
+      padding:0.95rem 1rem;
+      color:#374151;
+    }
+    .callout-title{font-weight:650;color:#111827;margin-bottom:0.35rem;}
+    .callout p{margin-bottom:0.45rem;line-height:1.55;}
+    .small{font-size:0.82rem;color:var(--text-soft);line-height:1.5;}
+
+    /* NEW: PLATFORM FALSIFICATION BLOCK */
+    .falsify{
+      margin-top:0.7rem;
+      border:1px solid #e5e7eb;
+      border-radius:14px;
+      background:#f9fafb;
+      padding:0.8rem 0.9rem;
+      font-size:0.86rem;
+      color:#374151;
+      line-height:1.55;
+    }
+    .falsify-row{margin-bottom:0.35rem;}
+    .falsify-row strong{color:#111827;}
+    .falsify-row:last-child{margin-bottom:0;}
+
+    /* BADGE ROW */
+    .badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      margin:0.25rem 0 0.8rem;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      padding:0.18rem 0.65rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:var(--badge-bg);
+      font-size:0.78rem;
+      color:#334155;
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--border-soft);
+      margin-top:3rem;
+      padding:1.2rem 1.25rem 1.8rem;
+      font-size:0.8rem;
+      color:#6b7280;
+    }
+
+    .footer-grid{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      justify-content:space-between;
+      align-items:center;
     }
   </style>
 </head>
@@ -315,28 +421,86 @@
 <main>
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-kicker">Benchmarks &amp; residual-first validation roadmap</div>
-    <h1 class="hero-title">Testing the Quantized Dimensional Ledger with Auditable Benchmarks</h1>
+    <div class="hero-kicker">Benchmarks (executed) &amp; falsifiable validation roadmap (proposed)</div>
+    <h1 class="hero-title">Experiments: what is executed vs. what is proposed</h1>
+
     <p class="hero-sub">
-      The QDL framework is built to be falsifiable.
-      A conserved 3L + 2F Quantized Dimensional Cell (QDC) and ledger-closure rules generate
-      testable constraints on admissible relations among fields, constants, geometry, and observables.
-      This page outlines four complementary platforms—torsion balances, NV-center frequency shifts,
-      cavity scaling, and metamaterials—that can test whether nature exhibits QDL-style closure and
-      ledger-based scaling beyond standard dimensional expectations alone.
-      <br /><br />
-      <strong>Update:</strong> Three residual-first benchmarks and null tests are now executed using public data.
-      These are designed as auditable, reproducible comparisons with explicitly declared model families and
-      residual structure as the primary pass/fail diagnostic. No new physical effects are claimed; the focus
-      is methodological: transparent model adequacy testing across multiple measurement domains.
+      This page separates (A) <strong>executed, reproducible residual-first benchmarks</strong> from (B) <strong>proposed falsifiable tabletop tests</strong>.
+      The benchmarks are methodological and make <strong>no claim of new physical effects</strong>. The roadmap describes tests designed to discriminate
+      QDL-style closure/scaling from standard parameterizations, with explicit failure conditions.
     </p>
 
     <div class="hero-meta">
       <div class="hero-chip">3L + 2F Dimensional Closure</div>
-      <div class="hero-chip">Ledger-Based Scaling Laws</div>
-      <div class="hero-chip">Independent Experimental Platforms</div>
-      <div class="hero-chip">Falsifiable Structure</div>
-      <div class="hero-chip"><strong>Benchmarks:</strong> 3 executed · 0 pending</div>
+      <div class="hero-chip">Residual-first adequacy tests</div>
+      <div class="hero-chip">Four-platform experimental roadmap</div>
+      <div class="hero-chip"><strong>Benchmarks:</strong> 3 executed</div>
+    </div>
+
+    <!-- NEW: STATUS GATE -->
+    <div class="status-gate" aria-label="Status gate: executed vs in progress vs proposed">
+      <div class="gate-card">
+        <div class="gate-title">
+          Executed (reproducible)
+          <span class="gate-badge"><span class="dot green"></span>Executed</span>
+        </div>
+        <ul class="gate-list">
+          <li><strong>Optical cavity benchmark</strong> — <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">10.5281/zenodo.18076864</a></li>
+          <li><strong>NV ODMR benchmark</strong> — <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">10.5281/zenodo.18069870</a></li>
+          <li><strong>Benchmarks &amp; null tests</strong> — <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">10.5281/zenodo.18057668</a></li>
+        </ul>
+        <div class="gate-note">
+          These records are intended to be easy to audit and replicate. They do <strong>not</strong> assert new physics; they demonstrate
+          benchmark discipline (declared families, declared budgets, residual-first diagnostics).
+        </div>
+      </div>
+
+      <div class="gate-card">
+        <div class="gate-title">
+          In progress
+          <span class="gate-badge"><span class="dot amber"></span>In progress</span>
+        </div>
+        <ul class="gate-list">
+          <li><strong>Pre-registration templates</strong> for tabletop discriminant tests</li>
+          <li><strong>Replicability scaffolding</strong> (artifacts list + expected outputs checklist)</li>
+          <li><strong>Partner outreach</strong> for platform-specific sensitivity studies</li>
+        </ul>
+        <div class="gate-note">
+          “In progress” denotes work products that support falsifiability and auditability (not experimental confirmation).
+        </div>
+      </div>
+
+      <div class="gate-card">
+        <div class="gate-title">
+          Proposed (falsifiable tests)
+          <span class="gate-badge"><span class="dot blue"></span>Proposed</span>
+        </div>
+        <ul class="gate-list">
+          <li><strong>Torsion-balance discriminants</strong> (scaling-based)</li>
+          <li><strong>NV-center discriminants</strong> (geometry/field sweeps)</li>
+          <li><strong>Cavity discriminants</strong> (geometry/material sweeps)</li>
+          <li><strong>Metamaterial discriminants</strong> (dispersion-collapse signatures)</li>
+        </ul>
+        <div class="gate-note">
+          “Proposed” means the discriminant is specified as a test target; it is not a demonstrated empirical effect.
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: TRACKBAR -->
+    <div class="trackbar" aria-label="Two-track structure">
+      <div>
+        <strong>Two-track layout:</strong>
+        <span style="color:var(--text-soft);font-size:0.85rem;line-height:1.45;">
+          Track A (executed) first; Track B (proposed) second.
+        </span>
+      </div>
+      <div class="track-links" aria-label="Jump links">
+        <a class="pill" href="#track-a"><span class="dot green"></span>Track A: Benchmarks</a>
+        <a class="pill" href="#track-b"><span class="dot blue"></span>Track B: Roadmap</a>
+        <a class="pill" href="#interpretation"><span class="dot slate"></span>How to interpret results</a>
+        <a class="pill" href="#collaboration"><span class="dot slate"></span>Collaboration</a>
+      </div>
     </div>
   </section>
 
@@ -345,490 +509,438 @@
     <div class="section-header">
       <h2 class="section-title">Program overview</h2>
       <p class="section-kicker">
-        From closure rules to tabletop tests: how QDL maps a ledger grammar onto measurable signatures.
+        How QDL maps a ledger representation into auditable benchmarks and discriminant experiments.
       </p>
     </div>
 
     <div class="grid-2">
       <div class="card">
-        <div class="card-title">Dimensional closure as an experimental guide</div>
+        <div class="card-title">What this page does (and does not) claim</div>
         <p>
-          In QDL, every field, coupling, and observable is represented as a 5-component
-          integer ledger vector in a 3L + 2F basis. Interactions and measurement relations
-          must close onto an integer multiple of the Quantized Dimensional Cell.
-          When this closure principle is applied to experimental observables, it yields:
+          QDL proposes a closure-based admissibility rule in a 3L + 2F basis and argues that this can be tested by looking for
+          discriminant scaling behavior across multiple platforms. This page makes a strict separation:
         </p>
         <ul>
-          <li>Testable scaling predictions for how measured quantities vary with geometry and control parameters.</li>
-          <li>Constraints on which combinations of constants can appear in empirical fits.</li>
-          <li>A structured “admissibility check” that can reject relations even when unit-balance appears satisfied.</li>
+          <li><strong>Executed benchmarks</strong> (Track A) are methodological and do <strong>not</strong> claim new physics.</li>
+          <li><strong>Proposed experiments</strong> (Track B) describe falsifiable discriminants and explicit failure conditions.</li>
         </ul>
-        <p>
-          The experimental program is therefore a direct test of the QDL admissibility layer:
-          if ledger-based closures and scalings fail systematically, the framework is falsified.
-          If they are supported, the ledger structure gains empirical weight and motivates deeper theoretical integration.
+        <p class="small">
+          If you want the framework definition, start at <a href="framework.html">Framework</a>. If you want the broader paper library, use <a href="publications.html">Publications</a>.
         </p>
       </div>
 
       <div class="card">
         <div class="card-title">Key references</div>
-        <p class="card-meta">
-          Canonical framework-first references (definition → reconstruction → method → rigor → applications):
-        </p>
+        <p class="card-meta">Framework-first references (definition → reconstruction → method → rigor → applications):</p>
         <ul class="ref-list">
-          <li>
-            Canonical framework definition:
-            <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener">
-              10.5281/zenodo.17979789
-            </a>
-          </li>
-          <li>
-            Dimensional closure as a structural constraint (reconstruction):
-            <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener">
-              10.5281/zenodo.17882709
-            </a>
-          </li>
-          <li>
-            Prediction-filter method:
-            <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener">
-              10.5281/zenodo.17848782
-            </a>
-          </li>
-          <li>
-            Ledger-constrained renormalization (technical rigor):
-            <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener">
-              10.5281/zenodo.18025072
-            </a>
-          </li>
-          <li>
-            Dimensional-closure auditing for engineering models (applied):
-            <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener">
-              10.5281/zenodo.18025343
-            </a>
-          </li>
+          <li>Canonical framework definition: <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener">10.5281/zenodo.17979789</a></li>
+          <li>Structural reconstruction: <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener">10.5281/zenodo.17882709</a></li>
+          <li>Prediction-filter method: <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener">10.5281/zenodo.17848782</a></li>
+          <li>Technical anchor (renormalization): <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener">10.5281/zenodo.18025072</a></li>
+          <li>Applied auditing layer: <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener">10.5281/zenodo.18025343</a></li>
         </ul>
 
-        <p style="margin-top:0.8rem;">
-          Experimental and phenomenological anchors used on this page:
-        </p>
-        <ul class="ref-list">
-          <li>
-            QDL Experimental Validation Protocol:
-            <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener">
-              10.5281/zenodo.17654442
-            </a>
-          </li>
-          <li>
-            Coherent Ledger Fields (scalar–tensor–EM phenomenology):
-            <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener">
-              10.5281/zenodo.17803804
-            </a>
-          </li>
-          <li>
-            Teaching Dimensional Analysis with a Length–Frequency Basis (cavity lab):
-            <a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener">
-              10.5281/zenodo.17663340
-            </a>
-          </li>
-          <li>
-            Ledger Geometry of Magnetic Moments (g–2 structure):
-            <a href="https://doi.org/10.5281/zenodo.17693061" target="_blank" rel="noopener">
-              10.5281/zenodo.17693061
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- TORSION BALANCE -->
-  <section id="torsion">
-    <div class="section-header">
-      <h2 class="section-title">Torsion-balance experiments</h2>
-      <p class="section-kicker">
-        Ledger-based torque and deflection scaling vs. arm length, mass distribution, and environmental fields.
-      </p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Concept</div>
-        <p>
-          Precision torsion balances are highly sensitive to small forces and are a natural platform
-          for testing QDL scaling laws. In the ledger picture, torque, deflection angle, arm length,
-          and test-mass configuration are all assigned ledger vectors, and the net dimensional content
-          must close onto the QDC when combined with the relevant fields and constants.
-        </p>
-        <p>
-          QDL-style closure implies testable exponent relations among:
-        </p>
-        <ul>
-          <li>Arm length and test mass geometry.</li>
-          <li>Restoring torque and angular deflection.</li>
-          <li>Gravitational and non-gravitational contributions.</li>
-        </ul>
-        <p>
-          Deviations from conventional scaling—when analyzed in a ledger-consistent way—would indicate a
-          closure/admissibility structure beyond standard dimensional expectations.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Status and next steps</div>
-        <p>
-          The QDL Experimental Validation Protocol outlines torsion-balance setups in which QDL and standard
-          theory give distinguishable length- and mass-scaling predictions. Experimental collaborations are invited to:
-        </p>
-        <ul>
-          <li>Map existing torsion datasets into a 3L + 2F ledger representation.</li>
-          <li>Design new runs with systematic variation of arm length, mass distribution, and shielding.</li>
-          <li>Compare fit quality and residuals for QDL vs. standard scaling assumptions.</li>
-        </ul>
-        <p class="card-meta">
-          Reference: QDL Experimental Validation Protocol –
-          <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener">
-            10.5281/zenodo.17654442
-          </a>
+        <p class="card-meta" style="margin-top:0.75rem;">
+          Experimental roadmap anchor:
+          <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener">10.5281/zenodo.17654442</a>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- NV CENTERS -->
-  <section id="nv-centers">
+  <!-- TRACK A: BENCHMARKS -->
+  <section id="track-a">
     <div class="section-header">
-      <h2 class="section-title">NV-center frequency shifts</h2>
+      <h2 class="section-title">Track A — Executed benchmarks &amp; null tests</h2>
       <p class="section-kicker">
-        Coherence signatures and spin-resonance constraints in solid-state defects.
-      </p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Concept</div>
-        <p>
-          Nitrogen–vacancy (NV) centers in diamond provide a precise spin-resonance probe that can be engineered
-          into well-controlled environments. QDL expects that certain combinations of applied fields, geometry,
-          and constants may exhibit ledger-coherent frequency shifts tied to the 3L + 2F structure.
-        </p>
-        <ul>
-          <li>The observed shift is expressed as a function of ledger vectors for fields, constants, and geometry.</li>
-          <li>Only combinations consistent with the QDC are admissible.</li>
-          <li>Exponent patterns can be tested against high-precision NV data across controlled parameter sweeps.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Status and next steps</div>
-        <p>
-          The Coherent Ledger Fields paper outlines NV-center scenarios where QDL coherence requirements may
-          produce detectable shifts or patterns not captured by conventional parameterizations.
-        </p>
-        <ul>
-          <li>Start by reanalyzing existing NV datasets in ledger form.</li>
-          <li>Design runs that vary geometry and field configurations to isolate QDL-specific exponent signatures.</li>
-          <li><strong>Executed benchmark:</strong> residual-first ODMR benchmarking using public data (record below).</li>
-        </ul>
-        <p class="card-meta">
-          Reference: Coherent Ledger Fields –
-          <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener">
-            10.5281/zenodo.17803804
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAVITY SCALING -->
-  <section id="cavities">
-    <div class="section-header">
-      <h2 class="section-title">Cavity length–frequency scaling</h2>
-      <p class="section-kicker">
-        Teaching-lab and precision setups as L–F ledger probes.
-      </p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Concept</div>
-        <p>
-          Cavity resonators offer a clean environment in which length and frequency are tightly linked.
-          In the QDL framework, cavity length and resonant frequency are expressed in a length–frequency basis,
-          and their relation is tested against ledger-admissible forms.
-        </p>
-        <ul>
-          <li>Vary cavity geometry and materials while tracking ledger-based invariants.</li>
-          <li>Compare standard fits to QDL-inspired ledger fits across geometry sweeps.</li>
-          <li>Use high-Q setups to probe small deviations in scaling behavior.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Status and next steps</div>
-        <p>
-          Existing undergraduate and graduate cavity experiments can be repurposed as low-barrier tests of
-          QDL scaling by rewriting the analysis in an L–F basis and comparing residual structure.
-        </p>
-        <ul>
-          <li>Recast the lab pipeline as a ledger-auditable measurement chain.</li>
-          <li>Run geometry sweeps designed to separate standard vs. ledger-admissible parameterizations.</li>
-          <li><strong>Executed benchmark:</strong> residual-first cavity trace benchmarking using public data (record below).</li>
-        </ul>
-        <p class="card-meta">
-          Reference: Teaching Dimensional Analysis with a Length–Frequency Basis –
-          <a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener">
-            10.5281/zenodo.17663340
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- METAMATERIALS -->
-  <section id="metamaterials">
-    <div class="section-header">
-      <h2 class="section-title">Metamaterial coherence &amp; dispersion</h2>
-      <p class="section-kicker">
-        Engineered media as controlled environments for testing ledger-structured scaling.
-      </p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Concept</div>
-        <p>
-          Metamaterials can be engineered to exhibit exotic dispersion and tailored field configurations.
-          QDL treats these as candidate environments where ledger-consistent combinations of effective parameters
-          may “lock” together if dimensional closure plays an organizing role in nature.
-        </p>
-        <ul>
-          <li>Effective permittivity, permeability, and geometry are treated as ledger quantities.</li>
-          <li>Closure criteria predict which combinations are admissible or resonance-stable.</li>
-          <li>Distinctive dispersion or scaling collapse would be a targeted signature.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Status and next steps</div>
-        <p>
-          The Coherent Ledger Fields paper outlines metamaterial regimes where QDL may produce distinctive
-          signatures, especially in dispersion-collapse or critical scaling scenarios.
-        </p>
-        <ul>
-          <li>Reanalyze existing metamaterial datasets through ledger exponent fits.</li>
-          <li>Design structures to amplify predicted exponent-locked signatures.</li>
-        </ul>
-        <p class="card-meta">
-          Reference: Coherent Ledger Fields –
-          <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener">
-            10.5281/zenodo.17803804
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENCHMARKS -->
-  <section id="benchmarks">
-    <div class="section-header">
-      <h2 class="section-title">Benchmarks &amp; null tests</h2>
-      <p class="section-kicker">
-        Direct data confrontation: residual-first, auditable comparisons using public datasets and reanalyzed measurements.
+        Residual-first, auditable comparisons using declared model families and public data. Methodological only.
       </p>
     </div>
 
     <div class="badge-row" aria-label="Benchmark status badges">
-      <div class="badge"><span class="dot green"></span><strong>Executed:</strong>&nbsp;Torsion</div>
-      <div class="badge"><span class="dot green"></span><strong>Executed:</strong>&nbsp;NV ODMR</div>
-      <div class="badge"><span class="dot green"></span><strong>Executed:</strong>&nbsp;Optical Cavity</div>
-      <div class="badge"><span class="dot blue"></span><strong>Roadmap:</strong>&nbsp;4-platform program</div>
+      <div class="badge"><span class="dot green"></span><strong>Executed</strong>&nbsp;· reproducible records</div>
+      <div class="badge"><span class="dot slate"></span><strong>Residual-first</strong>&nbsp;· structure matters</div>
+      <div class="badge"><span class="dot slate"></span><strong>Declared families</strong>&nbsp;· stated budgets</div>
+      <div class="badge"><span class="dot slate"></span><strong>No new effects claimed</strong></div>
     </div>
 
     <div class="grid-2">
       <div class="card">
         <div class="card-title">What “benchmark” means here</div>
         <p>
-          Benchmarks are explicit, falsifiable comparisons between declared model families under a stated parameter budget,
-          evaluated primarily by residual structure rather than aggregate fit magnitude. Each benchmark is designed to be auditable:
+          Benchmarks are explicit comparisons between declared model families under a stated parameter budget,
+          evaluated primarily by residual structure rather than aggregate fit magnitude. Each record is designed to be auditable:
           dataset provenance, model forms, fit controls, and residual plots are published alongside the analysis.
         </p>
         <ul>
-          <li><strong>Residual-first decision rule:</strong> coherent residual structure indicates model inadequacy.</li>
+          <li><strong>Decision rule:</strong> coherent residual structure indicates model inadequacy.</li>
           <li><strong>Declared parameter budget:</strong> model families are specified before fitting.</li>
-          <li><strong>No hidden tuning:</strong> preprocessing and all adjustable parameters are stated.</li>
-          <li><strong>Reproducibility:</strong> scripts, CSVs, and figures are published with versioned records.</li>
+          <li><strong>Reproducibility:</strong> scripts/CSVs/figures are versioned with stable DOIs.</li>
         </ul>
-        <p class="note">
-          The goal is to make it easy for an external group to replicate (or refute) each result using the
-          same dataset and the same declared analysis choices. These benchmarks make no claims of new physical effects;
-          they are designed as a transferable methodology for model adequacy testing in metrology.
+        <p class="small">
+          These benchmarks are evidence for benchmark discipline; they are not presented as standalone validation of QDL’s strongest cross-domain physical claims.
         </p>
       </div>
 
       <div class="card">
-        <div class="card-title">Quick links (records)</div>
-        <p class="card-meta">
-          Stable DOIs for immediate citation and replication.
-        </p>
+        <div class="card-title">Quick links (executed records)</div>
+        <p class="card-meta">Stable DOIs for immediate citation and replication.</p>
         <ul class="ref-list">
-          <li>
-            Torsion / framework record:
-            <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
-              10.5281/zenodo.18057668
-            </a>
-          </li>
-          <li>
-            NV-center ODMR benchmark:
-            <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">
-              10.5281/zenodo.18069870
-            </a>
-          </li>
-          <li>
-            Optical cavity trace benchmark:
-            <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">
-              10.5281/zenodo.18076864
-            </a>
-          </li>
+          <li>Benchmarks &amp; null tests: <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">10.5281/zenodo.18057668</a></li>
+          <li>NV-center ODMR benchmark: <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">10.5281/zenodo.18069870</a></li>
+          <li>Optical cavity trace benchmark: <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">10.5281/zenodo.18076864</a></li>
         </ul>
-
         <p class="note">
-          Each record contains public provenance, declared preprocessing, declared model families, and residual plots that make adequacy
-          (or failure) visually obvious.
+          Each record contains provenance, declared preprocessing, declared model families, and residual plots intended to make adequacy or failure visually inspectable.
         </p>
       </div>
     </div>
 
     <div style="margin-top:1.4rem;" class="grid-2">
       <div class="card">
-        <div class="card-title">Executed benchmark summaries</div>
+        <div class="card-title">Executed benchmark summaries (scope-limited)</div>
+
         <p class="card-meta">
-          Short, consistent summaries designed for quick orientation and cross-domain comparison.
+          Consistent summaries for orientation. These are methodological results unless an explicit physical discriminant is stated elsewhere.
         </p>
 
         <p>
           <strong>1) Optical Cavity Resonance Benchmark</strong><br />
-          <span class="card-meta">Domain: precision photonics / metrology</span><br />
-          Residual-first diagnostics distinguish stabilized traces (noise-like residuals under the reduced family)
+          <span class="card-meta">Domain: precision photonics / metrology</span>
+          Residual-first diagnostics distinguish stabilized traces (noise-like residuals under a reduced family)
           from uncontrolled resonance scans (coherent residual structure persists under both reduced and low-order baseline families).<br />
-          <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">
-            https://doi.org/10.5281/zenodo.18076864
-          </a>
+          DOI: <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">10.5281/zenodo.18076864</a>
         </p>
 
         <p>
           <strong>2) NV-Center ODMR Benchmark</strong><br />
-          <span class="card-meta">Domain: solid-state quantum sensing</span><br />
-          Residual-first benchmarking compares baseline spin-Hamiltonian fits with a strictly reduced comparison family
-          using public ODMR data, emphasizing transparency and structural adequacy rather than fit magnitude alone.<br />
-          <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">
-            https://doi.org/10.5281/zenodo.18069870
-          </a>
+          <span class="card-meta">Domain: solid-state quantum sensing</span>
+          Residual-first benchmarking compares baseline spin-Hamiltonian fits with a strictly reduced comparison family using public ODMR data,
+          emphasizing structural adequacy rather than fit magnitude alone.<br />
+          DOI: <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">10.5281/zenodo.18069870</a>
         </p>
 
         <p>
-          <strong>3) Benchmarks &amp; Null Tests (Framework / Torsion Anchor)</strong><br />
-          <span class="card-meta">Domain: cross-domain methodology and null-test discipline</span><br />
-          Establishes residual-first, auditable comparisons as a general benchmarking framework and provides executed null-test anchors
-          for precision datasets in which a transparent reduced family is expected to pass if no additional structure is present.<br />
-          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">
-            https://doi.org/10.5281/zenodo.18057668
-          </a>
+          <strong>3) Benchmarks &amp; Null Tests (Cross-domain anchor)</strong><br />
+          <span class="card-meta">Domain: methodology / null-test discipline</span>
+          Defines residual-first reporting conventions and provides executed null-test anchors where a reduced family is expected to pass if no additional structure is present.<br />
+          DOI: <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener">10.5281/zenodo.18057668</a>
         </p>
       </div>
 
       <div class="card">
-        <div class="card-title">Publishing discipline</div>
-        <p class="card-meta">
-          What is held constant across benchmarks to preserve auditability.
-        </p>
+        <div class="card-title">Publishing discipline (what stays fixed)</div>
+        <p class="card-meta">What is held constant across benchmarks to preserve auditability.</p>
         <ul>
           <li>Public provenance: datasets are linked with stable identifiers.</li>
-          <li>Declared preprocessing: no hidden filtering, windowing, or cherry-picked segments.</li>
+          <li>Declared preprocessing: no hidden filtering/windowing/cherry-picked segments.</li>
           <li>Declared model families: reduced vs baseline comparisons are explicit.</li>
           <li>Residual-first reporting: structure in residuals is treated as primary evidence.</li>
         </ul>
-
         <p class="note">
-          This discipline is designed to avoid ambiguous “fit improvement” narratives and instead enable clear
-          success/failure judgments that other groups can independently reproduce.
-        </p>
-      </div>
-    </div>
-
-    <div style="margin-top:1.4rem;" class="grid-2">
-      <div class="card">
-        <div class="card-title">Initial benchmark targets</div>
-        <p class="card-meta">
-          First wave (chosen for public availability and clear null expectations):
-        </p>
-        <ul>
-          <li><strong>Torsion / null tests:</strong> residual plots comparing constrained comparison families vs baseline fits.</li>
-          <li><strong>NV-center magnetometry:</strong> frequency-shift residuals under controlled field/geometry variations.</li>
-          <li><strong>Cavity scaling:</strong> length–frequency invariants and fit residuals across cavity geometries.</li>
-        </ul>
-
-        <p style="margin-top:0.6rem;">
-          Each benchmark record (Zenodo) includes:
-        </p>
-        <ul class="ref-list">
-          <li>Dataset reference (or upload if redistribution is permitted)</li>
-          <li>Analysis CSVs (cleaned inputs + derived quantities)</li>
-          <li>Fit scripts/notebook</li>
-          <li>Residual plots (PNG/SVG) and a short README</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-title">A note on interpretation</div>
-        <p>
-          These benchmarks are intentionally conservative. Passing a null test does not “prove” QDL; it shows that a declared reduced family
-          can survive an auditable comparison without hidden tuning. Failing a benchmark is equally valuable: it indicates structural incompleteness
-          and motivates more physical modeling or improved experimental controls.
-        </p>
-        <p class="note">
-          This framing is designed to encourage replication and to keep success/failure criteria transparent and falsifiable.
+          This discipline is designed to avoid ambiguous “fit improvement” narratives and enable clear success/failure judgments that other groups can independently reproduce.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- GET INVOLVED -->
+  <!-- INTERPRETATION / DECISION TREE -->
+  <section id="interpretation">
+    <div class="section-header">
+      <h2 class="section-title">How to interpret results</h2>
+      <p class="section-kicker">
+        A compact decision tree separating benchmark adequacy from empirical support for QDL-specific discriminants.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="callout">
+        <div class="callout-title">Decision logic (benchmarks vs. discriminant experiments)</div>
+        <p>
+          <strong>Benchmark passes</strong> (residuals noise-like under the declared reduced family) → evidence that the reduced family is adequate for that dataset under the stated pipeline choices.
+        </p>
+        <p>
+          <strong>Benchmark fails</strong> (coherent residual structure persists) → evidence of model inadequacy or pipeline artifact; it does not by itself identify the missing physics.
+        </p>
+        <p>
+          <strong>Discriminant test supports QDL</strong> only if a pre-stated, QDL-distinct scaling/pattern appears under controlled sweeps and the standard comparison fails to match it within uncertainty.
+        </p>
+        <p class="small">
+          This page is structured to reduce scope creep: benchmarks are method; discriminants are physics tests.
+        </p>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">Transform-invariance discipline (brief)</div>
+        <p>
+          QDL-adjacent analyses often involve re-expression (units, bases, measurement-chain parameterizations). This page treats the following as <strong>audit transforms</strong>:
+          unit changes, basis reparameterizations, and explicit measurement-chain re-expression with declared bookkeeping.
+        </p>
+        <p>
+          Transforms that change model class, introduce undisclosed calibration degrees of freedom, or alter data selection are treated as <strong>interpretation changes</strong> and must be declared as such.
+        </p>
+        <p class="small">
+          This is intended to prevent post-hoc reinterpretation under a different analysis choice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK B: ROADMAP -->
+  <section id="track-b">
+    <div class="section-header">
+      <h2 class="section-title">Track B — Proposed falsifiable tabletop tests</h2>
+      <p class="section-kicker">
+        Four complementary platforms. Each block states a discriminant and an explicit failure condition.
+      </p>
+    </div>
+
+    <div class="card" style="margin-bottom:1.1rem;">
+      <div class="card-title">Roadmap anchor</div>
+      <p class="card-meta">
+        QDL Experimental Validation Protocol:
+        <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener">10.5281/zenodo.17654442</a>
+      </p>
+      <p class="small">
+        The protocol describes candidate discriminants across platforms. This page presents them as <strong>proposed</strong> tests until independently executed by experimental groups.
+      </p>
+    </div>
+
+    <!-- TORSION -->
+    <section id="torsion">
+      <div class="section-header">
+        <h2 class="section-title">Torsion-balance experiments</h2>
+        <p class="section-kicker">Scaling discriminants vs. geometry and mass configuration.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Concept</div>
+          <p>
+            Precision torsion balances are sensitive to small forces and allow controlled sweeps of geometry and configuration.
+            QDL proposes that certain admissibility/closure constraints translate into discriminant scaling patterns under these sweeps.
+          </p>
+
+          <div class="falsify" aria-label="Falsifiability block for torsion-balance tests">
+            <div class="falsify-row"><strong>QDL-distinct discriminant:</strong> a pre-stated scaling relation (or exponent constraint) tied to ledger closure under geometry/configuration sweeps.</div>
+            <div class="falsify-row"><strong>Standard comparison:</strong> conventional parameterization (plus known systematics) fits equally well without the QDL constraint.</div>
+            <div class="falsify-row"><strong>Minimum viable test:</strong> a geometry/configuration sweep designed to separate the constrained (QDL) family from the unconstrained family.</div>
+            <div class="falsify-row"><strong>Failure condition:</strong> the QDL-constrained scaling is not observed within uncertainty across the sweep (or cannot outperform the standard family without adding degrees of freedom).</div>
+          </div>
+
+          <p class="note">
+            Platform details and candidate discriminants are outlined in the protocol DOI above.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Status and next steps</div>
+          <p>
+            This is presented as <strong>proposed</strong>. The recommended pathway is sensitivity-first:
+          </p>
+          <ul>
+            <li>Identify an existing torsion dataset suitable for a geometry/configuration sweep.</li>
+            <li>Declare the two model families (standard vs constrained) and parameter budgets.</li>
+            <li>Run the sweep and report residual structure as primary diagnostic.</li>
+          </ul>
+          <p class="card-meta">
+            Reference: <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener">10.5281/zenodo.17654442</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NV -->
+    <section id="nv-centers">
+      <div class="section-header">
+        <h2 class="section-title">NV-center frequency shifts</h2>
+        <p class="section-kicker">Discriminants under controlled field and geometry sweeps.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Concept</div>
+          <p>
+            NV centers provide a precision probe with controllable environments. QDL proposes that certain constrained combinations of fields, geometry,
+            and constants may yield discriminant patterns under structured sweeps.
+          </p>
+
+          <div class="falsify" aria-label="Falsifiability block for NV-center tests">
+            <div class="falsify-row"><strong>QDL-distinct discriminant:</strong> a pre-stated pattern in frequency shifts/residual structure across geometry/field sweeps consistent with a constrained ledger family.</div>
+            <div class="falsify-row"><strong>Standard comparison:</strong> baseline spin-Hamiltonian family (plus known corrections) matches the sweep equally well without the constraint.</div>
+            <div class="falsify-row"><strong>Minimum viable test:</strong> a sweep designed to isolate the constrained pattern while holding calibration degrees of freedom fixed.</div>
+            <div class="falsify-row"><strong>Failure condition:</strong> no constrained pattern appears (or it appears only after adding ad hoc degrees of freedom that erase the discriminant).</div>
+          </div>
+
+          <p class="card-meta">
+            Phenomenology anchor: <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener">10.5281/zenodo.17803804</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Status and next steps</div>
+          <p>
+            This is presented as <strong>proposed</strong> physics testing. Separately, the executed benchmark below is methodological.
+          </p>
+          <ul>
+            <li><strong>Executed benchmark (method):</strong> <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener">10.5281/zenodo.18069870</a></li>
+            <li><strong>Proposed discriminant:</strong> pre-register a sweep + constrained family; run residual-first reporting.</li>
+          </ul>
+          <p class="small">
+            Keep “benchmark” and “discriminant test” logically separate to avoid over-claiming.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAVITIES -->
+    <section id="cavities">
+      <div class="section-header">
+        <h2 class="section-title">Cavity length–frequency scaling</h2>
+        <p class="section-kicker">Geometry/material sweeps as a clean L–F probe.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Concept</div>
+          <p>
+            Cavity resonators tightly couple length and frequency and are well-suited to controlled sweeps.
+            QDL proposes discriminant scaling constraints in an L–F basis that can be tested against standard parameterizations.
+          </p>
+
+          <div class="falsify" aria-label="Falsifiability block for cavity tests">
+            <div class="falsify-row"><strong>QDL-distinct discriminant:</strong> a pre-stated scaling constraint across geometry/material sweeps that is not reducible to unit-balance alone.</div>
+            <div class="falsify-row"><strong>Standard comparison:</strong> conventional fit family explains the sweep without the QDL constraint at equal or better residual adequacy.</div>
+            <div class="falsify-row"><strong>Minimum viable test:</strong> geometry sweep designed to stress the constraint while keeping calibration fixed.</div>
+            <div class="falsify-row"><strong>Failure condition:</strong> no discriminant scaling is found (or the constrained family only “wins” after adding degrees of freedom that erase constraint meaning).</div>
+          </div>
+
+          <p class="card-meta">
+            Teaching/lab anchor: <a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener">10.5281/zenodo.17663340</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Status and next steps</div>
+          <p>
+            Presented as <strong>proposed</strong> physics testing. The executed benchmark is methodological.
+          </p>
+          <ul>
+            <li><strong>Executed benchmark (method):</strong> <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener">10.5281/zenodo.18076864</a></li>
+            <li><strong>Proposed discriminant:</strong> pre-register sweep + constrained model family; report residual-first.</li>
+          </ul>
+          <p class="small">
+            The roadmap aims for low-barrier repurposing of existing cavity apparatus into discriminant sweeps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- METAMATERIALS -->
+    <section id="metamaterials">
+      <div class="section-header">
+        <h2 class="section-title">Metamaterial coherence &amp; dispersion</h2>
+        <p class="section-kicker">Dispersion-collapse candidates as discriminant signatures.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Concept</div>
+          <p>
+            Metamaterials allow engineered dispersion and controlled effective parameters. QDL proposes that certain “locked” combinations
+            may yield discriminant collapse behavior under designed sweeps.
+          </p>
+
+          <div class="falsify" aria-label="Falsifiability block for metamaterial tests">
+            <div class="falsify-row"><strong>QDL-distinct discriminant:</strong> a pre-stated dispersion-collapse or scaling-lock signature under a defined sweep.</div>
+            <div class="falsify-row"><strong>Standard comparison:</strong> conventional effective-medium modeling reproduces the signature without the constraint.</div>
+            <div class="falsify-row"><strong>Minimum viable test:</strong> a sweep designed to separate constrained collapse from flexible parameter fits.</div>
+            <div class="falsify-row"><strong>Failure condition:</strong> no constrained collapse appears, or it is explainable only by unconstrained refits that destroy discriminant meaning.</div>
+          </div>
+
+          <p class="card-meta">
+            Phenomenology anchor: <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener">10.5281/zenodo.17803804</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Status and next steps</div>
+          <p>
+            Presented as <strong>proposed</strong>. Suggested pathway:
+          </p>
+          <ul>
+            <li>Identify an existing dataset with suitable sweep structure.</li>
+            <li>Declare constrained vs unconstrained families and budgets.</li>
+            <li>Report residual-first; treat collapse claims as falsifiable targets.</li>
+          </ul>
+          <p class="small">
+            The goal is to avoid “it could be” narratives by making the discriminant and the failure condition explicit.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-header">
+      <h2 class="section-title">FAQ (scope &amp; falsifiability)</h2>
+      <p class="section-kicker">Short answers to prevent over-interpretation.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Are any new physical effects claimed on this page?</div>
+        <p>
+          The executed benchmarks are methodological and do not claim new effects. The tabletop discriminants are proposed tests with explicit failure conditions,
+          presented as targets until independently executed.
+        </p>
+
+        <div class="card-title" style="margin-top:0.9rem;">What would count as a QDL-relevant “hit”?</div>
+        <p>
+          A pre-stated discriminant scaling/pattern appears under controlled sweeps, and the standard comparison family fails to reproduce it within uncertainty
+          without introducing extra degrees of freedom that erase the discriminant.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">What would count as a clear failure?</div>
+        <p>
+          The QDL-constrained family fails across the sweep within uncertainty, or it only matches after adding ad hoc flexibility that nullifies the constraint’s meaning.
+        </p>
+
+        <div class="card-title" style="margin-top:0.9rem;">Are benchmarks evidence for QDL?</div>
+        <p>
+          Benchmarks provide evidence of auditability and a residual-first adequacy workflow. They are not presented as standalone validation of the strongest cross-domain QDL physics claims.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATION -->
   <section id="collaboration">
     <div class="section-header">
       <h2 class="section-title">Collaboration &amp; data</h2>
-      <p class="section-kicker">
-        How experimental groups can engage with the QDL program, including benchmark datasets and residual analyses.
-      </p>
+      <p class="section-kicker">How experimental groups can engage, replicate, or refute.</p>
     </div>
 
     <div class="grid-2">
       <div class="card">
         <div class="card-title">For experimental groups</div>
-        <p>
-          The QDL Physics Institute welcomes collaboration with groups in:
-        </p>
+        <p>Collaboration is most valuable when it sharpens falsifiability and reduces interpretive wiggle room.</p>
         <ul>
-          <li>Precision torsion-balance measurements.</li>
-          <li>NV-center and related solid-state spin-resonance platforms.</li>
-          <li>High-Q cavity and resonator experiments.</li>
-          <li>Metamaterial design and characterization.</li>
-          <li>Metrology and constants-focused laboratories.</li>
+          <li>Replicate an executed benchmark using the same record and artifacts.</li>
+          <li>Propose a platform sweep; pre-state the discriminant and failure condition.</li>
+          <li>Publish residual-first reporting (including null tests) regardless of outcome.</li>
         </ul>
-        <p>
-          Even before dedicated experiments, many datasets can be reanalyzed in a QDL ledger framework
-          to look for patterns or anomalies in scaling behavior.
+        <p class="note">
+          The aim is to make success and failure equally publishable by design.
         </p>
       </div>
 
       <div class="card">
         <div class="card-title">Contact &amp; resources</div>
-        <p>
-          Experimentalists interested in QDL-based analyses or joint design work can contact:
-        </p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-        </p>
+        <p><strong>Email:</strong> <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a></p>
         <p>Additional materials:</p>
         <ul class="ref-list">
           <li>
@@ -838,19 +950,15 @@
             </a>
           </li>
           <li>
-            Program overview &amp; benefits:
-            <a href="benefits.html">Benefits</a> ·
-            <a href="framework.html">Framework</a>
+            Site entry points:
+            <a href="framework.html">Framework</a> · <a href="publications.html">Publications</a> · <a href="benefits.html">Benefits</a>
           </li>
         </ul>
+        <p class="note">
+          If you want to run a discriminant test, the most helpful first step is a short sensitivity note: what sweep is feasible, what noise floor dominates, and what failure condition is credible.
+        </p>
       </div>
     </div>
-
-    <p class="note">
-      All experimental proposals and predicted scalings are intended to be fully auditable:
-      ledger tables, dimensional exponents, and key algebraic steps are being published alongside manuscripts
-      so that external groups can independently verify or refute QDL claims using their own apparatus.
-    </p>
   </section>
 </main>
 
