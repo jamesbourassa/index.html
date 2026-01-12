@@ -26,8 +26,7 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
@@ -169,7 +168,7 @@
       font-size: 0.98rem;
       color: var(--text-soft);
       margin-bottom: 0.75rem;
-      max-width: 40rem;
+      max-width: 42rem;
       line-height: 1.6;
     }
 
@@ -213,41 +212,16 @@
       text-transform: uppercase;
     }
 
-    .hero-micro {
-      font-size: 0.86rem;
-      color: #4b5563;
-      margin-bottom: 0.85rem;
-      max-width: 42rem;
-      line-height: 1.55;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .badge {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid #e5e7eb;
-      background: #f9fafb;
-      color: #4b5563;
-    }
-
-    .badge-accent {
-      border-color: rgba(37, 99, 235, 0.4);
-      background: var(--accent-soft);
-      color: #1d4ed8;
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
-      margin-bottom: 0.6rem;
+      margin: 0.6rem 0 0.6rem;
     }
 
     .btn {
@@ -284,11 +258,6 @@
     .btn-secondary:hover {
       background: #f9fafb;
       text-decoration: none;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: #6b7280;
     }
 
     .hero-card {
@@ -451,12 +420,6 @@
       margin-bottom: 0.3rem;
     }
 
-    .featured-meta {
-      font-size: 0.8rem;
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-
     .featured-side {
       border-left: 1px solid #e5e7eb;
       padding-left: 1rem;
@@ -574,7 +537,7 @@
       color: #1d4ed8;
     }
 
-    /* NEW: benchmark hub chip on Home page */
+    /* benchmark hub chip on Home page */
     .bench-hub {
       margin: 0.55rem 0 0.15rem;
       display: flex;
@@ -627,6 +590,105 @@
       flex-wrap: wrap;
       align-items: center;
     }
+
+    /* --- NEW: above-the-fold referee-facing blocks --- */
+    .hero-rail{
+      display:flex;
+      flex-direction:column;
+      gap:0.75rem;
+      max-width: 42rem;
+    }
+
+    .mini-defs{
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      border-radius:16px;
+      padding:0.75rem 0.9rem;
+      max-width:42rem;
+    }
+    .mini-defs h3{
+      font-size:0.78rem;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:#6b7280;
+      margin-bottom:0.4rem;
+    }
+    .def-grid{
+      display:grid;
+      grid-template-columns: minmax(0,1fr);
+      gap:0.35rem;
+      font-size:0.86rem;
+      color:#374151;
+      line-height:1.5;
+    }
+    .def-grid strong{color:#111827;}
+
+    .schematic{
+      border:1px solid rgba(37,99,235,0.25);
+      background:#f8fafc;
+      border-radius:16px;
+      padding:0.85rem 0.95rem;
+      max-width:42rem;
+    }
+    .schematic h3{
+      font-size:0.78rem;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:#6b7280;
+      margin-bottom:0.45rem;
+    }
+    .schem-row{
+      display:grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      gap:0.7rem;
+      margin-top:0.35rem;
+    }
+    @media (max-width: 640px){
+      .schem-row{grid-template-columns:1fr;}
+    }
+    .schem-box{
+      border:1px solid #e5e7eb;
+      background:#ffffff;
+      border-radius:14px;
+      padding:0.7rem 0.75rem;
+      font-size:0.84rem;
+      color:#374151;
+      line-height:1.5;
+    }
+    .schem-box .label{
+      font-size:0.74rem;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:#6b7280;
+      margin-bottom:0.3rem;
+    }
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    }
+
+    .falsify-mini{
+      border:1px solid #e5e7eb;
+      background:#ffffff;
+      border-radius:16px;
+      padding:0.85rem 0.95rem;
+      max-width:42rem;
+    }
+    .falsify-mini h3{
+      font-size:0.78rem;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:#6b7280;
+      margin-bottom:0.45rem;
+    }
+    .falsify-mini p{
+      margin:0 0 0.4rem;
+      font-size:0.86rem;
+      color:#374151;
+      line-height:1.55;
+    }
+    .falsify-mini p:last-child{margin-bottom:0;}
+    .tight{color:#111827;font-weight:650;}
   </style>
 </head>
 <body>
@@ -656,25 +718,103 @@
 </header>
 
 <main>
-  <!-- HERO -->
+  <!-- HERO (REFEREE-FACING ABOVE-THE-FOLD) -->
   <section class="hero">
-    <div>
-      <div class="hero-kicker">Independent theoretical & metrological research</div>
+    <div class="hero-rail">
+      <div>
+        <div class="hero-kicker">Independent theoretical &amp; metrological research</div>
 
-      <h1>Quantized Dimensional Ledger (QDL)</h1>
+        <h1>Quantized Dimensional Ledger (QDL)</h1>
 
-      <p class="hero-subtitle">
-        QDL is a proposed <strong>pre-dynamical admissibility framework</strong> for analyzing dimensional representations of physical models
-        in a single, explicit ledger language.
-      </p>
+        <p class="hero-subtitle">
+          QDL is a proposed <strong>admissibility (constraint) layer</strong> for physical modeling:
+          it asks whether <strong>physically equivalent representations</strong> of the same model can be required to satisfy a single,
+          explicit <strong>dimensional-closure bookkeeping</strong> rule—without adding new dynamics.
+        </p>
 
-      <!-- Ledger basis equation anchor -->
-      <div class="hero-eq" aria-label="QDL dimensional basis equation">
-        <span class="eq"><kbd>𝒟</kbd> = ⟨<kbd>L</kbd>, <kbd>F</kbd>⟩<sub>3+2</sub></span>
-        <div class="eq-caption">Ledger basis (representation)</div>
+        <!-- Ledger basis equation anchor -->
+        <div class="hero-eq" aria-label="QDL dimensional basis equation">
+          <span class="eq"><kbd>𝒟</kbd> = ⟨<kbd>L</kbd>, <kbd>F</kbd>⟩<sub>3+2</sub></span>
+          <div class="eq-caption">Ledger basis (representation)</div>
+        </div>
+
+        <!-- Scope & limits (tight, early) -->
+        <div class="callout" style="margin-top:0.2rem;" role="note" aria-label="Scope and limits">
+          <p style="margin-bottom:0.35rem;">
+            <strong>Scope limits:</strong>
+          </p>
+          <p style="margin:0; line-height:1.55;">
+            QDL is <strong>not</strong> a replacement for quantum field theory, general relativity, or effective field theory.
+            It is a proposed <strong>representation constraint</strong>. Evidence for or against QDL must come from
+            <strong>declared transform checks</strong> and <strong>pre-stated discriminants</strong> that can fail.
+          </p>
+        </div>
       </div>
 
-      <!-- NEW: One-click benchmark hub pointer (Publications ↔ Experiments) -->
+      <!-- Minimal definitions (local, one sentence each) -->
+      <div class="mini-defs" aria-label="Minimal definitions (local)">
+        <h3>Minimal definitions (local)</h3>
+        <div class="def-grid">
+          <div><strong>Ledger closure rule:</strong> a constraint that restricts which dimensional-exponent combinations are admissible under a declared representation transform.</div>
+          <div><strong>Quantized Dimensional Cell (QDC):</strong> a proposed discrete “target” combination (in the 3L + 2F basis) used as a closure reference for admissibility checks.</div>
+          <div><strong>Ledger geometry:</strong> the bookkeeping space in which dimensional exponents are represented and compared under transforms (not a spacetime metric claim).</div>
+          <div><strong>Audit transform:</strong> a declared change of representation (units/base/parameterization) that should not change conclusions if two representations are physically equivalent.</div>
+        </div>
+      </div>
+
+      <!-- Nontriviality demonstration (schematic before/after) -->
+      <div class="schematic" aria-label="Worked schematic example">
+        <h3>What changes if you adopt the constraint?</h3>
+        <div style="font-size:0.86rem;color:#374151;line-height:1.55;">
+          QDL is nontrivial only if it <strong>reduces admissible model families</strong> (or fixes relationships among parameters)
+          in a way that a conventional fit would not require.
+        </div>
+
+        <div class="schem-row">
+          <div class="schem-box">
+            <div class="label">Baseline (unconstrained)</div>
+            <div class="mono">
+              Model family: y = a·x^p + b<br/>
+              Parameters: (a, p, b)
+            </div>
+            <div style="margin-top:0.35rem;">
+              Fit chooses any <span class="mono">p</span> that minimizes error.
+              Equivalent re-parameterizations may drift unless explicitly controlled.
+            </div>
+          </div>
+
+          <div class="schem-box">
+            <div class="label">QDL-style (constrained)</div>
+            <div class="mono">
+              Same family + closure constraint:<br/>
+              C(a,p,b | transform T) = 0
+            </div>
+            <div style="margin-top:0.35rem;">
+              The constraint either <strong>fixes</strong> <span class="mono">p</span> (or links parameters) across a declared transform set.
+              If the constraint only “wins” by adding flexibility, it is not a constraint.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instantiated falsifiability template (homepage-level) -->
+      <div class="falsify-mini" aria-label="Instantiated falsification example">
+        <h3>Instantiated falsifiability example (template)</h3>
+        <p>
+          <span class="tight">Test target:</span> Under a declared sweep (geometry/material/field), the QDL-constrained family predicts a
+          <span class="mono">fixed scaling relation</span> (or restricted exponent set) across representations linked by the declared audit transforms.
+        </p>
+        <p>
+          <span class="tight">Failure condition:</span> If the same dataset supports the unconstrained baseline at equal or better residual adequacy,
+          and the QDL constraint fails <em>without</em> being rescued by adding degrees of freedom (parameter-budget violation),
+          then the closure postulate is falsified for that platform/sweep.
+        </p>
+        <p style="font-size:0.82rem;color:#6b7280;">
+          Executed items on this site are currently <strong>methodological benchmarks</strong>; discriminant tests are presented as <strong>proposed</strong> until independently executed.
+        </p>
+      </div>
+
+      <!-- One-click hub links -->
       <div class="bench-hub" aria-label="Benchmark hub links">
         <a class="chip" href="publications.html#phenomenology-experiments" title="Benchmarks hub on Publications">
           <span class="dot" aria-hidden="true"></span>
@@ -685,32 +825,8 @@
         </a>
       </div>
 
-      <!-- Scope & limits callout (above the fold) -->
-      <div class="callout" style="margin-top:0.75rem;" role="note" aria-label="Scope and limits">
-        <p style="margin-bottom:0.35rem;">
-          <strong>Scope &amp; limits (read this first):</strong>
-        </p>
-        <p style="margin:0; line-height:1.55;">
-          QDL is <strong>not</strong> a replacement for quantum field theory, general relativity, or effective field theory.
-          It proposes a structural constraint layer that can be <strong>tested</strong> through basis-invariance checks, scaling behavior,
-          and closure consistency on declared model families. If empirically successful models systematically violate ledger closure under
-          declared transforms, the closure postulate is falsified.
-        </p>
-      </div>
-
-      <p class="hero-micro">
-        Intended role: a <strong>constraint layer</strong> on admissible representations — not a claim of new particles, forces, or dynamics.
-      </p>
-
-      <div class="hero-badges">
-        <span class="badge badge-accent">3L + 2F ledger</span>
-        <span class="badge">Quantized Dimensional Cell (QDC)</span>
-        <span class="badge">EFT / SMEFT: hypotheses under test</span>
-        <span class="badge">Gravity &amp; metrology: applications in development</span>
-      </div>
-
-      <!-- Canonical framework reference callout -->
-      <div class="hero-card" style="margin: 0.8rem 0 0.9rem;">
+      <!-- Canonical framework reference (kept, but tightened) -->
+      <div class="hero-card" style="margin: 0.15rem 0 0.1rem; max-width:42rem;">
         <div class="hero-card-title">Framework Definition (Canonical Reference)</div>
         <div class="hero-card-chip">Admissibility &amp; validation layer</div>
 
@@ -739,60 +855,43 @@
           rel="noopener noreferrer"
           class="btn btn-primary"
         >
-          Read canonical framework paper
+          Canonical framework paper
         </a>
-        <a href="publications.html" class="btn btn-secondary">View core program papers</a>
-        <a href="experiments.html#benchmarks" class="btn btn-secondary">Benchmarks →</a>
+        <a href="experiments.html" class="btn btn-secondary">Experiments (executed vs proposed)</a>
+        <a href="publications.html" class="btn btn-secondary">Publications</a>
       </div>
 
       <p class="hero-note">
         <strong>Location:</strong> Huntley, Illinois, USA ·
-        <strong>Focus:</strong> dimensional closure, ledger geometry, structural admissibility,
-        precision metrology, and falsifiable tabletop tests.
+        <strong>Focus:</strong> dimensional closure, representation constraints, precision metrology, and falsifiable tabletop discriminants.
       </p>
     </div>
 
     <!-- RIGHT HERO CARD -->
     <aside class="hero-card">
-      <div class="hero-card-title">Quantized Dimensional Ledger (QDL)</div>
-      <div class="hero-card-chip">Conserved 3L + 2F dimensional cell (proposed)</div>
+      <div class="hero-card-title">Reader map (for referees)</div>
+      <div class="hero-card-chip">Definition → checks → status</div>
 
-      <p style="margin-bottom:0.4rem; line-height:1.45;">
-        QDL treats dimensional exponents as entries in a ledger over a two-base space of
-        Length (L) and Frequency (F), with a proposed conserved 3L + 2F Quantized Dimensional Cell
-        used to evaluate admissibility of stated fields, couplings, and constants.
+      <p style="margin-bottom:0.45rem; line-height:1.45;">
+        <strong>Executed vs proposed:</strong> executed items are residual-first benchmarks (methodological);
+        physics-relevant discriminant sweeps are proposed until independently executed.
       </p>
 
-      <p style="margin-bottom:0.4rem; line-height:1.45;">
-        In this picture, the Quantized Dimensional Cell is treated as more than a unit convention:
-        it is proposed as a discrete, conserved dimensional target used to evaluate admissibility.
-        Cross-domain implications (EFT structure, gravitation, constants, metrology) are presented as
-        applications and hypotheses subject to falsifiable checks.
-      </p>
-
-      <p style="margin-bottom:0.2rem; line-height:1.45;">
-        Current application areas under investigation include:
-      </p>
       <ul class="hero-card-list">
-        <li>EFT/SMEFT operator organization evaluated against explicit closure criteria.</li>
-        <li>Gravity and minimum-length proposals explored as ledger-consistency applications (hypothesis stage).</li>
-        <li>Metrology ledgers for constants and quantum measurement units.</li>
-        <li>Proposed experimental scalings in torsion, NV centers, cavity modes, and metamaterials.</li>
+        <li><strong>Definition:</strong> canonical framework paper (left).</li>
+        <li><strong>Checks:</strong> declared transform/basis invariance + closure constraints under declared families.</li>
+        <li><strong>Status:</strong> each application thread is labeled by evidence level on Publications.</li>
+        <li><strong>Experiments:</strong> discriminants and explicit failure conditions on Experiments.</li>
       </ul>
 
-      <p style="margin-top:0.3rem; line-height:1.45;">
-        Together, these elements aim to evaluate whether dimensional closure can function as a structural
-        admissibility principle beyond conventional unit bookkeeping.
-      </p>
-
       <div class="hero-card-footer">
-        <span>Structural admissibility &amp; metrology interface</span>
+        <span>Program navigation</span>
         <a
           href="https://zenodo.org/communities/qdl-physics-institute/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          All QDL papers
+          Zenodo community
         </a>
       </div>
     </aside>
