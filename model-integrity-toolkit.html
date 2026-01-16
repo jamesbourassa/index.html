@@ -26,7 +26,7 @@
     header{margin-bottom:24px;}
     .site{font-size:0.95rem;color:var(--muted);margin-bottom:8px;}
     h1{font-size:2.05rem;line-height:1.15;margin:0 0 10px;}
-    .sub{color:var(--muted);max-width:72ch;}
+    .sub{color:var(--muted);max-width:76ch;}
     nav{
       margin:18px 0 0;
       padding-top:14px;
@@ -76,6 +76,7 @@
       border:1px solid #dbeafe;
       font-size:0.85rem;
       color:#1e3a8a;
+      white-space:nowrap;
     }
 
     ul{margin:10px 0 0 18px;}
@@ -96,6 +97,20 @@
     }
 
     aside .card{margin-bottom:20px;}
+
+    .kpi{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .kpi div{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+    }
+    .kpi b{display:block;font-size:0.95rem;margin-bottom:2px;}
 
     footer{
       margin-top:36px;
@@ -129,9 +144,11 @@
 
     <nav>
       <a href="#what-it-is">What it is</a>
+      <a href="#definitions">Definitions</a>
       <a href="#includes">What’s included</a>
       <a href="#not">What it is not</a>
       <a href="#how-it-fits">How it fits</a>
+      <a href="#maturity">Operational maturity</a>
       <a href="#how-to-run">How to run it</a>
       <a href="#licensing">Licensing</a>
       <a href="#contact">Contact</a>
@@ -144,8 +161,8 @@
         <h2>What it is</h2>
         <p>
           The QDL Model Integrity Toolkit is a <b>pre-verification structural screen</b>
-          for dimensional coherence and unit invariance, designed for internal governance
-          and documentation defensibility.
+          for dimensional coherence and unit invariance. It is designed for internal governance
+          and documentation defensibility, upstream of downstream processes.
         </p>
         <div class="chips">
           <span class="chip">Pre-verification</span>
@@ -156,13 +173,25 @@
         </div>
       </section>
 
+      <section id="definitions" class="card">
+        <h2>Plain-English definitions</h2>
+        <ul>
+          <li><b>Dimensional admissibility</b>: each equation is structurally consistent with declared units (e.g., unlike dimensions are not added).</li>
+          <li><b>Unit invariance</b>: changing units (e.g., meters → feet) does not change the model’s meaning; the structure remains coherent under unit transformations.</li>
+          <li><b>Pre-verification</b>: this screen runs before correctness testing; it checks whether the model is structurally coherent enough to verify.</li>
+        </ul>
+        <p class="muted small">
+          The Toolkit reports structural status only (Present / Absent / Indeterminate) and stops.
+        </p>
+      </section>
+
       <section id="includes" class="card">
         <h2>What’s included</h2>
         <ul>
-          <li><b>Dimensional Admissibility Checklist</b></li>
-          <li><b>Model Pre-Verification Flowchart</b></li>
-          <li><b>Unit-Invariance Test Specification</b></li>
-          <li><b>Internal-Use License &amp; Terms</b></li>
+          <li><b>Dimensional Admissibility Checklist</b> — a structured screen using Present / Absent / Indeterminate outcomes.</li>
+          <li><b>Pre-Verification Flow</b> — an upstream gate: screen first, then proceed to QA/V&amp;V outside the Toolkit.</li>
+          <li><b>Unit-Invariance Specification</b> — definitions and structural criteria (no code; no thresholds).</li>
+          <li><b>Internal-Use License &amp; Terms</b> — bounded internal governance use; no support; no certification.</li>
         </ul>
       </section>
 
@@ -173,29 +202,53 @@
           <li>Certification, endorsement, validation, or verification</li>
           <li>Regulatory compliance determination</li>
           <li>Guarantee of correctness or fitness for purpose</li>
-          <li>Implementation guidance, code, or tooling</li>
+          <li>Implementation guidance, code, benchmarks, or tooling</li>
         </ul>
+        <p class="muted small">
+          The Toolkit is intentionally bounded: it reports structural status and stops.
+        </p>
       </section>
 
       <section id="how-it-fits" class="card">
         <h2>How it fits</h2>
         <p>
-          The Toolkit operates upstream of verification &amp; validation, peer review,
-          regulatory submission, and operational use. It does not replace downstream
+          The Toolkit operates upstream of verification &amp; validation (V&amp;V), peer review,
+          regulatory submission, and operational/decision use. It does not replace downstream
           processes; it prevents structurally incoherent models from reaching them.
         </p>
+
+        <div class="kpi">
+          <div><b>Path A</b><span class="muted small">Proceed to verification / QA / V&amp;V (outside Toolkit scope)</span></div>
+          <div><b>Path B</b><span class="muted small">Documentation clarification; repeat screen (classification only)</span></div>
+          <div><b>Path C</b><span class="muted small">Structural non-admissibility detected (classification only)</span></div>
+        </div>
+      </section>
+
+      <section id="maturity" class="card">
+        <h2>Operational maturity</h2>
+        <p>
+          The QDL Model Integrity Toolkit is an internal-use <b>document-based methodology</b>.
+          It does not require software integration. It can be applied using existing model artifacts
+          (equations, unit tables, documentation, and code excerpts treated as documentation).
+        </p>
+        <ul>
+          <li><b>Included:</b> checklist + unit-invariance specification + structured report format.</li>
+          <li><b>Not included:</b> tooling, code, benchmarks, thresholds, or implementation guidance.</li>
+        </ul>
       </section>
 
       <section id="how-to-run" class="card">
         <h2>How to run it</h2>
         <p>
-          A complete run requires only four artifacts:
+          The Toolkit is applied by collecting a small set of existing model artifacts and running a bounded structural screen.
+          If required artifacts are missing, results are marked <b>Indeterminate</b> rather than inferred.
         </p>
+        <h3>Minimum artifacts required</h3>
         <ul>
-          <li>Model purpose and scope</li>
+          <li>Model purpose and scope (2–5 sentences)</li>
           <li>Inputs, parameters, and outputs (with units if declared)</li>
-          <li>Equations or logical relationships</li>
-          <li>Declared unit system(s)</li>
+          <li>Equations or logical relationships (as written)</li>
+          <li>Declared unit system(s) (SI / mixed / normalized / unknown)</li>
         </ul>
 
         <h3>Operator entry point</h3>
@@ -207,6 +260,9 @@
         <p>
           The Toolkit is licensed for internal use only, on a non-exclusive basis,
           with no support, no certification, and no guarantees.
+        </p>
+        <p class="muted small">
+          The Toolkit is designed to be usable as a standalone governance overlay, independent of any broader theoretical commitments.
         </p>
         <ul>
           <li>$2,500 — small organizations / research groups</li>
@@ -231,6 +287,18 @@
           <li><b>Outputs:</b> Admissibility + unit-invariance outcomes</li>
           <li><b>Language:</b> Present / Absent / Indeterminate</li>
           <li><b>Support:</b> None</li>
+          <li><b>Attribution:</b> Not required</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>What a run produces</h2>
+        <ul>
+          <li>Checklist outcome + flags</li>
+          <li>Unit-invariance outcome</li>
+          <li>Flowchart path (A / B / C)</li>
+          <li>Recordkeeping fields</li>
+          <li>Disclaimers</li>
         </ul>
       </section>
 
@@ -239,7 +307,8 @@
         <p class="small">
           This screen does not imply correctness, validation, verification,
           regulatory compliance, or fitness for purpose. It is intended for
-          internal governance use only.
+          internal governance use only. No support, interpretation, or implementation
+          guidance is provided.
         </p>
       </section>
     </aside>
@@ -248,7 +317,7 @@
   <footer>
     <div><b>QDL Physics Institute</b></div>
     <div class="muted">
-      Model Integrity Toolkit — licensed internal methodology.
+      QDL Model Integrity Toolkit — licensed internal methodology description. No endorsement or certification implied.
     </div>
   </footer>
 </div>
