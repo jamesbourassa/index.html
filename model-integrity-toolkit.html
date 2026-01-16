@@ -22,8 +22,8 @@
       margin:0;
       line-height:1.6;
     }
-    .wrap{max-width:960px;margin:56px auto;padding:0 20px;}
-    header{margin-bottom:22px;}
+    .wrap{max-width:980px;margin:56px auto;padding:0 20px;}
+    header{margin-bottom:24px;}
     .site{font-size:0.95rem;color:var(--muted);margin-bottom:8px;}
     h1{font-size:2.05rem;line-height:1.15;margin:0 0 10px;}
     .sub{color:var(--muted);max-width:72ch;}
@@ -36,25 +36,29 @@
     }
     nav a{color:var(--link);text-decoration:none;}
     nav a:hover{text-decoration:underline;}
+
     .grid{
       display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap:22px;
-      margin-top:26px;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap:24px;
+      align-items:start;
+      margin-top:28px;
     }
     @media (max-width: 900px){
       .grid{grid-template-columns:1fr;}
     }
-    section{margin:26px 0;}
+
+    section{margin:0 0 26px;}
     h2{font-size:1.3rem;margin:0 0 10px;}
     h3{font-size:1.05rem;margin:16px 0 8px;}
+
     .card{
       border:1px solid var(--line);
       border-radius:14px;
       padding:18px;
       background:#fff;
-      box-shadow:0 1px 0 rgba(15,23,42,0.03);
     }
+
     .callout{
       border:1px solid var(--line);
       border-left:5px solid #94a3b8;
@@ -63,320 +67,190 @@
       background:var(--soft);
       margin:14px 0;
     }
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;}
+
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
     .chip{
-      display:inline-block;
       padding:4px 10px;
       border-radius:999px;
       background:var(--chip);
       border:1px solid #dbeafe;
       font-size:0.85rem;
       color:#1e3a8a;
-      white-space:nowrap;
     }
+
     ul{margin:10px 0 0 18px;}
     li{margin:6px 0;}
     .muted{color:var(--muted);}
-    .tight{margin-top:8px;}
-    .hr{border-top:1px solid var(--line);margin:24px 0;}
-    .kpi{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:10px;
-      margin-top:12px;
-    }
-    .kpi div{
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:10px 12px;
-      background:#fff;
-    }
-    .kpi b{display:block;font-size:0.95rem;margin-bottom:2px;}
+    .small{font-size:0.92rem;}
+
     .mono{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size:0.92rem;
       background:var(--soft);
       border:1px solid var(--line);
       border-radius:12px;
-      padding:12px 12px;
-      overflow:auto;
+      padding:12px;
       white-space:pre;
+      overflow:auto;
       line-height:1.45;
     }
-    .btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
-    .btn{
-      display:inline-block;
-      padding:9px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--link);
-      text-decoration:none;
-      font-size:0.95rem;
-    }
-    .btn:hover{border-color:#cbd5e1;text-decoration:underline;}
+
+    aside .card{margin-bottom:20px;}
+
     footer{
-      margin-top:34px;
+      margin-top:36px;
       padding-top:18px;
       border-top:1px solid var(--line);
       color:var(--muted);
       font-size:0.92rem;
     }
-    .small{font-size:0.92rem;}
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="site">QDL Physics Institute</div>
-      <h1>QDL Model Integrity Toolkit</h1>
-      <p class="sub">
-        A licensed, internal-use methodology for screening analytical models for <b>dimensional admissibility</b> and
-        <b>unit invariance</b> <b>before</b> verification, validation, or deployment.
-      </p>
+<div class="wrap">
+  <header>
+    <div class="site">QDL Physics Institute</div>
+    <h1>QDL Model Integrity Toolkit</h1>
+    <p class="sub">
+      A licensed, internal-use methodology for screening analytical models for
+      <b>dimensional admissibility</b> and <b>unit invariance</b> prior to verification,
+      validation, or deployment.
+    </p>
 
-      <div class="callout">
-        <b>Core framing sentence</b><br/>
-        <span class="small">
-          The QDL Model Integrity Toolkit provides a pre-verification structural screen for dimensional admissibility and unit invariance in analytical models, intended for internal governance and risk-reduction use.
-        </span>
-      </div>
-
-      <nav>
-        <a href="#what-it-is">What it is</a>
-        <a href="#includes">What’s included</a>
-        <a href="#not">What it is not</a>
-        <a href="#how-it-fits">How it fits</a>
-        <a href="#how-to-run">How to run it</a>
-        <a href="#licensing">Licensing</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#mir">Separation from MIR</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <div class="grid">
-      <main>
-        <section id="what-it-is" class="card">
-          <h2>What it is</h2>
-          <p class="tight">
-            The QDL Model Integrity Toolkit is a <b>pre-verification structural screen</b> for dimensional coherence and unit invariance.
-            It is designed for internal governance and documentation defensibility, upstream of downstream processes.
-          </p>
-          <div class="chips">
-            <span class="chip">Pre-verification</span>
-            <span class="chip">Structural screen</span>
-            <span class="chip">Document-based</span>
-            <span class="chip">Domain-agnostic</span>
-            <span class="chip">Internal use</span>
-          </div>
-        </section>
-
-        <section id="includes" class="card">
-          <h2>What’s included</h2>
-          <ul>
-            <li><b>Dimensional Admissibility Checklist</b> — Present / Absent / Indeterminate screening with explicit outcomes.</li>
-            <li><b>Model Pre-Verification Flowchart</b> — placement upstream of QA, V&amp;V, audit, or operational use.</li>
-            <li><b>Unit-Invariance Test Specification</b> — formal definitions, allowed/prohibited transformations, and structural criteria.</li>
-            <li><b>Internal-Use License &amp; Terms</b> — non-exclusive internal use, no support, no certification, no guarantees.</li>
-          </ul>
-        </section>
-
-        <section id="not" class="card">
-          <h2>What it is not</h2>
-          <ul>
-            <li>Not consulting or advisory services.</li>
-            <li>Not certification, endorsement, validation, or verification.</li>
-            <li>Not a regulatory compliance determination.</li>
-            <li>Not a guarantee of correctness, accuracy, or fitness for purpose.</li>
-            <li>Not implementation guidance, tooling, code, benchmarks, or threshold tuning.</li>
-          </ul>
-          <p class="muted small">
-            The Toolkit is intentionally bounded: it reports structural status and stops.
-          </p>
-        </section>
-
-        <section id="how-it-fits" class="card">
-          <h2>How it fits</h2>
-          <p class="tight">
-            The Toolkit is designed to operate <b>before</b> verification &amp; validation (V&amp;V), peer review, regulatory submission,
-            or operational/decision use. It does not replace downstream processes; it prevents structurally incoherent models from reaching them.
-          </p>
-
-          <div class="kpi">
-            <div><b>Path A</b><span class="muted">Proceed to verification / QA / V&amp;V (outside Toolkit scope)</span></div>
-            <div><b>Path B</b><span class="muted">Documentation clarification; repeat screen (classification only)</span></div>
-            <div><b>Path C</b><span class="muted">Structural non-admissibility detected (classification only)</span></div>
-          </div>
-        </section>
-
-        <section id="how-to-run" class="card">
-          <h2>How to run it</h2>
-          <p class="tight">
-            The Toolkit includes an LLM-ready runner prompt (“MIT Runner”) that executes a bounded screen and generates a report.
-            A valid run requires only four artifacts.
-          </p>
-
-          <h3>Minimum artifacts required</h3>
-          <ul>
-            <li><b>Model purpose and scope</b> (2–5 sentences)</li>
-            <li><b>Inputs, parameters, outputs</b> (names; units if declared)</li>
-            <li><b>Equations or logical relationships</b> (as written)</li>
-            <li><b>Declared unit system(s)</b> (SI / mixed / normalized / unknown)</li>
-          </ul>
-
-          <h3>Operator entry point</h3>
-          <div class="mono">/ONE_SHOT_MIT_SCREEN</div>
-
-          <h3 class="tight">Quick demo sample (domain-agnostic)</h3>
-          <div class="mono">Model purpose and scope:
-This model estimates an abstract system response based on three input quantities and one scaling parameter.
-
-Inputs, parameters, outputs:
-Input A — unit: U1
-Input B — unit: U2
-Input C — unit: (not specified)
-Parameter K — unit: U1/U2
-Output R — unit: U1
-
-Equations / relationships:
-R = K × (A + B) / C
-
-Declared unit system:
-Mixed units; no specific system declared.</div>
-
-          <p class="muted small">
-            Note: the Toolkit uses audit language only (Present / Absent / Indeterminate; Pass / Fail / Indeterminate) and stops after the report.
-          </p>
-        </section>
-
-        <section id="licensing" class="card">
-          <h2>Licensing</h2>
-          <p class="tight">
-            The QDL Model Integrity Toolkit is provided under an <b>internal-use license</b>.
-            It is non-exclusive and intended for use within a single legal entity.
-          </p>
-
-          <h3>Key terms (summary)</h3>
-          <ul>
-            <li><b>Allowed:</b> internal training, internal model review, internal documentation, internal governance processes.</li>
-            <li><b>Disallowed:</b> redistribution, external audit claims, marketing/promotional claims, embedding into commercial tools or services.</li>
-            <li><b>No support:</b> no interpretation, consulting, updates, or implementation guidance.</li>
-            <li><b>No certification:</b> no endorsement, V&amp;V, or compliance claims.</li>
-          </ul>
-
-          <h3>Pricing (one-time internal-use)</h3>
-          <ul>
-            <li>$2,500 — small organizations / research groups</li>
-            <li>$5,000–$10,000 — enterprise internal use</li>
-          </ul>
-
-          <p class="muted small">
-            For licensing inquiries only, use the contact address below.
-          </p>
-        </section>
-
-        <section id="downloads" class="card">
-          <h2>Downloads</h2>
-          <p class="muted small">
-            Add files to your site and replace the placeholder links below.
-          </p>
-
-          <div class="btnrow">
-            <a class="btn" href="/downloads/QDL_Model_Integrity_Toolkit_v1.0.pdf">Toolkit (PDF bundle)</a>
-            <a class="btn" href="/downloads/QDL_MIT_Runner_v1.0.txt">MIT Runner (single-file prompt)</a>
-            <a class="btn" href="/downloads/QDL_MIT_ES_v1.0.txt">QDL-MIT-ES (expert system)</a>
-            <a class="btn" href="/downloads/QDL_MIT_Pocket_Card_v1.0.pdf">Pocket Card (Appendix A)</a>
-            <a class="btn" href="/downloads/QDL_MIT_Sample_Run_v1.0.pdf">Sample Run (Appendix B)</a>
-          </div>
-
-          <div class="hr"></div>
-
-          <h3>Minimal procurement pack (recommended)</h3>
-          <ul>
-            <li>Toolkit PDF bundle</li>
-            <li>MIT Runner</li>
-            <li>License &amp; Terms</li>
-          </ul>
-        </section>
-
-        <section id="mir" class="card">
-          <h2>Separation from MIR</h2>
-          <p class="tight">
-            The Toolkit is a <b>judgment-free structural screen</b> for internal governance use.
-            <b>Model Integrity Review (MIR)</b> is a separate professional service that provides interpretive review and advisory judgment.
-            MIR is <b>not required</b> to use the Toolkit.
-          </p>
-        </section>
-
-        <section id="contact" class="card">
-          <h2>Contact</h2>
-          <p class="tight">
-            For licensing inquiries only:
-            <b>info@qdlphysics.org</b> (replace if needed)
-          </p>
-          <p class="muted small">
-            Please include: organization name, intended internal-use scope, and a purchase order contact (if applicable).
-          </p>
-        </section>
-      </main>
-
-      <aside>
-        <section class="card">
-          <h2>At a glance</h2>
-          <ul>
-            <li><b>Function:</b> pre-verification structural gate</li>
-            <li><b>Outputs:</b> admissibility outcome, unit-invariance outcome, flowchart path</li>
-            <li><b>Language:</b> Present / Absent / Indeterminate</li>
-            <li><b>Support:</b> none included</li>
-            <li><b>Attribution:</b> not required</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2>What a run produces</h2>
-          <p class="muted small tight">
-            A bounded internal report containing:
-          </p>
-          <ul>
-            <li>Checklist outcome + flags</li>
-            <li>Unit-invariance outcome</li>
-            <li>Flowchart path (A/B/C)</li>
-            <li>Recordkeeping fields</li>
-            <li>Disclaimers</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2>Use cases</h2>
-          <ul>
-            <li>Model governance intake gates</li>
-            <li>Internal QA documentation hygiene</li>
-            <li>Research group model screening</li>
-            <li>Pre-audit internal readiness checks</li>
-          </ul>
-          <p class="muted small">
-            The Toolkit does not perform audit, certification, or validation.
-          </p>
-        </section>
-
-        <section class="card">
-          <h2>Disclaimers</h2>
-          <p class="small">
-            This screen does not imply correctness, validation, verification, regulatory compliance, or fitness for purpose.
-            This is a pre-verification structural screen intended for internal use only.
-            No support, interpretation, or implementation guidance is provided.
-          </p>
-        </section>
-      </aside>
+    <div class="callout">
+      <b>Core framing sentence</b><br/>
+      <span class="small">
+        The QDL Model Integrity Toolkit provides a pre-verification structural screen for
+        dimensional admissibility and unit invariance in analytical models, intended for
+        internal governance and risk-reduction use.
+      </span>
     </div>
 
-    <footer>
-      <div><b>QDL Physics Institute</b> — Quantized Dimensional Ledger (QDL)</div>
-      <div class="muted">
-        Model Integrity Toolkit page: internal-use methodology description. No endorsement or certification implied.
-      </div>
-    </footer>
+    <nav>
+      <a href="#what-it-is">What it is</a>
+      <a href="#includes">What’s included</a>
+      <a href="#not">What it is not</a>
+      <a href="#how-it-fits">How it fits</a>
+      <a href="#how-to-run">How to run it</a>
+      <a href="#licensing">Licensing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <main>
+      <section id="what-it-is" class="card">
+        <h2>What it is</h2>
+        <p>
+          The QDL Model Integrity Toolkit is a <b>pre-verification structural screen</b>
+          for dimensional coherence and unit invariance, designed for internal governance
+          and documentation defensibility.
+        </p>
+        <div class="chips">
+          <span class="chip">Pre-verification</span>
+          <span class="chip">Structural screen</span>
+          <span class="chip">Document-based</span>
+          <span class="chip">Domain-agnostic</span>
+          <span class="chip">Internal use</span>
+        </div>
+      </section>
+
+      <section id="includes" class="card">
+        <h2>What’s included</h2>
+        <ul>
+          <li><b>Dimensional Admissibility Checklist</b></li>
+          <li><b>Model Pre-Verification Flowchart</b></li>
+          <li><b>Unit-Invariance Test Specification</b></li>
+          <li><b>Internal-Use License &amp; Terms</b></li>
+        </ul>
+      </section>
+
+      <section id="not" class="card">
+        <h2>What it is not</h2>
+        <ul>
+          <li>Consulting or advisory services</li>
+          <li>Certification, endorsement, validation, or verification</li>
+          <li>Regulatory compliance determination</li>
+          <li>Guarantee of correctness or fitness for purpose</li>
+          <li>Implementation guidance, code, or tooling</li>
+        </ul>
+      </section>
+
+      <section id="how-it-fits" class="card">
+        <h2>How it fits</h2>
+        <p>
+          The Toolkit operates upstream of verification &amp; validation, peer review,
+          regulatory submission, and operational use. It does not replace downstream
+          processes; it prevents structurally incoherent models from reaching them.
+        </p>
+      </section>
+
+      <section id="how-to-run" class="card">
+        <h2>How to run it</h2>
+        <p>
+          A complete run requires only four artifacts:
+        </p>
+        <ul>
+          <li>Model purpose and scope</li>
+          <li>Inputs, parameters, and outputs (with units if declared)</li>
+          <li>Equations or logical relationships</li>
+          <li>Declared unit system(s)</li>
+        </ul>
+
+        <h3>Operator entry point</h3>
+        <div class="mono">/ONE_SHOT_MIT_SCREEN</div>
+      </section>
+
+      <section id="licensing" class="card">
+        <h2>Licensing</h2>
+        <p>
+          The Toolkit is licensed for internal use only, on a non-exclusive basis,
+          with no support, no certification, and no guarantees.
+        </p>
+        <ul>
+          <li>$2,500 — small organizations / research groups</li>
+          <li>$5,000–$10,000 — enterprise internal use</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>
+          Licensing inquiries only:<br/>
+          <b>info@qdlphysics.org</b>
+        </p>
+      </section>
+    </main>
+
+    <aside>
+      <section class="card">
+        <h2>At a glance</h2>
+        <ul>
+          <li><b>Role:</b> Pre-verification structural gate</li>
+          <li><b>Outputs:</b> Admissibility + unit-invariance outcomes</li>
+          <li><b>Language:</b> Present / Absent / Indeterminate</li>
+          <li><b>Support:</b> None</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Disclaimers</h2>
+        <p class="small">
+          This screen does not imply correctness, validation, verification,
+          regulatory compliance, or fitness for purpose. It is intended for
+          internal governance use only.
+        </p>
+      </section>
+    </aside>
   </div>
+
+  <footer>
+    <div><b>QDL Physics Institute</b></div>
+    <div class="muted">
+      Model Integrity Toolkit — licensed internal methodology.
+    </div>
+  </footer>
+</div>
 </body>
 </html>
