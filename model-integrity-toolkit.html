@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Model Integrity Toolkit — QDL Physics Institute</title>
-  <meta name="description" content="The QDL Model Integrity Toolkit is an internal-use, pre-verification structural screen for dimensional admissibility and unit invariance in analytical models." />
+  <meta name="description" content="The QDL Model Integrity Toolkit is an internal-use, pre-verification screen for dimensional admissibility and unit invariance in analytical models." />
   <style>
     :root{
       --fg:#0f172a;
@@ -149,6 +149,7 @@
       <a href="#not">What it is not</a>
       <a href="#how-it-fits">How it fits</a>
       <a href="#maturity">Operational maturity</a>
+      <a href="#fit">Fit</a>
       <a href="#how-to-run">How to run it</a>
       <a href="#licensing">Licensing</a>
       <a href="#contact">Contact</a>
@@ -160,9 +161,8 @@
       <section id="what-it-is" class="card">
         <h2>What it is</h2>
         <p>
-          The QDL Model Integrity Toolkit is a <b>pre-verification structural screen</b>
-          for dimensional coherence and unit invariance. It is designed for internal governance
-          and documentation defensibility, upstream of downstream processes.
+          The QDL Model Integrity Toolkit is a <b>pre-verification screen</b> for dimensional coherence and unit invariance.
+          It is designed for internal governance and documentation defensibility, upstream of downstream processes.
         </p>
         <div class="chips">
           <span class="chip">Pre-verification</span>
@@ -180,6 +180,15 @@
           <li><b>Unit invariance</b>: changing units (e.g., meters → feet) does not change the model’s meaning; the structure remains coherent under unit transformations.</li>
           <li><b>Pre-verification</b>: this screen runs before correctness testing; it checks whether the model is structurally coherent enough to verify.</li>
         </ul>
+
+        <div class="callout" style="margin-top:12px;">
+          <b>Translation (engineering language)</b><br/>
+          <span class="small">
+            “Structural screen” = unit consistency checks + documentation sufficiency checks, performed <b>before</b> verification.
+            “Path A/B/C” = proceed / clarify / stop, based on whether the required unit/dimensional evidence is present.
+          </span>
+        </div>
+
         <p class="muted small">
           The Toolkit reports structural status only (Present / Absent / Indeterminate) and stops.
         </p>
@@ -231,9 +240,26 @@
           It does not require software integration. It can be applied using existing model artifacts
           (equations, unit tables, documentation, and code excerpts treated as documentation).
         </p>
+        <p class="muted small">
+          The Toolkit assumes the model owner can state units and equations; it does not substitute for domain expertise.
+        </p>
         <ul>
           <li><b>Included:</b> checklist + unit-invariance specification + structured report format.</li>
           <li><b>Not included:</b> tooling, code, benchmarks, thresholds, or implementation guidance.</li>
+        </ul>
+      </section>
+
+      <section id="fit" class="card">
+        <h2>Who it is for</h2>
+        <ul>
+          <li>Teams that can declare quantities, units, and equations in a reviewable form.</li>
+          <li>Groups that want a lightweight upstream screen before verification, peer review, or governance review.</li>
+        </ul>
+
+        <h3>Who it is not for</h3>
+        <ul>
+          <li>Use without basic domain/unit knowledge (results will trend Indeterminate).</li>
+          <li>Situations requiring advice, interpretation, or implementation help.</li>
         </ul>
       </section>
 
@@ -283,7 +309,7 @@
       <section class="card">
         <h2>At a glance</h2>
         <ul>
-          <li><b>Role:</b> Pre-verification structural gate</li>
+          <li><b>Role:</b> Pre-verification screen</li>
           <li><b>Outputs:</b> Admissibility + unit-invariance outcomes</li>
           <li><b>Language:</b> Present / Absent / Indeterminate</li>
           <li><b>Support:</b> None</li>
