@@ -605,6 +605,43 @@
       box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
     }
 
+    /* Publication status badges */
+    .status-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.45rem;
+      align-items:center;
+      margin-top:0.55rem;
+    }
+
+    .status-badge{
+      font-size:0.72rem;
+      padding:0.18rem 0.55rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#ffffff;
+      color:#4b5563;
+    }
+
+    .status-accepted{
+      border-color: rgba(22, 163, 74, 0.35);
+      background: rgba(22, 163, 74, 0.08);
+      color:#166534;
+    }
+
+    .status-inpress{
+      border-color: rgba(37, 99, 235, 0.35);
+      background: var(--accent-soft);
+      color:#1d4ed8;
+    }
+
+    .status-note{
+      margin-top:0.45rem;
+      font-size:0.82rem;
+      color:#6b7280;
+      line-height:1.55;
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -677,6 +714,9 @@
         </a>
         <a class="chip" href="experiments.html#benchmarks" title="Benchmarks section on Experiments">
           Benchmarks &amp; Null Tests →
+        </a>
+        <a class="chip" href="#publishing-updates" title="Peer-reviewed acceptances and in-press status">
+          Publishing updates →
         </a>
       </div>
 
@@ -855,6 +895,71 @@
         </a>
       </div>
     </aside>
+  </section>
+
+  <!-- PUBLISHING UPDATES -->
+  <section class="section" id="publishing-updates">
+    <div class="section-header">
+      <h2 class="section-title">Publishing updates</h2>
+      <p class="section-sub">
+        Peer-reviewed acceptances and citable records. Journal versions are listed as “in press” until officially published.
+      </p>
+    </div>
+
+    <div class="featured-inner">
+      <div>
+        <div class="featured-label">Peer-reviewed (accepted)</div>
+
+        <div class="featured-title" style="margin-top:0.15rem;">
+          Two papers accepted for journal publication
+        </div>
+
+        <ul class="ref-list" style="margin-top:0.55rem;">
+          <li>
+            <strong>The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</strong><br />
+            <span style="color:#6b7280;">Accepted · Journal of Theoretical and Applied Physics</span>
+            <div class="status-row" aria-label="Status row">
+              <span class="status-badge status-accepted">Accepted</span>
+              <span class="status-badge status-inpress">In press (publisher DOI pending)</span>
+            </div>
+          </li>
+
+          <li style="margin-top:0.65rem;">
+            <strong>Dimensional Admissibility and Measurement-Pipeline Integrity as Pre-Verification Reliability Controls in Model-Driven Energy and Infrastructure Systems</strong><br />
+            <span style="color:#6b7280;">Accepted · International Journal of Reliability, Quality and Safety Engineering (IJRQSE, World Scientific)</span>
+            <div class="status-row" aria-label="Status row">
+              <span class="status-badge status-accepted">Accepted</span>
+              <span class="status-badge status-inpress">In press (publisher DOI pending)</span>
+            </div>
+          </li>
+        </ul>
+
+        <p class="status-note">
+          Note: Journal links/DOIs will be added here immediately upon publication. Until then, these entries reflect official acceptance notifications.
+        </p>
+      </div>
+
+      <aside class="featured-side">
+        <strong>Citable now (public record)</strong>
+        <p style="margin-top:0.45rem; line-height:1.55;">
+          For immediate citation and access, the standards track is available as a versioned Zenodo record:
+        </p>
+
+        <ul class="featured-list" style="margin-top:0.45rem;">
+          <li>
+            Bourassa, J. D. (2026). <em>Dimensional Admissibility and Measurement Integrity as National Standards for Model-Driven Energy and Infrastructure Systems</em> (v1.0). Zenodo.<br />
+            DOI:
+            <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer">
+              10.5281/zenodo.18112158
+            </a>
+          </li>
+        </ul>
+
+        <p style="margin-top:0.6rem; color:#6b7280;">
+          This keeps the Home page honest: “accepted” for journals, “published” for DOI-backed records.
+        </p>
+      </aside>
+    </div>
   </section>
 
   <!-- PROGRAM OVERVIEW -->
