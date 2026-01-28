@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Publications and preprints from the QDL Physics Institute, including the canonical dimensional-closure framework, structural reconstruction of dimensional analysis, the QDL prediction filter, ledger-constrained renormalization, metrology and engineering auditing, executed benchmark records, and domain applications."
+    content="Publications and preprints from the QDL Physics Institute, including the canonical dimensional-closure framework, structural reconstruction of dimensional analysis, the QDL prediction filter, ledger-constrained renormalization, metrology and engineering auditing, executed benchmark records, the QDL book, and domain applications."
   />
   <style>
     :root {
@@ -19,11 +19,12 @@
       --accent-soft: #eff6ff;
       --link: #0369a1;
 
-      /* NEW: legend/badges */
+      /* legend/badges */
       --badge-bg: #f8fafc;
       --badge-green: #16a34a;
       --badge-amber: #d97706;
       --badge-blue: #2563eb;
+      --badge-purple: #7c3aed;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -227,7 +228,7 @@
 
     .btn-secondary:hover { background: #f9fafb; text-decoration: none; }
 
-    /* NEW: Legend + callouts */
+    /* Legend + callouts */
     .callout {
       background: #ffffff;
       border-radius: 16px;
@@ -276,6 +277,7 @@
     .dot.green { background: var(--badge-green); }
     .dot.blue { background: var(--badge-blue); }
     .dot.amber { background: var(--badge-amber); }
+    .dot.purple { background: var(--badge-purple); }
 
     .mini-grid {
       margin-top: 0.85rem;
@@ -298,6 +300,42 @@
     }
 
     .mini-card strong { color: #111827; }
+
+    /* NEW: Book callout */
+    .book-callout {
+      margin-top: 1rem;
+      padding: 1rem 1.05rem;
+      border-radius: 16px;
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      background: #fbfaff;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      color: #374151;
+    }
+    .book-title {
+      font-weight: 700;
+      font-size: 1.02rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+      color: #111827;
+    }
+    .book-meta {
+      font-size: 0.84rem;
+      color: #6b7280;
+      margin-bottom: 0.55rem;
+      line-height: 1.4;
+    }
+    .book-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.75rem;
+    }
+    .btn-book {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
+    }
+    .btn-book:hover { filter: brightness(1.03); text-decoration: none; }
 
     /* SECTIONS */
 
@@ -366,21 +404,28 @@
       color: #1d4ed8;
     }
 
-    /* NEW: tag variants */
     .tag-executed {
       border-color: rgba(22, 163, 74, 0.35);
       background: #ecfdf5;
       color: #166534;
     }
+
     .tag-method {
       border-color: rgba(37, 99, 235, 0.25);
       background: #eff6ff;
       color: #1d4ed8;
     }
+
     .tag-hypothesis {
       border-color: rgba(217, 119, 6, 0.35);
       background: #fff7ed;
       color: #9a3412;
+    }
+
+    .tag-book {
+      border-color: rgba(124, 58, 237, 0.28);
+      background: rgba(124, 58, 237, 0.08);
+      color: #5b21b6;
     }
 
     .card-title {
@@ -512,18 +557,50 @@
       <div class="hero-chip">Top 5 = clean entry path</div>
       <div class="hero-chip">Executed benchmarks = auditable method records</div>
       <div class="hero-chip">Applications = hypotheses + proposed tests</div>
-      <div class="hero-chip">All items are versioned Zenodo DOIs</div>
+      <div class="hero-chip">All items are versioned Zenodo DOIs (unless otherwise labeled)</div>
     </div>
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#top5">Jump to Top 5 (framework-first)</a>
+      <a class="btn btn-secondary" href="#books">Book (Kindle) + Technical Appendix</a>
       <a class="btn btn-secondary" href="#executed-benchmarks">Executed benchmark records</a>
       <a class="btn btn-secondary" href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
         Zenodo community archive
       </a>
     </div>
 
-    <!-- NEW: Legend -->
+    <!-- BOOK ANNOUNCEMENT / CALLOUT (ABOVE THE FOLD) -->
+    <div class="book-callout" id="books" aria-label="Book announcement">
+      <div class="badge-row" aria-label="Book badges">
+        <div class="badge"><span class="dot purple"></span><strong>Book / Monograph</strong>&nbsp;— reader-facing synthesis</div>
+        <div class="badge"><span class="dot blue"></span><strong>Formal record</strong>&nbsp;— remains in Zenodo + journals</div>
+      </div>
+
+      <div class="book-title">
+        The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
+      </div>
+      <div class="book-meta">
+        Bourassa, J. D. (2026). Kindle Edition (Amazon). ASIN: <strong>B0GHZJHT36</strong>
+      </div>
+      <p style="margin:0; line-height:1.55;">
+        This book is a reader-facing synthesis of the QDL program. It is intended to improve accessibility and narrative continuity.
+        The canonical definitions, benchmarks, and falsifiability conditions remain documented in the DOI-backed Zenodo and journal records listed below.
+      </p>
+
+      <div class="book-actions">
+        <a class="btn btn-book" href="https://www.amazon.com/dp/B0GHZJHT36" target="_blank" rel="noopener noreferrer">
+          View on Amazon Kindle
+        </a>
+        <a class="btn btn-secondary" href="The_Quantized_Dimensional_Ledger_Book-Technical-Appendix.pdf" target="_blank" rel="noopener noreferrer">
+          Technical Appendix (PDF)
+        </a>
+        <a class="btn btn-secondary" href="#top5">
+          Start with Top 5 papers →
+        </a>
+      </div>
+    </div>
+
+    <!-- Legend -->
     <div class="callout" id="legend">
       <div class="callout-title">How to read this list (legend)</div>
       <div class="badge-row" aria-label="Legend badges">
@@ -551,6 +628,10 @@
       <a href="#top5">
         <div class="toc-title">Top 5 (Core Path)</div>
         <div class="toc-sub">Framework-first ordering used site-wide.</div>
+      </a>
+      <a href="#books">
+        <div class="toc-title">Book / Monograph</div>
+        <div class="toc-sub">Kindle + Technical Appendix (PDF).</div>
       </a>
       <a href="#executed-benchmarks">
         <div class="toc-title">Executed Benchmarks</div>
@@ -706,7 +787,7 @@
     </div>
   </section>
 
-  <!-- NEW: EXECUTED BENCHMARKS -->
+  <!-- EXECUTED BENCHMARKS -->
   <section id="executed-benchmarks">
     <div class="section-header">
       <h2 class="section-title">Executed Benchmarks &amp; Null Tests (Records)</h2>
