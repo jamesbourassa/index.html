@@ -8,6 +8,7 @@
     name="description"
     content="QDL Physics Institute – Quantized Dimensional Ledger (QDL) research program in dimensional closure, ledger geometry, structural admissibility, precision metrology, and falsifiable tabletop tests."
   />
+
   <style>
     :root {
       --bg-page: #ffffff;
@@ -26,18 +27,17 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     a {
       color: var(--accent);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
@@ -65,6 +65,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      min-width: 220px;
     }
 
     .logo-icon {
@@ -77,6 +78,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex: 0 0 auto;
     }
 
     .logo-icon img {
@@ -91,6 +93,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-size: 0.82rem;
+      line-height: 1.2;
     }
 
     .logo-text-sub {
@@ -98,6 +101,8 @@
       color: #9ca3af;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      line-height: 1.2;
+      margin-top: 0.1rem;
     }
 
     .nav-links {
@@ -106,6 +111,7 @@
       gap: 0.8rem;
       font-size: 0.85rem;
       align-items: center;
+      justify-content: flex-end;
     }
 
     .nav-links a {
@@ -113,6 +119,7 @@
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
       border: 1px solid transparent;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -137,7 +144,6 @@
     }
 
     /* HERO */
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
@@ -147,9 +153,9 @@
     }
 
     @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .nav { flex-wrap: wrap; }
+      .logo { min-width: 0; }
+      .hero { grid-template-columns: minmax(0, 1fr); }
     }
 
     .hero-kicker {
@@ -185,8 +191,7 @@
     }
 
     .eq {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.98rem;
       color: #111827;
       display: block;
@@ -290,6 +295,7 @@
     .hero-note {
       font-size: 0.8rem;
       color: #6b7280;
+      line-height: 1.55;
     }
 
     .hero-card {
@@ -326,9 +332,7 @@
       color: #4b5563;
     }
 
-    .hero-card-list li {
-      margin-bottom: 0.2rem;
-    }
+    .hero-card-list li { margin-bottom: 0.2rem; }
 
     .hero-card-footer {
       margin-top: 0.45rem;
@@ -339,13 +343,12 @@
       justify-content: space-between;
       gap: 0.5rem;
       color: #6b7280;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     /* SECTIONS */
-
-    .section {
-      margin-bottom: 2.2rem;
-    }
+    .section { margin-bottom: 2.2rem; }
 
     .section-header {
       display: flex;
@@ -353,6 +356,7 @@
       gap: 1rem;
       align-items: baseline;
       margin-bottom: 0.9rem;
+      flex-wrap: wrap;
     }
 
     .section-title {
@@ -366,6 +370,7 @@
       font-size: 0.85rem;
       color: #6b7280;
       max-width: 28rem;
+      line-height: 1.55;
     }
 
     .overview-grid {
@@ -375,15 +380,10 @@
     }
 
     @media (max-width: 980px) {
-      .overview-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .overview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
     @media (max-width: 640px) {
-      .overview-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .overview-grid { grid-template-columns: minmax(0, 1fr); }
     }
 
     .card-link {
@@ -412,6 +412,7 @@
       font-size: 0.82rem;
       color: #4b5563;
       margin-bottom: 0.4rem;
+      line-height: 1.55;
     }
 
     .card-link-cta {
@@ -433,9 +434,7 @@
     }
 
     @media (max-width: 880px) {
-      .featured-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .featured-inner { grid-template-columns: minmax(0, 1fr); }
     }
 
     .featured-label {
@@ -450,6 +449,7 @@
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.3rem;
+      line-height: 1.35;
     }
 
     .featured-side {
@@ -474,19 +474,16 @@
       margin: 0.4rem 0 0;
     }
 
-    .featured-list li {
-      margin-bottom: 0.25rem;
-    }
+    .featured-list li { margin-bottom: 0.25rem; line-height: 1.55; }
 
     .bullet-list {
       margin: 0.3rem 0 0 1.1rem;
       font-size: 0.86rem;
       color: #374151;
+      line-height: 1.55;
     }
 
-    .bullet-list li {
-      margin-bottom: 0.2rem;
-    }
+    .bullet-list li { margin-bottom: 0.2rem; }
 
     /* Latest Results card styling */
     .latest-card {
@@ -497,6 +494,7 @@
       padding: 1rem 1.1rem 1.1rem;
       font-size: 0.86rem;
       color: #374151;
+      line-height: 1.55;
     }
 
     .ref-list {
@@ -507,14 +505,13 @@
       color: #374151;
     }
 
-    .ref-list li {
-      margin-bottom: 0.25rem;
-    }
+    .ref-list li { margin-bottom: 0.25rem; line-height: 1.55; }
 
     .note {
       margin-top: 0.75rem;
       font-size: 0.82rem;
       color: #6b7280;
+      line-height: 1.55;
     }
 
     /* standards / admissibility section styling */
@@ -536,6 +533,7 @@
       background: #ffffff;
       font-size: 0.86rem;
       color: #111827;
+      line-height: 1.55;
     }
 
     .quote strong {
@@ -606,40 +604,40 @@
     }
 
     /* Publication status badges */
-    .status-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.45rem;
-      align-items:center;
-      margin-top:0.55rem;
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      align-items: center;
+      margin-top: 0.55rem;
     }
 
-    .status-badge{
-      font-size:0.72rem;
-      padding:0.18rem 0.55rem;
-      border-radius:999px;
-      border:1px solid #e5e7eb;
-      background:#ffffff;
-      color:#4b5563;
+    .status-badge {
+      font-size: 0.72rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      color: #4b5563;
     }
 
-    .status-accepted{
+    .status-accepted {
       border-color: rgba(22, 163, 74, 0.35);
       background: rgba(22, 163, 74, 0.08);
-      color:#166534;
+      color: #166534;
     }
 
-    .status-inpress{
+    .status-inpress {
       border-color: rgba(37, 99, 235, 0.35);
       background: var(--accent-soft);
-      color:#1d4ed8;
+      color: #1d4ed8;
     }
 
-    .status-note{
-      margin-top:0.45rem;
-      font-size:0.82rem;
-      color:#6b7280;
-      line-height:1.55;
+    .status-note {
+      margin-top: 0.45rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+      line-height: 1.55;
     }
 
     footer {
@@ -658,682 +656,577 @@
       gap: 1rem;
       flex-wrap: wrap;
       align-items: center;
+      line-height: 1.55;
     }
   </style>
 </head>
+
 <body>
-<header>
-  <div class="nav">
-    <div class="logo">
-      <div class="logo-icon">
-        <img src="qdl-logo.png" alt="QDL Physics Institute logo" onerror="this.style.display='none';" />
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="qdl-logo.png" alt="QDL Physics Institute logo" onerror="this.style.display='none';" />
+        </div>
+        <div>
+          <div class="logo-text-main">QDL Physics Institute</div>
+          <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+        </div>
       </div>
-      <div>
-        <div class="logo-text-main">QDL Physics Institute</div>
-        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
-      </div>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="framework.html">Framework</a>
+        <a href="experiments.html">Experiments</a>
+        <a href="publications.html">Publications</a>
+        <a href="institute.html">Institute</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="framework.html">Framework</a>
-      <a href="experiments.html">Experiments</a>
-      <a href="publications.html">Publications</a>
-      <a href="institute.html">Institute</a>
-      <a href="benefits.html">Benefits</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Independent theoretical & metrological research</div>
+        <h1>Quantized Dimensional Ledger (QDL)</h1>
 
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <div class="hero-kicker">Independent theoretical & metrological research</div>
-
-      <h1>Quantized Dimensional Ledger (QDL)</h1>
-
-      <p class="hero-subtitle">
-        QDL is a proposed <strong>pre-dynamical admissibility framework</strong> for analyzing dimensional representations of physical models
-        in a single, explicit ledger language.
-      </p>
-
-      <!-- Ledger basis equation anchor -->
-      <div class="hero-eq" aria-label="QDL dimensional basis equation">
-        <span class="eq"><kbd>𝒟</kbd> = ⟨<kbd>L</kbd>, <kbd>F</kbd>⟩<sub>3+2</sub></span>
-        <div class="eq-caption">Ledger basis (representation)</div>
-      </div>
-
-      <!-- One-click benchmark hub pointer (Publications ↔ Experiments) -->
-      <div class="bench-hub" aria-label="Benchmark hub links">
-        <a class="chip" href="publications.html#phenomenology-experiments" title="Benchmarks hub on Publications">
-          <span class="dot" aria-hidden="true"></span>
-          Executed Benchmarks (hub) →
-        </a>
-        <a class="chip" href="experiments.html#benchmarks" title="Benchmarks section on Experiments">
-          Benchmarks &amp; Null Tests →
-        </a>
-        <a class="chip" href="#publishing-updates" title="Peer-reviewed acceptances and in-press status">
-          Publishing updates →
-        </a>
-      </div>
-
-      <!-- Scope & limits callout (above the fold) -->
-      <div class="callout" style="margin-top:0.75rem;" role="note" aria-label="Scope and limits">
-        <p style="margin-bottom:0.35rem;">
-          <strong>Scope &amp; limits (read this first):</strong>
-        </p>
-        <p style="margin:0; line-height:1.55;">
-          QDL is <strong>not</strong> a replacement for quantum field theory, general relativity, or effective field theory.
-          It proposes a structural constraint layer that can be <strong>tested</strong> through basis-invariance checks, scaling behavior,
-          and closure consistency on declared model families. If empirically successful models systematically violate ledger closure under
-          declared transforms, the closure postulate is falsified.
-        </p>
-      </div>
-
-      <p class="hero-micro">
-        Intended role: a <strong>constraint layer</strong> on admissible representations — not a claim of new particles, forces, or dynamics.
-      </p>
-
-      <div class="hero-badges">
-        <span class="badge badge-accent">3L + 2F ledger</span>
-        <span class="badge">Quantized Dimensional Cell (QDC)</span>
-        <span class="badge">EFT / SMEFT: hypotheses under test</span>
-        <span class="badge">Gravity &amp; metrology: applications in development</span>
-      </div>
-
-      <!-- Canonical framework reference callout -->
-      <div class="hero-card" style="margin: 0.8rem 0 0.9rem;">
-        <div class="hero-card-title">Framework Definition (Canonical Reference)</div>
-        <div class="hero-card-chip">Admissibility &amp; validation layer</div>
-
-        <p style="margin-bottom:0.35rem; line-height:1.45;">
-          The formal definition of QDL as a dimensional-closure admissibility and model-validation framework is given in:
+        <p class="hero-subtitle">
+          QDL is a proposed <strong>pre-dynamical admissibility framework</strong> for analyzing dimensional representations of physical models in a single, explicit ledger language.
         </p>
 
-        <p style="margin-bottom:0.35rem; line-height:1.45;">
-          <strong>Dimensional Closure as a National-Scale Model Validation Layer: From Dimensional Analysis to Prediction Filtering, Measurement Auditability, and Interoperable Trust</strong><br />
-          <span style="color:#6b7280;">Bourassa, J. D. (2025). Zenodo.</span>
-          DOI:
-          <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
-            10.5281/zenodo.17979789
+        <!-- Ledger basis equation anchor -->
+        <div class="hero-eq" aria-label="QDL dimensional basis equation">
+          <span class="eq"><kbd>𝒟</kbd> = ⟨<kbd>L</kbd>, <kbd>F</kbd>⟩<sub>3+2</sub></span>
+          <div class="eq-caption">Ledger basis (representation)</div>
+        </div>
+
+        <!-- One-click benchmark hub pointer (Publications ↔ Experiments) -->
+        <div class="bench-hub" aria-label="Benchmark hub links">
+          <a class="chip" href="publications.html#phenomenology-experiments" title="Benchmarks hub on Publications">
+            <span class="dot" aria-hidden="true"></span>
+            Executed Benchmarks (hub) →
           </a>
-        </p>
-
-        <p style="margin-bottom:0; line-height:1.45; color:#6b7280; font-size:0.82rem;">
-          This framework reference is independent of any specific application thread (cosmology, EFT, metrology, engineering).
-        </p>
-      </div>
-
-      <div class="hero-actions">
-        <a
-          href="https://doi.org/10.5281/zenodo.17979789"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          Read canonical framework paper
-        </a>
-        <a href="publications.html" class="btn btn-secondary">View core program papers</a>
-        <a href="experiments.html#benchmarks" class="btn btn-secondary">Benchmarks →</a>
-      </div>
-
-      <p class="hero-note">
-        <strong>Location:</strong> Huntley, Illinois, USA ·
-        <strong>Focus:</strong> dimensional closure, ledger geometry, structural admissibility,
-        precision metrology, and falsifiable tabletop tests.
-      </p>
-    </div>
-
-    <!-- RIGHT HERO CARD (FILLED: REFEREE QUICKSTART + STATUS + FALSIFICATION) -->
-    <aside class="hero-card">
-      <div class="hero-card-title">Referee quickstart</div>
-      <div class="hero-card-chip">What to read • what is claimed • what can fail</div>
-
-      <p style="margin-bottom:0.55rem; line-height:1.45;">
-        This homepage is intentionally structured for a first-pass editorial/referee read:
-        <strong>definition → minimal demonstration → scope limits → evidence status</strong>.
-      </p>
-
-      <div style="margin:0.55rem 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#ffffff;">
-        <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
-          One-page reading path
-        </div>
-        <ul class="hero-card-list" style="margin:0.25rem 0 0 1rem;">
-          <li>
-            <strong>Definition:</strong>
-            <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
-              canonical framework paper
-            </a>
-          </li>
-          <li>
-            <strong>Operational checks:</strong>
-            <a href="experiments.html" style="white-space:nowrap;">Experiments</a>
-            (declared transforms + failure conditions)
-          </li>
-          <li>
-            <strong>Evidence inventory:</strong>
-            <a href="publications.html" style="white-space:nowrap;">Publications</a>
-            (each thread labeled by status)
-          </li>
-          <li>
-            <strong>Executed artifacts:</strong>
-            <a href="publications.html#phenomenology-experiments" style="white-space:nowrap;">benchmarks hub</a>
-            (methodological; no new effects claimed)
-          </li>
-        </ul>
-      </div>
-
-      <div style="margin:0 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#f9fafb;">
-        <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
-          Claim boundaries (kept tight)
-        </div>
-        <ul class="hero-card-list" style="margin:0.25rem 0 0 1rem;">
-          <li><strong>Not</strong> a new force/particle/dynamics.</li>
-          <li><strong>Is</strong> a proposed <em>representation constraint</em> on dimensional bookkeeping.</li>
-          <li>Nontrivial only if it <strong>reduces</strong> admissible model families (no “constraint by adding freedom”).</li>
-          <li>Cross-domain applications are treated as <strong>hypotheses</strong> unless independently demonstrated.</li>
-        </ul>
-      </div>
-
-      <div style="margin:0 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#ffffff;">
-        <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
-          Evidence status legend (used across pages)
+          <a class="chip" href="experiments.html#benchmarks" title="Benchmarks section on Experiments">
+            Benchmarks &amp; Null Tests →
+          </a>
+          <a class="chip" href="#publishing-updates" title="Peer-reviewed acceptances and in-press status">
+            Publishing updates →
+          </a>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.45rem;">
-          <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid #e5e7eb; background:#ffffff; color:#4b5563;">Defined (formal)</span>
-          <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid rgba(37,99,235,0.35); background:var(--accent-soft); color:#1d4ed8;">Proposed test</span>
-          <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb; color:#4b5563;">Benchmark (executed)</span>
-          <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid #e5e7eb; background:#fff7ed; color:#9a3412;">Hypothesis stage</span>
-        </div>
-
-        <p style="margin:0; line-height:1.45; color:#4b5563; font-size:0.82rem;">
-          “Executed” refers to public, reproducible artifacts on Zenodo. “Proposed” indicates a pre-stated discriminant
-          that is not yet independently executed.
-        </p>
-      </div>
-
-      <div style="margin:0 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid rgba(37,99,235,0.25); background:#f8fafc;">
-        <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
-          What would falsify QDL (homepage-level)
-        </div>
-
-        <p style="margin:0 0 0.35rem; line-height:1.45; color:#374151; font-size:0.84rem;">
-          Under a declared set of <strong>audit transforms</strong>, if empirically successful models systematically violate closure
-          and cannot satisfy the constraint without <strong>adding degrees of freedom</strong> that erase the discriminant,
-          then the closure postulate fails (for that platform/sweep).
-        </p>
-
-        <p style="margin:0; line-height:1.45; color:#6b7280; font-size:0.8rem;">
-          The explicit discriminant templates and failure conditions are listed on
-          <a href="experiments.html"><strong>Experiments</strong></a>.
-        </p>
-      </div>
-
-      <div style="margin:0 0 0.4rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#ffffff;">
-        <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
-          Quick links (highest signal)
-        </div>
-        <ul class="hero-card-list" style="margin:0.25rem 0 0 1rem;">
-          <li><a href="framework.html"><strong>Framework</strong></a> — local definitions + scope separation.</li>
-          <li><a href="experiments.html#benchmarks"><strong>Benchmarks &amp; Null Tests</strong></a> — executed vs proposed flags.</li>
-          <li><a href="publications.html"><strong>Publications</strong></a> — core papers + status notes.</li>
-        </ul>
-      </div>
-
-      <div class="hero-card-footer">
-        <span>Designed for fast editorial triage</span>
-        <a
-          href="https://zenodo.org/communities/qdl-physics-institute/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          All QDL papers
-        </a>
-      </div>
-    </aside>
-  </section>
-
-  <!-- PUBLISHING UPDATES -->
-  <section class="section" id="publishing-updates">
-    <div class="section-header">
-      <h2 class="section-title">Publishing updates</h2>
-      <p class="section-sub">
-        Peer-reviewed acceptances and citable records. Journal versions are listed as “in press” until officially published.
-      </p>
-    </div>
-
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">Peer-reviewed (accepted)</div>
-
-        <div class="featured-title" style="margin-top:0.15rem;">
-          Two papers accepted for journal publication
-        </div>
-
-        <ul class="ref-list" style="margin-top:0.55rem;">
-          <li>
-            <strong>The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</strong><br />
-            <span style="color:#6b7280;">Accepted · Journal of Theoretical and Applied Physics</span>
-            <div class="status-row" aria-label="Status row">
-              <span class="status-badge status-accepted">Accepted</span>
-              <span class="status-badge status-inpress">In press (publisher DOI pending)</span>
-            </div>
-          </li>
-
-          <li style="margin-top:0.65rem;">
-            <strong>Dimensional Admissibility and Measurement-Pipeline Integrity as Pre-Verification Reliability Controls in Model-Driven Energy and Infrastructure Systems</strong><br />
-            <span style="color:#6b7280;">Accepted · International Journal of Reliability, Quality and Safety Engineering (IJRQSE, World Scientific)</span>
-            <div class="status-row" aria-label="Status row">
-              <span class="status-badge status-accepted">Accepted</span>
-              <span class="status-badge status-inpress">In press (publisher DOI pending)</span>
-            </div>
-          </li>
-        </ul>
-
-        <p class="status-note">
-          Note: Journal links/DOIs will be added here immediately upon publication. Until then, these entries reflect official acceptance notifications.
-        </p>
-      </div>
-
-      <aside class="featured-side">
-        <strong>Citable now (public record)</strong>
-        <p style="margin-top:0.45rem; line-height:1.55;">
-          For immediate citation and access, the standards track is available as a versioned Zenodo record:
-        </p>
-
-        <ul class="featured-list" style="margin-top:0.45rem;">
-          <li>
-            Bourassa, J. D. (2026). <em>Dimensional Admissibility and Measurement Integrity as National Standards for Model-Driven Energy and Infrastructure Systems</em> (v1.0). Zenodo.<br />
-            DOI:
-            <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer">
-              10.5281/zenodo.18112158
-            </a>
-          </li>
-        </ul>
-
-        <p style="margin-top:0.6rem; color:#6b7280;">
-          Notes: “accepted” for journals, “published” for DOI-backed records.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- PROGRAM OVERVIEW -->
-  <section class="section" id="overview">
-    <div class="section-header">
-      <h2 class="section-title">Program Overview</h2>
-      <p class="section-sub">
-        Explore the core components of the QDL research program: the structural framework,
-        proposed tests, formal publications, and the institute’s mission.
-      </p>
-    </div>
-    <div class="overview-grid">
-      <a href="framework.html" class="card-link">
-        <div class="card-link-title">Framework</div>
-        <div class="card-link-body">
-          The 3L + 2F ledger, Quantized Dimensional Cell, closure/admissibility definitions,
-          and application threads in EFT, gravity, and metrology (clearly labeled by status).
-        </div>
-        <div class="card-link-cta">View QDL framework →</div>
-      </a>
-
-      <a href="experiments.html" class="card-link">
-        <div class="card-link-title">Experiments</div>
-        <div class="card-link-body">
-          Torsion balances, NV centers, cavity scaling, and metamaterial tests designed
-          as falsifiable probes of QDL-motivated scaling and closure claims.
-        </div>
-        <div class="card-link-cta">See experimental roadmap →</div>
-      </a>
-
-      <a href="publications.html" class="card-link">
-        <div class="card-link-title">Publications</div>
-        <div class="card-link-body">
-          Core framework papers, reconstruction work, methodological benchmarks, and application papers (EFT/SMEFT, gravity, metrology),
-          with status and scope notes.
-        </div>
-        <div class="card-link-cta">Browse key papers →</div>
-      </a>
-
-      <a href="publications.html#phenomenology-experiments" class="card-link">
-        <div class="card-link-title">Executed Benchmarks (Hub)</div>
-        <div class="card-link-body">
-          One-click access to the three executed residual-first benchmark records and the experiment-facing roadmap pointers.
-        </div>
-        <div class="card-link-cta">Go to benchmark hub →</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- DIMENSIONAL ADMISSIBILITY & MEASUREMENT INTEGRITY -->
-  <section class="section" id="admissibility-standards">
-    <div class="section-header">
-      <h2 class="section-title">Dimensional Admissibility &amp; Measurement Integrity</h2>
-      <p class="section-sub">
-        A framework-independent, standards-ready audit layer for model-driven energy and infrastructure systems.
-      </p>
-    </div>
-
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">Standards-ready translation</div>
-        <div class="featured-title">From QDL-origin insight to national-scale model governance</div>
-
-        <p style="margin-bottom:0.55rem; line-height:1.55;">
-          This work originated in the Quantized Dimensional Ledger (QDL) research program, where strict dimensional
-          bookkeeping repeatedly exposed decision-level inconsistencies in otherwise well-posed models. By separating
-          that observation from QDL’s broader physical claims, the paper extracts a general, falsifiable principle—
-          <strong>dimensional admissibility</strong>—and translates it into a standards-ready audit framework applicable to
-          model-driven energy and infrastructure systems. <strong>No QDL assumptions are required for its use.</strong>
-        </p>
-
-        <div class="quote" aria-label="Dimensional admissibility principle">
-          <strong>Falsifiable principle</strong>
-          Physically equivalent representations must yield identical model-derived decisions.
-        </div>
-
-        <div class="pill-row" aria-label="Audit-layer highlights">
-          <span class="pill pill-accent">Pre-verification audit layer</span>
-          <span class="pill">Unit/base invariance tests</span>
-          <span class="pill">Model card + waiver templates</span>
-          <span class="pill">Procurement-ready artifacts</span>
-          <span class="pill">NIST/DOE pilot pathway</span>
-        </div>
-
-        <div class="callout" role="note" aria-label="Zenodo record for national standards paper">
+        <!-- Scope & limits callout (above the fold) -->
+        <div class="callout" style="margin-top:0.75rem;" role="note" aria-label="Scope and limits">
           <p style="margin-bottom:0.35rem;">
-            <strong>Reference (v1.0):</strong><br />
-            Bourassa, J. D. (2026). <em>Dimensional Admissibility and Measurement Integrity as National Standards for Model-Driven
-            Energy and Infrastructure Systems</em> (v1.0). Zenodo.
+            <strong>Scope &amp; limits (read this first):</strong>
           </p>
-          <p style="margin-bottom:0;">
-            DOI:
-            <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer">
-              10.5281/zenodo.18112158
-            </a>
+          <p style="margin:0; line-height:1.55;">
+            QDL is <strong>not</strong> a replacement for quantum field theory, general relativity, or effective field theory.
+            It proposes a structural constraint layer that can be <strong>tested</strong> through basis-invariance checks,
+            scaling behavior, and closure consistency on declared model families. If empirically successful models
+            systematically violate ledger closure under declared transforms, the closure postulate is falsified.
           </p>
         </div>
 
-        <div class="hero-actions" style="margin-top:0.85rem;">
-          <a
-            href="https://doi.org/10.5281/zenodo.18112158"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-primary"
-          >
-            Read the national standards paper
-          </a>
-          <a href="benefits.html" class="btn btn-secondary">Why this matters →</a>
+        <p class="hero-micro">
+          Intended role: a <strong>constraint layer</strong> on admissible representations — not a claim of new particles, forces, or dynamics.
+        </p>
+
+        <div class="hero-badges" aria-label="Program badges">
+          <span class="badge badge-accent">3L + 2F ledger</span>
+          <span class="badge">Quantized Dimensional Cell (QDC)</span>
+          <span class="badge">EFT / SMEFT: hypotheses under test</span>
+          <span class="badge">Gravity &amp; metrology: applications in development</span>
         </div>
 
-        <p style="margin-top:0.7rem; color:#6b7280; font-size:0.82rem; line-height:1.55;">
-          This standards framing is intentionally independent of QDL’s broader theoretical program. Its purpose is to make
-          representational invariance testable, reportable, and auditable across real-world optimization and planning pipelines.
-        </p>
-      </div>
+        <!-- Canonical framework reference callout -->
+        <div class="hero-card" style="margin: 0.8rem 0 0.9rem;">
+          <div class="hero-card-title">Framework Definition (Canonical Reference)</div>
+          <div class="hero-card-chip">Admissibility &amp; validation layer</div>
 
-      <aside class="featured-side">
-        <strong>What it enables</strong>
-        <ul class="featured-list" style="margin-top:0.45rem;">
-          <li><strong>Decision robustness:</strong> detect representation fragility that changes dispatch, sizing, or planning outcomes.</li>
-          <li><strong>Measurement integrity:</strong> separate physical dynamics from pipeline artifacts before decisions are made.</li>
-          <li><strong>Procurement clarity:</strong> model cards and documented waivers for legacy constraints.</li>
-          <li><strong>Standards adoption:</strong> NISTIR → voluntary guidance → procurement → consensus standard.</li>
-        </ul>
+          <p style="margin-bottom:0.35rem; line-height:1.45;">
+            The formal definition of QDL as a dimensional-closure admissibility and model-validation framework is given in:
+          </p>
 
-        <p style="margin-top:0.6rem;">
-          This section provides an on-ramp for agency, infrastructure, and metrology audiences without requiring any commitment
-          to QDL’s broader physics claims.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- LATEST RESULTS / BENCHMARKS -->
-  <section class="section" id="latest-results">
-    <div class="section-header">
-      <h2 class="section-title">Latest Results</h2>
-      <p class="section-sub">
-        Three executed, reproducible residual-first benchmarks using public data across metrology-relevant domains.
-      </p>
-    </div>
-
-    <div class="latest-card">
-      <p style="line-height:1.55; margin-bottom:0.45rem;">
-        <strong>Residual-first benchmarking</strong> treats coherent residual structure as the primary model-adequacy
-        diagnostic under declared model families and a stated parameter budget. These records are designed for
-        straightforward external replication. No new physical effects are claimed; the contribution is methodological.
-      </p>
-
-      <ul class="ref-list">
-        <li>
-          Optical cavity benchmark (v1.0):
-          <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">
-            10.5281/zenodo.18076864
-          </a>
-        </li>
-        <li>
-          NV-center ODMR benchmark (v1.0):
-          <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">
-            10.5281/zenodo.18069870
-          </a>
-        </li>
-        <li>
-          Benchmarks &amp; null tests (v1.0):
-          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">
-            10.5281/zenodo.18057668
-          </a>
-        </li>
-      </ul>
-
-      <p class="note">
-        Full benchmark summaries, replication materials, and the broader validation roadmap are on the
-        <a href="experiments.html"><strong>Experiments</strong></a> page — and the one-click hub is on
-        <a href="publications.html#phenomenology-experiments"><strong>Publications → Phenomenology &amp; Experiments</strong></a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- EXPERIMENTAL PROGRAM -->
-  <section class="section" id="experimental-program">
-    <div class="section-header">
-      <h2 class="section-title">Experimental Program</h2>
-      <p class="section-sub">
-        QDL is designed to be testable. The experimental validation roadmap focuses on
-        four complementary tabletop platforms that probe QDL-driven scaling and closure claims
-        in distinct physical regimes.
-      </p>
-    </div>
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">Validation roadmap</div>
-        <div class="featured-title">Falsifiable tests of a 3L + 2F ledger</div>
-        <p style="margin-bottom:0.5rem;">
-          The QDL Experimental Validation Protocol outlines how a proposed conserved Quantized
-          Dimensional Cell could leave measurable signatures in precision experiments.
-          Each platform is designed so that standard theories and QDL give clearly
-          distinguishable scaling behavior under declared transforms.
-        </p>
-        <ul class="bullet-list">
-          <li><strong>Precision torsion-balance scaling</strong> – torque and deflection vs. arm length and mass structure.</li>
-          <li><strong>NV-center frequency-shift measurements</strong> – structured offsets in spin resonance under QDL-motivated fields.</li>
-          <li><strong>Cavity-mode length–frequency scaling</strong> – resonance structure vs. cavity geometry in the L–F ledger.</li>
-          <li><strong>Metamaterial dispersion-collapse tests</strong> – engineered media approximating QDC-like coherence.</li>
-        </ul>
-      </div>
-      <aside class="featured-side">
-        <strong>Protocol reference:</strong>
-        <ul class="featured-list">
-          <li>
-            Bourassa, J. (2025).
-            <em>QDL Experimental Validation Protocol: A Unified Roadmap for Torsion,
-            NV-Center, Cavity, and Metamaterial Tests.</em><br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17654442"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17654442
-            </a>
-          </li>
-        </ul>
-        <p style="margin-top:0.6rem;">
-          Together, these platforms provide an empirically grounded way to evaluate whether
-          ledger-style dimensional closure adds constraints beyond conventional unit bookkeeping.
-        </p>
-      </aside>
-    </div>
-  </section>
-
-  <!-- TOP 5 PAPERS -->
-  <section class="section" id="featured">
-    <div class="section-header">
-      <h2 class="section-title">Framework &amp; Method Highlights</h2>
-      <p class="section-sub">
-        A framework-first path through QDL: definition → reconstruction → method → technical rigor → real-world application.
-      </p>
-    </div>
-    <div class="featured-inner">
-      <div>
-        <div class="featured-label">Selected core papers (framework-first)</div>
-        <ol class="bullet-list">
-          <li>
+          <p style="margin-bottom:0.35rem; line-height:1.45;">
             <strong>Dimensional Closure as a National-Scale Model Validation Layer: From Dimensional Analysis to Prediction Filtering, Measurement Auditability, and Interoperable Trust</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
+            <span style="color:#6b7280;">Bourassa, J. D. (2025). Zenodo.</span>
             DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17979789"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
               10.5281/zenodo.17979789
             </a>
-          </li>
+          </p>
 
-          <li>
-            <strong>The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis and Its Role in Modern Physics</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17882709"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17882709
-            </a>
-          </li>
+          <p style="margin-bottom:0; line-height:1.45; color:#6b7280; font-size:0.82rem;">
+            This framework reference is independent of any specific application thread (cosmology, EFT, metrology, engineering).
+          </p>
+        </div>
 
-          <li>
-            <strong>The Quantized Dimensional Ledger as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.17848782"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.17848782
-            </a>
-          </li>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Read canonical framework paper
+          </a>
+          <a href="publications.html" class="btn btn-secondary">View core program papers</a>
+          <a href="experiments.html#benchmarks" class="btn btn-secondary">Benchmarks →</a>
+        </div>
 
-          <li>
-            <strong>Ledger-Constrained Renormalization: Operator Pruning and Discrete RG Structure from Dimensional Closure</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.18025072"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.18025072
-            </a>
-          </li>
-
-          <li>
-            <strong>Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines: A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies</strong><br />
-            Bourassa, J. D. (2025). Zenodo.<br />
-            DOI:
-            <a
-              href="https://doi.org/10.5281/zenodo.18025343"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              10.5281/zenodo.18025343
-            </a>
-          </li>
-        </ol>
-
-        <p style="margin-top:0.7rem; color:#6b7280; font-size:0.82rem;">
-          Additional application papers (including cosmology) are presented on the Publications page with scope notes.
+        <p class="hero-note">
+          <strong>Location:</strong> Huntley, Illinois, USA ·
+          <strong>Focus:</strong> dimensional closure, ledger geometry, structural admissibility, precision metrology, and falsifiable tabletop tests.
         </p>
       </div>
 
-      <aside class="featured-side">
-        <strong>How to read these</strong>
-        <ul class="featured-list">
-          <li>Start with the <em>Validation Layer</em> paper (canonical framework definition).</li>
-          <li>Then read the <em>Structural Reconstruction</em> paper (foundational reframe of dimensional analysis).</li>
-          <li>Proceed to <em>Prediction Filter</em> (method across EFT, constants, gravity, metrology).</li>
-          <li>Use <em>Renormalization</em> as the technical-rigor anchor.</li>
-          <li>Finish with <em>Engineering / auditing</em> for real-world application.</li>
+      <!-- RIGHT HERO CARD (FILLED: REFEREE QUICKSTART + STATUS + FALSIFICATION) -->
+      <aside class="hero-card">
+        <div class="hero-card-title">Referee quickstart</div>
+        <div class="hero-card-chip">What to read • what is claimed • what can fail</div>
+
+        <p style="margin-bottom:0.55rem; line-height:1.45;">
+          This homepage is intentionally structured for a first-pass editorial/referee read:
+          <strong>definition → minimal demonstration → scope limits → evidence status</strong>.
+        </p>
+
+        <div style="margin:0.55rem 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#ffffff;">
+          <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
+            One-page reading path
+          </div>
+          <ul class="hero-card-list" style="margin:0.25rem 0 0 1rem;">
+            <li><strong>Definition:</strong> <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">canonical framework paper</a></li>
+            <li><strong>Operational checks:</strong> <a href="experiments.html" style="white-space:nowrap;">Experiments</a> (declared transforms + failure conditions)</li>
+            <li><strong>Evidence inventory:</strong> <a href="publications.html" style="white-space:nowrap;">Publications</a> (each thread labeled by status)</li>
+            <li><strong>Executed artifacts:</strong> <a href="publications.html#phenomenology-experiments" style="white-space:nowrap;">benchmarks hub</a> (methodological; no new effects claimed)</li>
+          </ul>
+        </div>
+
+        <div style="margin:0 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#f9fafb;">
+          <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
+            Claim boundaries (kept tight)
+          </div>
+          <ul class="hero-card-list" style="margin:0.25rem 0 0 1rem;">
+            <li><strong>Not</strong> a new force/particle/dynamics.</li>
+            <li><strong>Is</strong> a proposed <em>representation constraint</em> on dimensional bookkeeping.</li>
+            <li>Nontrivial only if it <strong>reduces</strong> admissible model families (no “constraint by adding freedom”).</li>
+            <li>Cross-domain applications are treated as <strong>hypotheses</strong> unless independently demonstrated.</li>
+          </ul>
+        </div>
+
+        <div style="margin:0 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#ffffff;">
+          <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
+            Evidence status legend (used across pages)
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.45rem;">
+            <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid #e5e7eb; background:#ffffff; color:#4b5563;">Defined (formal)</span>
+            <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid rgba(37,99,235,0.35); background:var(--accent-soft); color:#1d4ed8;">Proposed test</span>
+            <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb; color:#4b5563;">Benchmark (executed)</span>
+            <span style="font-size:0.72rem; padding:0.18rem 0.55rem; border-radius:999px; border:1px solid #e5e7eb; background:#fff7ed; color:#9a3412;">Hypothesis stage</span>
+          </div>
+          <p style="margin:0; line-height:1.45; color:#4b5563; font-size:0.82rem;">
+            “Executed” refers to public, reproducible artifacts on Zenodo. “Proposed” indicates a pre-stated discriminant that is not yet independently executed.
+          </p>
+        </div>
+
+        <div style="margin:0 0 0.65rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid rgba(37,99,235,0.25); background:#f8fafc;">
+          <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
+            What would falsify QDL (homepage-level)
+          </div>
+          <p style="margin:0 0 0.35rem; line-height:1.45; color:#374151; font-size:0.84rem;">
+            Under a declared set of <strong>audit transforms</strong>, if empirically successful models systematically violate closure and cannot satisfy the constraint without
+            <strong>adding degrees of freedom</strong> that erase the discriminant, then the closure postulate fails (for that platform/sweep).
+          </p>
+          <p style="margin:0; line-height:1.45; color:#6b7280; font-size:0.8rem;">
+            The explicit discriminant templates and failure conditions are listed on <a href="experiments.html"><strong>Experiments</strong></a>.
+          </p>
+        </div>
+
+        <div style="margin:0 0 0.4rem; padding:0.65rem 0.75rem; border-radius:14px; border:1px solid #e5e7eb; background:#ffffff;">
+          <div style="font-size:0.74rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:0.35rem;">
+            Quick links (highest signal)
+          </div>
+          <ul class="hero-card-list" style="margin:0.25rem 0 0 1rem;">
+            <li><a href="framework.html"><strong>Framework</strong></a> — local definitions + scope separation.</li>
+            <li><a href="experiments.html#benchmarks"><strong>Benchmarks &amp; Null Tests</strong></a> — executed vs proposed flags.</li>
+            <li><a href="publications.html"><strong>Publications</strong></a> — core papers + status notes.</li>
+          </ul>
+        </div>
+
+        <div class="hero-card-footer">
+          <span>Designed for fast editorial triage</span>
+          <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">All QDL papers</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PUBLISHING UPDATES -->
+    <section class="section" id="publishing-updates">
+      <div class="section-header">
+        <h2 class="section-title">Publishing updates</h2>
+        <p class="section-sub">
+          Peer-reviewed acceptances and citable records. Journal versions are listed as “in press” until officially published.
+        </p>
+      </div>
+
+      <div class="featured-inner">
+        <div>
+          <div class="featured-label">Peer-reviewed (accepted)</div>
+          <div class="featured-title" style="margin-top:0.15rem;">
+            Two papers accepted for journal publication
+          </div>
+
+          <ul class="ref-list" style="margin-top:0.55rem;">
+            <li>
+              <strong>The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</strong><br />
+              <span style="color:#6b7280;">Accepted · Journal of Theoretical and Applied Physics</span>
+              <div class="status-row" aria-label="Status row">
+                <span class="status-badge status-accepted">Accepted</span>
+                <span class="status-badge status-inpress">In press (publisher DOI pending)</span>
+              </div>
+            </li>
+
+            <li style="margin-top:0.65rem;">
+              <strong>Dimensional Admissibility and Measurement-Pipeline Integrity as Pre-Verification Reliability Controls in Model-Driven Energy and Infrastructure Systems</strong><br />
+              <span style="color:#6b7280;">Accepted · International Journal of Reliability, Quality and Safety Engineering (IJRQSE, World Scientific)</span>
+              <div class="status-row" aria-label="Status row">
+                <span class="status-badge status-accepted">Accepted</span>
+                <span class="status-badge status-inpress">In press (publisher DOI pending)</span>
+              </div>
+            </li>
+          </ul>
+
+          <p class="status-note">
+            Note: Journal links/DOIs will be added here immediately upon publication. Until then, these entries reflect official acceptance notifications.
+          </p>
+        </div>
+
+        <aside class="featured-side">
+          <strong>Citable now (public record)</strong>
+          <p style="margin-top:0.45rem; line-height:1.55;">
+            For immediate citation and access, the standards track is available as a versioned Zenodo record:
+          </p>
+          <ul class="featured-list" style="margin-top:0.45rem;">
+            <li>
+              Bourassa, J. D. (2026). <em>Dimensional Admissibility and Measurement Integrity as National Standards for Model-Driven Energy and Infrastructure Systems</em> (v1.0). Zenodo.<br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18112158</a>
+            </li>
+          </ul>
+          <p style="margin-top:0.6rem; color:#6b7280;">
+            Notes: “accepted” for journals, “published” for DOI-backed records.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROGRAM OVERVIEW -->
+    <section class="section" id="overview">
+      <div class="section-header">
+        <h2 class="section-title">Program Overview</h2>
+        <p class="section-sub">
+          Explore the core components of the QDL research program: the structural framework, proposed tests, formal publications, and the institute’s mission.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        <a href="framework.html" class="card-link">
+          <div class="card-link-title">Framework</div>
+          <div class="card-link-body">
+            The 3L + 2F ledger, Quantized Dimensional Cell, closure/admissibility definitions, and application threads in EFT, gravity, and metrology (clearly labeled by status).
+          </div>
+          <div class="card-link-cta">View QDL framework →</div>
+        </a>
+
+        <a href="experiments.html" class="card-link">
+          <div class="card-link-title">Experiments</div>
+          <div class="card-link-body">
+            Torsion balances, NV centers, cavity scaling, and metamaterial tests designed as falsifiable probes of QDL-motivated scaling and closure claims.
+          </div>
+          <div class="card-link-cta">See experimental roadmap →</div>
+        </a>
+
+        <a href="publications.html" class="card-link">
+          <div class="card-link-title">Publications</div>
+          <div class="card-link-body">
+            Core framework papers, reconstruction work, methodological benchmarks, and application papers (EFT/SMEFT, gravity, metrology), with status and scope notes.
+          </div>
+          <div class="card-link-cta">Browse key papers →</div>
+        </a>
+
+        <a href="publications.html#phenomenology-experiments" class="card-link">
+          <div class="card-link-title">Executed Benchmarks (Hub)</div>
+          <div class="card-link-body">
+            One-click access to the three executed residual-first benchmark records and the experiment-facing roadmap pointers.
+          </div>
+          <div class="card-link-cta">Go to benchmark hub →</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- DIMENSIONAL ADMISSIBILITY & MEASUREMENT INTEGRITY -->
+    <section class="section" id="admissibility-standards">
+      <div class="section-header">
+        <h2 class="section-title">Dimensional Admissibility &amp; Measurement Integrity</h2>
+        <p class="section-sub">
+          A framework-independent, standards-ready audit layer for model-driven energy and infrastructure systems.
+        </p>
+      </div>
+
+      <div class="featured-inner">
+        <div>
+          <div class="featured-label">Standards-ready translation</div>
+          <div class="featured-title">From QDL-origin insight to national-scale model governance</div>
+
+          <p style="margin-bottom:0.55rem; line-height:1.55;">
+            This work originated in the Quantized Dimensional Ledger (QDL) research program, where strict dimensional bookkeeping repeatedly exposed decision-level inconsistencies in otherwise well-posed models.
+            By separating that observation from QDL’s broader physical claims, the paper extracts a general, falsifiable principle—
+            <strong>dimensional admissibility</strong>—and translates it into a standards-ready audit framework applicable to model-driven energy and infrastructure systems.
+            <strong>No QDL assumptions are required for its use.</strong>
+          </p>
+
+          <div class="quote" aria-label="Dimensional admissibility principle">
+            <strong>Falsifiable principle</strong>
+            Physically equivalent representations must yield identical model-derived decisions.
+          </div>
+
+          <div class="pill-row" aria-label="Audit-layer highlights">
+            <span class="pill pill-accent">Pre-verification audit layer</span>
+            <span class="pill">Unit/base invariance tests</span>
+            <span class="pill">Model card + waiver templates</span>
+            <span class="pill">Procurement-ready artifacts</span>
+            <span class="pill">NIST/DOE pilot pathway</span>
+          </div>
+
+          <div class="callout" role="note" aria-label="Zenodo record for national standards paper">
+            <p style="margin-bottom:0.35rem;">
+              <strong>Reference (v1.0):</strong><br />
+              Bourassa, J. D. (2026). <em>Dimensional Admissibility and Measurement Integrity as National Standards for Model-Driven Energy and Infrastructure Systems</em> (v1.0). Zenodo.
+            </p>
+            <p style="margin-bottom:0;">
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18112158</a>
+            </p>
+          </div>
+
+          <div class="hero-actions" style="margin-top:0.85rem;">
+            <a href="https://doi.org/10.5281/zenodo.18112158" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Read the national standards paper
+            </a>
+            <a href="benefits.html" class="btn btn-secondary">Why this matters →</a>
+          </div>
+
+          <p style="margin-top:0.7rem; color:#6b7280; font-size:0.82rem; line-height:1.55;">
+            This standards framing is intentionally independent of QDL’s broader theoretical program. Its purpose is to make representational invariance testable, reportable, and auditable across real-world optimization and planning pipelines.
+          </p>
+        </div>
+
+        <aside class="featured-side">
+          <strong>What it enables</strong>
+          <ul class="featured-list" style="margin-top:0.45rem;">
+            <li><strong>Decision robustness:</strong> detect representation fragility that changes dispatch, sizing, or planning outcomes.</li>
+            <li><strong>Measurement integrity:</strong> separate physical dynamics from pipeline artifacts before decisions are made.</li>
+            <li><strong>Procurement clarity:</strong> model cards and documented waivers for legacy constraints.</li>
+            <li><strong>Standards adoption:</strong> NISTIR → voluntary guidance → procurement → consensus standard.</li>
+          </ul>
+          <p style="margin-top:0.6rem;">
+            This section provides an on-ramp for agency, infrastructure, and metrology audiences without requiring any commitment to QDL’s broader physics claims.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- LATEST RESULTS / BENCHMARKS -->
+    <section class="section" id="latest-results">
+      <div class="section-header">
+        <h2 class="section-title">Latest Results</h2>
+        <p class="section-sub">
+          Three executed, reproducible residual-first benchmarks using public data across metrology-relevant domains.
+        </p>
+      </div>
+
+      <div class="latest-card">
+        <p style="margin-bottom:0.45rem;">
+          <strong>Residual-first benchmarking</strong> treats coherent residual structure as the primary model-adequacy diagnostic under declared model families and a stated parameter budget.
+          These records are designed for straightforward external replication. No new physical effects are claimed; the contribution is methodological.
+        </p>
+
+        <ul class="ref-list">
+          <li>
+            Optical cavity benchmark (v1.0):
+            <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18076864</a>
+          </li>
+          <li>
+            NV-center ODMR benchmark (v1.0):
+            <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18069870</a>
+          </li>
+          <li>
+            Benchmarks &amp; null tests (v1.0):
+            <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18057668</a>
+          </li>
         </ul>
-        <p style="margin-top:0.6rem;">
-          This ordering keeps the Home page framework-first while preserving breadth across domains.
-        </p>
-      </aside>
-    </div>
-  </section>
 
-  <!-- WHY QDL MATTERS / ABOUT INSTITUTE -->
-  <section class="section" id="significance">
-    <div class="section-header">
-      <h2 class="section-title">Why QDL Matters</h2>
-      <p class="section-sub">
-        A concise view of how the QDL program fits into 21st-century theoretical and
-        experimental physics.
-      </p>
-    </div>
-    <div class="featured-inner">
-      <div>
-        <p style="font-size:0.9rem;color:#374151;margin-bottom:0.6rem;">
-          QDL proposes a dimensional-closure admissibility architecture intended to complement (not replace) established physical theories.
-          The core claim is structural: whether a conserved ledger target and closure rule can constrain admissible representations in a
-          basis-invariant way.
-        </p>
-        <p style="font-size:0.9rem;color:#374151;">
-          The Institute’s goal is to make every step—from ledger construction to benchmark design—transparent and externally checkable,
-          with clearly stated assumptions, transforms, and failure conditions.
+        <p class="note">
+          Full benchmark summaries, replication materials, and the broader validation roadmap are on the <a href="experiments.html"><strong>Experiments</strong></a> page —
+          and the one-click hub is on <a href="publications.html#phenomenology-experiments"><strong>Publications → Phenomenology &amp; Experiments</strong></a>.
         </p>
       </div>
-      <aside class="featured-side">
-        <strong>About the QDL Physics Institute</strong>
-        <p style="margin-top:0.4rem;font-size:0.86rem;color:#374151;">
-          The QDL Physics Institute conducts research at the intersection of dimensional
-          analysis, metrology, quantum field theory, gravitational physics, and geometric
-          foundations of physical laws. QDLPhysics.org is the public archive for
-          publications, experimental methods, educational materials, and ongoing research
-          in the QDL program.
+    </section>
+
+    <!-- EXPERIMENTAL PROGRAM -->
+    <section class="section" id="experimental-program">
+      <div class="section-header">
+        <h2 class="section-title">Experimental Program</h2>
+        <p class="section-sub">
+          QDL is designed to be testable. The experimental validation roadmap focuses on four complementary tabletop platforms that probe QDL-driven scaling and closure claims in distinct physical regimes.
         </p>
-      </aside>
+      </div>
+
+      <div class="featured-inner">
+        <div>
+          <div class="featured-label">Validation roadmap</div>
+          <div class="featured-title">Falsifiable tests of a 3L + 2F ledger</div>
+
+          <p style="margin-bottom:0.5rem;">
+            The QDL Experimental Validation Protocol outlines how a proposed conserved Quantized Dimensional Cell could leave measurable signatures in precision experiments.
+            Each platform is designed so that standard theories and QDL give clearly distinguishable scaling behavior under declared transforms.
+          </p>
+
+          <ul class="bullet-list">
+            <li><strong>Precision torsion-balance scaling</strong> – torque and deflection vs. arm length and mass structure.</li>
+            <li><strong>NV-center frequency-shift measurements</strong> – structured offsets in spin resonance under QDL-motivated fields.</li>
+            <li><strong>Cavity-mode length–frequency scaling</strong> – resonance structure vs. cavity geometry in the L–F ledger.</li>
+            <li><strong>Metamaterial dispersion-collapse tests</strong> – engineered media approximating QDC-like coherence.</li>
+          </ul>
+        </div>
+
+        <aside class="featured-side">
+          <strong>Protocol reference:</strong>
+          <ul class="featured-list" style="margin-top:0.45rem;">
+            <li>
+              Bourassa, J. (2025). <em>QDL Experimental Validation Protocol: A Unified Roadmap for Torsion, NV-Center, Cavity, and Metamaterial Tests.</em><br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17654442</a>
+            </li>
+          </ul>
+
+          <p style="margin-top:0.6rem;">
+            Together, these platforms provide an empirically grounded way to evaluate whether ledger-style dimensional closure adds constraints beyond conventional unit bookkeeping.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TOP 5 PAPERS -->
+    <section class="section" id="featured">
+      <div class="section-header">
+        <h2 class="section-title">Framework &amp; Method Highlights</h2>
+        <p class="section-sub">
+          A framework-first path through QDL: definition → reconstruction → method → technical rigor → real-world application.
+        </p>
+      </div>
+
+      <div class="featured-inner">
+        <div>
+          <div class="featured-label">Selected core papers (framework-first)</div>
+
+          <ol class="bullet-list">
+            <li>
+              <strong>Dimensional Closure as a National-Scale Model Validation Layer: From Dimensional Analysis to Prediction Filtering, Measurement Auditability, and Interoperable Trust</strong><br />
+              Bourassa, J. D. (2025). Zenodo.<br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17979789</a>
+            </li>
+            <li>
+              <strong>The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis and Its Role in Modern Physics</strong><br />
+              Bourassa, J. D. (2025). Zenodo.<br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17882709</a>
+            </li>
+            <li>
+              <strong>The Quantized Dimensional Ledger as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement</strong><br />
+              Bourassa, J. D. (2025). Zenodo.<br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17848782</a>
+            </li>
+            <li>
+              <strong>Ledger-Constrained Renormalization: Operator Pruning and Discrete RG Structure from Dimensional Closure</strong><br />
+              Bourassa, J. D. (2025). Zenodo.<br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025072</a>
+            </li>
+            <li>
+              <strong>Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines: A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies</strong><br />
+              Bourassa, J. D. (2025). Zenodo.<br />
+              DOI:
+              <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025343</a>
+            </li>
+          </ol>
+
+          <p style="margin-top:0.7rem; color:#6b7280; font-size:0.82rem;">
+            Additional application papers (including cosmology) are presented on the Publications page with scope notes.
+          </p>
+        </div>
+
+        <aside class="featured-side">
+          <strong>How to read these</strong>
+          <ul class="featured-list" style="margin-top:0.45rem;">
+            <li>Start with the <em>Validation Layer</em> paper (canonical framework definition).</li>
+            <li>Then read the <em>Structural Reconstruction</em> paper (foundational reframe of dimensional analysis).</li>
+            <li>Proceed to <em>Prediction Filter</em> (method across EFT, constants, gravity, metrology).</li>
+            <li>Use <em>Renormalization</em> as the technical-rigor anchor.</li>
+            <li>Finish with <em>Engineering / auditing</em> for real-world application.</li>
+          </ul>
+
+          <p style="margin-top:0.6rem;">
+            This ordering keeps the Home page framework-first while preserving breadth across domains.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- WHY QDL MATTERS / ABOUT INSTITUTE -->
+    <section class="section" id="significance">
+      <div class="section-header">
+        <h2 class="section-title">Why QDL Matters</h2>
+        <p class="section-sub">
+          A concise view of how the QDL program fits into 21st-century theoretical and experimental physics.
+        </p>
+      </div>
+
+      <div class="featured-inner">
+        <div>
+          <p style="font-size:0.9rem; color:#374151; margin-bottom:0.6rem; line-height:1.55;">
+            QDL proposes a dimensional-closure admissibility architecture intended to complement (not replace) established physical theories.
+            The core claim is structural: whether a conserved ledger target and closure rule can constrain admissible representations in a basis-invariant way.
+          </p>
+
+          <p style="font-size:0.9rem; color:#374151; line-height:1.55;">
+            The Institute’s goal is to make every step—from ledger construction to benchmark design—transparent and externally checkable,
+            with clearly stated assumptions, transforms, and failure conditions.
+          </p>
+        </div>
+
+        <aside class="featured-side">
+          <strong>About the QDL Physics Institute</strong>
+          <p style="margin-top:0.4rem; font-size:0.86rem; color:#374151; line-height:1.55;">
+            The QDL Physics Institute conducts research at the intersection of dimensional analysis, metrology, quantum field theory,
+            gravitational physics, and geometric foundations of physical laws. QDLPhysics.org is the public archive for publications,
+            experimental methods, educational materials, and ongoing research in the QDL program.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
+      <span>Quantized Dimensional Ledger · Structural Admissibility · Metrology · Testable Constraints</span>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="footer-inner">
-    <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
-    <span>Quantized Dimensional Ledger · Structural Admissibility · Metrology · Testable Constraints</span>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
