@@ -144,7 +144,6 @@
     }
 
     /* HERO */
-
     .hero {
       margin-bottom: 1.6rem;
       background: var(--bg-card);
@@ -301,7 +300,7 @@
 
     .mini-card strong { color: #111827; }
 
-    /* NEW: Book callout */
+    /* Book callout (with cover) */
     .book-callout {
       margin-top: 1rem;
       padding: 1rem 1.05rem;
@@ -311,6 +310,34 @@
       box-shadow: 0 8px 24px rgba(15,23,42,0.06);
       color: #374151;
     }
+
+    .book-wrap {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+      margin-top: 0.6rem;
+    }
+
+    @media (max-width: 640px) {
+      .book-wrap { grid-template-columns: 1fr; }
+    }
+
+    .book-cover {
+      width: 140px;
+      border-radius: 10px;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: #ffffff;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.08);
+      overflow: hidden;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .book-title {
       font-weight: 700;
       font-size: 1.02rem;
@@ -318,27 +345,30 @@
       line-height: 1.3;
       color: #111827;
     }
+
     .book-meta {
       font-size: 0.84rem;
       color: #6b7280;
       margin-bottom: 0.55rem;
       line-height: 1.4;
     }
+
     .book-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.55rem;
       margin-top: 0.75rem;
     }
+
     .btn-book {
       background: linear-gradient(135deg, #7c3aed, #6d28d9);
       color: #ffffff;
       box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
     }
+
     .btn-book:hover { filter: brightness(1.03); text-decoration: none; }
 
     /* SECTIONS */
-
     section { margin-top: 1.9rem; }
 
     .section-header {
@@ -420,12 +450,6 @@
       border-color: rgba(217, 119, 6, 0.35);
       background: #fff7ed;
       color: #9a3412;
-    }
-
-    .tag-book {
-      border-color: rgba(124, 58, 237, 0.28);
-      background: rgba(124, 58, 237, 0.08);
-      color: #5b21b6;
     }
 
     .card-title {
@@ -576,27 +600,35 @@
         <div class="badge"><span class="dot blue"></span><strong>Formal record</strong>&nbsp;— remains in Zenodo + journals</div>
       </div>
 
-      <div class="book-title">
-        The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
-      </div>
-      <div class="book-meta">
-        Bourassa, J. D. (2026). Kindle Edition (Amazon). ASIN: <strong>B0GHZJHT36</strong>
-      </div>
-      <p style="margin:0; line-height:1.55;">
-        This book is a reader-facing synthesis of the QDL program. It is intended to improve accessibility and narrative continuity.
-        The canonical definitions, benchmarks, and falsifiability conditions remain documented in the DOI-backed Zenodo and journal records listed below.
-      </p>
+      <div class="book-wrap" aria-label="Book cover and description">
+        <div class="book-cover">
+          <img src="book-cover.png" alt="Cover of The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics" />
+        </div>
 
-      <div class="book-actions">
-        <a class="btn btn-book" href="https://www.amazon.com/dp/B0GHZJHT36" target="_blank" rel="noopener noreferrer">
-          View on Amazon Kindle
-        </a>
-        <a class="btn btn-secondary" href="The_Quantized_Dimensional_Ledger_Book-Technical-Appendix.pdf" target="_blank" rel="noopener noreferrer">
-          Technical Appendix (PDF)
-        </a>
-        <a class="btn btn-secondary" href="#top5">
-          Start with Top 5 papers →
-        </a>
+        <div>
+          <div class="book-title">
+            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
+          </div>
+          <div class="book-meta">
+            Bourassa, J. D. (2026). Kindle Edition (Amazon). ASIN: <strong>B0GHZJHT36</strong>
+          </div>
+          <p style="margin:0; line-height:1.55;">
+            This book is a reader-facing synthesis of the QDL program. It is intended to improve accessibility and narrative continuity.
+            The canonical definitions, benchmarks, and falsifiability conditions remain documented in the DOI-backed Zenodo and journal records listed below.
+          </p>
+
+          <div class="book-actions">
+            <a class="btn btn-book" href="https://www.amazon.com/dp/B0GHZJHT36" target="_blank" rel="noopener noreferrer">
+              View on Amazon Kindle
+            </a>
+            <a class="btn btn-secondary" href="The_Quantized_Dimensional_Ledger_Book-Technical-Appendix.pdf" target="_blank" rel="noopener noreferrer">
+              Technical Appendix (PDF)
+            </a>
+            <a class="btn btn-secondary" href="#top5">
+              Start with Top 5 papers →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -625,46 +657,16 @@
     </div>
 
     <div class="toc" aria-label="Page sections">
-      <a href="#top5">
-        <div class="toc-title">Top 5 (Core Path)</div>
-        <div class="toc-sub">Framework-first ordering used site-wide.</div>
-      </a>
-      <a href="#books">
-        <div class="toc-title">Book / Monograph</div>
-        <div class="toc-sub">Kindle + Technical Appendix (PDF).</div>
-      </a>
-      <a href="#executed-benchmarks">
-        <div class="toc-title">Executed Benchmarks</div>
-        <div class="toc-sub">Auditable records (no new effects claimed).</div>
-      </a>
-      <a href="#core-framework">
-        <div class="toc-title">Core Framework &amp; Geometry</div>
-        <div class="toc-sub">QDC geometry, minimum-length links.</div>
-      </a>
-      <a href="#eft-smeft">
-        <div class="toc-title">EFT &amp; SMEFT</div>
-        <div class="toc-sub">Ledger lattices, exclusions, relations.</div>
-      </a>
-      <a href="#metrology-constants">
-        <div class="toc-title">Metrology &amp; Constants</div>
-        <div class="toc-sub">QMU ledgers, constants ontology.</div>
-      </a>
-      <a href="#cosmology">
-        <div class="toc-title">Cosmology</div>
-        <div class="toc-sub">Downstream application domain.</div>
-      </a>
-      <a href="#phenomenology-experiments">
-        <div class="toc-title">Phenomenology &amp; Experiments</div>
-        <div class="toc-sub">Signals + validation protocol.</div>
-      </a>
-      <a href="#unified-sm-gravity">
-        <div class="toc-title">Unified SM + Gravity</div>
-        <div class="toc-sub">Closure across sectors.</div>
-      </a>
-      <a href="#program-synthesis">
-        <div class="toc-title">Program Synthesis</div>
-        <div class="toc-sub">Roadmaps and overviews.</div>
-      </a>
+      <a href="#top5"><div class="toc-title">Top 5 (Core Path)</div><div class="toc-sub">Framework-first ordering used site-wide.</div></a>
+      <a href="#books"><div class="toc-title">Book / Monograph</div><div class="toc-sub">Kindle + Technical Appendix (PDF).</div></a>
+      <a href="#executed-benchmarks"><div class="toc-title">Executed Benchmarks</div><div class="toc-sub">Auditable records (no new effects claimed).</div></a>
+      <a href="#core-framework"><div class="toc-title">Core Framework &amp; Geometry</div><div class="toc-sub">QDC geometry, minimum-length links.</div></a>
+      <a href="#eft-smeft"><div class="toc-title">EFT &amp; SMEFT</div><div class="toc-sub">Ledger lattices, exclusions, relations.</div></a>
+      <a href="#metrology-constants"><div class="toc-title">Metrology &amp; Constants</div><div class="toc-sub">QMU ledgers, constants ontology.</div></a>
+      <a href="#cosmology"><div class="toc-title">Cosmology</div><div class="toc-sub">Downstream application domain.</div></a>
+      <a href="#phenomenology-experiments"><div class="toc-title">Phenomenology &amp; Experiments</div><div class="toc-sub">Signals + validation protocol.</div></a>
+      <a href="#unified-sm-gravity"><div class="toc-title">Unified SM + Gravity</div><div class="toc-sub">Closure across sectors.</div></a>
+      <a href="#program-synthesis"><div class="toc-title">Program Synthesis</div><div class="toc-sub">Roadmaps and overviews.</div></a>
     </div>
   </section>
 
@@ -672,9 +674,7 @@
   <section id="top5">
     <div class="section-header">
       <h2 class="section-title">Top 5 (Framework-first Core Path)</h2>
-      <p class="section-kicker">
-        Recommended “front door” into QDL: definitions → reconstruction → method → rigor → application.
-      </p>
+      <p class="section-kicker">Recommended “front door” into QDL: definitions → reconstruction → method → rigor → application.</p>
     </div>
 
     <div class="card-column">
@@ -693,10 +693,7 @@
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17979789</a>
         </p>
-        <p>
-          Canonical definition of QDL as an admissibility and validation framework independent of any single application.
-          If you only read one “definition” paper first, it’s this one.
-        </p>
+        <p>Canonical definition of QDL as an admissibility and validation framework independent of any single application. If you only read one “definition” paper first, it’s this one.</p>
       </div>
 
       <div class="card">
@@ -706,17 +703,12 @@
           <span class="tag">Dimensional analysis</span>
           <span class="tag">Foundations</span>
         </div>
-        <h3 class="card-title">
-          The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis and Its Role in Modern Physics
-        </h3>
+        <h3 class="card-title">The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis and Its Role in Modern Physics</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17882709</a>
         </p>
-        <p>
-          Reframes dimensional analysis from bookkeeping into a structural rule set; motivates the ledger viewpoint and
-          establishes the bridge from “units” to “admissibility constraints.”
-        </p>
+        <p>Reframes dimensional analysis from bookkeeping into a structural rule set; motivates the ledger viewpoint and establishes the bridge from “units” to “admissibility constraints.”</p>
       </div>
 
       <div class="card">
@@ -726,17 +718,12 @@
           <span class="tag">Prediction filter</span>
           <span class="tag">EFT / constants / gravity / metrology</span>
         </div>
-        <h3 class="card-title">
-          The Quantized Dimensional Ledger as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement
-        </h3>
+        <h3 class="card-title">The Quantized Dimensional Ledger as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17848782</a>
         </p>
-        <p>
-          Core method paper: applies closure to filter admissible field content and operator structure while linking constant combinations,
-          gravity sectors, and precision measurement under the same ledger constraint.
-        </p>
+        <p>Core method paper: applies closure to filter admissible field content and operator structure while linking constant combinations, gravity sectors, and precision measurement under the same ledger constraint.</p>
       </div>
 
       <div class="card">
@@ -746,17 +733,12 @@
           <span class="tag">Renormalization</span>
           <span class="tag">Operator pruning</span>
         </div>
-        <h3 class="card-title">
-          Ledger-Constrained Renormalization: Operator Pruning and Discrete RG Structure from Dimensional Closure
-        </h3>
+        <h3 class="card-title">Ledger-Constrained Renormalization: Operator Pruning and Discrete RG Structure from Dimensional Closure</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025072</a>
         </p>
-        <p>
-          Technical anchor: demonstrates how closure constraints act directly on RG structure and operator admissibility,
-          sharpening the “filter” idea into an explicit pruning rule set.
-        </p>
+        <p>Technical anchor: demonstrates how closure constraints act directly on RG structure and operator admissibility, sharpening the “filter” idea into an explicit pruning rule set.</p>
       </div>
 
       <div class="card">
@@ -766,24 +748,15 @@
           <span class="tag">Engineering</span>
           <span class="tag">Measurement pipelines</span>
         </div>
-        <h3 class="card-title">
-          Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines:
-          A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies
-        </h3>
+        <h3 class="card-title">Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines: A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025343</a>
         </p>
-        <p>
-          Demonstrates how QDL-style closure becomes a practical pre-verification layer in real modeling pipelines,
-          emphasizing auditability and measurement-aware validation.
-        </p>
+        <p>Demonstrates how QDL-style closure becomes a practical pre-verification layer in real modeling pipelines, emphasizing auditability and measurement-aware validation.</p>
       </div>
 
-      <p class="note">
-        The rest of this page groups additional work by topic. These are valuable, but the Top 5 above is the cleanest
-        framework-first entrance and should match the ordering used on the Home page.
-      </p>
+      <p class="note">The rest of this page groups additional work by topic. These are valuable, but the Top 5 above is the cleanest framework-first entrance and should match the ordering used on the Home page.</p>
     </div>
   </section>
 
@@ -791,9 +764,7 @@
   <section id="executed-benchmarks">
     <div class="section-header">
       <h2 class="section-title">Executed Benchmarks &amp; Null Tests (Records)</h2>
-      <p class="section-kicker">
-        Auditable benchmark records designed for replication using public data. Focus: residual structure and model adequacy (not effect claims).
-      </p>
+      <p class="section-kicker">Auditable benchmark records designed for replication using public data. Focus: residual structure and model adequacy (not effect claims).</p>
     </div>
 
     <div class="card-column">
@@ -808,10 +779,7 @@
           Zenodo record DOI:
           <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18057668</a>
         </p>
-        <p>
-          Establishes the residual-first benchmarking protocol and provides executed null-test anchors for precision datasets
-          where a declared reduced family is expected to pass if no additional structure is present.
-        </p>
+        <p>Establishes the residual-first benchmarking protocol and provides executed null-test anchors for precision datasets where a declared reduced family is expected to pass if no additional structure is present.</p>
       </div>
 
       <div class="card">
@@ -825,10 +793,7 @@
           Zenodo record DOI:
           <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18069870</a>
         </p>
-        <p>
-          Residual-first benchmarking comparing a baseline spin-Hamiltonian family with a strictly reduced comparison family using public ODMR data,
-          emphasizing transparency and structural adequacy rather than fit magnitude alone.
-        </p>
+        <p>Residual-first benchmarking comparing a baseline spin-Hamiltonian family with a strictly reduced comparison family using public ODMR data, emphasizing transparency and structural adequacy rather than fit magnitude alone.</p>
       </div>
 
       <div class="card">
@@ -842,10 +807,7 @@
           Zenodo record DOI:
           <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18076864</a>
         </p>
-        <p>
-          Residual-first diagnostics distinguish stabilized traces (noise-like residuals under the reduced family) from uncontrolled resonance scans
-          (coherent residual structure persists under both reduced and low-order baseline families).
-        </p>
+        <p>Residual-first diagnostics distinguish stabilized traces (noise-like residuals under the reduced family) from uncontrolled resonance scans (coherent residual structure persists under both reduced and low-order baseline families).</p>
       </div>
 
       <p class="note">
@@ -860,9 +822,7 @@
   <section id="core-framework">
     <div class="section-header">
       <h2 class="section-title">Core Framework &amp; Geometry (Beyond Top 5)</h2>
-      <p class="section-kicker">
-        Additional framework papers on QDC geometry, minimum-length structure, and the ledger’s geometric interpretation.
-      </p>
+      <p class="section-kicker">Additional framework papers on QDC geometry, minimum-length structure, and the ledger’s geometric interpretation.</p>
     </div>
 
     <div class="card-column">
@@ -873,17 +833,12 @@
           <span class="tag">Dimensional coherence</span>
           <span class="tag">Gravity sector</span>
         </div>
-        <h3 class="card-title">
-          Quantum Gravity from Dimensional Coherence: Minimum-Length Geometry from the Quantized Dimensional Ledger
-        </h3>
+        <h3 class="card-title">Quantum Gravity from Dimensional Coherence: Minimum-Length Geometry from the Quantized Dimensional Ledger</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17848573" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17848573</a>
         </p>
-        <p>
-          Develops a gravitational sector in which dimensional coherence under QDL motivates a minimum-length geometry and coherence conditions
-          tied back to QDC structure. Best read after the Top 5.
-        </p>
+        <p>Develops a gravitational sector in which dimensional coherence under QDL motivates a minimum-length geometry and coherence conditions tied back to QDC structure. Best read after the Top 5.</p>
       </div>
 
       <div class="card">
@@ -897,10 +852,7 @@
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17683786</a>
         </p>
-        <p>
-          Treats the QDC as a geometric object (not merely unit choice), motivating the link between ledger exponents and a higher-dimensional
-          space–time–frequency interpretation.
-        </p>
+        <p>Treats the QDC as a geometric object (not merely unit choice), motivating the link between ledger exponents and a higher-dimensional space–time–frequency interpretation.</p>
       </div>
     </div>
   </section>
@@ -909,9 +861,7 @@
   <section id="unified-sm-gravity">
     <div class="section-header">
       <h2 class="section-title">Unified Standard Model + Gravity</h2>
-      <p class="section-kicker">
-        Papers applying the closure framework to field content across the Standard Model and gravity sectors.
-      </p>
+      <p class="section-kicker">Papers applying the closure framework to field content across the Standard Model and gravity sectors.</p>
     </div>
 
     <div class="card-column">
@@ -922,17 +872,12 @@
           <span class="tag">SM + gravity</span>
           <span class="tag">Field content</span>
         </div>
-        <h3 class="card-title">
-          Quantized Dimensional Ledger as a Unified Dimensional Closure Framework for the Standard Model and Gravity
-        </h3>
+        <h3 class="card-title">Quantized Dimensional Ledger as a Unified Dimensional Closure Framework for the Standard Model and Gravity</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17742903</a>
         </p>
-        <p>
-          Unifies Standard Model fields and a scalar–tensor gravity sector under a common closure rule,
-          embedding fields, couplings, and constants in a shared ledger that closes onto a QDC.
-        </p>
+        <p>Unifies Standard Model fields and a scalar–tensor gravity sector under a common closure rule, embedding fields, couplings, and constants in a shared ledger that closes onto a QDC.</p>
       </div>
 
       <div class="card">
@@ -940,17 +885,12 @@
           <span class="tag">Earlier development</span>
           <span class="tag">Scalar–tensor</span>
         </div>
-        <h3 class="card-title">
-          A Unified Ledger-Based Framework for Physical Theories: From Dimensional Cells to Scalar–Tensor Field Structure
-        </h3>
+        <h3 class="card-title">A Unified Ledger-Based Framework for Physical Theories: From Dimensional Cells to Scalar–Tensor Field Structure</h3>
         <p class="card-meta">
           Bourassa, J. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17704896" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17704896</a>
         </p>
-        <p>
-          Earlier scalar–tensor development from QDC and closure. Useful for historical continuity and derivations,
-          while the framework-first Top 5 remains the recommended entry path.
-        </p>
+        <p>Earlier scalar–tensor development from QDC and closure. Useful for historical continuity and derivations, while the framework-first Top 5 remains the recommended entry path.</p>
       </div>
     </div>
   </section>
@@ -959,9 +899,7 @@
   <section id="eft-smeft">
     <div class="section-header">
       <h2 class="section-title">EFT, SMEFT &amp; Magnetic-Moment Structure</h2>
-      <p class="section-kicker">
-        Applications of ledger closure to operator lattices, SMEFT operator sets, and magnetic-moment structure.
-      </p>
+      <p class="section-kicker">Applications of ledger closure to operator lattices, SMEFT operator sets, and magnetic-moment structure.</p>
     </div>
 
     <div class="card-column">
@@ -977,10 +915,7 @@
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17773324" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17773324</a>
         </p>
-        <p>
-          Develops EFT operator space as a ledger lattice constrained by closure, organizing admissible operators,
-          exclusions, and dimensional relations among couplings and constants.
-        </p>
+        <p>Develops EFT operator space as a ledger lattice constrained by closure, organizing admissible operators, exclusions, and dimensional relations among couplings and constants.</p>
       </div>
 
       <div class="card">
@@ -990,17 +925,12 @@
           <span class="tag">Operator exclusions</span>
           <span class="tag">Wilson relations</span>
         </div>
-        <h3 class="card-title">
-          Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations
-        </h3>
+        <h3 class="card-title">Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17780443</a>
         </p>
-        <p>
-          Applies closure rules to SMEFT, deriving structured operator exclusions and relations among Wilson coefficients,
-          with the prediction-filter framework as the guiding principle.
-        </p>
+        <p>Applies closure rules to SMEFT, deriving structured operator exclusions and relations among Wilson coefficients, with the prediction-filter framework as the guiding principle.</p>
       </div>
 
       <div class="card">
@@ -1010,17 +940,12 @@
           <span class="tag">Magnetic moments</span>
           <span class="tag">Ledger geometry</span>
         </div>
-        <h3 class="card-title">
-          The Ledger Geometry of Magnetic Moments: A Quantized Dimensional Ledger Derivation of the Electron and Muon g–2 Factors
-        </h3>
+        <h3 class="card-title">The Ledger Geometry of Magnetic Moments: A Quantized Dimensional Ledger Derivation of the Electron and Muon g–2 Factors</h3>
         <p class="card-meta">
           Bourassa, J. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17693061" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17693061</a>
         </p>
-        <p>
-          Reinterprets electron and muon anomalous magnetic moments in terms of ledger geometry and dimensional flow,
-          connecting corrections to QDL structure.
-        </p>
+        <p>Reinterprets electron and muon anomalous magnetic moments in terms of ledger geometry and dimensional flow, connecting corrections to QDL structure.</p>
       </div>
     </div>
   </section>
@@ -1029,9 +954,7 @@
   <section id="metrology-constants">
     <div class="section-header">
       <h2 class="section-title">Metrology &amp; Constants</h2>
-      <p class="section-kicker">
-        Papers tying metrology practice, measurement chains, and physical constants to the QDL ledger and closure principle.
-      </p>
+      <p class="section-kicker">Papers tying metrology practice, measurement chains, and physical constants to the QDL ledger and closure principle.</p>
     </div>
 
     <div class="card-column">
@@ -1042,17 +965,12 @@
           <span class="tag">Metrology</span>
           <span class="tag">Constants</span>
         </div>
-        <h3 class="card-title">
-          The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
-        </h3>
+        <h3 class="card-title">The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17619526</a>
         </p>
-        <p>
-          Introduces the Quantized Measurement Unit (QMU) ledger as a dimensional audit tool, classifying physical constants and linking
-          metrology practice directly to closure and the conserved QDC.
-        </p>
+        <p>Introduces the Quantized Measurement Unit (QMU) ledger as a dimensional audit tool, classifying physical constants and linking metrology practice directly to closure and the conserved QDC.</p>
       </div>
 
       <div class="card">
@@ -1066,10 +984,7 @@
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17663436</a>
         </p>
-        <p>
-          Examines which constants reflect structural geometry versus unit choice, and how closure organizes constant combinations into
-          quantized dimensional classes.
-        </p>
+        <p>Examines which constants reflect structural geometry versus unit choice, and how closure organizes constant combinations into quantized dimensional classes.</p>
       </div>
 
       <div class="card">
@@ -1083,10 +998,7 @@
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17663501" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17663501</a>
         </p>
-        <p>
-          Derives constraints on fundamental constants using a five-dimensional ledger basis, serving as a more technical complement to the
-          metrology and ontology papers.
-        </p>
+        <p>Derives constraints on fundamental constants using a five-dimensional ledger basis, serving as a more technical complement to the metrology and ontology papers.</p>
       </div>
     </div>
   </section>
@@ -1095,9 +1007,7 @@
   <section id="cosmology">
     <div class="section-header">
       <h2 class="section-title">Cosmology (Applications)</h2>
-      <p class="section-kicker">
-        Cosmology is treated as a downstream application domain once the framework core is established.
-      </p>
+      <p class="section-kicker">Cosmology is treated as a downstream application domain once the framework core is established.</p>
     </div>
 
     <div class="card-column">
@@ -1107,17 +1017,12 @@
           <span class="tag">Cosmology</span>
           <span class="tag">Expansion</span>
         </div>
-        <h3 class="card-title">
-          Cosmological Expansion from Dimensional Closure: Phase Inertia and Curvature Tension without Independent Dark Sectors
-        </h3>
+        <h3 class="card-title">Cosmological Expansion from Dimensional Closure: Phase Inertia and Curvature Tension without Independent Dark Sectors</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.18024594" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18024594</a>
         </p>
-        <p>
-          Applies dimensional-closure constraints to cosmological dynamics (phase inertia / curvature tension) as a downstream application
-          of the framework-first program.
-        </p>
+        <p>Applies dimensional-closure constraints to cosmological dynamics (phase inertia / curvature tension) as a downstream application of the framework-first program.</p>
       </div>
 
       <div class="card">
@@ -1131,9 +1036,7 @@
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17956687" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17956687</a>
         </p>
-        <p>
-          Cosmology application built around coherent ledger fields and QDC closure. Recommended after the Top 5 and Coherent Ledger Fields.
-        </p>
+        <p>Cosmology application built around coherent ledger fields and QDC closure. Recommended after the Top 5 and Coherent Ledger Fields.</p>
       </div>
     </div>
   </section>
@@ -1142,9 +1045,7 @@
   <section id="phenomenology-experiments">
     <div class="section-header">
       <h2 class="section-title">Phenomenology &amp; Experiments</h2>
-      <p class="section-kicker">
-        Coherent ledger fields, experimental roadmaps, and teaching-oriented laboratory introductions.
-      </p>
+      <p class="section-kicker">Coherent ledger fields, experimental roadmaps, and teaching-oriented laboratory introductions.</p>
     </div>
 
     <div class="card-column">
@@ -1155,17 +1056,12 @@
           <span class="tag">Scalar–tensor–EM</span>
           <span class="tag">Signals</span>
         </div>
-        <h3 class="card-title">
-          Coherent Ledger Fields: From SO(3,2) Dimensional Cells to a Unified Scalar–Tensor–Electromagnetic Phenomenology
-        </h3>
+        <h3 class="card-title">Coherent Ledger Fields: From SO(3,2) Dimensional Cells to a Unified Scalar–Tensor–Electromagnetic Phenomenology</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17803804</a>
         </p>
-        <p>
-          Connects QDC/ledger geometry to scalar–tensor–EM phenomenology and proposes signals in torsion balances, NV centers, cavity scaling,
-          metamaterials, and magnetic-moment structure.
-        </p>
+        <p>Connects QDC/ledger geometry to scalar–tensor–EM phenomenology and proposes signals in torsion balances, NV centers, cavity scaling, metamaterials, and magnetic-moment structure.</p>
       </div>
 
       <div class="card">
@@ -1174,17 +1070,12 @@
           <span class="tag">Experimental protocol</span>
           <span class="tag">Falsifiability</span>
         </div>
-        <h3 class="card-title">
-          QDL Experimental Validation Protocol: A Unified Roadmap for Torsion, NV-Center, Cavity, and Metamaterial Tests
-        </h3>
+        <h3 class="card-title">QDL Experimental Validation Protocol: A Unified Roadmap for Torsion, NV-Center, Cavity, and Metamaterial Tests</h3>
         <p class="card-meta">
           Bourassa, J. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17654442</a>
         </p>
-        <p>
-          Falsifiable validation program across four independent platforms designed to probe whether physical scaling follows a QDL-governed ledger.
-          For executed benchmark records using public data, see <a href="#executed-benchmarks">Executed Benchmarks</a>.
-        </p>
+        <p>Falsifiable validation program across four independent platforms designed to probe whether physical scaling follows a QDL-governed ledger. For executed benchmark records using public data, see <a href="#executed-benchmarks">Executed Benchmarks</a>.</p>
       </div>
 
       <div class="card">
@@ -1193,16 +1084,12 @@
           <span class="tag">Cavity lab</span>
           <span class="tag">L–F basis</span>
         </div>
-        <h3 class="card-title">
-          Teaching Dimensional Analysis with a Length–Frequency Basis: An Inverse-Length Cavity Scaling Lab
-        </h3>
+        <h3 class="card-title">Teaching Dimensional Analysis with a Length–Frequency Basis: An Inverse-Length Cavity Scaling Lab</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17663340" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17663340</a>
         </p>
-        <p>
-          Teaching-focused laboratory framework demonstrating the L–F dimensional basis and resonance scaling as a gentle entry into the ledger idea.
-        </p>
+        <p>Teaching-focused laboratory framework demonstrating the L–F dimensional basis and resonance scaling as a gentle entry into the ledger idea.</p>
       </div>
 
       <div class="card">
@@ -1210,16 +1097,12 @@
           <span class="tag">Cross-domain math</span>
           <span class="tag">Toroidal coords</span>
         </div>
-        <h3 class="card-title">
-          Toroidal Coordinate Representation of the Schrödinger Equation with Cross-Domain Structural Applications
-        </h3>
+        <h3 class="card-title">Toroidal Coordinate Representation of the Schrödinger Equation with Cross-Domain Structural Applications</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17663608" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17663608</a>
         </p>
-        <p>
-          Toroidal-coordinate formulation with structural links to QDL geometry; included as an auxiliary mathematical toolset.
-        </p>
+        <p>Toroidal-coordinate formulation with structural links to QDL geometry; included as an auxiliary mathematical toolset.</p>
       </div>
     </div>
   </section>
@@ -1228,9 +1111,7 @@
   <section id="program-synthesis">
     <div class="section-header">
       <h2 class="section-title">Program Synthesis &amp; Overviews</h2>
-      <p class="section-kicker">
-        Big-picture documents that map QDL across domains. Best read after the Top 5.
-      </p>
+      <p class="section-kicker">Big-picture documents that map QDL across domains. Best read after the Top 5.</p>
     </div>
 
     <div class="card-column">
@@ -1240,24 +1121,18 @@
           <span class="tag">Roadmap</span>
           <span class="tag">Synthesis</span>
         </div>
-        <h3 class="card-title">
-          QDL: Twenty Grand Challenges, One Ledger – A Unified Dimensional-Closure Architecture for Spacetime, Fields, Constants, Cosmology, Nuclear Structure, Precision Physics, and Measurement
-        </h3>
+        <h3 class="card-title">QDL: Twenty Grand Challenges, One Ledger – A Unified Dimensional-Closure Architecture for Spacetime, Fields, Constants, Cosmology, Nuclear Structure, Precision Physics, and Measurement</h3>
         <p class="card-meta">
           Bourassa, J. D. (2025). Zenodo. DOI:
           <a href="https://doi.org/10.5281/zenodo.17805400" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17805400</a>
         </p>
-        <p>
-          Programmatic overview mapping dimensional-closure architecture onto a large set of domains and research questions, serving as a roadmap document.
-        </p>
+        <p>Programmatic overview mapping dimensional-closure architecture onto a large set of domains and research questions, serving as a roadmap document.</p>
       </div>
     </div>
 
     <p class="note">
       A complete, up-to-date list of QDL manuscripts is maintained via the Zenodo community:
-      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-        zenodo.org/communities/qdl-physics-institute/
-      </a>.
+      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">zenodo.org/communities/qdl-physics-institute/</a>.
       This Publications page emphasizes the framework-first path and highlights executed benchmark records separately for clarity.
     </p>
   </section>
