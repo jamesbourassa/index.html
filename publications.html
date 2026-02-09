@@ -368,6 +368,25 @@
 
     .btn-book:hover { filter: brightness(1.03); text-decoration: none; }
 
+    /* NEW: second book (compact) */
+    .book-divider {
+      height: 1px;
+      background: rgba(15, 23, 42, 0.10);
+      margin: 1rem 0;
+    }
+
+    .book-mini {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+      margin-top: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .book-mini { grid-template-columns: 1fr; }
+    }
+
     /* SECTIONS */
     section { margin-top: 1.9rem; }
 
@@ -586,7 +605,7 @@
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#top5">Jump to Top 5 (framework-first)</a>
-      <a class="btn btn-secondary" href="#books">Book (Kindle) + Technical Appendix</a>
+      <a class="btn btn-secondary" href="#books">Books / Monographs</a>
       <a class="btn btn-secondary" href="#executed-benchmarks">Executed benchmark records</a>
       <a class="btn btn-secondary" href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
         Zenodo community archive
@@ -600,6 +619,7 @@
         <div class="badge"><span class="dot blue"></span><strong>Formal record</strong>&nbsp;— remains in Zenodo + journals</div>
       </div>
 
+      <!-- Book 1: Kindle -->
       <div class="book-wrap" aria-label="Book cover and description">
         <div class="book-cover">
           <img src="book-cover.png" alt="Cover of The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics" />
@@ -626,6 +646,36 @@
             </a>
             <a class="btn btn-secondary" href="#top5">
               Start with Top 5 papers →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="book-divider" role="separator" aria-hidden="true"></div>
+
+      <!-- Book 2: Coherent Universe (conservative status, single-page link) -->
+      <div class="book-mini" aria-label="Second book announcement">
+        <div class="book-cover">
+          <!-- If you have a cover image, use it here; otherwise leave as-is and swap later. -->
+          <img src="coherent-universe-cover.png" alt="Cover of The Coherent Universe: Life, Physics, and Meaning in a Relational Cosmos" onerror="this.style.display='none';" />
+        </div>
+
+        <div>
+          <div class="book-title">
+            The Coherent Universe: Life, Physics, and Meaning in a Relational Cosmos
+          </div>
+          <div class="book-meta">
+            Bourassa, J. D. (2026). Book-length scholarly manuscript (publisher review in progress).
+          </div>
+          <p style="margin:0; line-height:1.55;">
+            A coherence-based synthesis connecting open systems, persistence across scale, and measurement integrity, written for physicists and complex-systems readers.
+            Status is listed conservatively; updates will be reflected on the book page below.
+          </p>
+
+          <div class="book-actions">
+            <a class="btn btn-secondary" href="coherent-universe.html">
+              Publication page (summary + status)
             </a>
           </div>
         </div>
@@ -658,7 +708,7 @@
 
     <div class="toc" aria-label="Page sections">
       <a href="#top5"><div class="toc-title">Top 5 (Core Path)</div><div class="toc-sub">Framework-first ordering used site-wide.</div></a>
-      <a href="#books"><div class="toc-title">Book / Monograph</div><div class="toc-sub">Kindle + Technical Appendix (PDF).</div></a>
+      <a href="#books"><div class="toc-title">Books / Monographs</div><div class="toc-sub">Reader-facing synthesis + status pages.</div></a>
       <a href="#executed-benchmarks"><div class="toc-title">Executed Benchmarks</div><div class="toc-sub">Auditable records (no new effects claimed).</div></a>
       <a href="#core-framework"><div class="toc-title">Core Framework &amp; Geometry</div><div class="toc-sub">QDC geometry, minimum-length links.</div></a>
       <a href="#eft-smeft"><div class="toc-title">EFT &amp; SMEFT</div><div class="toc-sub">Ledger lattices, exclusions, relations.</div></a>
