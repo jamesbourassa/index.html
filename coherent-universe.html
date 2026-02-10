@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QDL Physics Institute | The Coherent Universe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="The Coherent Universe: Life, Physics, and Meaning in a Relational Cosmos — a coherence-first interpretive monograph grounded in standard physics and dimensional admissibility (QDL)."
+  />
+  <style>
+    :root {
+      --bg-page: #f3f4f6;
+      --bg-card: #ffffff;
+      --border-soft: #e5e7eb;
+      --text-main: #0f172a;
+      --text-soft: #6b7280;
+      --accent: #7c3aed;
+      --accent-soft: #fbfaff;
+      --link: #0369a1;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header{
+      background: #0f172a;
+      color: #e5e7eb;
+      border-bottom: 1px solid #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap: 0.6rem;
+      min-width: 220px;
+    }
+
+    .logo-icon{
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      border: 1px solid #38bdf8;
+      background: #020617;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      flex: 0 0 auto;
+    }
+
+    .logo-icon img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+    .logo-text-main{
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      line-height: 1.15;
+    }
+
+    .logo-text-sub{
+      font-size: 0.7rem;
+      color: #9ca3af;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-top: 0.12rem;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+
+    .nav-links a{
+      color:#e5e7eb;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover{
+      color:#f9fafb;
+      border-color: rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.9);
+      text-decoration:none;
+    }
+
+    .nav-cta{
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      border: 1px solid #38bdf8;
+      color: #e0f2fe;
+      background: #0b1120;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    main{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+
+    .hero{
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      padding: 1.6rem 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-kicker{
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title{
+      font-size: clamp(1.9rem, 3vw, 2.35rem);
+      margin-bottom: 0.45rem;
+      line-height: 1.15;
+    }
+
+    .hero-sub{
+      font-size: 0.96rem;
+      color: #4b5563;
+      max-width: 58rem;
+      line-height: 1.6;
+      margin-bottom: 0.95rem;
+    }
+
+    .chiprow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 0.9rem;
+    }
+
+    .chip{
+      padding: 0.15rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      white-space: nowrap;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.2rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary{
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
+    }
+
+    .btn-primary:hover { filter: brightness(1.03); text-decoration:none; }
+
+    .btn-secondary{
+      background: #ffffff;
+      color: #111827;
+      border-color: #d1d5db;
+    }
+
+    .btn-secondary:hover { background: #f9fafb; text-decoration:none; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 720px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .cover{
+      width: 180px;
+      border-radius: 12px;
+      border: 1px solid rgba(15,23,42,0.12);
+      background: #ffffff;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.08);
+      overflow:hidden;
+    }
+
+    .cover img{ width:100%; height:auto; display:block; }
+
+    .callout{
+      margin-top: 1rem;
+      padding: 1rem 1.05rem;
+      border-radius: 16px;
+      border: 1px solid rgba(124, 58, 237, 0.22);
+      background: var(--accent-soft);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      color: #374151;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    section{ margin-top: 1.6rem; }
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      gap: 1.2rem;
+      align-items: baseline;
+      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .section-title{
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #111827;
+    }
+
+    .section-kicker{
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      max-width: 42rem;
+      line-height: 1.5;
+    }
+
+    .card{
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      padding: 0.95rem 1.05rem;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+      font-size: 0.92rem;
+      color: #374151;
+    }
+
+    .card + .card{ margin-top: 0.9rem; }
+
+    .card h3{
+      font-size: 1.02rem;
+      margin-bottom: 0.4rem;
+      color: #111827;
+      line-height: 1.3;
+    }
+
+    .muted{ color: var(--text-soft); }
+
+    .toc{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+    @media (max-width: 900px){ .toc{ grid-template-columns: 1fr; } }
+
+    .toc-item{
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 0.85rem 0.95rem;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.05);
+    }
+
+    .toc-item strong{ color: #111827; }
+
+    .toc-item ul{ margin: 0.55rem 0 0 1.15rem; }
+    .toc-item li{ margin: 0.22rem 0; line-height: 1.45; }
+
+    blockquote{
+      border-left: 4px solid rgba(124,58,237,0.35);
+      padding-left: 0.9rem;
+      margin-top: 0.6rem;
+      color: #374151;
+    }
+
+    footer{
+      border-top: 1px solid var(--border-soft);
+      margin-top: 3rem;
+      padding: 1.2rem 1.25rem 1.8rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-grid{
+      max-width: 1100px;
+      margin: 0 auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 1rem;
+      justify-content:space-between;
+      align-items:center;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <div class="logo-icon">
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" onerror="this.style.display='none';" />
+      </div>
+      <div>
+        <div class="logo-text-main">QDL Physics Institute</div>
+        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="publications.html">Publications</a>
+      <a href="institute.html">Institute</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero-kicker">Book / Research Monograph</div>
+    <h1 class="hero-title">The Coherent Universe</h1>
+    <p class="hero-sub">
+      <strong>Life, Physics, and Meaning in a Relational Cosmos</strong> — a coherence-first interpretive monograph grounded in standard physics,
+      dimensional analysis, open-system thermodynamics, and the structural admissibility discipline developed in the Quantized Dimensional Ledger (QDL).
+    </p>
+
+    <div class="chiprow" aria-label="Book chips">
+      <div class="chip">Methodology-first (no new dynamical laws)</div>
+      <div class="chip">Coherence + dimensional admissibility</div>
+      <div class="chip">Physics → life → planetary → cosmology → meaning</div>
+      <div class="chip">Includes Appendix A: QDL definitions + worked examples</div>
+    </div>
+
+    <div class="grid" aria-label="Cover and summary">
+      <div class="cover">
+        <!-- Replace with your final cover filename if different -->
+        <img src="coherent-universe-cover.png" alt="Cover: The Coherent Universe" onerror="this.style.display='none';" />
+      </div>
+
+      <div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#overview">Overview</a>
+          <a class="btn btn-secondary" href="#toc">Table of Contents</a>
+          <a class="btn btn-secondary" href="#excerpt">Preface excerpt</a>
+          <a class="btn btn-secondary" href="#author">About the author</a>
+        </div>
+
+        <div class="callout" id="overview">
+          <strong>Jacket / back-cover description:</strong><br/>
+          The Coherent Universe argues that many persistent structures in nature—ranging from stable physical systems to organized living processes—can be understood
+          through a coherence-based framework grounded in standard physics. Building on the Quantized Dimensional Ledger (QDL), the book treats dimensional admissibility
+          as a grammar of physically meaningful relationships, clarifying where models are structurally valid, where they rely on hidden assumptions, and where extrapolation begins.
+          Written for physicists, complex-systems researchers, and philosophically minded readers, it offers a disciplined synthesis connecting coherence, open systems,
+          and measurement integrity, without proposing new physical laws or invoking metaphysical claims.
+        </div>
+
+        <p class="muted" style="margin-top:0.85rem; line-height:1.6;">
+          Note: This page summarizes the book’s scope and structure for public reference. For technical background on the QDL framework, see
+          <a href="publications.html">Publications</a> and <a href="framework.html">Framework</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc">
+    <div class="section-header">
+      <h2 class="section-title">Table of Contents</h2>
+      <p class="section-kicker">High-level structure: Foundations → Living systems → Planetary/cosmic → Cosmology/meaning, with Appendix A consolidating QDL definitions.</p>
+    </div>
+
+    <div class="toc" aria-label="Table of contents grid">
+      <div class="toc-item">
+        <strong>Preface</strong>
+        <ul>
+          <li>Why This Book Exists</li>
+          <li>Acknowledgments</li>
+          <li>On Terms and Claims (scope + restraint)</li>
+        </ul>
+      </div>
+
+      <div class="toc-item">
+        <strong>Part I — Foundations: Dimensional Structure and Physical Coherence</strong>
+        <ul>
+          <li>1. The Hidden Order Beneath Physics</li>
+          <li>2. The Ledger Idea</li>
+          <li>3. Units, Constants, and the Rosetta Stone Problem</li>
+          <li>4. From Maxwell to Einstein to Now</li>
+          <li>5. A Universe Made of Relationships, Not Things</li>
+          <li>6. The Ledger in Action</li>
+          <li>7. Testable Predictions and Falsifiability</li>
+          <li>8. Electromagnetism and Gravity Revisited</li>
+          <li>9. Atoms, Molecules, and Coherent Matter</li>
+        </ul>
+      </div>
+
+      <div class="toc-item">
+        <strong>Part II — Living Systems: Active Maintenance of Coherence</strong>
+        <ul>
+          <li>10. Life as Sustained Coherence</li>
+          <li>11. Disease, Disorder, and the Loss of Coherence</li>
+        </ul>
+      </div>
+
+      <div class="toc-item">
+        <strong>Part III — Planetary and Cosmic Systems</strong>
+        <ul>
+          <li>12. Planetary Coherence and the Earth System</li>
+          <li>13. Stars, Galaxies, and Large-Scale Coherence</li>
+        </ul>
+      </div>
+
+      <div class="toc-item">
+        <strong>Part IV — Cosmology and Meaning</strong>
+        <ul>
+          <li>14. The Coherent Cosmos</li>
+          <li>15. Meaning, Agency, and Responsibility in a Coherent World</li>
+          <li>Epilogue — What Endures</li>
+        </ul>
+      </div>
+
+      <div class="toc-item">
+        <strong>Appendix A — The Quantized Dimensional Ledger</strong>
+        <ul>
+          <li>Core definitions and admissibility rules</li>
+          <li>Worked examples + failure modes</li>
+          <li>Compton-scale minimal dimensional cell</li>
+          <li>Applications matrix across domains</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
+      <h3>Intended audience</h3>
+      <p>
+        Researchers and advanced graduate students in theoretical and foundational physics, complex systems, and precision measurement — with careful,
+        operational use of terms when extending into biology, planetary systems, and questions of meaning.
+      </p>
+    </div>
+  </section>
+
+  <section id="excerpt">
+    <div class="section-header">
+      <h2 class="section-title">Preface excerpt</h2>
+      <p class="section-kicker">A short orientation statement that anchors the book’s restraint and scope.</p>
+    </div>
+
+    <div class="card">
+      <h3>Why This Book Exists</h3>
+      <blockquote>
+        This book does not introduce new physical laws. It asks a simpler—and more demanding—question: what follows if existing physics is interpreted through a coherence-first framework?<br/><br/>
+        The Quantized Dimensional Ledger established a structural result: physical quantities that appear independent—mass, charge, energy, momentum, and field strength—reduce to combinations of two primitives, length and frequency. That result did not require new dynamics. It required a different way of accounting.<br/><br/>
+        Here, the aim is not to extend the Ledger technically, but to trace its implications across scale: from particles to organisms, from planets to galaxies, and finally to the universe itself.
+        The answer pursued here is deliberately restrained. No anthropomorphism is introduced. No mysticism is invoked. Where claims exceed standard physics, they are framed as consequences, not assumptions, and bounded by what the Ledger already licenses.
+      </blockquote>
+      <p class="muted" style="margin-top:0.65rem;">
+        (Excerpted from the Preface; wording may be lightly adjusted in final typesetting.)
+      </p>
+    </div>
+  </section>
+
+  <section id="author">
+    <div class="section-header">
+      <h2 class="section-title">About the author</h2>
+      <p class="section-kicker">Short bio suitable for a public-facing book page.</p>
+    </div>
+
+    <div class="card">
+      <h3>James D. Bourassa</h3>
+      <p>
+        James D. Bourassa is a physicist and independent researcher whose work focuses on the structural foundations of physical theory, with particular emphasis on
+        dimensional analysis, coherence, and model admissibility across scales. He is the originator of the Quantized Dimensional Ledger (QDL) framework, which treats
+        dimensional admissibility as a pre-dynamical constraint on physical models.
+      </p>
+      <p style="margin-top:0.55rem;">
+        His research addresses the structure of effective field theories, precision measurement, and the integrity of complex modeling pipelines, with applications ranging
+        from tabletop experimental systems to engineering and Earth-system models. Bourassa is the founder and director of the QDL Physics Institute.
+      </p>
+
+      <p class="muted" style="margin-top:0.65rem;">
+        Contact: <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a> ·
+        <a href="https://qdlphysics.org" target="_blank" rel="noopener noreferrer">qdlphysics.org</a>
+      </p>
+    </div>
+  </section>
+
+  
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</div>
+    <div>Coherence-first foundations · Dimensional admissibility · QDL Physics Institute</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
