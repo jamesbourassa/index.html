@@ -1,3 +1,11 @@
+Absolutely — here is the **full updated `demo.html`** with:
+
+* ✅ **Demo removed from nav**
+* ✅ **Static “Integrity Report” card added** (below the diagram, styled like your cards)
+
+Copy/paste this whole file over your current `demo.html`.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Prototype demonstration of QDL structural integrity screening: minimal pseudo-code workflow, PASS/WARN/FAIL interpretation, and a model pipeline diagram from proposal to deployment."
+    content="Prototype demonstration of QDL structural integrity screening: minimal pseudo-code workflow, PASS/WARN/FAIL interpretation, a model pipeline diagram, and an example integrity report."
   />
 
   <style>
@@ -272,6 +280,57 @@
     }
     ul.tight li { margin-bottom: 0.45rem; }
 
+    /* Integrity report card (static example) */
+    .report-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+    }
+    .report-title {
+      font-weight: 700;
+      font-size: 0.98rem;
+    }
+    .report-meta {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+    .report-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+      margin-top: 0.6rem;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 0.6rem;
+      padding: 0.55rem 0.6rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      background: #ffffff;
+    }
+    @media (max-width: 520px) {
+      .kv { grid-template-columns: 1fr; }
+    }
+    .kv .k {
+      font-size: 0.82rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .kv .v {
+      color: #111827;
+      line-height: 1.55;
+    }
+    .report-bullets {
+      margin: 0.35rem 0 0 1.1rem;
+      color: #374151;
+    }
+    .report-bullets li { margin-bottom: 0.35rem; }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -313,7 +372,6 @@
       <a href="institute.html">Institute</a>
       <a href="benefits.html">Benefits</a>
       <a href="about.html">About</a>
-      <a href="demo.html">Demo</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
   </div>
@@ -350,7 +408,7 @@
     </div>
 
     <div class="grid">
-      <!-- LEFT: PSEUDOCODE + DIAGRAM -->
+      <!-- LEFT: PSEUDOCODE + DIAGRAM + REPORT -->
       <div class="card">
         <h3>Minimal working pseudo-code (screening workflow)</h3>
         <p class="mini-note">
@@ -461,6 +519,65 @@ print(report)</pre>
 │  - automation pipelines       │
 └──────────────────────────────┘</pre>
 
+        <h3>Example output (static “Integrity Report”)</h3>
+        <p class="mini-note">
+          This is a representative example of the kind of concise, interpretable output the toolkit is designed to produce.
+          It is intentionally domain-agnostic and meant to support rapid triage.
+        </p>
+
+        <div class="card" style="margin-top:0.65rem;">
+          <div class="report-header">
+            <div class="report-title">Structural Integrity Report (Example)</div>
+            <div class="report-meta">Run ID: DEMO-001 · Iterations: 20 · Scope: Toy model</div>
+          </div>
+
+          <div class="report-grid">
+            <div class="kv">
+              <div class="k">Closure</div>
+              <div class="v"><span class="pill pass">PASS</span> All derived quantities map to admissible representation classes.</div>
+            </div>
+
+            <div class="kv">
+              <div class="k">Iterative Stability</div>
+              <div class="v"><span class="pill warn">WARN</span> New representational classes appear after iteration depth ≥ 12 (structural drift).</div>
+            </div>
+
+            <div class="kv">
+              <div class="k">Operator Growth</div>
+              <div class="v"><span class="pill warn">WARN</span> Term/class growth increases monotonically with iteration; boundedness not established.</div>
+            </div>
+
+            <div class="kv">
+              <div class="k">Cross-Type Mixing</div>
+              <div class="v"><span class="pill pass">PASS</span> No heterogeneous mixing flags detected in the representation graph.</div>
+            </div>
+
+            <div class="kv">
+              <div class="k">Overall Assessment</div>
+              <div class="v">
+                <strong>Proceed with calibration only after constraining iteration behavior.</strong>
+                The model may fit data yet remain fragile under repeated reuse or scale extension.
+              </div>
+            </div>
+
+            <div class="kv">
+              <div class="k">Recommended Actions</div>
+              <div class="v">
+                <ul class="report-bullets">
+                  <li>Limit or regularize the expansion pathway that introduces new classes after iteration depth ≥ 12.</li>
+                  <li>Establish a bounded operator/term-growth criterion (or adopt a pruning rule) prior to deployment.</li>
+                  <li>Re-run screening after any change to transformation sequence, normalization, or parameterization.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p class="mini-note" style="margin-top:0.7rem;">
+            Interpretation: a <span class="pill warn">WARN</span> does not mean the model is “wrong.” It means the representation may be
+            fragile under reuse, iteration, or extrapolation, and should be constrained before being treated as stable infrastructure.
+          </p>
+        </div>
+
         <p class="mini-note">
           For collaboration or a pilot use case, contact
           <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
@@ -482,8 +599,8 @@ print(report)</pre>
 
         <h3 style="margin-top:0.85rem;">Prototype outputs</h3>
         <p>
-          A typical screening run is intended to produce a short “integrity report” highlighting closure status,
-          growth/instability warnings, and mixing flags, with minimal assumptions about domain-specific modeling choices.
+          A typical run is intended to produce a short integrity report highlighting closure status,
+          growth/instability warnings, and mixing flags, with minimal assumptions about domain-specific choices.
         </p>
 
         <h3 style="margin-top:0.85rem;">Where this connects on the site</h3>
@@ -494,8 +611,8 @@ print(report)</pre>
         </ul>
 
         <p class="mini-note">
-          If you want a shorter, non-technical summary of the screening concept, I can add a one-page “Demo Overview”
-          panel at the top of this page.
+          Optional next upgrade: add one “Worked Example” panel (toy) that lists the model specification and transforms
+          used to produce DEMO-001, so readers can mentally connect inputs → report.
         </p>
       </aside>
     </div>
@@ -514,3 +631,6 @@ print(report)</pre>
 </script>
 </body>
 </html>
+```
+
+If you want, I can also provide the **one-line addition** to your other pages’ navs that links to this demo page *only in the footer* (more subtle than top-nav), or add a small “Demo” link inside the **Framework** page instead.
