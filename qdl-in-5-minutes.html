@@ -1,138 +1,487 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
   <title>QDL in 5 Minutes | QDL Physics Institute</title>
-  <meta name="description" content="A one-page, equation-free overview of the Quantized Dimensional Ledger (QDL) for standards, program managers, and technical decision-makers." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="A one-page, equation-free overview of the Quantized Dimensional Ledger (QDL) for standards, program managers, and technical decision-makers, with links to technical documents."
+  />
+
+  <style>
+    :root {
+      --bg-page: #ffffff;
+      --bg-card: #ffffff;
+      --border-soft: #e5e7eb;
+      --text-main: #0f172a;
+      --text-soft: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --code-bg: #0b1020;
+      --code-text: #e9eefc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-bottom: 1px solid #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-width: 260px;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      background: #020617;
+      border: 1px solid #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      line-height: 1.2;
+    }
+
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-top: 0.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      border-color: rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      border-color: #38bdf8;
+      background: #0b1120;
+      color: #e0f2fe !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+    }
+
+    .nav-active {
+      border-color: rgba(56, 189, 248, 0.85) !important;
+      background: rgba(56, 189, 248, 0.10) !important;
+      color: #e0f2fe !important;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 2.5rem;
+    }
+
+    .hero { margin-bottom: 1.8rem; }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.4rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      max-width: 52rem;
+      line-height: 1.55;
+    }
+
+    .hero-meta {
+      margin-top: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+    }
+
+    .hero-chip {
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #4b5563;
+    }
+
+    .section { margin-bottom: 2.1rem; }
+
+    .section-header { margin-bottom: 0.7rem; }
+
+    .section-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #111827;
+      margin-bottom: 0.2rem;
+    }
+
+    .section-sub {
+      font-size: 0.86rem;
+      color: #6b7280;
+      max-width: 52rem;
+      line-height: 1.55;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 1.8rem;
+    }
+
+    @media (max-width: 880px) {
+      .grid { grid-template-columns: 1fr; }
+      .logo { min-width: unset; }
+      .nav { align-items: flex-start; }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      padding: 1rem 1.1rem 1.1rem;
+      font-size: 0.92rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      margin-bottom: 0.55rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .mini-note {
+      margin-top: 0.6rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    ul.tight {
+      margin: 0.35rem 0 0 1.1rem;
+      color: #374151;
+    }
+    ul.tight li { margin-bottom: 0.45rem; }
+
+    .callout {
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      border-radius: 14px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.65rem 0 0.95rem;
+    }
+
+    .callout strong { color: #111827; }
+
+    .pill {
+      border-radius: 999px;
+      padding: 0.14rem 0.55rem;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      color: #111827;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .pill.blue {
+      border-color: rgba(37,99,235,0.30);
+      background: rgba(37,99,235,0.08);
+      color: #1e3a8a;
+    }
+
+    .linklist {
+      margin-top: 0.4rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0.9rem 1.25rem 1.3rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
-  <main style="max-width: 900px; margin: 0 auto; padding: 24px; line-height: 1.55;">
-    <header>
-      <p style="margin: 0 0 6px 0; font-size: 14px; opacity: 0.75;">QDL Physics Institute</p>
-      <h1 style="margin: 0 0 8px 0;">QDL in 5 Minutes</h1>
-      <p style="margin: 0 0 16px 0; font-size: 18px;">
-        An equation-free overview for standards, program-management, and technical decision-makers.
-      </p>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <div class="logo-icon">
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
+      </div>
+      <div>
+        <div class="logo-text-main">QDL Physics Institute</div>
+        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+      </div>
+    </div>
 
-      <div style="border-left: 4px solid #999; padding-left: 12px; margin: 18px 0;">
-        <p style="margin: 0;">
-          <strong>What QDL is:</strong> a structural admissibility and measurement-integrity framework that helps detect invalid model constructions
-          before they become decisions, deployments, or standards.
+    <nav class="nav-links" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <a href="framework.html">Framework</a>
+      <a href="experiments.html">Experiments</a>
+      <a href="publications.html">Publications</a>
+      <a href="institute.html">Institute</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-kicker">No equations · one page</div>
+    <h1 class="hero-title">QDL in 5 Minutes</h1>
+    <p class="hero-sub">
+      A concise overview for standards, program-management, and technical decision-makers.
+      QDL is a <strong>structure-first</strong> framework for identifying model and measurement fragility
+      (units, hidden assumptions, regime drift, traceability breaks) <strong>before</strong> calibration or deployment.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-chip">Structural Admissibility</span>
+      <span class="hero-chip">Measurement Integrity</span>
+      <span class="hero-chip">Regime Boundaries</span>
+      <span class="hero-chip">Model Governance</span>
+      <span class="hero-chip">Auditability</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      <!-- LEFT: MAIN ONE-PAGER -->
+      <div class="card">
+        <h3>1) The problem QDL addresses</h3>
+        <p>
+          In complex systems, models often fail not because data are “bad,” but because the model is
+          <em>structurally illegible</em>: unit mismatches, implicit assumptions, invalid extrapolations,
+          or measurement-chain breaks that are hard to see during development and review.
+        </p>
+        <ul class="tight">
+          <li>Unit and scale inconsistencies that slip through review</li>
+          <li>Parameter combinations that are mathematically permitted but physically inadmissible</li>
+          <li>Extrapolations that silently leave a valid regime</li>
+          <li>Transformations that erode traceability or meaning</li>
+        </ul>
+
+        <h3 style="margin-top:0.85rem;">2) The core idea (no equations)</h3>
+        <p>
+          The Quantized Dimensional Ledger (QDL) treats admissibility as a <strong>structural constraint system</strong>.
+          Instead of asking only “does the model fit the data?”, QDL asks first:
+        </p>
+
+        <div class="callout" role="note" aria-label="Core question">
+          <p style="margin:0;">
+            <strong>Is this model structurally admissible before we fit, optimize, or deploy it?</strong>
+          </p>
+        </div>
+
+        <p>
+          Put differently: QDL functions like a grammar for physically meaningful relationships, supporting
+          disciplined model construction and review.
+        </p>
+
+        <h3 style="margin-top:0.85rem;">3) What QDL does in practice</h3>
+        <ul class="tight">
+          <li><strong>Flags structural inadmissibility early</strong> (before deployment)</li>
+          <li><strong>Detects hidden closure violations</strong> and inconsistent transformations</li>
+          <li><strong>Makes regime boundaries explicit</strong> (where extrapolation becomes structurally risky)</li>
+          <li><strong>Supports measurement-chain integrity</strong> (traceability across conversions and model steps)</li>
+          <li><strong>Improves auditability</strong> by making structural assumptions explicit and reviewable</li>
+        </ul>
+
+        <h3 style="margin-top:0.85rem;">4) Where it applies</h3>
+        <p>
+          QDL is intended to be cross-domain: wherever models touch measurement, decisions, or safety.
+        </p>
+        <ul class="tight">
+          <li><strong>Metrology and standards</strong> (unit coherence, traceable transformations)</li>
+          <li><strong>Physics and EFT</strong> (operator admissibility constraints; structural exclusions)</li>
+          <li><strong>Risk and stress testing</strong> (constraints on model-driven decisions)</li>
+          <li><strong>AI connected to physical measurement</strong> (sensor-to-decision pipelines)</li>
+          <li><strong>Engineering / safety-critical modeling</strong> (regime boundaries; fragility reduction)</li>
+        </ul>
+
+        <h3 style="margin-top:0.85rem;">5) What QDL is not</h3>
+        <ul class="tight">
+          <li>Not a replacement for physics, statistics, or domain expertise</li>
+          <li>Not a data-fitting method</li>
+          <li>Not a metaphysical or speculative proposal</li>
+          <li>Not dependent on one specific theory or dataset</li>
+        </ul>
+
+        <div class="callout" role="note" aria-label="Bottom line">
+          <p style="margin:0;">
+            <span class="pill blue">Bottom line</span>
+            QDL is a <strong>structural admissibility filter</strong>: it clarifies whether a proposed model construction
+            is coherent before you invest in validation, certification, or deployment.
+          </p>
+        </div>
+
+        <h3 style="margin-top:0.85rem;">6) Why this matters for decision-makers</h3>
+        <p>
+          As model complexity increases, structural errors scale faster than noise. QDL helps teams reduce preventable
+          failure modes, strengthen review processes, and make “valid regime” boundaries explicit.
+        </p>
+
+        <p class="mini-note" style="margin-top:0.75rem;">
+          For collaboration or a pilot use case, contact
+          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
         </p>
       </div>
-    </header>
 
-    <section>
-      <h2>1) The problem QDL addresses</h2>
-      <p>
-        In complex systems, models often fail not because the data are bad, but because the model is
-        <em>structurally illegible</em>: hidden unit inconsistencies, implicit assumptions, invalid extrapolations,
-        or measurement-chain breaks that are hard to see during development and review.
-      </p>
-      <ul>
-        <li>Unit and scale mismatches that slip through review</li>
-        <li>Parameter combinations that are mathematically permitted but physically inadmissible</li>
-        <li>Extrapolations that silently leave a valid regime</li>
-        <li>Measurement transformations that lose traceability or meaning</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>2) The core idea (no equations)</h2>
-      <p>
-        The Quantized Dimensional Ledger (QDL) treats dimensional admissibility as a <strong>structural constraint system</strong>.
-        Instead of asking only “does the model fit the data?”, QDL asks first:
-      </p>
-      <div style="background: #f6f6f6; padding: 14px; border-radius: 8px;">
-        <p style="margin: 0;">
-          <strong>Is this model structurally admissible before we fit, optimize, or deploy it?</strong>
+      <!-- RIGHT: LINKS / ROUTING -->
+      <aside class="card">
+        <h3>Start here, then go deeper</h3>
+        <p>
+          If you have 60 seconds: read the sections on the left.
+          If you have 15 minutes: follow the technical paths below.
         </p>
-      </div>
-      <p>
-        Put differently: QDL functions like a grammar for physically meaningful relationships, supporting
-        disciplined model construction and review.
-      </p>
-    </section>
 
-    <section>
-      <h2>3) What QDL does in practice</h2>
-      <ul>
-        <li><strong>Flags structural inadmissibility early</strong> (before deployment)</li>
-        <li><strong>Detects hidden dimensional closure violations</strong> and inconsistent transformations</li>
-        <li><strong>Makes regime boundaries explicit</strong> (where extrapolation becomes structurally risky)</li>
-        <li><strong>Supports measurement-chain integrity</strong> (traceability across conversions and model steps)</li>
-        <li><strong>Improves auditability</strong> by recording structural assumptions in a ledger-like way</li>
-      </ul>
-    </section>
+        <div class="callout" style="margin-top:0.65rem;">
+          <p style="margin:0 0 0.35rem 0;">
+            <strong>Technical documents</strong>
+          </p>
+          <div class="linklist">
+            <a href="publications.html">Publications (papers & preprints)</a>
+            <a href="framework.html">Framework (definitions & admissibility language)</a>
+            <a href="experiments.html">Experiments (measurement targets & tests)</a>
+          </div>
+        </div>
 
-    <section>
-      <h2>4) Where it applies</h2>
-      <p>
-        QDL is intended to be cross-domain: wherever models touch measurement, decisions, or safety.
-      </p>
-      <ul>
-        <li><strong>Metrology and standards</strong> (measurement integrity, unit coherence, traceable transformations)</li>
-        <li><strong>Physics and EFT</strong> (operator admissibility constraints; structural exclusions)</li>
-        <li><strong>Risk and stress testing</strong> (structural constraints on model-driven decisions)</li>
-        <li><strong>AI connected to physical measurement</strong> (sensor-to-decision pipelines)</li>
-        <li><strong>Engineering and safety-critical modeling</strong> (regime boundaries; model fragility reduction)</li>
-      </ul>
-    </section>
+        <h3 style="margin-top:0.85rem;">For standards & program managers</h3>
+        <ul class="tight">
+          <li><strong>Use case:</strong> “upstream structural screening” before calibration/certification</li>
+          <li><strong>Output style:</strong> interpretable PASS/WARN/FAIL-style findings (governance-friendly)</li>
+          <li><strong>Integration:</strong> complements existing V&V, audits, and review boards</li>
+        </ul>
 
-    <section>
-      <h2>5) What QDL is not</h2>
-      <ul>
-        <li>Not a replacement for physics, statistics, or domain expertise</li>
-        <li>Not a data-fitting method</li>
-        <li>Not a metaphysical or speculative proposal</li>
-        <li>Not dependent on one specific theory or dataset</li>
-      </ul>
-      <p>
-        QDL is a <strong>structural admissibility filter</strong>: it aims to clarify whether a proposed model
-        construction is coherent before you spend resources validating or deploying it.
-      </p>
-    </section>
+        <div class="callout" style="margin-top:0.85rem;">
+          <p style="margin:0 0 0.35rem 0;"><strong>Suggested citation line (informal)</strong></p>
+          <p style="margin:0; color:#374151; line-height:1.55;">
+            Bourassa, J. D., <em>Quantized Dimensional Ledger (QDL)</em>, QDL Physics Institute. See Publications for
+            archival artifacts and technical derivations.
+          </p>
+        </div>
 
-    <section>
-      <h2>6) Why this matters for decision-makers</h2>
-      <p>
-        As model complexity increases, structural errors scale faster than noise. QDL helps teams:
-      </p>
-      <ul>
-        <li>Reduce preventable failure modes (units/assumptions/traceability)</li>
-        <li>Strengthen review and governance processes</li>
-        <li>Improve reproducibility and defensibility</li>
-        <li>Make “valid regime” boundaries explicit</li>
-      </ul>
-    </section>
+        <p class="mini-note">
+          If you want a version tailored to a specific standards context (metrology, safety, AI/ML governance),
+          this page can be forked into a one-page “Program Brief.”
+        </p>
+      </aside>
+    </div>
+  </section>
+</main>
 
-    <section>
-      <h2>7) Next steps (technical depth)</h2>
-      <p>
-        If you want the formal definitions, proofs, and applications, start here:
-      </p>
-      <ul>
-        <li><a href="/papers.html">Papers & Preprints</a> (full technical development)</li>
-        <li><a href="/metrology.html">Metrology & Measurement Integrity</a> (standards-oriented applications)</li>
-        <li><a href="/about.html">About QDL</a> (program overview)</li>
-      </ul>
+<footer>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
+    <span>Quantized Dimensional Ledger · Structural Admissibility · Measurement Integrity</span>
+  </div>
+</footer>
 
-      <p style="margin-top: 18px;">
-        <strong>Contact:</strong> If you are exploring standards alignment, program integration, or review processes,
-        you can reach me via the contact information on the site.
-      </p>
-    </section>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    <hr style="margin: 28px 0;" />
-
-    <footer style="font-size: 14px; opacity: 0.85;">
-      <p style="margin: 0;">
-        <strong>James D. Bourassa</strong> — QDL Physics Institute<br />
-        Structural admissibility • Measurement-chain integrity • Cross-domain model coherence
-      </p>
-    </footer>
-  </main>
+  // Optional: mark this page as active in the nav if you add it there later.
+  // Example: add a nav link <a href="qdl-in-5-minutes.html" data-page="qdl5">QDL in 5 Minutes</a>
+  // then set it active here.
+</script>
 </body>
 </html>
