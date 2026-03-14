@@ -13,16 +13,18 @@
   --border-soft:#e5e7eb;
   --text-main:#0f172a;
   --text-soft:#6b7280;
+  --text-muted:#475569;
   --accent:#2563eb;
   --accent-soft:#eff6ff;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:var(--bg-page);
   color:var(--text-main);
   -webkit-font-smoothing:antialiased;
-  line-height:1.6;
+  line-height:1.65;
 }
 a{color:#0369a1;text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -37,7 +39,7 @@ header{
 .nav{
   max-width:1100px;
   margin:0 auto;
-  padding:.75rem 1.25rem;
+  padding:.78rem 1.25rem;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -47,7 +49,7 @@ header{
 .logo{
   display:flex;
   align-items:center;
-  gap:.6rem;
+  gap:.65rem;
 }
 .logo-icon{
   width:52px;
@@ -67,7 +69,7 @@ header{
   display:block;
 }
 .logo-text-main{
-  font-weight:600;
+  font-weight:650;
   letter-spacing:.06em;
   text-transform:uppercase;
   font-size:.82rem;
@@ -87,18 +89,24 @@ header{
 }
 .nav-links a{
   color:#e5e7eb;
-  padding:.25rem .6rem;
+  padding:.28rem .68rem;
   border-radius:999px;
+  border:1px solid transparent;
 }
 .nav-links a:hover{
   background:#111827;
   text-decoration:none;
 }
+.nav-active{
+  border-color:rgba(56,189,248,.85) !important;
+  background:rgba(56,189,248,.10) !important;
+  color:#e0f2fe !important;
+}
 .nav-cta{
-  border:1px solid #38bdf8;
+  border:1px solid #38bdf8 !important;
   background:#0b1120;
   color:#e0f2fe !important;
-  padding:.3rem .85rem;
+  padding:.32rem .88rem;
   border-radius:999px;
   text-transform:uppercase;
   letter-spacing:.08em;
@@ -107,15 +115,15 @@ header{
 main{
   max-width:1100px;
   margin:0 auto;
-  padding:1.75rem 1.25rem 3rem;
+  padding:1.85rem 1.25rem 3.2rem;
 }
 .hero{
   margin-bottom:1.8rem;
   background:var(--bg-card);
-  border-radius:18px;
+  border-radius:20px;
   border:1px solid var(--border-soft);
-  box-shadow:0 8px 24px rgba(15,23,42,.06);
-  padding:1.6rem 1.5rem;
+  box-shadow:0 10px 28px rgba(15,23,42,.06);
+  padding:1.7rem 1.6rem;
 }
 .hero-kicker{
   text-transform:uppercase;
@@ -125,14 +133,16 @@ main{
   margin-bottom:.4rem;
 }
 .hero-title{
-  font-size:clamp(1.9rem,3vw,2.3rem);
-  margin-bottom:.5rem;
+  font-size:clamp(2rem,3vw,2.45rem);
+  line-height:1.14;
+  margin-bottom:.52rem;
+  letter-spacing:-0.02em;
 }
 .hero-sub{
-  font-size:.96rem;
+  font-size:.97rem;
   color:#4b5563;
-  max-width:52rem;
-  margin-bottom:.9rem;
+  max-width:54rem;
+  margin-bottom:.95rem;
 }
 .hero-meta{
   display:flex;
@@ -141,11 +151,11 @@ main{
   font-size:.8rem;
 }
 .hero-chip{
-  padding:.15rem .7rem;
+  padding:.16rem .72rem;
   border-radius:999px;
   border:1px solid #e5e7eb;
   background:#f9fafb;
-  color:#475569;
+  color:var(--text-muted);
 }
 .section{
   margin-top:2rem;
@@ -159,20 +169,20 @@ main{
   margin-bottom:1rem;
 }
 .section-title{
-  font-size:.95rem;
+  font-size:.96rem;
   text-transform:uppercase;
   letter-spacing:.16em;
   color:#111827;
 }
 .section-kicker{
-  font-size:.82rem;
+  font-size:.83rem;
   color:var(--text-soft);
   max-width:40rem;
 }
 .grid-2{
   display:grid;
   grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
-  gap:1.2rem;
+  gap:1rem;
 }
 .grid-3{
   display:grid;
@@ -182,60 +192,64 @@ main{
 @media (max-width:980px){
   .grid-3{grid-template-columns:1fr;}
 }
-@media (max-width:880px){
+@media (max-width:900px){
   .grid-2{grid-template-columns:1fr;}
 }
 .card{
   background:var(--bg-card);
-  border-radius:16px;
+  border-radius:18px;
   border:1px solid var(--border-soft);
-  padding:1rem 1.05rem;
+  padding:1.05rem 1.08rem;
   box-shadow:0 8px 24px rgba(15,23,42,.06);
-  font-size:.92rem;
+  font-size:.93rem;
   color:#374151;
 }
 .card + .card{
-  margin-top:.9rem;
+  margin-top:.95rem;
 }
 .card-title{
-  font-size:1rem;
+  font-size:1.02rem;
   font-weight:650;
   margin-bottom:.35rem;
   color:#111827;
+  line-height:1.35;
 }
 .card-meta{
   font-size:.82rem;
   color:var(--text-soft);
-  margin-bottom:.55rem;
+  margin-bottom:.58rem;
 }
 .card p{
-  margin-bottom:.55rem;
+  margin-bottom:.58rem;
+}
+.card p:last-child{
+  margin-bottom:0;
 }
 .pill-row{
   display:flex;
   flex-wrap:wrap;
-  gap:.4rem;
-  margin:.2rem 0 .7rem;
+  gap:.42rem;
+  margin:.16rem 0 .72rem;
 }
 .pill{
   border-radius:999px;
-  padding:.14rem .6rem;
+  padding:.15rem .62rem;
   border:1px solid #e5e7eb;
   background:#f9fafb;
-  color:#475569;
+  color:var(--text-muted);
   font-size:.78rem;
 }
 .btn-row{
   display:flex;
   flex-wrap:wrap;
-  gap:.55rem;
-  margin-top:.7rem;
+  gap:.58rem;
+  margin-top:.78rem;
 }
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:.55rem 1rem;
+  padding:.58rem 1rem;
   border-radius:999px;
   border:1px solid transparent;
   font-size:.86rem;
@@ -293,6 +307,7 @@ footer{
   padding:1.2rem 1.25rem 1.8rem;
   font-size:.8rem;
   color:#6b7280;
+  background:#f9fafb;
 }
 .footer-grid{
   max-width:1100px;
@@ -324,7 +339,7 @@ footer{
       <a href="research.html">Research Program</a>
       <a href="publications.html">Publications</a>
       <a href="institute.html">Institute</a>
-      <a href="resources.html">Resources</a>
+      <a href="resources.html" class="nav-active">Resources</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
   </div>
