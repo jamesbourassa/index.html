@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="The Quantized Dimensional Ledger (QDL) framework: dimensional closure as an admissibility and validation layer, 3L + 2F ledger basis, Quantized Dimensional Cell (QDC), explicit assumptions, falsification boundaries, and the framework-first reading order for QDL core papers."
+    content="The Quantized Dimensional Ledger (QDL) framework: dimensional closure as a structural admissibility layer, 3L + 2F ledger basis, Quantized Dimensional Cell (QDC), explicit assumptions, falsification boundaries, and a framework-first reading order."
   />
   <style>
     :root {
@@ -119,6 +119,12 @@
       text-decoration: none;
     }
 
+    .nav-active {
+      border-color: rgba(56, 189, 248, 0.85) !important;
+      background: rgba(56, 189, 248, 0.10) !important;
+      color: #e0f2fe !important;
+    }
+
     .nav-cta {
       border-color: #38bdf8;
       background: #0b1120;
@@ -164,13 +170,34 @@
       max-width: 55rem;
     }
 
+    .hero-figure {
+      margin: 0.9rem 0 1rem;
+      max-width: 52rem;
+    }
+
+    .hero-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+    }
+
+    .hero-figure figcaption {
+      margin-top: 0.45rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
     .hero-card {
       background: var(--bg-card);
       border-radius: 18px;
       border: 1px solid var(--border-soft);
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
       padding: 1rem 1.1rem;
-      margin: 0.9rem 0 1.0rem;
+      margin: 0.9rem 0 1rem;
       font-size: 0.9rem;
     }
 
@@ -339,9 +366,15 @@
       padding-left: 1.1rem;
     }
 
-    .reading li { margin-bottom: 0.35rem; }
+    .reading li { margin-bottom: 0.5rem; }
 
-    /* Structural analogies table */
+    .reading-meta {
+      font-size: 0.82rem;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-top: 0.15rem;
+    }
+
     .table-wrap { overflow-x: auto; }
     table.qdl-table {
       width: 100%;
@@ -363,46 +396,6 @@
     table.qdl-table tbody tr { border-bottom: 1px solid #e5e7eb; }
     table.qdl-table tbody tr:last-child { border-bottom: none; }
 
-    /* Diagram block */
-    .diagram-card {
-      background: var(--bg-card);
-      border-radius: 18px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-      padding: 1rem 1.1rem;
-      margin: 0 0 1.15rem;
-    }
-
-    .diagram-title {
-      font-weight: 650;
-      margin-bottom: 0.35rem;
-      font-size: 0.98rem;
-    }
-
-    .diagram-sub {
-      font-size: 0.86rem;
-      color: #6b7280;
-      margin-bottom: 0.65rem;
-      line-height: 1.55;
-      max-width: 52rem;
-    }
-
-    .svg-wrap {
-      overflow-x: auto;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      background: #ffffff;
-      padding: 0.6rem;
-    }
-
-    .svg-wrap svg {
-      width: 100%;
-      min-width: 820px;
-      height: auto;
-      display: block;
-    }
-
-    /* NEW: scope/status gate */
     .gate {
       margin: 0.2rem 0 1.1rem;
       border: 1px solid #e5e7eb;
@@ -463,7 +456,6 @@
       line-height: 1.55;
     }
 
-    /* NEW: definition list styling */
     .def-list {
       margin: 0.35rem 0 0;
       padding-left: 1.1rem;
@@ -474,7 +466,6 @@
       color: #111827;
     }
 
-    /* NEW: small baseline panels */
     .panel-row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -505,7 +496,6 @@
       line-height: 1.55;
     }
 
-    /* NEW: falsification chips */
     .statusline {
       display: flex;
       flex-wrap: wrap;
@@ -556,7 +546,8 @@
 
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="framework.html">Framework</a>
+      <a href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
+      <a href="framework.html" class="nav-active">Framework</a>
       <a href="experiments.html">Experiments</a>
       <a href="publications.html">Publications</a>
       <a href="institute.html">Institute</a>
@@ -569,410 +560,298 @@
 
 <main>
   <div class="kicker">Framework</div>
-  <h1>Quantized Dimensional Ledger (QDL): Dimensional Closure as an Admissibility Framework</h1>
+  <h1>Quantized Dimensional Ledger (QDL): Dimensional Closure as a Structural Admissibility Framework</h1>
 
   <p class="lede">
-    QDL treats dimensional analysis as a <strong>model-admissibility and validation layer</strong>:
-    not merely “units consistent,” but “structurally allowed.” Physical quantities are represented as integer
-    ledger vectors in a <strong>3L + 2F</strong> length–frequency basis, and admissible constructions are required
-    to close onto a conserved <strong>Quantized Dimensional Cell (QDC)</strong>.
+    QDL treats dimensional analysis as a <strong>structural admissibility layer</strong>: not only “units consistent,” but “structurally allowed.” Physical quantities are represented as integer ledger vectors in a <strong>3L + 2F</strong> length–frequency basis, and admissible constructions are tested for closure relative to a distinguished <strong>Quantized Dimensional Cell (QDC)</strong>.
   </p>
 
   <p class="tagline">
-    This page summarizes the core ideas, makes the core assumptions explicit, states falsification boundaries,
-    and preserves a framework-first reading order for the QDL program.
+    This page summarizes the minimal framework, makes the assumptions explicit, states framework-level falsification boundaries, and gives a formal reading order through the core papers.
   </p>
 
-    <!-- NEW: Prototype Demo callout (prominent) -->
+  <figure class="hero-figure">
+    <img src="figure1.png" alt="Dimensional lattice and closure direction for the Quantized Dimensional Ledger" />
+    <figcaption>
+      Physical quantities are represented as integer vectors in a dimensional lattice. The closure direction q = (1,1,1,1,1) generates the subgroup of closure-admissible constructions.
+    </figcaption>
+  </figure>
+
   <div class="hero-card" id="prototype-demo" style="margin-top:0.35rem;">
     <div class="hero-card-title">Prototype Demo: Structural Integrity Screening Workflow</div>
     <p style="margin-bottom:0.55rem;">
-      A minimal, static example of how a model pipeline can be screened for structural admissibility
-      before calibration and deployment — including an “Integrity Report” card.
+      A minimal, static example of how a model pipeline can be screened for structural admissibility before calibration and deployment, including an example “Integrity Report.”
     </p>
     <div class="chiprow">
       <span class="chip chip-accent">Workflow diagram</span>
       <span class="chip chip-ok">Example report</span>
       <span class="chip">Pseudo-code</span>
-      <span class="chip chip-warn">Prototype (v0)</span>
+      <span class="chip chip-warn">Prototype</span>
     </div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="demo.html">Open Prototype Demo</a>
       <a class="btn btn-secondary" href="demo.html#integrity-report">Jump to Integrity Report</a>
     </div>
     <p class="details" style="margin-top:0.65rem;">
-      This demo is intentionally lightweight: it illustrates the structural screen, not a full implementation.
+      This demo illustrates the structural screen, not a full implementation.
     </p>
   </div>
 
-
-  <!-- NEW: Scope & Status gate -->
   <div class="gate" id="scope-status">
     <div class="gate-head">
-      <div class="gate-title">Scope &amp; Status (read this first)</div>
+      <div class="gate-title">Scope &amp; status</div>
       <div class="chiprow" style="margin:0;">
         <span class="chip chip-ok">Core formalism: defined here</span>
-        <span class="chip chip-warn">Applications: hypothesis stage</span>
+        <span class="chip chip-warn">Applications: downstream hypotheses</span>
       </div>
     </div>
     <div class="gate-body">
-      QDL is presented as a <strong>pre-dynamical admissibility layer</strong>. This page distinguishes:
-      (i) what is defined as the QDL formalism, (ii) what is asserted as a postulate, and (iii) what is explored as an application.
+      QDL is presented here as a <strong>pre-dynamical admissibility layer</strong>. This page distinguishes:
+      (i) what is defined as the framework, (ii) what is adopted as a postulate, and (iii) what is treated as an application or downstream test.
 
       <div class="gate-grid" aria-label="Scope and status grid">
         <div class="gate-item">
           <strong>Defined on this page</strong>
-          <p>Ledger representation in a 3L + 2F basis; a closure-style admissibility predicate; declared transform/equivalence intent; reading order.</p>
+          <p>Ledger representation in a 3L + 2F basis, a closure-style admissibility predicate, declared transforms, and framework-level output as admissible or excluded.</p>
         </div>
         <div class="gate-item">
           <strong>Postulates</strong>
-          <p>Existence of a conserved QDC target (<span class="equation-snippet">L³F²</span>) and the claim that closure adds constraint beyond dimensional homogeneity.</p>
+          <p>Use of a QDC target of the form <span class="equation-snippet">L³F²</span> and the claim that closure can add constraint beyond ordinary dimensional homogeneity.</p>
         </div>
         <div class="gate-item">
           <strong>Applications</strong>
-          <p>Gravity/coherence, EFT/SMEFT, constants/metrology, and experiments are presented as downstream uses of the admissibility layer, not as established results.</p>
+          <p>Gravity/coherence, EFT/SMEFT, metrology, constants, and experiments are treated as downstream uses of the admissibility layer rather than established consequences of the framework alone.</p>
         </div>
         <div class="gate-item">
           <strong>Not claimed here</strong>
-          <p>QDL does not replace dynamics or fit data by itself; it classifies constructions as admissible/inadmissible under declared rules and transforms.</p>
+          <p>QDL does not replace dynamics, fit data by itself, or constitute evidence for new particles, forces, or effects.</p>
         </div>
       </div>
 
       <div class="statusnote">
-        If you are looking for a framework-independent operational layer, see the national standards paper on dimensional admissibility (linked on the Home page).
+        For a framework-independent operational layer, see the dimensional admissibility / measurement integrity track linked on the Home page.
       </div>
     </div>
   </div>
 
-  <!-- Canonical reference + reading order -->
   <div class="hero-card" id="reading-order">
-    <div class="hero-card-title">Canonical Definition &amp; Recommended Reading Order (Framework-first)</div>
+    <div class="hero-card-title">Core papers &amp; recommended reading order</div>
 
     <div class="chiprow">
-      <span class="chip chip-accent">#1 Canonical framework</span>
-      <span class="chip">#2 Reconstruction</span>
-      <span class="chip">#3 Prediction filter</span>
-      <span class="chip">#4 Renormalization</span>
-      <span class="chip">#5 Auditing / application</span>
+      <span class="chip chip-accent">Lattice foundation</span>
+      <span class="chip">Closure formalism</span>
+      <span class="chip">SMEFT application</span>
+      <span class="chip">Metrology</span>
+      <span class="chip">Book</span>
     </div>
 
     <p style="margin-bottom:0.55rem;">
-      If you want the cleanest entry path (and the one reflected across the site), start here:
+      For the cleanest entry path, start with the lattice and closure papers, then move to the SMEFT and metrology applications.
     </p>
 
     <ul class="reading">
       <li>
-        <strong>Dimensional Closure as a National-Scale Model Validation Layer</strong> (canonical framework definition).<br />
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17979789</a>
+        <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
+          <strong>Integer Lattice Structure of Dimensional Quantities: The Algebraic Structure of the Quantized Dimensional Ledger</strong>
+        </a>
+        <div class="reading-meta">2026-03-11 · Preprint · DOI: 10.5281/zenodo.18970320</div>
       </li>
       <li>
-        <strong>The Quantized Dimensional Ledger: A Structural Reconstruction of Dimensional Analysis</strong> (foundational reframe).<br />
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17882709</a>
+        <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
+          <strong>The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories</strong>
+        </a>
+        <div class="reading-meta">2026-03-12 · Preprint · DOI: 10.5281/zenodo.18981850</div>
       </li>
       <li>
-        <strong>QDL as a Prediction Filter for Field Content, EFT Structure, Constants, Gravity, and Precision Measurement</strong> (method).<br />
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17848782</a>
+        <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
+          <strong>Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations</strong>
+        </a>
+        <div class="reading-meta">2025-12-01 · Preprint · DOI: 10.5281/zenodo.17780443</div>
       </li>
       <li>
-        <strong>Ledger-Constrained Renormalization</strong> (technical rigor anchor).<br />
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025072</a>
+        <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
+          <strong>The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</strong>
+        </a>
+        <div class="reading-meta">2025-11-15 · Preprint · DOI: 10.5281/zenodo.17619526</div>
       </li>
       <li>
-        <strong>Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines</strong> (real-world application).<br />
-        DOI:
-        <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">10.5281/zenodo.18025343</a>
+        <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
+          <strong>The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</strong>
+        </a>
+        <div class="reading-meta">2026-03-07 · Book · DOI: 10.5281/zenodo.18902770</div>
       </li>
     </ul>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="publications.html#top5">Top 5 on Publications</a>
-      <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">Read canonical paper</a>
+      <a class="btn btn-primary" href="publications.html">Browse Publications</a>
+      <a class="btn btn-secondary" href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">Zenodo community</a>
     </div>
 
     <p class="details" style="margin-top:0.7rem;">
-      Domain applications (unified SM+gravity, minimum-length geometry, coherent ledger fields, SMEFT, metrology, experiments, cosmology)
-      are best read after this core path.
+      The framework page stays definition-first. Application pages and benchmarks should be read after the closure rule is clear.
     </p>
   </div>
 
-  <!-- NEW: One-diagram mental model (inline SVG, no external assets) -->
-  <div class="diagram-card" id="qdl-diagram">
-    <div class="diagram-title">One-picture mental model</div>
-    <div class="diagram-sub">
-      QDL is a pre-dynamical <strong>admissibility layer</strong>: represent quantities as integer ledger vectors in a 3L + 2F basis,
-      apply a closure check onto the QDC, and propagate the allowed/disallowed classification into operators, constants, and validation workflows.
-    </div>
-
-    <div class="svg-wrap" aria-label="QDL mental model diagram">
-      <svg viewBox="0 0 980 260" role="img" aria-label="QDL: ledger vectors → closure check → admissible outputs → validation">
-        <defs>
-          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.12"/>
-          </filter>
-          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-            <path d="M0,0 L10,3 L0,6 z" fill="#64748b"></path>
-          </marker>
-        </defs>
-
-        <rect x="20" y="40" rx="16" ry="16" width="260" height="180" fill="#ffffff" stroke="#e5e7eb" filter="url(#shadow)"/>
-        <text x="40" y="72" font-size="15" font-weight="650" fill="#0f172a">Ledger representation</text>
-        <text x="40" y="98" font-size="13" fill="#374151">Map quantities to integer vectors</text>
-        <rect x="40" y="115" rx="10" ry="10" width="220" height="44" fill="#f3f4f6" stroke="#e5e7eb"/>
-        <text x="52" y="142" font-size="13" fill="#111827" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono','Courier New', monospace">
-          X → [L1, L2, L3, F1, F2]
-        </text>
-        <rect x="40" y="168" rx="10" ry="10" width="220" height="36" fill="#eff6ff" stroke="#c7d2fe"/>
-        <text x="52" y="191" font-size="13" fill="#1d4ed8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono','Courier New', monospace">
-          QDC ~ L³F²
-        </text>
-
-        <line x1="290" y1="130" x2="385" y2="130" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-
-        <rect x="395" y="40" rx="16" ry="16" width="250" height="180" fill="#ffffff" stroke="#e5e7eb" filter="url(#shadow)"/>
-        <text x="415" y="72" font-size="15" font-weight="650" fill="#0f172a">Closure / admissibility</text>
-        <text x="415" y="98" font-size="13" fill="#374151">Pre-dynamical filter</text>
-        <rect x="415" y="116" rx="12" ry="12" width="210" height="38" fill="#f9fafb" stroke="#e5e7eb"/>
-        <text x="428" y="140" font-size="13" fill="#111827">Does construction close onto QDC?</text>
-        <rect x="415" y="162" rx="12" ry="12" width="100" height="40" fill="#ecfeff" stroke="#a5f3fc"/>
-        <text x="440" y="187" font-size="13" fill="#0f172a" font-weight="650">Allowed</text>
-        <rect x="525" y="162" rx="12" ry="12" width="100" height="40" fill="#fff7ed" stroke="#fed7aa"/>
-        <text x="548" y="187" font-size="13" fill="#0f172a" font-weight="650">Excluded</text>
-
-        <line x1="655" y1="130" x2="750" y2="130" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
-
-        <rect x="760" y="40" rx="16" ry="16" width="200" height="180" fill="#ffffff" stroke="#e5e7eb" filter="url(#shadow)"/>
-        <text x="780" y="72" font-size="15" font-weight="650" fill="#0f172a">Downstream</text>
-        <text x="780" y="98" font-size="13" fill="#374151">What the filter controls</text>
-
-        <rect x="780" y="114" rx="12" ry="12" width="160" height="28" fill="#f9fafb" stroke="#e5e7eb"/>
-        <text x="792" y="133" font-size="13" fill="#111827">Operators / EFT bases</text>
-
-        <rect x="780" y="150" rx="12" ry="12" width="160" height="28" fill="#f9fafb" stroke="#e5e7eb"/>
-        <text x="792" y="169" font-size="13" fill="#111827">Constants / relations</text>
-
-        <rect x="780" y="186" rx="12" ry="12" width="160" height="28" fill="#f9fafb" stroke="#e5e7eb"/>
-        <text x="792" y="205" font-size="13" fill="#111827">Benchmarks / null tests</text>
-      </svg>
-    </div>
-
-    <div class="details" style="margin-top:0.6rem;">
-      Practical reading strategy: use the Top 5 above for framework-first onboarding, then branch into applications once the closure rule is internalized.
-    </div>
-  </div>
-
-  <!-- NEW: Definitions (v1.0) -->
   <section id="definitions">
     <h2 class="section-title">Definitions (v1.0)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> QDL is a defined representation + an explicit admissibility predicate; everything downstream inherits its meaning from these definitions.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> QDL is a defined representation plus an explicit admissibility predicate; downstream claims inherit meaning from these definitions.</div>
 
     <p class="section-sub">
-      The items below state the minimal objects used throughout this page. They are phrased as definitions of use, not as claims of physical necessity.
+      These are the minimal objects used throughout the framework. They are definitions of use, not claims of physical necessity.
     </p>
 
     <div class="card">
       <ol class="def-list">
         <li>
           <span class="def-label">Ledger basis.</span>
-          A 5-component exponent basis <span class="equation-snippet">⟨L1,L2,L3,F1,F2⟩</span> used to encode dimensional exponents as integers.
-          (This page does not require the basis to be physically privileged; applications that argue privilege are treated separately.)
+          A 5-component exponent basis <span class="equation-snippet">⟨L1,L2,L3,F1,F2⟩</span> used to encode dimensional quantities as integer vectors.
         </li>
         <li>
           <span class="def-label">Ledger map.</span>
           A map from a quantity <span class="equation-snippet">X</span> to an integer vector
-          <span class="equation-snippet">v(X) = [L1,L2,L3,F1,F2] ∈ ℤ⁵</span>, combined by integer addition under multiplication of quantities.
+          <span class="equation-snippet">v(X) = [L1,L2,L3,F1,F2] ∈ ℤ⁵</span>, combined additively under multiplication of quantities.
         </li>
         <li>
           <span class="def-label">QDC target.</span>
-          A designated conserved target monomial
-          <span class="equation-snippet">A_QDC ~ L³F²</span>
-          used as the closure reference in the admissibility predicate below.
+          A designated closure target of the form
+          <span class="equation-snippet">A<sub>QDC</sub> ~ L³F²</span>.
         </li>
         <li>
-          <span class="def-label">Closure predicate (admissibility test).</span>
-          A construction is “admissible” if the declared ledger sum for the construction satisfies a closure rule of the form
+          <span class="def-label">Closure predicate.</span>
+          A construction is admissible if its declared ledger sum satisfies a closure rule of the form
           <span class="equation-snippet">Σ v(terms) = n · v(QDC)</span>
-          for some integer <span class="equation-snippet">n</span>, under a declared equivalence/transform set (next item).
+          for some integer <span class="equation-snippet">n</span>, under a declared transform/equivalence set.
         </li>
         <li>
-          <span class="def-label">Declared equivalence / transforms.</span>
-          A declared set of representation changes (basis reparameterizations, unit changes, and other allowed rewrites) under which admissibility claims are asserted to be invariant.
-          (If a transform is not declared, invariance is not claimed.)
+          <span class="def-label">Declared transforms.</span>
+          A specified set of representation changes, reparameterizations, or equivalence operations under which admissibility claims are asserted.
         </li>
         <li>
-          <span class="def-label">Output type.</span>
-          The framework-level output is a classification: <em>admissible</em> / <em>excluded</em> under the declared rules. It is not a dynamical fit, and it does not substitute for empirical validation.
+          <span class="def-label">Framework output.</span>
+          The framework-level output is a classification: <em>admissible</em> or <em>excluded</em> under the declared rules. This is not itself an empirical fit.
         </li>
       </ol>
 
       <div class="details" style="margin-top:0.65rem;">
-        Canonical definition and worked examples are developed in the validation-layer paper
-        (<a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">17979789</a>).
+        The formal development is carried by the lattice and dimensional-closure papers linked above.
       </div>
     </div>
   </section>
 
-  <!-- NEW: Assumptions inventory -->
   <section id="assumptions">
     <h2 class="section-title">Assumptions &amp; commitments</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> These are the explicit commitments required for QDL claims to be meaningful; unstated commitments are not implied.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> These are the explicit commitments required for QDL claims to be meaningful.</div>
 
     <p class="section-sub">
-      The list below is intentionally direct: it states what must be accepted for the framework, as presented here, to be used as an admissibility filter.
+      This list states what must be accepted for the framework, as presented here, to function as an admissibility filter.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>Integer exponent encoding.</strong> The target class of models admits an integer-lattice representation of dimensional exponents (ledger vectors in <span class="equation-snippet">ℤ⁵</span>).
+          <strong>Integer exponent encoding.</strong> The relevant model class admits a lattice representation of dimensional quantities in <span class="equation-snippet">ℤ⁵</span>.
         </li>
         <li>
-          <strong>QDC postulate.</strong> A conserved QDC target <span class="equation-snippet">L³F²</span> is adopted as the closure reference.
+          <strong>QDC postulate.</strong> A QDC target of the form <span class="equation-snippet">L³F²</span> is adopted as the closure reference.
         </li>
         <li>
-          <strong>Closure adds constraint.</strong> The closure predicate is asserted to be strictly stronger than dimensional homogeneity for at least some model classes.
+          <strong>Closure adds constraint.</strong> The closure predicate is asserted to be stricter than dimensional homogeneity for at least some model classes.
         </li>
         <li>
-          <strong>Declared transforms only.</strong> Any invariance claim is scoped to a declared set of transforms/equivalences; undisclosed invariances are not claimed.
+          <strong>Declared transforms only.</strong> Invariance claims are scoped to declared transforms; undeclared invariances are not assumed.
         </li>
         <li>
-          <strong>Interpretation discipline.</strong> “Excluded” means excluded by the admissibility predicate; it is not, by itself, an empirical refutation of a physical model unless tied to a falsification protocol (see below).
+          <strong>Interpretation discipline.</strong> “Excluded” means excluded by the admissibility rule, not automatically empirically false.
         </li>
       </ul>
 
       <div class="details" style="margin-top:0.65rem;">
-        Where a physically privileged reading of the basis or group structure is argued, those arguments belong in the technical papers; this page keeps the framework definition operational.
+        Where a stronger physical reading of the basis is argued, that belongs in the technical papers, not this summary page.
       </div>
     </div>
   </section>
 
-  <!-- Section 1 -->
   <section id="core-structure">
     <h2 class="section-title">1. Core dimensional structure</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> Represent quantities as integer vectors in a 3L + 2F basis, and treat QDC closure as the target that structures admissibility.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> Represent quantities as integer vectors in a 3L + 2F basis, and use QDC closure as the target that structures admissibility.</div>
 
     <p class="section-sub">
-      QDL begins with a length–frequency dimensional basis and a conserved Quantized Dimensional Cell.
-      These define the ledger representation and the closure target used by the admissibility rule.
+      QDL begins with a length–frequency dimensional basis and a conserved Quantized Dimensional Cell. These define the ledger representation and the closure target used by the admissibility rule.
     </p>
 
     <div class="card">
       <ul>
         <li>
           <strong>3L + 2F length–frequency basis.</strong><br />
-          The framework uses a three-length, two-frequency exponent space rather than M–L–T.
-          Physical quantities are expanded in this basis with integer exponents.
-          <div class="details">
-            Accessible entry: structural reconstruction paper
-            (<a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">17882709</a>).
-            Technical support: metrology/QMU ledger
-            (<a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>).
-          </div>
+          The framework uses a three-length, two-frequency exponent space rather than an M–L–T basis.
         </li>
 
         <li>
           <strong>Quantized Dimensional Cell (QDC).</strong><br />
-          The QDC is a conserved dimensional “cell”:
-          <span class="equation-snippet">A<sub>QDC</sub> &sim; L<sup>3</sup>F<sup>2</sup></span>
-          <p>
-            QDL treats closure onto integer multiples of this cell as the admissibility target for actions,
-            interactions, and (in metrology) measurement-chain relations.
-          </p>
-          <div class="details">
-            Geometry support: SO(3,2) QDC structure
-            (<a href="https://doi.org/10.5281/zenodo.17683786" target="_blank" rel="noopener noreferrer">17683786</a>).
-          </div>
+          The QDC is the designated closure target:
+          <span class="equation-snippet">A<sub>QDC</sub> ~ L<sup>3</sup>F<sup>2</sup></span>.
         </li>
 
         <li>
           <strong>Ledger vector representation.</strong><br />
-          <span class="equation-snippet">X &rarr; [L<sub>1</sub>, L<sub>2</sub>, L<sub>3</sub>, F<sub>1</sub>, F<sub>2</sub>]</span>
+          <span class="equation-snippet">X → [L<sub>1</sub>, L<sub>2</sub>, L<sub>3</sub>, F<sub>1</sub>, F<sub>2</sub>]</span>
           <p>
-            Each physical quantity maps to a five-component integer vector in the 3L + 2F basis.
-            Ledger vectors combine by integer addition when constructing admissible terms or tracing measurement chains.
+            Each physical quantity maps to a five-component integer vector, and these vectors combine additively when terms are constructed or compared.
           </p>
-          <div class="details">
-            Method-first reference: prediction filter paper
-            (<a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">17848782</a>).
-          </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Section 2 -->
   <section id="closure-rule">
     <h2 class="section-title">2. Ledger closure as an admissibility rule</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> Closure is a strict pre-fit constraint that can filter admissible constructions before phenomenological tuning.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> Closure is proposed as a strict pre-fit constraint that can filter admissible constructions before phenomenological tuning.</div>
 
     <p class="section-sub">
-      QDL replaces “dimensional consistency” as a loose check with a strict closure constraint:
-      admissible constructions must close onto integer multiples of the QDC, under declared transforms.
+      QDL replaces “dimensional consistency” as a loose check with a stricter closure predicate: admissible constructions must close onto integer multiples of the QDC under declared transforms.
     </p>
 
     <div class="card">
       <ul>
         <li>
           <strong>Ledger-closure principle.</strong><br />
-          Instead of simply matching units, QDL imposes a closure predicate:
-          declared sums of field and coupling exponents must map onto integer multiples of the QDC.
-          <div class="details">
-            Canonical definition: validation-layer paper
-            (<a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">17979789</a>).
-          </div>
+          Rather than only matching units, QDL asks whether the declared exponent structure closes onto the QDC target.
         </li>
 
         <li>
-          <strong>What QDL claims beyond dimensional homogeneity.</strong><br />
-          Dimensional homogeneity constrains functional form; QDL claims an additional constraint: closure onto <em>integer multiples</em> of a conserved target under declared equivalences.
-          This page states the claim and points to technical development; it does not assert independent external validation by itself.
-          <div class="details">
-            Core method and worked constructions: prediction filter paper
-            (<a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">17848782</a>).
-          </div>
+          <strong>What is claimed beyond dimensional homogeneity.</strong><br />
+          Dimensional homogeneity constrains form. QDL claims an additional structural constraint: closure relative to a conserved target under declared equivalences.
         </li>
 
         <li>
-          <strong>Technical anchor: renormalization and operator pruning.</strong><br />
-          The closure rule can be applied as a pruning constraint, sharpening the admissibility framework into an operator rule set (technical treatment).
-          <div class="details">
-            Technical anchor: renormalization paper
-            (<a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">18025072</a>).
-          </div>
+          <strong>Framework-level consequence.</strong><br />
+          If closure holds, it can be used as an admissibility filter on constructions before more detailed dynamical or phenomenological work.
         </li>
       </ul>
 
-      <!-- NEW: baselines panel -->
       <div class="panel-row" aria-label="Baselines and comparisons">
         <div class="panel">
           <strong>Baseline comparison: SMEFT</strong>
           <p>
-            SMEFT claims are intended to be checked against canonical operator enumerations and redundancy handling.
-            Where QDL yields “exclusions,” they should be reported as either (i) re-derivations of known redundancies or (ii) genuinely additional constraints, with explicit reconciliation.
+            If QDL yields operator exclusions, those should be reported only after reconciliation with canonical operator bases and redundancy handling.
           </p>
         </div>
         <div class="panel">
           <strong>Baseline comparison: SI &amp; metrology</strong>
           <p>
-            SI 2019 fixes numerical values of certain constants by definition. QDL “constants ontology” is treated as a structural taxonomy unless a separate metrological constraint is explicitly derived and operationalized.
+            Constant and unit claims should be treated as a structural taxonomy unless a separate operational or metrological constraint is explicitly derived.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Structural positioning chart (UNCHANGED per request) -->
   <section>
     <h2 class="section-title">Structural positioning (historical analogies)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> This is a conceptual placement tool: it clarifies QDL’s functional role as a constraint/admissibility layer, not a claim of historical equivalence.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> These are conceptual analogies about function, not claims of historical equivalence.</div>
 
     <p class="section-sub">
-      The following comparisons are <strong>structural analogies</strong>, not claims of historical equivalence or scope.
-      They indicate the <em>role</em> QDL plays relative to well-established frameworks, viewed <strong>post-verification</strong>
-      as an admissibility and constraint layer.
+      The comparisons below indicate the kind of role QDL would play if it succeeds as an admissibility layer. They do not imply equal maturity, scope, or historical status.
     </p>
 
     <div class="card">
@@ -982,47 +861,46 @@
             <tr>
               <th>Historical precedent</th>
               <th>Structural role</th>
-              <th>QDL analog (post-verification)</th>
+              <th>QDL analog</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Maxwell</td>
-              <td>Field unification &rarr; emergent phenomena</td>
-              <td>L&ndash;F ledger constraints &rarr; emergent coupled field sectors</td>
+              <td>Field-level structural unification</td>
+              <td>Ledger closure as a unified admissibility grammar</td>
             </tr>
             <tr>
               <td>Einstein</td>
-              <td>Geometric constraint replaces force law</td>
-              <td>Closure filters admissible operators and constants</td>
+              <td>Constraint structure replaces a looser formulation</td>
+              <td>Closure filters admissible constructions</td>
             </tr>
             <tr>
               <td>Dirac</td>
-              <td>Formal necessity &rarr; unexpected spectrum</td>
-              <td>QDC structure constrains mass hierarchies and nuclear systematics</td>
+              <td>Formal structure constrains allowed content</td>
+              <td>Lattice organization constrains representable constructions</td>
             </tr>
             <tr>
               <td>Standard Model</td>
               <td>Symmetry restricts interactions</td>
-              <td>SO(3,2) ledger lattice restricts representable models</td>
+              <td>Ledger closure restricts admissible dimensional structure</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p class="details" style="margin-top:0.6rem;">
-        These analogies clarify <em>conceptual function</em> only. Differences in maturity, empirical scope, and historical impact are not implied.
+        These analogies clarify function only.
       </p>
     </div>
   </section>
 
-  <!-- NEW: Falsification boundaries -->
   <section id="falsification">
     <h2 class="section-title">Falsification (framework-level)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> QDL is rejectable only if the closure claim is tied to declared transforms, declared model families, and pre-stated failure conditions.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> QDL is rejectable only when closure claims are tied to declared transforms, declared model families, and pre-stated failure conditions.</div>
 
     <p class="section-sub">
-      This section states the framework-level failure modes in plain terms. Detailed protocols and benchmarks live on the Experiments page and in the associated Zenodo records.
+      This section states the framework-level failure modes in plain terms. Detailed protocols and benchmark records belong on the Experiments page.
     </p>
 
     <div class="card">
@@ -1034,203 +912,139 @@
 
       <ul>
         <li>
-          <strong>Closure falsification (invariance failure).</strong>
-          If a declared class of empirically adequate models (under a declared transform/equivalence set) repeatedly violates closure in a way that cannot be removed by the declared equivalences, then the closure claim fails for that model class.
+          <strong>Closure falsification.</strong>
+          If a declared class of empirically adequate models repeatedly violates closure under the declared transform set, and those violations cannot be removed by the declared equivalences, the closure claim fails for that model class.
         </li>
         <li>
-          <strong>Operator-constraint falsification (baseline conflict).</strong>
-          If QDL-derived operator constraints, when mapped into standard EFT/SMEFT baselines, reduce entirely to known redundancy elimination, then QDL has not added new exclusion content for that case.
-          If QDL claims additional exclusions, those exclusions must survive a baseline reconciliation; if they do not, the claim must be withdrawn or re-scoped.
+          <strong>Constraint-content falsification.</strong>
+          If a supposed QDL-specific exclusion reduces entirely to already-known redundancy elimination, QDL has not added new constraint content for that case.
         </li>
         <li>
-          <strong>Experimental falsification (scaling test).</strong>
-          If a proposed QDL-distinct scaling signature is not observed within stated sensitivity under a pre-registered analysis plan, the specific experimental claim fails.
+          <strong>Experimental falsification.</strong>
+          If a pre-stated QDL-distinct scaling signature is not observed within the stated sensitivity under a pre-registered analysis plan, that specific experimental claim fails.
         </li>
       </ul>
 
       <div class="details" style="margin-top:0.65rem;">
-        Validation roadmap: QDL Experimental Validation Protocol
-        (<a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">17654442</a>).
-        Benchmarks and replication materials: see <a href="experiments.html">Experiments</a>.
+        Validation roadmap and benchmark-linked records are listed on <a href="experiments.html">Experiments</a>.
       </div>
     </div>
   </section>
 
-  <!-- Section 3 (tone adjusted: hypothesis language) -->
   <section id="applications-gravity">
     <h2 class="section-title">3. Gravity, coherence, and phenomenology (applications)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> With closure fixed, QDL can be explored as a constraint on gravity/coherence constructions and then assessed via concrete phenomenology and scaling signatures.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> Once the framework is defined, it can be explored as a constraint layer in gravity and coherence constructions, then assessed through concrete phenomenology and scaling tests.</div>
 
     <p class="section-sub">
-      Once the framework core is in place, QDL can be explored as a constraint layer in gravity and quantum-coherence constructions,
-      then evaluated via concrete phenomenology (CLF) and scaling tests.
+      These are downstream applications of the admissibility framework, not part of the minimal definition itself.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>Quantum gravity from dimensional coherence.</strong><br />
-          Explores whether closure and coherence constraints can motivate minimum-length geometry and related structure tied back to the QDC.
-          <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.17848573" target="_blank" rel="noopener noreferrer">17848573</a>.
-          </div>
+          <strong>Gravity and minimum-length structure.</strong><br />
+          Explores whether closure and coherence constraints can motivate additional structure in gravity-related constructions.
         </li>
-
         <li>
-          <strong>Unified SM + gravity (field content under closure).</strong><br />
-          Applies the closure rule to Standard Model and scalar–tensor gravity sectors under a shared ledger, with downstream claims intended for baseline and phenomenology checks.
-          <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.17742903" target="_blank" rel="noopener noreferrer">17742903</a>.
-          </div>
+          <strong>Unified field-content explorations.</strong><br />
+          Applies the ledger framework across Standard Model and gravity-related sectors under a shared closure language.
         </li>
-
         <li>
-          <strong>Coherent ledger fields (CLF).</strong><br />
-          Connects QDC geometry to scalar–tensor–electromagnetic phenomenology, proposing signatures in torsion balances,
-          NV centers, cavity scaling, and metamaterials.
-          <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.17803804" target="_blank" rel="noopener noreferrer">17803804</a>.
-          </div>
+          <strong>Coherent ledger fields.</strong><br />
+          Connects ledger geometry to proposed phenomenology in torsion balances, NV centers, cavity scaling, and metamaterials.
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Section 4 (tone adjusted + baseline discipline) -->
   <section id="applications-eft">
     <h2 class="section-title">4. EFT / SMEFT as ledger lattices (applications)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> Ledger form turns operator content into an integer lattice where closure is proposed as an additional admissibility constraint beyond standard organization.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> Ledger form turns operator content into an integer lattice where closure is proposed as an additional admissibility constraint.</div>
 
     <p class="section-sub">
-      Expressing EFT and SMEFT operator bases in ledger form yields an integer lattice.
-      QDL proposes closure as a constraint that may exclude operators and impose structured coefficient relations,
-      subject to explicit reconciliation with standard EFT/SMEFT baselines.
+      Expressing EFT and SMEFT operator content in ledger form yields an integer lattice. QDL proposes closure as an additional constraint on operator organization and admissibility.
     </p>
 
     <div class="card">
       <ul>
         <li>
           <strong>Ledger lattice for EFT operators.</strong><br />
-          Operator content becomes a discrete lattice in 3L + 2F space, enabling structural organization and candidate exclusions.
-          <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.17773324" target="_blank" rel="noopener noreferrer">17773324</a>.
-          </div>
+          Operator content becomes a discrete lattice in 3L + 2F space, enabling structural organization and possible exclusions.
         </li>
 
         <li>
           <strong>SMEFT exclusions and relations.</strong><br />
-          Closure-derived constraints are presented as potentially excluding incompatible operators and yielding structured relations among Wilson coefficients;
-          these claims are intended to be checked against canonical operator bases and redundancy handling.
+          Closure-derived exclusions and coefficient relations should be interpreted only after explicit comparison with canonical SMEFT baselines.
           <div class="details">
             Reference:
-            <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">17780443</a>.
+            <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17780443</a>
           </div>
         </li>
       </ul>
-
-      <div class="details" style="margin-top:0.65rem;">
-        If you are evaluating SMEFT claims: treat “exclusion” as a technical statement only after mapping to a standard basis and reporting what is novel vs redundant.
-      </div>
     </div>
   </section>
 
-  <!-- Section 5 (tone tightened around metrology) -->
   <section id="applications-metrology">
-    <h2 class="section-title">5. Metrology, constants, and experimental validation (applications)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> QDL is designed to be testable: measurement-chain ledgers and benchmark protocols connect closure claims to public data and tabletop tests.</div>
+    <h2 class="section-title">5. Metrology, constants, and validation (applications)</h2>
+    <div class="takeaway"><strong>Takeaway:</strong> QDL is intended to be testable: metrology and benchmark work connect closure claims to public records and declared experiments.</div>
 
     <p class="section-sub">
-      QDL is built to be testable. Metrology and constants work provides ledger descriptions of measurement chains,
-      while the validation protocol specifies falsifiable tabletop experiments and benchmark-style null tests.
+      Metrology and constants work provides a structured language for dimensional audits and measurement-chain reasoning, while validation work ties the framework to declared benchmarks and null tests.
     </p>
 
     <div class="card">
       <ul>
         <li>
           <strong>QMU ledgers and dimensional audits.</strong><br />
-          Structured dimensional audits for units and constants; supports measurement-chain reasoning under closure.
+          Structured dimensional audits for units, constants, and measurement chains.
           <div class="details">
             Reference:
-            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">17619526</a>.
+            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17619526</a>
           </div>
         </li>
 
         <li>
           <strong>Ontology of constants.</strong><br />
-          Classifies constants by ledger role and structural meaning under closure; treated as taxonomy unless a separate operational constraint is explicitly derived.
-          <div class="details">
-            References:
-            <a href="https://doi.org/10.5281/zenodo.17663436" target="_blank" rel="noopener noreferrer">17663436</a>,
-            <a href="https://doi.org/10.5281/zenodo.17663501" target="_blank" rel="noopener noreferrer">17663501</a>.
-          </div>
+          Treats constants as a structural taxonomy unless a separate operational constraint is derived.
         </li>
 
         <li>
-          <strong>Experimental validation roadmap.</strong><br />
-          Torsion balances, NV centers, cavity experiments, and metamaterials as falsifiable probes of ledger-driven scaling laws.
-          <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.17654442" target="_blank" rel="noopener noreferrer">17654442</a>.
-          </div>
-        </li>
-
-        <li>
-          <strong>Engineering and pipeline auditing (practical layer).</strong><br />
-          Demonstrates closure-style tests as a pre-verification method for real modeling and measurement pipelines.
-          <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">18025343</a>.
-          </div>
+          <strong>Validation roadmap.</strong><br />
+          Torsion balances, NV centers, cavities, and metamaterials are proposed as declared tests of whether closure adds reproducible structure beyond conventional bookkeeping.
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Section 6 -->
   <section id="quickstart">
     <h2 class="section-title">6. Quick-start summary</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> If you’re new: follow the Top 5 framework-first path, then branch into applications; if you’re validation-first: start from Experiments and loop back here to interpret results.</div>
+    <div class="takeaway"><strong>Takeaway:</strong> If you are new, read the lattice and closure papers first, then branch into applications; if you are validation-first, start at Experiments and loop back here.</div>
 
     <p class="section-sub">
-      If you only take one thing from this page: QDL is a closure-based admissibility framework that turns dimensional analysis into a structural filter.
-      For first-time readers, follow the framework-first Top 5 and then branch into applications.
+      If you only take one thing from this page: QDL is a closure-based admissibility framework intended to turn dimensional reasoning into a more explicit structural filter.
     </p>
 
     <div class="card">
       <ul>
         <li>
-          <strong>Framework definition:</strong>
-          <a href="https://doi.org/10.5281/zenodo.17979789" target="_blank" rel="noopener noreferrer">
-            Dimensional Closure as a National-Scale Model Validation Layer
-          </a>.
+          <strong>Foundational lattice paper:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">Integer Lattice Structure of Dimensional Quantities</a>
         </li>
         <li>
-          <strong>Reconstruction:</strong>
-          <a href="https://doi.org/10.5281/zenodo.17882709" target="_blank" rel="noopener noreferrer">
-            Structural Reconstruction of Dimensional Analysis
-          </a>.
+          <strong>Formal closure paper:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">A Lattice Structure for Dimensional Closure in Physical Theories</a>
         </li>
         <li>
-          <strong>Method:</strong>
-          <a href="https://doi.org/10.5281/zenodo.17848782" target="_blank" rel="noopener noreferrer">
-            Prediction Filter for Field Content, EFT, Constants, Gravity, and Precision Measurement
-          </a>.
+          <strong>SMEFT application:</strong>
+          <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">Ledger-Closure Constraints on the SMEFT</a>
         </li>
         <li>
-          <strong>Technical rigor:</strong>
-          <a href="https://doi.org/10.5281/zenodo.18025072" target="_blank" rel="noopener noreferrer">
-            Ledger-Constrained Renormalization
-          </a>.
+          <strong>Metrology application:</strong>
+          <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">The Quantized Dimensional Ledger for Metrology</a>
         </li>
         <li>
-          <strong>Application:</strong>
-          <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">
-            Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines
-          </a>.
+          <strong>Book overview:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</a>
         </li>
         <li>
           <strong>Browse the full library:</strong>
@@ -1239,7 +1053,7 @@
         </li>
         <li>
           <strong>Validation-first option:</strong>
-          start at <a href="experiments.html">Experiments</a> for the roadmap and benchmarks, then return to this Framework page to interpret the admissibility layer.
+          start at <a href="experiments.html">Experiments</a> for benchmarks and declared tests, then return here to interpret the admissibility layer.
         </li>
       </ul>
     </div>
@@ -1250,10 +1064,9 @@
   <div class="footer-inner">
     <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
     <span>Quantized Dimensional Ledger · Structural Admissibility · Metrology · Testable Constraints</span>
-    <span><a href="demo.html">Prototype Demo</a> · Structural integrity screening workflow & example report</span>
+    <span><a href="demo.html">Prototype Demo</a> · prototype workflow and example report</span>
   </div>
 </footer>
-
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
