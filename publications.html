@@ -15,11 +15,6 @@
   --text-soft:#6b7280;
   --accent:#2563eb;
   --link:#0369a1;
-  --badge-bg:#f8fafc;
-  --badge-green:#16a34a;
-  --badge-amber:#d97706;
-  --badge-blue:#2563eb;
-  --badge-purple:#7c3aed;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{
@@ -174,13 +169,19 @@ main{
   color:#fff;
   box-shadow:0 10px 24px rgba(37,99,235,.25);
 }
-.btn-primary:hover{filter:brightness(1.03);text-decoration:none;}
+.btn-primary:hover{
+  filter:brightness(1.03);
+  text-decoration:none;
+}
 .btn-secondary{
   background:#fff;
   color:#111827;
   border-color:#d1d5db;
 }
-.btn-secondary:hover{background:#f9fafb;text-decoration:none;}
+.btn-secondary:hover{
+  background:#f9fafb;
+  text-decoration:none;
+}
 .book-callout{
   margin-top:1rem;
   padding:1rem 1.05rem;
@@ -234,7 +235,10 @@ main{
   color:#fff;
   box-shadow:0 10px 24px rgba(124,58,237,.22);
 }
-.btn-book:hover{filter:brightness(1.03);text-decoration:none;}
+.btn-book:hover{
+  filter:brightness(1.03);
+  text-decoration:none;
+}
 .section{
   margin-top:1.9rem;
 }
@@ -326,6 +330,7 @@ footer{
   padding:1.2rem 1.25rem 1.8rem;
   font-size:.8rem;
   color:#6b7280;
+  background:#f9fafb;
 }
 .footer-grid{
   max-width:1100px;
@@ -392,14 +397,13 @@ footer{
     <div class="book-callout" id="books">
       <div class="book-wrap">
         <div class="book-cover">
-          <img src="Front cover.png" alt="Cover of The Quantized Dimensional Ledger">
+          <img src="book-cover.png" alt="Cover of The Quantized Dimensional Ledger">
         </div>
         <div>
           <div class="book-title">The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</div>
           <div class="book-meta">Bourassa, J. D. (2026). Book. DOI: 10.5281/zenodo.18902770</div>
           <p>
-            This book is a reader-facing synthesis of the QDL program. The canonical mathematical structure
-            and technical claims remain documented in the DOI-backed papers listed below.
+            This book is a reader-facing synthesis of the QDL program. The canonical mathematical structure and strongest technical claims remain in the DOI-backed papers and preprints.
           </p>
           <div class="book-actions">
             <a class="btn btn-book" href="https://www.amazon.com/dp/B0GHZJHT36" target="_blank" rel="noopener noreferrer">View on Amazon Kindle</a>
@@ -424,12 +428,13 @@ footer{
           <span class="tag tag-accent">Core path</span>
           <span class="tag">Lattice foundation</span>
         </div>
-        <div class="card-title">Integer Lattice Structure of Dimensional Quantities: The Algebraic Structure of the Quantized Dimensional Ledger</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
+            Integer Lattice Structure of Dimensional Quantities: The Algebraic Structure of the Quantized Dimensional Ledger
+          </a>
+        </div>
         <div class="card-meta">Preprint · DOI-backed</div>
-        <p>
-          The algebraic and lattice-theoretic foundation for representing dimensional quantities as integer vectors.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18970320</a></p>
+        <p>The algebraic and lattice-theoretic foundation for representing dimensional quantities as integer vectors.</p>
       </article>
 
       <article class="card">
@@ -437,12 +442,13 @@ footer{
           <span class="tag tag-accent">Core path</span>
           <span class="tag">Closure formalism</span>
         </div>
-        <div class="card-title">The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
+            The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
+          </a>
+        </div>
         <div class="card-meta">Preprint · DOI-backed</div>
-        <p>
-          The main formal statement of dimensional closure as a structural admissibility condition in the QDL framework.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18981850</a></p>
+        <p>The main formal statement of dimensional closure as a structural admissibility condition in the QDL framework.</p>
       </article>
 
       <article class="card">
@@ -450,12 +456,13 @@ footer{
           <span class="tag tag-accent">Core path</span>
           <span class="tag">SMEFT application</span>
         </div>
-        <div class="card-title">Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
+            Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations
+          </a>
+        </div>
         <div class="card-meta">Preprint · DOI-backed</div>
-        <p>
-          Applies the closure framework to SMEFT operator structure and argues for additional admissibility constraints.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.17780443</a></p>
+        <p>Applies the closure framework to SMEFT operator structure and argues for additional admissibility constraints.</p>
       </article>
 
       <article class="card">
@@ -463,12 +470,13 @@ footer{
           <span class="tag tag-accent">Core path</span>
           <span class="tag">Metrology</span>
         </div>
-        <div class="card-title">The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
+            The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants
+          </a>
+        </div>
         <div class="card-meta">Preprint · DOI-backed</div>
-        <p>
-          Extends the framework into metrology, dimensional closure, and the structural treatment of constants and measurement relations.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.17619526</a></p>
+        <p>Extends the framework into metrology, dimensional closure, and the structural treatment of constants and measurement relations.</p>
       </article>
 
       <article class="card">
@@ -476,12 +484,13 @@ footer{
           <span class="tag tag-accent">Core path</span>
           <span class="tag">Book synthesis</span>
         </div>
-        <div class="card-title">The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
+            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
+          </a>
+        </div>
         <div class="card-meta">Book · DOI-backed</div>
-        <p>
-          A synthetic presentation of the full program intended to improve accessibility and narrative continuity.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18902770</a></p>
+        <p>A synthetic presentation of the full program intended to improve accessibility and narrative continuity.</p>
       </article>
 
     </div>
@@ -500,12 +509,13 @@ footer{
           <span class="tag tag-executed">Executed benchmark</span>
           <span class="tag">Residual-first</span>
         </div>
-        <div class="card-title">Benchmarks &amp; Null Tests</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">
+            Benchmarks &amp; Null Tests
+          </a>
+        </div>
         <div class="card-meta">Executed record · public-data method study</div>
-        <p>
-          Residual-first adequacy testing under declared model families and parameter budgets.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18057668</a></p>
+        <p>Residual-first adequacy testing under declared model families and parameter budgets.</p>
       </article>
 
       <article class="card">
@@ -513,12 +523,13 @@ footer{
           <span class="tag tag-executed">Executed benchmark</span>
           <span class="tag">NV ODMR</span>
         </div>
-        <div class="card-title">NV ODMR Benchmark</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">
+            NV ODMR Benchmark
+          </a>
+        </div>
         <div class="card-meta">Executed record · reproducible method study</div>
-        <p>
-          Public-data benchmark record structured for replication and residual-first interpretation.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18069870</a></p>
+        <p>Public-data benchmark record structured for replication and residual-first interpretation.</p>
       </article>
 
       <article class="card">
@@ -526,12 +537,13 @@ footer{
           <span class="tag tag-executed">Executed benchmark</span>
           <span class="tag">Optical cavity</span>
         </div>
-        <div class="card-title">Optical Cavity Benchmark</div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">
+            Optical Cavity Benchmark
+          </a>
+        </div>
         <div class="card-meta">Executed record · reproducible method study</div>
-        <p>
-          Optical cavity benchmark with public provenance and declared methodological controls.
-        </p>
-        <p><a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18076864</a></p>
+        <p>Optical cavity benchmark with public provenance and declared methodological controls.</p>
       </article>
 
     </div>
@@ -550,11 +562,11 @@ footer{
           <span class="tag tag-hypothesis">Application / hypothesis</span>
           <span class="tag">Gravity</span>
         </div>
-        <div class="card-title">Lattice Constraints on Black Hole Horizon Structure: A Quantized Dimensional Ledger Analysis</div>
+        <div class="card-title">
+          <a href="research.html">Lattice Constraints on Black Hole Horizon Structure: A Quantized Dimensional Ledger Analysis</a>
+        </div>
         <div class="card-meta">Application paper</div>
-        <p>
-          Applies QDL ideas to black hole horizon structure and dimensional admissibility questions in gravitational settings.
-        </p>
+        <p>Applies QDL ideas to black hole horizon structure and dimensional admissibility questions in gravitational settings.</p>
       </article>
 
       <article class="card">
@@ -562,11 +574,11 @@ footer{
           <span class="tag tag-hypothesis">Application / hypothesis</span>
           <span class="tag">Scalar EFT</span>
         </div>
-        <div class="card-title">Graded Operator Monoids and Canonical-Dimension Lattices in Scalar Effective Field Theory</div>
+        <div class="card-title">
+          <a href="research.html">Graded Operator Monoids and Canonical-Dimension Lattices in Scalar Effective Field Theory</a>
+        </div>
         <div class="card-meta">Application paper</div>
-        <p>
-          Extends the operator-lattice viewpoint into scalar EFT contexts and graded monoid structure.
-        </p>
+        <p>Extends the operator-lattice viewpoint into scalar EFT contexts and graded monoid structure.</p>
       </article>
 
       <article class="card">
@@ -574,11 +586,11 @@ footer{
           <span class="tag tag-hypothesis">Application / hypothesis</span>
           <span class="tag">Cross-domain</span>
         </div>
-        <div class="card-title">Dimensional Admissibility as a Cross-Domain Safety Standard</div>
+        <div class="card-title">
+          <a href="research.html">Dimensional Admissibility as a Cross-Domain Safety Standard</a>
+        </div>
         <div class="card-meta">Methodological / cross-domain application</div>
-        <p>
-          Recasts dimensional admissibility as a more general validation layer spanning model integrity, engineering, and decision systems.
-        </p>
+        <p>Recasts dimensional admissibility as a more general validation layer spanning model integrity, engineering, and decision systems.</p>
       </article>
 
     </div>
