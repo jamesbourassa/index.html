@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="A one-page, equation-free overview of the Quantized Dimensional Ledger (QDL) for standards, program managers, and technical decision-makers, with links to technical documents."
+    content="A one-page, equation-light overview of the Quantized Dimensional Ledger (QDL): what it is, what it does, where it applies, and where to go for the formal papers."
   />
 
   <style>
@@ -18,8 +18,6 @@
       --text-soft: #6b7280;
       --accent: #2563eb;
       --accent-soft: #eff6ff;
-      --code-bg: #0b1020;
-      --code-text: #e9eefc;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -160,7 +158,7 @@
       font-size: 0.95rem;
       color: var(--text-soft);
       max-width: 52rem;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .hero-meta {
@@ -177,6 +175,27 @@
       border: 1px solid #e5e7eb;
       background: #f9fafb;
       color: #4b5563;
+    }
+
+    .hero-figure {
+      margin: 1rem 0 1rem;
+      max-width: 48rem;
+    }
+
+    .hero-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+    }
+
+    .hero-figure figcaption {
+      margin-top: 0.45rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      line-height: 1.5;
     }
 
     .section { margin-bottom: 2.1rem; }
@@ -278,6 +297,29 @@
       gap: 0.45rem;
     }
 
+    .paper-list {
+      margin-top: 0.45rem;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .paper-item {
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .paper-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .paper-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-top: 0.15rem;
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -313,6 +355,7 @@
 
     <nav class="nav-links" aria-label="Site navigation">
       <a href="index.html">Home</a>
+      <a href="qdl-in-5-minutes.html" class="nav-active">QDL in 5 Minutes</a>
       <a href="framework.html">Framework</a>
       <a href="experiments.html">Experiments</a>
       <a href="publications.html">Publications</a>
@@ -327,18 +370,24 @@
 <main>
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-kicker">No equations · one page</div>
+    <div class="hero-kicker">One page · first-pass overview</div>
     <h1 class="hero-title">QDL in 5 Minutes</h1>
     <p class="hero-sub">
-      A concise overview for standards, program-management, and technical decision-makers.
-      QDL is a <strong>structure-first</strong> framework for identifying model and measurement fragility
-      (units, hidden assumptions, regime drift, traceability breaks) <strong>before</strong> calibration or deployment.
+      The Quantized Dimensional Ledger (QDL) is a proposed <strong>structural admissibility framework</strong> for dimensional reasoning. It asks, before fitting or deployment, whether a construction is structurally coherent under declared dimensional rules and transformations. The intended role is upstream of dynamics: a filter on admissible representations, not a replacement for established physical theories.
     </p>
+
+    <figure class="hero-figure">
+      <img src="figure1.png" alt="Dimensional lattice and closure direction for the Quantized Dimensional Ledger" />
+      <figcaption>
+        Physical quantities are represented as integer vectors in a dimensional lattice. The closure direction q = (1,1,1,1,1) generates the subgroup of closure-admissible constructions.
+      </figcaption>
+    </figure>
+
     <div class="hero-meta">
       <span class="hero-chip">Structural Admissibility</span>
+      <span class="hero-chip">Dimensional Closure</span>
       <span class="hero-chip">Measurement Integrity</span>
       <span class="hero-chip">Regime Boundaries</span>
-      <span class="hero-chip">Model Governance</span>
       <span class="hero-chip">Auditability</span>
     </div>
   </section>
@@ -347,77 +396,71 @@
     <div class="grid">
       <!-- LEFT: MAIN ONE-PAGER -->
       <div class="card">
-        <h3>1) The problem QDL addresses</h3>
+        <h3>1) What problem does QDL address?</h3>
         <p>
-          In complex systems, models often fail not because data are “bad,” but because the model is
-          <em>structurally illegible</em>: unit mismatches, implicit assumptions, invalid extrapolations,
-          or measurement-chain breaks that are hard to see during development and review.
+          In complex physical and model-driven systems, errors often arise before calibration or optimization: inconsistent dimensional structure, hidden representational assumptions, invalid transformations, or extrapolations beyond the regime where a model remains meaningful.
         </p>
         <ul class="tight">
           <li>Unit and scale inconsistencies that slip through review</li>
-          <li>Parameter combinations that are mathematically permitted but physically inadmissible</li>
+          <li>Mathematically permitted constructions that may still be structurally inadmissible</li>
           <li>Extrapolations that silently leave a valid regime</li>
-          <li>Transformations that erode traceability or meaning</li>
+          <li>Transformations that erode traceability or physical meaning</li>
         </ul>
 
-        <h3 style="margin-top:0.85rem;">2) The core idea (no equations)</h3>
+        <h3 style="margin-top:0.85rem;">2) What is the core idea?</h3>
         <p>
-          The Quantized Dimensional Ledger (QDL) treats admissibility as a <strong>structural constraint system</strong>.
-          Instead of asking only “does the model fit the data?”, QDL asks first:
+          QDL treats admissibility as a <strong>structural question</strong>. Instead of asking only whether a model can be fitted or numerically tuned, QDL asks first whether the dimensional construction itself remains coherent under declared rules.
         </p>
 
         <div class="callout" role="note" aria-label="Core question">
           <p style="margin:0;">
-            <strong>Is this model structurally admissible before we fit, optimize, or deploy it?</strong>
+            <strong>Is this construction structurally admissible before we fit, optimize, certify, or deploy it?</strong>
           </p>
         </div>
 
         <p>
-          Put differently: QDL functions like a grammar for physically meaningful relationships, supporting
-          disciplined model construction and review.
+          In the formal papers, this is expressed using an integer lattice representation of dimensional quantities and a closure condition relative to a distinguished Quantized Dimensional Cell (QDC). On this page, the key point is simpler: QDL aims to make structural coherence explicit and reviewable.
         </p>
 
-        <h3 style="margin-top:0.85rem;">3) What QDL does in practice</h3>
+        <h3 style="margin-top:0.85rem;">3) What does QDL do in practice?</h3>
         <ul class="tight">
-          <li><strong>Flags structural inadmissibility early</strong> (before deployment)</li>
-          <li><strong>Detects hidden closure violations</strong> and inconsistent transformations</li>
-          <li><strong>Makes regime boundaries explicit</strong> (where extrapolation becomes structurally risky)</li>
-          <li><strong>Supports measurement-chain integrity</strong> (traceability across conversions and model steps)</li>
-          <li><strong>Improves auditability</strong> by making structural assumptions explicit and reviewable</li>
+          <li><strong>Flags structural inadmissibility early</strong> before downstream validation work</li>
+          <li><strong>Makes hidden assumptions explicit</strong> and easier to audit</li>
+          <li><strong>Clarifies regime boundaries</strong> where extrapolation becomes structurally risky</li>
+          <li><strong>Supports measurement-chain integrity</strong> across transformations and conversions</li>
+          <li><strong>Provides a consistent review language</strong> for dimensional coherence</li>
         </ul>
 
-        <h3 style="margin-top:0.85rem;">4) Where it applies</h3>
+        <h3 style="margin-top:0.85rem;">4) Where can it apply?</h3>
         <p>
-          QDL is intended to be cross-domain: wherever models touch measurement, decisions, or safety.
+          QDL is intended as a cross-domain framework wherever dimensional structure matters.
         </p>
         <ul class="tight">
-          <li><strong>Metrology and standards</strong> (unit coherence, traceable transformations)</li>
-          <li><strong>Physics and EFT</strong> (operator admissibility constraints; structural exclusions)</li>
-          <li><strong>Risk and stress testing</strong> (constraints on model-driven decisions)</li>
-          <li><strong>AI connected to physical measurement</strong> (sensor-to-decision pipelines)</li>
-          <li><strong>Engineering / safety-critical modeling</strong> (regime boundaries; fragility reduction)</li>
+          <li><strong>Metrology and standards</strong> for unit coherence and transformation traceability</li>
+          <li><strong>Physics and EFT/SMEFT</strong> for structural constraints on operator constructions</li>
+          <li><strong>Engineering and safety-critical modeling</strong> for explicit regime boundaries</li>
+          <li><strong>AI connected to measurement</strong> for sensor-to-decision pipeline integrity</li>
+          <li><strong>Model governance</strong> where decision quality depends on representational robustness</li>
         </ul>
 
         <h3 style="margin-top:0.85rem;">5) What QDL is not</h3>
         <ul class="tight">
-          <li>Not a replacement for physics, statistics, or domain expertise</li>
+          <li>Not a replacement for quantum field theory, general relativity, or statistics</li>
           <li>Not a data-fitting method</li>
-          <li>Not a metaphysical or speculative proposal</li>
-          <li>Not dependent on one specific theory or dataset</li>
+          <li>Not a claim of new particles, forces, or dynamics</li>
+          <li>Not dependent on one specific dataset or one application area</li>
         </ul>
 
         <div class="callout" role="note" aria-label="Bottom line">
           <p style="margin:0;">
             <span class="pill blue">Bottom line</span>
-            QDL is a <strong>structural admissibility filter</strong>: it clarifies whether a proposed model construction
-            is coherent before you invest in validation, certification, or deployment.
+            QDL is a <strong>structural admissibility filter</strong>: it helps determine whether a proposed construction is coherent before major effort is invested in validation, certification, or deployment.
           </p>
         </div>
 
-        <h3 style="margin-top:0.85rem;">6) Why this matters for decision-makers</h3>
+        <h3 style="margin-top:0.85rem;">6) Why might this matter?</h3>
         <p>
-          As model complexity increases, structural errors scale faster than noise. QDL helps teams reduce preventable
-          failure modes, strengthen review processes, and make “valid regime” boundaries explicit.
+          If dimensional closure proves robust across relevant model classes and applications, QDL could strengthen dimensional reasoning from a bookkeeping check into a more explicit structural filter on admissible representations.
         </p>
 
         <p class="mini-note" style="margin-top:0.75rem;">
@@ -430,49 +473,83 @@
       <aside class="card">
         <h3>Start here, then go deeper</h3>
         <p>
-          If you have 60 seconds: read the sections on the left.
-          If you have 15 minutes: follow the technical paths below.
+          If you have one minute, read the sections on the left. If you want the formal structure, technical applications, or the book, use the links below.
         </p>
 
         <div class="callout" style="margin-top:0.65rem;">
-  <p style="margin:0 0 0.35rem 0;">
-    <strong>View a working example (Demo)</strong>
-  </p>
-  <div class="linklist">
-    <a href="demo.html">Interactive Demo – Structural Integrity Screening</a>
-  </div>
-</div>
+          <p style="margin:0 0 0.35rem 0;">
+            <strong>Recommended reading path</strong>
+          </p>
+          <div class="linklist">
+            <a href="framework.html">Framework — definitions, scope, and admissibility language</a>
+            <a href="experiments.html">Experiments — declared tests, benchmarks, and failure conditions</a>
+            <a href="publications.html">Publications — full paper list and status notes</a>
+          </div>
+        </div>
 
-<div class="callout" style="margin-top:0.65rem;">
-  <p style="margin:0 0 0.35rem 0;">
-    <strong>Technical documents</strong>
-  </p>
-  <div class="linklist">
-    <a href="publications.html">Publications (papers & preprints)</a>
-    <a href="framework.html">Framework (definitions & admissibility language)</a>
-    <a href="experiments.html">Experiments (measurement targets & tests)</a>
-  </div>
-</div>
+        <div class="callout" style="margin-top:0.65rem;">
+          <p style="margin:0 0 0.35rem 0;">
+            <strong>View a working example</strong>
+          </p>
+          <div class="linklist">
+            <a href="demo.html">Interactive Demo — Structural Integrity Screening</a>
+          </div>
+        </div>
 
+        <h3 style="margin-top:0.85rem;">Core papers</h3>
+        <div class="paper-list">
+          <div class="paper-item">
+            <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
+              <strong>Integer Lattice Structure of Dimensional Quantities: The Algebraic Structure of the Quantized Dimensional Ledger</strong>
+            </a>
+            <div class="paper-meta">2026-03-11 · Preprint · DOI: 10.5281/zenodo.18970320</div>
+          </div>
 
-        <h3 style="margin-top:0.85rem;">For standards & program managers</h3>
+          <div class="paper-item">
+            <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
+              <strong>The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories</strong>
+            </a>
+            <div class="paper-meta">2026-03-12 · Preprint · DOI: 10.5281/zenodo.18981850</div>
+          </div>
+
+          <div class="paper-item">
+            <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
+              <strong>Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations</strong>
+            </a>
+            <div class="paper-meta">2025-12-01 · Preprint · DOI: 10.5281/zenodo.17780443</div>
+          </div>
+
+          <div class="paper-item">
+            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
+              <strong>The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</strong>
+            </a>
+            <div class="paper-meta">2025-11-15 · Preprint · DOI: 10.5281/zenodo.17619526</div>
+          </div>
+
+          <div class="paper-item">
+            <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
+              <strong>The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</strong>
+            </a>
+            <div class="paper-meta">2026-03-07 · Book · DOI: 10.5281/zenodo.18902770</div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:0.95rem;">For standards &amp; program managers</h3>
         <ul class="tight">
-          <li><strong>Use case:</strong> “upstream structural screening” before calibration/certification</li>
-          <li><strong>Output style:</strong> interpretable PASS/WARN/FAIL-style findings (governance-friendly)</li>
-          <li><strong>Integration:</strong> complements existing V&V, audits, and review boards</li>
+          <li><strong>Use case:</strong> upstream structural screening before calibration or certification</li>
+          <li><strong>Output style:</strong> interpretable findings for governance and review</li>
+          <li><strong>Integration:</strong> complements existing V&amp;V, audits, and review boards</li>
         </ul>
 
         <div class="callout" style="margin-top:0.85rem;">
           <p style="margin:0 0 0.35rem 0;"><strong>Suggested citation line (informal)</strong></p>
           <p style="margin:0; color:#374151; line-height:1.55;">
-            Bourassa, J. D., <em>Quantized Dimensional Ledger (QDL)</em>, QDL Physics Institute. See Publications for
-            archival artifacts and technical derivations.
+            Bourassa, J. D., <em>Quantized Dimensional Ledger (QDL)</em>, QDL Physics Institute. See Publications and the linked DOI records for formal papers and archival artifacts.
           </p>
         </div>
 
         <p class="mini-note">
-          If you want a version tailored to a specific standards context (metrology, safety, AI/ML governance),
-          this page can be forked into a one-page “Program Brief.”
+          This page is intentionally brief. For the formal mathematical structure, use the lattice and dimensional-closure papers first, then the SMEFT and metrology applications.
         </p>
       </aside>
     </div>
@@ -488,10 +565,6 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Optional: mark this page as active in the nav if you add it there later.
-  // Example: add a nav link <a href="qdl-in-5-minutes.html" data-page="qdl5">QDL in 5 Minutes</a>
-  // then set it active here.
 </script>
 </body>
 </html>
