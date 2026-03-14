@@ -13,16 +13,18 @@
   --border-soft:#e5e7eb;
   --text-main:#0f172a;
   --text-soft:#6b7280;
+  --text-muted:#475569;
   --accent:#2563eb;
   --link:#0369a1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 body{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:var(--bg-page);
   color:var(--text-main);
   -webkit-font-smoothing:antialiased;
-  line-height:1.6;
+  line-height:1.65;
 }
 a{color:var(--link);text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -37,7 +39,7 @@ header{
 .nav{
   max-width:1100px;
   margin:0 auto;
-  padding:.75rem 1.25rem;
+  padding:.78rem 1.25rem;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -47,7 +49,7 @@ header{
 .logo{
   display:flex;
   align-items:center;
-  gap:.6rem;
+  gap:.65rem;
 }
 .logo-icon{
   width:52px;
@@ -67,7 +69,7 @@ header{
   display:block;
 }
 .logo-text-main{
-  font-weight:600;
+  font-weight:650;
   letter-spacing:.06em;
   text-transform:uppercase;
   font-size:.82rem;
@@ -87,18 +89,24 @@ header{
 }
 .nav-links a{
   color:#e5e7eb;
-  padding:.25rem .6rem;
+  padding:.28rem .68rem;
   border-radius:999px;
+  border:1px solid transparent;
 }
 .nav-links a:hover{
   background:#111827;
   text-decoration:none;
 }
+.nav-active{
+  border-color:rgba(56,189,248,.85) !important;
+  background:rgba(56,189,248,.10) !important;
+  color:#e0f2fe !important;
+}
 .nav-cta{
-  border:1px solid #38bdf8;
+  border:1px solid #38bdf8 !important;
   background:#0b1120;
   color:#e0f2fe !important;
-  padding:.3rem .85rem;
+  padding:.32rem .88rem;
   border-radius:999px;
   text-transform:uppercase;
   letter-spacing:.08em;
@@ -107,32 +115,34 @@ header{
 main{
   max-width:1100px;
   margin:0 auto;
-  padding:1.75rem 1.25rem 3rem;
+  padding:1.85rem 1.25rem 3.2rem;
 }
 .hero{
   background:var(--bg-card);
-  border-radius:18px;
+  border-radius:20px;
   border:1px solid var(--border-soft);
-  box-shadow:0 8px 24px rgba(15,23,42,.06);
-  padding:1.6rem 1.5rem;
-  margin-bottom:1.5rem;
+  box-shadow:0 10px 28px rgba(15,23,42,.06);
+  padding:1.7rem 1.6rem 1.55rem;
+  margin-bottom:1.6rem;
 }
 .hero-kicker{
   text-transform:uppercase;
   letter-spacing:.18em;
   font-size:.78rem;
   color:#6b7280;
-  margin-bottom:.35rem;
+  margin-bottom:.38rem;
 }
 .hero-title{
-  font-size:clamp(1.9rem,3vw,2.3rem);
-  margin-bottom:.5rem;
+  font-size:clamp(2rem,3vw,2.45rem);
+  line-height:1.15;
+  margin-bottom:.52rem;
+  letter-spacing:-0.02em;
 }
 .hero-sub{
-  font-size:.96rem;
+  font-size:.97rem;
   color:#4b5563;
-  max-width:56rem;
-  margin-bottom:.8rem;
+  max-width:57rem;
+  margin-bottom:.85rem;
 }
 .hero-meta{
   display:flex;
@@ -141,23 +151,23 @@ main{
   font-size:.8rem;
 }
 .hero-chip{
-  padding:.15rem .7rem;
+  padding:.16rem .72rem;
   border-radius:999px;
   border:1px solid #e5e7eb;
   background:#f9fafb;
-  color:#475569;
+  color:var(--text-muted);
 }
 .hero-actions{
   display:flex;
   flex-wrap:wrap;
-  gap:.55rem;
-  margin-top:.9rem;
+  gap:.58rem;
+  margin-top:1rem;
 }
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:.55rem 1rem;
+  padding:.58rem 1rem;
   border-radius:999px;
   border:1px solid transparent;
   font-size:.86rem;
@@ -185,7 +195,7 @@ main{
 .book-callout{
   margin-top:1rem;
   padding:1rem 1.05rem;
-  border-radius:16px;
+  border-radius:18px;
   border:1px solid rgba(124,58,237,.25);
   background:#fbfaff;
   box-shadow:0 8px 24px rgba(15,23,42,.06);
@@ -214,21 +224,21 @@ main{
 }
 .book-title{
   font-weight:700;
-  font-size:1.02rem;
-  margin-bottom:.2rem;
+  font-size:1.04rem;
+  margin-bottom:.22rem;
   color:#111827;
   line-height:1.3;
 }
 .book-meta{
   font-size:.84rem;
   color:#6b7280;
-  margin-bottom:.55rem;
+  margin-bottom:.58rem;
 }
 .book-actions{
   display:flex;
   flex-wrap:wrap;
   gap:.55rem;
-  margin-top:.75rem;
+  margin-top:.8rem;
 }
 .btn-book{
   background:linear-gradient(135deg,#7c3aed,#6d28d9);
@@ -240,7 +250,7 @@ main{
   text-decoration:none;
 }
 .section{
-  margin-top:1.9rem;
+  margin-top:2rem;
 }
 .section-header{
   display:flex;
@@ -251,15 +261,15 @@ main{
   margin-bottom:1rem;
 }
 .section-title{
-  font-size:.95rem;
+  font-size:.96rem;
   text-transform:uppercase;
   letter-spacing:.16em;
   color:#111827;
 }
 .section-kicker{
-  font-size:.82rem;
+  font-size:.83rem;
   color:var(--text-soft);
-  max-width:38rem;
+  max-width:40rem;
 }
 .card-column{
   display:flex;
@@ -269,30 +279,36 @@ main{
 }
 .card{
   background:var(--bg-card);
-  border-radius:16px;
+  border-radius:18px;
   border:1px solid var(--border-soft);
-  padding:1rem 1.05rem;
+  padding:1.05rem 1.08rem;
   box-shadow:0 8px 24px rgba(15,23,42,.06);
-  font-size:.92rem;
+  font-size:.93rem;
   color:#374151;
 }
 .card-title{
-  font-size:1rem;
+  font-size:1.02rem;
   font-weight:650;
-  margin-bottom:.25rem;
-  line-height:1.35;
+  margin-bottom:.26rem;
+  line-height:1.38;
+}
+.card-title a{
+  color:#0f172a;
+}
+.card-title a:hover{
+  color:#0369a1;
 }
 .card-meta{
   font-size:.82rem;
   color:var(--text-soft);
-  margin-bottom:.55rem;
+  margin-bottom:.58rem;
   line-height:1.4;
 }
 .tagrow{
   display:flex;
   flex-wrap:wrap;
-  gap:.4rem;
-  margin:.15rem 0 .55rem;
+  gap:.42rem;
+  margin:.12rem 0 .6rem;
 }
 .tag{
   font-size:.74rem;
@@ -360,7 +376,7 @@ footer{
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="research.html">Research Program</a>
-      <a href="publications.html">Publications</a>
+      <a href="publications.html" class="nav-active">Publications</a>
       <a href="institute.html">Institute</a>
       <a href="resources.html">Resources</a>
       <a href="contact.html" class="nav-cta">Contact</a>
@@ -549,68 +565,68 @@ footer{
     </div>
   </section>
 
- <section class="section" id="applications">
-  <div class="section-header">
-    <h2 class="section-title">Selected Applications</h2>
-    <p class="section-kicker">Downstream uses and hypotheses best read after the foundational papers.</p>
-  </div>
+  <section class="section" id="applications">
+    <div class="section-header">
+      <h2 class="section-title">Selected Applications</h2>
+      <p class="section-kicker">Downstream uses and hypotheses best read after the foundational papers.</p>
+    </div>
 
-  <div class="card-column">
+    <div class="card-column">
 
-    <article class="card">
-      <div class="tagrow">
-        <span class="tag tag-hypothesis">Application</span>
-        <span class="tag">Gravity / Cosmology</span>
-      </div>
-      <div class="card-title">
-        <a href="https://doi.org/10.5281/zenodo.18024594" target="_blank" rel="noopener noreferrer">
-          Cosmological Expansion from Dimensional Closure: Phase Inertia and Curvature Tension without Independent Dark Sectors
-        </a>
-      </div>
-      <div class="card-meta">Preprint · DOI-backed</div>
-      <p>
-        A gravity and cosmology application of QDL dimensional-closure ideas, focused on expansion structure without independent dark sectors.
-      </p>
-    </article>
+      <article class="card">
+        <div class="tagrow">
+          <span class="tag tag-hypothesis">Application</span>
+          <span class="tag">Gravity / Cosmology</span>
+        </div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18024594" target="_blank" rel="noopener noreferrer">
+            Cosmological Expansion from Dimensional Closure: Phase Inertia and Curvature Tension without Independent Dark Sectors
+          </a>
+        </div>
+        <div class="card-meta">Preprint · DOI-backed</div>
+        <p>
+          A gravity and cosmology application of QDL dimensional-closure ideas, focused on expansion structure without independent dark sectors.
+        </p>
+      </article>
 
-    <article class="card">
-      <div class="tagrow">
-        <span class="tag tag-hypothesis">Application</span>
-        <span class="tag">Effective Field Theory</span>
-      </div>
-      <div class="card-title">
-        <a href="https://doi.org/10.5281/zenodo.17773324" target="_blank" rel="noopener noreferrer">
-          Dimensional Closure and Ledger Lattices in Effective Field Theories
-        </a>
-      </div>
-      <div class="card-meta">Preprint · DOI-backed</div>
-      <p>
-        An EFT-focused application of ledger lattices and dimensional-closure logic beyond the main foundational path.
-      </p>
-    </article>
+      <article class="card">
+        <div class="tagrow">
+          <span class="tag tag-hypothesis">Application</span>
+          <span class="tag">Effective Field Theory</span>
+        </div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.17773324" target="_blank" rel="noopener noreferrer">
+            Dimensional Closure and Ledger Lattices in Effective Field Theories
+          </a>
+        </div>
+        <div class="card-meta">Preprint · DOI-backed</div>
+        <p>
+          An EFT-focused application of ledger lattices and dimensional-closure logic beyond the main foundational path.
+        </p>
+      </article>
 
-    <article class="card">
-      <div class="tagrow">
-        <span class="tag tag-hypothesis">Application</span>
-        <span class="tag">Engineering / Cross-domain</span>
-      </div>
-      <div class="card-title">
-        <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">
-          Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines: A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies
-        </a>
-      </div>
-      <div class="card-meta">Preprint · DOI-backed</div>
-      <p>
-        A cross-domain application of QDL as a structural pre-verification and auditing method for engineering and measurement systems.
-      </p>
-    </article>
+      <article class="card">
+        <div class="tagrow">
+          <span class="tag tag-hypothesis">Application</span>
+          <span class="tag">Engineering / Cross-domain</span>
+        </div>
+        <div class="card-title">
+          <a href="https://doi.org/10.5281/zenodo.18025343" target="_blank" rel="noopener noreferrer">
+            Dimensional-Closure Auditing for Engineering Models and Measurement Pipelines: A Ledger-Based Pre-Verification Method with Fusion Energy Case Studies
+          </a>
+        </div>
+        <div class="card-meta">Preprint · DOI-backed</div>
+        <p>
+          A cross-domain application of QDL as a structural pre-verification and auditing method for engineering and measurement systems.
+        </p>
+      </article>
 
-  </div>
+    </div>
 
-  <p class="note">
-    For the shortest technical entry, start with the Top 5. After that, use the benchmark records for auditability and the application papers for scope expansion.
-  </p>
-</section>
+    <p class="note">
+      For the shortest technical entry, start with the Top 5. After that, use the benchmark records for auditability and the application papers for scope expansion.
+    </p>
+  </section>
 
 </main>
 
