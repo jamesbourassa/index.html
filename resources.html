@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resources | QDL Physics Institute</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Resources from the QDL Physics Institute, including prototype demonstrations, books, benchmark access, and supporting materials related to the Quantized Dimensional Ledger research program.">
+
+<style>
+:root{
+  --bg-page:#f3f4f6;
+  --bg-card:#ffffff;
+  --border-soft:#e5e7eb;
+  --text-main:#0f172a;
+  --text-soft:#6b7280;
+  --accent:#2563eb;
+  --accent-soft:#eff6ff;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg-page);
+  color:var(--text-main);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+a{color:#0369a1;text-decoration:none;}
+a:hover{text-decoration:underline;}
+header{
+  background:#0f172a;
+  color:#e5e7eb;
+  border-bottom:1px solid #111827;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.nav{
+  max-width:1100px;
+  margin:0 auto;
+  padding:.75rem 1.25rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
+.logo-icon{
+  width:52px;
+  height:52px;
+  border-radius:10px;
+  border:1px solid #38bdf8;
+  background:#020617;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.logo-icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+.logo-text-main{
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:.82rem;
+}
+.logo-text-sub{
+  font-size:.72rem;
+  color:#9ca3af;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  font-size:.85rem;
+  flex-wrap:wrap;
+}
+.nav-links a{
+  color:#e5e7eb;
+  padding:.25rem .6rem;
+  border-radius:999px;
+}
+.nav-links a:hover{
+  background:#111827;
+  text-decoration:none;
+}
+.nav-cta{
+  border:1px solid #38bdf8;
+  background:#0b1120;
+  color:#e0f2fe !important;
+  padding:.3rem .85rem;
+  border-radius:999px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.78rem;
+}
+main{
+  max-width:1100px;
+  margin:0 auto;
+  padding:1.75rem 1.25rem 3rem;
+}
+.hero{
+  margin-bottom:1.8rem;
+  background:var(--bg-card);
+  border-radius:18px;
+  border:1px solid var(--border-soft);
+  box-shadow:0 8px 24px rgba(15,23,42,.06);
+  padding:1.6rem 1.5rem;
+}
+.hero-kicker{
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:.78rem;
+  color:#6b7280;
+  margin-bottom:.4rem;
+}
+.hero-title{
+  font-size:clamp(1.9rem,3vw,2.3rem);
+  margin-bottom:.5rem;
+}
+.hero-sub{
+  font-size:.96rem;
+  color:#4b5563;
+  max-width:52rem;
+  margin-bottom:.9rem;
+}
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  font-size:.8rem;
+}
+.hero-chip{
+  padding:.15rem .7rem;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+  color:#475569;
+}
+.section{
+  margin-top:2rem;
+}
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:baseline;
+  flex-wrap:wrap;
+  margin-bottom:1rem;
+}
+.section-title{
+  font-size:.95rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#111827;
+}
+.section-kicker{
+  font-size:.82rem;
+  color:var(--text-soft);
+  max-width:40rem;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
+  gap:1.2rem;
+}
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+}
+@media (max-width:980px){
+  .grid-3{grid-template-columns:1fr;}
+}
+@media (max-width:880px){
+  .grid-2{grid-template-columns:1fr;}
+}
+.card{
+  background:var(--bg-card);
+  border-radius:16px;
+  border:1px solid var(--border-soft);
+  padding:1rem 1.05rem;
+  box-shadow:0 8px 24px rgba(15,23,42,.06);
+  font-size:.92rem;
+  color:#374151;
+}
+.card + .card{
+  margin-top:.9rem;
+}
+.card-title{
+  font-size:1rem;
+  font-weight:650;
+  margin-bottom:.35rem;
+  color:#111827;
+}
+.card-meta{
+  font-size:.82rem;
+  color:var(--text-soft);
+  margin-bottom:.55rem;
+}
+.card p{
+  margin-bottom:.55rem;
+}
+.pill-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem;
+  margin:.2rem 0 .7rem;
+}
+.pill{
+  border-radius:999px;
+  padding:.14rem .6rem;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+  color:#475569;
+  font-size:.78rem;
+}
+.btn-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.55rem;
+  margin-top:.7rem;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.55rem 1rem;
+  border-radius:999px;
+  border:1px solid transparent;
+  font-size:.86rem;
+  font-weight:500;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#fff;
+  box-shadow:0 10px 24px rgba(37,99,235,.25);
+}
+.btn-primary:hover{filter:brightness(1.03);text-decoration:none;}
+.btn-secondary{
+  background:#fff;
+  color:#111827;
+  border-color:#d1d5db;
+}
+.btn-secondary:hover{background:#f9fafb;text-decoration:none;}
+.book-wrap{
+  display:grid;
+  grid-template-columns:140px minmax(0,1fr);
+  gap:1rem;
+  align-items:start;
+}
+@media (max-width:700px){
+  .book-wrap{grid-template-columns:1fr;}
+}
+.book-cover{
+  width:140px;
+  border-radius:10px;
+  border:1px solid rgba(15,23,42,.12);
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 10px 22px rgba(15,23,42,.08);
+}
+.book-cover img{
+  width:100%;
+  display:block;
+}
+.list{
+  padding-left:1.1rem;
+}
+.list li{
+  margin-bottom:.35rem;
+}
+.note{
+  font-size:.82rem;
+  color:var(--text-soft);
+  margin-top:1rem;
+  max-width:58rem;
+}
+footer{
+  border-top:1px solid var(--border-soft);
+  margin-top:3rem;
+  padding:1.2rem 1.25rem 1.8rem;
+  font-size:.8rem;
+  color:#6b7280;
+}
+.footer-grid{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  justify-content:space-between;
+  align-items:center;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <div class="logo-icon">
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo">
+      </div>
+      <div>
+        <div class="logo-text-main">QDL Physics Institute</div>
+        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research Program</a>
+      <a href="publications.html">Publications</a>
+      <a href="institute.html">Institute</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-kicker">Resources</div>
+    <h1 class="hero-title">Program Resources</h1>
+    <p class="hero-sub">
+      This page collects supporting materials for the QDL research program, including prototype demonstrations,
+      books, benchmark access points, and reader-facing materials that support orientation, auditability, and technical review.
+    </p>
+
+    <div class="hero-meta">
+      <span class="hero-chip">Prototype demo</span>
+      <span class="hero-chip">Books</span>
+      <span class="hero-chip">Benchmark access</span>
+      <span class="hero-chip">Supporting materials</span>
+    </div>
+  </section>
+
+  <section class="section" id="prototype-demo">
+    <div class="section-header">
+      <h2 class="section-title">Prototype Demonstration</h2>
+      <p class="section-kicker">A static example of how structural admissibility screening can be presented as a workflow.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Structural Integrity Screening Workflow</div>
+        <div class="card-meta">Prototype demonstration</div>
+        <div class="pill-row">
+          <span class="pill">Workflow diagram</span>
+          <span class="pill">Example report</span>
+          <span class="pill">Pseudo-code</span>
+          <span class="pill">Prototype</span>
+        </div>
+        <p>
+          This resource presents a minimal static demonstration of how a model or pipeline can be screened
+          for structural admissibility before calibration and deployment. It is framed as an illustration of workflow,
+          not as a full implementation.
+        </p>
+        <p>
+          In the original site structure, this prototype sat downstream of the framework material and acted as a bridge
+          between abstract admissibility ideas and practical review logic. :contentReference[oaicite:1]{index=1}
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="research.html">Read the Research Program first</a>
+          <a class="btn btn-secondary" href="contact.html">Contact for technical questions</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">How to Use This Resource</div>
+        <ul class="list">
+          <li>Use it as a conceptual orientation tool, not as a substitute for the formal papers.</li>
+          <li>Read it after the framework sections if you want to understand workflow implications.</li>
+          <li>Treat it as a presentation artifact for structural screening logic rather than a software release.</li>
+        </ul>
+        <p class="note">
+          The demo belonged naturally under framework support material rather than the top-level scientific navigation, which is why it is placed here in Resources. :contentReference[oaicite:2]{index=2}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="books">
+    <div class="section-header">
+      <h2 class="section-title">Books &amp; Reader-Facing Material</h2>
+      <p class="section-kicker">Longer-form synthesis and reader-oriented entry points for the broader program.</p>
+    </div>
+
+    <div class="card">
+      <div class="book-wrap">
+        <div class="book-cover">
+          <img src="Front cover.png" alt="Cover of The Quantized Dimensional Ledger">
+        </div>
+        <div>
+          <div class="card-title">The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</div>
+          <div class="card-meta">Book · reader-facing synthesis</div>
+          <p>
+            This volume functions as a synthetic and accessible presentation of the QDL program, while the formal,
+            canonical claims remain anchored in the DOI-backed paper record. That separation was explicit in the original publications structure. :contentReference[oaicite:3]{index=3}
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://www.amazon.com/dp/B0GHZJHT36" target="_blank" rel="noopener noreferrer">View on Amazon Kindle</a>
+            <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">Zenodo record</a>
+            <a class="btn btn-secondary" href="publications.html#top5">See Top 5 papers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:1rem;">
+      <div class="card">
+        <div class="card-title">Book-Level Synthesis</div>
+        <p>
+          Useful for readers who want the overall architecture and motivation of the program before moving into the technical papers.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-title">Technical Record Remains Primary</div>
+        <p>
+          The formal mathematical structure and strongest technical claims remain in the DOI-backed papers and preprints. :contentReference[oaicite:4]{index=4}
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-title">Best Reading Order</div>
+        <p>
+          Use the Publications page for the core path, then return here for books and supporting materials.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="benchmarks">
+    <div class="section-header">
+      <h2 class="section-title">Benchmark Access</h2>
+      <p class="section-kicker">Entry points to executed benchmark records and supporting methodological materials.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-title">Benchmarks &amp; Null Tests</div>
+        <p>
+          Residual-first benchmark methodology using declared model families and public-data audit logic.
+        </p>
+        <p><a href="https://doi.org/10.5281/zenodo.18057668" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18057668</a></p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">NV ODMR Benchmark</div>
+        <p>
+          Reproducible benchmark record structured around methodological auditability rather than claims of new effects.
+        </p>
+        <p><a href="https://doi.org/10.5281/zenodo.18069870" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18069870</a></p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Optical Cavity Benchmark</div>
+        <p>
+          Optical cavity benchmark record intended to be read conservatively as a method-oriented executable benchmark. 
+        </p>
+        <p><a href="https://doi.org/10.5281/zenodo.18076864" target="_blank" rel="noopener noreferrer">DOI: 10.5281/zenodo.18076864</a></p>
+      </div>
+    </div>
+
+    <p class="note">
+      These records are best understood as benchmark and replication resources. The original experiments page explicitly distinguished executed methodological benchmarks from proposed falsifiable experiments. :contentReference[oaicite:6]{index=6}
+    </p>
+  </section>
+
+  <section class="section" id="supporting-materials">
+    <div class="section-header">
+      <h2 class="section-title">Supporting Materials</h2>
+      <p class="section-kicker">Resource-like content that supports interpretation, orientation, and broader use of the program.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Why QDL Matters</div>
+        <p>
+          The original Benefits page framed QDL as a dimensional-closure and model-admissibility architecture with implications
+          for model pre-verification, operator filtering, constants, experiment design, and engineering/instrumentation leverage. :contentReference[oaicite:7]{index=7}
+        </p>
+        <p>
+          In the rebuilt site, those implications are split appropriately: core scientific implications appear on the Research Program page,
+          while resource-style framing and orientation material live here.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">How to Navigate the Program</div>
+        <ul class="list">
+          <li>Start with <a href="research.html">Research Program</a> for the conceptual and formal structure.</li>
+          <li>Use <a href="publications.html">Publications</a> for the Top 5 technical path.</li>
+          <li>Return to Resources for prototypes, books, and benchmark access.</li>
+          <li>Use <a href="contact.html">Contact</a> for editorial or technical correspondence.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>© QDL Physics Institute</div>
+    <div>Supporting materials, prototypes, and access points</div>
+  </div>
+</footer>
+
+</body>
+</html>
