@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The QDL Physics Institute develops the Quantized Dimensional Ledger (QDL), a structural closure framework in which dimensional quantities map into an integer charge lattice and admissible operators lie in the neutral sector.">
+<meta name="description" content="The QDL Physics Institute develops the Quantized Dimensional Ledger (QDL), a structural dimensional-closure framework for model admissibility and physical theory structure.">
 
 <style>
 :root{
@@ -14,43 +14,39 @@
   --text-main:#0f172a;
   --text-soft:#6b7280;
   --text-muted:#475569;
-  --accent:#2563eb;
-  --accent-soft:#eff6ff;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
 body{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:var(--bg-page);
   color:var(--text-main);
   line-height:1.65;
-  -webkit-font-smoothing:antialiased;
 }
 a{color:#0369a1;text-decoration:none;}
 a:hover{text-decoration:underline;}
+
 header{
   background:#0f172a;
   color:#e5e7eb;
   border-bottom:1px solid #111827;
-  position:sticky;
-  top:0;
-  z-index:50;
 }
+
 .nav{
   max-width:1100px;
   margin:auto;
-  padding:.78rem 1.25rem;
+  padding:.8rem 1.25rem;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:1rem;
+  align-items:center;
   flex-wrap:wrap;
 }
+
 .logo{
   display:flex;
   align-items:center;
-  gap:.65rem;
+  gap:.6rem;
 }
+
 .logo-icon{
   width:52px;
   height:52px;
@@ -60,337 +56,190 @@ header{
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
 }
+
 .logo-icon img{
   width:100%;
   height:100%;
   object-fit:contain;
-  display:block;
 }
+
 .logo-text-main{
   font-weight:650;
   font-size:.82rem;
   text-transform:uppercase;
-  letter-spacing:.06em;
 }
+
 .logo-text-sub{
   font-size:.72rem;
   color:#9ca3af;
   text-transform:uppercase;
-  letter-spacing:.08em;
 }
+
 .nav-links{
   display:flex;
-  gap:.8rem;
+  gap:.7rem;
   font-size:.85rem;
-  flex-wrap:wrap;
-  align-items:center;
 }
+
 .nav-links a{
   color:#e5e7eb;
-  padding:.28rem .68rem;
+  padding:.28rem .7rem;
   border-radius:999px;
-  border:1px solid transparent;
 }
+
 .nav-links a:hover{
   background:#111827;
-  text-decoration:none;
 }
+
 .nav-active{
-  border-color:rgba(56,189,248,.85) !important;
-  background:rgba(56,189,248,.10) !important;
-  color:#e0f2fe !important;
+  border:1px solid #38bdf8;
 }
-.nav-cta{
-  border:1px solid #38bdf8 !important;
-  background:#0b1120;
-  color:#e0f2fe !important;
-  padding:.32rem .88rem;
-  border-radius:999px;
-  text-transform:uppercase;
-  font-size:.78rem;
-  letter-spacing:.08em;
-}
+
 main{
   max-width:1100px;
   margin:auto;
-  padding:1.9rem 1.25rem 3.2rem;
+  padding:2rem 1.25rem 3rem;
 }
+
 .hero{
   background:var(--bg-card);
   border:1px solid var(--border-soft);
   border-radius:20px;
-  padding:1.9rem 1.8rem 1.75rem;
+  padding:2rem;
   margin-bottom:2rem;
-  box-shadow:0 10px 28px rgba(15,23,42,.06);
 }
-.hero-kicker{
-  font-size:.78rem;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:#6b7280;
-  margin-bottom:.38rem;
-}
+
 .hero-title{
-  font-size:clamp(2.05rem,3.2vw,2.8rem);
-  line-height:1.12;
-  margin-bottom:.55rem;
-  letter-spacing:-0.02em;
+  font-size:2.4rem;
+  margin-bottom:.6rem;
 }
+
 .hero-sub{
   color:#4b5563;
-  max-width:56rem;
-  font-size:.98rem;
+  max-width:55rem;
 }
+
 .hero-meta{
-  margin-top:.95rem;
+  margin-top:1rem;
   display:flex;
+  gap:.4rem;
   flex-wrap:wrap;
-  gap:.5rem;
 }
+
 .hero-chip{
-  padding:.18rem .68rem;
+  padding:.2rem .7rem;
   border-radius:999px;
   border:1px solid #e5e7eb;
   background:#f9fafb;
-  color:var(--text-muted);
   font-size:.78rem;
 }
-.hero-actions{
-  margin-top:1.05rem;
-  display:flex;
-  gap:.6rem;
-  flex-wrap:wrap;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:.58rem 1rem;
-  border-radius:999px;
-  border:1px solid #d1d5db;
-  background:#fff;
-  color:#111827;
-  font-size:.9rem;
-  font-weight:500;
-  white-space:nowrap;
-}
-.btn-primary{
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
-  color:#fff;
-  border:none;
-  box-shadow:0 10px 24px rgba(37,99,235,.25);
-}
-.btn-primary:hover{
-  filter:brightness(1.03);
-  text-decoration:none;
-}
-.btn:hover{
-  text-decoration:none;
-  background:#f9fafb;
-}
+
 .section{
-  margin-top:2.2rem;
+  margin-top:2.5rem;
 }
-.section-header{
-  display:flex;
-  justify-content:space-between;
-  gap:1rem;
-  align-items:baseline;
-  flex-wrap:wrap;
-  margin-bottom:1rem;
-}
+
 .section-title{
-  font-size:.96rem;
+  font-size:.95rem;
   text-transform:uppercase;
-  letter-spacing:.16em;
-  color:#111827;
+  letter-spacing:.15em;
+  margin-bottom:.7rem;
 }
-.section-kicker{
-  font-size:.83rem;
-  color:var(--text-soft);
-  max-width:40rem;
-}
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:1rem;
-}
-.grid-2{
-  display:grid;
-  grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
-  gap:1rem;
-}
+
 .core-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  grid-template-columns:1fr 1fr;
   gap:1rem;
 }
-.core-idea-card{
-  background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+
+@media (max-width:900px){
+  .core-grid{grid-template-columns:1fr;}
 }
-.core-principle{
-  font-size:1.08rem;
-  line-height:1.55;
-  color:#0f172a;
-  margin-top:.15rem;
-}
-.core-principle strong{
-  font-weight:700;
-}
-.core-summary{
-  margin-top:.85rem;
-  color:#334155;
-  font-size:.94rem;
-}
-.core-master{
-  margin-top:.95rem;
-  padding:.82rem .95rem;
-  border-radius:14px;
-  border:1px solid #dbeafe;
-  background:#eff6ff;
-}
-.core-master-label{
-  font-size:.76rem;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  color:#1d4ed8;
-  margin-bottom:.28rem;
-}
-.core-master-equation{
-  font-size:1rem;
-  font-weight:650;
-  color:#0f172a;
-  line-height:1.45;
-}
-.diagram-card{
-  padding:1rem;
-}
-.diagram-card img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:16px;
-  border:1px solid #e5e7eb;
-  background:#fff;
-}
-.diagram-card figcaption{
-  margin-top:.52rem;
-  font-size:.82rem;
-  color:#6b7280;
-  line-height:1.55;
-}
-.layer-list{
-  display:grid;
-  gap:.78rem;
-}
-.layer-item{
-  padding:.82rem .9rem;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  background:#fafafa;
-}
-.layer-label{
-  font-size:.74rem;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  color:#6b7280;
-  margin-bottom:.2rem;
-}
-.layer-text{
-  color:#111827;
-  font-size:.94rem;
-  line-height:1.58;
-}
+
 .card{
   background:var(--bg-card);
   border:1px solid var(--border-soft);
   border-radius:18px;
-  padding:1.05rem 1.05rem 1rem;
-  box-shadow:0 8px 24px rgba(15,23,42,.06);
-  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  padding:1rem;
 }
-a.card:hover{
-  text-decoration:none;
-  transform:translateY(-1px);
-  box-shadow:0 12px 28px rgba(15,23,42,.08);
-  border-color:rgba(37,99,235,.22);
-}
+
 .card-title{
-  font-size:1.02rem;
-  line-height:1.3;
-  margin-bottom:.36rem;
-  color:#111827;
   font-weight:650;
+  margin-bottom:.4rem;
 }
-.card h3{
-  font-size:1.02rem;
-  line-height:1.3;
-  margin-bottom:.36rem;
-  color:#111827;
+
+.core-principle{
+  font-size:1.05rem;
+  margin-bottom:.7rem;
 }
-.card p{
-  font-size:.91rem;
-  color:#374151;
-  margin-bottom:.58rem;
+
+.core-master{
+  margin-top:.8rem;
+  background:#eff6ff;
+  border:1px solid #dbeafe;
+  padding:.7rem;
+  border-radius:12px;
 }
-.card p:last-child{
-  margin-bottom:0;
+
+.core-master-label{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#2563eb;
 }
-.paper-list{
+
+.core-master-equation{
+  font-size:.95rem;
+  margin-top:.2rem;
+}
+
+.diagram-card img{
+  width:100%;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+}
+
+.diagram-card figcaption{
+  font-size:.8rem;
+  color:#6b7280;
+  margin-top:.4rem;
+}
+
+.layer-list{
   display:grid;
-  gap:.92rem;
+  gap:.7rem;
 }
-.paper-item{
-  padding-bottom:.86rem;
-  border-bottom:1px solid #e5e7eb;
+
+.layer-item{
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:.8rem;
+  background:#fafafa;
 }
-.paper-item:last-child{
-  border-bottom:none;
-  padding-bottom:0;
-}
-.paper-title{
-  font-weight:650;
-  color:#111827;
+
+.layer-label{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:#6b7280;
   margin-bottom:.2rem;
-  line-height:1.35;
 }
-.paper-meta{
-  font-size:.82rem;
-  color:#6b7280;
-  margin-top:.16rem;
-}
-.note{
-  font-size:.82rem;
-  color:#6b7280;
-  margin-top:.82rem;
-}
-.list{
-  padding-left:1.15rem;
-}
-.list li{
-  margin-bottom:.38rem;
-}
+
 footer{
   border-top:1px solid var(--border-soft);
-  padding:1.2rem;
   margin-top:3rem;
+  padding:1rem;
   font-size:.8rem;
   color:#6b7280;
   background:#f9fafb;
 }
+
 .footer-inner{
   max-width:1100px;
-  margin:0 auto;
+  margin:auto;
   display:flex;
-  flex-wrap:wrap;
   justify-content:space-between;
-  gap:1rem;
-  align-items:center;
-}
-@media (max-width:920px){
-  .grid-3,.grid-2,.core-grid{grid-template-columns:1fr;}
+  flex-wrap:wrap;
 }
 </style>
 </head>
@@ -398,396 +247,139 @@ footer{
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">
-      <div class="logo-icon">
-        <img src="qdl-logo.png" alt="QDL Physics Institute logo">
-      </div>
-      <div>
-        <div class="logo-text-main">QDL Physics Institute</div>
-        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
-      </div>
-    </div>
+<div class="nav">
 
-    <nav class="nav-links">
-      <a href="index.html" class="nav-active">Home</a>
-      <a href="research.html">Research Program</a>
-      <a href="publications.html">Publications</a>
-      <a href="institute.html">Institute</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-  </div>
+<div class="logo">
+<div class="logo-icon">
+<img src="qdl-logo.png" alt="QDL Physics Institute logo">
+</div>
+
+<div>
+<div class="logo-text-main">QDL Physics Institute</div>
+<div class="logo-text-sub">Quantized Dimensional Ledger</div>
+</div>
+</div>
+
+<nav class="nav-links">
+<a href="index.html" class="nav-active">Home</a>
+<a href="research.html">Research Program</a>
+<a href="publications.html">Publications</a>
+<a href="institute.html">Institute</a>
+<a href="resources.html">Resources</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
 </header>
 
 <main>
 
-  <section class="hero">
-    <div class="hero-kicker">Independent theoretical physics research program</div>
-    <h1 class="hero-title">The Quantized Dimensional Ledger</h1>
+<section class="hero">
 
-    <p class="hero-sub">
-      The Quantized Dimensional Ledger interprets dimensional structure as a lattice of discrete dimensional charges, where physically admissible operators correspond to the neutral closure sector. The QDL Physics Institute develops this framework as a structural admissibility layer for physical representations, operator construction, and dimensional closure analysis.
-    </p>
+<h1 class="hero-title">The Quantized Dimensional Ledger</h1>
 
-    <div class="hero-meta">
-      <span class="hero-chip">Integer charge lattice</span>
-      <span class="hero-chip">Neutral closure sector</span>
-      <span class="hero-chip">Admissible operators</span>
-      <span class="hero-chip">QDC structural invariant</span>
-      <span class="hero-chip">Pre-dynamical filter</span>
-    </div>
+<p class="hero-sub">
+The Quantized Dimensional Ledger (QDL) interprets dimensional structure as a lattice of discrete dimensional charges. Physically admissible operators correspond to combinations whose dimensional charges cancel, forming the neutral closure sector of the lattice.
+</p>
 
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="research.html">Explore the Research Program</a>
-      <a class="btn" href="publications.html">Read the Papers</a>
-      <a class="btn" href="resources.html">View Supporting Resources</a>
-    </div>
-  </section>
+<div class="hero-meta">
+<span class="hero-chip">Dimensional charge lattice</span>
+<span class="hero-chip">Neutral closure sector</span>
+<span class="hero-chip">Admissible operators</span>
+<span class="hero-chip">Structural closure</span>
+</div>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Core Idea</h2>
-      <p class="section-kicker">The fastest way to understand QDL: principle, diagram, and short explanation.</p>
-    </div>
+</section>
 
-    <div class="core-grid">
-      <div class="card core-idea-card">
-        <div class="card-title">Core Principle</div>
 
-        <p class="core-principle">
-          <strong>Dimensional quantities form a charge lattice; admissible operators lie in its neutral sector.</strong>
-        </p>
+<section class="section">
 
-        <p class="core-summary">
-          The Quantized Dimensional Ledger maps dimensional quantities into an integer lattice of dimensional charges. Physically admissible operators are those combinations whose dimensional charges cancel to zero.
-        </p>
+<h2 class="section-title">Core Idea</h2>
 
-        <div class="core-master">
-          <div class="core-master-label">QDL Master Relation</div>
-          <div class="core-master-equation">
-            \((\mathcal Q,\cdot)\xrightarrow{\Phi}(\mathbb Z^n,+), \quad \mathcal A=\mathcal Q_0=\ker\Phi\)
-          </div>
-        </div>
+<div class="core-grid">
 
-        <p class="note">
-          In QDL, dimensional closure is treated as a structural admissibility condition rather than only a post hoc consistency check.
-        </p>
-      </div>
+<div class="card">
 
-      <figure class="card diagram-card">
-        <img src="qdl-structural-closure-framework.png" alt="QDL Structural Closure Framework diagram showing dimensional quantity algebra, integer lattice representation, neutral closure sector, and admissible operators">
-        <figcaption>
-          The QDL structural closure framework maps dimensional quantities into an integer charge lattice through the homomorphism \(\Phi\). The admissible operator space is the neutral closure sector, identified with the kernel \(\ker\Phi\).
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+<div class="card-title">Core Principle</div>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Short Explanation</h2>
-      <p class="section-kicker">Three layers for quick orientation: instant idea, conceptual summary, and technical overview.</p>
-    </div>
+<p class="core-principle">
+<strong>Dimensional quantities form a charge lattice; admissible operators lie in its neutral sector.</strong>
+</p>
 
-    <div class="layer-list">
-      <div class="card layer-item">
-        <div class="layer-label">Layer 1 · Instant Idea</div>
-        <div class="layer-text">
-          Dimensional quantities form a charge lattice; admissible operators lie in its neutral sector.
-        </div>
-      </div>
+<p>
+The QDL framework maps dimensional quantities into an integer lattice of dimensional charges. Physically admissible operators are those combinations whose dimensional charges sum to zero.
+</p>
 
-      <div class="card layer-item">
-        <div class="layer-label">Layer 2 · Conceptual Summary</div>
-        <div class="layer-text">
-          The Quantized Dimensional Ledger maps dimensional quantities into an integer lattice of dimensional charges. Physically admissible operators are those combinations whose dimensional charges cancel to zero.
-        </div>
-      </div>
+<div class="core-master">
 
-      <div class="card layer-item">
-        <div class="layer-label">Layer 3 · Technical Overview</div>
-        <div class="layer-text">
-          The Quantized Dimensional Ledger (QDL) interprets dimensional structure as a discrete algebraic system. Dimensional quantities expressed in a unit basis are mapped by a dimension homomorphism to an integer lattice of exponent vectors, which can be viewed as dimensional charge vectors. Multiplication of quantities corresponds to addition of these charges. This induces a graded decomposition of the dimensional quantity algebra into sectors labeled by their charge vectors. Physically admissible operators—such as Lagrangian terms or invariant combinations—are those whose total dimensional charge vanishes. Thus admissibility corresponds to membership in the neutral closure sector, given by the kernel of the dimensional map.
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="core-master-label">QDL Master Relation</div>
 
-  <section class="section">
-    <div class="card">
-      <div class="card-title">QDL Physics Institute</div>
+<div class="core-master-equation">
+(Q, ·) → Φ → (ℤⁿ, +)<br>
+Admissible operators: A = ker Φ
+</div>
 
-      <p>
-        The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA, focused on the development and testing of the Quantized Dimensional Ledger (QDL) framework for dimensional closure, model admissibility, and experimental discrimination.
-      </p>
+</div>
 
-      <p style="font-size:.9rem;color:#4b5563;">
-        <strong>Research areas:</strong> dimensional structure of physical quantities, effective field theory constraints, dimensional closure in metrology, model integrity, and falsifiable tabletop experiments.
-      </p>
+</div>
 
-      <p style="font-size:.9rem;color:#4b5563;">
-        <strong>Director:</strong> James D. Bourassa
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <strong>ORCID:</strong>
-        <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">0009-0008-0155-0051</a>
-      </p>
-    </div>
-  </section>
+<figure class="card diagram-card">
 
-  <section class="section">
-    <div class="card">
-      <div class="card-title">For Editors and Referees</div>
+<img src="qdl-overview.png" alt="QDL Structural Closure Framework">
 
-      <p>
-        The fastest way to evaluate the QDL program is the following sequence:
-      </p>
+<figcaption>
+Dimensional quantities map into integer charge vectors under the dimensional homomorphism Φ. The admissible operator sector corresponds to the neutral closure sector ker Φ.
+</figcaption>
 
-      <ol class="list" style="line-height:1.7;">
-        <li>
-          <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
-            Integer Lattice Structure of Dimensional Quantities
-          </a>
-        </li>
-        <li>
-          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
-          </a>
-        </li>
-        <li>
-          <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
-            Ledger-Closure Constraints on the SMEFT
-          </a>
-        </li>
-        <li>
-          <a href="publications.html#benchmarks">Executed Benchmark Records</a>
-        </li>
-      </ol>
+</figure>
 
-      <p class="note">
-        The QDL framework is intended as a dimensional admissibility constraint layer, not a replacement for established physical dynamics.
-      </p>
-    </div>
-  </section>
+</div>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Research Snapshot</h2>
-      <p class="section-kicker">Three entry points into the program: formal structure, technical record, and practical support materials.</p>
-    </div>
+</section>
 
-    <div class="grid-3">
-      <a class="card" href="research.html" style="display:block;color:inherit;">
-        <h3>Research Program</h3>
-        <p>
-          A consolidated overview of the QDL framework, dimensional lattice structure, model admissibility, and experimental logic.
-        </p>
-      </a>
 
-      <a class="card" href="publications.html" style="display:block;color:inherit;">
-        <h3>Publications</h3>
-        <p>
-          Core papers, benchmark records, and application papers organized in a framework-first sequence for technical readers.
-        </p>
-      </a>
+<section class="section">
 
-      <a class="card" href="resources.html" style="display:block;color:inherit;">
-        <h3>Resources</h3>
-        <p>
-          Prototype demonstrations, books, benchmark access points, and orientation material that support review and navigation.
-        </p>
-      </a>
-    </div>
-  </section>
+<h2 class="section-title">Short Explanation</h2>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Latest Program Updates</h2>
-      <p class="section-kicker">Recent publications, benchmarks, and program milestones.</p>
-    </div>
+<div class="layer-list">
 
-    <div class="card">
-      <ul class="list" style="line-height:1.75; font-size:.92rem;">
-        <li>
-          <strong>Mar 2026:</strong>
-          Preprint released —
-          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
-          </a>
-        </li>
+<div class="layer-item">
+<div class="layer-label">Instant Idea</div>
+Dimensional quantities form a charge lattice; admissible operators lie in its neutral sector.
+</div>
 
-        <li>
-          <strong>Mar 2026:</strong>
-          Foundational paper released —
-          <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
-            Integer Lattice Structure of Dimensional Quantities
-          </a>
-        </li>
+<div class="layer-item">
+<div class="layer-label">Conceptual Summary</div>
+The Quantized Dimensional Ledger maps dimensional quantities into an integer lattice of dimensional charges. Physical operators correspond to combinations whose charges cancel.
+</div>
 
-        <li>
-          <strong>Dec 2025:</strong>
-          Residual-first benchmark records published for NV ODMR and optical cavity datasets.
-        </li>
+<div class="layer-item">
+<div class="layer-label">Technical Overview</div>
+Dimensional quantities expressed in a unit basis map to integer exponent vectors through a dimension homomorphism Φ. Multiplication corresponds to addition of charge vectors. Physically admissible operators correspond to the neutral closure sector given by ker Φ.
+</div>
 
-        <li>
-          <strong>Mar 2026:</strong>
-          Program book record maintained —
-          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+</div>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Foundational Papers</h2>
-      <p class="section-kicker">The shortest technical path into the QDL program.</p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <div class="paper-list">
-          <div class="paper-item">
-            <div class="paper-title">
-              <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
-                Integer Lattice Structure of Dimensional Quantities
-              </a>
-            </div>
-            <div class="paper-meta">Lattice foundation · DOI-backed preprint</div>
-          </div>
-
-          <div class="paper-item">
-            <div class="paper-title">
-              <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
-                The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
-              </a>
-            </div>
-            <div class="paper-meta">Closure formalism · DOI-backed preprint</div>
-          </div>
-
-          <div class="paper-item">
-            <div class="paper-title">
-              <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
-                Ledger-Closure Constraints on the SMEFT
-              </a>
-            </div>
-            <div class="paper-meta">SMEFT application · DOI-backed preprint</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">How to Read the Site</div>
-        <p>
-          Start with the <a href="research.html">Research Program</a> page for the conceptual structure, then move to <a href="publications.html">Publications</a> for the technical record. Use <a href="resources.html">Resources</a> for books, prototypes, and benchmark access.
-        </p>
-        <p class="note">
-          This structure is meant to make the site read like a coherent research institute rather than a collection of separate project pages.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Research Goals</h2>
-      <p class="section-kicker">Near-term objectives of the Quantized Dimensional Ledger research program.</p>
-    </div>
-
-    <div class="card">
-      <ul class="list" style="line-height:1.75;">
-        <li>
-          Formal development of dimensional closure as a structural admissibility constraint on physical representations.
-        </li>
-        <li>
-          Investigation of consequences for operator structure in effective field theories and related frameworks.
-        </li>
-        <li>
-          Development of benchmark methodologies for transparent model adequacy testing using public datasets.
-        </li>
-        <li>
-          Design of falsifiable tabletop experiments capable of distinguishing dimensional-closure predictions from conventional parameterizations.
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Citable Program Record</h2>
-      <p class="section-kicker">Archival records and DOI-backed materials for the Quantized Dimensional Ledger research program.</p>
-    </div>
-
-    <div class="card">
-      <p>
-        The QDL research program maintains a DOI-backed archival record through the Zenodo repository. Core manuscripts, benchmark records, and supporting materials are preserved as citable research artifacts.
-      </p>
-
-      <ul class="list" style="line-height:1.75; margin-top:.6rem;">
-        <li>
-          <strong>Zenodo Community Archive:</strong>
-          <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
-            QDL Physics Institute Collection
-          </a>
-        </li>
-
-        <li>
-          <strong>Program Book Record:</strong>
-          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
-          </a>
-        </li>
-
-        <li>
-          <strong>Core Framework Papers:</strong>
-          See the <a href="publications.html#top5">Top 5 Publications</a> for the recommended technical entry path.
-        </li>
-      </ul>
-
-      <p class="note">
-        Maintaining DOI-backed program records supports long-term citation, reproducibility, and accessibility of the QDL research program.
-      </p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Collaboration &amp; Support</h2>
-    </div>
-
-    <div class="card">
-      <p>
-        The QDL Physics Institute welcomes collaboration with researchers, experimental groups, and institutions interested in dimensional structure, measurement integrity, or falsifiable tests of the Quantized Dimensional Ledger framework.
-      </p>
-
-      <p>
-        The program also welcomes philanthropic or institutional support that enables continued development of open, DOI-backed research records and experimental benchmark studies.
-      </p>
-
-      <p>
-        For collaboration inquiries or discussion of potential support, please contact
-        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
-      </p>
-    </div>
-  </section>
+</section>
 
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div>© QDL Physics Institute</div>
-    <div>Last updated: March 2026</div>
-    <div>
-      Zenodo:
-      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">QDL Community</a>
-    </div>
-    <div>
-      Contact:
-      <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-    </div>
-  </div>
+
+<div class="footer-inner">
+
+<div>© QDL Physics Institute</div>
+
+<div>
+Contact:
+<a href="mailto:james.bourassa@qdlphysics.org">
+james.bourassa@qdlphysics.org
+</a>
+</div>
+
+</div>
+
 </footer>
 
 </body>
