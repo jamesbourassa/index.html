@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The QDL Physics Institute develops the Quantized Dimensional Ledger (QDL), a structural dimensional-closure framework for model admissibility, effective field theory structure, metrology, and falsifiable experimental tests.">
+<meta name="description" content="The QDL Physics Institute develops the Quantized Dimensional Ledger (QDL), a structural closure framework in which dimensional quantities map into an integer charge lattice and admissible operators lie in the neutral sector.">
 
 <style>
 :root{
@@ -157,24 +157,6 @@ main{
   color:var(--text-muted);
   font-size:.78rem;
 }
-.hero-figure{
-  margin:1.15rem 0 1rem;
-  max-width:49rem;
-}
-.hero-figure img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:16px;
-  border:1px solid #e5e7eb;
-  background:#fff;
-}
-.hero-figure figcaption{
-  margin-top:.48rem;
-  font-size:.8rem;
-  color:#6b7280;
-  line-height:1.55;
-}
 .hero-actions{
   margin-top:1.05rem;
   display:flex;
@@ -240,8 +222,86 @@ main{
   grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
   gap:1rem;
 }
-@media (max-width:920px){
-  .grid-3,.grid-2{grid-template-columns:1fr;}
+.core-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:1rem;
+}
+.core-idea-card{
+  background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+}
+.core-principle{
+  font-size:1.08rem;
+  line-height:1.55;
+  color:#0f172a;
+  margin-top:.15rem;
+}
+.core-principle strong{
+  font-weight:700;
+}
+.core-summary{
+  margin-top:.85rem;
+  color:#334155;
+  font-size:.94rem;
+}
+.core-master{
+  margin-top:.95rem;
+  padding:.82rem .95rem;
+  border-radius:14px;
+  border:1px solid #dbeafe;
+  background:#eff6ff;
+}
+.core-master-label{
+  font-size:.76rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:#1d4ed8;
+  margin-bottom:.28rem;
+}
+.core-master-equation{
+  font-size:1rem;
+  font-weight:650;
+  color:#0f172a;
+  line-height:1.45;
+}
+.diagram-card{
+  padding:1rem;
+}
+.diagram-card img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+}
+.diagram-card figcaption{
+  margin-top:.52rem;
+  font-size:.82rem;
+  color:#6b7280;
+  line-height:1.55;
+}
+.layer-list{
+  display:grid;
+  gap:.78rem;
+}
+.layer-item{
+  padding:.82rem .9rem;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  background:#fafafa;
+}
+.layer-label{
+  font-size:.74rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:#6b7280;
+  margin-bottom:.2rem;
+}
+.layer-text{
+  color:#111827;
+  font-size:.94rem;
+  line-height:1.58;
 }
 .card{
   background:var(--bg-card);
@@ -329,6 +389,9 @@ footer{
   gap:1rem;
   align-items:center;
 }
+@media (max-width:920px){
+  .grid-3,.grid-2,.core-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
@@ -364,28 +427,90 @@ footer{
     <h1 class="hero-title">The Quantized Dimensional Ledger</h1>
 
     <p class="hero-sub">
-      Standard dimensional analysis tests consistency, but it does not by itself determine whether a physical representation is structurally admissible. The QDL Physics Institute investigates whether dimensional closure can serve as an additional admissibility constraint on fields, operators, constants, and measurement relations before phenomenological fitting or deployment. The Quantized Dimensional Ledger (QDL) is the proposed framework for expressing that constraint in a 3L + 2F lattice basis.
+      The Quantized Dimensional Ledger interprets dimensional structure as a lattice of discrete dimensional charges, where physically admissible operators correspond to the neutral closure sector. The QDL Physics Institute develops this framework as a structural admissibility layer for physical representations, operator construction, and dimensional closure analysis.
     </p>
 
     <div class="hero-meta">
-      <span class="hero-chip">3L + 2F dimensional basis</span>
-      <span class="hero-chip">Quantized Dimensional Cell</span>
-      <span class="hero-chip">Structural admissibility</span>
-      <span class="hero-chip">Prediction filtering</span>
-      <span class="hero-chip">Falsifiable tests</span>
+      <span class="hero-chip">Integer charge lattice</span>
+      <span class="hero-chip">Neutral closure sector</span>
+      <span class="hero-chip">Admissible operators</span>
+      <span class="hero-chip">QDC structural invariant</span>
+      <span class="hero-chip">Pre-dynamical filter</span>
     </div>
-
-    <figure class="hero-figure">
-      <img src="figure1.png" alt="Dimensional lattice and closure direction for the Quantized Dimensional Ledger">
-      <figcaption>
-        Physical quantities are represented as integer vectors in a dimensional lattice. The closure direction organizes admissible constructions within the QDL framework.
-      </figcaption>
-    </figure>
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="research.html">Explore the Research Program</a>
       <a class="btn" href="publications.html">Read the Papers</a>
       <a class="btn" href="resources.html">View Supporting Resources</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Core Idea</h2>
+      <p class="section-kicker">The fastest way to understand QDL: principle, diagram, and short explanation.</p>
+    </div>
+
+    <div class="core-grid">
+      <div class="card core-idea-card">
+        <div class="card-title">Core Principle</div>
+
+        <p class="core-principle">
+          <strong>Dimensional quantities form a charge lattice; admissible operators lie in its neutral sector.</strong>
+        </p>
+
+        <p class="core-summary">
+          The Quantized Dimensional Ledger maps dimensional quantities into an integer lattice of dimensional charges. Physically admissible operators are those combinations whose dimensional charges cancel to zero.
+        </p>
+
+        <div class="core-master">
+          <div class="core-master-label">QDL Master Relation</div>
+          <div class="core-master-equation">
+            \((\mathcal Q,\cdot)\xrightarrow{\Phi}(\mathbb Z^n,+), \quad \mathcal A=\mathcal Q_0=\ker\Phi\)
+          </div>
+        </div>
+
+        <p class="note">
+          In QDL, dimensional closure is treated as a structural admissibility condition rather than only a post hoc consistency check.
+        </p>
+      </div>
+
+      <figure class="card diagram-card">
+        <img src="qdl-structural-closure-framework.png" alt="QDL Structural Closure Framework diagram showing dimensional quantity algebra, integer lattice representation, neutral closure sector, and admissible operators">
+        <figcaption>
+          The QDL structural closure framework maps dimensional quantities into an integer charge lattice through the homomorphism \(\Phi\). The admissible operator space is the neutral closure sector, identified with the kernel \(\ker\Phi\).
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Short Explanation</h2>
+      <p class="section-kicker">Three layers for quick orientation: instant idea, conceptual summary, and technical overview.</p>
+    </div>
+
+    <div class="layer-list">
+      <div class="card layer-item">
+        <div class="layer-label">Layer 1 · Instant Idea</div>
+        <div class="layer-text">
+          Dimensional quantities form a charge lattice; admissible operators lie in its neutral sector.
+        </div>
+      </div>
+
+      <div class="card layer-item">
+        <div class="layer-label">Layer 2 · Conceptual Summary</div>
+        <div class="layer-text">
+          The Quantized Dimensional Ledger maps dimensional quantities into an integer lattice of dimensional charges. Physically admissible operators are those combinations whose dimensional charges cancel to zero.
+        </div>
+      </div>
+
+      <div class="card layer-item">
+        <div class="layer-label">Layer 3 · Technical Overview</div>
+        <div class="layer-text">
+          The Quantized Dimensional Ledger (QDL) interprets dimensional structure as a discrete algebraic system. Dimensional quantities expressed in a unit basis are mapped by a dimension homomorphism to an integer lattice of exponent vectors, which can be viewed as dimensional charge vectors. Multiplication of quantities corresponds to addition of these charges. This induces a graded decomposition of the dimensional quantity algebra into sectors labeled by their charge vectors. Physically admissible operators—such as Lagrangian terms or invariant combinations—are those whose total dimensional charge vanishes. Thus admissibility corresponds to membership in the neutral closure sector, given by the kernel of the dimensional map.
+        </div>
+      </div>
     </div>
   </section>
 
