@@ -656,6 +656,52 @@ footer{
 
   <section class="section">
     <div class="section-header">
+      <h2 class="section-title">Experimental Benchmarks</h2>
+      <p class="section-kicker">Reproducible benchmark records and demonstration repositories for residual-first model comparison.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>NV-Center ODMR Benchmark</h3>
+        <p>
+          Residual-first benchmarking of NV-center ODMR models using public experimental data. This record emphasizes reproducibility, declared model families, and residual structure comparison rather than parameter optimization alone.
+        </p>
+        <p style="margin-top:.5rem;">
+          <strong>Record:</strong>
+          <a href="https://doi.org/10.5281/zenodo.19065837" target="_blank" rel="noopener noreferrer">Zenodo benchmark paper</a><br>
+          <strong>Reproducibility kit:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18064816" target="_blank" rel="noopener noreferrer">Zenodo reproducibility package</a><br>
+          <strong>Dataset:</strong>
+          <a href="https://doi.org/10.5281/zenodo.14697917" target="_blank" rel="noopener noreferrer">Public ODMR dataset</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Optical Cavity Benchmark (Demo)</h3>
+        <p>
+          Minimal reproducible demonstration of residual-first model comparison using optical cavity resonance scaling. This repository illustrates the benchmarking workflow and will be extended to a public-data experimental benchmark in a future version.
+        </p>
+        <p style="margin-top:.5rem;">
+          <strong>Repository:</strong>
+          <a href="https://github.com/jamesbourassa/qdl-benchmark-optical-cavity" target="_blank" rel="noopener noreferrer">GitHub benchmark demo</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
+      <div class="card-title">Benchmarking Methodology</div>
+      <p>
+        The QDL benchmarking approach is residual-first: model families are compared by examining residual structure before relying on aggregate error metrics. This prioritizes detection of systematic deviations, model misspecification, and hidden structure over purely optimizing fit quality.
+      </p>
+    </div>
+
+    <p class="note">
+      Benchmark records are presented with explicit scope labels. Executed public-data benchmarks and methodological demonstration repositories are distinguished clearly so that reproducibility and claim boundaries remain transparent.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
       <h2 class="section-title">Experimental Program</h2>
       <p class="section-kicker">Executed benchmark discipline separated clearly from proposed falsifiable tests.</p>
     </div>
