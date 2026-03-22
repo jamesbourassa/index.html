@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QDL Admissibility Calculator</title>
+  <meta
+    name="description"
+    content="QDL Admissibility Calculator: test structural closure, modular charge, and admissibility under canonical 3L+2F ledger rules, with SMEFT, dimensional-failure, and metrology examples."
+  />
   <style>
     :root {
       --bg: #f4f7fb;
@@ -12,7 +16,6 @@
       --muted: #475569;
       --line: #dbe3ee;
       --accent: #1d4ed8;
-      --accent-soft: #dbeafe;
       --good: #166534;
       --good-bg: #dcfce7;
       --bad: #991b1b;
@@ -23,6 +26,7 @@
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -94,6 +98,7 @@
     .micro {
       color: var(--muted);
       font-size: 0.86rem;
+      margin-top: 6px;
     }
 
     .controls {
@@ -103,26 +108,6 @@
       margin: 14px 0 10px;
     }
 
-    label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    input, select, textarea, button {
-      font: inherit;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      background: #fff;
-      color: var(--text);
-    }
-
     .row {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -130,11 +115,31 @@
       margin: 10px 0;
     }
 
-    .row-3 {
+    .row-4 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
       margin: 10px 0;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input, select, button {
+      font: inherit;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--text);
     }
 
     .btns {
@@ -184,7 +189,8 @@
     .bad { background: var(--bad-bg); color: var(--bad); }
     .warn { background: var(--warn-bg); color: var(--warn); }
 
-    .result-block, .panel {
+    .result-block,
+    .panel {
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 14px;
@@ -241,7 +247,7 @@
     @media (max-width: 980px) {
       .grid { grid-template-columns: 1fr; }
       .controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .row, .row-3, .cheat-grid { grid-template-columns: 1fr; }
+      .row, .row-4, .cheat-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -258,7 +264,9 @@
       <div class="stack">
         <section class="card">
           <h2>1) Canonical 3L + 2F ledger input</h2>
-          <p class="small">The basis is fixed here to the canonical QDL-style form: three length slots and two frequency slots. Enter the integer exponents for the expression or operator you want to test.</p>
+          <p class="small">
+            The basis is fixed here to the canonical QDL-style form: three length slots and two frequency slots. Enter the integer exponents for the expression or operator you want to test.
+          </p>
 
           <div class="controls">
             <div>
@@ -307,15 +315,23 @@
           </div>
 
           <div class="definition-list">
-            <div class="definition-item small"><strong>Canonical cell:</strong> QDC = L³F², represented here by the closure direction q = (1, 1, 1, 1, 1).</div>
-            <div class="definition-item small"><strong>Default interpretation:</strong> exact subgroup membership means the declared ledger vector must equal k·q for some integer k.</div>
-            <div class="definition-item small"><strong>Charge panel:</strong> Δ is kept configurable so the public tool remains useful before final paper-specific charge conventions are frozen.</div>
+            <div class="definition-item small">
+              <strong>Canonical cell:</strong> QDC = L³F², represented here by the closure direction q = (1, 1, 1, 1, 1).
+            </div>
+            <div class="definition-item small">
+              <strong>Default interpretation:</strong> exact subgroup membership means the declared ledger vector must equal k·q for some integer k.
+            </div>
+            <div class="definition-item small">
+              <strong>Charge panel:</strong> Δ is kept configurable so the public tool remains useful before final paper-specific charge conventions are frozen.
+            </div>
           </div>
         </section>
 
         <section class="card">
           <h2>2) Closure rule and diagnostic charge</h2>
-          <p class="small">The default closure direction is the QDC direction. You can leave these defaults for public demonstration, or edit them when you want to test alternative subgroup or congruence rules.</p>
+          <p class="small">
+            The default closure direction is the QDC direction. You can leave these defaults for public demonstration, or edit them when you want to test alternative subgroup or congruence rules.
+          </p>
 
           <div class="row">
             <div>
@@ -328,19 +344,23 @@
             </div>
           </div>
 
-          <div class="row-3">
+          <div class="row-4">
             <div>
               <label for="viewMode">View mode</label>
               <select id="viewMode">
                 <option value="ledger">View as 3L+2F ledger projection</option>
                 <option value="ab">View as (a,b) grading</option>
               </select>
-              <div class="micro">SMEFT preset uses published (a,b) grading; other presets remain canonical ledger demonstrations.</div>
+              <div class="micro">
+                SMEFT preset uses published (a,b) grading; other presets remain canonical ledger demonstrations.
+              </div>
             </div>
+
             <div>
               <label for="modulus">Modulus m</label>
               <input id="modulus" type="number" step="1" value="6" />
             </div>
+
             <div>
               <label for="toleranceMode">Admissibility mode</label>
               <select id="toleranceMode">
@@ -348,6 +368,7 @@
                 <option value="orthogonal">Zero transverse remainder only</option>
               </select>
             </div>
+
             <div>
               <label for="exampleSelect">Worked example</label>
               <select id="exampleSelect">
@@ -360,10 +381,10 @@
           </div>
 
           <div class="btns">
-            <button class="primary" id="computeBtn">Compute</button>
-            <button class="secondary" id="resetBtn">Reset</button>
-            <button class="secondary" id="copyBtn">Copy result summary</button>
-            <button class="secondary" id="copyCheatBtn">Copy cheat sheet</button>
+            <button class="primary" id="computeBtn" type="button">Compute</button>
+            <button class="secondary" id="resetBtn" type="button">Reset</button>
+            <button class="secondary" id="copyBtn" type="button">Copy result summary</button>
+            <button class="secondary" id="copyCheatBtn" type="button">Copy cheat sheet</button>
           </div>
 
           <div class="result-block">
@@ -382,26 +403,55 @@
       <div class="stack">
         <aside class="card">
           <h2>3) Worked examples</h2>
-          <p class="small">These presets are framed as public demonstration cases. They show how the same ledger logic can be used across EFT structure, ordinary dimensional mistakes, and measurement relations.</p>
+          <p class="small">
+            These presets are framed as public demonstration cases. They show how the same ledger logic can be used across EFT structure, ordinary dimensional mistakes, and measurement relations.
+          </p>
 
           <div class="examples">
-            <button class="example-btn" data-example="smeft"><strong>SMEFT ℤ₆ operator-mixing example</strong><br><span class="small">Uses the paper’s published ℤ₆ grading: dipoles sit in Δ = 4 while selected four-fermion operators sit in Δ = 0, so one-loop mixing is structurally forbidden.</span></button>
-            <button class="example-btn" data-example="failure"><strong>Dimensional-reasoning failure</strong><br><span class="small">A deliberately inconsistent assignment, showing how transverse remainder flags a bad construction.</span></button>
-            <button class="example-btn" data-example="metrology"><strong>Metrology / measurement example</strong><br><span class="small">A measurement-side quantity relation that closes exactly under the chosen rule.</span></button>
+            <button class="example-btn" data-example="smeft" type="button">
+              <strong>SMEFT ℤ₆ operator-mixing example</strong><br />
+              <span class="small">
+                Uses the paper’s published ℤ₆ grading: dipoles sit in Δ = 4 while selected four-fermion operators sit in Δ = 0, so one-loop mixing is structurally forbidden.
+              </span>
+            </button>
+
+            <button class="example-btn" data-example="failure" type="button">
+              <strong>Dimensional-reasoning failure</strong><br />
+              <span class="small">
+                A deliberately inconsistent assignment, showing how transverse remainder flags a bad construction.
+              </span>
+            </button>
+
+            <button class="example-btn" data-example="metrology" type="button">
+              <strong>Metrology / measurement example</strong><br />
+              <span class="small">
+                A measurement-side quantity relation that closes exactly under the chosen subgroup rule.
+              </span>
+            </button>
           </div>
 
           <h3>How to read the output</h3>
           <div class="definition-list">
-            <div class="definition-item small"><strong>Ledger vector:</strong> the integer 5-slot representation of the expression in the canonical basis.</div>
-            <div class="definition-item small"><strong>Exact membership:</strong> passes only when v = kq for some integer k.</div>
-            <div class="definition-item small"><strong>Transverse remainder:</strong> the part of v not captured by q; nonzero remainder means non-closure.</div>
-            <div class="definition-item small"><strong>Δ:</strong> a modular diagnostic that can be used as a selection-rule style summary.</div>
+            <div class="definition-item small">
+              <strong>Ledger vector:</strong> the integer 5-slot representation of the expression in the canonical basis.
+            </div>
+            <div class="definition-item small">
+              <strong>Exact membership:</strong> passes only when v = kq for some integer k.
+            </div>
+            <div class="definition-item small">
+              <strong>Transverse remainder:</strong> the part of v not captured by q; nonzero remainder means non-closure.
+            </div>
+            <div class="definition-item small">
+              <strong>Δ:</strong> a modular diagnostic that can be used as a selection-rule style summary.
+            </div>
           </div>
         </aside>
 
         <aside class="card">
           <h2>Export-ready cheat-sheet panel</h2>
-          <p class="small">This panel is intentionally short so it can be lifted almost directly into a 1-page PDF, side card, or appendix figure.</p>
+          <p class="small">
+            This panel is intentionally short so it can be lifted almost directly into a 1-page PDF, side card, or appendix figure.
+          </p>
 
           <div class="panel" id="cheatSheetPanel">
             <div class="mono"><strong>QDL QUICK SHEET</strong></div>
@@ -417,21 +467,36 @@
           </div>
 
           <div class="cheat-grid">
-            <div class="definition-item small"><strong>Website use:</strong> place this panel below the calculator or in a right-column callout.</div>
-            <div class="definition-item small"><strong>PDF use:</strong> export this block as a compact one-page public explainer.</div>
-            <div class="definition-item small"><strong>Talk use:</strong> show the three presets live to explain admissibility in under two minutes.</div>
-            <div class="definition-item small"><strong>Paper use:</strong> keep Δ configurable here, then lock to the exact charge convention in a paper-specific appendix.</div>
+            <div class="definition-item small">
+              <strong>Website use:</strong> place this panel below the calculator or in a right-column callout.
+            </div>
+            <div class="definition-item small">
+              <strong>PDF use:</strong> export this block as a compact one-page public explainer.
+            </div>
+            <div class="definition-item small">
+              <strong>Talk use:</strong> show the three presets live to explain admissibility in under two minutes.
+            </div>
+            <div class="definition-item small">
+              <strong>Paper use:</strong> keep Δ configurable here, then lock to the exact charge convention in a paper-specific appendix.
+            </div>
           </div>
 
-          <p class="footer-note">Public-facing wording keeps the logic clear without forcing a single paper-dependent formalization where your notation may still evolve.</p>
+          <p class="footer-note">
+            Public-facing wording keeps the logic clear without forcing a single paper-dependent formalization where your notation may still evolve.
+          </p>
         </aside>
       </div>
     </div>
+
+    <p class="footer-note">
+      This tool provides a structural admissibility check prior to model reliance.
+      For formal definitions and proofs, see the QDL publications.
+    </p>
   </div>
 
   <script>
     function getVector(prefix) {
-      return [1, 2, 3, 4, 5].map(i => Number(document.getElementById(prefix + i)?.value || 0));
+      return [1, 2, 3, 4, 5].map(i => Number(document.getElementById(prefix + i).value || 0));
     }
 
     function getNames() {
@@ -443,7 +508,12 @@
     }
 
     function parseCSVVector(str) {
-      const parts = String(str).split(',').map(s => s.trim()).filter(Boolean).map(Number);
+      const parts = String(str)
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+        .map(Number);
+
       if (parts.length !== 5 || parts.some(n => !Number.isFinite(n))) {
         throw new Error('Vector must contain exactly 5 comma-separated numbers.');
       }
@@ -472,8 +542,10 @@
 
     function componentwiseMultiple(v, q) {
       let k = null;
+
       for (let i = 0; i < v.length; i++) {
         if (q[i] === 0 && v[i] !== 0) return { ok: false, k: null };
+
         if (q[i] !== 0) {
           const ratio = v[i] / q[i];
           if (!Number.isInteger(ratio)) return { ok: false, k: null };
@@ -481,6 +553,7 @@
           if (ratio !== k) return { ok: false, k: null };
         }
       }
+
       return { ok: true, k: k === null ? 0 : k };
     }
 
@@ -502,7 +575,7 @@
 
     const exampleNotes = {
       custom: 'Custom input mode. You are testing your own declared vector and closure rule.',
-      smeft: 'SMEFT ℤ₆ example: this preset now follows the published grading logic in the uploaded SMEFT note. The key public-facing result is that selected four-fermion operators lie in Δ = 0 while dipole operators lie in Δ = 4, so the mixing channel is blocked at one loop.',
+      smeft: 'SMEFT ℤ₆ example: this preset follows the published grading logic in the uploaded SMEFT note. The key public-facing result is that selected four-fermion operators lie in Δ = 0 while dipole operators lie in Δ = 4, so the mixing channel is blocked at one loop.',
       failure: 'Dimensional-reasoning failure: this preset deliberately mixes exponents so the expression fails exact closure and exhibits a nonzero transverse remainder.',
       metrology: 'Metrology / measurement example: this preset represents a clean measurement-side relation entered to close exactly under the chosen subgroup rule.'
     };
@@ -518,16 +591,32 @@
       document.getElementById('cheatInput').textContent = viewMode === 'ab'
         ? `Current grading vector: (a,b) = (${v[0]},${v[1]})`
         : `Current vector: v = ${tupleString(v)}`;
+
       document.getElementById('cheatCell').textContent = viewMode === 'ab'
         ? `Closure direction: q = (${q[0]},${q[1]}) in grading space`
         : `Closure direction: q = ${tupleString(q)}${q.join(',') === '1,1,1,1,1' ? ' ≡ L³F²' : ''}`;
+
       document.getElementById('cheatRule').textContent = mode === 'exact'
         ? 'Rule: admissible iff v = kq for integer k'
         : 'Rule: admissible iff transverse remainder vanishes';
-      document.getElementById('cheatCharge').textContent = `Diagnostic: Δ = w·v mod m = ${tupleString(w)}·v mod ${m} = ${delta}`;
-      document.getElementById('cheatStatus').textContent = `Status: ${admissible ? 'admissible' : 'inadmissible'}${exact.ok ? `; exact multiplier k = ${exact.k}` : ''}`;
-      document.getElementById('cheatExample').textContent = `Example: ${exampleKey === 'smeft' ? 'SMEFT ℤ₆ blocked-mixing test' : exampleKey === 'failure' ? 'dimensional-reasoning failure' : exampleKey === 'metrology' ? 'metrology / measurement relation' : 'custom input'}`;
-      document.getElementById('cheatView').textContent = `View: ${viewMode === 'ab' ? '(a,b) grading' : '3L+2F ledger projection'}`;
+
+      document.getElementById('cheatCharge').textContent =
+        `Diagnostic: Δ = w·v mod m = ${tupleString(w)}·v mod ${m} = ${delta}`;
+
+      document.getElementById('cheatStatus').textContent =
+        `Status: ${admissible ? 'admissible' : 'inadmissible'}${exact.ok ? `; exact multiplier k = ${exact.k}` : ''}`;
+
+      document.getElementById('cheatExample').textContent =
+        `Example: ${exampleKey === 'smeft'
+          ? 'SMEFT ℤ₆ blocked-mixing test'
+          : exampleKey === 'failure'
+            ? 'dimensional-reasoning failure'
+            : exampleKey === 'metrology'
+              ? 'metrology / measurement relation'
+              : 'custom input'}`;
+
+      document.getElementById('cheatView').textContent =
+        `View: ${viewMode === 'ab' ? '(a,b) grading' : '3L+2F ledger projection'}`;
     }
 
     function compute() {
@@ -571,6 +660,7 @@
         : `Ledger vector v = ${displayVectorString(v, names, viewMode)} | closure direction q = ${vectorToString(q, names)}`;
 
       const remainderText = '[' + ortho.remainder.map(x => Number(x.toFixed(6))).join(', ') + ']';
+
       document.getElementById('detailLine').textContent = exact.ok
         ? `Exact subgroup membership holds: v = ${exact.k}·q.`
         : `Exact subgroup membership does not hold. Orthogonal projection coefficient = ${Number(ortho.projCoeff.toFixed(6))}; transverse remainder = ${remainderText}.`;
@@ -587,6 +677,7 @@
       document.getElementById('viewLine').textContent = viewMode === 'ab'
         ? 'Current display mode: (a,b) grading view. In this mode, the first two slots are interpreted as the published SMEFT grading coordinates (a,b).'
         : 'Current display mode: 3L+2F ledger projection view. In this mode, all five slots are shown explicitly as the canonical QDL ledger basis.';
+
       updateCheatSheet(v, q, w, m, mode, admissible, delta, exact, exampleKey, viewMode);
     }
 
@@ -597,37 +688,48 @@
           q: '1,0,0,0,0',
           w: '2,-3,0,0,0',
           m: 6,
-          mode: 'exact'
+          mode: 'exact',
+          viewMode: 'ab'
         },
         failure: {
           v: [1, 0, 2, 1, 0],
           q: '1,1,1,1,1',
           w: '1,1,0,0,0',
           m: 6,
-          mode: 'exact'
+          mode: 'exact',
+          viewMode: 'ledger'
         },
         metrology: {
           v: [1, 1, 1, 1, 1],
           q: '1,1,1,1,1',
           w: '0,0,0,1,1',
           m: 2,
-          mode: 'exact'
+          mode: 'exact',
+          viewMode: 'ledger'
         }
       };
 
       if (type === 'custom') {
         document.getElementById('exampleLine').textContent = exampleNotes.custom;
+        document.getElementById('operatorLine').textContent = operatorNotes.custom;
+        compute();
         return;
       }
 
       const ex = sets[type];
       if (!ex) return;
-      ex.v.forEach((val, i) => document.getElementById('v' + (i + 1)).value = val);
+
+      ex.v.forEach((val, i) => {
+        document.getElementById('v' + (i + 1)).value = val;
+      });
+
       document.getElementById('qvec').value = ex.q;
       document.getElementById('wvec').value = ex.w;
       document.getElementById('modulus').value = ex.m;
       document.getElementById('toleranceMode').value = ex.mode;
+      document.getElementById('viewMode').value = ex.viewMode;
       document.getElementById('exampleSelect').value = type;
+
       compute();
     }
 
@@ -640,8 +742,8 @@
         document.getElementById('exampleLine').textContent,
         document.getElementById('operatorLine').textContent,
         document.getElementById('viewLine').textContent
-      ].join('
-');
+      ].join('\n');
+
       return navigator.clipboard.writeText(text);
     }
 
@@ -656,8 +758,8 @@
         document.getElementById('cheatExample').textContent,
         document.getElementById('cheatView').textContent,
         document.getElementById('cheatUse').textContent
-      ].join('
-');
+      ].join('\n');
+
       return navigator.clipboard.writeText(text);
     }
 
@@ -670,14 +772,14 @@
     });
 
     document.getElementById('resetBtn').addEventListener('click', () => {
-      location.reload();
+      window.location.reload();
     });
 
     document.getElementById('copyBtn').addEventListener('click', async () => {
       try {
         await copySummary();
         alert('Result summary copied.');
-      } catch {
+      } catch (err) {
         alert('Could not copy automatically.');
       }
     });
@@ -686,7 +788,7 @@
       try {
         await copyCheatSheet();
         alert('Cheat sheet copied.');
-      } catch {
+      } catch (err) {
         alert('Could not copy automatically.');
       }
     });
@@ -709,13 +811,9 @@
 
     try {
       compute();
-    } catch (_) {}
+    } catch (err) {
+      console.error(err);
+    }
   </script>
-
-<p class="footer-note">
-  This tool provides a structural admissibility check prior to model reliance.
-  For formal definitions and proofs, see the QDL publications.
-</p>
-
 </body>
 </html>
