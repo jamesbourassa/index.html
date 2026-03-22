@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact | QDL Physics Institute</title>
+<title>Institute | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Contact the QDL Physics Institute regarding research inquiries, editorial correspondence, collaboration, technical questions, or public-communication matters related to the Quantized Dimensional Ledger (QDL).">
+<meta name="description" content="The QDL Physics Institute is an independent research program developing the Quantized Dimensional Ledger (QDL) framework for dimensional closure, admissibility, and falsifiable experimental tests.">
 
 <style>
 :root{
@@ -13,8 +13,8 @@
   --border-soft:#e5e7eb;
   --text-main:#0f172a;
   --text-soft:#6b7280;
+  --text-muted:#475569;
   --accent:#2563eb;
-  --accent-soft:#eff6ff;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -25,7 +25,7 @@ body{
   -webkit-font-smoothing:antialiased;
   line-height:1.65;
 }
-a{color:var(--accent);text-decoration:none;}
+a{color:#0369a1;text-decoration:none;}
 a:hover{text-decoration:underline;}
 header{
   background:#0f172a;
@@ -54,8 +54,8 @@ header{
   width:52px;
   height:52px;
   border-radius:10px;
-  background:#020617;
   border:1px solid #38bdf8;
+  background:#020617;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -69,22 +69,22 @@ header{
 }
 .logo-text-main{
   font-weight:650;
-  font-size:.82rem;
-  text-transform:uppercase;
   letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:.82rem;
 }
 .logo-text-sub{
   font-size:.72rem;
-  color:#94a3b8;
-  text-transform:uppercase;
+  color:#9ca3af;
   letter-spacing:.08em;
+  text-transform:uppercase;
 }
 .nav-links{
   display:flex;
-  flex-wrap:wrap;
+  align-items:center;
   gap:.8rem;
   font-size:.85rem;
-  align-items:center;
+  flex-wrap:wrap;
 }
 .nav-links a{
   color:#e5e7eb;
@@ -102,112 +102,146 @@ header{
   color:#e0f2fe !important;
 }
 .nav-cta{
-  background:#0b1120;
   border:1px solid #38bdf8 !important;
+  background:#0b1120;
   color:#e0f2fe !important;
+  padding:.32rem .88rem;
+  border-radius:999px;
   text-transform:uppercase;
   letter-spacing:.08em;
   font-size:.78rem;
-  padding:.32rem .88rem;
 }
 main{
-  max-width:900px;
+  max-width:1100px;
   margin:0 auto;
-  padding:2rem 1.25rem 3rem;
+  padding:1.85rem 1.25rem 3.2rem;
 }
-.kicker{
+.hero{
+  margin-bottom:1.8rem;
+  background:var(--bg-card);
+  border-radius:20px;
+  border:1px solid var(--border-soft);
+  box-shadow:0 10px 28px rgba(15,23,42,.06);
+  padding:1.7rem 1.6rem;
+}
+.hero-kicker{
   text-transform:uppercase;
+  letter-spacing:.18em;
   font-size:.78rem;
-  letter-spacing:.16em;
-  color:var(--text-soft);
+  color:#6b7280;
   margin-bottom:.4rem;
 }
-h1{
-  font-size:clamp(2rem,3vw,2.35rem);
+.hero-title{
+  font-size:clamp(2rem,3vw,2.45rem);
   line-height:1.14;
+  margin-bottom:.52rem;
   letter-spacing:-0.02em;
-  margin-bottom:.82rem;
 }
-.lede{
+.hero-sub{
   font-size:.97rem;
   color:#4b5563;
-  max-width:46rem;
-  margin-bottom:1.6rem;
+  max-width:48rem;
+  margin-bottom:.95rem;
 }
-.contact-card{
-  background:var(--bg-card);
-  padding:1.4rem 1.4rem 1.6rem;
-  border-radius:18px;
-  border:1px solid var(--border-soft);
-  box-shadow:0 10px 24px rgba(15,23,42,.08);
-  margin-bottom:1.2rem;
-  font-size:.93rem;
-}
-.contact-card h2{
-  font-size:1.08rem;
-  margin-bottom:.6rem;
-  color:#111827;
-}
-.contact-card p{
-  margin-bottom:.72rem;
-  line-height:1.6;
-  color:#374151;
-}
-ul{
-  margin-left:1rem;
-  margin-bottom:.55rem;
-  line-height:1.58;
-  color:#374151;
-}
-li + li{
-  margin-top:.3rem;
-}
-.pill-row{
-  margin-top:.55rem;
+.hero-meta{
   display:flex;
   flex-wrap:wrap;
-  gap:.38rem;
-  font-size:.78rem;
-  color:#4b5563;
+  gap:.5rem;
+  font-size:.8rem;
 }
-.pill{
+.hero-chip{
+  padding:.16rem .72rem;
   border-radius:999px;
-  padding:.15rem .62rem;
   border:1px solid #e5e7eb;
   background:#f9fafb;
+  color:var(--text-muted);
 }
-.callout{
-  margin-top:.85rem;
-  background:var(--accent-soft);
-  border:1px solid #bfdbfe;
-  color:#1e3a8a;
-  border-radius:12px;
-  padding:.88rem .92rem;
-  font-size:.88rem;
+.section{
+  margin-top:2rem;
 }
-.mono{
-  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  background:#f3f4f6;
-  border:1px solid #e5e7eb;
-  padding:.1rem .35rem;
-  border-radius:6px;
-  font-size:.86rem;
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:baseline;
+  flex-wrap:wrap;
+  margin-bottom:1rem;
+}
+.section-title{
+  font-size:.96rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#111827;
+}
+.section-kicker{
+  font-size:.83rem;
+  color:var(--text-soft);
+  max-width:40rem;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(0,1.2fr);
+  gap:1rem;
+}
+@media (max-width:900px){
+  .grid-2{grid-template-columns:1fr;}
+}
+.card{
+  background:var(--bg-card);
+  border-radius:18px;
+  border:1px solid var(--border-soft);
+  padding:1.05rem 1.08rem;
+  box-shadow:0 8px 24px rgba(15,23,42,.06);
+  font-size:.93rem;
+  color:#374151;
+}
+.card + .card{
+  margin-top:.95rem;
+}
+.card-title{
+  font-size:1.02rem;
+  font-weight:650;
+  margin-bottom:.35rem;
+  color:#111827;
+  line-height:1.35;
+}
+.card p{
+  margin-bottom:.58rem;
+}
+.card p:last-child{
+  margin-bottom:0;
+}
+ul{
+  padding-left:1.1rem;
+  color:#374151;
+}
+ul li{
+  margin-bottom:.32rem;
+}
+.note{
+  font-size:.82rem;
+  color:var(--text-soft);
+  margin-top:1rem;
+  max-width:56rem;
+}
+.id-list{
+  line-height:1.75;
 }
 footer{
   border-top:1px solid var(--border-soft);
-  padding:1.2rem 1.25rem 1.6rem;
+  margin-top:3rem;
+  padding:1.2rem 1.25rem 1.8rem;
   font-size:.8rem;
   color:#6b7280;
   background:#f9fafb;
-  margin-top:3rem;
 }
-.footer-inner{
-  max-width:900px;
+.footer-grid{
+  max-width:1100px;
   margin:0 auto;
   display:flex;
   flex-wrap:wrap;
-  justify-content:space-between;
   gap:1rem;
+  justify-content:space-between;
   align-items:center;
 }
 </style>
@@ -230,88 +264,150 @@ footer{
       <a href="index.html">Home</a>
       <a href="research.html">Research Program</a>
       <a href="publications.html">Publications</a>
-      <a href="institute.html">Institute</a>
+      <a href="qdl-calculator.html">QDL Calculator</a>
+      <a href="institute.html" class="nav-active">Institute</a>
       <a href="resources.html">Resources</a>
-      <a href="contact.html" class="nav-cta nav-active">Contact</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <div class="kicker">Contact</div>
-  <h1>Contact the QDL Physics Institute</h1>
-
-  <p class="lede">
-    For inquiries regarding research, editorial correspondence, collaboration, experimental proposals, clarification of QDL framework components, or public communication, please use the information below. Responses are prioritized for scientific, editorial, and technical questions.
-  </p>
-
-  <div class="contact-card">
-    <h2>Email</h2>
-    <p>
-      For all QDL-related correspondence:
-      <strong>
-        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
-      </strong>
+  <section class="hero">
+    <div class="hero-kicker">Institute</div>
+    <h1 class="hero-title">QDL Physics Institute</h1>
+    <p class="hero-sub">
+      The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA. Its purpose is to develop, formalize, and test the Quantized Dimensional Ledger (QDL) as a structural framework for dimensional closure, model admissibility, and falsifiable experimental inquiry.
     </p>
 
-    <div class="callout">
-      <strong>Suggested subject-line routing:</strong><br>
-      Use one of the following prefixes to help route correspondence efficiently:
-      <span class="mono">[EDITOR/REFEREE]</span>,
-      <span class="mono">[COLLABORATION]</span>,
-      <span class="mono">[TECHNICAL QUESTION]</span>,
-      <span class="mono">[MEDIA]</span>,
-      <span class="mono">[GENERAL]</span>
+    <p style="font-size:.92rem;color:#4b5563;margin-top:-.2rem;margin-bottom:.95rem;">
+      For a live demonstration of the framework, use the
+      <a href="qdl-calculator.html">QDL Admissibility Calculator</a>.
+    </p>
+
+    <div class="hero-meta">
+      <span class="hero-chip">Independent research institute</span>
+      <span class="hero-chip">Dimensional closure</span>
+      <span class="hero-chip">Prediction filtering</span>
+      <span class="hero-chip">Falsifiable tests</span>
     </div>
-  </div>
+  </section>
 
-  <div class="contact-card">
-    <h2>Appropriate Uses of This Contact Channel</h2>
-    <ul>
-      <li>Journal editor or referee correspondence</li>
-      <li>Research collaboration inquiries</li>
-      <li>Questions about the QDL framework or specific papers</li>
-      <li>Requests related to experiments, benchmarks, or methodological clarification</li>
-      <li>Public communication or interview requests</li>
-    </ul>
-
-    <div class="pill-row">
-      <span class="pill">Research inquiries</span>
-      <span class="pill">Editorial correspondence</span>
-      <span class="pill">Collaboration</span>
-      <span class="pill">Technical questions</span>
-      <span class="pill">Public communication</span>
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Mission &amp; Research Themes</h2>
+      <p class="section-kicker">Framework-first physics, from dimensional admissibility to testable structure.</p>
     </div>
-  </div>
 
-  <div class="contact-card">
-    <h2>Institute Information</h2>
-    <p>
-      <strong>QDL Physics Institute</strong><br>
-      Huntley, Illinois, USA
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Mission</div>
+        <p>The Institute’s mission is to:</p>
+        <ul>
+          <li>Develop QDL as a mathematically coherent dimensional-closure framework.</li>
+          <li>Provide a structural admissibility layer upstream of fitting, simulation, and deployment.</li>
+          <li>Investigate consequences for EFT structure, gravitation, metrology, and measurement integrity.</li>
+          <li>Design falsifiable experimental tests across precision tabletop platforms.</li>
+          <li>Maintain open, auditable records through public repositories and DOI-backed materials.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Research Themes</div>
+        <ul>
+          <li><strong>Dimensional lattice structure</strong> and 3L + 2F representation.</li>
+          <li><strong>Closure-based admissibility</strong> for models, operators, and dimensional relations.</li>
+          <li><strong>Prediction filtering</strong> in EFT/SMEFT and related formal settings.</li>
+          <li><strong>Metrology and constants</strong> under ledger-based structural interpretation.</li>
+          <li><strong>Experimental discrimination</strong> through NV centers, resonators, metamaterials, and related systems.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="founder">
+    <div class="section-header">
+      <h2 class="section-title">Founder &amp; Research Profile</h2>
+      <p class="section-kicker">Independent program leadership with a closure-first research agenda.</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <div class="card-title">James D. Bourassa</div>
+          <p>
+            James D. Bourassa is the founder and director of the QDL Physics Institute and the developer of the Quantized Dimensional Ledger research program.
+          </p>
+          <p>
+            The work centers on a closure-first ordering: define the ledger structure, formalize admissibility, test implications for operators and measurement relations, and only then move to downstream applications.
+          </p>
+          <p>
+            The program spans dimensional ontology, EFT structure, metrology, model integrity, and experimental design.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Program Orientation</div>
+          <p>
+            The Institute frames QDL not as a replacement for established theories, but as an upstream structural screen on admissible representations. In that sense, the research program is methodological as well as physical: it asks whether dimensional structure imposes stronger constraints than standard homogeneity alone.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <div class="card-title">Contact &amp; Identifiers</div>
+          <div class="id-list">
+            <div><strong>Affiliation:</strong> QDL Physics Institute, Huntley, Illinois, USA</div>
+            <div><strong>Email:</strong> <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a></div>
+            <div><strong>ORCID:</strong> <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">0009-0008-0155-0051</a></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Open Research Practice</div>
+          <p>
+            Core manuscripts are maintained as public preprints and DOI-backed records. Where applicable, supplemental materials, benchmark artifacts, and related program documents are released in forms intended to support independent audit and technical review.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">
+      For the technical entry point, begin with the Research Program page, the QDL Admissibility Calculator, and the Top 5 publications path. For correspondence, use the Contact page.
     </p>
-    <p>
-      <strong>Founder &amp; Director:</strong> James D. Bourassa<br>
-      <strong>ORCID:</strong>
-      <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">
-        0009-0008-0155-0051
-      </a>
-    </p>
-    <p>
-      For institutional context, see the <a href="institute.html">Institute</a> page. For technical entry points, see the <a href="research.html">Research Program</a> and <a href="publications.html">Publications</a> pages.
-    </p>
-  </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Collaboration &amp; Support</h2>
+    </div>
+
+    <div class="card">
+      <p>
+        The QDL Physics Institute welcomes collaboration with researchers, experimental groups, and institutions interested in dimensional structure, measurement integrity, or falsifiable tests of the Quantized Dimensional Ledger framework.
+      </p>
+
+      <p>
+        The program also welcomes philanthropic or institutional support that enables continued development of open, DOI-backed research records and experimental benchmark studies.
+      </p>
+
+      <p>
+        For collaboration inquiries or discussion of potential support, please contact
+        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
+      </p>
+    </div>
+  </section>
 
 </main>
 
 <footer>
-  <div class="footer-inner">
+  <div class="footer-grid">
     <div>© QDL Physics Institute</div>
     <div>Last updated: March 2026</div>
     <div>
-      Zenodo:
-      <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">QDL Community</a>
+      <a href="qdl-calculator.html">QDL Calculator</a>
     </div>
     <div>
       Contact:
