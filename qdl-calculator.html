@@ -129,17 +129,22 @@
       margin-bottom: 6px;
     }
 
-    input, select, button {
+    input, select, button, textarea {
       font: inherit;
     }
 
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 10px 12px;
       border: 1px solid #cbd5e1;
       border-radius: 10px;
       background: #fff;
       color: var(--text);
+    }
+
+    textarea {
+      min-height: 220px;
+      resize: vertical;
     }
 
     .btns {
@@ -231,23 +236,20 @@
       padding: 10px 12px;
     }
 
-    .cheat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }
-
     .footer-note {
       margin-top: 16px;
       color: var(--muted);
       font-size: 0.9rem;
     }
 
+    .report-box {
+      margin-top: 12px;
+    }
+
     @media (max-width: 980px) {
       .grid { grid-template-columns: 1fr; }
       .controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .row, .row-4, .cheat-grid { grid-template-columns: 1fr; }
+      .row, .row-4 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -257,6 +259,9 @@
       <h1>QDL Admissibility Calculator</h1>
       <p class="sub">
         A one-page public-facing QDL tool for testing whether a declared quantity or operator closes on the canonical 3L + 2F ledger basis. It computes the ledger vector, a configurable modular diagnostic charge Δ, and an admissible / inadmissible result under a declared closure rule.
+      </p>
+      <p class="small">
+        Live structural test: enter a vector or select an example to evaluate admissibility under QDL closure rules.
       </p>
     </section>
 
@@ -385,6 +390,7 @@
             <button class="secondary" id="resetBtn" type="button">Reset</button>
             <button class="secondary" id="copyBtn" type="button">Copy result summary</button>
             <button class="secondary" id="copyCheatBtn" type="button">Copy cheat sheet</button>
+            <button class="secondary" id="reportBtn" type="button">Generate Report</button>
           </div>
 
           <div class="result-block">
@@ -396,6 +402,11 @@
             <div class="formula mono" id="exampleLine">Worked-example note will appear here.</div>
             <div class="formula mono" id="operatorLine">Named operator mapping will appear here.</div>
             <div class="formula mono" id="viewLine">Current display mode will appear here.</div>
+          </div>
+
+          <div class="report-box">
+            <label for="reportOutput">Generated report</label>
+            <textarea id="reportOutput" readonly placeholder="Click “Generate Report” to create a structured QDL Admissibility Report."></textarea>
           </div>
         </section>
       </div>
@@ -450,7 +461,7 @@
         <aside class="card">
           <h2>Export-ready cheat-sheet panel</h2>
           <p class="small">
-            This panel is intentionally short so it can be lifted almost directly into a 1-page PDF, side card, or appendix figure.
+            A compact summary of the current configuration and result. This can be copied and reused for reports, discussions, or documentation.
           </p>
 
           <div class="panel" id="cheatSheetPanel">
@@ -466,23 +477,24 @@
             <div class="mono" id="cheatUse">Use: pre-dynamical structural filter before model reliance or further calculation</div>
           </div>
 
-          <div class="cheat-grid">
+          <h3>How to use this tool</h3>
+          <div class="definition-list">
             <div class="definition-item small">
-              <strong>Website use:</strong> place this panel below the calculator or in a right-column callout.
+              Enter a ledger vector or select a worked example.
             </div>
             <div class="definition-item small">
-              <strong>PDF use:</strong> export this block as a compact one-page public explainer.
+              Evaluate whether the structure satisfies the declared closure rule.
             </div>
             <div class="definition-item small">
-              <strong>Talk use:</strong> show the three presets live to explain admissibility in under two minutes.
+              Compare admissible and inadmissible configurations.
             </div>
             <div class="definition-item small">
-              <strong>Paper use:</strong> keep Δ configurable here, then lock to the exact charge convention in a paper-specific appendix.
+              Use the result as a structural check before further modeling or interpretation.
             </div>
           </div>
 
           <p class="footer-note">
-            Public-facing wording keeps the logic clear without forcing a single paper-dependent formalization where your notation may still evolve.
+            <strong>Interpretation note:</strong> This calculator provides a structural admissibility test. Formal definitions, proofs, and paper-specific conventions are given in the QDL publications.
           </p>
         </aside>
       </div>
@@ -617,6 +629,40 @@
 
       document.getElementById('cheatView').textContent =
         `View: ${viewMode === 'ab' ? '(a,b) grading' : '3L+2F ledger projection'}`;
+    }
+
+    function buildReport() {
+      return [
+        'QDL Admissibility Report',
+        '------------------------',
+        '',
+        document.getElementById('summaryLine').textContent,
+        document.getElementById('detailLine').textContent,
+        document.getElementById('chargeLine').textContent,
+        document.getElementById('explainLine').textContent,
+        '',
+        document.getElementById('exampleLine').textContent,
+        document.getElementById('operatorLine').textContent,
+        document.getElementById('viewLine').textContent,
+        '',
+        'Interpretation:',
+        'This result represents a structural admissibility check under the declared QDL closure rule.'
+      ].join('\n');
+    }
+
+    function generateReport() {
+      const report = buildReport();
+      document.getElementById('reportOutput').value = report;
+
+      const blob = new Blob([report], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'qdl-admissibility-report.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
 
     function compute() {
@@ -790,6 +836,14 @@
         alert('Cheat sheet copied.');
       } catch (err) {
         alert('Could not copy automatically.');
+      }
+    });
+
+    document.getElementById('reportBtn').addEventListener('click', () => {
+      try {
+        generateReport();
+      } catch (err) {
+        alert('Could not generate report.');
       }
     });
 
