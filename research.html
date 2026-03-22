@@ -4,23 +4,18 @@
 <meta charset="UTF-8">
 <title>Research Program | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Research program of the QDL Physics Institute: the Quantized Dimensional Ledger (QDL), dimensional closure, model admissibility, EFT structure, metrology, and falsifiable experimental tests.">
+<meta name="description" content="Research program of the QDL Physics Institute: the Quantized Dimensional Ledger (QDL), dimensional closure, operator admissibility, benchmark logic, falsifiable tests, and selected application directions.">
 
 <style>
 :root{
   --bg-page:#f3f4f6;
   --bg-card:#ffffff;
   --border-soft:#e5e7eb;
-  --border-strong:#d1d5db;
   --text-main:#0f172a;
   --text-soft:#6b7280;
   --text-muted:#475569;
   --accent:#2563eb;
   --accent-soft:#eff6ff;
-  --ok-bg:#ecfeff;
-  --ok-bd:#a5f3fc;
-  --warn-bg:#fff7ed;
-  --warn-bd:#fed7aa;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -122,15 +117,15 @@ header{
 main{
   max-width:1100px;
   margin:auto;
-  padding:1.9rem 1.25rem 3rem;
+  padding:1.9rem 1.25rem 3.2rem;
 }
 
 .hero{
   background:var(--bg-card);
   border:1px solid var(--border-soft);
   border-radius:20px;
-  padding:1.8rem;
-  margin-bottom:1.6rem;
+  padding:1.9rem 1.8rem 1.75rem;
+  margin-bottom:2rem;
   box-shadow:0 10px 28px rgba(15,23,42,.06);
 }
 .hero-kicker{
@@ -138,33 +133,33 @@ main{
   text-transform:uppercase;
   letter-spacing:.16em;
   color:#6b7280;
-  margin-bottom:.35rem;
+  margin-bottom:.38rem;
 }
 .hero-title{
-  font-size:clamp(2rem,3vw,2.45rem);
+  font-size:clamp(2rem,3.1vw,2.7rem);
   line-height:1.12;
-  margin-bottom:.6rem;
+  margin-bottom:.55rem;
   letter-spacing:-0.02em;
 }
 .hero-lead{
-  font-size:1.03rem;
   color:#111827;
-  max-width:62rem;
-  margin-bottom:.8rem;
+  max-width:58rem;
+  font-size:1rem;
+  margin-bottom:.75rem;
 }
 .hero-sub{
   color:#4b5563;
-  max-width:60rem;
+  max-width:56rem;
   font-size:.98rem;
 }
 .hero-meta{
   margin-top:.95rem;
   display:flex;
   flex-wrap:wrap;
-  gap:.45rem;
+  gap:.5rem;
 }
 .hero-chip{
-  padding:.16rem .65rem;
+  padding:.18rem .68rem;
   border-radius:999px;
   border:1px solid #e5e7eb;
   background:#f9fafb;
@@ -172,8 +167,42 @@ main{
   font-size:.78rem;
 }
 
+.hero-actions{
+  margin-top:1.05rem;
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.58rem 1rem;
+  border-radius:999px;
+  border:1px solid #d1d5db;
+  background:#fff;
+  color:#111827;
+  font-size:.9rem;
+  font-weight:500;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#fff;
+  border:none;
+  box-shadow:0 10px 24px rgba(37,99,235,.25);
+}
+.btn-primary:hover{
+  filter:brightness(1.03);
+  text-decoration:none;
+}
+.btn:hover{
+  text-decoration:none;
+  background:#f9fafb;
+}
+
 .section{
-  margin-top:2rem;
+  margin-top:2.2rem;
 }
 .section-header{
   display:flex;
@@ -192,35 +221,12 @@ main{
 .section-kicker{
   font-size:.83rem;
   color:var(--text-soft);
-  max-width:42rem;
-}
-
-.paper-section{
-  margin-top:2.4rem;
-}
-.paper-divider{
-  border:none;
-  border-top:1px solid var(--border-strong);
-  margin:2.8rem 0 0;
-}
-.paper-heading{
-  margin:2rem 0 1rem;
-}
-.paper-heading h2{
-  font-size:1.3rem;
-  line-height:1.2;
-  color:#111827;
-  margin-bottom:.28rem;
-}
-.paper-heading p{
-  color:#6b7280;
-  font-size:.93rem;
-  max-width:48rem;
+  max-width:40rem;
 }
 
 .grid-2{
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:1rem;
 }
 .grid-3{
@@ -228,84 +234,52 @@ main{
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:1rem;
 }
-@media (max-width:900px){
+@media (max-width:920px){
   .grid-2,.grid-3{grid-template-columns:1fr;}
 }
 
 .card{
   background:var(--bg-card);
   border:1px solid var(--border-soft);
-  border-radius:18px;
-  padding:1.05rem 1.08rem;
+  border-radius:20px;
+  padding:1.1rem 1.1rem .95rem;
   box-shadow:0 8px 24px rgba(15,23,42,.06);
+}
+.card-title{
+  font-size:1.02rem;
+  line-height:1.3;
+  margin-bottom:.36rem;
+  color:#111827;
+  font-weight:650;
 }
 .card h3{
   font-size:1.02rem;
+  line-height:1.3;
   margin-bottom:.36rem;
   color:#111827;
 }
 .card p{
-  font-size:.92rem;
+  font-size:.91rem;
   color:#374151;
   margin-bottom:.58rem;
 }
 .card p:last-child{
   margin-bottom:0;
 }
-.card-title{
-  font-size:1rem;
-  font-weight:650;
-  color:#111827;
-  margin-bottom:.35rem;
-}
-
-.callout{
-  border-radius:18px;
-  border:1px solid var(--border-soft);
-  background:#ffffff;
-  box-shadow:0 8px 24px rgba(15,23,42,.05);
-  padding:1rem 1.05rem;
-}
-.callout + .callout{
-  margin-top:.95rem;
-}
-.callout-title{
-  font-size:1rem;
-  font-weight:650;
-  color:#111827;
-  margin-bottom:.35rem;
-}
-.callout-ok{
-  background:var(--ok-bg);
-  border-color:var(--ok-bd);
-}
-.callout-warn{
-  background:var(--warn-bg);
-  border-color:var(--warn-bd);
-}
 
 .list{
   padding-left:1.15rem;
-  color:#374151;
-  font-size:.92rem;
 }
 .list li{
-  margin-bottom:.36rem;
+  margin-bottom:.38rem;
 }
+
 .note{
   font-size:.82rem;
   color:#6b7280;
-  margin-top:.8rem;
-  max-width:60rem;
+  margin-top:.82rem;
 }
 
-.figure-block{
-  background:var(--bg-card);
-  border:1px solid var(--border-soft);
-  border-radius:20px;
-  padding:1.1rem 1.1rem .95rem;
-  box-shadow:0 8px 24px rgba(15,23,42,.06);
-}
 .figure-wrap{
   text-align:center;
   margin:0 auto;
@@ -360,8 +334,16 @@ footer{
   margin-top:3rem;
   font-size:.8rem;
   color:#6b7280;
-  text-align:center;
   background:#f9fafb;
+}
+.footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:center;
 }
 </style>
 </head>
@@ -384,6 +366,7 @@ footer{
       <a href="index.html">Home</a>
       <a href="research.html" class="nav-active">Research Program</a>
       <a href="publications.html">Publications</a>
+      <a href="qdl-calculator.html">QDL Calculator</a>
       <a href="institute.html">Institute</a>
       <a href="resources.html">Resources</a>
       <a href="contact.html" class="nav-cta">Contact</a>
@@ -413,6 +396,27 @@ footer{
       <span class="hero-chip">Operator admissibility</span>
       <span class="hero-chip">Prediction filtering</span>
     </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="publications.html">Read the Papers</a>
+      <a class="btn" href="qdl-calculator.html">Try the QDL Calculator</a>
+      <a class="btn" href="resources.html">View Supporting Resources</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <div class="card-title">Interactive demonstration</div>
+      <p>
+        Use the QDL Admissibility Calculator to test declared vectors, explore worked examples, and view structural admissibility under QDL closure rules.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        The calculator provides a live demonstration layer for the research program, including the SMEFT ℤ₆ example, dimensional-failure example, and metrology example.
+      </p>
+      <div class="hero-actions" style="margin-top:.75rem;">
+        <a class="btn btn-primary" href="qdl-calculator.html">Open the QDL Calculator</a>
+      </div>
+    </div>
   </section>
 
   <section class="section">
@@ -434,303 +438,124 @@ footer{
         </tr>
         <tr>
           <td style="padding:.45rem;">A pre-verification tool for models</td>
-          <td style="padding:.45rem;">A full dynamical theory</td>
+          <td style="padding:.45rem;">A finalized unified physical theory</td>
+        </tr>
+        <tr>
+          <td style="padding:.45rem;">A framework for operator admissibility questions</td>
+          <td style="padding:.45rem;">A substitute for dynamical calculation or experiment</td>
         </tr>
       </table>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Program Orientation</h2>
-      <p class="section-kicker">What this page defines, what it proposes, and how the rest of the program should be read.</p>
-    </div>
-
-    <div class="callout callout-ok">
-      <div class="callout-title">What QDL is meant to do</div>
-      <p>
-        QDL is intended as a structural screen on dimensional constructions: before fitting, simulation, or deployment, ask whether a representation is admissible under declared dimensional rules and transforms.
-      </p>
-    </div>
-
-    <div class="callout callout-warn">
-      <div class="callout-title">What QDL is not meant to do</div>
-      <p>
-        QDL does not by itself replace dynamics, fit data automatically, or constitute direct evidence for new particles, forces, or effects. Downstream applications must still stand or fall on their own technical and empirical merits.
-      </p>
-    </div>
-  </section>
-
-  <hr class="paper-divider">
-
-  <section class="paper-section">
-    <div class="paper-heading">
-      <h2>I. Structural Mapping of Dimensional Quantities</h2>
-      <p>The framework begins by defining the algebraic object, the lattice map, and the closure-based split between admissible and inadmissible operator constructions.</p>
-    </div>
-
-    <div class="figure-block">
-      <div class="figure-wrap figure-medium">
-        <img src="qdl-overview.png" alt="Quantized Dimensional Ledger structure diagram showing dimensional quantity algebra, integer lattice representation, closure condition, and admissible versus inadmissible operators">
-      </div>
-      <div class="figcaption">
-        <strong>Quantized Dimensional Ledger (QDL).</strong>
-        Dimensional quantities map to integer vectors of dimensional exponents via the ledger map
-        <i>Φ : Q → Z<sup>n</sup></i>. A conserved <strong>Quantized Dimensional Cell</strong>
-        <i>(QDC = L<sup>3</sup>F<sup>2</sup>)</i> defines a closure condition that partitions operator
-        space into <strong>structurally admissible</strong> and <strong>inadmissible</strong> combinations.
-      </div>
-    </div>
-
-    <div class="figure-text">
-      <p>
-        This figure gives the minimal structural content of the QDL program. Dimensional quantities are treated as elements of a free abelian algebra generated by base units, and the ledger map converts those quantities into integer exponent vectors. The closure rule then acts as a structural filter, not merely a bookkeeping convention.
-      </p>
-      <p>
-        In this formulation, dimensional admissibility is stronger than ordinary unit consistency. The point of the framework is to distinguish between combinations that are merely writable and combinations that are structurally closed under the declared dimensional architecture.
-      </p>
-    </div>
-  </section>
-
-  <hr class="paper-divider">
-
-  <section class="paper-section">
-    <div class="paper-heading">
-      <h2>II. Dimensional Closure Test</h2>
-      <p>The second step shows how an explicit combination is evaluated under the ledger map and how admissibility is determined operationally.</p>
-    </div>
-
-    <div class="figure-block">
-      <div class="figure-wrap figure-narrow">
-        <img src="Mathematical-diagram-with-admissible-solution.png" alt="QDL closure test example showing a mapped operator whose summed exponent vector reaches the zero vector and is therefore admissible">
-      </div>
-      <div class="figcaption">
-        <strong>QDL closure example.</strong>
-        Dimensional quantities are mapped to integer exponent vectors by the ledger map <i>Φ</i>. When the summed exponent vector equals the zero vector, the combination lies in <i>ker Φ</i> and satisfies the dimensional closure condition, indicating a <strong>structurally admissible operator</strong>.
-      </div>
-    </div>
-
-    <div class="figure-text">
-      <p>
-        The closure test is the operational heart of the program. Multiplication of dimensional quantities becomes vector addition in the integer lattice, so admissibility can be checked directly by examining whether the resulting exponent vector closes to zero.
-      </p>
-      <p>
-        This is the step that turns the framework from an abstract representation into a usable filter. In applications, the question becomes whether a proposed field term, invariant, conversion relation, or measurement expression lands in the kernel of the ledger map or carries a residual non-closure component.
-      </p>
-    </div>
-  </section>
-
-  <hr class="paper-divider">
-
-  <section class="paper-section">
-    <div class="paper-heading">
-      <h2>III. Lattice Geometry of Closure</h2>
-      <p>The geometric picture shows how admissibility can be interpreted as decomposition into a closure component and a transverse non-closure component.</p>
-    </div>
-
-    <div class="figure-block">
-      <div class="figure-wrap figure-medium">
-        <img src="figure1.png" alt="Dimensional lattice and closure direction showing closure subgroup, transverse component, and admissible points in the QDL framework">
-      </div>
-      <div class="figcaption">
-        <strong>Dimensional lattice and closure direction.</strong>
-        In the lattice of dimensional exponents, admissible combinations align with the closure subgroup generated by the closure vector <i>q</i>. A general dimensional vector may be decomposed into a closure component <i>nq</i> and a transverse component <i>k</i>; closure is satisfied when the transverse component vanishes.
-      </div>
-    </div>
-
-    <div class="figure-text">
-      <p>
-        This geometric representation makes the lattice structure more explicit. Rather than viewing closure only as a zero-sum test, the diagram interprets admissibility as a decomposition of dimensional vectors into a direction associated with closure and a complementary direction associated with non-closure.
-      </p>
-      <p>
-        That viewpoint is especially useful for mathematically oriented readers because it clarifies how admissible constructions form a structured subset of the lattice rather than an ad hoc collection of allowed cases. It also helps frame the broader program in terms of subgroup structure, complements, and operator classification.
+      <p class="note">
+        One-line identity: QDL provides a structural admissibility constraint on physical representations that acts prior to dynamical calculation.
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2 class="section-title">Core Framework</h2>
-      <p class="section-kicker">The minimal structural content of the formal program beyond the three canonical visual summaries above.</p>
+      <h2 class="section-title">Program Structure</h2>
+      <p class="section-kicker">The main conceptual components of the research program.</p>
     </div>
 
-    <div class="grid-2">
+    <div class="grid-3">
       <div class="card">
         <h3>Dimensional Lattice</h3>
         <p>
-          QDL embeds dimensional quantities into a discrete integer lattice, where each quantity is represented by an exponent vector rather than only by ordinary unit symbols. This makes admissibility testable in algebraic form.
+          Quantities are represented as integer exponent vectors in a dimensional lattice generated by base units.
         </p>
       </div>
 
       <div class="card">
-        <h3>3L + 2F Basis</h3>
+        <h3>Closure Condition</h3>
         <p>
-          The framework is organized around a 3L + 2F length–frequency basis. That basis is part of the proposed structural architecture and underwrites the ledger interpretation used throughout the program.
+          Physically admissible combinations are identified by a dimensional closure rule that selects a kernel-like admissible subset.
         </p>
       </div>
 
       <div class="card">
-        <h3>Quantized Dimensional Cell (QDC)</h3>
+        <h3>Structural Filter</h3>
         <p>
-          The QDC functions as a distinguished closure target and structural invariant. Admissible constructions are tested relative to that conserved cell, rather than being treated as merely dimensionally homogeneous.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Closure as Admissibility</h3>
-        <p>
-          The key proposal is that dimensional closure can add constraint beyond ordinary unit consistency. In that picture, some formally writable terms or relations may still be structurally excluded.
+          The closure condition is studied as a pre-dynamical admissibility filter on operators, constants, and measurement relations.
         </p>
       </div>
     </div>
-
-    <p class="note">
-      The formal foundation for this part of the program is represented most directly in the lattice, closure, and reconstruction papers on the Publications page.
-    </p>
   </section>
 
   <section class="section">
     <div class="section-header">
-      <h2 class="section-title">Framework-First Reading Order</h2>
-      <p class="section-kicker">The cleanest sequence for a technical reader approaching the program for the first time.</p>
+      <h2 class="section-title">Visual Orientation</h2>
+      <p class="section-kicker">A compact diagrammatic view of the sequence from quantities to admissible operators.</p>
+    </div>
+
+    <div class="card">
+      <div class="figure-wrap figure-medium">
+        <img src="qdl-overview.png" alt="QDL overview diagram">
+      </div>
+      <div class="figcaption">
+        Dimensional quantities map to integer exponent vectors. A closure rule then separates structurally admissible and inadmissible combinations, providing a pre-dynamical filter on candidate constructions.
+      </div>
+      <div class="figure-text">
+        <p>
+          This research program asks whether dimensional closure adds real structural information beyond conventional dimensional homogeneity. If it does, then the lattice representation may constrain operator organization, guide benchmark discrimination, and sharpen experimental testing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Research Sequence</h2>
+      <p class="section-kicker">The order in which the program is meant to be read and evaluated.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>1. Formal Structure</h3>
+        <p>
+          Establish the integer-lattice representation of dimensional quantities and define closure as a structural constraint.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2. Concrete Results</h3>
+        <p>
+          Apply the structural logic to known technical settings such as SMEFT organization, dimensional reasoning failures, and residual-first benchmark design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3. Experimental and Benchmark Tests</h3>
+        <p>
+          Use public datasets and candidate laboratory platforms to test whether closure-based distinctions produce discriminable consequences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Benchmark and Test Logic</h2>
+      <p class="section-kicker">How the research program connects formal structure to empirical discrimination.</p>
     </div>
 
     <div class="grid-2">
       <div class="card">
-        <h3>Recommended sequence</h3>
-        <ol class="list">
-          <li>Integer-lattice foundation</li>
-          <li>Dimensional-closure formalism</li>
-          <li>Prediction-filter logic</li>
-          <li>SMEFT / EFT applications</li>
-          <li>Metrology and constants</li>
-          <li>Benchmark and experimental materials</li>
-        </ol>
-      </div>
-
-      <div class="card">
-        <h3>Why the order matters</h3>
+        <h3>Residual-First Benchmarking</h3>
         <p>
-          The program is easiest to understand when the reader sees the lattice and closure structure first, then the admissibility logic, and only after that the downstream applications. That ordering prevents the applications from looking more speculative than they need to.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Prediction Filtering</h2>
-      <p class="section-kicker">How the framework is used as a structural screen before phenomenology or deployment.</p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Model Admissibility</h3>
-        <p>
-          QDL can function as a pre-phenomenological filter on model construction by rejecting terms or relations that fail closure, even if they appear dimensionally plausible in the ordinary sense.
+          Benchmark records compare constrained and baseline models under declared uncertainty, emphasizing residual structure, reproducibility, and transparent adequacy checks.
         </p>
       </div>
 
       <div class="card">
-        <h3>EFT and Operator Structure</h3>
+        <h3>Experimental Discriminants</h3>
         <p>
-          In field-theoretic settings, the framework suggests that some operator structures may be constrained by dimensional closure, potentially narrowing or reorganizing admissible operator families.
+          The program studies whether dimensional-closure logic implies laboratory discriminants that can be separated from conventional parameterized alternatives.
         </p>
       </div>
-
-      <div class="card">
-        <h3>Constants and Measurement Relations</h3>
-        <p>
-          QDL also motivates a more structured view of constants, conversions, and measurement pipelines, treating them as ledger objects rather than as isolated bookkeeping conveniences.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Cross-Domain Screening</h3>
-        <p>
-          The same logic may also be used in engineering or decision pipelines, where dimensional admissibility becomes part of a broader structural integrity review.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Experimental Benchmarks</h2>
-      <p class="section-kicker">Reproducible benchmark records and demonstration repositories for residual-first model comparison.</p>
-    </div>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>NV-Center ODMR Benchmark</h3>
-        <p>
-          Residual-first benchmarking of NV-center ODMR models using public experimental data. This record emphasizes reproducibility, declared model families, and residual structure comparison rather than parameter optimization alone.
-        </p>
-        <p style="margin-top:.5rem;">
-          <strong>Record:</strong>
-          <a href="https://doi.org/10.5281/zenodo.19065837" target="_blank" rel="noopener noreferrer">Zenodo benchmark paper</a><br>
-          <strong>Reproducibility kit:</strong>
-          <a href="https://doi.org/10.5281/zenodo.18064816" target="_blank" rel="noopener noreferrer">Zenodo reproducibility package</a><br>
-          <strong>Dataset:</strong>
-          <a href="https://doi.org/10.5281/zenodo.14697917" target="_blank" rel="noopener noreferrer">Public ODMR dataset</a>
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Optical Cavity Benchmark (Demo)</h3>
-        <p>
-          Minimal reproducible demonstration of residual-first model comparison using optical cavity resonance scaling. This repository illustrates the benchmarking workflow and will be extended to a public-data experimental benchmark in a future version.
-        </p>
-        <p style="margin-top:.5rem;">
-          <strong>Repository:</strong>
-          <a href="https://github.com/jamesbourassa/qdl-benchmark-optical-cavity" target="_blank" rel="noopener noreferrer">GitHub benchmark demo</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:1rem;">
-      <div class="card-title">Benchmarking Methodology</div>
-      <p>
-        The QDL benchmarking approach is residual-first: model families are compared by examining residual structure before relying on aggregate error metrics. This prioritizes detection of systematic deviations, model misspecification, and hidden structure over purely optimizing fit quality.
-      </p>
-    </div>
-
-    <p class="note">
-      Benchmark records are presented with explicit scope labels. Executed public-data benchmarks and methodological demonstration repositories are distinguished clearly so that reproducibility and claim boundaries remain transparent.
-    </p>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 class="section-title">Experimental Program</h2>
-      <p class="section-kicker">Executed benchmark discipline separated clearly from proposed falsifiable tests.</p>
-    </div>
-
-    <div class="callout callout-ok">
-      <div class="callout-title">Executed benchmarks</div>
-      <p>
-        The program includes executed residual-first benchmark records designed for transparency, auditability, and replication. These are methodological records and do not claim new physical effects.
-      </p>
-    </div>
-
-    <div class="callout callout-warn">
-      <div class="callout-title">Proposed falsifiable tests</div>
-      <p>
-        The experimental roadmap also includes proposed discriminant tests meant to separate QDL-style scaling or closure expectations from conventional parameterizations. These remain proposed until independently executed.
-      </p>
     </div>
 
     <div class="grid-2" style="margin-top:1rem;">
-      <div class="card">
-        <h3>Executed Benchmark Track</h3>
-        <ul class="list">
-          <li>Residual-first public-data comparisons</li>
-          <li>Declared model families and parameter budgets</li>
-          <li>Reproducible benchmark records</li>
-          <li>Auditability prioritized over dramatic claims</li>
-        </ul>
-      </div>
-
       <div class="card">
         <h3>Proposed Platform Track</h3>
         <ul class="list">
@@ -754,13 +579,13 @@ footer{
           NV-center systems, optical cavities, and related resonant platforms offer cleaner routes to controlled discriminant tests because geometry, frequency, and coherence can be swept systematically.
         </p>
       </div>
-    </div>
 
-    <div class="card" style="margin-top:1rem;">
-      <div class="card-title">Replication Starter Kit</div>
-      <p>
-        Executed benchmark records are intended to be reproducible from public data using transparent analysis environments. A minimal replication stack would typically include Python with numpy and matplotlib, along with standard fitting and residual-inspection workflows.
-      </p>
+      <div class="card">
+        <h3>Replication Starter Kit</h3>
+        <p>
+          Executed benchmark records are intended to be reproducible from public data using transparent analysis environments. A minimal replication stack would typically include Python with numpy and matplotlib, along with standard fitting and residual-inspection workflows.
+        </p>
+      </div>
     </div>
 
     <p class="note">
@@ -835,14 +660,24 @@ footer{
     </div>
 
     <p class="bottom-link">
-      The visual sequence above summarizes the program in the order most useful for first-time technical readers: structure, test, and geometry. For formal development and applications, continue to the <a href="publications.html">Publications</a> page.
+      The visual sequence above summarizes the program in the order most useful for first-time technical readers: structure, test, and geometry. For formal development and applications, continue to the <a href="publications.html">Publications</a> page or open the <a href="qdl-calculator.html">QDL Calculator</a> for a live demonstration layer.
     </p>
   </section>
 
 </main>
 
 <footer>
-  © QDL Physics Institute · Last updated: March 2026
+  <div class="footer-inner">
+    <div>© QDL Physics Institute</div>
+    <div>Last updated: March 2026</div>
+    <div>
+      <a href="qdl-calculator.html">QDL Calculator</a>
+    </div>
+    <div>
+      Contact:
+      <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+    </div>
+  </div>
 </footer>
 
 </body>
