@@ -165,7 +165,7 @@ main{
 }
 .hero-figure{
   margin:1.15rem 0 1rem;
-  max-width:49rem;
+  max-width:54rem;
 }
 .hero-figure img{
   width:100%;
@@ -246,8 +246,13 @@ main{
   grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
   gap:1rem;
 }
+.grid-2-even{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
 @media (max-width:920px){
-  .grid-3,.grid-2{grid-template-columns:1fr;}
+  .grid-3,.grid-2,.grid-2-even{grid-template-columns:1fr;}
 }
 .card{
   background:var(--bg-card);
@@ -318,6 +323,35 @@ a.card:hover{
 .list li{
   margin-bottom:.38rem;
 }
+.feature-figure{
+  margin:0;
+}
+.feature-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+}
+.feature-figure figcaption{
+  margin-top:.55rem;
+  font-size:.82rem;
+  color:#6b7280;
+}
+.feature-points{
+  display:grid;
+  gap:.75rem;
+}
+.point{
+  padding:.78rem .85rem;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  background:#fafafa;
+}
+.point strong{
+  color:#111827;
+}
 footer{
   border-top:1px solid var(--border-soft);
   padding:1.2rem;
@@ -368,14 +402,14 @@ footer{
 
   <section class="hero">
     <div class="hero-kicker">Independent theoretical physics research program</div>
-    <h1 class="hero-title">The Quantized Dimensional Ledger: An Integer-Lattice Structure for Dimensional Closure in Physical Theories</h1>
+    <h1 class="hero-title">The Quantized Dimensional Ledger: A Structural Admissibility Framework for Physics</h1>
 
     <p class="hero-lead">
-      Dimensional quantities are mapped to integer exponent vectors, and physical constructions are tested by a dimensional closure condition requiring the summed exponent vector to vanish.
+      QDL asks a prior structural question before model fitting or dynamical elaboration: should a proposed physical expression exist at all?
     </p>
 
     <p class="hero-sub">
-      Standard dimensional analysis tests consistency, but it does not by itself determine whether a physical representation is structurally admissible. The QDL Physics Institute investigates whether dimensional closure can serve as an additional admissibility constraint on fields, operators, constants, and measurement relations before phenomenological fitting or deployment. The Quantized Dimensional Ledger (QDL) is the proposed framework for expressing that constraint in a 3L + 2F lattice basis.
+      Standard dimensional analysis checks consistency. QDL investigates whether dimensional structure can do more: act as a pre-dynamical admissibility filter on fields, operators, constants, and measurement relations by requiring closure in a 3L + 2F lattice basis.
     </p>
 
     <div class="hero-meta">
@@ -387,14 +421,9 @@ footer{
     </div>
 
     <figure class="hero-figure">
-      <img src="qdl-overview.png" alt="Quantized Dimensional Ledger framework overview" style="max-width:650px;margin:auto;display:block;">
+      <img src="Understanding QDL.png" alt="Understanding QDL diagram showing dimensional analysis as spellcheck and QDL as a structural admissibility filter">
       <figcaption>
-        <p><strong>Quantized Dimensional Ledger (QDL).</strong>
-Dimensional quantities map to integer vectors of dimensional exponents via the ledger map
-<i>Φ : Q → Z<sup>n</sup></i>. A conserved <strong>Quantized Dimensional Cell</strong>
-<i>(QDC = L<sup>3</sup>F<sup>2</sup>)</i> defines a closure condition that partitions operator
-space into <strong>structurally admissible</strong> and <strong>inadmissible</strong> combinations.
-</p>
+        <strong>First-pass intuition.</strong> Dimensional analysis checks whether units are consistent. QDL asks a stronger question: whether a proposed construction is structurally admissible under closure. In this framing, dimensional quantities are represented as vectors, combined, and tested against an allowed lattice structure.
       </figcaption>
     </figure>
 
@@ -403,6 +432,45 @@ space into <strong>structurally admissible</strong> and <strong>inadmissible</st
       <a class="btn" href="publications.html">Read the Papers</a>
       <a class="btn" href="qdl-calculator.html">Try the QDL Calculator</a>
       <a class="btn" href="resources.html">View Supporting Resources</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">What Changes When You Apply QDL</h2>
+      <p class="section-kicker">A second-pass view: from open-ended model building to constrained, testable structure.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <figure class="feature-figure">
+          <img src="What QDL does to physics.png" alt="Diagram showing QDL as an admissibility filter that reduces model space, finite operators, and falsifiable outcomes">
+          <figcaption>
+            QDL is proposed as an admissibility layer inserted before unconstrained model proliferation. The aim is not to replace dynamics, but to narrow the space of admissible representations before detailed fitting begins.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Core Consequences</div>
+        <div class="feature-points">
+          <div class="point">
+            <strong>Reduced model space.</strong> QDL is intended to filter representations before parameter fitting, reducing open-ended freedom at the structural level.
+          </div>
+          <div class="point">
+            <strong>Finite operator logic.</strong> In the QDL program, operator towers are not merely truncated for convenience; drifting families are treated as structurally inadmissible.
+          </div>
+          <div class="point">
+            <strong>Restricted coupling forms.</strong> Couplings are investigated under closure as finite spectral structures rather than arbitrary analytic freedom.
+          </div>
+          <div class="point">
+            <strong>Cross-domain coherence.</strong> The same admissibility logic is explored across EFT, metrology, cosmology, and measurement theory.
+          </div>
+          <div class="point">
+            <strong>Built-in falsifiability.</strong> If stable, physically necessary structures require persistent non-closure, the framework fails.
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
