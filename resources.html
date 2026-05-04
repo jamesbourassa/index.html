@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Resources | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Resources from the QDL Physics Institute, including prototype demonstrations, books, benchmark access, and supporting materials related to the Quantized Dimensional Ledger research program.">
+<meta name="description" content="Resources from the QDL Physics Institute, including prototype demonstrations, books, benchmark access, executable validation infrastructure, QDL Measurement Integrity Engine materials, and supporting resources related to the Quantized Dimensional Ledger research program.">
 
 <style>
 :root{
@@ -352,7 +352,7 @@ footer{
     <div class="hero-kicker">Resources</div>
     <h1 class="hero-title">Program Resources</h1>
     <p class="hero-sub">
-      This page collects supporting materials for the QDL research program, including prototype demonstrations, books, benchmark access points, and reader-facing materials that support orientation, auditability, and technical review.
+      This page collects supporting materials for the QDL research program, including prototype demonstrations, books, benchmark access points, executable validation infrastructure, and reader-facing materials that support orientation, auditability, and technical review.
     </p>
 
     <p style="margin-top:.6rem;font-size:.92rem;color:#4b5563;">
@@ -365,7 +365,73 @@ footer{
       <span class="hero-chip">Books</span>
       <span class="hero-chip">Benchmark access</span>
       <span class="hero-chip">QDL–SO10–1 GUT series</span>
+      <span class="hero-chip">QDL Measurement Integrity Engine</span>
+      <span class="hero-chip">Patent-pending infrastructure</span>
       <span class="hero-chip">Supporting materials</span>
+    </div>
+  </section>
+
+  <section class="section" id="executable-infrastructure">
+    <div class="section-header">
+      <h2 class="section-title">Executable Infrastructure</h2>
+      <p class="section-kicker">QDL as machine-executable validation infrastructure for physical measurement and modeling workflows.</p>
+    </div>
+
+    <div class="card" style="border-color:rgba(37,99,235,.30); background:#f8fbff;">
+      <div class="card-title">Patent-Pending Structural Admissibility Validation Systems</div>
+      <div class="card-meta">U.S. provisional patent application filed · Patent pending</div>
+      <div class="pill-row">
+        <span class="pill">Measurement integrity</span>
+        <span class="pill">Model validation</span>
+        <span class="pill">AI scientific-output guardrails</span>
+        <span class="pill">Scientific software analysis</span>
+        <span class="pill">Sensor fusion</span>
+        <span class="pill">Digital twins</span>
+      </div>
+      <p>
+        QDL Physics Institute has filed U.S. Provisional Patent Application No. 64/055,985,
+        titled <em>Systems and Methods for Structural Admissibility Validation of Physical Measurement and Modeling Pipelines</em>.
+      </p>
+      <p>
+        This filing marks the executable infrastructure phase of QDL: applying structural admissibility as a machine-executable validation layer for
+        physical measurement, modeling, simulation, uncertainty analysis, AI-generated scientific outputs, sensor fusion, digital twins, and related technical workflows.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        The purpose is practical rather than speculative: to test whether QDL-style ledger mapping, closure checks, audit traces, and downstream workflow controls
+        can identify structural failures that ordinary unit checking or dimensional homogeneity may not detect.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        <strong>Status:</strong> U.S. provisional patent application filed; patent pending.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="research.html#three-layers">Read the three-layer architecture</a>
+        <a class="btn btn-secondary" href="qdl-calculator.html">Try the QDL Calculator</a>
+        <a class="btn btn-secondary" href="contact.html">Discuss collaboration</a>
+      </div>
+    </div>
+
+    <div class="card" id="measurement-integrity-engine">
+      <div class="card-title">QDL Measurement Integrity Engine</div>
+      <div class="card-meta">Executable infrastructure concept · Measurement and modeling validation</div>
+      <div class="pill-row">
+        <span class="pill">Ledger-vector assignment</span>
+        <span class="pill">Closure testing</span>
+        <span class="pill">Audit traces</span>
+        <span class="pill">Certification / warning / rejection</span>
+        <span class="pill">Repair recommendation</span>
+      </div>
+      <p>
+        The QDL Measurement Integrity Engine is an early executable-infrastructure concept for applying structural admissibility checks to physical measurement and modeling pipelines.
+      </p>
+      <p>
+        The engine is designed to receive a declared measurement or model specification, assign integer-valued ledger vectors to its components, check ordinary projected dimensional homogeneity, apply a QDL closure or admissibility rule, and generate an audit trace with a certification, warning, rejection, or repair recommendation.
+      </p>
+      <p>
+        The motivating use case is measurement integrity: a model may pass ordinary unit checking while still containing a structurally non-admissible correction, transformation, or hidden dimensionless factor. QDL executable infrastructure is being developed to make such failures auditable.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        <strong>Status:</strong> Prototype direction disclosed in U.S. Provisional Patent Application No. 64/055,985; patent pending.
+      </p>
     </div>
   </section>
 
@@ -406,6 +472,7 @@ footer{
           <li>Read it after the framework sections if you want to understand workflow implications.</li>
           <li>Treat it as a presentation artifact for structural screening logic rather than a software release.</li>
           <li>Use the <a href="qdl-calculator.html">QDL Calculator</a> when you want a live interactive entry point.</li>
+          <li>Use the QDL Measurement Integrity Engine direction when evaluating applied measurement-integrity and model-validation workflows.</li>
         </ul>
         <p class="note">
           The demo belonged naturally under framework support material rather than the top-level scientific navigation, which is why it is placed here in Resources.
@@ -458,6 +525,44 @@ footer{
         <p>
           Use the Publications page for the core path, then return here for books and supporting materials.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="scientific-application-resources">
+    <div class="section-header">
+      <h2 class="section-title">Scientific Application Resources</h2>
+      <p class="section-kicker">Application-layer records that ground QDL concepts in concrete physical domains.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">QDC in Gravitational Dynamics</div>
+      <div class="card-meta">Zenodo preprint · QDL scientific application layer</div>
+      <div class="pill-row">
+        <span class="pill">Quantized Dimensional Cell</span>
+        <span class="pill">GM</span>
+        <span class="pill">Keplerian closure</span>
+        <span class="pill">Gravitational parameter</span>
+        <span class="pill">Dimensional admissibility</span>
+      </div>
+      <p>
+        A new QDL gravitational dynamics paper identifies the gravitational parameter <em>&mu; = GM</em> as a direct realization of the Quantized Dimensional Cell form,
+        <em>L<sup>3</sup>F<sup>2</sup></em>, and interprets Keplerian closure as
+        <em>&mu; = r<sup>3</sup>&omega;<sup>2</sup></em> for circular motion and
+        <em>&mu; = a<sup>3</sup>n<sup>2</sup></em> for elliptical Keplerian motion.
+      </p>
+      <p>
+        This paper provides a concrete physical anchor for QDL closure: the QDC is not merely an abstract dimensional form, but appears in the standard structure of orbital mechanics.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.20026718" target="_blank" rel="noopener noreferrer">
+          Bourassa, J. D. (2026). <em>The Quantized Dimensional Cell in Gravitational Dynamics: GM, Keplerian Closure, and Dimensional Admissibility</em>. Zenodo. https://doi.org/10.5281/zenodo.20026718
+        </a>
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20026718" target="_blank" rel="noopener noreferrer">Open Zenodo record</a>
+        <a class="btn btn-secondary" href="research.html#applications">View application directions</a>
+        <a class="btn btn-secondary" href="publications.html">See Publications</a>
       </div>
     </div>
   </section>
@@ -557,11 +662,13 @@ footer{
         <div class="card-title">How to Navigate the Program</div>
         <ul class="list">
           <li>Start with <a href="research.html">Research Program</a> for the conceptual and formal structure.</li>
-          <li>Use <a href="publications.html">Publications</a> for the Top 5 technical path.</li>
+          <li>Use <a href="publications.html">Publications</a> for the Top 5 technical path and DOI-backed record.</li>
           <li>Use the <a href="qdl-calculator.html">QDL Calculator</a> for a live demonstration layer.</li>
+          <li>Use the executable infrastructure section above for the patent-pending measurement-integrity and model-validation direction.</li>
+          <li>Use the QDC gravitational dynamics record as a concrete physical example of the Quantized Dimensional Cell in orbital mechanics.</li>
           <li>Return to Resources for prototypes, books, and benchmark access.</li>
           <li>Use the QDL–SO10–1 capstone record when evaluating the completed executable GUT benchmark branch.</li>
-          <li>Use <a href="contact.html">Contact</a> for editorial or technical correspondence.</li>
+          <li>Use <a href="contact.html">Contact</a> for editorial, technical, collaboration, or support correspondence.</li>
         </ul>
       </div>
     </div>
@@ -572,7 +679,7 @@ footer{
 <footer>
   <div class="footer-grid">
     <div>© QDL Physics Institute</div>
-    <div>Last updated: April 2026 — QDL–SO10–1 executable GUT benchmark series completed.</div>
+    <div>Last updated: May 2026 — QDL executable infrastructure enters patent-pending application phase.</div>
     <div>
       <a href="qdl-calculator.html">QDL Calculator</a>
     </div>
