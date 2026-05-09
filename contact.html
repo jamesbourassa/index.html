@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Institute | QDL Physics Institute</title>
+<title>Contact | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The QDL Physics Institute is an independent research program developing the Quantized Dimensional Ledger (QDL) framework for dimensional closure, admissibility, and falsifiable experimental tests.">
+<meta name="description" content="Contact QDL Physics Institute for research correspondence, collaboration, metrology and measurement integrity inquiries, executable validation infrastructure, publications, and support related to the Quantized Dimensional Ledger program.">
 
 <style>
 :root{
@@ -140,7 +140,7 @@ main{
 .hero-sub{
   font-size:.97rem;
   color:#4b5563;
-  max-width:48rem;
+  max-width:54rem;
   margin-bottom:.95rem;
 }
 .hero-meta{
@@ -155,6 +155,39 @@ main{
   border:1px solid #e5e7eb;
   background:#f9fafb;
   color:var(--text-muted);
+}
+.hero-actions{
+  margin-top:1.05rem;
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.58rem 1rem;
+  border-radius:999px;
+  border:1px solid #d1d5db;
+  background:#fff;
+  color:#111827;
+  font-size:.9rem;
+  font-weight:500;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#fff;
+  border:none;
+  box-shadow:0 10px 24px rgba(37,99,235,.25);
+}
+.btn-primary:hover{
+  filter:brightness(1.03);
+  text-decoration:none;
+}
+.btn:hover{
+  text-decoration:none;
+  background:#f9fafb;
 }
 .section{
   margin-top:2rem;
@@ -180,11 +213,21 @@ main{
 }
 .grid-2{
   display:grid;
-  grid-template-columns:minmax(0,1.55fr) minmax(0,1.2fr);
+  grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
+  gap:1rem;
+}
+.grid-2-even{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:1rem;
 }
 @media (max-width:900px){
-  .grid-2{grid-template-columns:1fr;}
+  .grid-2,.grid-2-even,.grid-3{grid-template-columns:1fr;}
 }
 .card{
   background:var(--bg-card);
@@ -227,6 +270,36 @@ ul li{
 .id-list{
   line-height:1.75;
 }
+.tagrow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.42rem;
+  margin:.12rem 0 .6rem;
+}
+.tag{
+  font-size:.74rem;
+  padding:.16rem .55rem;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+  color:#4b5563;
+  white-space:nowrap;
+}
+.tag-accent{
+  border-color:rgba(37,99,235,.35);
+  background:#eff6ff;
+  color:#1d4ed8;
+}
+.tag-executed{
+  border-color:rgba(22,163,74,.35);
+  background:#ecfdf5;
+  color:#166534;
+}
+.tag-hypothesis{
+  border-color:rgba(217,119,6,.35);
+  background:#fff7ed;
+  color:#9a3412;
+}
 footer{
   border-top:1px solid var(--border-soft);
   margin-top:3rem;
@@ -265,9 +338,9 @@ footer{
       <a href="research.html">Research Program</a>
       <a href="publications.html">Publications</a>
       <a href="qdl-calculator.html">QDL Calculator</a>
-      <a href="institute.html" class="nav-active">Institute</a>
+      <a href="institute.html">Institute</a>
       <a href="resources.html">Resources</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
+      <a href="contact.html" class="nav-cta nav-active">Contact</a>
     </nav>
   </div>
 </header>
@@ -275,127 +348,284 @@ footer{
 <main>
 
   <section class="hero">
-    <div class="hero-kicker">Institute</div>
-    <h1 class="hero-title">QDL Physics Institute</h1>
-    <p class="hero-sub">
-      The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA. Its purpose is to develop, formalize, and test the Quantized Dimensional Ledger (QDL) as a structural framework for dimensional closure, model admissibility, and falsifiable experimental inquiry.
-    </p>
+    <div class="hero-kicker">Contact</div>
+    <h1 class="hero-title">Contact QDL Physics Institute</h1>
 
-    <p style="font-size:.92rem;color:#4b5563;margin-top:-.2rem;margin-bottom:.95rem;">
-      For a live demonstration of the framework, use the
-      <a href="qdl-calculator.html">QDL Admissibility Calculator</a>.
+    <p class="hero-sub">
+      For research correspondence, editorial inquiries, collaboration discussions, metrology and measurement-integrity questions,
+      executable validation infrastructure, or support for the Quantized Dimensional Ledger program, contact James D. Bourassa,
+      Founder and Director of the QDL Physics Institute.
     </p>
 
     <div class="hero-meta">
-      <span class="hero-chip">Independent research institute</span>
-      <span class="hero-chip">Dimensional closure</span>
-      <span class="hero-chip">Prediction filtering</span>
-      <span class="hero-chip">Falsifiable tests</span>
+      <span class="hero-chip">Research correspondence</span>
+      <span class="hero-chip">Collaboration inquiries</span>
+      <span class="hero-chip">Metrology and measurement integrity</span>
+      <span class="hero-chip">Executable validation infrastructure</span>
+      <span class="hero-chip">Editorial and publication inquiries</span>
+      <span class="hero-chip">Institutional support</span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:james.bourassa@qdlphysics.org">Email James D. Bourassa</a>
+      <a class="btn" href="publications.html#core-closure-sequence">Core Closure Sequence</a>
+      <a class="btn" href="qdl-calculator.html">QDL Calculator</a>
+      <a class="btn" href="resources.html">Resources</a>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="direct-contact">
     <div class="section-header">
-      <h2 class="section-title">Mission &amp; Research Themes</h2>
-      <p class="section-kicker">Framework-first physics, from dimensional admissibility to testable structure.</p>
+      <h2 class="section-title">Direct Contact</h2>
+      <p class="section-kicker">Primary contact information and public research identifiers.</p>
     </div>
 
     <div class="grid-2">
       <div class="card">
-        <div class="card-title">Mission</div>
-        <p>The Institute’s mission is to:</p>
-        <ul>
-          <li>Develop QDL as a mathematically coherent dimensional-closure framework.</li>
-          <li>Provide a structural admissibility layer upstream of fitting, simulation, and deployment.</li>
-          <li>Investigate consequences for EFT structure, gravitation, metrology, and measurement integrity.</li>
-          <li>Design falsifiable experimental tests across precision tabletop platforms.</li>
-          <li>Maintain open, auditable records through public repositories and DOI-backed materials.</li>
-        </ul>
+        <div class="card-title">James D. Bourassa</div>
+        <div class="id-list">
+          <div><strong>Role:</strong> Founder and Director</div>
+          <div><strong>Affiliation:</strong> QDL Physics Institute</div>
+          <div><strong>Location:</strong> Huntley, Illinois, USA</div>
+          <div><strong>Email:</strong> <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a></div>
+          <div><strong>ORCID:</strong> <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">0009-0008-0155-0051</a></div>
+          <div><strong>Website:</strong> <a href="https://qdlphysics.org" target="_blank" rel="noopener noreferrer">qdlphysics.org</a></div>
+        </div>
+
+        <div class="hero-actions" style="margin-top:.9rem;">
+          <a class="btn btn-primary" href="mailto:james.bourassa@qdlphysics.org">Send Email</a>
+          <a class="btn" href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">View ORCID</a>
+        </div>
       </div>
 
       <div class="card">
-        <div class="card-title">Research Themes</div>
+        <div class="card-title">Suggested Email Subject Lines</div>
         <ul>
-          <li><strong>Dimensional lattice structure</strong> and 3L + 2F representation.</li>
-          <li><strong>Closure-based admissibility</strong> for models, operators, and dimensional relations.</li>
-          <li><strong>Prediction filtering</strong> in EFT/SMEFT and related formal settings.</li>
-          <li><strong>Metrology and constants</strong> under ledger-based structural interpretation.</li>
-          <li><strong>Experimental discrimination</strong> through NV centers, resonators, metamaterials, and related systems.</li>
+          <li><strong>Research inquiry:</strong> QDL research correspondence</li>
+          <li><strong>Collaboration:</strong> QDL collaboration inquiry</li>
+          <li><strong>Metrology:</strong> QDL measurement integrity / metrology inquiry</li>
+          <li><strong>Executable infrastructure:</strong> QDL validation infrastructure inquiry</li>
+          <li><strong>Editorial:</strong> QDL publication / review inquiry</li>
+          <li><strong>Support:</strong> QDL Physics Institute support inquiry</li>
         </ul>
+        <p class="note">
+          Including the relevant paper, DOI, page, or use case in the subject or first paragraph helps route the discussion quickly.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="founder">
+  <section class="section" id="inquiry-areas">
     <div class="section-header">
-      <h2 class="section-title">Founder &amp; Research Profile</h2>
-      <p class="section-kicker">Independent program leadership with a closure-first research agenda.</p>
+      <h2 class="section-title">Inquiry Areas</h2>
+      <p class="section-kicker">Topics where correspondence or collaboration is especially relevant.</p>
     </div>
 
-    <div class="grid-2">
-      <div>
-        <div class="card">
-          <div class="card-title">James D. Bourassa</div>
-          <p>
-            James D. Bourassa is the founder and director of the QDL Physics Institute and the developer of the Quantized Dimensional Ledger research program.
-          </p>
-          <p>
-            The work centers on a closure-first ordering: define the ledger structure, formalize admissibility, test implications for operators and measurement relations, and only then move to downstream applications.
-          </p>
-          <p>
-            The program spans dimensional ontology, EFT structure, metrology, model integrity, and experimental design.
-          </p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="tagrow">
+          <span class="tag tag-accent">Core program</span>
         </div>
-
-        <div class="card">
-          <div class="card-title">Program Orientation</div>
-          <p>
-            The Institute frames QDL not as a replacement for established theories, but as an upstream structural screen on admissible representations. In that sense, the research program is methodological as well as physical: it asks whether dimensional structure imposes stronger constraints than standard homogeneity alone.
-          </p>
-        </div>
+        <div class="card-title">Core Closure Sequence</div>
+        <p>
+          Inquiries about the QDL roadmap, numerical ledger companion, spectrum selection, electroweak closure,
+          flavor closure, SMEFT operator governance, classical gravity, cosmological closure, closure grammar,
+          neutral matching, and QDC realization.
+        </p>
+        <p>
+          <a href="publications.html#core-closure-sequence">Open Core Closure Sequence</a>
+        </p>
       </div>
 
-      <div>
-        <div class="card">
-          <div class="card-title">Contact &amp; Identifiers</div>
-          <div class="id-list">
-            <div><strong>Affiliation:</strong> QDL Physics Institute, Huntley, Illinois, USA</div>
-            <div><strong>Email:</strong> <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a></div>
-            <div><strong>ORCID:</strong> <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">0009-0008-0155-0051</a></div>
-          </div>
+      <div class="card">
+        <div class="tagrow">
+          <span class="tag tag-accent">Metrology</span>
         </div>
+        <div class="card-title">Metrology and Measurement Integrity</div>
+        <p>
+          Inquiries about dimensional closure, QMU ledgers, physical constants, measurement-chain audits,
+          calibration workflows, uncertainty analysis, and the published QDL metrology article.
+        </p>
+        <p>
+          <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">
+            Published metrology anchor
+          </a>
+        </p>
+      </div>
 
-        <div class="card">
-          <div class="card-title">Open Research Practice</div>
-          <p>
-            Core manuscripts are maintained as public preprints and DOI-backed records. Where applicable, supplemental materials, benchmark artifacts, and related program documents are released in forms intended to support independent audit and technical review.
-          </p>
+      <div class="card">
+        <div class="tagrow">
+          <span class="tag tag-accent">Patent pending</span>
         </div>
+        <div class="card-title">Executable Validation Infrastructure</div>
+        <p>
+          Inquiries about QDL-based validation infrastructure for physical measurement and modeling pipelines,
+          scientific software, AI scientific-output checking, sensor fusion, digital twins, and model-governance workflows.
+        </p>
+        <p style="font-size:.9rem;color:#4b5563;">
+          U.S. Provisional Patent Application No. 64/055,985 filed May 2026. Status: patent pending.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="tagrow">
+          <span class="tag tag-executed">Benchmarks</span>
+        </div>
+        <div class="card-title">Residual-First Benchmarks</div>
+        <p>
+          Inquiries about public-data benchmark records, residual-first adequacy testing, NV ODMR,
+          optical cavity traces, and reproducible model-comparison workflows.
+        </p>
+        <p>
+          <a href="publications.html#benchmarks">Executed benchmark records</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="tagrow">
+          <span class="tag tag-accent">GUT branch</span>
+        </div>
+        <div class="card-title">QDL–SO10–1 Benchmark Branch</div>
+        <p>
+          Inquiries about the completed executable SO(10)-compatible grand-unification benchmark sequence,
+          including gauge running, scalar thresholds, proton decay, flavor, leptogenesis, and capstone synthesis.
+        </p>
+        <p>
+          <a href="publications.html#qdl-so10-series">QDL–SO10–1 series</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="tagrow">
+          <span class="tag tag-hypothesis">Applications</span>
+        </div>
+        <div class="card-title">Scientific Applications</div>
+        <p>
+          Inquiries about QDL applications to gravitational dynamics, Keplerian QDC recovery, Compton realization,
+          operator sector selection, EFT structure, cosmological closure, and experimental discriminants.
+        </p>
+        <p>
+          <a href="research.html#applications">Application directions</a>
+        </p>
       </div>
     </div>
-
-    <p class="note">
-      For the technical entry point, begin with the Research Program page, the QDL Admissibility Calculator, and the Top 5 publications path. For correspondence, use the Contact page.
-    </p>
   </section>
 
-  <section class="section">
+  <section class="section" id="collaboration">
     <div class="section-header">
       <h2 class="section-title">Collaboration &amp; Support</h2>
+      <p class="section-kicker">Research, technical, institutional, and philanthropic collaboration pathways.</p>
     </div>
 
-    <div class="card">
-      <p>
-        The QDL Physics Institute welcomes collaboration with researchers, experimental groups, and institutions interested in dimensional structure, measurement integrity, or falsifiable tests of the Quantized Dimensional Ledger framework.
-      </p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Collaboration Areas</div>
+        <p>
+          The QDL Physics Institute welcomes serious collaboration inquiries from researchers, experimental groups,
+          metrology laboratories, calibration and accredited testing organizations, scientific software groups,
+          and institutions interested in structural admissibility or measurement integrity.
+        </p>
+        <ul>
+          <li>Dimensional closure and structural admissibility theory.</li>
+          <li>Metrology, physical constants, QMU ledgers, and measurement-chain integrity.</li>
+          <li>Executable validation tools for scientific software and modeling pipelines.</li>
+          <li>AI scientific-output validation and model-governance workflows.</li>
+          <li>Sensor fusion, digital twins, and physical-model validation.</li>
+          <li>Residual-first public-data benchmarks.</li>
+          <li>Precision measurement and candidate laboratory tests.</li>
+          <li>Editorial, publication, or peer-review correspondence.</li>
+        </ul>
+      </div>
 
-      <p>
-        The program also welcomes philanthropic or institutional support that enables continued development of open, DOI-backed research records and experimental benchmark studies.
-      </p>
+      <div class="card">
+        <div class="card-title">Support and Institutional Engagement</div>
+        <p>
+          The program welcomes institutional or philanthropic support that enables continued development of open,
+          DOI-backed research records, executable validation tools, technical documentation, benchmark studies,
+          and experimental test planning.
+        </p>
+        <p>
+          Relevant support areas include:
+        </p>
+        <ul>
+          <li>Open technical publication and repository maintenance.</li>
+          <li>Executable structural-admissibility tool development.</li>
+          <li>Measurement-integrity and metrology validation studies.</li>
+          <li>Residual-first benchmark expansion.</li>
+          <li>Scientific outreach, documentation, and reproducibility resources.</li>
+        </ul>
+        <p>
+          For support discussions, use
+          <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="reference-links">
+    <div class="section-header">
+      <h2 class="section-title">Reference Links</h2>
+      <p class="section-kicker">Useful links to include when contacting the Institute.</p>
+    </div>
+
+    <div class="grid-2-even">
+      <div class="card">
+        <div class="card-title">Current Technical Entry Path</div>
+        <p>
+          The current technical entry path is the Core Closure Sequence on the Publications page.
+        </p>
+        <p>
+          <a href="publications.html#core-closure-sequence">publications.html#core-closure-sequence</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Live Demonstration</div>
+        <p>
+          The QDL Admissibility Calculator provides an interactive demonstration of structural admissibility under declared closure rules.
+        </p>
+        <p>
+          <a href="qdl-calculator.html">qdl-calculator.html</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Zenodo Archive</div>
+        <p>
+          DOI-backed records, preprints, benchmark records, and supporting research artifacts are maintained through Zenodo.
+        </p>
+        <p>
+          <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">
+            QDL Physics Institute Zenodo Community
+          </a>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Institute Profile</div>
+        <p>
+          For institutional identity, mission, research themes, and founder profile, see the Institute page.
+        </p>
+        <p>
+          <a href="institute.html">institute.html</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plain-contact-block">
+    <div class="card" style="border-color:rgba(37,99,235,.30); background:#f8fbff;">
+      <div class="card-title">Plain Contact Block</div>
       <p>
-        For collaboration inquiries or discussion of potential support, please contact
-        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>.
+        James D. Bourassa<br>
+        Founder &amp; Director, QDL Physics Institute<br>
+        Huntley, Illinois, USA<br>
+        ORCID:
+        <a href="https://orcid.org/0009-0008-0155-0051" target="_blank" rel="noopener noreferrer">0009-0008-0155-0051</a><br>
+        Email:
+        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a><br>
+        Website:
+        <a href="https://qdlphysics.org" target="_blank" rel="noopener noreferrer">https://qdlphysics.org</a>
       </p>
     </div>
   </section>
@@ -405,7 +635,7 @@ footer{
 <footer>
   <div class="footer-grid">
     <div>© QDL Physics Institute</div>
-    <div>Last updated: March 2026</div>
+    <div>Last updated: May 2026 — contact page updated for Core Closure Sequence and patent-pending executable infrastructure.</div>
     <div>
       <a href="qdl-calculator.html">QDL Calculator</a>
     </div>
