@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <title>QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The QDL Physics Institute develops the Quantized Dimensional Ledger (QDL), a structural dimensional-closure framework for model admissibility, effective field theory structure, metrology, executable validation infrastructure, and falsifiable experimental tests.">
+<meta name="description" content="The QDL Physics Institute develops the Quantized Dimensional Ledger (QDL), a structural dimensional-closure framework for model admissibility, closure grammar, effective field theory structure, metrology, executable validation infrastructure, and falsifiable residual tests.">
 
 <style>
 :root{
@@ -375,6 +375,36 @@ a.card:hover{
 .point strong{
   color:#111827;
 }
+.tagrow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.42rem;
+  margin:.12rem 0 .6rem;
+}
+.tag{
+  font-size:.74rem;
+  padding:.16rem .55rem;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+  color:#4b5563;
+  white-space:nowrap;
+}
+.tag-accent{
+  border-color:rgba(37,99,235,.35);
+  background:#eff6ff;
+  color:#1d4ed8;
+}
+.tag-executed{
+  border-color:rgba(22,163,74,.35);
+  background:#ecfdf5;
+  color:#166534;
+}
+.tag-hypothesis{
+  border-color:rgba(217,119,6,.35);
+  background:#fff7ed;
+  color:#9a3412;
+}
 footer{
   border-top:1px solid var(--border-soft);
   padding:1.2rem;
@@ -428,65 +458,102 @@ footer{
     <h1 class="hero-title">The Quantized Dimensional Ledger: A Structural Admissibility Framework for Physics</h1>
 
     <p class="hero-lead">
-      QDL introduces a prior structural question before model fitting or dynamical elaboration: should a proposed physical expression exist at all?
+      QDL introduces a prior structural question before model fitting or dynamical elaboration:
+      should a proposed physical expression be admitted as a coherent representation at all?
     </p>
 
     <p class="hero-sub">
-      Standard dimensional analysis checks consistency. QDL investigates whether physically admissible representations must remain closed under repeated composition.
+      Standard dimensional analysis checks unit consistency. QDL investigates the stronger question of whether
+      physical representations remain closed under composition, iteration, renormalization, measurement chains,
+      and cross-scale transformations.
     </p>
 
     <div class="hero-meta">
       <span class="hero-chip">3L + 2F dimensional basis</span>
       <span class="hero-chip">Quantized Dimensional Cell</span>
-      <span class="hero-chip">Structural admissibility</span>
-      <span class="hero-chip">Prediction filtering</span>
-      <span class="hero-chip">Falsifiable tests</span>
+      <span class="hero-chip">Core Closure Sequence</span>
+      <span class="hero-chip">Closure grammar</span>
+      <span class="hero-chip">Residual-first tests</span>
+      <span class="hero-chip">Patent-pending infrastructure</span>
     </div>
 
     <figure class="hero-figure">
       <img src="understanding-qdl.png" alt="Understanding QDL diagram showing dimensional analysis as spellcheck and QDL as a structural admissibility filter">
       <figcaption>
-        <strong>First-pass intuition.</strong> Dimensional analysis checks whether units are consistent. QDL asks a stronger question: whether a proposed construction is structurally admissible under closure. In this framing, dimensional quantities are represented as vectors, combined, and tested against an allowed lattice structure.
+        <strong>First-pass intuition.</strong> Dimensional analysis checks whether units are consistent.
+        QDL asks a stronger question: whether a proposed construction is structurally admissible under closure.
+        In this framing, dimensional quantities are represented as vectors, combined, and tested against an allowed lattice structure.
       </figcaption>
     </figure>
 
     <p class="hero-note">
-      Why closure?
-
-Physical models are not evaluated once—they are composed, iterated, renormalized, and measured through chains of transformations. Standard dimensional analysis ensures consistency at a single step but does not guarantee stability under repeated composition. The QDL framework investigates whether physically admissible representations must instead form a closed structure under iteration. The 3L + 2F lattice is proposed as the minimal basis in which such closure can be defined and tested. The framework is developed across effective field theory, cosmology, metrology, and measurement theory, with explicit falsifiability conditions.
+      Why closure? Physical models are not evaluated once. They are composed, iterated, renormalized, measured,
+      and transported through chains of transformations. Standard dimensional analysis ensures consistency at a single step
+      but does not guarantee stability under repeated composition. The QDL framework investigates whether physically admissible
+      representations must instead form closed structures under iteration. The current 2026 QDL closure sequence develops this
+      program across spectrum selection, electroweak closure, flavor closure, SMEFT operator governance, classical gravity,
+      cosmology, neutral matching, Compton structure, metrology, and executable validation infrastructure.
     </p>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="research.html">Explore the Research Program</a>
-      <a class="btn" href="publications.html">Read the Papers</a>
+      <a class="btn btn-primary" href="publications.html#core-closure-sequence">Start with the Core Closure Sequence</a>
+      <a class="btn" href="research.html">Explore the Research Program</a>
       <a class="btn" href="qdl-calculator.html">Try the QDL Calculator</a>
       <a class="btn" href="resources.html">View Supporting Resources</a>
     </div>
   </section>
 
   <section class="section" style="margin-top:1.2rem;">
-    <div class="card" style="border-color:rgba(37,99,235,.28); background:#f8fbff;">
+    <div class="card" style="border-color:rgba(37,99,235,.32); background:#f8fbff;">
       <div class="card-title">Program Milestone</div>
 
       <p>
-        <strong>April 2026:</strong>
-        The <strong>QDL–SO10–1 executable grand-unification benchmark sequence</strong> is now complete.
-        The nine-paper series advances the benchmark from an initial SO(10)-compatible proposal to an executable,
-        scalar-hardened, proton-decay-exposed, flavor-tested, leptogenesis-viable closure package.
+        <strong>May 2026:</strong>
+        The current QDL technical entry path is now the <strong>Core Closure Sequence</strong>:
+        a DOI-backed research sequence moving from roadmap and numerical ledger reconstruction to spectrum selection,
+        electroweak closure, flavor closure, SMEFT operator governance, classical gravity, cosmology, residual tests,
+        neutral matching, Compton realization, and QDC structure.
       </p>
 
       <p>
-        The capstone paper is:
-        <a href="https://doi.org/10.5281/zenodo.19830816" target="_blank" rel="noopener noreferrer">
-          Bourassa, J. D. (2026). <em>Executable Closure of the QDL–SO10–1 Benchmark:
-          Integrated Gauge Running, Scalar Thresholds, Proton Decay, Flavor, Leptogenesis,
-          and Historical Positioning</em>. Zenodo. https://doi.org/10.5281/zenodo.19830816
+        Start with:
+        <a href="https://doi.org/10.5281/zenodo.20076081" target="_blank" rel="noopener noreferrer">
+          Bourassa, J. D. (2026). <em>The Quantized Dimensional Ledger as a Structural and Numerical Closure Program for Fundamental Physics:
+          A Review and Roadmap for Spectrum, Constants, Operators, Gravity, Cosmology, and Residual Tests</em>. Zenodo.
+          https://doi.org/10.5281/zenodo.20076081
         </a>
       </p>
 
       <p style="font-size:.9rem;color:#4b5563;">
-        This sequence is presented as a benchmark-level grand-unification program, not as a final theory of nature.
-        Its purpose is to make QDL-based unification claims auditable, reproducible, and explicitly falsifiable.
+        This sequence supersedes the older “Top 5” path as the primary technical entry point. The earlier lattice,
+        closure-formalism, SMEFT, metrology, and book records remain important as foundational background.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="margin-top:1.2rem;">
+    <div class="card" style="border-color:rgba(37,99,235,.32); background:#f8fbff;">
+      <div class="card-title">Program Milestone</div>
+
+      <p>
+        <strong>May 2026:</strong>
+        QDL Physics Institute has filed U.S. Provisional Patent Application No. 64/055,985,
+        titled <em>Systems and Methods for Structural Admissibility Validation of Physical Measurement and Modeling Pipelines</em>.
+      </p>
+
+      <p>
+        This filing marks the executable infrastructure phase of QDL: applying structural admissibility as a machine-executable validation layer for
+        measurement, modeling, simulation, uncertainty analysis, AI-generated scientific outputs, sensor fusion, digital twins, and related technical workflows.
+      </p>
+
+      <p style="font-size:.9rem;color:#4b5563;">
+        The purpose is practical rather than speculative: to test whether QDL-style ledger mapping, closure checks,
+        audit traces, and downstream workflow controls can identify structural failures that ordinary unit checking
+        or dimensional homogeneity may not detect.
+      </p>
+
+      <p style="font-size:.9rem;color:#4b5563;">
+        <strong>Status:</strong> U.S. provisional patent application filed; patent pending.
       </p>
     </div>
   </section>
@@ -512,54 +579,94 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
   </section>
 
   <section class="section" style="margin-top:1.2rem;">
-    <div class="card" style="border-color:rgba(37,99,235,.32); background:#f8fbff;">
+    <div class="card" style="border-color:rgba(37,99,235,.28); background:#ffffff;">
       <div class="card-title">Program Milestone</div>
 
       <p>
-        <strong>May 2026:</strong>
-        QDL Physics Institute has filed U.S. Provisional Patent Application No. 64/055,985,
-        titled <em>Systems and Methods for Structural Admissibility Validation of Physical Measurement and Modeling Pipelines</em>.
+        <strong>April 2026:</strong>
+        The <strong>QDL–SO10–1 executable grand-unification benchmark sequence</strong> is complete.
+        The nine-paper series advances the benchmark from an initial SO(10)-compatible proposal to an executable,
+        scalar-hardened, proton-decay-exposed, flavor-tested, leptogenesis-viable closure package.
       </p>
 
       <p>
-        This filing marks the executable infrastructure phase of QDL: applying structural admissibility as a machine-executable validation layer for
-        measurement, modeling, simulation, uncertainty analysis, AI-generated scientific outputs, sensor fusion, digital twins, and related technical workflows.
+        The capstone paper is:
+        <a href="https://doi.org/10.5281/zenodo.19830816" target="_blank" rel="noopener noreferrer">
+          Bourassa, J. D. (2026). <em>Executable Closure of the QDL–SO10–1 Benchmark:
+          Integrated Gauge Running, Scalar Thresholds, Proton Decay, Flavor, Leptogenesis,
+          and Historical Positioning</em>. Zenodo. https://doi.org/10.5281/zenodo.19830816
+        </a>
       </p>
 
       <p style="font-size:.9rem;color:#4b5563;">
-        The purpose is practical rather than speculative: to test whether QDL-style ledger mapping, closure checks, audit traces, and downstream workflow controls
-        can identify structural failures that ordinary unit checking or dimensional homogeneity may not detect.
-      </p>
-
-      <p style="font-size:.9rem;color:#4b5563;">
-        <strong>Status:</strong> U.S. provisional patent application filed; patent pending.
+        This sequence is presented as a benchmark-level grand-unification program, not as a final theory of nature.
+        Its purpose is to make QDL-based unification claims auditable, reproducible, and explicitly falsifiable.
       </p>
     </div>
   </section>
 
-  <section class="section" style="margin-top:1.2rem;">
-    <div class="card" style="border-color:rgba(37,99,235,.24); background:#ffffff;">
-      <div class="card-title">Research Update</div>
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Core Closure Sequence</h2>
+      <p class="section-kicker">The primary technical entry path into the current QDL program.</p>
+    </div>
 
-      <p>
-        <strong>May 2026:</strong>
-        A new QDL gravitational dynamics paper has been released:
-        <a href="https://doi.org/10.5281/zenodo.20026718" target="_blank" rel="noopener noreferrer">
-          Bourassa, J. D. (2026). <em>The Quantized Dimensional Cell in Gravitational Dynamics:
-          GM, Keplerian Closure, and Dimensional Admissibility</em>. Zenodo. https://doi.org/10.5281/zenodo.20026718
-        </a>
-      </p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="paper-list">
+          <div class="paper-item">
+            <div class="paper-title">
+              <a href="https://doi.org/10.5281/zenodo.20076081" target="_blank" rel="noopener noreferrer">
+                QDL Structural and Numerical Closure Program: Review and Roadmap
+              </a>
+            </div>
+            <div class="paper-meta">Capstone / roadmap · Claim hierarchy · DOI: 10.5281/zenodo.20076081</div>
+          </div>
 
-      <p>
-        This paper identifies the gravitational parameter <em>&mu; = GM</em> as a direct realization of the Quantized Dimensional Cell form,
-        <em>L<sup>3</sup>F<sup>2</sup></em>, and interprets Keplerian closure as <em>&mu; = r<sup>3</sup>&omega;<sup>2</sup></em>
-        for circular motion and <em>&mu; = a<sup>3</sup>n<sup>2</sup></em> for elliptical Keplerian motion.
-      </p>
+          <div class="paper-item">
+            <div class="paper-title">
+              <a href="https://doi.org/10.5281/zenodo.20086069" target="_blank" rel="noopener noreferrer">
+                QDL Numerical Ledger Companion
+              </a>
+            </div>
+            <div class="paper-meta">Reference ledger · Executable checks · DOI: 10.5281/zenodo.20086069</div>
+          </div>
 
-      <p style="font-size:.9rem;color:#4b5563;">
-        The result complements the patent-pending executable infrastructure track by showing how QDL closure concepts continue to organize concrete
-        physical domains while the program also develops practical validation tools.
-      </p>
+          <div class="paper-item">
+            <div class="paper-title">
+              <a href="https://doi.org/10.5281/zenodo.20086341" target="_blank" rel="noopener noreferrer">
+                QDL Spectrum Selection as a Conditional Standard Model Theorem
+              </a>
+            </div>
+            <div class="paper-meta">Spectrum selection · Conditional theorem · DOI: 10.5281/zenodo.20086341</div>
+          </div>
+
+          <div class="paper-item">
+            <div class="paper-title">
+              <a href="https://doi.org/10.5281/zenodo.20087107" target="_blank" rel="noopener noreferrer">
+                QDL Operator Governance as a Reproducible SMEFT Matrix Audit
+              </a>
+            </div>
+            <div class="paper-meta">Operator governance · SMEFT matrix audit · DOI: 10.5281/zenodo.20087107</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Why this is now the main path</div>
+        <p>
+          The closure sequence turns QDL from a framework proposal into a structured research program with declared claims,
+          executable checks, sector-level reconstructions, residual classifications, and falsification tests.
+        </p>
+        <p>
+          It also separates strong claims from open residuals: spectrum selection, operator governance, gravitational closure,
+          electroweak reconstruction, flavor hierarchy, cosmological ansatz structure, and QDC realizations are presented with
+          different levels of maturity rather than collapsed into a single overclaim.
+        </p>
+        <p class="note">
+          For the full list, see <a href="publications.html#core-closure-sequence">Publications → Core Closure Sequence</a>.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -575,7 +682,8 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
         <figure class="feature-figure">
           <img src="What-QDL-does-to-physics.png" alt="Diagram showing QDL as an admissibility filter that reduces model space, finite operators, and falsifiable outcomes">
           <figcaption>
-            QDL is proposed as an admissibility layer applied prior to unconstrained model proliferation. The aim is not to replace dynamics, but to narrow the space of admissible representations before detailed fitting begins.
+            QDL is proposed as an admissibility layer applied prior to unconstrained model proliferation.
+            The aim is not to replace dynamics, but to narrow the space of admissible representations before detailed fitting begins.
           </figcaption>
         </figure>
         <p class="feature-takeaway">
@@ -596,7 +704,7 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
             <strong>Restricted coupling forms.</strong> Couplings are investigated under closure as finite spectral structures rather than arbitrary analytic freedom.
           </div>
           <div class="point">
-            <strong>Cross-domain coherence.</strong> The same admissibility logic is explored across EFT, metrology, cosmology, and measurement theory.
+            <strong>Cross-domain coherence.</strong> The same admissibility logic is explored across EFT, metrology, gravity, cosmology, and measurement theory.
           </div>
           <div class="point">
             <strong>Built-in falsifiability.</strong> If stable, physically necessary structures require persistent non-closure, the framework fails.
@@ -615,15 +723,16 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       </p>
 
       <ul class="list" style="line-height:1.75; font-size:.92rem;">
-        <li>Peer-reviewed publication of the integer-lattice structure underlying dimensional quantities.</li>
-        <li>Development of dimensional-closure constraints for effective field theory operator bases.</li>
+        <li>Development of the Core Closure Sequence as the primary technical map for QDL.</li>
+        <li>Numerical ledger reconstruction and executable checks across electroweak, flavor, gravitational, and cosmological targets.</li>
+        <li>Structural admissibility constraints for effective field theory operator bases and SMEFT anomalous-dimension structure.</li>
         <li>Residual-first benchmark comparisons using publicly available experimental datasets.</li>
-        <li>Design of falsifiable laboratory tests probing dimensional-closure scaling relations.</li>
+        <li>Design of falsifiable tests probing dimensional-closure scaling relations and residual classifications.</li>
         <li>Development of executable structural-admissibility infrastructure for measurement, modeling, simulation, AI scientific-output validation, sensor fusion, and digital-twin workflows.</li>
       </ul>
 
       <p class="note">
-        Program status: Active research, executable infrastructure development, and manuscript submissions in progress (2026).
+        Program status: Active research, DOI-backed archival development, executable infrastructure development, and manuscript submissions in progress (2026).
       </p>
     </div>
   </section>
@@ -635,12 +744,12 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       <div class="grid-3" style="margin-top:.3rem;">
         <div class="point">
           <strong>Framework layer.</strong>
-          QDL develops dimensional closure, structural admissibility, the 3L + 2F ledger architecture, the Quantized Dimensional Cell, and formal admissibility rules.
+          QDL develops dimensional closure, structural admissibility, the 3L + 2F ledger architecture, the Quantized Dimensional Cell, closure grammar, and formal admissibility rules.
         </div>
 
         <div class="point">
           <strong>Scientific application layer.</strong>
-          QDL applies the framework to metrology, physical constants, effective field theory, operator filtering, representation governance, model adequacy, GUT admissibility, nuclear binding, gravitational dynamics, and related domains.
+          QDL applies the framework to metrology, physical constants, effective field theory, operator filtering, representation governance, model adequacy, GUT admissibility, gravitational dynamics, cosmological closure, flavor structure, and residual tests.
         </div>
 
         <div class="point">
@@ -662,11 +771,11 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       <div class="card-title">QDL Physics Institute</div>
 
       <p>
-        The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA, focused on the development and testing of the Quantized Dimensional Ledger (QDL) framework for dimensional closure, model admissibility, and experimental discrimination.
+        The QDL Physics Institute is an independent research program based in Huntley, Illinois, USA, focused on the development and testing of the Quantized Dimensional Ledger framework for dimensional closure, model admissibility, residual-first validation, executable measurement integrity, and experimental discrimination.
       </p>
 
       <p style="font-size:.9rem;color:#4b5563;">
-        <strong>Research areas:</strong> dimensional structure of physical quantities, effective field theory constraints, dimensional closure in metrology, model integrity, executable validation infrastructure, and falsifiable tabletop experiments.
+        <strong>Research areas:</strong> dimensional structure of physical quantities, effective field theory constraints, dimensional closure in metrology, model integrity, closure grammar, gravitational and cosmological closure, executable validation infrastructure, and falsifiable tabletop experiments.
       </p>
 
       <p style="font-size:.9rem;color:#4b5563;">
@@ -683,32 +792,44 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       <div class="card-title">For Editors and Referees</div>
 
       <p>
-        The fastest way to evaluate the QDL program is the following sequence:
+        The fastest way to evaluate the current QDL program is the following sequence:
       </p>
 
       <ol class="list" style="line-height:1.7;">
         <li>
-          <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
-            Integer Lattice Structure of Dimensional Quantities
+          <a href="https://doi.org/10.5281/zenodo.20076081" target="_blank" rel="noopener noreferrer">
+            Core Closure Sequence / Roadmap
           </a>
         </li>
         <li>
-          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
+          <a href="https://doi.org/10.5281/zenodo.20086069" target="_blank" rel="noopener noreferrer">
+            Numerical Ledger Companion
           </a>
         </li>
         <li>
-          <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
-            Ledger-Closure Constraints on the SMEFT
+          <a href="https://doi.org/10.5281/zenodo.20086341" target="_blank" rel="noopener noreferrer">
+            Spectrum Selection as a Conditional Standard Model Theorem
           </a>
         </li>
         <li>
-          <a href="publications.html#benchmarks">Executed Benchmark Records</a>
+          <a href="https://doi.org/10.5281/zenodo.20087107" target="_blank" rel="noopener noreferrer">
+            Operator Governance as a Reproducible SMEFT Matrix Audit
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">
+            Published Metrology Anchor
+          </a>
+        </li>
+        <li>
+          <a href="qdl-calculator.html">
+            QDL Calculator / Executable Demonstration
+          </a>
         </li>
       </ol>
 
       <p class="note">
-        The QDL framework is intended as a dimensional admissibility constraint layer, not a replacement for established physical dynamics.
+        The QDL framework is intended as a dimensional admissibility and closure-governance layer, not a replacement for established physical dynamics.
       </p>
     </div>
   </section>
@@ -716,28 +837,28 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
   <section class="section">
     <div class="section-header">
       <h2 class="section-title">Research Snapshot</h2>
-      <p class="section-kicker">Three entry points into the program: formal structure, technical record, and practical support materials.</p>
+      <p class="section-kicker">Three entry points into the program: technical sequence, conceptual overview, and practical support materials.</p>
     </div>
 
     <div class="grid-3">
-      <a class="card" href="research.html" style="display:block;color:inherit;">
-        <h3>Research Program</h3>
+      <a class="card" href="publications.html#core-closure-sequence" style="display:block;color:inherit;">
+        <h3>Core Closure Sequence</h3>
         <p>
-          A consolidated overview of the QDL framework, dimensional lattice structure, model admissibility, and experimental logic.
+          The primary technical entry path: roadmap, numerical ledger, spectrum selection, electroweak closure, flavor closure, SMEFT governance, gravity, cosmology, closure grammar, and QDC realizations.
         </p>
       </a>
 
-      <a class="card" href="publications.html" style="display:block;color:inherit;">
-        <h3>Publications</h3>
+      <a class="card" href="research.html" style="display:block;color:inherit;">
+        <h3>Research Program</h3>
         <p>
-          Core papers, benchmark records, and application papers organized in a framework-first sequence for technical readers.
+          A consolidated overview of the QDL framework, dimensional lattice structure, model admissibility, closure grammar, and experimental logic.
         </p>
       </a>
 
       <a class="card" href="resources.html" style="display:block;color:inherit;">
         <h3>Resources</h3>
         <p>
-          Prototype demonstrations, books, benchmark access points, and orientation material that support review and navigation.
+          Prototype demonstrations, books, benchmark access points, executable infrastructure notes, and orientation material that support review and navigation.
         </p>
       </a>
     </div>
@@ -770,6 +891,45 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       <ul class="list" style="line-height:1.75; font-size:.92rem;">
         <li>
           <strong>May 2026:</strong>
+          Core closure sequence consolidated —
+          <a href="https://doi.org/10.5281/zenodo.20076081" target="_blank" rel="noopener noreferrer">
+            <em>The Quantized Dimensional Ledger as a Structural and Numerical Closure Program for Fundamental Physics</em>
+          </a>
+          and
+          <a href="https://doi.org/10.5281/zenodo.20086069" target="_blank" rel="noopener noreferrer">
+            <em>QDL Numerical Ledger Companion</em>
+          </a>.
+        </li>
+
+        <li>
+          <strong>May 2026:</strong>
+          Technical pillars released for
+          <a href="https://doi.org/10.5281/zenodo.20086341" target="_blank" rel="noopener noreferrer">spectrum selection</a>,
+          <a href="https://doi.org/10.5281/zenodo.20089936" target="_blank" rel="noopener noreferrer">electroweak closure</a>,
+          <a href="https://doi.org/10.5281/zenodo.20090053" target="_blank" rel="noopener noreferrer">flavor closure</a>,
+          <a href="https://doi.org/10.5281/zenodo.20087107" target="_blank" rel="noopener noreferrer">operator governance</a>,
+          <a href="https://doi.org/10.5281/zenodo.20088462" target="_blank" rel="noopener noreferrer">classical gravity</a>,
+          and
+          <a href="https://doi.org/10.5281/zenodo.20090219" target="_blank" rel="noopener noreferrer">cosmological closure</a>.
+        </li>
+
+        <li>
+          <strong>May 2026:</strong>
+          Closure-grammar and QDC realization papers released —
+          <a href="https://doi.org/10.5281/zenodo.20098982" target="_blank" rel="noopener noreferrer">
+            <em>Lessons from the QDL Closure Sequence</em>
+          </a>,
+          <a href="https://doi.org/10.5281/zenodo.20098523" target="_blank" rel="noopener noreferrer">
+            <em>The Neutral Matching Unit in QDL Closure Grammar</em>
+          </a>,
+          and
+          <a href="https://doi.org/10.5281/zenodo.20100436" target="_blank" rel="noopener noreferrer">
+            <em>Quantized Dimensional Closure: Compton Realization and Operator Sector Selection</em>
+          </a>.
+        </li>
+
+        <li>
+          <strong>May 2026:</strong>
           U.S. provisional patent application filed —
           <em>Systems and Methods for Structural Admissibility Validation of Physical Measurement and Modeling Pipelines</em>.
           This filing marks the executable infrastructure phase of QDL, including measurement integrity, AI scientific-output validation,
@@ -799,36 +959,24 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
           Journal article published —
           <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">
             Bourassa, J. D. (2026). The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants. Journal of Theoretical and Applied Physics, 20(3). https://doi.org/10.57647/jtap.2026.2004.05
-          </a>
+          </a>.
         </li>
 
         <li>
           <strong>Mar 2026:</strong>
-          Preprint released —
-          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
-          </a>
-        </li>
-
-        <li>
-          <strong>Mar 2026:</strong>
-          Foundational paper released —
+          Foundational lattice and closure-formalism records released —
           <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
             Integer Lattice Structure of Dimensional Quantities
           </a>
+          and
+          <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
+            The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories
+          </a>.
         </li>
 
         <li>
           <strong>Dec 2025:</strong>
           Residual-first benchmark records published for NV ODMR and optical cavity datasets.
-        </li>
-
-        <li>
-          <strong>Mar 2026:</strong>
-          Program book record maintained —
-          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
-          </a>
         </li>
       </ul>
     </div>
@@ -836,8 +984,8 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
 
   <section class="section">
     <div class="section-header">
-      <h2 class="section-title">Foundational Papers</h2>
-      <p class="section-kicker">The shortest technical path into the QDL program.</p>
+      <h2 class="section-title">Earlier Foundational Papers</h2>
+      <p class="section-kicker">Formal background for the current Core Closure Sequence.</p>
     </div>
 
     <div class="grid-2">
@@ -875,10 +1023,13 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       <div class="card">
         <div class="card-title">How to Read the Site</div>
         <p>
-          Start with the <a href="research.html">Research Program</a> page for the conceptual structure, then move to <a href="publications.html">Publications</a> for the technical record. Use the <a href="qdl-calculator.html">QDL Calculator</a> for a live demonstration of structural admissibility, and <a href="resources.html">Resources</a> for books, prototypes, and benchmark access.
+          Start with the <a href="publications.html#core-closure-sequence">Core Closure Sequence</a> for the current technical record.
+          Then use the <a href="research.html">Research Program</a> page for conceptual orientation, the
+          <a href="qdl-calculator.html">QDL Calculator</a> for live structural-admissibility examples, and
+          <a href="resources.html">Resources</a> for books, prototypes, and benchmark access.
         </p>
         <p class="note">
-          This structure is meant to make the site read like a coherent research institute rather than a collection of separate project pages.
+          The earlier lattice, closure-formalism, SMEFT, metrology, and book records remain important, but they are now best read as background to the broader closure sequence.
         </p>
       </div>
     </div>
@@ -894,6 +1045,9 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
       <ul class="list" style="line-height:1.75;">
         <li>
           Formal development of dimensional closure as a structural admissibility constraint on physical representations.
+        </li>
+        <li>
+          Completion and hardening of the Core Closure Sequence across spectrum selection, constants, operators, gravity, cosmology, and residual tests.
         </li>
         <li>
           Investigation of consequences for operator structure in effective field theories and related frameworks.
@@ -919,7 +1073,8 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
 
     <div class="card">
       <p>
-        The QDL research program maintains a DOI-backed archival record through the Zenodo repository. Core manuscripts, benchmark records, and supporting materials are preserved as citable research artifacts.
+        The QDL research program maintains a DOI-backed archival record through Zenodo. Core manuscripts, technical pillars,
+        benchmark records, closure-grammar papers, and supporting materials are preserved as citable research artifacts.
       </p>
 
       <ul class="list" style="line-height:1.75; margin-top:.6rem;">
@@ -931,9 +1086,23 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
         </li>
 
         <li>
-          <strong>Program Book Record:</strong>
-          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
-            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
+          <strong>Core Closure Sequence:</strong>
+          <a href="publications.html#core-closure-sequence">
+            Publications → Core Closure Sequence
+          </a>
+        </li>
+
+        <li>
+          <strong>Technical Pillars:</strong>
+          <a href="publications.html#technical-pillars">
+            Publications → Technical Pillars
+          </a>
+        </li>
+
+        <li>
+          <strong>Closure Grammar and QDC Realizations:</strong>
+          <a href="publications.html#closure-grammar">
+            Publications → Closure Grammar, Residuals, and QDC Realizations
           </a>
         </li>
 
@@ -952,8 +1121,10 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
         </li>
 
         <li>
-          <strong>Core Framework Papers:</strong>
-          See the <a href="publications.html#top5">Top 5 Publications</a> for the recommended technical entry path.
+          <strong>Program Book Record:</strong>
+          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
+            The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics
+          </a>
         </li>
       </ul>
 
@@ -970,11 +1141,14 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
 
     <div class="card">
       <p>
-        The QDL Physics Institute welcomes collaboration with researchers, experimental groups, and institutions interested in dimensional structure, measurement integrity, executable validation infrastructure, or falsifiable tests of the Quantized Dimensional Ledger framework.
+        The QDL Physics Institute welcomes collaboration with researchers, experimental groups, metrology laboratories,
+        calibration and accredited testing organizations, and institutions interested in dimensional structure, measurement integrity,
+        executable validation infrastructure, or falsifiable tests of the Quantized Dimensional Ledger framework.
       </p>
 
       <p>
-        The program also welcomes philanthropic or institutional support that enables continued development of open, DOI-backed research records, executable validation tools, and experimental benchmark studies.
+        The program also welcomes philanthropic or institutional support that enables continued development of open,
+        DOI-backed research records, executable validation tools, and experimental benchmark studies.
       </p>
 
       <p>
@@ -989,7 +1163,7 @@ Physical models are not evaluated once—they are composed, iterated, renormaliz
 <footer>
   <div class="footer-inner">
     <div>© QDL Physics Institute</div>
-    <div>Last updated: May 2026 — QDL executable infrastructure enters patent-pending application phase.</div>
+    <div>Last updated: May 2026 — QDL Core Closure Sequence and patent-pending executable infrastructure updated.</div>
     <div>
       Zenodo:
       <a href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">QDL Community</a>
