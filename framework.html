@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="The Quantized Dimensional Ledger (QDL) framework: dimensional closure as a structural admissibility layer, 3L + 2F ledger basis, Quantized Dimensional Cell (QDC), explicit assumptions, falsification boundaries, and a framework-first reading order."
+    content="The Quantized Dimensional Ledger (QDL) framework: dimensional closure as a structural admissibility layer, 3L + 2F ledger basis, Quantized Dimensional Cell (QDC), Core Closure Sequence, explicit assumptions, falsification boundaries, and a framework-first reading order."
   />
   <style>
     :root {
@@ -24,6 +24,8 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -567,7 +569,7 @@
   </p>
 
   <p class="tagline">
-    This page summarizes the minimal framework, makes the assumptions explicit, states framework-level falsification boundaries, and gives a formal reading order through the core papers.
+    This page summarizes the minimal framework, makes the assumptions explicit, states framework-level falsification boundaries, and gives a formal reading order through the current <strong>Core Closure Sequence</strong>. It remains definition-first; detailed publications, benchmarks, and application papers are organized on the Publications page.
   </p>
 
   <figure class="hero-figure">
@@ -576,6 +578,33 @@
       Physical quantities are represented as integer vectors in a dimensional lattice. The closure direction q = (1,1,1,1,1) generates the subgroup of closure-admissible constructions.
     </figcaption>
   </figure>
+
+  <div class="hero-card" id="current-sequence" style="border-color:rgba(37,99,235,0.30); background:#f8fbff;">
+    <div class="hero-card-title">Current Core Closure Sequence</div>
+
+    <p style="margin-bottom:0.55rem;">
+      The current primary technical reading path is no longer the older lattice → closure → SMEFT → metrology → book sequence by itself. That earlier path remains important as background, but the strongest current entry path is the <strong>Core Closure Sequence</strong>: roadmap, numerical ledger, spectrum selection, electroweak closure, flavor closure, SMEFT operator governance, classical gravity, cosmological closure, closure grammar, neutral matching, and QDC realization.
+    </p>
+
+    <div class="chiprow">
+      <span class="chip chip-accent">Core Closure Sequence</span>
+      <span class="chip">Roadmap</span>
+      <span class="chip">Numerical ledger</span>
+      <span class="chip">Technical pillars</span>
+      <span class="chip">Closure grammar</span>
+      <span class="chip chip-ok">QDC realizations</span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="publications.html#core-closure-sequence">Open Core Closure Sequence</a>
+      <a class="btn btn-secondary" href="publications.html#technical-pillars">Technical Pillars</a>
+      <a class="btn btn-secondary" href="publications.html#closure-grammar">Closure Grammar</a>
+    </div>
+
+    <p class="details" style="margin-top:0.7rem;">
+      This page defines the framework layer. The Publications page provides the full DOI-backed sequence and application record.
+    </p>
+  </div>
 
   <div class="hero-card" id="prototype-demo" style="margin-top:0.35rem;">
     <div class="hero-card-title">Prototype Demo: Structural Integrity Screening Workflow</div>
@@ -591,6 +620,7 @@
     <div class="hero-actions">
       <a class="btn btn-primary" href="demo.html">Open Prototype Demo</a>
       <a class="btn btn-secondary" href="demo.html#integrity-report">Jump to Integrity Report</a>
+      <a class="btn btn-secondary" href="qdl-calculator.html">Try the QDL Calculator</a>
     </div>
     <p class="details" style="margin-top:0.65rem;">
       This demo illustrates the structural screen, not a full implementation.
@@ -620,7 +650,7 @@
         </div>
         <div class="gate-item">
           <strong>Applications</strong>
-          <p>Gravity/coherence, EFT/SMEFT, metrology, constants, and experiments are treated as downstream uses of the admissibility layer rather than established consequences of the framework alone.</p>
+          <p>Gravity, EFT/SMEFT, metrology, constants, spectrum selection, cosmological closure, and experiments are treated as downstream uses of the admissibility layer rather than established consequences of the framework alone.</p>
         </div>
         <div class="gate-item">
           <strong>Not claimed here</strong>
@@ -629,66 +659,86 @@
       </div>
 
       <div class="statusnote">
-        For a framework-independent operational layer, see the dimensional admissibility / measurement integrity track linked on the Home page.
+        For the citable program record, see <a href="publications.html">Publications</a>. For a live demonstration, see the <a href="qdl-calculator.html">QDL Calculator</a>.
       </div>
     </div>
   </div>
 
   <div class="hero-card" id="reading-order">
-    <div class="hero-card-title">Core papers &amp; recommended reading order</div>
+    <div class="hero-card-title">Core framework and closure-sequence reading order</div>
 
     <div class="chiprow">
-      <span class="chip chip-accent">Lattice foundation</span>
-      <span class="chip">Closure formalism</span>
-      <span class="chip">SMEFT application</span>
-      <span class="chip">Metrology</span>
-      <span class="chip">Book</span>
+      <span class="chip chip-accent">Roadmap</span>
+      <span class="chip">Numerical companion</span>
+      <span class="chip">Spectrum selection</span>
+      <span class="chip">Operator governance</span>
+      <span class="chip">Gravity / cosmology</span>
+      <span class="chip chip-ok">Earlier formal background</span>
     </div>
 
     <p style="margin-bottom:0.55rem;">
-      For the cleanest entry path, start with the lattice and closure papers, then move to the SMEFT and metrology applications.
+      For the cleanest current entry path, start with the QDL roadmap and numerical ledger companion, then move to the technical pillars. Use the earlier lattice and closure papers as formal background, not as the only primary reading path.
     </p>
 
-    <ul class="reading">
+    <ol class="reading">
       <li>
-        <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">
-          <strong>Integer Lattice Structure of Dimensional Quantities: The Algebraic Structure of the Quantized Dimensional Ledger</strong>
+        <a href="https://doi.org/10.5281/zenodo.20076081" target="_blank" rel="noopener noreferrer">
+          <strong>The Quantized Dimensional Ledger as a Structural and Numerical Closure Program for Fundamental Physics: A Review and Roadmap for Spectrum, Constants, Operators, Gravity, Cosmology, and Residual Tests</strong>
         </a>
-        <div class="reading-meta">2026-03-11 · Preprint · DOI: 10.5281/zenodo.18970320</div>
+        <div class="reading-meta">2026 · Capstone / roadmap · DOI: 10.5281/zenodo.20076081</div>
       </li>
+
       <li>
-        <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">
-          <strong>The Quantized Dimensional Ledger: A Lattice Structure for Dimensional Closure in Physical Theories</strong>
+        <a href="https://doi.org/10.5281/zenodo.20086069" target="_blank" rel="noopener noreferrer">
+          <strong>QDL Numerical Ledger Companion: First-Pass Closure Reconstructions for Electroweak, Flavor, Gravitational, and Cosmological Targets</strong>
         </a>
-        <div class="reading-meta">2026-03-12 · Preprint · DOI: 10.5281/zenodo.18981850</div>
+        <div class="reading-meta">2026 · Numerical companion · DOI: 10.5281/zenodo.20086069</div>
       </li>
+
       <li>
-        <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">
-          <strong>Ledger-Closure Constraints on the SMEFT: A Lattice-Theoretic Derivation of Operator Exclusions and Wilson-Coefficient Relations</strong>
+        <a href="https://doi.org/10.5281/zenodo.20086341" target="_blank" rel="noopener noreferrer">
+          <strong>QDL Spectrum Selection as a Conditional Standard Model Theorem</strong>
         </a>
-        <div class="reading-meta">2025-12-01 · Preprint · DOI: 10.5281/zenodo.17780443</div>
+        <div class="reading-meta">2026 · Spectrum selection · DOI: 10.5281/zenodo.20086341</div>
       </li>
+
       <li>
-        <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">
-          <strong>The Quantized Dimensional Ledger for Metrology: Dimensional Closure, QMU Ledgers, and the Ontology of Physical Constants</strong>
+        <a href="https://doi.org/10.5281/zenodo.20087107" target="_blank" rel="noopener noreferrer">
+          <strong>QDL Operator Governance as a Reproducible SMEFT Matrix Audit</strong>
         </a>
-        <div class="reading-meta">2025-11-15 · Preprint · DOI: 10.5281/zenodo.17619526</div>
+        <div class="reading-meta">2026 · Operator governance · DOI: 10.5281/zenodo.20087107</div>
       </li>
+
       <li>
-        <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">
-          <strong>The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</strong>
+        <a href="https://doi.org/10.5281/zenodo.20088462" target="_blank" rel="noopener noreferrer">
+          <strong>QDL Closure of Classical Gravity</strong>
         </a>
-        <div class="reading-meta">2026-03-07 · Book · DOI: 10.5281/zenodo.18902770</div>
+        <div class="reading-meta">2026 · Classical gravity · DOI: 10.5281/zenodo.20088462</div>
       </li>
-    </ul>
+
+      <li>
+        <a href="https://doi.org/10.5281/zenodo.20090219" target="_blank" rel="noopener noreferrer">
+          <strong>QDL Cosmological Closure as a Horizon-Screened Curvature Ansatz</strong>
+        </a>
+        <div class="reading-meta">2026 · Cosmological closure · DOI: 10.5281/zenodo.20090219</div>
+      </li>
+
+      <li>
+        <a href="publications.html#top5">
+          <strong>Earlier lattice, closure, SMEFT, metrology, and book records</strong>
+        </a>
+        <div class="reading-meta">Formal background and earlier foundational path</div>
+      </li>
+    </ol>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="publications.html">Browse Publications</a>
+      <a class="btn btn-primary" href="publications.html#core-closure-sequence">Browse Core Sequence</a>
+      <a class="btn btn-secondary" href="publications.html#technical-pillars">Browse Technical Pillars</a>
       <a class="btn btn-secondary" href="https://zenodo.org/communities/qdl-physics-institute/" target="_blank" rel="noopener noreferrer">Zenodo community</a>
     </div>
 
     <p class="details" style="margin-top:0.7rem;">
-      The framework page stays definition-first. Application pages and benchmarks should be read after the closure rule is clear.
+      The framework page stays definition-first. Application pages, benchmark records, and downstream hypotheses should be read after the closure rule is clear.
     </p>
   </div>
 
@@ -733,7 +783,7 @@
       </ol>
 
       <div class="details" style="margin-top:0.65rem;">
-        The formal development is carried by the lattice and dimensional-closure papers linked above.
+        The formal development is carried by the lattice, dimensional-closure, roadmap, and closure-sequence papers linked above.
       </div>
     </div>
   </section>
@@ -808,7 +858,7 @@
     <div class="takeaway"><strong>Takeaway:</strong> Closure is proposed as a strict pre-fit constraint that can filter admissible constructions before phenomenological tuning.</div>
 
     <p class="section-sub">
-      QDL replaces “dimensional consistency” as a loose check with a stricter closure predicate: admissible constructions must close onto integer multiples of the QDC under declared transforms.
+      QDL replaces “dimensional consistency” as a loose check with a stricter closure predicate: admissible constructions must close onto the QDC target under declared transforms.
     </p>
 
     <div class="card">
@@ -842,6 +892,42 @@
             Constant and unit claims should be treated as a structural taxonomy unless a separate operational or metrological constraint is explicitly derived.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="core-closure-program">
+    <h2 class="section-title">3. Core Closure Sequence as framework extension</h2>
+    <div class="takeaway"><strong>Takeaway:</strong> The Core Closure Sequence is the current technical extension of the framework into sector-level closure claims, residual tests, and physical realizations.</div>
+
+    <p class="section-sub">
+      The framework defines the admissibility language. The Core Closure Sequence applies that language across major physics sectors while separating theorem-level claims, reconstruction claims, ansatz-level claims, and open residuals.
+    </p>
+
+    <div class="card">
+      <ul>
+        <li>
+          <strong>Roadmap and claim hierarchy.</strong><br />
+          The capstone roadmap organizes QDL into spectrum, constants, operators, gravity, cosmology, and residual tests.
+        </li>
+        <li>
+          <strong>Numerical ledger companion.</strong><br />
+          The numerical companion provides first-pass closure reconstructions and executable checks for electroweak, flavor, gravitational, and cosmological targets.
+        </li>
+        <li>
+          <strong>Technical pillars.</strong><br />
+          Spectrum selection, electroweak closure, flavor closure, SMEFT operator governance, classical gravity, and cosmological closure form the main hard-physics pillar sequence.
+        </li>
+        <li>
+          <strong>Closure grammar and QDC realizations.</strong><br />
+          Sequence-level synthesis, neutral matching, Compton realization, and gravitational QDC recovery sharpen the compact closure grammar.
+        </li>
+      </ul>
+
+      <div class="hero-actions" style="margin-top:0.75rem;">
+        <a class="btn btn-primary" href="publications.html#core-closure-sequence">Core Closure Sequence</a>
+        <a class="btn btn-secondary" href="publications.html#technical-pillars">Technical Pillars</a>
+        <a class="btn btn-secondary" href="publications.html#closure-grammar">Closure Grammar</a>
       </div>
     </div>
   </section>
@@ -900,7 +986,7 @@
     <div class="takeaway"><strong>Takeaway:</strong> QDL is rejectable only when closure claims are tied to declared transforms, declared model families, and pre-stated failure conditions.</div>
 
     <p class="section-sub">
-      This section states the framework-level failure modes in plain terms. Detailed protocols and benchmark records belong on the Experiments page.
+      This section states the framework-level failure modes in plain terms. Detailed protocols and benchmark records belong on the Experiments, Publications, and Resources pages.
     </p>
 
     <div class="card">
@@ -923,17 +1009,21 @@
           <strong>Experimental falsification.</strong>
           If a pre-stated QDL-distinct scaling signature is not observed within the stated sensitivity under a pre-registered analysis plan, that specific experimental claim fails.
         </li>
+        <li>
+          <strong>Residual falsification.</strong>
+          If a claimed residual can be removed only by undeclared reparameterization, hidden tuning, or post-hoc reinterpretation, the claimed closure result must be downgraded or rejected.
+        </li>
       </ul>
 
       <div class="details" style="margin-top:0.65rem;">
-        Validation roadmap and benchmark-linked records are listed on <a href="experiments.html">Experiments</a>.
+        Validation roadmap and benchmark-linked records are listed on <a href="experiments.html">Experiments</a>, <a href="publications.html#benchmarks">Publications</a>, and <a href="resources.html">Resources</a>.
       </div>
     </div>
   </section>
 
   <section id="applications-gravity">
-    <h2 class="section-title">3. Gravity, coherence, and phenomenology (applications)</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> Once the framework is defined, it can be explored as a constraint layer in gravity and coherence constructions, then assessed through concrete phenomenology and scaling tests.</div>
+    <h2 class="section-title">4. Gravity, coherence, and phenomenology (applications)</h2>
+    <div class="takeaway"><strong>Takeaway:</strong> Once the framework is defined, it can be explored as a constraint layer in gravity, orbital mechanics, cosmology, and coherence constructions.</div>
 
     <p class="section-sub">
       These are downstream applications of the admissibility framework, not part of the minimal definition itself.
@@ -942,23 +1032,39 @@
     <div class="card">
       <ul>
         <li>
-          <strong>Gravity and minimum-length structure.</strong><br />
-          Explores whether closure and coherence constraints can motivate additional structure in gravity-related constructions.
+          <strong>QDC in gravitational dynamics.</strong><br />
+          The gravitational parameter <span class="equation-snippet">μ = GM</span> is treated as a concrete <span class="equation-snippet">L³F²</span> realization of the Quantized Dimensional Cell in Keplerian dynamics.
+          <div class="details">
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.20026718" target="_blank" rel="noopener noreferrer">10.5281/zenodo.20026718</a>
+          </div>
         </li>
         <li>
-          <strong>Unified field-content explorations.</strong><br />
-          Applies the ledger framework across Standard Model and gravity-related sectors under a shared closure language.
+          <strong>Classical gravity closure.</strong><br />
+          Einstein–Hilbert minimality, Bianchi conservation, geodesic motion, Keplerian QDC recovery, and the Planck–electroweak hierarchy are explored as gravity-sector closure targets.
+          <div class="details">
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.20088462" target="_blank" rel="noopener noreferrer">10.5281/zenodo.20088462</a>
+          </div>
+        </li>
+        <li>
+          <strong>Cosmological closure.</strong><br />
+          Horizon-screened curvature, vacuum-energy residuals, horizon ledgers, dark-sector separation, and cosmological-constant scale analysis are treated as ansatz-level cosmological applications.
+          <div class="details">
+            Reference:
+            <a href="https://doi.org/10.5281/zenodo.20090219" target="_blank" rel="noopener noreferrer">10.5281/zenodo.20090219</a>
+          </div>
         </li>
         <li>
           <strong>Coherent ledger fields.</strong><br />
-          Connects ledger geometry to proposed phenomenology in torsion balances, NV centers, cavity scaling, and metamaterials.
+          Ledger geometry can be explored in torsion balances, NV centers, cavity scaling, metamaterials, and residual-first experimental platforms.
         </li>
       </ul>
     </div>
   </section>
 
   <section id="applications-eft">
-    <h2 class="section-title">4. EFT / SMEFT as ledger lattices (applications)</h2>
+    <h2 class="section-title">5. EFT / SMEFT as ledger lattices (applications)</h2>
     <div class="takeaway"><strong>Takeaway:</strong> Ledger form turns operator content into an integer lattice where closure is proposed as an additional admissibility constraint.</div>
 
     <p class="section-sub">
@@ -976,8 +1082,17 @@
           <strong>SMEFT exclusions and relations.</strong><br />
           Closure-derived exclusions and coefficient relations should be interpreted only after explicit comparison with canonical SMEFT baselines.
           <div class="details">
-            Reference:
+            Earlier reference:
             <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17780443</a>
+          </div>
+        </li>
+
+        <li>
+          <strong>SMEFT matrix audit.</strong><br />
+          The current operator-governance pillar treats SMEFT structure as a reproducible matrix audit involving modular sector selection, anomalous-dimension closure, and violation taxonomy.
+          <div class="details">
+            Current reference:
+            <a href="https://doi.org/10.5281/zenodo.20087107" target="_blank" rel="noopener noreferrer">10.5281/zenodo.20087107</a>
           </div>
         </li>
       </ul>
@@ -985,11 +1100,11 @@
   </section>
 
   <section id="applications-metrology">
-    <h2 class="section-title">5. Metrology, constants, and validation (applications)</h2>
+    <h2 class="section-title">6. Metrology, constants, and validation (applications)</h2>
     <div class="takeaway"><strong>Takeaway:</strong> QDL is intended to be testable: metrology and benchmark work connect closure claims to public records and declared experiments.</div>
 
     <p class="section-sub">
-      Metrology and constants work provides a structured language for dimensional audits and measurement-chain reasoning, while validation work ties the framework to declared benchmarks and null tests.
+      Metrology and constants work provides a structured language for dimensional audits and measurement-chain reasoning, while validation work ties the framework to declared benchmarks, null tests, and executable infrastructure.
     </p>
 
     <div class="card">
@@ -998,14 +1113,19 @@
           <strong>QMU ledgers and dimensional audits.</strong><br />
           Structured dimensional audits for units, constants, and measurement chains.
           <div class="details">
-            Reference:
-            <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">10.5281/zenodo.17619526</a>
+            Published journal reference:
+            <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">10.57647/jtap.2026.2004.05</a>
           </div>
         </li>
 
         <li>
           <strong>Ontology of constants.</strong><br />
-          Treats constants as a structural taxonomy unless a separate operational constraint is derived.
+          Treats constants as structural interface objects unless a separate operational constraint is derived.
+        </li>
+
+        <li>
+          <strong>Executable infrastructure.</strong><br />
+          QDL is being developed as machine-executable structural-admissibility infrastructure for measurement pipelines, modeling pipelines, uncertainty analysis, AI scientific-output checking, scientific software, sensor fusion, and digital-twin validation.
         </li>
 
         <li>
@@ -1013,12 +1133,16 @@
           Torsion balances, NV centers, cavities, and metamaterials are proposed as declared tests of whether closure adds reproducible structure beyond conventional bookkeeping.
         </li>
       </ul>
+
+      <p class="details" style="margin-top:0.65rem;">
+        U.S. Provisional Patent Application No. 64/055,985, <em>Systems and Methods for Structural Admissibility Validation of Physical Measurement and Modeling Pipelines</em>, was filed in May 2026. Status: patent pending.
+      </p>
     </div>
   </section>
 
   <section id="quickstart">
-    <h2 class="section-title">6. Quick-start summary</h2>
-    <div class="takeaway"><strong>Takeaway:</strong> If you are new, read the lattice and closure papers first, then branch into applications; if you are validation-first, start at Experiments and loop back here.</div>
+    <h2 class="section-title">7. Quick-start summary</h2>
+    <div class="takeaway"><strong>Takeaway:</strong> If you are new, start with the Core Closure Sequence for the current technical program, then use the earlier lattice and closure papers as formal background.</div>
 
     <p class="section-sub">
       If you only take one thing from this page: QDL is a closure-based admissibility framework intended to turn dimensional reasoning into a more explicit structural filter.
@@ -1026,6 +1150,18 @@
 
     <div class="card">
       <ul>
+        <li>
+          <strong>Current primary entry path:</strong>
+          <a href="publications.html#core-closure-sequence">Core Closure Sequence</a>
+        </li>
+        <li>
+          <strong>Technical pillars:</strong>
+          <a href="publications.html#technical-pillars">Spectrum selection, electroweak closure, flavor closure, operator governance, gravity, and cosmology</a>
+        </li>
+        <li>
+          <strong>Closure grammar:</strong>
+          <a href="publications.html#closure-grammar">Residual tests, neutral matching, Compton realization, and gravitational QDC recovery</a>
+        </li>
         <li>
           <strong>Foundational lattice paper:</strong>
           <a href="https://doi.org/10.5281/zenodo.18970320" target="_blank" rel="noopener noreferrer">Integer Lattice Structure of Dimensional Quantities</a>
@@ -1035,16 +1171,12 @@
           <a href="https://doi.org/10.5281/zenodo.18981850" target="_blank" rel="noopener noreferrer">A Lattice Structure for Dimensional Closure in Physical Theories</a>
         </li>
         <li>
-          <strong>SMEFT application:</strong>
-          <a href="https://doi.org/10.5281/zenodo.17780443" target="_blank" rel="noopener noreferrer">Ledger-Closure Constraints on the SMEFT</a>
+          <strong>Published metrology anchor:</strong>
+          <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">The Quantized Dimensional Ledger for Metrology</a>
         </li>
         <li>
-          <strong>Metrology application:</strong>
-          <a href="https://doi.org/10.5281/zenodo.17619526" target="_blank" rel="noopener noreferrer">The Quantized Dimensional Ledger for Metrology</a>
-        </li>
-        <li>
-          <strong>Book overview:</strong>
-          <a href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">The Quantized Dimensional Ledger: A Structural Framework for Dimensional Coherence in Physics</a>
+          <strong>Live demonstration:</strong>
+          <a href="qdl-calculator.html">QDL Admissibility Calculator</a>
         </li>
         <li>
           <strong>Browse the full library:</strong>
@@ -1063,8 +1195,8 @@
 <footer>
   <div class="footer-inner">
     <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
-    <span>Quantized Dimensional Ledger · Structural Admissibility · Metrology · Testable Constraints</span>
-    <span><a href="demo.html">Prototype Demo</a> · prototype workflow and example report</span>
+    <span>Quantized Dimensional Ledger · Structural Admissibility · Core Closure Sequence · Testable Constraints</span>
+    <span><a href="demo.html">Prototype Demo</a> · <a href="qdl-calculator.html">QDL Calculator</a></span>
   </div>
 </footer>
 
