@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Resources | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Resources from the QDL Physics Institute, including the QDL substrate capstone, SMEFT Γ(O) audit companion, Core Closure Sequence access, prototype demonstrations, books, benchmark access, executable validation infrastructure, QDL Measurement Integrity Engine materials, and supporting resources related to the Quantized Dimensional Ledger research program.">
+<meta name="description" content="Resources from the QDL Physics Institute, including the JTAP metrology foundation, QDL substrate capstone, Toroidal QDC Knot geometric substrate keystone, SMEFT Γ(O) audit companion, charged-lepton mass-spectrum sequence, Core Closure Sequence access, prototype demonstrations, books, benchmark access, executable validation infrastructure, QDL Measurement Integrity Engine materials, and supporting resources related to the Quantized Dimensional Ledger research program.">
 
 <style>
 :root{
@@ -141,7 +141,7 @@ main{
 .hero-sub{
   font-size:.97rem;
   color:#4b5563;
-  max-width:54rem;
+  max-width:56rem;
   margin-bottom:.95rem;
 }
 .hero-meta{
@@ -184,6 +184,11 @@ main{
   grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
   gap:1rem;
 }
+.grid-2-even{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -193,7 +198,7 @@ main{
   .grid-3{grid-template-columns:1fr;}
 }
 @media (max-width:900px){
-  .grid-2{grid-template-columns:1fr;}
+  .grid-2,.grid-2-even{grid-template-columns:1fr;}
 }
 .card{
   background:var(--bg-card);
@@ -316,6 +321,63 @@ main{
   margin-top:1rem;
   max-width:58rem;
 }
+.feature-figure{
+  margin:.85rem 0 .75rem;
+  max-width:760px;
+}
+.feature-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+}
+.feature-figure figcaption{
+  margin-top:.48rem;
+  font-size:.82rem;
+  color:#6b7280;
+  line-height:1.55;
+}
+.pathway{
+  display:grid;
+  gap:.85rem;
+}
+.pathway-step{
+  display:grid;
+  grid-template-columns:2.6rem minmax(0,1fr);
+  gap:.8rem;
+  align-items:start;
+  padding:.9rem;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  background:#ffffff;
+}
+.pathway-number{
+  width:2.2rem;
+  height:2.2rem;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#1d4ed8;
+  background:#eff6ff;
+  border:1px solid rgba(37,99,235,.25);
+}
+.pathway-step h3{
+  font-size:.98rem;
+  margin-bottom:.18rem;
+  color:#111827;
+}
+.pathway-step p{
+  font-size:.88rem;
+  color:#4b5563;
+  margin-bottom:.25rem;
+}
+.pathway-step .card-meta{
+  margin-top:.12rem;
+}
 footer{
   border-top:1px solid var(--border-soft);
   margin-top:3rem;
@@ -367,25 +429,28 @@ footer{
     <div class="hero-kicker">Resources</div>
     <h1 class="hero-title">Program Resources</h1>
     <p class="hero-sub">
-      This page collects supporting materials for the QDL research program, including the QDL substrate capstone,
-      the SMEFT Γ(O) audit companion, Core Closure Sequence access, prototype demonstrations, books, benchmark
-      access points, executable validation infrastructure, and reader-facing materials that support orientation,
+      This page collects supporting materials for the QDL research program, including the JTAP metrology foundation,
+      the QDL substrate capstone, the Toroidal QDC Knot geometric substrate keystone, the SMEFT Γ(O) audit companion,
+      the charged-lepton / mass-spectrum sequence, Core Closure Sequence access, prototype demonstrations, books,
+      benchmark access points, executable validation infrastructure, and reader-facing materials that support orientation,
       auditability, and technical review.
     </p>
 
     <p style="margin-top:.6rem;font-size:.92rem;color:#4b5563;">
-      For the current program-level entry point, start with the
-      <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">QDL Substrate Capstone</a>.
-      For the first machine-readable operator-mixing audit artifact, open the
-      <a href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">SMEFT Γ(O) Audit Companion</a>.
-      For the main technical reading path, use the
-      <a href="publications.html#core-closure-sequence">Core Closure Sequence</a>. For a live demonstration of structural admissibility, use the
-      <a href="qdl-calculator.html">QDL Admissibility Calculator</a>.
+      Recommended path:
+      <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">JTAP metrology foundation</a>
+      → <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">QDL Substrate Capstone</a>
+      → <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Toroidal QDC Knot</a>
+      → <a href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">SMEFT Γ(O) Audit Companion</a>
+      → <a href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">charged-lepton / mass-spectrum sequence</a>.
     </p>
 
     <div class="hero-meta">
+      <span class="hero-chip">JTAP metrology foundation</span>
       <span class="hero-chip">QDL substrate capstone</span>
+      <span class="hero-chip">Toroidal QDC Knot</span>
       <span class="hero-chip">SMEFT Γ(O) audit companion</span>
+      <span class="hero-chip">Mass-spectrum sequence</span>
       <span class="hero-chip">Core Closure Sequence</span>
       <span class="hero-chip">Prototype demo</span>
       <span class="hero-chip">Books</span>
@@ -393,14 +458,115 @@ footer{
       <span class="hero-chip">QDL–SO10–1 GUT series</span>
       <span class="hero-chip">QDL Measurement Integrity Engine</span>
       <span class="hero-chip">Patent-pending infrastructure</span>
-      <span class="hero-chip">Supporting materials</span>
+    </div>
+  </section>
+
+  <section class="section" id="recommended-path">
+    <div class="section-header">
+      <h2 class="section-title">Recommended Reading Path</h2>
+      <p class="section-kicker">The five-anchor hierarchy for evaluating the current QDL program coherently.</p>
+    </div>
+
+    <div class="card" style="border-color:rgba(37,99,235,.34); background:#f8fbff;">
+      <div class="pathway">
+
+        <div class="pathway-step">
+          <div class="pathway-number">1</div>
+          <div>
+            <h3>
+              <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">
+                JTAP Metrology Paper
+              </a>
+            </h3>
+            <p>
+              <strong>First peer-reviewed foundation.</strong>
+              Establishes QDL in metrology through dimensional closure, QMU ledgers, and the ontology of physical constants.
+            </p>
+            <div class="card-meta">Journal of Theoretical and Applied Physics · DOI: 10.57647/jtap.2026.2004.05</div>
+          </div>
+        </div>
+
+        <div class="pathway-step">
+          <div class="pathway-number">2</div>
+          <div>
+            <h3>
+              <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">
+                Planck-Scale Substrate Capstone
+              </a>
+            </h3>
+            <p>
+              <strong>QDL substrate architecture.</strong>
+              Defines the substrate as the closure-persistent residue of candidate Planck-scale fluctuation structure,
+              not a medium, material aether, or hidden substance.
+            </p>
+            <div class="card-meta">Zenodo capstone · DOI: 10.5281/zenodo.20346814</div>
+          </div>
+        </div>
+
+        <div class="pathway-step">
+          <div class="pathway-number">3</div>
+          <div>
+            <h3>
+              <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">
+                Toroidal QDC Knot
+              </a>
+            </h3>
+            <p>
+              <strong>Geometric substrate keystone.</strong>
+              Gives the QDL substrate a compact closure object: a toroidal two-cycle recurrence mode realizing
+              <em>QDC<sub>T</sub> = V<sub>T</sub>&omega;<sub>1</sub>&omega;<sub>2</sub> &sim; L<sup>3</sup>F<sup>2</sup></em>.
+            </p>
+            <div class="card-meta">Zenodo keystone · DOI: 10.5281/zenodo.20367493</div>
+          </div>
+        </div>
+
+        <div class="pathway-step">
+          <div class="pathway-number">4</div>
+          <div>
+            <h3>
+              <a href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">
+                SMEFT Γ(O) Audit Companion
+              </a>
+            </h3>
+            <p>
+              <strong>Falsifiable operator-governance test.</strong>
+              Provides a representative source-anchored, machine-readable audit subset for closure-vector classification
+              of Warsaw-basis SMEFT operator mixing.
+            </p>
+            <div class="card-meta">Zenodo dataset · DOI: 10.5281/zenodo.20357001</div>
+          </div>
+        </div>
+
+        <div class="pathway-step">
+          <div class="pathway-number">5</div>
+          <div>
+            <h3>
+              <a href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">
+                Charged-Lepton / Mass-Spectrum Sequence
+              </a>
+            </h3>
+            <p>
+              <strong>Numerical spectrum application.</strong>
+              Develops QDL occupancy-amplitude closure, Koide charged-lepton geometry, the relational phase
+              <em>&theta;<sub>&ell;</sub> = 2/9</em>, and charged-lepton mass-ratio reconstruction.
+            </p>
+            <div class="card-meta">Mass-spectrum synthesis · DOI: 10.5281/zenodo.20328260</div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="note">
+        This path gives visitors a coherent progression: peer-reviewed metrology foundation → substrate architecture →
+        geometric substrate keystone → falsifiable operator audit → numerical mass-spectrum application.
+      </p>
     </div>
   </section>
 
   <section class="section" id="program-capstone-access">
     <div class="section-header">
       <h2 class="section-title">Program Capstone Access</h2>
-      <p class="section-kicker">The current program-level reference for QDL as a closure-admissibility theory of physical persistence.</p>
+      <p class="section-kicker">The program-level reference for QDL as a closure-admissibility theory of physical persistence.</p>
     </div>
 
     <div class="card" style="border-color:rgba(37,99,235,.34); background:#f8fbff;">
@@ -433,8 +599,67 @@ footer{
       </p>
       <div class="btn-row">
         <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">Open capstone record</a>
+        <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Open Toroidal QDC Knot</a>
         <a class="btn btn-secondary" href="research.html">Read research architecture</a>
         <a class="btn btn-secondary" href="publications.html#core-closure-sequence">Core Closure Sequence</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="toroidal-qdc-knot">
+    <div class="section-header">
+      <h2 class="section-title">Toroidal QDC Knot</h2>
+      <p class="section-kicker">The canonical geometric substrate-mode keystone for the QDL program.</p>
+    </div>
+
+    <div class="card" style="border-color:rgba(37,99,235,.42); background:#f8fbff;">
+      <div class="card-title">The Toroidal QDC Knot</div>
+      <div class="card-meta">Geometric substrate keystone · Two-cycle recurrence · DOI-backed preprint</div>
+      <div class="pill-row">
+        <span class="pill pill-accent">Toroidal QDC</span>
+        <span class="pill">Two-cycle recurrence</span>
+        <span class="pill">L³F²</span>
+        <span class="pill">Family-class lemma</span>
+        <span class="pill">Koide phase</span>
+        <span class="pill">Vacuum filtering</span>
+        <span class="pill">Quantum geometry</span>
+      </div>
+
+      <figure class="feature-figure">
+        <img src="Toroidal-Knot.png" alt="Toroidal QDC Knot graphical abstract showing a compact two-cycle recurrence torus and QDL closure sequence">
+        <figcaption>
+          Graphical abstract for the toroidal geometric substrate keystone.
+        </figcaption>
+      </figure>
+
+      <p>
+        The canonical QDL geometric substrate-mode record is
+        <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">
+          Bourassa, J. D. (2026). <em>The Toroidal QDC Knot: A Closure-Stable Geometric Substrate Mode for the Quantized Dimensional Ledger</em> (v1.0). Zenodo. https://doi.org/10.5281/zenodo.20367493
+        </a>.
+      </p>
+      <p>
+        This paper extends the substrate capstone by proposing a compact geometric persistence object:
+        a toroidal QDC knot with
+        <em>QDC<sub>T</sub> = V<sub>T</sub>&omega;<sub>1</sub>&omega;<sub>2</sub> &sim; L<sup>3</sup>F<sup>2</sup></em>.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        Its closure sequence is
+        <em>T<sub>n,m</sub> &rarr; QDC<sub>T</sub> &rarr; &Gamma;<sub>T</sub>(T) &rarr; C<sup>T</sup><sub>QDL</sub> = 0 &rarr; R<sup>T</sup><sub>QDL</sub></em>.
+        Conditional links include three-family recurrence, the charged-lepton phase
+        <em>&theta;<sub>&ell;</sub> = 2/9</em>, Koide occupancy-amplitude closure, vacuum residual selection,
+        gauge-sector admissibility, non-SM exclusion, the Compton–gravity threshold, and a candidate toroidal QDC Hilbert space.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        Scope note: this is a conditional geometric substrate hypothesis. It does not claim a completed derivation of the Standard Model,
+        a full quantum gravity theory, a numerical derivation of the cosmological constant, or a final solution to dark matter,
+        inflation, black-hole microstates, or time.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Open Toroidal QDC Knot</a>
+        <a class="btn btn-secondary" href="Toroidal-Knot.png" target="_blank" rel="noopener noreferrer">Open graphical abstract</a>
+        <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.20316698" target="_blank" rel="noopener noreferrer">Prior Toroidal QDC Cell</a>
+        <a class="btn btn-secondary" href="research.html#applications">Application directions</a>
       </div>
     </div>
   </section>
@@ -482,6 +707,46 @@ footer{
     </div>
   </section>
 
+  <section class="section" id="mass-spectrum-sequence">
+    <div class="section-header">
+      <h2 class="section-title">Mass-Spectrum Resources</h2>
+      <p class="section-kicker">The numerical spectrum application layer of the QDL program.</p>
+    </div>
+
+    <div class="card" style="border-color:rgba(37,99,235,.30); background:#f8fbff;">
+      <div class="card-title">Charged-Lepton / Mass-Spectrum Sequence</div>
+      <div class="card-meta">Numerical spectrum application · Koide closure · Relational phase structure</div>
+      <div class="pill-row">
+        <span class="pill pill-accent">Mass occupancy</span>
+        <span class="pill">Koide cone</span>
+        <span class="pill">θℓ = 2/9</span>
+        <span class="pill">Muon–electron mass ratio</span>
+        <span class="pill">Toroidal interpretation</span>
+      </div>
+      <p>
+        A current synthesis record is
+        <a href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">
+          <em>QDL Charged-Lepton Mass Spectrum: A Synthesis of Derived Structure and Phenomenological Radial Closure</em>
+        </a>.
+      </p>
+      <p>
+        The mass-spectrum sequence develops occupancy-amplitude closure, Koide charged-lepton geometry, relational phase quantization,
+        and charged-lepton mass-ratio reconstruction.
+      </p>
+      <p style="font-size:.9rem;color:#4b5563;">
+        This sequence is best read after the substrate capstone and Toroidal QDC Knot because the toroidal paper supplies a geometric
+        interpretation of three-family recurrence and the charged-lepton relational phase
+        <em>&theta;<sub>&ell;</sub> = 2/9</em>.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">Open synthesis record</a>
+        <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.20325844" target="_blank" rel="noopener noreferrer">Muon–electron ratio record</a>
+        <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.20240650" target="_blank" rel="noopener noreferrer">Koide closure record</a>
+        <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.20237863" target="_blank" rel="noopener noreferrer">Mass-occupancy principle</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="core-closure-access">
     <div class="section-header">
       <h2 class="section-title">Core Closure Sequence Access</h2>
@@ -504,7 +769,7 @@ footer{
         <span class="pill">QDC realizations</span>
       </div>
       <p>
-        The Core Closure Sequence is now the central technical access route for the QDL program. It organizes the work
+        The Core Closure Sequence is the central technical access route for the QDL program. It organizes the work
         around a roadmap and claim hierarchy, numerical ledger checks, technical pillars, residual tests, neutral matching,
         Compton realization, and gravitational QDC recovery.
       </p>
@@ -524,7 +789,7 @@ footer{
       <div class="card">
         <div class="card-title">1. Read</div>
         <p>
-          Use the Publications page to follow the capstone, SMEFT audit companion, Core Closure Sequence, technical pillars,
+          Use the Publications page to follow the five-anchor hierarchy, Core Closure Sequence, technical pillars,
           closure grammar papers, QDL–SO10–1 benchmark series, and earlier foundational path.
         </p>
         <div class="btn-row">
@@ -536,7 +801,7 @@ footer{
         <div class="card-title">2. Understand</div>
         <p>
           Use the Research Program page for the conceptual architecture: framework layer, scientific applications,
-          executable infrastructure, residual-first tests, and application branches.
+          executable infrastructure, residual-first tests, toroidal substrate geometry, and application branches.
         </p>
         <div class="btn-row">
           <a class="btn btn-secondary" href="research.html">Research Program</a>
@@ -708,7 +973,7 @@ footer{
       <div class="card">
         <div class="card-title">Best Reading Order</div>
         <p>
-          Use the substrate capstone for program identity, the SMEFT audit companion for machine-readable operator-governance data, and the Core Closure Sequence for the current technical path.
+          Use the five-anchor hierarchy first. The book remains useful as orientation, but the current canonical program path runs through the JTAP foundation, substrate capstone, Toroidal QDC Knot, SMEFT audit companion, and mass-spectrum sequence.
         </p>
       </div>
     </div>
@@ -869,8 +1134,8 @@ footer{
         </a>
       </p>
       <p style="font-size:.9rem;color:#4b5563;">
-        Recommended reading order: start with the capstone Paper #9 for the integrated map, then Papers #5–#8 for
-        the executable hardening details, and finally Papers #1–#3 for the original benchmark, phenomenology,
+        Recommended reading order: start with the current five-anchor hierarchy, then read the QDL–SO10–1 capstone Paper #9 for the integrated map,
+        Papers #5–#8 for the executable hardening details, and finally Papers #1–#3 for the original benchmark, phenomenology,
         and stress-test sequence.
       </p>
       <div class="btn-row">
@@ -907,8 +1172,11 @@ footer{
       <div class="card">
         <div class="card-title">How to Navigate the Program</div>
         <ul class="list">
-          <li>Start with the <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">QDL Substrate Capstone</a> for program identity and physical-persistence framing.</li>
+          <li>Start with the <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">JTAP metrology foundation</a> for the first peer-reviewed foundation.</li>
+          <li>Use the <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">QDL Substrate Capstone</a> for program identity and physical-persistence framing.</li>
+          <li>Use the <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Toroidal QDC Knot</a> for the geometric substrate keystone.</li>
           <li>Use the <a href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">SMEFT Γ(O) Audit Companion</a> for the first machine-readable operator-mixing audit artifact.</li>
+          <li>Use the <a href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">charged-lepton mass-spectrum synthesis</a> for the numerical spectrum application.</li>
           <li>Use <a href="publications.html#core-closure-sequence">Core Closure Sequence</a> for the current technical path.</li>
           <li>Use <a href="research.html">Research Program</a> for the conceptual and formal structure.</li>
           <li>Use <a href="publications.html">Publications</a> for the DOI-backed record, technical pillars, datasets, and application papers.</li>
@@ -928,7 +1196,7 @@ footer{
 <footer>
   <div class="footer-grid">
     <div>© QDL Physics Institute</div>
-    <div>Last updated: May 2026 — QDL substrate capstone, SMEFT Γ(O) audit companion, Core Closure Sequence, and patent-pending executable infrastructure updated.</div>
+    <div>Last updated: May 2026 — resources updated with JTAP foundation, QDL substrate capstone, Toroidal QDC Knot, SMEFT Γ(O) audit companion, charged-lepton / mass-spectrum sequence, Core Closure Sequence, and patent-pending executable infrastructure.</div>
     <div>
       <a href="qdl-calculator.html">QDL Calculator</a>
     </div>
