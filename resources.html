@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>Resources | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Resources from the QDL Physics Institute, including the canonical QDL roadmap, JTAP metrology foundation, QDL substrate capstone, Toroidal QDC Knot geometric substrate keystone, QDC Completion Theorem, SMEFT Γ(O) audit companion, charged-lepton mass-spectrum sequence, Core Closure Sequence access, prototype demonstrations, books, benchmark access, executable validation infrastructure, QDL Measurement Integrity Engine materials, and supporting resources related to the Quantized Dimensional Ledger research program.">
+<meta name="description" content="Resources from the QDL Physics Institute, including the QDL Lattice explanation, QDL in 5 Minutes, flagship monograph, canonical QDL roadmap, JTAP metrology foundation, QDL substrate capstone, Toroidal QDC Knot geometric substrate keystone, QDC Completion Theorem, SMEFT Γ(O) audit companion, charged-lepton mass-spectrum sequence, Core Closure Sequence access, prototype demonstrations, books, benchmark access, executable validation infrastructure, QDL Measurement Integrity Engine materials, and supporting resources related to the Quantized Dimensional Ledger research program.">
 
 <style>
 :root{
@@ -19,6 +19,7 @@
   --accent-soft:#eff6ff;
   --orange:#ea580c;
   --orange-soft:#fff7ed;
+  --purple:#7c3aed;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -144,7 +145,7 @@ main{
 .hero-sub{
   font-size:.97rem;
   color:#4b5563;
-  max-width:56rem;
+  max-width:58rem;
   margin-bottom:.95rem;
 }
 .hero-meta{
@@ -252,6 +253,11 @@ main{
   background:#eff6ff;
   color:#1d4ed8;
 }
+.pill-purple{
+  border-color:rgba(124,58,237,.35);
+  background:#f5f3ff;
+  color:#5b21b6;
+}
 .pill-orange{
   border-color:rgba(234,88,12,.35);
   background:#fff7ed;
@@ -289,12 +295,18 @@ main{
   color:#fff;
   box-shadow:0 10px 24px rgba(37,99,235,.25);
 }
+.btn-purple{
+  background:linear-gradient(135deg,#7c3aed,#6d28d9);
+  color:#fff;
+  box-shadow:0 10px 24px rgba(124,58,237,.22);
+}
 .btn-orange{
   background:linear-gradient(135deg,#f97316,#ea580c);
   color:#fff;
   box-shadow:0 10px 24px rgba(234,88,12,.20);
 }
 .btn-primary:hover,
+.btn-purple:hover,
 .btn-orange:hover{filter:brightness(1.03);text-decoration:none;}
 .btn-secondary{
   background:#fff;
@@ -342,6 +354,12 @@ main{
 .feature-figure.wide{
   max-width:980px;
 }
+.feature-figure.dark{
+  background:#020617;
+  border-radius:18px;
+  padding:.65rem;
+  border:1px solid rgba(56,189,248,.28);
+}
 .feature-figure img{
   width:100%;
   height:auto;
@@ -350,11 +368,18 @@ main{
   border:1px solid #e5e7eb;
   background:#fff;
 }
+.feature-figure.dark img{
+  border-radius:13px;
+  border:1px solid rgba(148,163,184,.28);
+}
 .feature-figure figcaption{
   margin-top:.48rem;
   font-size:.82rem;
   color:#6b7280;
   line-height:1.55;
+}
+.feature-figure.dark figcaption{
+  color:#cbd5e1;
 }
 .pathway{
   display:grid;
@@ -387,6 +412,11 @@ main{
   background:#fff7ed;
   border-color:rgba(234,88,12,.25);
 }
+.pathway-number.purple{
+  color:#5b21b6;
+  background:#f5f3ff;
+  border-color:rgba(124,58,237,.25);
+}
 .pathway-step h3{
   font-size:.98rem;
   margin-bottom:.18rem;
@@ -399,6 +429,29 @@ main{
 }
 .pathway-step .card-meta{
   margin-top:.12rem;
+}
+.lattice-chain{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin:.75rem 0 .85rem;
+}
+.lattice-node{
+  border:1px solid rgba(37,99,235,.28);
+  background:#eff6ff;
+  color:#1e3a8a;
+  border-radius:999px;
+  padding:.25rem .65rem;
+  font-size:.78rem;
+  font-weight:600;
+}
+.lattice-arrow{
+  color:#64748b;
+  padding:.25rem 0;
+  font-size:.78rem;
+}
+@media (max-width:700px){
+  .lattice-arrow{display:none;}
 }
 footer{
   border-top:1px solid var(--border-soft);
@@ -455,26 +508,25 @@ footer{
     <div class="hero-kicker">Resources</div>
     <h1 class="hero-title">Program Resources</h1>
     <p class="hero-sub">
-      This page collects supporting materials for the QDL research program, including the canonical QDL roadmap,
-      the JTAP metrology foundation, the QDL substrate capstone, the Toroidal QDC Knot geometric substrate keystone,
-      the QDC Completion Theorem, the SMEFT Γ(O) audit companion, the charged-lepton / mass-spectrum sequence,
-      Core Closure Sequence access, prototype demonstrations, books, benchmark access points, executable validation infrastructure,
-      and reader-facing materials that support orientation, auditability, and technical review.
+      This page collects supporting materials for the QDL research program, including the QDL Lattice graphic,
+      QDL in 5 Minutes, the flagship monograph, the canonical QDL roadmap, the JTAP metrology foundation,
+      the QDL substrate capstone, the Toroidal QDC Knot geometric substrate keystone, the QDC Completion Theorem,
+      the SMEFT Γ(O) audit companion, the charged-lepton / mass-spectrum sequence, Core Closure Sequence access,
+      prototype demonstrations, books, benchmark access points, executable validation infrastructure, and reader-facing
+      materials that support orientation, auditability, and technical review.
     </p>
 
 ```
 <p style="margin-top:.6rem;font-size:.92rem;color:#4b5563;">
-  Recommended path:
-  <a href="https://doi.org/10.5281/zenodo.20461142" target="_blank" rel="noopener noreferrer">canonical QDL roadmap</a>
-  → <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">JTAP metrology foundation</a>
-  → <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">QDL Substrate Capstone</a>
-  → <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Toroidal QDC Knot</a>
-  → <a href="https://doi.org/10.5281/zenodo.20692677" target="_blank" rel="noopener noreferrer">QDC Completion Theorem</a>
-  → <a href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">SMEFT Γ(O) Audit Companion</a>
-  → <a href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">charged-lepton / mass-spectrum sequence</a>.
+  The simplest public entry point is the QDL Lattice picture: space is modeled not as absolute emptiness,
+  but as a closure-compatible lattice of recurrence. Particles are persistent localized modes of that same structure,
+  and geometry is investigated as a possible large-scale response of collective closure stress.
 </p>
 
 <div class="hero-meta">
+  <span class="hero-chip">QDL Lattice</span>
+  <span class="hero-chip">QDL in 5 Minutes</span>
+  <span class="hero-chip">Flagship monograph</span>
   <span class="hero-chip">Canonical QDL roadmap</span>
   <span class="hero-chip">JTAP metrology foundation</span>
   <span class="hero-chip">QDL substrate capstone</span>
@@ -494,10 +546,77 @@ footer{
 
   </section>
 
+  <section class="section" id="qdl-lattice-resource">
+    <div class="section-header">
+      <h2 class="section-title">QDL Lattice Orientation</h2>
+      <p class="section-kicker">The simplified public explanation and visual entry point.</p>
+    </div>
+
+```
+<div class="grid-2">
+  <div class="card" style="border-color:rgba(37,99,235,.34); background:#f8fbff;">
+    <div class="card-title">The Core Picture</div>
+    <div class="card-meta">QDL Lattice · Closure-persistent recurrence · Public explanation layer</div>
+    <div class="pill-row">
+      <span class="pill pill-accent">QDL Lattice</span>
+      <span class="pill">Localized modes</span>
+      <span class="pill">Composite modes</span>
+      <span class="pill">Collective stress</span>
+      <span class="pill">Effective geometry</span>
+    </div>
+
+    <p>
+      QDL models space not as absolute emptiness, but as a closure-compatible <strong>QDL Lattice</strong> of recurrence.
+      Persistent particles are localized closure modes of that same structure. Composite particles are confined
+      multi-channel modes. At larger scales, collective closure stress is investigated as a possible route to
+      effective geometric response.
+    </p>
+
+    <div class="lattice-chain" aria-label="QDL Lattice hierarchy">
+      <span class="lattice-node">QDL Lattice</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Localized particle modes</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Confined composite modes</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Collective stress</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Effective geometry</span>
+    </div>
+
+    <p style="font-size:.9rem;color:#4b5563;">
+      Claim-status note: this is the QDL substrate interpretation and research architecture. It is not a claim that
+      microscopic QDL lattice cells have already been directly observed, or that spacetime, spin, gravity, and the full
+      particle spectrum have already been completely derived.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="qdl-in-5-minutes.html">Read QDL in 5 Minutes</a>
+      <a class="btn btn-secondary" href="research.html#qdl-lattice-picture">Research context</a>
+      <a class="btn btn-secondary" href="integrated-worldview-qdl-lattice.png" target="_blank" rel="noopener noreferrer">Open graphic</a>
+    </div>
+  </div>
+
+  <figure class="feature-figure dark" style="margin-top:0;">
+    <a href="integrated-worldview-qdl-lattice.png" target="_blank" rel="noopener noreferrer">
+      <img src="integrated-worldview-qdl-lattice.png" alt="Integrated QDL worldview showing the QDL Lattice leading to localized closure modes, triadic baryons, collective stress, and effective geometry">
+    </a>
+    <figcaption>
+      <strong>Integrated QDL worldview.</strong>
+      The QDL Lattice is the proposed closure-compatible recurrence background. Localized and composite particle modes
+      are treated as persistent reorganizations of that background, while effective geometry is investigated as a
+      large-scale collective response.
+    </figcaption>
+  </figure>
+</div>
+```
+
+  </section>
+
   <section class="section" id="recommended-path">
     <div class="section-header">
       <h2 class="section-title">Recommended Reading Path</h2>
-      <p class="section-kicker">The seven-anchor hierarchy for evaluating the current QDL program coherently.</p>
+      <p class="section-kicker">The current entry hierarchy for evaluating the QDL program coherently.</p>
     </div>
 
 ```
@@ -505,7 +624,42 @@ footer{
   <div class="pathway">
 
     <div class="pathway-step">
-      <div class="pathway-number">1</div>
+      <div class="pathway-number purple">1</div>
+      <div>
+        <h3>
+          <a href="qdl-in-5-minutes.html">
+            QDL in 5 Minutes
+          </a>
+        </h3>
+        <p>
+          <strong>Equation-light public orientation.</strong>
+          Introduces the QDL Lattice picture, closure-persistent recurrence, structural admissibility,
+          predictive compression, and claim-status discipline before the reader enters the technical paper sequence.
+        </p>
+        <div class="card-meta">Site resource · qdl-in-5-minutes.html</div>
+      </div>
+    </div>
+
+    <div class="pathway-step">
+      <div class="pathway-number purple">2</div>
+      <div>
+        <h3>
+          <a href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">
+            Flagship Monograph
+          </a>
+        </h3>
+        <p>
+          <strong>Defining synthesis.</strong>
+          <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em> gives the full conceptual
+          synthesis: predictive compression, closure ontology, QDL/QDC construction, spin-2 obstruction,
+          no-fit boundaries, and the vacuum-energy theorem target.
+        </p>
+        <div class="card-meta">Open Research Monograph v1.0 · DOI: 10.5281/zenodo.20940986</div>
+      </div>
+    </div>
+
+    <div class="pathway-step">
+      <div class="pathway-number">3</div>
       <div>
         <h3>
           <a href="https://doi.org/10.5281/zenodo.20461142" target="_blank" rel="noopener noreferrer">
@@ -522,7 +676,7 @@ footer{
     </div>
 
     <div class="pathway-step">
-      <div class="pathway-number">2</div>
+      <div class="pathway-number">4</div>
       <div>
         <h3>
           <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">
@@ -538,7 +692,7 @@ footer{
     </div>
 
     <div class="pathway-step">
-      <div class="pathway-number">3</div>
+      <div class="pathway-number">5</div>
       <div>
         <h3>
           <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">
@@ -555,7 +709,7 @@ footer{
     </div>
 
     <div class="pathway-step">
-      <div class="pathway-number">4</div>
+      <div class="pathway-number">6</div>
       <div>
         <h3>
           <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">
@@ -572,7 +726,7 @@ footer{
     </div>
 
     <div class="pathway-step">
-      <div class="pathway-number orange">5</div>
+      <div class="pathway-number orange">7</div>
       <div>
         <h3>
           <a href="https://doi.org/10.5281/zenodo.20692677" target="_blank" rel="noopener noreferrer">
@@ -589,7 +743,7 @@ footer{
     </div>
 
     <div class="pathway-step">
-      <div class="pathway-number">6</div>
+      <div class="pathway-number">8</div>
       <div>
         <h3>
           <a href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">
@@ -606,7 +760,7 @@ footer{
     </div>
 
     <div class="pathway-step">
-      <div class="pathway-number">7</div>
+      <div class="pathway-number">9</div>
       <div>
         <h3>
           <a href="https://doi.org/10.5281/zenodo.20328260" target="_blank" rel="noopener noreferrer">
@@ -625,10 +779,54 @@ footer{
   </div>
 
   <p class="note">
-    This path gives visitors a coherent progression: canonical program roadmap → peer-reviewed metrology foundation →
-    substrate architecture → geometric substrate keystone → completion-theorem spine → falsifiable operator audit →
-    numerical mass-spectrum application.
+    This path gives visitors a coherent progression: simple QDL Lattice orientation, flagship synthesis,
+    roadmap, peer-reviewed metrology foundation, substrate architecture, geometric substrate keystone,
+    completion-theorem spine, falsifiable operator audit, and numerical mass-spectrum application.
   </p>
+</div>
+```
+
+  </section>
+
+  <section class="section" id="flagship-monograph-access">
+    <div class="section-header">
+      <h2 class="section-title">Flagship Monograph Access</h2>
+      <p class="section-kicker">The defining synthesis for the current QDL research program.</p>
+    </div>
+
+```
+<div class="card" style="border-color:rgba(124,58,237,.32); background:#fbfaff;">
+  <div class="card-title">Physical Law as the Minimal Architecture of Persistence Under Closure</div>
+  <div class="card-meta">Open Research Monograph v1.0 · Predictive compression · Claim-status discipline</div>
+  <div class="pill-row">
+    <span class="pill pill-purple">Flagship synthesis</span>
+    <span class="pill">Predictive compression</span>
+    <span class="pill">Closure ontology</span>
+    <span class="pill">QDL/QDC construction</span>
+    <span class="pill">Spin-2 obstruction</span>
+    <span class="pill">Vacuum-energy theorem target</span>
+  </div>
+  <p>
+    The flagship synthesis is
+    <a href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">
+      <em>Physical Law as the Minimal Architecture of Persistence Under Closure:
+      Predictive Compression, Ontological Unification, and the Vacuum-Energy Problem</em>
+    </a>.
+  </p>
+  <p>
+    The monograph states the program's broadest thesis: physical law may be understood as the minimal architecture required
+    for physical persistence under closure. It is the top-level conceptual and methodological synthesis beneath which the
+    roadmap, substrate capstone, Toroidal QDC Knot, QDC Completion Theorem, SMEFT audit, and charged-lepton sequence should now be read.
+  </p>
+  <p style="font-size:.9rem;color:#4b5563;">
+    Scope note: the monograph is openly archived and non-peer-reviewed. It separates strict theorems, conditional reconstructions,
+    restricted minimality theorems, constrained branches, and open numerical or dynamical targets.
+  </p>
+  <div class="btn-row">
+    <a class="btn btn-purple" href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">Open monograph record</a>
+    <a class="btn btn-secondary" href="physical-law-persistence-frontispiece.jpg" target="_blank" rel="noopener noreferrer">Open frontispiece</a>
+    <a class="btn btn-secondary" href="publications.html#flagship-monograph">Publication entry</a>
+  </div>
 </div>
 ```
 
@@ -735,7 +933,7 @@ footer{
     <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Open Toroidal QDC Knot</a>
     <a class="btn btn-secondary" href="Toroidal-Knot.png" target="_blank" rel="noopener noreferrer">Open graphical abstract</a>
     <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.20316698" target="_blank" rel="noopener noreferrer">Prior Toroidal QDC Cell</a>
-    <a class="btn btn-secondary" href="research.html#applications">Application directions</a>
+    <a class="btn btn-secondary" href="research.html#technical-pillars">Application directions</a>
   </div>
 </div>
 ```
@@ -792,7 +990,7 @@ footer{
     <a class="btn btn-orange" href="https://doi.org/10.5281/zenodo.20692677" target="_blank" rel="noopener noreferrer">Open QDC Completion Theorem</a>
     <a class="btn btn-secondary" href="qdc-completion-theorem-graphical-abstract.png" target="_blank" rel="noopener noreferrer">Open graphical abstract</a>
     <a class="btn btn-secondary" href="publications.html#qdc-completion-theorem">Publication entry</a>
-    <a class="btn btn-secondary" href="research.html#qdc-completion-theorem">Research context</a>
+    <a class="btn btn-secondary" href="research.html#qdl-lattice-picture">Research context</a>
   </div>
 </div>
 ```
@@ -933,7 +1131,7 @@ footer{
   <div class="card">
     <div class="card-title">1. Read</div>
     <p>
-      Use the Publications page to follow the seven-anchor hierarchy, Core Closure Sequence, technical pillars,
+      Use the Publications page to follow the current hierarchy, Core Closure Sequence, technical pillars,
       closure grammar papers, QDL–SO10–1 benchmark series, and earlier foundational path.
     </p>
     <div class="btn-row">
@@ -944,7 +1142,7 @@ footer{
   <div class="card">
     <div class="card-title">2. Understand</div>
     <p>
-      Use the Research Program page for the conceptual architecture: framework layer, scientific applications,
+      Use the Research Program page for the conceptual architecture: QDL Lattice, framework layer, scientific applications,
       executable infrastructure, residual-first tests, toroidal substrate geometry, QDC completion gates, and application branches.
     </p>
     <div class="btn-row">
@@ -1000,7 +1198,7 @@ footer{
     <strong>Status:</strong> U.S. provisional patent application filed; patent pending.
   </p>
   <div class="btn-row">
-    <a class="btn btn-primary" href="research.html#three-layers">Read the three-layer architecture</a>
+    <a class="btn btn-primary" href="research.html#program-architecture">Read the three-layer architecture</a>
     <a class="btn btn-secondary" href="qdl-calculator.html">Try the QDL Calculator</a>
     <a class="btn btn-secondary" href="contact.html">Discuss collaboration</a>
   </div>
@@ -1105,7 +1303,7 @@ footer{
       <div class="btn-row">
         <a class="btn btn-primary" href="https://www.amazon.com/dp/B0GHZJHT36" target="_blank" rel="noopener noreferrer">View on Amazon Kindle</a>
         <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.18902770" target="_blank" rel="noopener noreferrer">Zenodo record</a>
-        <a class="btn btn-secondary" href="publications.html#top5">Earlier foundational path</a>
+        <a class="btn btn-secondary" href="publications.html#earlier-foundations">Earlier foundational path</a>
       </div>
     </div>
   </div>
@@ -1127,7 +1325,9 @@ footer{
   <div class="card">
     <div class="card-title">Best Reading Order</div>
     <p>
-      Use the seven-anchor hierarchy first. The book remains useful as orientation, but the current canonical program path runs through the roadmap, JTAP foundation, substrate capstone, Toroidal QDC Knot, QDC Completion Theorem, SMEFT audit companion, and mass-spectrum sequence.
+      Use QDL in 5 Minutes, the flagship monograph, and the current reading path first. The book remains useful as orientation,
+      but the current canonical program path runs through the roadmap, JTAP foundation, substrate capstone,
+      Toroidal QDC Knot, QDC Completion Theorem, SMEFT audit companion, and mass-spectrum sequence.
     </p>
   </div>
 </div>
@@ -1168,7 +1368,7 @@ footer{
   </p>
   <div class="btn-row">
     <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20026718" target="_blank" rel="noopener noreferrer">Open Zenodo record</a>
-    <a class="btn btn-secondary" href="research.html#applications">View application directions</a>
+    <a class="btn btn-secondary" href="research.html#technical-pillars">View application directions</a>
     <a class="btn btn-secondary" href="publications.html#closure-grammar">See QDC realization papers</a>
   </div>
 </div>
@@ -1294,14 +1494,14 @@ footer{
     </a>
   </p>
   <p style="font-size:.9rem;color:#4b5563;">
-    Recommended reading order: start with the current seven-anchor hierarchy, then read the QDL–SO10–1 capstone Paper #9 for the integrated map,
+    Recommended reading order: start with the current QDL Lattice and flagship hierarchy, then read the QDL–SO10–1 capstone Paper #9 for the integrated map,
     Papers #5–#8 for the executable hardening details, and finally Papers #1–#3 for the original benchmark, phenomenology,
     and stress-test sequence.
   </p>
   <div class="btn-row">
     <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.19830816" target="_blank" rel="noopener noreferrer">Open capstone record</a>
-    <a class="btn btn-secondary" href="publications.html#qdl-so10-series">View full series on Publications</a>
-    <a class="btn btn-secondary" href="research.html#qdl-so10-branch">Read branch overview</a>
+    <a class="btn btn-secondary" href="publications.html#benchmarks">View benchmark records</a>
+    <a class="btn btn-secondary" href="research.html#technical-pillars">Read branch context</a>
   </div>
 </div>
 
@@ -1335,7 +1535,10 @@ footer{
   <div class="card">
     <div class="card-title">How to Navigate the Program</div>
     <ul class="list">
-      <li>Start with the <a href="https://doi.org/10.5281/zenodo.20461142" target="_blank" rel="noopener noreferrer">canonical QDL roadmap</a> for the current program architecture.</li>
+      <li>Start with <a href="qdl-in-5-minutes.html">QDL in 5 Minutes</a> for the simplest public explanation.</li>
+      <li>Use the <a href="integrated-worldview-qdl-lattice.png" target="_blank" rel="noopener noreferrer">QDL Lattice graphic</a> for the visual hierarchy.</li>
+      <li>Use the <a href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">flagship monograph</a> for the full synthesis.</li>
+      <li>Use the <a href="https://doi.org/10.5281/zenodo.20461142" target="_blank" rel="noopener noreferrer">canonical QDL roadmap</a> for the current program architecture.</li>
       <li>Use the <a href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">JTAP metrology foundation</a> for the first peer-reviewed foundation.</li>
       <li>Use the <a href="https://doi.org/10.5281/zenodo.20346814" target="_blank" rel="noopener noreferrer">QDL Substrate Capstone</a> for program identity and physical-persistence framing.</li>
       <li>Use the <a href="https://doi.org/10.5281/zenodo.20367493" target="_blank" rel="noopener noreferrer">Toroidal QDC Knot</a> for the geometric substrate keystone.</li>
@@ -1363,7 +1566,7 @@ footer{
 <footer>
   <div class="footer-grid">
     <div>© QDL Physics Institute</div>
-    <div>Last updated: June 2026 — resources updated with canonical QDL roadmap, JTAP foundation, QDL substrate capstone, Toroidal QDC Knot, QDC Completion Theorem, SMEFT Γ(O) audit companion, charged-lepton / mass-spectrum sequence, Core Closure Sequence, and patent-pending executable infrastructure.</div>
+    <div>Last updated: June 2026 — resources updated with the QDL Lattice explanation, QDL in 5 Minutes, flagship monograph, canonical QDL roadmap, JTAP foundation, QDL substrate capstone, Toroidal QDC Knot, QDC Completion Theorem, SMEFT Γ(O) audit companion, charged-lepton / mass-spectrum sequence, Core Closure Sequence, and patent-pending executable infrastructure.</div>
     <div>
       <a href="qdl-calculator.html">QDL Calculator</a>
     </div>
