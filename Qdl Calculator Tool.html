@@ -4,8 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>QDL Calculator | QDL Physics Institute</title>
-  <meta name="description" content="Interactive QDL Admissibility Calculator from QDL Physics Institute. Test declared vectors, closure rules, diagnostic charges, and structural admissibility under the Quantized Dimensional Ledger framework, with context from the QDL Lattice interpretation and closure-persistent recurrence." />
+
+<meta
+ name="description"
+ content="QDL Admissibility Calculator: an interactive structural-admissibility tool for testing declared vectors, closure rules, modular diagnostic charge, and admissibility under canonical 3L+2F ledger rules, with QDL Lattice context, SMEFT, dimensional-failure, and metrology examples."
+/>
 
   <style>
     :root {
@@ -23,16 +28,20 @@
       --warn: #92400e;
       --warn-bg: #fef3c7;
       --ink-soft: #f8fafc;
+      --nav-dark: #0f172a;
+      --nav-line: #111827;
+      --nav-accent: #38bdf8;
       --purple: #7c3aed;
+      --purple-soft: #f5f3ff;
       --orange: #ea580c;
+      --orange-soft: #fff7ed;
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { scroll-behavior: smooth; }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
@@ -50,9 +59,9 @@
     }
 
     header {
-      background: #0f172a;
+      background: var(--nav-dark);
       color: #e5e7eb;
-      border-bottom: 1px solid #111827;
+      border-bottom: 1px solid var(--nav-line);
       position: sticky;
       top: 0;
       z-index: 50;
@@ -60,7 +69,7 @@
 
     .nav {
       max-width: 1240px;
-      margin: 0 auto;
+      margin: auto;
       padding: 0.78rem 1.25rem;
       display: flex;
       align-items: center;
@@ -79,12 +88,13 @@
       width: 52px;
       height: 52px;
       border-radius: 10px;
-      border: 1px solid #38bdf8;
+      border: 1px solid var(--nav-accent);
       background: #020617;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex: 0 0 auto;
     }
 
     .logo-icon img {
@@ -96,24 +106,25 @@
 
     .logo-text-main {
       font-weight: 650;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
       font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #e5e7eb;
     }
 
     .logo-text-sub {
       font-size: 0.72rem;
       color: #9ca3af;
-      letter-spacing: 0.08em;
       text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
       gap: 0.8rem;
       font-size: 0.85rem;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .nav-links a {
@@ -129,20 +140,20 @@
     }
 
     .nav-active {
-      border-color: rgba(56,189,248,0.85) !important;
-      background: rgba(56,189,248,0.10) !important;
+      border-color: rgba(56, 189, 248, 0.85) !important;
+      background: rgba(56, 189, 248, 0.10) !important;
       color: #e0f2fe !important;
     }
 
     .nav-cta {
-      border: 1px solid #38bdf8 !important;
+      border: 1px solid var(--nav-accent) !important;
       background: #0b1120;
       color: #e0f2fe !important;
       padding: 0.32rem 0.88rem;
       border-radius: 999px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
       font-size: 0.78rem;
+      letter-spacing: 0.08em;
     }
 
     .page {
@@ -165,8 +176,8 @@
       letter-spacing: 0.16em;
       color: #64748b;
       font-size: 0.78rem;
-      margin-bottom: 0.4rem;
       font-weight: 700;
+      margin-bottom: 0.4rem;
     }
 
     h1 {
@@ -193,6 +204,17 @@
       font-size: 0.98rem;
     }
 
+    .small {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .micro {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-top: 6px;
+    }
+
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
@@ -210,43 +232,50 @@
     }
 
     .hero-actions {
+      margin-top: 14px;
       display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 0.58rem;
-      margin-top: 1rem;
     }
 
     .link-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.58rem 1rem;
+      padding: 10px 16px;
       border-radius: 999px;
       border: 1px solid #d1d5db;
-      background: #ffffff;
+      background: #fff;
       color: #111827;
-      font-size: 0.88rem;
-      font-weight: 700;
+      font-size: 0.9rem;
+      font-weight: 600;
       white-space: nowrap;
+      text-decoration: none;
     }
 
     .link-btn:hover {
-      text-decoration: none;
       background: #f9fafb;
+      text-decoration: none;
     }
 
-    .link-btn.primary-link {
+    .link-btn-primary {
       background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #ffffff;
+      color: #fff;
       border: none;
-      box-shadow: 0 10px 24px rgba(37,99,235,0.25);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
     }
 
-    .link-btn.purple-link {
+    .link-btn-purple {
       background: linear-gradient(135deg, #7c3aed, #6d28d9);
-      color: #ffffff;
+      color: #fff;
       border: none;
-      box-shadow: 0 10px 24px rgba(124,58,237,0.22);
+      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.22);
+    }
+
+    .link-btn-primary:hover,
+    .link-btn-purple:hover {
+      filter: brightness(1.03);
+      text-decoration: none;
     }
 
     .grid {
@@ -269,21 +298,25 @@
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
 
-    .small {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .micro {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
     .controls {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 10px;
       margin: 14px 0 10px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 10px 0;
+    }
+
+    .row-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 10px 0;
     }
 
     label {
@@ -295,8 +328,8 @@
 
     input,
     select,
-    textarea,
-    button {
+    button,
+    textarea {
       font: inherit;
     }
 
@@ -311,18 +344,9 @@
       color: var(--text);
     }
 
-    .row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin: 10px 0;
-    }
-
-    .row-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin: 10px 0;
+    textarea {
+      min-height: 220px;
+      resize: vertical;
     }
 
     .btns {
@@ -368,9 +392,25 @@
       font-size: 0.92rem;
     }
 
-    .ok { background: var(--good-bg); color: var(--good); }
-    .bad { background: var(--bad-bg); color: var(--bad); }
-    .warn { background: var(--warn-bg); color: var(--warn); }
+    .ok {
+      background: var(--good-bg);
+      color: var(--good);
+    }
+
+    .bad {
+      background: var(--bad-bg);
+      color: var(--bad);
+    }
+
+    .warn {
+      background: var(--warn-bg);
+      color: var(--warn);
+    }
+
+    .neutral-pill {
+      background: var(--accent-soft);
+      color: #1e3a8a;
+    }
 
     .result-block,
     .panel {
@@ -414,17 +454,18 @@
       padding: 10px 12px;
     }
 
-    .cheat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 10px;
+    .callout {
+      border: 1px solid rgba(37, 99, 235, 0.24);
+      background: #eff6ff;
+      border-radius: 14px;
+      padding: 12px;
+      margin-top: 12px;
+      color: #334155;
     }
 
-    .footer-note {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .callout.purple {
+      border-color: rgba(124, 58, 237, 0.24);
+      background: var(--purple-soft);
     }
 
     .lattice-chain {
@@ -435,7 +476,7 @@
     }
 
     .lattice-node {
-      border: 1px solid rgba(37,99,235,0.28);
+      border: 1px solid rgba(37, 99, 235, 0.28);
       background: #eff6ff;
       color: #1e3a8a;
       border-radius: 999px;
@@ -450,31 +491,32 @@
       font-size: 0.78rem;
     }
 
-    .callout {
-      border: 1px solid rgba(37,99,235,0.24);
-      background: #eff6ff;
-      border-radius: 14px;
-      padding: 12px;
+    .report-box {
       margin-top: 12px;
-      color: #334155;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     footer {
       border-top: 1px solid var(--line);
-      margin-top: 3rem;
-      padding: 1.2rem 1.25rem 1.8rem;
+      padding: 1.2rem;
+      margin-top: 2.5rem;
       font-size: 0.8rem;
       color: #6b7280;
       background: #f9fafb;
     }
 
-    .footer-grid {
+    .footer-inner {
       max-width: 1240px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
       justify-content: space-between;
+      gap: 1rem;
       align-items: center;
     }
 
@@ -482,8 +524,7 @@
       .grid { grid-template-columns: 1fr; }
       .controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .row,
-      .row-3,
-      .cheat-grid { grid-template-columns: 1fr; }
+      .row-4 { grid-template-columns: 1fr; }
       .lattice-arrow { display: none; }
     }
   </style>
@@ -491,6 +532,7 @@
 </head>
 
 <body>
+
   <header>
     <div class="nav">
       <div class="logo">
@@ -518,7 +560,7 @@
 
   </header>
 
-  <div class="page">
+  <main class="page">
     <section class="hero">
       <div class="hero-kicker">Interactive Demonstration</div>
       <h1>QDL Admissibility Calculator</h1>
@@ -532,8 +574,8 @@
   <p class="sub">
     In the QDL Lattice interpretation, space is modeled not as absolute emptiness, but as a closure-compatible lattice
     of recurrence. Particles are persistent localized modes of that same structure, and geometry is investigated as a
-    possible large-scale response of collective closure stress. This calculator shows the structural-admissibility layer
-    of that program in a public, editable form.
+    possible large-scale response of collective closure stress. This tool shows the structural-admissibility layer of that
+    program in a public, editable form.
   </p>
 
   <div class="hero-meta">
@@ -549,11 +591,11 @@
   </div>
 
   <div class="hero-actions">
-    <a class="link-btn primary-link" href="#calculator">Use Calculator</a>
+    <a class="link-btn link-btn-primary" href="#calculator">Use Calculator</a>
     <a class="link-btn" href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
     <a class="link-btn" href="research.html#qdl-lattice-picture">QDL Lattice Picture</a>
-    <a class="link-btn purple-link" href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">Flagship Monograph</a>
-    <a class="link-btn" href="publications.html">Publications</a>
+    <a class="link-btn link-btn-purple" href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">Flagship Monograph</a>
+    <a class="link-btn" href="publications.html">View Publications</a>
   </div>
 </section>
 
@@ -643,7 +685,7 @@
         </div>
       </div>
 
-      <div class="row-3">
+      <div class="row-4">
         <div>
           <label for="viewMode">View mode</label>
           <select id="viewMode">
@@ -654,10 +696,12 @@
             SMEFT preset uses the published-style (a,b) grading; other presets remain canonical ledger demonstrations.
           </div>
         </div>
+
         <div>
           <label for="modulus">Modulus m</label>
           <input id="modulus" type="number" step="1" value="6" />
         </div>
+
         <div>
           <label for="toleranceMode">Admissibility mode</label>
           <select id="toleranceMode">
@@ -665,6 +709,7 @@
             <option value="orthogonal">Zero transverse remainder only</option>
           </select>
         </div>
+
         <div>
           <label for="exampleSelect">Worked example</label>
           <select id="exampleSelect">
@@ -677,10 +722,11 @@
       </div>
 
       <div class="btns">
-        <button class="primary" id="computeBtn">Compute</button>
-        <button class="secondary" id="resetBtn">Reset</button>
-        <button class="secondary" id="copyBtn">Copy result summary</button>
-        <button class="secondary" id="copyCheatBtn">Copy cheat sheet</button>
+        <button class="primary" id="computeBtn" type="button">Compute</button>
+        <button class="secondary" id="resetBtn" type="button">Reset</button>
+        <button class="secondary" id="copyBtn" type="button">Copy result summary</button>
+        <button class="secondary" id="copyCheatBtn" type="button">Copy cheat sheet</button>
+        <button class="secondary" id="reportBtn" type="button">Generate Report</button>
       </div>
 
       <div class="result-block">
@@ -692,6 +738,11 @@
         <div class="formula mono" id="exampleLine">Worked-example note will appear here.</div>
         <div class="formula mono" id="operatorLine">Named operator mapping will appear here.</div>
         <div class="formula mono" id="viewLine">Current display mode will appear here.</div>
+      </div>
+
+      <div class="report-box">
+        <label for="reportOutput">Generated report</label>
+        <textarea id="reportOutput" readonly placeholder="Click Generate Report to create a structured QDL Admissibility Report."></textarea>
       </div>
     </section>
   </div>
@@ -705,7 +756,7 @@
         the chosen ledger rule.
       </p>
 
-      <div class="lattice-chain" aria-label="QDL Lattice hierarchy">
+      <div class="lattice-chain" aria-label="QDL Calculator relation to QDL Lattice">
         <span class="lattice-node">QDL Lattice</span>
         <span class="lattice-arrow">→</span>
         <span class="lattice-node">Declared vector</span>
@@ -719,6 +770,12 @@
         <strong>Use:</strong> pre-dynamical structural filtering before model reliance, fitting, publication, certification,
         measurement-chain interpretation, or deployment.
       </div>
+
+      <div class="callout purple">
+        <strong>Claim-status note:</strong> this public calculator demonstrates closure-admissibility logic.
+        It does not claim to simulate microscopic QDL lattice cells or complete the full derivation of spacetime,
+        gravity, spin, or the particle spectrum.
+      </div>
     </aside>
 
     <aside class="card">
@@ -729,23 +786,25 @@
       </p>
 
       <div class="examples">
-        <button class="example-btn" data-example="smeft">
-          <strong>SMEFT ℤ₆ operator-mixing example</strong><br>
+        <button class="example-btn" data-example="smeft" type="button">
+          <strong>SMEFT ℤ₆ operator-mixing example</strong><br />
           <span class="small">
-            Uses a published-style ℤ₆ grading: dipoles sit in Δ = 4 while selected four-fermion operators sit in Δ = 0,
-            so direct one-loop mixing is structurally blocked under that charge assignment.
+            Uses a published-style ℤ₆ grading: selected four-fermion operators sit in Δ = 0 while dipole operators sit in Δ = 4,
+            so direct one-loop mixing is structurally blocked under that diagnostic charge assignment.
           </span>
         </button>
-        <button class="example-btn" data-example="failure">
-          <strong>Dimensional-reasoning failure</strong><br>
+
+        <button class="example-btn" data-example="failure" type="button">
+          <strong>Dimensional-reasoning failure</strong><br />
           <span class="small">
             A deliberately inconsistent assignment, showing how transverse remainder flags a bad construction.
           </span>
         </button>
-        <button class="example-btn" data-example="metrology">
-          <strong>Metrology / measurement example</strong><br>
+
+        <button class="example-btn" data-example="metrology" type="button">
+          <strong>Metrology / measurement example</strong><br />
           <span class="small">
-            A measurement-side quantity relation that closes exactly under the chosen rule.
+            A measurement-side quantity relation that closes exactly under the chosen subgroup rule.
           </span>
         </button>
       </div>
@@ -770,8 +829,8 @@
     <aside class="card">
       <h2>Export-ready cheat-sheet panel</h2>
       <p class="small">
-        This panel is intentionally short so it can be lifted almost directly into a one-page PDF,
-        side card, or appendix figure.
+        A compact summary of the current configuration and result. This can be copied and reused for reports,
+        discussions, or documentation.
       </p>
 
       <div class="panel" id="cheatSheetPanel">
@@ -787,23 +846,25 @@
         <div class="mono" id="cheatUse">Use: pre-dynamical structural filter before model reliance or further calculation</div>
       </div>
 
-      <div class="cheat-grid">
+      <h3>How to use this tool</h3>
+      <div class="definition-list">
         <div class="definition-item small">
-          <strong>Website use:</strong> place this panel below the calculator or in a right-column callout.
+          Enter a ledger vector or select a worked example.
         </div>
         <div class="definition-item small">
-          <strong>PDF use:</strong> export this block as a compact one-page public explainer.
+          Evaluate whether the structure satisfies the declared closure rule.
         </div>
         <div class="definition-item small">
-          <strong>Talk use:</strong> show the three presets live to explain admissibility in under two minutes.
+          Compare admissible and inadmissible configurations.
         </div>
         <div class="definition-item small">
-          <strong>Paper use:</strong> keep Δ configurable here, then lock to the exact charge convention in a paper-specific appendix.
+          Use the result as a structural check before further modeling or interpretation.
         </div>
       </div>
 
       <p class="footer-note">
-        Public-facing wording keeps the logic clear without forcing a single paper-dependent formalization where notation may still evolve.
+        <strong>Interpretation note:</strong> this calculator provides a structural admissibility test.
+        Formal definitions, proofs, and paper-specific conventions are given in the QDL publications.
       </p>
     </aside>
   </div>
@@ -815,20 +876,25 @@
 </p>
 ```
 
-  </div>
+  </main>
 
   <footer>
-    <div class="footer-grid">
+    <div class="footer-inner">
       <div>© QDL Physics Institute</div>
-      <div>QDL Lattice · Structural Admissibility · QDC = L³F² · Executable Validation</div>
-      <div><a href="research.html">Research Program</a></div>
-      <div>Contact: <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a></div>
+      <div>Last updated: June 2026 — calculator updated for QDL Lattice framing, structural admissibility, and report generation.</div>
+      <div>
+        <a href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
+      </div>
+      <div>
+        Contact:
+        <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+      </div>
     </div>
   </footer>
 
   <script>
     function getVector(prefix) {
-      return [1, 2, 3, 4, 5].map(i => Number(document.getElementById(prefix + i)?.value || 0));
+      return [1, 2, 3, 4, 5].map(i => Number(document.getElementById(prefix + i).value || 0));
     }
 
     function getNames() {
@@ -840,10 +906,16 @@
     }
 
     function parseCSVVector(str) {
-      const parts = String(str).split(',').map(s => s.trim()).filter(Boolean).map(Number);
+      const parts = String(str)
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+        .map(Number);
+
       if (parts.length !== 5 || parts.some(n => !Number.isFinite(n))) {
         throw new Error('Vector must contain exactly 5 comma-separated numbers.');
       }
+
       return parts;
     }
 
@@ -869,23 +941,32 @@
 
     function componentwiseMultiple(v, q) {
       let k = null;
+
       for (let i = 0; i < v.length; i++) {
         if (q[i] === 0 && v[i] !== 0) return { ok: false, k: null };
+
         if (q[i] !== 0) {
           const ratio = v[i] / q[i];
+
           if (!Number.isInteger(ratio)) return { ok: false, k: null };
           if (k === null) k = ratio;
           if (ratio !== k) return { ok: false, k: null };
         }
       }
+
       return { ok: true, k: k === null ? 0 : k };
     }
 
     function orthogonalRemainder(v, q) {
       const qq = dot(q, q);
-      if (qq === 0) return { projCoeff: 0, remainder: [...v] };
+
+      if (qq === 0) {
+        return { projCoeff: 0, remainder: [...v] };
+      }
+
       const coeff = dot(v, q) / qq;
       const rem = v.map((x, i) => x - coeff * q[i]);
+
       return { projCoeff: coeff, remainder: rem };
     }
 
@@ -906,7 +987,7 @@
 
     const operatorNotes = {
       custom: 'No named operator selected. Enter any declared quantity or operator vector directly.',
-      smeft: 'Published-style mapping used here: Φ(O) = (a,b), Δ(O) = 2a − 3b mod 6. For Q_ll, Φ = (6,−2) so Δ = 18 mod 6 = 0. For Q_eB, Φ = (2,0) so Δ = 4 mod 6 = 4. Therefore γ^(1)_{Q_eB,Q_ll} = 0 is the flagship blocked-mixing example. The current displayed vector is the Q_eB dipole-side grading.',
+      smeft: 'Published-style mapping used here: Φ(O) = (a,b), Δ(O) = 2a − 3b mod 6. For Q_ll, Φ = (6,−2) so Δ = 18 mod 6 = 0. For Q_eB, Φ = (2,0) so Δ = 4 mod 6 = 4. Therefore γ^(1)_{Q_eB,Q_ll} = 0 is the flagship blocked-mixing example. The displayed preset uses the Q_eB dipole-side grading vector so the diagnostic returns Δ = 4.',
       failure: 'Named example: intentionally inconsistent dimensional assignment. Website mapping: v = (1, 0, 2, 1, 0), q = (1, 1, 1, 1, 1), w = (1, 1, 0, 0, 0), m = 6.',
       metrology: 'Named example: exactly closing measurement-side relation. Website mapping: v = (1, 1, 1, 1, 1), q = (1, 1, 1, 1, 1), w = (0, 0, 0, 1, 1), m = 2.'
     };
@@ -924,17 +1005,67 @@
         ? 'Rule: admissible iff v = kq for integer k'
         : 'Rule: admissible iff transverse remainder vanishes';
 
-      document.getElementById('cheatCharge').textContent = `Diagnostic: Δ = w·v mod m = ${tupleString(w)}·v mod ${m} = ${delta}`;
-      document.getElementById('cheatStatus').textContent = `Status: ${admissible ? 'admissible' : 'inadmissible'}${exact.ok ? `; exact multiplier k = ${exact.k}` : ''}`;
+      document.getElementById('cheatCharge').textContent =
+        `Diagnostic: Δ = w·v mod m = ${tupleString(w)}·v mod ${m} = ${delta}`;
+
+      document.getElementById('cheatStatus').textContent =
+        `Status: ${admissible ? 'admissible' : 'inadmissible'}${exact.ok ? `; exact multiplier k = ${exact.k}` : ''}`;
 
       document.getElementById('cheatExample').textContent =
-        `Example: ${exampleKey === 'smeft' ? 'SMEFT ℤ₆ blocked-mixing test' : exampleKey === 'failure' ? 'dimensional-reasoning failure' : exampleKey === 'metrology' ? 'metrology / measurement relation' : 'custom input'}`;
+        `Example: ${exampleKey === 'smeft'
+          ? 'SMEFT ℤ₆ blocked-mixing test'
+          : exampleKey === 'failure'
+            ? 'dimensional-reasoning failure'
+            : exampleKey === 'metrology'
+              ? 'metrology / measurement relation'
+              : 'custom input'}`;
 
       document.getElementById('cheatView').textContent =
         `View: ${viewMode === 'ab' ? '(a,b) grading' : '3L+2F ledger projection'}`;
 
       document.getElementById('cheatUse').textContent =
         'Use: pre-dynamical structural filter inside the QDL Lattice research architecture before model reliance or further calculation';
+    }
+
+    function buildReport() {
+      return [
+        'QDL Admissibility Report',
+        '------------------------',
+        '',
+        'QDL Lattice context:',
+        'QDL models space not as absolute emptiness, but as a closure-compatible lattice of recurrence. This calculator tests the structural-admissibility layer of that program.',
+        '',
+        document.getElementById('summaryLine').textContent,
+        document.getElementById('detailLine').textContent,
+        document.getElementById('chargeLine').textContent,
+        document.getElementById('explainLine').textContent,
+        '',
+        document.getElementById('exampleLine').textContent,
+        document.getElementById('operatorLine').textContent,
+        document.getElementById('viewLine').textContent,
+        '',
+        'Interpretation:',
+        'This result represents a structural admissibility check under the declared QDL closure rule. It is a pre-dynamical audit layer, not a full physical derivation or simulation.'
+      ].join('\n');
+    }
+
+    function generateReport() {
+      const report = buildReport();
+
+      document.getElementById('reportOutput').value = report;
+
+      const blob = new Blob([report], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+
+      a.href = url;
+      a.download = 'qdl-admissibility-report.txt';
+
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      URL.revokeObjectURL(url);
     }
 
     function compute() {
@@ -976,7 +1107,7 @@
 
       if (exampleKey === 'smeft') {
         const pill3 = document.createElement('span');
-        pill3.className = 'pill warn';
+        pill3.className = 'pill neutral-pill';
         pill3.textContent = 'Blocked-mixing diagnostic';
         statusPills.appendChild(pill3);
       }
@@ -1038,6 +1169,8 @@
 
       if (type === 'custom') {
         document.getElementById('exampleLine').textContent = exampleNotes.custom;
+        document.getElementById('operatorLine').textContent = operatorNotes.custom;
+        compute();
         return;
       }
 
@@ -1097,14 +1230,14 @@
     });
 
     document.getElementById('resetBtn').addEventListener('click', () => {
-      location.reload();
+      window.location.reload();
     });
 
     document.getElementById('copyBtn').addEventListener('click', async () => {
       try {
         await copySummary();
         alert('Result summary copied.');
-      } catch {
+      } catch (err) {
         alert('Could not copy automatically.');
       }
     });
@@ -1113,8 +1246,16 @@
       try {
         await copyCheatSheet();
         alert('Cheat sheet copied.');
-      } catch {
+      } catch (err) {
         alert('Could not copy automatically.');
+      }
+    });
+
+    document.getElementById('reportBtn').addEventListener('click', () => {
+      try {
+        generateReport();
+      } catch (err) {
+        alert('Could not generate report.');
       }
     });
 
@@ -1136,7 +1277,9 @@
 
     try {
       compute();
-    } catch (_) {}
+    } catch (err) {
+      console.error(err);
+    }
   </script>
 
 </body>
