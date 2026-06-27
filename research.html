@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>Research Program | Physical Law Under Closure | QDL Physics Institute</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Research program of the QDL Physics Institute, centered on the flagship monograph Physical Law as the Minimal Architecture of Persistence Under Closure, predictive compression, claim-status discipline, QDL/QDC foundations, QDC Completion Theorem, SMEFT audit, charged-lepton sequence, vacuum-energy theorem targets, and executable validation infrastructure.">
+<meta name="description" content="Research program of the QDL Physics Institute, centered on the QDL Lattice interpretation, closure-persistent recurrence, the flagship monograph Physical Law as the Minimal Architecture of Persistence Under Closure, predictive compression, claim-status discipline, QDL/QDC foundations, QDC Completion Theorem, SMEFT audit, charged-lepton sequence, vacuum-energy theorem targets, and executable validation infrastructure.">
 
 <style>
 :root{
@@ -325,6 +325,60 @@ main{
   gap:.55rem;
   flex-wrap:wrap;
 }
+.lattice-card{
+  border-color:rgba(37,99,235,.40);
+  background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+}
+.lattice-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(300px,.98fr);
+  gap:1.2rem;
+  align-items:center;
+}
+.lattice-figure{
+  margin:0;
+  background:#020617;
+  border-radius:18px;
+  padding:.65rem;
+  border:1px solid rgba(56,189,248,.28);
+}
+.lattice-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:13px;
+  background:#ffffff;
+}
+.lattice-figure figcaption{
+  color:#cbd5e1;
+  font-size:.8rem;
+  line-height:1.5;
+  margin-top:.55rem;
+}
+.lattice-chain{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin:.75rem 0 .85rem;
+}
+.lattice-node{
+  border:1px solid rgba(37,99,235,.28);
+  background:#eff6ff;
+  color:#1e3a8a;
+  border-radius:999px;
+  padding:.25rem .65rem;
+  font-size:.78rem;
+  font-weight:600;
+}
+.lattice-arrow{
+  color:#64748b;
+  padding:.25rem 0;
+  font-size:.78rem;
+}
+@media (max-width:920px){
+  .lattice-grid{grid-template-columns:1fr;}
+  .lattice-arrow{display:none;}
+}
 .section{
   margin-top:2.2rem;
 }
@@ -509,7 +563,6 @@ footer{
       </div>
     </div>
 
-```
 <nav class="nav-links">
   <a href="index.html">Home</a>
   <a href="research.html" class="nav-active">Research Program</a>
@@ -519,7 +572,6 @@ footer{
   <a href="resources.html">Resources</a>
   <a href="contact.html" class="nav-cta">Contact</a>
 </nav>
-```
 
   </div>
 </header>
@@ -530,24 +582,25 @@ footer{
     <div class="hero-kicker">Research Program</div>
     <h1 class="hero-title">QDL Research After the Flagship Monograph</h1>
 
-```
 <p class="hero-lead">
-  The QDL Physics Institute develops the Quantized Dimensional Ledger as a closure-first research program:
-  physical law is investigated as the minimal architecture required for persistence under dimensional, algebraic,
-  anomaly, topological, dynamical, observational, canonical, gravitational, and compensator closure.
+  QDL models space not as absolute emptiness, but as a closure-compatible QDL Lattice of recurrence.
+  Particles are persistent localized modes of that same structure, and geometry is investigated as a possible
+  large-scale response of collective closure stress.
 </p>
 
 <p class="hero-sub">
-  The current research hierarchy begins with the flagship monograph
-  <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em>.
-  The roadmap, metrology foundation, substrate capstone, Toroidal QDC, QDC Completion Theorem, SMEFT audit,
-  and charged-lepton sequence are now best read as the technical supports and branch records beneath that synthesis.
+  The research program tests this hierarchy: QDL Lattice &rarr; localized particle modes &rarr; confined composite modes
+  &rarr; collective closure stress &rarr; effective geometry. The current research hierarchy begins with the flagship monograph
+  <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em>, with the roadmap, metrology foundation,
+  substrate capstone, Toroidal QDC, QDC Completion Theorem, SMEFT audit, and charged-lepton sequence serving as the
+  technical supports and branch records beneath that synthesis.
 </p>
 
 <div class="hero-meta">
   <span class="hero-chip">Flagship monograph</span>
   <span class="hero-chip">Predictive compression</span>
   <span class="hero-chip">Claim-status discipline</span>
+  <span class="hero-chip">QDL Lattice</span>
   <span class="hero-chip">Closure-persistent recurrence</span>
   <span class="hero-chip">L<sup>3</sup>F<sup>2</sup> QDC recurrence</span>
   <span class="hero-chip">QDC Completion Theorem</span>
@@ -558,22 +611,83 @@ footer{
 </div>
 
 <p class="hero-note">
-  This page gives the formal research architecture behind the homepage. It is organized around an eight-anchor reading path:
-  flagship synthesis, program roadmap, peer-reviewed metrology foundation, substrate architecture, geometric QDC keystone,
-  completion-theorem spine, operator-governance audit, and numerical mass-spectrum application.
+  This page gives the formal research architecture behind the homepage. It starts from the simplified QDL Lattice picture
+  and then organizes the program around an eight-anchor reading path: flagship synthesis, program roadmap, peer-reviewed
+  metrology foundation, substrate architecture, geometric QDC keystone, completion-theorem spine, operator-governance audit,
+  and numerical mass-spectrum application.
 </p>
 
 <div class="hero-actions">
   <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">Read the Flagship Monograph</a>
+  <a class="btn" href="#qdl-lattice-picture">QDL Lattice Picture</a>
   <a class="btn" href="#recommended-path">Reading Path</a>
+  <a class="btn" href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
   <a class="btn" href="https://doi.org/10.5281/zenodo.20461142" target="_blank" rel="noopener noreferrer">QDL Roadmap</a>
   <a class="btn btn-orange" href="https://doi.org/10.5281/zenodo.20692677" target="_blank" rel="noopener noreferrer">QDC Completion Theorem</a>
   <a class="btn" href="#technical-pillars">Technical Pillars</a>
   <a class="btn" href="qdl-calculator.html">QDL Calculator</a>
 </div>
-```
 
   </section>
+
+  <section class="section" id="qdl-lattice-picture" style="margin-top:-.7rem;">
+    <div class="card lattice-card">
+      <div class="lattice-grid">
+        <div>
+          <div class="hero-kicker">Core research picture</div>
+          <div class="card-title">From QDL Lattice to Effective Geometry</div>
+
+          <p>
+            The research program begins from a simple substrate interpretation: space is not treated as absolute emptiness.
+            It is modeled as a closure-compatible <strong>QDL Lattice</strong> whose organized recurrence supplies the effective
+            relational properties associated with physical space.
+          </p>
+
+          <p>
+            Persistent particles are then localized closure modes of that same structure. An electron-like mode is a single-core
+            toroidal recurrence. A proton-like mode is a triadic confined recurrence whose trefoil-like morphology represents
+            three coupled closure channels. At larger scales, collective closure stress is investigated as a possible route to
+            effective geometric response.
+          </p>
+
+          <div class="lattice-chain" aria-label="QDL research hierarchy">
+            <span class="lattice-node">QDL Lattice</span>
+            <span class="lattice-arrow">&rarr;</span>
+            <span class="lattice-node">Localized modes</span>
+            <span class="lattice-arrow">&rarr;</span>
+            <span class="lattice-node">Composite modes</span>
+            <span class="lattice-arrow">&rarr;</span>
+            <span class="lattice-node">Collective stress</span>
+            <span class="lattice-arrow">&rarr;</span>
+            <span class="lattice-node">Effective geometry</span>
+          </div>
+
+          <p class="note">
+            Claim-status note: this is the QDL substrate interpretation and research architecture. It is not a claim that
+            microscopic QDL lattice cells have already been observed, or that spacetime, spin, gravity, and the full particle
+            spectrum have already been completely derived.
+          </p>
+
+          <div class="substrate-actions">
+            <a class="btn btn-primary" href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
+            <a class="btn" href="integrated-worldview-qdl-lattice.png" target="_blank" rel="noopener noreferrer">Open QDL Lattice Graphic</a>
+            <a class="btn" href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">Flagship Monograph</a>
+          </div>
+        </div>
+
+        <figure class="lattice-figure">
+          <a href="integrated-worldview-qdl-lattice.png" target="_blank" rel="noopener noreferrer">
+            <img src="integrated-worldview-qdl-lattice.png" alt="Integrated QDL worldview showing the QDL Lattice leading to localized closure modes, triadic baryons, collective stress, and effective geometry">
+          </a>
+          <figcaption>
+            <strong>Integrated QDL worldview.</strong>
+            The QDL Lattice is the proposed closure-compatible recurrence background. Localized and composite particle modes
+            are treated as persistent reorganizations of that background, while effective geometry is investigated as a
+            large-scale collective response.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
   <section class="flagship" id="flagship-monograph">
     <div class="flagship-grid">
@@ -582,7 +696,6 @@ footer{
         <h2>Physical Law as the Minimal Architecture of Persistence Under Closure</h2>
         <div class="flagship-subtitle">Predictive Compression, Ontological Unification, and the Vacuum-Energy Problem</div>
 
-```
     <p>
       The monograph states the program's broadest thesis: physical law may be understood as the minimal architecture
       required for physical persistence under closure. It develops predictive compression as the standard for evaluating
@@ -626,7 +739,6 @@ footer{
     </figcaption>
   </figure>
 </div>
-```
 
   </section>
 
@@ -636,7 +748,6 @@ footer{
       <p class="section-kicker">The current eight-anchor hierarchy for evaluating QDL coherently.</p>
     </div>
 
-```
 <div class="card" style="border-color:rgba(37,99,235,.34); background:#f8fbff;">
   <div class="pathway">
 
@@ -718,7 +829,6 @@ footer{
     This path gives visitors a coherent progression: flagship synthesis → roadmap → peer-reviewed metrology foundation → substrate architecture → geometric substrate keystone → completion-theorem spine → falsifiable operator audit → numerical mass-spectrum application.
   </p>
 </div>
-```
 
   </section>
 
@@ -728,7 +838,6 @@ footer{
       <p class="section-kicker">The methodological core of the flagship monograph.</p>
     </div>
 
-```
 <div class="grid-2">
   <div class="card">
     <h3>Predictive Compression</h3>
@@ -750,7 +859,6 @@ footer{
     </p>
   </div>
 </div>
-```
 
   </section>
 
@@ -788,7 +896,6 @@ footer{
       <p class="section-kicker">The primary technical map beneath the flagship synthesis.</p>
     </div>
 
-```
 <div class="grid-2">
   <div class="card" style="border-color:rgba(37,99,235,.30); background:#f8fbff;">
     <div class="tagrow">
@@ -850,7 +957,6 @@ footer{
     <p class="note">DOI: 10.5281/zenodo.20328260</p>
   </div>
 </div>
-```
 
   </section>
 
@@ -860,7 +966,6 @@ footer{
       <p class="section-kicker">The main hard-physics pillars supporting the QDL closure program.</p>
     </div>
 
-```
 <div class="grid-3">
   <div class="card">
     <div class="tagrow"><span class="tag">Spectrum selection</span></div>
@@ -904,7 +1009,6 @@ footer{
     <p class="note">DOI: 10.5281/zenodo.20090219</p>
   </div>
 </div>
-```
 
   </section>
 
@@ -914,7 +1018,6 @@ footer{
       <p class="section-kicker">A framework-first research program extending into scientific applications and executable validation infrastructure.</p>
     </div>
 
-```
 <div class="grid-3">
   <div class="card">
     <h3>1. Framework Layer</h3>
@@ -937,7 +1040,6 @@ footer{
     </p>
   </div>
 </div>
-```
 
   </section>
 
@@ -945,7 +1047,6 @@ footer{
     <div class="card">
       <div class="card-title">What QDL Is — and Is Not</div>
 
-```
   <table>
     <tr>
       <td><strong>QDL is</strong></td>
@@ -954,6 +1055,10 @@ footer{
     <tr>
       <td>A closure-admissibility theory of physical persistence</td>
       <td>A mechanical medium, classical aether, or hidden material substance</td>
+    </tr>
+    <tr>
+      <td>A QDL Lattice interpretation in which space-like properties arise from closure-compatible recurrence</td>
+      <td>A claim that empty space has already been replaced by directly observed microscopic cells</td>
     </tr>
     <tr>
       <td>A structural filter on representations before fitting</td>
@@ -973,7 +1078,6 @@ footer{
     One-line identity: QDL provides a residual-first structural admissibility constraint on physical representations and asks which candidate structures persist under declared closure rules.
   </p>
 </div>
-```
 
   </section>
 
@@ -983,7 +1087,6 @@ footer{
       <p class="section-kicker">Representative downstream branches of the broader program.</p>
     </div>
 
-```
 <div class="grid-3">
   <div class="card">
     <h3>Gravity and Cosmology</h3>
@@ -991,8 +1094,8 @@ footer{
   </div>
 
   <div class="card">
-    <h3>Toroidal QDC Geometry</h3>
-    <p>The toroidal branch studies whether Planck-scale candidate persistence can be modeled as compact two-cycle recurrence with winding, phase, family, mass, gauge, vacuum, and gravitational closure.</p>
+    <h3>QDL Lattice and Toroidal Geometry</h3>
+    <p>The lattice branch studies whether Planck-scale candidate persistence can be modeled as closure-compatible recurrence, with toroidal cells supporting winding, phase, family, mass, gauge, vacuum, and gravitational closure.</p>
   </div>
 
   <div class="card">
@@ -1015,7 +1118,6 @@ footer{
     <p>A broader methodological branch treats dimensional admissibility as a pre-verification tool for engineering models, measurement pipelines, scientific software, AI-generated physical models, and digital twins.</p>
   </div>
 </div>
-```
 
   </section>
 
