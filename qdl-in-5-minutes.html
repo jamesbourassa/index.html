@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="A concise, equation-light introduction to the Quantized Dimensional Ledger (QDL), centered on the flagship monograph Physical Law as the Minimal Architecture of Persistence Under Closure, structural admissibility, dimensional closure, the Quantized Dimensional Cell, predictive compression, claim-status discipline, and where to start."
+    content="A concise, equation-light introduction to the Quantized Dimensional Ledger (QDL), centered on the QDL Lattice interpretation, closure-persistent recurrence, physical law as persistence under closure, structural admissibility, dimensional closure, the Quantized Dimensional Cell, predictive compression, claim-status discipline, and where to start."
   />
 
   <style>
@@ -27,11 +27,14 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
     }
 
     a { color: var(--accent); text-decoration: none; }
@@ -54,6 +57,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -159,6 +163,7 @@
       color: var(--text-soft);
       max-width: 58rem;
       line-height: 1.65;
+      margin-bottom: 0.72rem;
     }
 
     .hero-sub strong { color: #111827; }
@@ -227,22 +232,26 @@
 
     .hero-figure {
       margin: 1rem 0 1rem;
-      max-width: 52rem;
+      max-width: 58rem;
+      background: #020617;
+      border-radius: 18px;
+      padding: 0.65rem;
+      border: 1px solid rgba(56,189,248,0.28);
     }
 
     .hero-figure img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 16px;
-      border: 1px solid #e5e7eb;
+      border-radius: 13px;
+      border: 1px solid rgba(148,163,184,0.28);
       background: #fff;
     }
 
     .hero-figure figcaption {
-      margin-top: 0.45rem;
+      margin-top: 0.55rem;
       font-size: 0.8rem;
-      color: #6b7280;
+      color: #cbd5e1;
       line-height: 1.5;
     }
 
@@ -444,6 +453,33 @@
       color: #0f172a;
     }
 
+    .lattice-chain {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.7rem 0 0.75rem;
+    }
+
+    .lattice-node {
+      border: 1px solid rgba(37,99,235,0.28);
+      background: #eff6ff;
+      color: #1e3a8a;
+      border-radius: 999px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .lattice-arrow {
+      color: #64748b;
+      padding: 0.25rem 0;
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 700px) {
+      .lattice-arrow { display: none; }
+    }
+
     footer {
       border-top: 1px solid #e5e7eb;
       background: #f9fafb;
@@ -470,7 +506,7 @@
   <div class="nav">
     <div class="logo">
       <div class="logo-icon">
-        <img src="apple-touch-icon.png" alt="QDL Physics Institute emblem" />
+        <img src="qdl-logo.png" alt="QDL Physics Institute logo" />
       </div>
       <div>
         <div class="logo-text-main">QDL Physics Institute</div>
@@ -484,8 +520,8 @@
   <a href="research.html">Research Program</a>
   <a href="publications.html">Publications</a>
   <a href="qdl-calculator.html">QDL Calculator</a>
-  <a href="resources.html">Resources</a>
   <a href="institute.html">Institute</a>
+  <a href="resources.html">Resources</a>
   <a href="contact.html" class="nav-cta">Contact</a>
 </nav>
 ```
@@ -497,19 +533,33 @@
   <section class="hero">
     <div class="hero-kicker">First-pass overview · equation-light orientation</div>
     <h1 class="hero-title">QDL in 5 Minutes</h1>
-    <p class="hero-sub">
-      The <strong>Quantized Dimensional Ledger</strong> is a proposed structural-admissibility framework for physics, metrology, and model governance. Its current flagship synthesis is the monograph <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em>, which frames physical law as the minimal architecture required for persistence under closure.
-    </p>
 
 ```
+<p class="hero-sub">
+  The <strong>Quantized Dimensional Ledger</strong> is a proposed structural-admissibility framework for physics,
+  metrology, and model governance. Its simplest public picture is the <strong>QDL Lattice</strong>:
+  space is modeled not as absolute emptiness, but as a closure-compatible lattice of recurrence.
+</p>
+
+<p class="hero-sub">
+  In this picture, particles are persistent localized modes of that same structure, composite particles are confined
+  multi-channel modes, and geometry is investigated as a possible large-scale response of collective closure stress.
+  The current flagship synthesis is the monograph
+  <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em>.
+</p>
+
 <figure class="hero-figure">
-  <img src="figure1.png" alt="Dimensional lattice and closure structure for the Quantized Dimensional Ledger" />
+  <img src="integrated-worldview-qdl-lattice.png" alt="Integrated QDL worldview showing the QDL Lattice leading to localized closure modes, triadic baryons, collective stress, and effective geometry" />
   <figcaption>
-    QDL represents dimensional structure as a ledger. The central question is not merely whether units balance, but whether a construction remains closure-admissible under the transformations and regimes it claims to support.
+    The QDL Lattice is the proposed closure-compatible recurrence background. Localized and composite particle modes
+    are treated as persistent reorganizations of that background, while effective geometry is investigated as a
+    large-scale collective response.
   </figcaption>
 </figure>
 
 <div class="hero-meta">
+  <span class="hero-chip">QDL Lattice</span>
+  <span class="hero-chip">Closure-Persistent Recurrence</span>
   <span class="hero-chip">Physical Persistence Under Closure</span>
   <span class="hero-chip">Structural Admissibility</span>
   <span class="hero-chip">Predictive Compression</span>
@@ -522,7 +572,8 @@
 
 <div class="hero-actions">
   <a class="btn btn-purple" href="https://doi.org/10.5281/zenodo.20940986" target="_blank" rel="noopener noreferrer">Read the Flagship Monograph</a>
-  <a class="btn btn-primary" href="research.html">Research Program</a>
+  <a class="btn btn-primary" href="research.html#qdl-lattice-picture">QDL Lattice Picture</a>
+  <a class="btn" href="research.html">Research Program</a>
   <a class="btn" href="publications.html">Publication Record</a>
   <a class="btn" href="qdl-calculator.html">QDL Calculator</a>
 </div>
@@ -533,19 +584,45 @@
   <section class="section">
     <div class="grid">
       <div class="card">
-        <div class="callout purple" role="note" aria-label="Flagship monograph status">
+        <div class="callout purple" role="note" aria-label="Core QDL picture">
           <p style="margin:0 0 0.45rem 0;">
-            <span class="pill purple">Where the program stands now</span>
+            <span class="pill purple">The core picture</span>
           </p>
           <p style="margin:0;">
-            The current defining QDL synthesis is <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em>. It presents QDL as a claim-status-controlled research program organized around predictive compression: a structure gains scientific force when it determines a consequence not separately inserted, generates linked consequences, or excludes an otherwise viable alternative.
+            QDL models space not as absolute emptiness, but as a closure-compatible <strong>QDL Lattice</strong>
+            of recurrence. Particles are persistent localized modes of that same structure, and geometry is investigated
+            as a possible large-scale response of collective closure stress.
           </p>
         </div>
 
 ```
+    <div class="lattice-chain" aria-label="QDL Lattice hierarchy">
+      <span class="lattice-node">QDL Lattice</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Localized particle modes</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Confined composite modes</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Collective stress</span>
+      <span class="lattice-arrow">&rarr;</span>
+      <span class="lattice-node">Effective geometry</span>
+    </div>
+
+    <div class="callout" role="note" aria-label="Claim status">
+      <p style="margin:0;">
+        <span class="pill gray">Claim status</span>
+        This is a substrate interpretation and research architecture. It is not a claim that microscopic lattice cells
+        have already been directly observed, or that spacetime, spin, gravity, and the full particle spectrum have
+        already been completely derived.
+      </p>
+    </div>
+
     <h2>1) What problem does QDL address?</h2>
     <p>
-      Many failures in physics, engineering, standards work, and model-driven systems begin upstream of numerical fitting. A construction may be mathematically writable, computationally convenient, or empirically adjustable while still carrying hidden structural problems: incompatible dimensional assumptions, invalid transformations, silent regime shifts, or loss of measurement meaning.
+      Many failures in physics, engineering, standards work, and model-driven systems begin upstream of numerical fitting.
+      A construction may be mathematically writable, computationally convenient, or empirically adjustable while still
+      carrying hidden structural problems: incompatible dimensional assumptions, invalid transformations, silent regime shifts,
+      or loss of measurement meaning.
     </p>
 
     <ul class="tight">
@@ -557,7 +634,9 @@
 
     <h3 class="spaced">2) What is the core idea?</h3>
     <p>
-      QDL treats admissibility as a structural question. Before asking whether a model can be fitted, QDL asks whether the construction is coherent under its own declared dimensional ledger and whether it remains coherent under the transformations, compositions, and interpretations it claims to support.
+      QDL treats admissibility as a structural question. Before asking whether a model can be fitted, QDL asks whether
+      the construction is coherent under its own declared dimensional ledger and whether it remains coherent under the
+      transformations, compositions, and interpretations it claims to support.
     </p>
 
     <div class="callout blue" role="note" aria-label="Core QDL question">
@@ -568,29 +647,36 @@
     </div>
 
     <p>
-      This turns dimensional reasoning from a post-hoc consistency check into an upstream filter. In the formal papers, QDL uses lattice structure, closure maps, residual classes, and admissibility-preserving transformations. In plain terms, it asks whether the structure of the representation survives the operations being performed on it.
+      This turns dimensional reasoning from a post-hoc consistency check into an upstream filter. In the formal papers,
+      QDL uses lattice structure, closure maps, residual classes, and admissibility-preserving transformations.
+      In plain terms, it asks whether the structure of the representation survives the operations being performed on it.
     </p>
 
     <h3 class="spaced">3) What is the Quantized Dimensional Cell?</h3>
     <p>
-      The <strong>Quantized Dimensional Cell</strong>, or <strong>QDC</strong>, is the proposed closure unit around which QDL organizes dimensional recurrence. In the current QDL program, the Planck-normalized closure cell is represented by the dimensional structure
-      <code class="inline">L³F²</code>, where length and frequency supply the primitive recurrence axes.
+      The <strong>Quantized Dimensional Cell</strong>, or <strong>QDC</strong>, is the proposed closure unit around which
+      QDL organizes dimensional recurrence. In the current QDL program, the Planck-normalized closure cell is represented
+      by the dimensional structure <code class="inline">L³F²</code>, where length and frequency supply the primitive recurrence axes.
     </p>
 
     <p>
-      The toroidal QDC papers develop this as a compact closure-space geometry: not as a claim that the universe has already been proven to be literally toroidal, but as a candidate representation for closure-stable recurrence, sector assignment, and residual filtering.
+      The toroidal QDC papers develop this as a compact closure-space geometry: not as a claim that the universe has already
+      been proven to be literally toroidal, but as a candidate representation for closure-stable recurrence, sector assignment,
+      and residual filtering.
     </p>
 
     <div class="callout" role="note" aria-label="QDC summary">
       <p style="margin:0;">
         <span class="pill blue">QDC</span>
-        The QDC is the proposed closure cell used to test whether dimensional constructions, operators, thresholds, and physical representations remain admissible across scale and transformation.
+        The QDC is the proposed closure cell used to test whether dimensional constructions, operators, thresholds,
+        and physical representations remain admissible across scale and transformation.
       </p>
     </div>
 
     <h3 class="spaced">4) What is predictive compression?</h3>
     <p>
-      Predictive compression is the monograph’s main standard for evaluating QDL claims. A theory does not become stronger simply by using one word for many things. It becomes stronger only when a smaller declared structure does real work.
+      Predictive compression is the monograph’s main standard for evaluating QDL claims. A theory does not become stronger
+      simply by using one word for many things. It becomes stronger only when a smaller declared structure does real work.
     </p>
 
     <ul class="tight">
@@ -616,6 +702,11 @@
     </p>
 
     <div class="status-grid">
+      <div class="status-row">
+        <strong>QDL Lattice interpretation</strong>
+        <span>The public-facing substrate picture: a closure-compatible recurrence background supporting localized modes, composite modes, collective stress, and possible effective geometry.</span>
+      </div>
+
       <div class="status-row">
         <strong>Flagship synthesis</strong>
         <span>The monograph frames physical law as the minimal architecture of persistence under closure and defines the program’s predictive-compression standard.</span>
@@ -656,6 +747,7 @@
     <ul class="tight">
       <li>Not a replacement for quantum field theory, general relativity, statistics, or experiment.</li>
       <li>Not a claim that all constants, masses, particles, or cosmological parameters have already been derived.</li>
+      <li>Not a claim that microscopic QDL Lattice cells have already been directly observed.</li>
       <li>Not a data-fitting method or curve-fitting program.</li>
       <li>Not a declaration that every proposed QDL extension is established physics.</li>
       <li>Not dependent on one dataset, one numerical coincidence, or one speculative interpretation.</li>
@@ -663,29 +755,37 @@
 
     <h3 class="spaced">8) How should claims be read?</h3>
     <p>
-      A central discipline of the current QDL program is the use of claim-status firewalls. QDL papers distinguish strict theorem, conditional theorem, restricted minimality theorem, constrained branch, ansatz, audit result, residual diagnostic, conjecture, and future-test target.
+      A central discipline of the current QDL program is the use of claim-status firewalls. QDL papers distinguish strict theorem,
+      conditional theorem, restricted minimality theorem, constrained branch, ansatz, audit result, residual diagnostic,
+      conjecture, and future-test target.
     </p>
 
     <div class="callout" role="note" aria-label="Claim-status firewall">
       <p style="margin:0;">
         <span class="pill gray">Important</span>
-        QDL is strongest where it provides reproducible structural audits, closure rules, admissibility tests, or controlled reconstruction layers. Speculative extensions are marked as conditional or future-test targets.
+        QDL is strongest where it provides reproducible structural audits, closure rules, admissibility tests, or controlled
+        reconstruction layers. Speculative extensions are marked as conditional or future-test targets.
       </p>
     </div>
 
     <h3 class="spaced">9) Why might this matter?</h3>
     <p>
-      If the QDL closure program continues to hold across independent examples, it could strengthen dimensional reasoning from unit consistency into a deeper structural filter on admissible physical representation. That would be useful not only in foundational physics, but also in metrology, model certification, scientific AI, engineering review, and multi-scale simulation.
+      If the QDL closure program continues to hold across independent examples, it could strengthen dimensional reasoning
+      from unit consistency into a deeper structural filter on admissible physical representation. That would be useful not only
+      in foundational physics, but also in metrology, model certification, scientific AI, engineering review, and multi-scale simulation.
     </p>
 
     <p>
-      The near-term test is not whether QDL explains everything. The near-term test is whether it can repeatedly identify, classify, or constrain structures that ordinary dimensional bookkeeping does not make explicit.
+      The near-term test is not whether QDL explains everything. The near-term test is whether it can repeatedly identify,
+      classify, or constrain structures that ordinary dimensional bookkeeping does not make explicit.
     </p>
 
     <div class="callout blue" role="note" aria-label="Bottom line">
       <p style="margin:0;">
         <span class="pill blue">Bottom line</span>
-        QDL is a structural-admissibility framework. It asks whether a construction is dimensionally and representationally coherent before major effort is invested in fitting, interpretation, certification, or deployment.
+        QDL is a structural-admissibility framework grounded in a closure-first picture of physical persistence.
+        It asks whether a construction is dimensionally and representationally coherent before major effort is invested
+        in fitting, interpretation, certification, or deployment.
       </p>
     </div>
 
@@ -698,7 +798,8 @@
   <aside class="card">
     <h2>Start here, then go deeper</h2>
     <p>
-      This page is the quick orientation layer. The flagship monograph is the full conceptual synthesis. The roadmap paper is the best compact map of the supporting technical program.
+      This page is the quick orientation layer. The flagship monograph is the full conceptual synthesis.
+      The roadmap paper is the best compact map of the supporting technical program.
     </p>
 
     <div class="callout" style="margin-top:0.65rem;">
@@ -707,6 +808,7 @@
       </p>
       <ol class="tight">
         <li>Start with this page.</li>
+        <li>Use the QDL Lattice picture to understand the public-facing architecture.</li>
         <li>Read the flagship monograph for the full synthesis.</li>
         <li>Read the roadmap paper for the program architecture.</li>
         <li>Use the metrology paper for the accepted measurement-chain entry point.</li>
@@ -724,6 +826,7 @@
         <a href="research.html">Research Program — current QDL architecture and priorities</a>
         <a href="publications.html">Publications — full paper list, journal status, and Zenodo records</a>
         <a href="qdl-calculator.html">QDL Calculator — interactive structural-admissibility tool</a>
+        <a href="institute.html">Institute — mission, identity, and founder profile</a>
         <a href="resources.html">Resources — explainers, downloads, and supporting material</a>
         <a href="contact.html">Contact — collaboration and correspondence</a>
       </div>
@@ -816,7 +919,7 @@
     <div class="status-grid">
       <div class="status-row">
         <strong>New readers</strong>
-        <span>Use this page first, then the flagship monograph and roadmap. Do not start with the most technical SMEFT or charged-lepton papers.</span>
+        <span>Use this page first, then the QDL Lattice picture, flagship monograph, and roadmap. Do not start with the most technical SMEFT or charged-lepton papers.</span>
       </div>
 
       <div class="status-row">
@@ -854,7 +957,8 @@
     <div class="callout" style="margin-top:0.85rem;">
       <p style="margin:0 0 0.35rem 0;"><strong>Suggested informal citation line</strong></p>
       <p style="margin:0; color:#374151; line-height:1.55;">
-        Bourassa, J. D., <em>Quantized Dimensional Ledger (QDL)</em>, QDL Physics Institute. See the Publications page and linked DOI records for formal papers and archival artifacts.
+        Bourassa, J. D., <em>Quantized Dimensional Ledger (QDL)</em>, QDL Physics Institute.
+        See the Publications page and linked DOI records for formal papers and archival artifacts.
       </p>
     </div>
 
@@ -871,7 +975,7 @@
 <footer>
   <div class="footer-inner">
     <span>&copy; <span id="year"></span> QDL Physics Institute. All rights reserved.</span>
-    <span>Quantized Dimensional Ledger · Physical Persistence Under Closure · Structural Admissibility</span>
+    <span>QDL Lattice · Physical Persistence Under Closure · Structural Admissibility</span>
   </div>
 </footer>
 
