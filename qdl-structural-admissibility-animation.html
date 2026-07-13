@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>QDL Structural Admissibility in 5 Minutes | Animation</title>
+<meta content="An entry-level QDL animation explaining structural admissibility, 3L+2F ledger vectors, the QDC closure direction, admissible and inadmissible worked examples, metrology, physics, and model governance." name="description"/>
+<meta content="James D. Bourassa, QDL Physics Institute" name="author"/>
+<meta content="#040812" name="theme-color"/>
+<style>
+:root{--bg:#040812;--panel:#071326;--text:#eef7ff;--muted:#a9bfd6;--cyan:#69dcff;--green:#7beeb0;--amber:#ffc35e;--red:#ff7a8a;--violet:#b9a7ff}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% 8%,#0b1b3b 0,#040812 52%,#02040a 100%);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--cyan);text-underline-offset:.18em}
+.wrap{max-width:1240px;margin:0 auto;padding:clamp(14px,2.4vw,34px)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.top a{font-weight:900}.badge{border:1px solid rgba(123,238,176,.34);background:rgba(4,22,25,.78);color:#c8f8df;border-radius:999px;padding:7px 11px;font-size:.86rem;font-weight:900}
+.kicker{margin:0;color:var(--green);font-weight:900;letter-spacing:.09em;text-transform:uppercase;font-size:.88rem}
+h1{margin:7px 0 10px;font-size:clamp(2rem,5vw,4.15rem);line-height:1;letter-spacing:-.045em;max-width:1150px}
+.lede{margin:0;max-width:1070px;color:#d7e6f4;line-height:1.55;font-size:clamp(1rem,1.7vw,1.2rem)}
+.stage{margin-top:22px;border:1px solid rgba(105,220,255,.34);border-radius:22px;overflow:hidden;background:#02050d;box-shadow:0 26px 86px rgba(0,0,0,.48),0 0 60px rgba(105,220,255,.07) inset}
+.canvas-wrap{aspect-ratio:16/9;background:#02050d}
+canvas{display:block;width:100%;height:100%}
+.caption{border-top:1px solid rgba(105,220,255,.22);padding:14px 18px 16px;background:rgba(3,9,21,.98);min-height:112px}
+.caption-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:7px}
+.caption-title{font-size:1rem;font-weight:900;color:#f3f9ff}
+.status{display:inline-flex;align-items:center;border:1px solid currentColor;border-radius:999px;padding:4px 9px;font-size:.72rem;font-weight:950;letter-spacing:.05em;text-transform:uppercase}
+.caption-body{margin:0;color:#d7e6f4;line-height:1.48;font-size:clamp(.94rem,1.5vw,1.08rem)}
+.controls{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;margin:14px 2px 4px}
+.buttons{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid rgba(105,220,255,.4);background:rgba(5,15,31,.94);color:var(--text);padding:9px 14px;border-radius:999px;font-weight:850;cursor:pointer}.btn:hover{background:rgba(14,34,61,.98)}
+.btn:focus-visible,.scene-chip:focus-visible,.link-card:focus-visible,.seek:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.seek{width:100%;accent-color:#69dcff}.time{color:var(--muted);font-variant-numeric:tabular-nums;font-size:.9rem;white-space:nowrap}
+.scene-nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.scene-chip{border:1px solid rgba(185,167,255,.25);background:rgba(10,15,34,.72);color:#cedbf0;padding:6px 9px;border-radius:999px;font-size:.77rem;cursor:pointer}.scene-chip.active{border-color:var(--green);color:#d8ffea;background:rgba(10,39,37,.76)}
+.links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:18px}.link-card{border:1px solid rgba(105,220,255,.24);background:rgba(5,12,27,.78);border-radius:16px;padding:14px 15px;text-decoration:none}.link-card strong{display:block;color:#f2f8ff;margin-bottom:5px}.link-card span{display:block;color:#cddced;font-size:.9rem;line-height:1.38}.link-card:hover{border-color:var(--green);background:rgba(8,31,35,.9)}
+.card{border:1px solid rgba(105,220,255,.2);background:rgba(5,12,27,.72);border-radius:18px;padding:18px 20px}.tx{margin-top:18px}.tx summary{cursor:pointer;color:var(--cyan);font-weight:900}.tx p{margin:9px 0;color:#d5e4f2;line-height:1.55}.foot{margin-top:24px;color:var(--muted);font-size:.9rem;line-height:1.5}
+@media(max-width:980px){.links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.links{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.time{text-align:right}.stage{border-radius:16px}.caption{min-height:138px}.scene-nav{display:none}}
+
+.series-nav{margin-top:24px;border:1px solid rgba(105,220,255,.25);background:rgba(5,12,27,.82);border-radius:18px;padding:18px 20px}.series-nav h2{margin:0 0 8px;color:#69dcff;font-size:1.08rem}.series-nav p{margin:0 0 12px;color:#d5e4f2;line-height:1.5}.series-links{display:flex;gap:10px;flex-wrap:wrap}.series-links a{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;border:1px solid rgba(105,220,255,.38);background:rgba(5,15,31,.94);color:#eef7ff;font-weight:850;text-decoration:none}.series-links a.primary{border-color:rgba(123,238,176,.55);background:rgba(7,35,34,.88);color:#ddffed}.series-links a:focus-visible{outline:3px solid #69dcff;outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><a href="/">QDL Physics Institute</a><span class="badge">Entry animation · structural admissibility</span></div>
+<p class="kicker">QDL animation series · start here</p>
+<h1>QDL Structural Admissibility in 5 Minutes</h1>
+<p class="lede">A first introduction to the Quantized Dimensional Ledger: how quantities become five-slot ledger vectors, how a declared closure rule classifies candidate structures, and why an expression can be dimensionally familiar yet structurally inadmissible.</p>
+<section aria-label="QDL structural admissibility animation" class="stage">
+<div class="canvas-wrap"><canvas height="900" id="c" width="1600"></canvas></div>
+<div aria-live="polite" class="caption">
+<div class="caption-head"><div class="caption-title" id="capTitle">Ready</div><span class="status" id="capStatus">Press Play</span></div>
+<p class="caption-body" id="capBody">This entry-level animation introduces the structural screen that comes before the QDL/QDC worldview animations.</p>
+</div>
+</section>
+<div class="controls">
+<div class="buttons"><button class="btn" id="play">Play</button><button class="btn" id="pause">Pause</button><button class="btn" id="replay">Replay</button><button class="btn" id="example">Worked Example</button></div>
+<input aria-label="Animation timeline" class="seek" id="seek" max="340" min="0" step="0.1" type="range" value="0"/>
+<div class="time" id="time">0:00 / 5:40</div>
+</div>
+<div aria-label="Scene navigation" class="scene-nav" id="sceneNav"></div>
+<section aria-label="QDL learning sequence" class="links">
+<a class="link-card" href="/qdl-in-5-minutes"><strong>Read: QDL in 5 Minutes</strong><span>Equation-light overview of the framework, scope, and claim boundaries.</span></a>
+<a class="link-card" href="/qdl-calculator"><strong>Use the QDL Calculator</strong><span>Enter ledger vectors and test them under a declared closure rule.</span></a>
+<a class="link-card" href="/qdl-planck-worldview-animation.html"><strong>Next: Planck Worldview</strong><span>The accessible visual picture of QDL/QDC recurrence, particles, fields, and geometry.</span></a>
+<a class="link-card" href="/qdl-l3f2-evidence-to-worldview-animation.html"><strong>Then: From GM to the QDC</strong><span>The evidence-to-worldview argument with explicit claim-status boundaries.</span></a>
+</section>
+<details class="card tx"><summary>Full timed transcript</summary>
+<p><strong>0:00–0:18 — Before fitting.</strong> QDL asks a prior question: is the construction structurally admissible before it is fitted, optimized, certified, published, or deployed?</p>
+<p><strong>0:18–0:45 — Upstream failures.</strong> A model may be numerically convenient while hiding a dimensional mismatch, an undeclared transformation, a regime shift, or a loss of measurement meaning.</p>
+<p><strong>0:45–1:25 — Begin with a real construction.</strong> A measured orbit supplies a semi-major axis a and period P. From n = 2π/P, the reconstructed gravitational parameter is μ = a³n². Before encoding it, the audit declares the basis, target, allowed transforms, and scope.</p>
+<p><strong>1:25–2:00 — Convert the construction.</strong> The five factors a·a·a·n·n are assigned to the declared slots (L₁,L₂,L₃,F₁,F₂), producing v(μ) = (1,1,1,1,1). The slot assignment is part of the audit configuration, not something inferred after the result.</p>
+<p><strong>2:00–2:30 — Closure rule.</strong> In the public calculator demonstration, the QDC direction is q = (1,1,1,1,1), corresponding to L³F². Exact membership requires v = kq for an integer k, under the declared transforms.</p>
+<p><strong>2:30–3:05 — Admissible vector.</strong> The orbital construction gives vₐ = (1,1,1,1,1) = q. Its transverse remainder is zero, so it is admissible under the declared rule.</p>
+<p><strong>3:05–3:50 — Non-admissible vector.</strong> The comparison vector vᵦ = (2,1,0,1,1) still aggregates to L³F², but it does not equal kq. It decomposes as q + (1,0,−1,0,0), leaving a nonzero transverse remainder.</p>
+<p><strong>3:50–4:20 — Same dimensions, different structure.</strong> Ordinary dimensional projection collapses both examples to L³F². The ledger retains the directional allocation and distinguishes closure from mere aggregate dimensional agreement.</p>
+<p><strong>4:20–4:50 — Application layers.</strong> The same upstream logic can be used for physics operators, metrology and measurement chains, and model governance or scientific-AI validation.</p>
+<p><strong>4:50–5:20 — Governance workflow.</strong> Declare the basis, target, transforms, and scope; encode the construction; compute closure; then proceed, repair, or exclude under the stated rule.</p>
+<p><strong>5:20–5:40 — Closing.</strong> QDL does not replace dynamics or empirical validation. It adds a structural screen before downstream reliance.</p>
+</details>
+<p class="foot">© QDL Physics Institute. This animation demonstrates the public structural-admissibility rule used by the QDL Calculator, beginning with the orbital construction μ = a³n² before encoding it as a ledger vector. “Excluded” means excluded under the declared rule and transform set; it does not automatically mean empirically false.</p>
+<section aria-label="QDL Visual Guide navigation" class="series-nav"><h2>Part 1 of 3 · Structural method</h2><p>You are at the beginning of the visual sequence. Continue to the conceptual QDL/QDC worldview after the ledger method is clear.</p><div class="series-links"><a href="animations.html">Visual Guide</a><a class="primary" href="qdl-planck-worldview-animation.html">Next: QDL/QDC Worldview →</a></div></section></main>
+<script>
+(()=>{
+'use strict';
+const W=1600,H=900,DUR=340;
+const canvas=document.getElementById('c'),ctx=canvas.getContext('2d');
+const capTitle=document.getElementById('capTitle'),capBody=document.getElementById('capBody'),capStatus=document.getElementById('capStatus');
+const playBtn=document.getElementById('play'),pauseBtn=document.getElementById('pause'),replayBtn=document.getElementById('replay'),exampleBtn=document.getElementById('example'),seek=document.getElementById('seek'),timeEl=document.getElementById('time'),sceneNav=document.getElementById('sceneNav');
+const C={bg:'#040812',text:'#eef7ff',muted:'#a9bfd6',cyan:'#69dcff',green:'#7beeb0',amber:'#ffc35e',red:'#ff7a8a',violet:'#b9a7ff',panel:'#071326'};
+let elapsed=0,playing=false,startStamp=null,raf=0;
+const scenes=[
+ {start:0,end:18,short:'Before fit',title:'Ask the structural question first',status:'Core QDL question',color:C.cyan,body:'Before fitting, optimizing, certifying, publishing, or deploying a construction, QDL asks whether its declared dimensional and representational structure is admissible.'},
+ {start:18,end:45,short:'Failure modes',title:'Many failures begin upstream of the numbers',status:'Problem definition',color:C.red,body:'A model can be mathematically writable and numerically adjustable while still hiding an incompatible ledger, an undeclared transformation, a regime shift, or a loss of measurement meaning.'},
+ {start:45,end:85,short:'Real construction',title:'Begin with a real-world construction',status:'Declare before encoding',color:C.amber,body:'A measured orbit provides a semi-major axis a and period P. From n = 2π/P, the gravitational parameter is reconstructed as μ = a³n². The audit configuration is declared before the construction becomes a vector.'},
+ {start:85,end:120,short:'Convert to vector',title:'Convert the construction into a ledger vector',status:'Framework definition',color:C.cyan,body:'The factors a·a·a·n·n are assigned to the declared basis slots (L₁,L₂,L₃,F₁,F₂), producing v(μ) = (1,1,1,1,1). The assignment is part of the declared audit.'},
+ {start:120,end:150,short:'Closure rule',title:'Declare the target and the closure rule',status:'Calculator demonstration',color:C.violet,body:'The public QDL Calculator uses q = (1,1,1,1,1) as the canonical QDC direction. Exact membership requires v = kq for an integer k, under the declared transform set.'},
+ {start:150,end:185,short:'Admissible',title:'Worked example: an admissible ledger vector',status:'Pass under rule',color:C.green,body:'The orbital construction gives vₐ = (1,1,1,1,1), which equals q exactly. The transverse remainder is zero, so the vector closes under the declared canonical rule.'},
+ {start:185,end:230,short:'Not admissible',title:'Worked example: a non-admissible ledger vector',status:'Fails closure',color:C.red,body:'vᵦ = (2,1,0,1,1) still aggregates to L³F², but it is not an integer multiple of q. The nonzero remainder records the structural mismatch.'},
+ {start:230,end:260,short:'Why stricter',title:'The same dimensions can hide different structures',status:'Beyond bookkeeping',color:C.amber,body:'Ordinary dimensional projection sees L³F² in both examples. The five-slot ledger preserves how that type is distributed and distinguishes exact closure from aggregate dimensional agreement.'},
+ {start:260,end:290,short:'Applications',title:'One structural screen, three application layers',status:'Downstream uses',color:C.green,body:'Physics uses the screen before operator or model reliance. Metrology uses it across transformations and derived quantities. Model governance uses it to control assumptions, scope, and claim status.'},
+ {start:290,end:320,short:'Workflow',title:'A closure-first governance workflow',status:'Operational sequence',color:C.violet,body:'Declare the basis, target, allowed transforms, and scope. Encode the vector. Compute the remainder. Then proceed, repair the construction, or exclude it under the declared rule.'},
+ {start:320,end:340,short:'Next steps',title:'Structural admissibility comes before the worldview',status:'Entry point',color:C.cyan,body:'QDL does not replace dynamics, data, or experiment. It adds an upstream structural filter. From here, continue to the Planck-worldview and evidence-to-worldview animations.'}
+];
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function fmt(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+function sceneAt(t){return scenes.find((s,i)=>t>=s.start&&(t<s.end||i===scenes.length-1))||scenes[0];}
+function rrPath(x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function fillRR(x,y,w,h,r,fill,stroke=null,lw=2){rrPath(x,y,w,h,r);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke();}}
+function measureLines(text,maxWidth,font){ctx.font=font;const out=[];for(const p of String(text).split(/\n/)){if(!p){out.push('');continue;}const words=p.trim().split(/\s+/);let line='';for(const word of words){const trial=line?line+' '+word:word;if(!line||ctx.measureText(trial).width<=maxWidth)line=trial;else{out.push(line);line=word;}}if(line)out.push(line);}return out;}
+function fitWrapped(text,x,y,w,h,opts={}){const family=opts.family||'ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif',weight=opts.weight||'700',color=opts.color||C.text,align=opts.align||'center',max=opts.max||42,min=Math.max(opts.min||20,20),pad=opts.pad||0,lineHeight=opts.lineHeight||1.2;let size=max,lines=[];for(;size>=min;size--){lines=measureLines(text,w-pad*2,`${weight} ${size}px ${family}`);if(lines.length*size*lineHeight<=h-pad*2)break;}size=Math.max(size,min);lines=measureLines(text,w-pad*2,`${weight} ${size}px ${family}`);ctx.save();ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();ctx.font=`${weight} ${size}px ${family}`;ctx.fillStyle=color;ctx.textAlign=align;ctx.textBaseline='middle';const lh=size*lineHeight;let yy=y+h/2-(lines.length-1)*lh/2;for(const line of lines){const xx=align==='left'?x+pad:align==='right'?x+w-pad:x+w/2;ctx.fillText(line,xx,yy);yy+=lh;}ctx.restore();return{size,lines};}
+function panel(x,y,w,h,title,body,color=C.cyan,opts={}){fillRR(x,y,w,h,20,'rgba(5,13,29,.95)',color,2.2);const titleH=title?Math.min(62,Math.max(48,h*.28)):0;if(title)fitWrapped(title,x+18,y+10,w-36,titleH,{max:opts.titleMax||29,min:21,weight:'900',color,align:opts.align||'center'});if(body){const top=title?y+titleH+8:y+14;fitWrapped(body,x+18,top,w-36,h-(top-y)-14,{max:opts.bodyMax||25,min:20,weight:opts.bodyWeight||'700',color:opts.bodyColor||C.text,align:opts.align||'center',lineHeight:1.18});}}
+function auditConfigCard(x,y,w,h,title,body,color){fillRR(x,y,w,h,16,'rgba(4,12,27,.98)',color,2);const labelW=106;fillRR(x+8,y+8,labelW,h-16,12,'rgba(8,22,39,.96)',color,1.5);fitWrapped(title,x+15,y+13,labelW-14,h-26,{max:19,min:18,weight:'950',color,lineHeight:1.05});fitWrapped(body,x+labelW+22,y+10,w-labelW-32,h-20,{max:19,min:18,weight:'750',color:C.text,align:'left',pad:4,lineHeight:1.1});}
+function equationBox(x,y,w,h,eq,label,color=C.green,opts={}){fillRR(x,y,w,h,22,'rgba(3,10,24,.96)',color,2.4);if(label)fitWrapped(label,x+16,y+10,w-32,42,{max:22,min:20,weight:'900',color});fitWrapped(eq,x+22,y+(label?52:12),w-44,h-(label?64:24),{max:opts.max||44,min:opts.min||24,weight:'700',family:'"Cambria Math","STIX Two Math","Times New Roman",serif',color:C.text,lineHeight:1.1});}
+function titleBanner(title,subtitle,status,color){fillRR(48,34,1504,116,24,'rgba(4,12,28,.97)',color,2.5);fitWrapped(title,78,45,1090,52,{max:38,min:27,weight:'950',color,align:'left'});fitWrapped(subtitle,78,96,1090,38,{max:21,min:20,weight:'700',color:C.muted,align:'left'});fillRR(1200,62,320,58,28,'rgba(5,18,28,.97)',color,1.8);fitWrapped(status,1216,69,288,44,{max:18,min:18,weight:'950',color});}
+function arrow(x1,y1,x2,y2,color=C.cyan,lw=5){ctx.save();ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=lw;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();const a=Math.atan2(y2-y1,x2-x1),s=14+lw;ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x2-s*Math.cos(a-.45),y2-s*Math.sin(a-.45));ctx.lineTo(x2-s*Math.cos(a+.45),y2-s*Math.sin(a+.45));ctx.closePath();ctx.fill();ctx.restore();}
+function background(t){ctx.clearRect(0,0,W,H);const g=ctx.createRadialGradient(800,120,20,800,430,950);g.addColorStop(0,'#0b1e43');g.addColorStop(.55,'#050b19');g.addColorStop(1,'#02040a');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);ctx.save();ctx.globalAlpha=.1;ctx.strokeStyle='#4972a8';ctx.lineWidth=1;for(let x=-300;x<W+300;x+=82){ctx.beginPath();ctx.moveTo(x,170);ctx.lineTo(x-650,H);ctx.stroke();}for(let y=195;y<H;y+=66){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}ctx.restore();for(let i=0;i<55;i++){const x=i*263%W,y=175+i*137%(H-210),a=.12+.12*Math.sin(t*.18+i);ctx.fillStyle=`rgba(160,210,255,${Math.max(.035,a)})`;ctx.fillRect(x,y,1.5,1.5);}}
+function vectorCards(x,y,values,opts={}){const labels=['L₁','L₂','L₃','F₁','F₂'],colors=[C.cyan,C.cyan,C.cyan,C.amber,C.amber],cardW=opts.cardW||120,gap=opts.gap||14,h=opts.h||150;values.forEach((v,i)=>{const xx=x+i*(cardW+gap);fillRR(xx,y,cardW,h,18,'rgba(5,13,29,.97)',colors[i],2.2);fitWrapped(labels[i],xx+10,y+12,cardW-20,34,{max:24,min:21,weight:'950',color:colors[i]});fitWrapped(String(v),xx+10,y+48,cardW-20,h-78,{max:58,min:38,weight:'950',color:opts.valueColor||C.text,family:'"Cambria Math","Times New Roman",serif'});if(opts.notes&&opts.notes[i])fitWrapped(opts.notes[i],xx+8,y+h-32,cardW-16,22,{max:17,min:17,weight:'850',color:colors[i]});});return 5*cardW+4*gap;}
+function smallVector(x,y,label,values,color){fillRR(x,y,560,94,18,'rgba(5,13,29,.96)',color,2);fitWrapped(label,x+18,y+12,160,70,{max:24,min:20,weight:'950',color,align:'left'});fitWrapped('('+values.join(', ')+')',x+180,y+12,360,70,{max:33,min:24,weight:'850',family:'"Cambria Math","Times New Roman",serif',color:C.text});}
+function gate(x,y,w,h,label,color,open=true){fillRR(x,y,w,h,18,open?'rgba(8,36,32,.94)':'rgba(42,12,22,.94)',color,3);fitWrapped(label,x+16,y+12,w-32,h-24,{max:28,min:21,weight:'950',color});}
+function drawOpening(t,s){titleBanner(s.title,'A structural screen before downstream reliance',s.status,s.color);const steps=['FIT','OPTIMIZE','CERTIFY','PUBLISH','DEPLOY'];for(let i=0;i<steps.length;i++){const x=785+i*150;fillRR(x,250,125,92,16,'rgba(5,13,29,.95)',C.muted,1.8);fitWrapped(steps[i],x+10,260,105,72,{max:20,min:20,weight:'950',color:C.muted});if(i<steps.length-1)arrow(x+130,296,x+145,296,'rgba(169,191,214,.55)',3);}gate(190,220,420,155,'STRUCTURAL\nADMISSIBILITY',C.green,true);arrow(615,298,760,298,C.green,7);panel(190,455,1220,185,'The QDL question','Is this construction dimensionally and representationally coherent under the transformations, compositions, and interpretations it claims to support?',C.cyan,{bodyMax:32});panel(420,690,760,100,'','Check structure before investing in fit, simulation, certification, or deployment.',C.violet,{bodyMax:24});}
+function drawFailures(t,s){titleBanner(s.title,'Numerical success cannot repair an undefined or incoherent representation',s.status,s.color);const cards=[['Dimensional mismatch','Terms are combined without a common declared ledger.'],['Undeclared transform','A basis change or substitution is used without preserving the claimed structure.'],['Regime shift','A model is transferred outside the domain in which its representation remains meaningful.'],['Meaning loss','A measurement chain preserves a number while losing quantity-kind or traceability.']];for(let i=0;i<4;i++){const x=70+(i%2)*760,y=205+Math.floor(i/2)*285;panel(x,y,690,235,cards[i][0],cards[i][1],i===0?C.red:i===1?C.amber:i===2?C.violet:C.cyan,{titleMax:31,bodyMax:27});const cx=x+635,cy=y+55;ctx.strokeStyle=C.red;ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(cx-18,cy-18);ctx.lineTo(cx+18,cy+18);ctx.moveTo(cx+18,cy-18);ctx.lineTo(cx-18,cy+18);ctx.stroke();}panel(325,790,950,68,'','QDL moves these checks upstream—before a convincing numerical output hides the structural failure.',C.green,{bodyMax:22});}
+function drawConstruction(t,s){
+  titleBanner(s.title,'The physical construction is shown before its ledger representation',s.status,s.color);
+  fillRR(55,190,540,535,24,'rgba(5,13,29,.96)',C.cyan,2.3);
+  fitWrapped('MEASURED ORBIT',85,210,480,42,{max:27,min:22,weight:'950',color:C.cyan});
+  const cx=325,cy=430,rx=190,ry=82,phase=t*.65;
+  ctx.save();ctx.strokeStyle='rgba(105,220,255,.8)';ctx.lineWidth=4;ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,-.16,0,Math.PI*2);ctx.stroke();
+  const px=cx+rx*Math.cos(phase)*Math.cos(.16)-ry*Math.sin(phase)*Math.sin(.16),py=cy-rx*Math.cos(phase)*Math.sin(.16)+ry*Math.sin(phase)*Math.cos(.16);
+  const sg=ctx.createRadialGradient(cx,cy,0,cx,cy,72);sg.addColorStop(0,'rgba(255,244,170,1)');sg.addColorStop(.35,'rgba(255,195,94,.9)');sg.addColorStop(1,'rgba(255,195,94,0)');ctx.fillStyle=sg;ctx.beginPath();ctx.arc(cx,cy,72,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff0a7';ctx.beginPath();ctx.arc(cx,cy,30,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=C.green;ctx.beginPath();ctx.arc(px,py,12,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle=C.amber;ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(cx-rx*.82,cy+105);ctx.lineTo(cx+rx*.82,cy+105);ctx.stroke();ctx.fillStyle=C.amber;ctx.beginPath();ctx.moveTo(cx-rx*.82,cy+105);ctx.lineTo(cx-rx*.82+18,cy+96);ctx.lineTo(cx-rx*.82+18,cy+114);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(cx+rx*.82,cy+105);ctx.lineTo(cx+rx*.82-18,cy+96);ctx.lineTo(cx+rx*.82-18,cy+114);ctx.closePath();ctx.fill();ctx.restore();
+  fitWrapped('semi-major axis  a',145,555,360,42,{max:23,min:20,weight:'900',color:C.amber});
+  panel(105,625,440,70,'','Measure a and the orbital period P.',C.green,{bodyMax:21});
+
+  equationBox(640,190,900,150,'n = 2π/P','CONVERT PERIOD TO RECURRENCE FREQUENCY',C.cyan,{max:38});
+  equationBox(640,365,900,155,'μ = GM = a³n²','RECONSTRUCTED GRAVITATIONAL PARAMETER',C.green,{max:42});
+  fillRR(640,545,900,255,22,'rgba(5,13,29,.96)',C.violet,2.3);
+  fitWrapped('DECLARE THE AUDIT CONFIGURATION',670,560,840,36,{max:24,min:21,weight:'950',color:C.violet});
+  auditConfigCard(670,605,400,88,'Basis','B = (L₁,L₂,L₃,F₁,F₂)',C.cyan);
+  auditConfigCard(1110,605,400,88,'Target','q = (1,1,1,1,1)',C.green);
+  auditConfigCard(670,701,400,88,'Allowed transforms','P ↔ n; multiply/divide factors; preserve slot labels.',C.amber);
+  auditConfigCard(1110,701,400,88,'Scope','Public audit of μ; not a microscopic gravity derivation.',C.red);
+}
+function drawLedger(t,s){
+  titleBanner(s.title,'Read the declared factor structure into the five-slot basis',s.status,s.color);
+  equationBox(245,180,1110,105,'μ = a · a · a · n · n','FACTORED CONSTRUCTION',C.green,{max:40});
+  const xs=[300,500,700,900,1100],labels=['a','a','a','n','n'],slots=['L₁','L₂','L₃','F₁','F₂'],cols=[C.cyan,C.cyan,C.cyan,C.amber,C.amber];
+  for(let i=0;i<5;i++){
+    fillRR(xs[i],330,180,145,20,'rgba(5,13,29,.97)',cols[i],2.3);
+    fitWrapped(labels[i],xs[i]+15,345,150,62,{max:52,min:40,weight:'950',color:C.text,family:'"Cambria Math","Times New Roman",serif'});
+    fitWrapped('assigned to '+slots[i],xs[i]+12,415,156,42,{max:19,min:18,weight:'900',color:cols[i]});
+    arrow(xs[i]+90,482,xs[i]+90,535,cols[i],4);
+  }
+  vectorCards(300,550,[1,1,1,1,1],{cardW:180,gap:20,h:170,valueColor:C.green});
+  equationBox(420,745,760,100,'v(μ) = (1,1,1,1,1)','LEDGER VECTOR',C.green,{max:35});
+  panel(90,745,285,100,'Audit note','The slot assignment is declared before testing.',C.red,{titleMax:20,bodyMax:18});
+  panel(1225,745,285,100,'Algebra','Multiplication becomes vector addition.',C.violet,{titleMax:20,bodyMax:18});
+}
+function drawRule(t,s){titleBanner(s.title,'Admissibility is always relative to a declared target and transform set',s.status,s.color);equationBox(120,205,580,190,'q = (1,1,1,1,1)','CANONICAL QDC DIRECTION',C.green,{max:40});equationBox(900,205,580,190,'q  ≡  L³F²','AGGREGATE TYPE',C.amber,{max:42});arrow(710,300,890,300,C.cyan,7);equationBox(300,475,1000,155,'v is admissible  ⇔  v = kq,  k ∈ ℤ','PUBLIC EXACT-MEMBERSHIP RULE',C.violet,{max:38});panel(260,690,1080,125,'Declared scope','The basis, target, allowed transformations, and equivalence rules must be stated before the test. Changing them after seeing the result would defeat the governance function.',C.red,{bodyMax:24});}
+function drawPass(t,s){titleBanner(s.title,'The vector lies exactly on the declared closure direction',s.status,s.color);vectorCards(345,205,[1,1,1,1,1],{cardW:170,gap:18,h:190,valueColor:C.green});equationBox(235,455,500,145,'vₐ = q','EXACT MEMBERSHIP',C.green,{max:46});equationBox(865,455,500,145,'rₐ = vₐ − q = 0','TRANSVERSE REMAINDER',C.green,{max:36});arrow(745,526,855,526,C.green,6);gate(510,660,580,110,'ADMISSIBLE UNDER\nTHE DECLARED RULE',C.green,true);fitWrapped('Multiples also close: 2q, 3q, …',480,790,640,52,{max:24,min:21,weight:'900',color:C.muted});}
+function drawFail(t,s){titleBanner(s.title,'Aggregate dimensional agreement does not guarantee exact closure',s.status,s.color);vectorCards(345,190,[2,1,0,1,1],{cardW:170,gap:18,h:185,valueColor:C.red});equationBox(85,430,690,145,'vᵦ = (2,1,0,1,1)','CANDIDATE VECTOR',C.red,{max:36});equationBox(825,430,690,145,'vᵦ = q + (1,0,−1,0,0)','DECOMPOSITION',C.amber,{max:34});smallVector(175,635,'Target q',[1,1,1,1,1],C.green);smallVector(865,635,'Remainder rᵦ',[1,0,-1,0,0],C.red);gate(510,765,580,95,'NOT ADMISSIBLE\nUNDER THIS RULE',C.red,false);}
+function drawCompare(t,s){titleBanner(s.title,'Projection can erase the distinction that the ledger preserves',s.status,s.color);panel(75,190,680,495,'Vector A: closes exactly','',C.green);vectorCards(130,270,[1,1,1,1,1],{cardW:105,gap:14,h:150,valueColor:C.green});equationBox(175,470,480,120,'L^(1+1+1) F^(1+1) = L³F²','AGGREGATE PROJECTION',C.green,{max:28});panel(845,190,680,495,'Vector B: same aggregate, nonzero remainder','',C.red);vectorCards(900,270,[2,1,0,1,1],{cardW:105,gap:14,h:150,valueColor:C.red});equationBox(945,470,480,120,'L^(2+1+0) F^(1+1) = L³F²','AGGREGATE PROJECTION',C.red,{max:28});panel(225,705,1150,155,'QDL adds a stricter question','Do the declared components close onto the target under the allowed transformations—not merely collapse to familiar units?',C.amber,{bodyMax:25});}
+function iconPhysics(cx,cy,color){ctx.save();ctx.translate(cx,cy);ctx.strokeStyle=color;ctx.lineWidth=4;for(let a=0;a<3;a++){ctx.beginPath();ctx.ellipse(0,0,58,22,a*Math.PI/3,0,Math.PI*2);ctx.stroke();}ctx.fillStyle=color;ctx.beginPath();ctx.arc(0,0,8,0,Math.PI*2);ctx.fill();ctx.restore();}
+function iconMetrology(cx,cy,color){ctx.strokeStyle=color;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(cx-62,cy+32);ctx.lineTo(cx+62,cy+32);ctx.stroke();for(let i=0;i<=8;i++){const x=cx-62+i*15.5;ctx.beginPath();ctx.moveTo(x,cy+32);ctx.lineTo(x,cy+(i%2?8:-2));ctx.stroke();}ctx.beginPath();ctx.moveTo(cx-48,cy-34);ctx.lineTo(cx+48,cy-34);ctx.lineTo(cx+48,cy+5);ctx.lineTo(cx-48,cy+5);ctx.closePath();ctx.stroke();}
+function iconGovernance(cx,cy,color){ctx.strokeStyle=color;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(cx,cy-62);ctx.lineTo(cx+56,cy-36);ctx.lineTo(cx+43,cy+34);ctx.lineTo(cx,cy+65);ctx.lineTo(cx-43,cy+34);ctx.lineTo(cx-56,cy-36);ctx.closePath();ctx.stroke();ctx.beginPath();ctx.moveTo(cx-22,cy);ctx.lineTo(cx-4,cy+18);ctx.lineTo(cx+30,cy-22);ctx.stroke();}
+function drawApplications(t,s){titleBanner(s.title,'The formal output is a pre-dynamical classification, not a substitute for the downstream science',s.status,s.color);const xs=[285,800,1315],cols=[C.cyan,C.amber,C.violet],titles=['Physics','Metrology','Model governance'],bodies=['Screen operators, terms, and model transfers before fitting or phenomenology.','Audit unit conversions, derived quantities, and measurement-chain traceability.','Declare assumptions, allowed transforms, regime boundaries, and claim status before reliance.'];for(let i=0;i<3;i++){panel(xs[i]-225,205,450,520,titles[i],bodies[i],cols[i],{titleMax:31,bodyMax:25});if(i===0)iconPhysics(xs[i],390,cols[i]);else if(i===1)iconMetrology(xs[i],390,cols[i]);else iconGovernance(xs[i],390,cols[i]);}panel(260,775,1080,70,'','The same ledger logic can become executable validation infrastructure for scientific software, AI outputs, sensor fusion, and digital twins.',C.green,{bodyMax:21});}
+function drawWorkflow(t,s){titleBanner(s.title,'The rule is useful only when its premises and outputs remain visible',s.status,s.color);const labels=['1. DECLARE','2. ENCODE','3. COMPUTE','4. CLASSIFY','5. ACT'],subs=['basis · target · transforms · scope','map the construction to v ∈ ℤ⁵','membership · remainder · optional Δ','admissible or excluded under the rule','proceed · repair · reject · rescope'],cols=[C.cyan,C.violet,C.green,C.amber,C.red];for(let i=0;i<5;i++){const x=50+i*310;panel(x,230,270,300,labels[i],subs[i],cols[i],{titleMax:27,bodyMax:23});if(i<4)arrow(x+278,380,x+302,380,'rgba(169,191,214,.7)',4);}panel(180,620,1240,150,'Governance firewall','“Excluded” means excluded by the declared structural rule. It does not automatically mean empirically false. Conversely, a structural pass does not establish correct dynamics or agreement with data.',C.red,{bodyMax:27});}
+function drawClosing(t,s){titleBanner(s.title,'Begin with the ledger; then move toward the physical interpretation',s.status,s.color);equationBox(160,205,1280,130,'Declare → Encode → Test closure → Classify → Then fit or interpret','QDL STRUCTURAL-ADMISSIBILITY WORKFLOW',C.green,{max:36});const cards=[['1','Structural admissibility','This animation'],['2','QDL/QDC Planck worldview','Accessible physical picture'],['3','From GM to the QDC','Evidence-to-worldview argument']];for(let i=0;i<3;i++){const x=90+i*510;fillRR(x,430,450,250,22,'rgba(5,13,29,.96)',i===0?C.green:i===1?C.cyan:C.violet,2.4);fitWrapped(cards[i][0],x+20,450,80,80,{max:54,min:40,weight:'950',color:i===0?C.green:i===1?C.cyan:C.violet});fitWrapped(cards[i][1],x+110,445,315,92,{max:27,min:22,weight:'950',color:C.text,align:'left'});fitWrapped(cards[i][2],x+35,555,380,75,{max:22,min:20,weight:'750',color:C.muted});if(i<2)arrow(x+460,555,x+500,555,'rgba(169,191,214,.72)',5);}panel(300,760,1000,80,'','Use the calculator to change the vector, target, congruence weights, modulus, or admissibility mode.',C.amber,{bodyMax:22});}
+function render(t){background(t);const s=sceneAt(t),local=t-s.start;if(s.start===0)drawOpening(local,s);else if(s.start===18)drawFailures(local,s);else if(s.start===45)drawConstruction(local,s);else if(s.start===85)drawLedger(local,s);else if(s.start===120)drawRule(local,s);else if(s.start===150)drawPass(local,s);else if(s.start===185)drawFail(local,s);else if(s.start===230)drawCompare(local,s);else if(s.start===260)drawApplications(local,s);else if(s.start===290)drawWorkflow(local,s);else drawClosing(local,s);capTitle.textContent=s.title;capBody.textContent=s.body;capStatus.textContent=s.status;capStatus.style.color=s.color;seek.value=t;timeEl.textContent=fmt(t)+' / 5:40';[...sceneNav.children].forEach((b,i)=>b.classList.toggle('active',scenes[i]===s));}
+function play(){if(playing)return;playing=true;startStamp=null;playBtn.textContent='Playing';raf=requestAnimationFrame(tick);}function pause(){playing=false;playBtn.textContent='Play';if(raf)cancelAnimationFrame(raf);render(elapsed);}function replay(){elapsed=0;render(0);play();}function tick(now){if(!playing)return;if(startStamp===null)startStamp=now-elapsed*1000;elapsed=Math.min(DUR,(now-startStamp)/1000);render(elapsed);if(elapsed>=DUR){playing=false;playBtn.textContent='Play';return;}raf=requestAnimationFrame(tick);}
+scenes.forEach(s=>{const b=document.createElement('button');b.className='scene-chip';b.textContent=fmt(s.start)+' '+s.short;b.onclick=()=>{pause();elapsed=s.start+.05;render(elapsed);};sceneNav.appendChild(b);});
+playBtn.onclick=()=>playing?pause():play();pauseBtn.onclick=pause;replayBtn.onclick=replay;exampleBtn.onclick=()=>{pause();elapsed=45.05;render(elapsed);};seek.oninput=()=>{playing=false;playBtn.textContent='Play';if(raf)cancelAnimationFrame(raf);elapsed=Number(seek.value);render(elapsed);};
+addEventListener('keydown',e=>{if(e.code==='Space'&&!['INPUT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName)){e.preventDefault();playing?pause():play();}else if(e.key==='ArrowRight'){pause();elapsed=clamp(elapsed+5,0,DUR);render(elapsed);}else if(e.key==='ArrowLeft'){pause();elapsed=clamp(elapsed-5,0,DUR);render(elapsed);}else if(e.key.toLowerCase()==='r')replay();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
+const params=new URLSearchParams(location.search);elapsed=clamp(Number(params.get('t')||0),0,DUR);render(elapsed);if(params.get('autoplay')==='1')play();
+})();
+</script>
+</body>
+</html>

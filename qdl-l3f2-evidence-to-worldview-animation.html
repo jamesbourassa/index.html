@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>From GM to the QDC | L³F² Evidence-to-Worldview Animation</title>
+<meta content="A QDL/QDC evidence-to-worldview animation: orbital GM, cosmological and Planck-scale L³F² identities, compact recurrence, toroidal QDC structure, conditional Standard-Model reconstruction, family index, worldview, and open failure gates." name="description"/>
+<meta content="James D. Bourassa, QDL Physics Institute" name="author"/>
+<meta content="#040812" name="theme-color"/>
+<style>
+:root{--bg:#040812;--panel:#071326;--text:#eef7ff;--muted:#a9bfd6;--cyan:#69dcff;--green:#7beeb0;--amber:#ffc35e;--red:#ff7a8a;--violet:#b9a7ff}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% 8%,#0b1b3b 0,#040812 52%,#02040a 100%);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--cyan);text-underline-offset:.18em}
+.wrap{max-width:1240px;margin:0 auto;padding:clamp(14px,2.4vw,34px)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.top a{font-weight:900}.badge{border:1px solid rgba(123,238,176,.34);background:rgba(4,22,25,.78);color:#c8f8df;border-radius:999px;padding:7px 11px;font-size:.86rem;font-weight:900}
+.kicker{margin:0;color:var(--green);font-weight:900;letter-spacing:.09em;text-transform:uppercase;font-size:.88rem}
+h1{margin:7px 0 10px;font-size:clamp(2rem,5vw,4.25rem);line-height:1;letter-spacing:-.045em;max-width:1150px}
+.lede{margin:0;max-width:1060px;color:#d7e6f4;line-height:1.55;font-size:clamp(1rem,1.7vw,1.2rem)}
+.stage{margin-top:22px;border:1px solid rgba(105,220,255,.34);border-radius:22px;overflow:hidden;background:#02050d;box-shadow:0 26px 86px rgba(0,0,0,.48),0 0 60px rgba(105,220,255,.07) inset}
+.canvas-wrap{aspect-ratio:16/9;background:#02050d}
+canvas{display:block;width:100%;height:100%}
+.caption{border-top:1px solid rgba(105,220,255,.22);padding:14px 18px 16px;background:rgba(3,9,21,.98);min-height:108px}
+.caption-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:7px}
+.caption-title{font-size:1rem;font-weight:900;color:#f3f9ff}
+.status{display:inline-flex;align-items:center;border:1px solid currentColor;border-radius:999px;padding:4px 9px;font-size:.72rem;font-weight:950;letter-spacing:.05em;text-transform:uppercase}
+.caption-body{margin:0;color:#d7e6f4;line-height:1.48;font-size:clamp(.92rem,1.5vw,1.08rem)}
+.controls{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;margin:14px 2px 4px}
+.buttons{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid rgba(105,220,255,.4);background:rgba(5,15,31,.94);color:var(--text);padding:9px 14px;border-radius:999px;font-weight:850;cursor:pointer}.btn:hover{background:rgba(14,34,61,.98)}
+.seek{width:100%;accent-color:#69dcff}.time{color:var(--muted);font-variant-numeric:tabular-nums;font-size:.9rem;white-space:nowrap}
+.scene-nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.scene-chip{border:1px solid rgba(185,167,255,.25);background:rgba(10,15,34,.72);color:#cedbf0;padding:6px 9px;border-radius:999px;font-size:.77rem;cursor:pointer}.scene-chip.active{border-color:var(--green);color:#d8ffea;background:rgba(10,39,37,.76)}.status-key{margin-top:16px;border:1px solid rgba(105,220,255,.22);background:rgba(5,12,27,.78);border-radius:18px;padding:16px 18px}.status-key h2{margin:0 0 11px;color:var(--cyan);font-size:1.05rem}.legend-grid{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:10px}.legend-item{border:1px solid rgba(169,191,214,.18);background:rgba(3,9,21,.7);border-radius:14px;padding:11px 12px;min-height:84px}.legend-label{display:flex;align-items:center;gap:8px;font-weight:900;font-size:.9rem;margin-bottom:5px}.legend-dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}.legend-item p{margin:0;color:#d5e4f2;line-height:1.35;font-size:.88rem}.research-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:13px;border:1px solid rgba(123,238,176,.45);background:rgba(7,35,34,.82);color:#ddffed;text-decoration:none;border-radius:14px;padding:12px 15px;font-weight:900}.research-cta:hover{background:rgba(10,50,46,.95)}
+.card{border:1px solid rgba(105,220,255,.2);background:rgba(5,12,27,.72);border-radius:18px;padding:18px 20px}.card h2{margin:0 0 10px;color:var(--cyan);font-size:1.08rem}.card p,.card li{color:#d5e4f2;line-height:1.56}.card p{margin:0 0 11px}.card ul{margin:8px 0 0;padding-left:20px}.tx{margin-top:18px}.tx summary{cursor:pointer;color:var(--cyan);font-weight:900}.tx p{margin:9px 0}.foot{margin-top:24px;color:var(--muted);font-size:.9rem;line-height:1.5}
+@media(max-width:980px){.legend-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.legend-grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.time{text-align:right}.stage{border-radius:16px}.caption{min-height:132px}.scene-nav{display:none}}
+
+.series-nav{margin-top:24px;border:1px solid rgba(105,220,255,.25);background:rgba(5,12,27,.82);border-radius:18px;padding:18px 20px}.series-nav h2{margin:0 0 8px;color:#69dcff;font-size:1.08rem}.series-nav p{margin:0 0 12px;color:#d5e4f2;line-height:1.5}.series-links{display:flex;gap:10px;flex-wrap:wrap}.series-links a{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;border:1px solid rgba(105,220,255,.38);background:rgba(5,15,31,.94);color:#eef7ff;font-weight:850;text-decoration:none}.series-links a.primary{border-color:rgba(123,238,176,.55);background:rgba(7,35,34,.88);color:#ddffed}.series-links a:focus-visible{outline:3px solid #69dcff;outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><a href="/">QDL Physics Institute</a><span class="badge">Flagship animation · evidence to worldview</span></div>
+<p class="kicker">QDL/QDC animation series · L³F² architecture</p>
+<h1>From <em>GM</em> to the QDC</h1>
+<p class="lede">How the dimensional signature L³F² appears in measured gravity, motivates a compact recurrence construction, becomes embodied in a toroidal QDC, and supports a conditional route toward Standard-Model structure and the broader QDL/QDC worldview.</p>
+<section aria-label="From GM to the QDC animation" class="stage">
+<div class="canvas-wrap"><canvas height="900" id="c" width="1600"></canvas></div>
+<div aria-live="polite" class="caption">
+<div class="caption-head"><div class="caption-title" id="capTitle">Ready</div><span class="status" id="capStatus">Press Play</span></div>
+<p class="caption-body" id="capBody">The animation begins with operational gravitational identities and moves step by step toward the QDL/QDC worldview.</p>
+</div>
+</section>
+<div class="controls">
+<div class="buttons"><button class="btn" id="play">Play</button><button class="btn" id="pause">Pause</button><button class="btn" id="replay">Replay</button><button class="btn" id="poster">Worldview Frame</button></div>
+<input aria-label="Animation timeline" class="seek" id="seek" max="450" min="0" step="0.1" type="range" value="0"/>
+<div class="time" id="time">0:00 / 7:30</div>
+</div>
+<div aria-label="Scene navigation" class="scene-nav" id="sceneNav"></div>
+<section aria-label="Claim-status key" class="status-key">
+<h2>Claim-status key</h2>
+<div class="legend-grid">
+<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--green)"></span>Established identity</div><p>Standard physics, direct measurement relation, or exact dimensional identity.</p></div>
+<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--cyan)"></span>Exact within premises</div><p>A theorem or finite classification inside the explicitly declared construction class.</p></div>
+<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--violet)"></span>Conditional result</div><p>Requires an additional physical premise that has not yet been independently established.</p></div>
+<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--amber)"></span>Model interpretation</div><p>A proposed QDL/QDC physical reading of an exact or conditional mathematical structure.</p></div>
+<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--red)"></span>Open gate</div><p>A mathematical, dynamical, numerical, competitor, continuum, or empirical test still unresolved.</p></div>
+</div>
+<a class="research-cta" href="/research.html"><span>Explore the benchmark and failure-gate program</span><span aria-hidden="true">→</span></a>
+</section>
+<details class="card tx"><summary>Full timed transcript</summary>
+<p><strong>0:00–0:18 — Opening.</strong> Begin with what is directly measured. The QDL/QDC argument starts not with a microscopic picture, but with a dimensional structure already present in gravitational physics.</p>
+<p><strong>0:18–0:55 — Orbital gravity.</strong> Astronomers commonly reconstruct the gravitational parameter μ = GM from orbital length and recurrence: μ = a³n² = 4π²a³/P². Its dimensional type is L³F².</p>
+<p><strong>0:55–1:30 — Across scale.</strong> The same type occurs in the critical-density mass parameter, GM = ½H²R³, and in the Planck identity GMₚ = Lₚ³Fₚ². Recurrence across scale is a structural clue, not proof of one mechanism.</p>
+<p><strong>1:30–2:05 — Meaning of the exponents.</strong> F means frequency, not force. QDL asks whether the primitive exponents three and two can be represented as three independent spatial-span channels and two independent recurrence-wave channels. This is an explicit model postulate.</p>
+<p><strong>2:05–2:45 — Recurrence to torus.</strong> Three spatial-span channels and two recurrence-wave channels form T⁵ = (S¹)⁵, naturally separated as T³L × T²F. A toroidal QDC embodies the same closure type through spatial occupancy times two recurrence frequencies.</p>
+<p><strong>2:45–3:20 — Planck boundary.</strong> The reduced Compton scale and Schwarzschild scale meet at m = mₚ/√2. QDL places the QDC hypothesis near the regime where localization, recurrence, and gravitational self-coupling can no longer be treated independently.</p>
+<p><strong>3:20–4:35 — Standard-Model architecture.</strong> Under declared recurrence, Hermitian, unimodular, exterior-sector, and orientation premises, the 3+2 carrier leads to S(U(3)×U(2)), the observed hypercharge generator, a minimal fifteen-state chiral sector, anomaly cancellation, and Higgs-doublet quantum numbers. A general two-block classification independently selects p+q = 5 and the non-Abelian split {3,2}.</p>
+<p><strong>4:35–5:15 — Three generations.</strong> The closure character defines a four-torus. Under the declared horizontal construction, integral curvature data yield a chiral Dirac index of magnitude three. The theorem is conditional on the physical sector-selection principle.</p>
+<p><strong>5:15–6:25 — Worldview.</strong> The proposed QDL/QDC picture organizes substrate, particles, fields, and records as different persistence regimes of closure-filtered recurrence.</p>
+<p><strong>6:25–7:05 — Trefoil firewall.</strong> A trefoil hadron is a candidate morphology, not an established proton ontology. Baryon number, Hopf charge, and knot class must remain distinct until a model-specific dynamical construction connects them.</p>
+<p><strong>7:05–7:30 — Claim ledger and closing.</strong> The animation closes by separating established anchors, exact results within premises, conditional reconstructions, model interpretations, no-go results, and open empirical gates.</p>
+</details>
+<p class="foot">© QDL Physics Institute. This animation is a claim-status-controlled visualization. It does not present the toroidal substrate, three-family sector selection, trefoil nucleon morphology, or complete QDL/QDC worldview as experimentally established facts.</p>
+<section aria-label="QDL Visual Guide navigation" class="series-nav"><h2>Part 3 of 3 · Evidence and failure gates</h2><p>The visual sequence is complete. Continue to the formal Framework, Calculator, Research Program, and Experiments pages.</p><div class="series-links"><a href="qdl-planck-worldview-animation.html">← Back: QDL/QDC Worldview</a><a href="animations.html">Visual Guide</a><a class="primary" href="framework.html">Continue to Framework →</a></div></section></main>
+<script>
+(()=>{
+'use strict';
+const W=1600,H=900,DUR=450;
+const canvas=document.getElementById('c'),ctx=canvas.getContext('2d');
+const capTitle=document.getElementById('capTitle'),capBody=document.getElementById('capBody'),capStatus=document.getElementById('capStatus');
+const playBtn=document.getElementById('play'),pauseBtn=document.getElementById('pause'),replayBtn=document.getElementById('replay'),posterBtn=document.getElementById('poster'),seek=document.getElementById('seek'),timeEl=document.getElementById('time'),sceneNav=document.getElementById('sceneNav');
+const COLORS={bg:'#040812',text:'#eef7ff',muted:'#a9bfd6',cyan:'#69dcff',green:'#7beeb0',amber:'#ffc35e',red:'#ff7a8a',violet:'#b9a7ff',panel:'#071326'};
+
+let elapsed=0,playing=false,startStamp=null,raf=0;
+const scenes=[
+ {start:0,end:18,short:'Opening',title:'Begin with measured structure',status:'Evidence first',color:COLORS.cyan,body:'The QDL/QDC argument starts not with a microscopic picture, but with a dimensional signature already present in operational gravitational physics.'},
+ {start:18,end:55,short:'Orbital μ',title:'Orbital gravity reveals L³F²',status:'Established identity',color:COLORS.green,body:'The gravitational parameter μ = GM is reconstructed from orbital length and recurrence: μ = a³n² = 4π²a³/P². Therefore [μ] = L³F².'},
+ {start:55,end:90,short:'Across scale',title:'The same type appears across scale',status:'Established identities',color:COLORS.green,body:'The critical-density mass parameter ½H²R³ and the Planck identity GMₚ = Lₚ³Fₚ² share the same dimensional type. This recurrence is a clue, not proof of one mechanism.'},
+ {start:90,end:125,short:'3 + 2 meaning',title:'What the exponents mean in QDL',status:'Model postulate',color:COLORS.amber,body:'F means frequency, not mechanical force. QDL explicitly postulates that the primitive exponents may be represented as three length-type and two frequency-type compact recurrence channels.'},
+ {start:125,end:165,short:'Torus',title:'Compact recurrence leads to a torus',status:'Conditional construction',color:COLORS.violet,body:'Three spatial-span channels and two recurrence-wave channels form T⁵ = (S¹)⁵, separated into a typed 3+2 structure. A toroidal QDC embodies spatial occupancy multiplied by two recurrence frequencies.'},
+ {start:165,end:200,short:'Planck boundary',title:'Why place the QDC near the Planck scale?',status:'Exact threshold + interpretation',color:COLORS.cyan,body:'The reduced Compton scale and Schwarzschild scale meet at m = mₚ/√2. The equality is exact; identifying the boundary with a toroidal QDC substrate is a physical interpretation.'},
+ {start:200,end:275,short:'SM structure',title:'From 3+2 recurrence to Standard-Model architecture',status:'Exact within premises',color:COLORS.green,body:'Within the declared construction, the 3+2 carrier yields S(U(3)×U(2)), the hypercharge generator, a minimal fifteen-state chiral sector, anomaly cancellation, Higgs quantum numbers, and canonical Abelian normalization.'},
+ {start:275,end:315,short:'Three families',title:'A conditional route to three generations',status:'Conditional index theorem',color:COLORS.violet,body:'The closure relation defines a four-torus. Under ambient descent and the declared sector-selection conditions, the twisted Dirac index has magnitude three, giving three zero modes of one chirality.'},
+ {start:315,end:385,short:'Worldview',title:'The QDL/QDC worldview',status:'Model interpretation',color:COLORS.cyan,body:'The proposed worldview treats substrate, particles, fields, and records as distinct persistence regimes of closure-filtered Planck-scale recurrence. This extended scene pauses on the complete architecture so each layer can be read before the animation advances.'},
+ {start:385,end:425,short:'Trefoil firewall',title:'Topological picture versus physical hypothesis',status:'Open dynamical gates',color:COLORS.red,body:'A trefoil hadron remains a candidate morphology. Baryon number, Hopf charge, and knot class are distinct invariants and cannot be identified by visual analogy alone.'},
+ {start:425,end:450,short:'Claim ledger',title:'What is known, conditional, excluded, and open',status:'Failure-gated conclusion',color:COLORS.amber,body:'The QDL/QDC program is strongest when every claim is assigned a visible status and exposed to mathematical, dynamical, numerical, competitor, continuum, and empirical failure gates.'}
+];
+
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function smooth(a,b,t){t=clamp((t-a)/(b-a),0,1);return t*t*(3-2*t);}
+function fmt(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+function sceneAt(t){return scenes.find((s,i)=>t>=s.start && (t<s.end||i===scenes.length-1))||scenes[0];}
+function rrPath(x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function fillRR(x,y,w,h,r,fill,stroke=null,lw=2){rrPath(x,y,w,h,r);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke();}}
+function measureLines(text,maxWidth,font){
+  ctx.font=font;
+  const output=[];
+  const paragraphs=String(text).split(/\n/);
+  for(const paragraph of paragraphs){
+    if(paragraph===''){output.push('');continue;}
+    const rawWords=paragraph.trim().split(/\s+/);
+    const words=[];
+    for(const raw of rawWords){
+      if(ctx.measureText(raw).width<=maxWidth){words.push(raw);continue;}
+      let chunk='';
+      for(const ch of raw){
+        const trial=chunk+ch;
+        if(chunk && ctx.measureText(trial).width>maxWidth){words.push(chunk);chunk=ch;}else chunk=trial;
+      }
+      if(chunk)words.push(chunk);
+    }
+    let line='';
+    for(const word of words){
+      const trial=line?line+' '+word:word;
+      if(ctx.measureText(trial).width<=maxWidth||!line){line=trial;}else{output.push(line);line=word;}
+    }
+    if(line)output.push(line);
+  }
+  return output;
+}
+function fitWrapped(text,x,y,w,h,opts={}){
+  const family=opts.family||'ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif';
+  const weight=opts.weight||'700';
+  const color=opts.color||COLORS.text;
+  const align=opts.align||'center';
+  const max=opts.max||42,min=Math.max(opts.min||18,18);
+  const pad=opts.pad||0;
+  let size=max,lines=[],fits=false;
+  for(;size>=min;size--){
+    const font=`${weight} ${size}px ${family}`;
+    lines=measureLines(text,w-pad*2,font);
+    const lh=size*(opts.lineHeight||1.2);
+    if(lines.length*lh<=h-pad*2){fits=true;break;}
+  }
+  if(size<min)size=min;
+  if(!fits){
+    lines=measureLines(text,w-pad*2,`${weight} ${size}px ${family}`);
+    console.warn('Text reached minimum size; enlarge panel if clipped:',text);
+  }
+  ctx.save();
+  ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();
+  ctx.font=`${weight} ${size}px ${family}`;
+  ctx.fillStyle=color;ctx.textAlign=align;ctx.textBaseline='middle';
+  const lh=size*(opts.lineHeight||1.2);
+  let yy=y+h/2-(lines.length-1)*lh/2;
+  for(const line of lines){
+    const xx=align==='left'?x+pad:align==='right'?x+w-pad:x+w/2;
+    ctx.fillText(line,xx,yy);yy+=lh;
+  }
+  ctx.restore();
+  return {size,lines,fits};
+}
+function panel(x,y,w,h,title,body,color=COLORS.cyan,opts={}){
+  fillRR(x,y,w,h,20,'rgba(5,13,29,.94)',color,2.2);
+  const titleH=title?Math.min(58,Math.max(46,h*.31)):0;
+  if(title)fitWrapped(title,x+18,y+10,w-36,titleH,{max:opts.titleMax||28,min:20,weight:'900',color,align:opts.align||'center'});
+  if(body){
+    const top=title?y+titleH+10:y+14;
+    fitWrapped(body,x+18,top,w-36,h-(top-y)-14,{max:opts.bodyMax||24,min:18,weight:opts.bodyWeight||'700',color:opts.bodyColor||COLORS.text,align:opts.align||'center',lineHeight:1.2});
+  }
+}
+function equationBox(x,y,w,h,eq,label,color=COLORS.green){
+  fillRR(x,y,w,h,22,'rgba(3,10,24,.95)',color,2.4);
+  if(label)fitWrapped(label,x+16,y+10,w-32,42,{max:22,min:18,weight:'900',color});
+  fitWrapped(eq,x+22,y+(label?52:12),w-44,h-(label?64:24),{max:44,min:24,weight:'700',family:'"Cambria Math","STIX Two Math","Times New Roman",serif',color:COLORS.text,lineHeight:1.12});
+}
+function titleBanner(title,subtitle,status,color){
+  fillRR(48,34,1504,116,24,'rgba(4,12,28,.96)',color,2.5);
+  fitWrapped(title,78,45,1090,52,{max:38,min:26,weight:'950',color,align:'left'});
+  fitWrapped(subtitle,78,96,1090,38,{max:21,min:18,weight:'700',color:COLORS.muted,align:'left'});
+  fillRR(1200,62,320,58,28,'rgba(5,18,28,.96)',color,1.8);
+  fitWrapped(status,1216,69,288,44,{max:18,min:18,weight:'950',color});
+}
+function arrow(x1,y1,x2,y2,color=COLORS.cyan,lw=5){ctx.save();ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=lw;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();const a=Math.atan2(y2-y1,x2-x1),s=14+lw;ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x2-s*Math.cos(a-.45),y2-s*Math.sin(a-.45));ctx.lineTo(x2-s*Math.cos(a+.45),y2-s*Math.sin(a+.45));ctx.closePath();ctx.fill();ctx.restore();}
+function background(t){ctx.clearRect(0,0,W,H);const g=ctx.createRadialGradient(800,120,20,800,430,950);g.addColorStop(0,'#0b1e43');g.addColorStop(.55,'#050b19');g.addColorStop(1,'#02040a');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);ctx.save();ctx.globalAlpha=.12;ctx.strokeStyle='#4972a8';ctx.lineWidth=1;for(let x=-300;x<W+300;x+=82){ctx.beginPath();ctx.moveTo(x,170);ctx.lineTo(x-650,H);ctx.stroke()}for(let y=195;y<H;y+=66){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}ctx.restore();for(let i=0;i<60;i++){const x=(i*263%W),y=175+(i*137%(H-210)),a=.18+.18*Math.sin(t*.2+i);ctx.fillStyle=`rgba(160,210,255,${Math.max(.04,a)})`;ctx.fillRect(x,y,1.5,1.5);}}
+function orbit(cx,cy,rx,ry,phase,color,planetColor){ctx.save();ctx.strokeStyle=color;ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,-.16,0,Math.PI*2);ctx.stroke();const px=cx+rx*Math.cos(phase)*Math.cos(.16)-ry*Math.sin(phase)*Math.sin(.16),py=cy+rx*Math.cos(phase)*Math.sin(-.16)+ry*Math.sin(phase)*Math.cos(.16);const halo=ctx.createRadialGradient(px,py,0,px,py,28);halo.addColorStop(0,planetColor);halo.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=halo;ctx.beginPath();ctx.arc(px,py,28,0,Math.PI*2);ctx.fill();ctx.fillStyle=planetColor;ctx.beginPath();ctx.arc(px,py,10,0,Math.PI*2);ctx.fill();ctx.restore();}
+function sun(x,y,r){const g=ctx.createRadialGradient(x,y,0,x,y,r*2.5);g.addColorStop(0,'rgba(255,248,190,1)');g.addColorStop(.25,'rgba(255,195,94,.95)');g.addColorStop(1,'rgba(255,195,94,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r*2.5,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff0a7';ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();}
+function typedChannel(x,y,w,h,label,kind,index,t){
+  const color=kind==='L'?COLORS.cyan:COLORS.amber;
+  fillRR(x,y,w,h,18,'rgba(5,13,29,.96)',color,2.2);
+  fitWrapped(label,x+12,y+10,w-24,34,{max:24,min:20,weight:'950',color});
+  const gx=x+24,gy=y+52,gw=w-48,gh=h-86;
+  if(kind==='L'){
+    const angles=[0,-Math.PI/4,Math.PI/2];
+    const a=angles[index%3],cx=gx+gw/2,cy=gy+gh/2,len=Math.min(gw*.72,gh*1.15);
+    const dx=Math.cos(a)*len/2,dy=Math.sin(a)*len/2;
+    ctx.save();ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=5;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(cx-dx,cy-dy);ctx.lineTo(cx+dx,cy+dy);ctx.stroke();
+    for(const sign of [-1,1]){
+      const ex=cx+sign*dx,ey=cy+sign*dy;
+      const backx=ex-sign*Math.cos(a)*16,backy=ey-sign*Math.sin(a)*16;
+      ctx.beginPath();ctx.moveTo(ex,ey);ctx.lineTo(backx+Math.cos(a+Math.PI/2)*8,backy+Math.sin(a+Math.PI/2)*8);ctx.lineTo(backx-Math.cos(a+Math.PI/2)*8,backy-Math.sin(a+Math.PI/2)*8);ctx.closePath();ctx.fill();
+    }
+    for(let k=-2;k<=2;k++){
+      const q=k/5,tx=cx+Math.cos(a)*len*q,ty=cy+Math.sin(a)*len*q;
+      ctx.beginPath();ctx.moveTo(tx+Math.cos(a+Math.PI/2)*7,ty+Math.sin(a+Math.PI/2)*7);ctx.lineTo(tx-Math.cos(a+Math.PI/2)*7,ty-Math.sin(a+Math.PI/2)*7);ctx.stroke();
+    }
+    ctx.restore();
+  }else{
+    ctx.save();ctx.strokeStyle='rgba(169,191,214,.38)';ctx.lineWidth=1.5;
+    for(let k=0;k<=4;k++){const xx=gx+gw*k/4;ctx.beginPath();ctx.moveTo(xx,gy);ctx.lineTo(xx,gy+gh);ctx.stroke();}
+    ctx.strokeStyle=color;ctx.lineWidth=4;ctx.beginPath();
+    const phase=t*.7+index*Math.PI*.65;
+    for(let i=0;i<=90;i++){
+      const q=i/90,xx=gx+q*gw,yy=gy+gh/2-Math.sin(q*Math.PI*4+phase)*gh*.32;
+      if(i===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy);
+    }
+    ctx.stroke();
+    const q=((t*.12+index*.31)%1+1)%1;
+    const px=gx+q*gw,py=gy+gh/2-Math.sin(q*Math.PI*4+phase)*gh*.32;
+    ctx.fillStyle=color;ctx.beginPath();ctx.arc(px,py,7,0,Math.PI*2);ctx.fill();ctx.restore();
+  }
+  fitWrapped(kind==='L'?'spatial span':'recurrence wave',x+12,y+h-34,w-24,24,{max:18,min:18,weight:'850',color:COLORS.text});
+}
+function modeGlyph(x,y,w,h,label,color,t){
+  fillRR(x,y,w,h,22,'rgba(5,13,29,.96)',color,2.3);
+  fitWrapped(label,x+18,y+12,w-36,34,{max:24,min:20,weight:'950',color});
+  const gx=x+30,gy=y+58,gw=w-60,gh=62;
+  ctx.save();ctx.strokeStyle='rgba(169,191,214,.35)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(gx,gy+gh/2);ctx.lineTo(gx+gw,gy+gh/2);ctx.stroke();
+  ctx.strokeStyle=color;ctx.lineWidth=4;ctx.beginPath();
+  for(let i=0;i<=120;i++){
+    const q=i/120,u=(q-.5)*5.5,env=Math.exp(-u*u*.42),xx=gx+q*gw,yy=gy+gh/2-env*Math.cos(u*5-t*.7)*gh*.42;
+    if(i===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy);
+  }
+  ctx.stroke();ctx.restore();
+  fitWrapped('chiral zero mode',x+20,y+h-40,w-40,28,{max:19,min:18,weight:'900',color:COLORS.text});
+}
+function torus(cx,cy,R,r,rot,t,color=COLORS.cyan){
+  ctx.save();ctx.translate(cx,cy);ctx.rotate(rot);
+  /* QDC morphology: a thick torus with a small central aperture and a nearly spherical outer silhouette. */
+  r=Math.max(r,R*.72);
+  /* Oblique three-quarter view: the QDC remains a nearly spherical fat torus, while the tilt makes its thickness and central aperture visually unambiguous. */
+  const pitch=.80+.035*Math.sin(t*.18+cx*.004);
+  const yaw=.28;
+  const cp=Math.cos(pitch),sp=Math.sin(pitch),cyaw=Math.cos(yaw),syaw=Math.sin(yaw);
+  const project=(u,v)=>{
+    const x=(R+r*Math.cos(v))*Math.cos(u);
+    const y=(R+r*Math.cos(v))*Math.sin(u);
+    const z=r*Math.sin(v);
+    const y1=y*cp-z*sp;
+    const z1=y*sp+z*cp;
+    const x2=x*cyaw+z1*syaw;
+    const z2=-x*syaw+z1*cyaw;
+    const p=1/(1+z2*.0017);
+    return [x2*p,y1*p,z2];
+  };
+  const rgb=color===COLORS.amber?[255,195,94]:color===COLORS.green?[123,238,176]:color===COLORS.violet?[185,167,255]:[105,220,255];
+  const cells=[],NU=32,NV=20;
+  for(let i=0;i<NU;i++)for(let j=0;j<NV;j++){
+    const u0=i/NU*Math.PI*2,u1=(i+1)/NU*Math.PI*2;
+    const v0=j/NV*Math.PI*2,v1=(j+1)/NV*Math.PI*2;
+    const pts=[project(u0,v0),project(u1,v0),project(u1,v1),project(u0,v1)];
+    const depth=pts.reduce((a,p)=>a+p[2],0)/4;
+    const light=.5+.5*Math.cos((v0+v1)/2-.65);
+    cells.push({pts,depth,alpha:.045+.075*light});
+  }
+  cells.sort((a,b)=>a.depth-b.depth);
+  for(const cell of cells){
+    ctx.beginPath();ctx.moveTo(cell.pts[0][0],cell.pts[0][1]);
+    for(let k=1;k<4;k++)ctx.lineTo(cell.pts[k][0],cell.pts[k][1]);
+    ctx.closePath();
+    ctx.fillStyle=`rgba(${rgb[0]},${rgb[1]},${rgb[2]},${cell.alpha})`;ctx.fill();
+    ctx.strokeStyle=`rgba(${rgb[0]},${rgb[1]},${rgb[2]},.10)`;ctx.lineWidth=.8;ctx.stroke();
+  }
+  for(let j=0;j<16;j++){
+    const v=j/16*Math.PI*2;ctx.beginPath();
+    for(let i=0;i<=72;i++){const u=i/72*Math.PI*2,[X,Y]=project(u,v);if(i===0)ctx.moveTo(X,Y);else ctx.lineTo(X,Y);}
+    ctx.strokeStyle=`rgba(${rgb[0]},${rgb[1]},${rgb[2]},.27)`;ctx.lineWidth=1.7;ctx.stroke();
+  }
+  for(let i=0;i<14;i++){
+    const u=i/14*Math.PI*2;ctx.beginPath();
+    for(let j=0;j<=48;j++){const v=j/48*Math.PI*2,[X,Y]=project(u,v);if(j===0)ctx.moveTo(X,Y);else ctx.lineTo(X,Y);}
+    ctx.strokeStyle=`rgba(${rgb[0]},${rgb[1]},${rgb[2]},.20)`;ctx.lineWidth=1.35;ctx.stroke();
+  }
+  ctx.restore();
+}
+function trefoil(cx,cy,s,t){ctx.save();ctx.translate(cx,cy);ctx.rotate(Math.sin(t*.15)*.08);const pts=[];for(let i=0;i<=480;i++){const u=i/480*Math.PI*2;const x=(Math.sin(u)+2*Math.sin(2*u))*s;const y=(Math.cos(u)-2*Math.cos(2*u))*s;const z=-Math.sin(3*u);pts.push({x:x*1.45,y:y*.92,z});}const seg=[];for(let i=0;i<pts.length-1;i++)seg.push({a:pts[i],b:pts[i+1],z:(pts[i].z+pts[i+1].z)/2});seg.sort((a,b)=>a.z-b.z);seg.forEach(q=>{const d=(q.z+1)/2;ctx.strokeStyle=`rgb(${Math.floor(35+d*80)},${Math.floor(115+d*105)},${Math.floor(190+d*60)})`;ctx.lineWidth=20+d*3;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(q.a.x,q.a.y);ctx.lineTo(q.b.x,q.b.y);ctx.stroke();});seg.filter(q=>q.z>.2).forEach(q=>{ctx.strokeStyle='rgba(255,255,255,.52)';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(q.a.x-2,q.a.y-3);ctx.lineTo(q.b.x-2,q.b.y-3);ctx.stroke();});[70,230,390].forEach((idx,k)=>{const p=pts[idx],cols=[COLORS.red,COLORS.green,COLORS.amber];ctx.fillStyle=cols[k];ctx.beginPath();ctx.arc(p.x,p.y,11,0,Math.PI*2);ctx.fill();});ctx.restore();}
+function drawOpening(t,s){titleBanner(s.title,'From operational gravity toward a candidate architecture of persistence',s.status,s.color);equationBox(150,230,560,230,'L³F²','RECURRING DIMENSIONAL SIGNATURE',COLORS.green);panel(860,230,580,230,'Evidentiary direction','Measured identities → declared postulate → exact classifications within premises → conditional physical reconstruction → worldview and failure gates',COLORS.cyan,{bodyMax:27});arrow(710,345,850,345,COLORS.cyan,7);panel(260,545,1080,150,'Central question','Is L³F² only a dimensional bookkeeping result, or can it organize a minimal recurrence architecture that explains why certain physical structures persist?',COLORS.violet,{bodyMax:30});}
+function drawOrbital(t,s){titleBanner(s.title,'The gravitational parameter is often reconstructed more directly than G or M separately',s.status,s.color);sun(380,430,48);orbit(380,430,220,105,t*.55,COLORS.cyan,COLORS.green);orbit(380,430,310,150,t*.31,'rgba(185,167,255,.72)',COLORS.violet);equationBox(820,215,620,160,'μ = GM','GRAVITATIONAL PARAMETER',COLORS.green);equationBox(820,405,620,180,'μ = a³n² = 4π²a³/P²','ORBITAL RECONSTRUCTION',COLORS.cyan);equationBox(820,615,620,130,'[μ] = L³F²','DIMENSIONAL TYPE',COLORS.amber);panel(115,625,540,120,'Operational anchor','Length cubed multiplied by recurrence frequency squared is already encoded in orbital dynamics.',COLORS.green,{bodyMax:22});}
+function drawScale(t,s){titleBanner(s.title,'Orbital, cosmological, and Planck-scale expressions share one typed structure',s.status,s.color);const xs=[230,800,1370],cols=[COLORS.cyan,COLORS.violet,COLORS.amber],labs=['ORBITAL','COSMOLOGICAL','PLANCK'];const eqs=['GM = 4π²a³/P²','GM = ½H²R³','GMₚ = Lₚ³Fₚ²'];for(let i=0;i<3;i++){fillRR(xs[i]-185,225,370,350,24,'rgba(5,13,29,.95)',cols[i],2.3);if(i===0){sun(xs[i],365,29);orbit(xs[i],365,105,50,t*.65,cols[i],COLORS.green);}else if(i===1){ctx.strokeStyle=cols[i];ctx.lineWidth=4;for(let r=38;r<=125;r+=30){ctx.beginPath();ctx.arc(xs[i],365,r,0,Math.PI*2);ctx.stroke();}for(let k=0;k<12;k++){const a=k/12*Math.PI*2;ctx.fillStyle=COLORS.text;ctx.fillRect(xs[i]+Math.cos(a)*100-2,365+Math.sin(a)*100-2,4,4);}}else{torus(xs[i],365,84,61,-.15,t,cols[i]);}fitWrapped(labs[i],xs[i]-155,485,310,35,{max:20,min:15,weight:'950',color:cols[i]});fitWrapped(eqs[i],xs[i]-160,520,320,44,{max:22,min:15,weight:'800',family:'"Cambria Math","Times New Roman",serif',color:COLORS.text});}equationBox(460,625,680,120,'L³F²','COMMON TYPE — NOT YET A COMMON MECHANISM',COLORS.green);}
+function drawMeaning(t,s){
+  titleBanner(s.title,'The step from dimensions to physical recurrence is explicit and falsifiable',s.status,s.color);
+  panel(65,190,390,230,'Three L-type units','In the minimal recurrence realization, these are represented as three independently resolvable spatial or occupancy spans.',COLORS.cyan,{bodyMax:22});
+  panel(1145,190,390,230,'Two F-type units','These are represented as two independently resolvable frequency or phase-recurrence waves. F = T⁻¹, not force.',COLORS.amber,{bodyMax:22});
+  for(let i=0;i<3;i++)typedChannel(500+i*205,205,180,165,'L'+(i+1),'L',i,t);
+  for(let i=0;i<2;i++)typedChannel(625+i*250,450,225,155,'F'+(i+1),'F',i,t);
+  arrow(800,385,800,438,COLORS.green,6);
+  panel(275,660,1050,150,'Primitive-recurrence postulate','Each unit of a primitive positive typed exponent represents one independently resolvable periodic recurrence channel in a minimal realization of that type.',COLORS.red,{bodyMax:23});
+}
+function drawTorusScene(t,s){
+  titleBanner(s.title,'Three spatial-span channels and two recurrence-wave channels form a typed five-torus',s.status,s.color);
+  for(let i=0;i<5;i++){
+    const isL=i<3;
+    typedChannel(70+i*300,180,250,145,isL?'L'+(i+1):'F'+(i-2),isL?'L':'F',isL?i:i-3,t);
+  }
+  equationBox(120,365,610,135,'T⁵ = (S¹)⁵','COMPACT RECURRENCE SPACE',COLORS.violet);
+  equationBox(870,365,610,135,'T³L × T²F','TYPED 3 + 2 SEPARATION',COLORS.green);
+  arrow(745,432,855,432,COLORS.green,6);
+  panel(80,585,440,205,'Closure functional','C_QDC = 2ΣL − 3ΣF. Persistent candidates lie in the zero-residue kernel.',COLORS.green,{bodyMax:23});
+  torus(800,680,100,72,-.12,t,COLORS.cyan);
+  panel(1080,585,440,205,'Toroidal QDC realization','QDCₜ = Vₜω₁ω₂ carries the type L³F²: spatial occupancy multiplied by two recurrence frequencies.',COLORS.cyan,{bodyMax:23});
+}
+function drawPlanck(t,s){titleBanner(s.title,'The exact crossover calculation is separated from the substrate interpretation',s.status,s.color);const x0=175,x1=1425,y=520;ctx.strokeStyle='rgba(169,191,214,.7)';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(x0,y);ctx.lineTo(x1,y);ctx.stroke();for(let i=0;i<=10;i++){const x=x0+(x1-x0)*i/10;ctx.strokeStyle='rgba(169,191,214,.5)';ctx.beginPath();ctx.moveTo(x,y-9);ctx.lineTo(x,y+9);ctx.stroke();}const cross=800;ctx.strokeStyle=COLORS.cyan;ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(205,280);ctx.bezierCurveTo(540,300,690,380,cross,y);ctx.stroke();ctx.strokeStyle=COLORS.amber;ctx.beginPath();ctx.moveTo(1395,280);ctx.bezierCurveTo(1060,300,910,380,cross,y);ctx.stroke();ctx.fillStyle=COLORS.green;ctx.beginPath();ctx.arc(cross,y,13+3*Math.sin(t*2),0,Math.PI*2);ctx.fill();panel(120,205,470,130,'Quantum-localization scale','λ̄C = ħ/(mc) decreases as mass increases.',COLORS.cyan,{bodyMax:24});panel(1010,205,470,130,'Gravitational scale','RS = 2Gm/c² increases as mass increases.',COLORS.amber,{bodyMax:24});equationBox(535,585,530,130,'m* = mₚ/√2','EXACT CROSSOVER',COLORS.green);panel(270,715,1060,130,'Interpretive boundary','QDL proposes the QDC near the regime where localization, periodic recurrence, and gravitational self-coupling can no longer be treated as independent descriptions.',COLORS.violet,{bodyMax:22});}
+function chainBox(x,y,w,h,txt,color,sub=''){
+  fillRR(x,y,w,h,18,'rgba(5,13,29,.96)',color,2.1);
+  fitWrapped(txt,x+12,y+10,w-24,h-(sub?42:20),{max:28,min:20,weight:'900',color:COLORS.text,family:txt.includes('Λ')||txt.includes('diag')?'"Cambria Math","Times New Roman",serif':undefined,lineHeight:1.08});
+  if(sub)fitWrapped(sub,x+14,y+h-38,w-28,28,{max:18,min:18,weight:'800',color});
+}
+function drawSM(t,s){
+  titleBanner(s.title,'The exact finite chain is separated from the physical premises that define its scope',s.status,s.color);
+  const y=195,gap=25;
+  const boxes=[
+    {x:45,w:190,txt:'L³F²',c:COLORS.cyan},
+    {x:260,w:280,txt:'C_QDC =\n2ΣL − 3ΣF',c:COLORS.green},
+    {x:565,w:290,txt:'S(U(3) × U(2))',c:COLORS.violet},
+    {x:880,w:390,txt:'Y =\ndiag(−⅓, −⅓, −⅓,\n+½, +½)',c:COLORS.amber},
+    {x:1295,w:260,txt:'Λ²V ⊕ V*',c:COLORS.red}
+  ];
+  for(let i=0;i<boxes.length;i++){
+    const b=boxes[i];chainBox(b.x,y,b.w,145,b.txt,b.c);
+    if(i<boxes.length-1)arrow(b.x+b.w+7,y+72,boxes[i+1].x-7,y+72,'rgba(169,191,214,.72)',4);
+  }
+  panel(50,390,470,275,'Declared premises','Minimal recurrence; Hermitian amplitudes; type-frame covariance; unimodularity; exterior-sector admissibility; orientation selection.',COLORS.cyan,{bodyMax:25});
+  panel(565,390,470,275,'Finite selection result','The general two-block anomaly classification selects p + q = 5. Requiring two non-Abelian blocks and state minimality selects the unordered split {3,2}.',COLORS.green,{bodyMax:24});
+  panel(1080,390,470,275,'Structural outcomes','Faithful Z₆ global group; observed hypercharge ratios; one minimal 15-state chiral generation; anomaly cancellation; Higgs-doublet quantum numbers; charged-Yukawa admissibility.',COLORS.amber,{bodyMax:23});
+  equationBox(305,710,990,120,'SU(3)C × SU(2)L × U(1)Y  /  Z₆','CONDITIONAL STANDARD-MODEL GLOBAL STRUCTURE',COLORS.green);
+}
+function drawFamily(t,s){
+  titleBanner(s.title,'Three arises as a topological index inside the declared horizontal construction',s.status,s.color);
+  equationBox(75,205,430,145,'X = ker χc ≃ T⁴','CLOSURE FOUR-TORUS',COLORS.cyan);
+  arrow(520,278,585,278,COLORS.cyan,5);
+  equationBox(600,205,430,145,'im R = 3ℤ ⊕ ℤ','DESCENDED CURVATURE LATTICE',COLORS.violet);
+  arrow(1045,278,1110,278,COLORS.cyan,5);
+  equationBox(1125,205,400,145,'|ind DH| = 3','TWISTED DIRAC INDEX',COLORS.green);
+  for(let i=0;i<3;i++)modeGlyph(160+i*420,445,300,180,'ψ'+(i+1),[COLORS.red,COLORS.green,COLORS.amber][i],t+i);
+  panel(270,690,1060,125,'Claim boundary','The index theorem is mathematically controlled within the construction. Physical selection of the nontrivial, full-support sector remains conditional on the stated vacuum or projective-faithfulness principle.',COLORS.red,{bodyMax:22});
+}
+function drawWorldview(t,s){
+  titleBanner(s.title,'Low-energy physics as closure-filtered Planck-scale residue',s.status,s.color);
+  const cells=[[130,250,48],[355,265,54],[1245,260,54],[1470,245,48],[145,475,50],[1455,475,50]];
+  for(let i=0;i<cells.length;i++)torus(cells[i][0],cells[i][1],cells[i][2],cells[i][2]*.72,(i%2?-.18:.12),t+i,COLORS.cyan);
+  equationBox(555,180,490,105,'L³F²','CLOSURE-FILTERED SUBSTRATE',COLORS.green);
+  trefoil(800,430,56,t);
+  ctx.save();ctx.strokeStyle='rgba(123,238,176,.36)';ctx.lineWidth=4;
+  for(const x of [210,600,1000,1390]){ctx.beginPath();ctx.moveTo(800,520);ctx.quadraticCurveTo((800+x)/2,590,x,650);ctx.stroke();}
+  ctx.restore();
+  const titles=['Substrate','Particles','Fields','Records'];
+  const bodies=['toroidal L³F² QDC cells','Compton-clocked closure modes','propagation-compatible families','stabilized closure traces'];
+  const colors=[COLORS.cyan,COLORS.amber,COLORS.green,COLORS.violet];
+  for(let i=0;i<4;i++)panel(50+i*390,650,330,155,titles[i],bodies[i],colors[i],{bodyMax:22});
+}
+function drawTrefoil(t,s){titleBanner(s.title,'Visual topology gains physical warrant only after invariant and dynamical gates',s.status,s.color);trefoil(420,470,64,t);panel(135,650,570,155,'Candidate morphology','A compact trefoil may organize a confinement picture. It is not yet a QCD-compatible stable nucleon solution.',COLORS.violet,{bodyMax:22});equationBox(790,245,650,150,'B  ≠  QH  ≠  K','INVARIANT SEPARATION',COLORS.red);panel(790,435,650,225,'Open gates','Gauge-invariant embedding; connection to baryon number; dynamical realization; production-scale numerical stability; competitor comparison; continuum robustness; empirical interface.',COLORS.red,{bodyMax:27});panel(790,690,650,120,'Scientific firewall','A picture becomes a physical hypothesis only when it can fail.',COLORS.amber,{bodyMax:22});}
+function ledgerRow(y,label,items,color){
+  fillRR(80,y,1440,112,18,'rgba(5,13,29,.96)',color,2);
+  fitWrapped(label,105,y+14,285,84,{max:22,min:19,weight:'950',color,align:'left'});
+  fitWrapped(items,410,y+12,1080,88,{max:20,min:18,weight:'750',color:COLORS.text,align:'left',lineHeight:1.16});
+}
+function drawLedger(t,s){
+  titleBanner(s.title,'Ambition remains credible only when claim boundaries remain visible',s.status,s.color);
+  ledgerRow(175,'ESTABLISHED ANCHORS','[GM] = L³F²; orbital reconstruction of μ; cosmological critical-density identity; Planck identity; Compton–gravity crossover.',COLORS.green);
+  ledgerRow(298,'EXACT WITHIN PREMISES','Finite two-block classification; 3+2 selection; S(U(3)×U(2)); hypercharge generator; minimal exterior chiral sector; anomaly cancellation.',COLORS.cyan);
+  ledgerRow(421,'CONDITIONAL RESULTS','Recurrence-channel interpretation; toroidal QDC substrate; physical family-sector selection; low-energy projection interpretation.',COLORS.violet);
+  ledgerRow(544,'OPEN OR EXCLUDED GATES','Unique action; full GR recovery; spin-2 dynamics; absolute masses; CKM/PMNS matrices; gauge couplings; Higgs potential; dark-sector closure; direct substrate evidence.',COLORS.red);
+  equationBox(240,685,1120,110,'L³F² → recurrence → closure → admissible structure → persistent physics','PHYSICAL LAW AS PERSISTENCE UNDER CLOSURE',COLORS.amber);
+  panel(430,815,740,58,'','NEXT: BENCHMARKS AND FAILURE-GATE PROGRAM →',COLORS.green,{bodyMax:20});
+}
+function render(t){background(t);const s=sceneAt(t);const local=t-s.start;if(s.start===0)drawOpening(local,s);else if(s.start===18)drawOrbital(local,s);else if(s.start===55)drawScale(local,s);else if(s.start===90)drawMeaning(local,s);else if(s.start===125)drawTorusScene(local,s);else if(s.start===165)drawPlanck(local,s);else if(s.start===200)drawSM(local,s);else if(s.start===275)drawFamily(local,s);else if(s.start===315)drawWorldview(local,s);else if(s.start===385)drawTrefoil(local,s);else drawLedger(local,s);capTitle.textContent=s.title;capBody.textContent=s.body;capStatus.textContent=s.status;capStatus.style.color=s.color;seek.value=t;timeEl.textContent=fmt(t)+' / 7:30';[...sceneNav.children].forEach((b,i)=>b.classList.toggle('active',scenes[i]===s));}
+function play(){if(playing)return;playing=true;startStamp=null;playBtn.textContent='Playing';raf=requestAnimationFrame(tick);}function pause(){playing=false;playBtn.textContent='Play';if(raf)cancelAnimationFrame(raf);render(elapsed);}function replay(){elapsed=0;render(0);play();}function tick(now){if(!playing)return;if(startStamp===null)startStamp=now-elapsed*1000;elapsed=Math.min(DUR,(now-startStamp)/1000);render(elapsed);if(elapsed>=DUR){playing=false;playBtn.textContent='Play';return;}raf=requestAnimationFrame(tick);}
+scenes.forEach((s,i)=>{const b=document.createElement('button');b.className='scene-chip';b.textContent=fmt(s.start)+' '+s.short;b.onclick=()=>{pause();elapsed=s.start+.05;render(elapsed);};sceneNav.appendChild(b);});
+playBtn.onclick=()=>playing?pause():play();pauseBtn.onclick=pause;replayBtn.onclick=replay;posterBtn.onclick=()=>{pause();elapsed=350;render(elapsed);};seek.oninput=()=>{const target=Number(seek.value);playing=false;playBtn.textContent='Play';if(raf)cancelAnimationFrame(raf);elapsed=target;render(elapsed);};
+addEventListener('keydown',e=>{if(e.code==='Space'&&!['INPUT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName)){e.preventDefault();playing?pause():play();}else if(e.key==='ArrowRight'){pause();elapsed=clamp(elapsed+5,0,DUR);render(elapsed);}else if(e.key==='ArrowLeft'){pause();elapsed=clamp(elapsed-5,0,DUR);render(elapsed);}else if(e.key.toLowerCase()==='r')replay();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
+const params=new URLSearchParams(location.search);elapsed=clamp(Number(params.get('t')||0),0,DUR);render(elapsed);if(params.get('autoplay')==='1')play();
+})();
+</script>
+</body>
+</html>
