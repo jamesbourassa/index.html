@@ -1,0 +1,88 @@
+{
+  "html_files": 10,
+  "total_references": 432,
+  "unique_internal_targets": 47,
+  "unique_external_urls": 37,
+  "mailto_links": 1,
+  "javascript_checks": [
+    [
+      "qdl-calculator.html",
+      true
+    ],
+    [
+      "qdl-l3f2-evidence-to-worldview-animation.html",
+      true
+    ],
+    [
+      "qdl-planck-worldview-animation.html",
+      true
+    ],
+    [
+      "qdl-structural-admissibility-animation.html",
+      true
+    ]
+  ],
+  "poster_images": [
+    [
+      "qdl-l3f2-evidence-poster.png",
+      [
+        1600,
+        900
+      ]
+    ],
+    [
+      "qdl-planck-worldview-poster.png",
+      [
+        1600,
+        900
+      ]
+    ],
+    [
+      "qdl-structural-admissibility-poster.png",
+      [
+        1600,
+        900
+      ]
+    ]
+  ],
+  "issues": [],
+  "external_urls": [
+    "https://doi.org/10.5281/zenodo.18057668",
+    "https://doi.org/10.5281/zenodo.18069870",
+    "https://doi.org/10.5281/zenodo.18076864",
+    "https://doi.org/10.5281/zenodo.18902770",
+    "https://doi.org/10.5281/zenodo.19830816",
+    "https://doi.org/10.5281/zenodo.20026718",
+    "https://doi.org/10.5281/zenodo.20086341",
+    "https://doi.org/10.5281/zenodo.20087107",
+    "https://doi.org/10.5281/zenodo.20088462",
+    "https://doi.org/10.5281/zenodo.20089936",
+    "https://doi.org/10.5281/zenodo.20090053",
+    "https://doi.org/10.5281/zenodo.20090219",
+    "https://doi.org/10.5281/zenodo.20098523",
+    "https://doi.org/10.5281/zenodo.20098982",
+    "https://doi.org/10.5281/zenodo.20100436",
+    "https://doi.org/10.5281/zenodo.20240650",
+    "https://doi.org/10.5281/zenodo.20325844",
+    "https://doi.org/10.5281/zenodo.20328260",
+    "https://doi.org/10.5281/zenodo.20346814",
+    "https://doi.org/10.5281/zenodo.20357001",
+    "https://doi.org/10.5281/zenodo.20367493",
+    "https://doi.org/10.5281/zenodo.20461142",
+    "https://doi.org/10.5281/zenodo.20692677",
+    "https://doi.org/10.5281/zenodo.20940986",
+    "https://doi.org/10.57647/jtap.2026.2004.05",
+    "https://qdlphysics.org/",
+    "https://qdlphysics.org/animations.html",
+    "https://qdlphysics.org/framework.html",
+    "https://qdlphysics.org/qdl-calculator.html",
+    "https://qdlphysics.org/qdl-in-5-minutes.html",
+    "https://qdlphysics.org/qdl-l3f2-evidence-to-worldview-animation.html",
+    "https://qdlphysics.org/qdl-planck-worldview-animation.html",
+    "https://qdlphysics.org/qdl-structural-admissibility-animation.html",
+    "https://qdlphysics.org/research.html",
+    "https://qdlphysics.org/resources.html",
+    "https://www.amazon.com/dp/B0GHZJHT36",
+    "https://zenodo.org/communities/qdl-physics-institute/"
+  ]
+}
