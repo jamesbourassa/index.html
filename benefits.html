@@ -1,897 +1,3240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-
-<title>Benefits | QDL Physics Institute</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Potential benefits of the Quantized Dimensional Ledger framework for model admissibility, dimensional closure, metrology, measurement integrity, experimental design, EFT structure, scientific software, AI-output checking, and validation infrastructure.">
-<meta name="author" content="James D. Bourassa">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Potential Benefits of QDL">
-<meta property="og:description" content="How the Quantized Dimensional Ledger could support model pre-verification, metrology, structural admissibility, benchmark design, and validation infrastructure if confirmed through review and experiment.">
-<meta property="og:image" content="integrated-worldview-qdl-lattice.png">
-<meta property="og:site_name" content="QDL Physics Institute">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="integrated-worldview-qdl-lattice.png">
-
-<link rel="canonical" href="https://qdlphysics.org/benefits.html">
-
-<style>
-:root{
-  --bg-page:#f3f4f6;
-  --bg-card:#ffffff;
-  --border-soft:#e5e7eb;
-  --text-main:#0f172a;
-  --text-soft:#6b7280;
-  --text-muted:#475569;
-  --accent:#2563eb;
-  --accent-soft:#eff6ff;
-  --orange:#ea580c;
-  --orange-soft:#fff7ed;
-  --purple:#7c3aed;
-  --purple-soft:#f5f3ff;
-  --green:#16a34a;
-  --green-soft:#ecfdf5;
-}
-
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-
-body{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:var(--bg-page);
-  color:var(--text-main);
-  -webkit-font-smoothing:antialiased;
-  line-height:1.65;
-}
-
-a{color:#0369a1;text-decoration:none;}
-a:hover{text-decoration:underline;}
-
-header{
-  background:#0f172a;
-  color:#e5e7eb;
-  border-bottom:1px solid #111827;
-  position:sticky;
-  top:0;
-  z-index:50;
-}
-
-.nav{
-  max-width:1100px;
-  margin:0 auto;
-  padding:.78rem 1.25rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  flex-wrap:wrap;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:.65rem;
-}
-
-.logo-icon{
-  width:52px;
-  height:52px;
-  border-radius:10px;
-  border:1px solid #38bdf8;
-  background:#020617;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-
-.logo-icon img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
-
-.logo-text-main{
-  font-weight:650;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  font-size:.82rem;
-}
-
-.logo-text-sub{
-  font-size:.72rem;
-  color:#9ca3af;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:.8rem;
-  font-size:.85rem;
-  flex-wrap:wrap;
-}
-
-.nav-links a{
-  color:#e5e7eb;
-  padding:.28rem .68rem;
-  border-radius:999px;
-  border:1px solid transparent;
-}
-
-.nav-links a:hover{
-  background:#111827;
-  text-decoration:none;
-}
-
-.nav-active{
-  border-color:rgba(56,189,248,.85) !important;
-  background:rgba(56,189,248,.10) !important;
-  color:#e0f2fe !important;
-}
-
-main{
-  max-width:1100px;
-  margin:0 auto;
-  padding:1.85rem 1.25rem 3.2rem;
-}
-
-.hero{
-  margin-bottom:1.8rem;
-  background:var(--bg-card);
-  border-radius:20px;
-  border:1px solid var(--border-soft);
-  box-shadow:0 10px 28px rgba(15,23,42,.06);
-  padding:1.7rem 1.6rem;
-}
-
-.hero-kicker{
-  text-transform:uppercase;
-  letter-spacing:.18em;
-  font-size:.78rem;
-  color:#6b7280;
-  margin-bottom:.4rem;
-}
-
-.hero-title{
-  font-size:clamp(2rem,3vw,2.5rem);
-  line-height:1.14;
-  margin-bottom:.52rem;
-  letter-spacing:-0.02em;
-}
-
-.hero-sub{
-  font-size:.97rem;
-  color:#4b5563;
-  max-width:60rem;
-  margin-bottom:.95rem;
-}
-
-.hero-meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.5rem;
-  font-size:.8rem;
-}
-
-.hero-chip{
-  padding:.16rem .72rem;
-  border-radius:999px;
-  border:1px solid #e5e7eb;
-  background:#f9fafb;
-  color:var(--text-muted);
-}
-
-.hero-actions,
-.btn-row{
-  margin-top:1.05rem;
-  display:flex;
-  gap:.6rem;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:.58rem 1rem;
-  border-radius:999px;
-  border:1px solid #d1d5db;
-  background:#fff;
-  color:#111827;
-  font-size:.9rem;
-  font-weight:500;
-  white-space:nowrap;
-}
-
-.btn:hover{
-  text-decoration:none;
-  background:#f9fafb;
-}
-
-.btn-primary{
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
-  color:#fff;
-  border:none;
-  box-shadow:0 10px 24px rgba(37,99,235,.25);
-}
-
-.btn-purple{
-  background:linear-gradient(135deg,#7c3aed,#6d28d9);
-  color:#fff;
-  border:none;
-  box-shadow:0 10px 24px rgba(124,58,237,.22);
-}
-
-.btn-orange{
-  background:linear-gradient(135deg,#f97316,#ea580c);
-  color:#fff;
-  border:none;
-  box-shadow:0 10px 24px rgba(234,88,12,.20);
-}
-
-.btn-primary:hover,
-.btn-purple:hover,
-.btn-orange:hover{
-  filter:brightness(1.03);
-  text-decoration:none;
-}
-
-.section{
-  margin-top:2rem;
-}
-
-.section-header{
-  display:flex;
-  justify-content:space-between;
-  gap:1rem;
-  align-items:baseline;
-  flex-wrap:wrap;
-  margin-bottom:1rem;
-}
-
-.section-title{
-  font-size:.96rem;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:#111827;
-}
-
-.section-kicker{
-  font-size:.83rem;
-  color:var(--text-soft);
-  max-width:42rem;
-}
-
-.grid-2{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1rem;
-}
-
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:1rem;
-}
-
-.grid-4{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:1rem;
-}
-
-@media (max-width:980px){
-  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-
-@media (max-width:900px){
-  .grid-2,.grid-3{grid-template-columns:1fr;}
-}
-
-@media (max-width:640px){
-  .grid-4{grid-template-columns:1fr;}
-}
-
-.card{
-  background:var(--bg-card);
-  border-radius:18px;
-  border:1px solid var(--border-soft);
-  padding:1.05rem 1.08rem;
-  box-shadow:0 8px 24px rgba(15,23,42,.06);
-  font-size:.93rem;
-  color:#374151;
-}
-
-.card + .card{
-  margin-top:.95rem;
-}
-
-a.card{
-  display:block;
-  color:inherit;
-  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-}
-
-a.card:hover{
-  text-decoration:none;
-  transform:translateY(-1px);
-  box-shadow:0 12px 30px rgba(15,23,42,.09);
-  border-color:rgba(37,99,235,.35);
-}
-
-.card-title{
-  font-size:1.02rem;
-  font-weight:650;
-  margin-bottom:.35rem;
-  color:#111827;
-  line-height:1.35;
-}
-
-.card h3{
-  font-size:1.02rem;
-  font-weight:650;
-  margin-bottom:.35rem;
-  color:#111827;
-  line-height:1.35;
-}
-
-.card p{
-  margin-bottom:.58rem;
-}
-
-.card p:last-child{
-  margin-bottom:0;
-}
-
-.pill-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.42rem;
-  margin:.16rem 0 .72rem;
-}
-
-.pill{
-  border-radius:999px;
-  padding:.15rem .62rem;
-  border:1px solid #e5e7eb;
-  background:#f9fafb;
-  color:var(--text-muted);
-  font-size:.78rem;
-}
-
-.pill-accent{
-  border-color:rgba(37,99,235,.35);
-  background:#eff6ff;
-  color:#1d4ed8;
-}
-
-.pill-purple{
-  border-color:rgba(124,58,237,.35);
-  background:#f5f3ff;
-  color:#5b21b6;
-}
-
-.pill-orange{
-  border-color:rgba(234,88,12,.35);
-  background:#fff7ed;
-  color:#9a3412;
-}
-
-.pill-executed{
-  border-color:rgba(22,163,74,.35);
-  background:#ecfdf5;
-  color:#166534;
-}
-
-.pill-warn{
-  border-color:rgba(217,119,6,.35);
-  background:#fff7ed;
-  color:#9a3412;
-}
-
-.benefits-list{
-  list-style:decimal;
-  margin:.4rem 0 0 1.2rem;
-  font-size:.92rem;
-  color:#374151;
-}
-
-.benefits-list li{
-  margin-bottom:.78rem;
-}
-
-.benefit-title{
-  font-weight:650;
-  display:block;
-  margin-bottom:.12rem;
-  color:#111827;
-}
-
-.ref-list{
-  list-style:none;
-  padding:0;
-  margin:.4rem 0 0;
-  font-size:.86rem;
-  color:#374151;
-}
-
-.ref-list li{
-  margin-bottom:.48rem;
-}
-
-.note{
-  font-size:.82rem;
-  color:var(--text-soft);
-  margin-top:1rem;
-  max-width:58rem;
-}
-
-.status-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:.9rem;
-}
-
-.status-table td{
-  padding:.62rem .48rem;
-  border-bottom:1px solid #e5e7eb;
-  vertical-align:top;
-}
-
-.status-table tr:last-child td{
-  border-bottom:none;
-}
-
-.status-table td:first-child{
-  width:30%;
-  color:#111827;
-  font-weight:650;
-}
-
-footer{
-  border-top:1px solid var(--border-soft);
-  margin-top:3rem;
-  padding:1.2rem 1.25rem 1.8rem;
-  font-size:.8rem;
-  color:#6b7280;
-  background:#f9fafb;
-}
-
-.footer-grid{
-  max-width:1100px;
-  margin:0 auto;
-  display:flex;
-  flex-wrap:wrap;
-  gap:1rem;
-  justify-content:space-between;
-  align-items:center;
-}
-</style>
+
+  <meta charset="utf-8"/>
+
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="site.webmanifest" rel="manifest"/>
+
+  <title>
+    Benefits | Structural Admissibility, Measurement Integrity & Model Validation | QDL Physics Institute
+  </title>
+
+  <meta
+    content="width=device-width, initial-scale=1"
+    name="viewport"
+  />
+
+  <meta
+    content="Potential benefits of the Quantized Dimensional Ledger for structural admissibility, model pre-verification, metrology, measurement integrity, scientific software, AI-output checking, EFT audits, reproducibility, benchmark design, and validation infrastructure."
+    name="description"
+  />
+
+  <meta
+    content="James D. Bourassa"
+    name="author"
+  />
+
+  <link
+    href="https://qdlphysics.org/benefits.html"
+    rel="canonical"
+  />
+
+  <meta
+    content="website"
+    property="og:type"
+  />
+
+  <meta
+    content="Potential Benefits of QDL | QDL Physics Institute"
+    property="og:title"
+  />
+
+  <meta
+    content="How QDL structural admissibility could support model pre-verification, metrology, measurement-chain integrity, scientific software, AI-output checking, reproducibility, and validation infrastructure."
+    property="og:description"
+  />
+
+  <meta
+    content="https://qdlphysics.org/qdl-uft-candidate-2026.png"
+    property="og:image"
+  />
+
+  <meta
+    content="Current QDL Unified Field Theory Candidate infographic"
+    property="og:image:alt"
+  />
+
+  <meta
+    content="QDL Physics Institute"
+    property="og:site_name"
+  />
+
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+
+  <meta
+    content="https://qdlphysics.org/qdl-uft-candidate-2026.png"
+    name="twitter:image"
+  />
+
+  <meta
+    content="Current QDL Unified Field Theory Candidate infographic"
+    name="twitter:image:alt"
+  />
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Potential Benefits of the Quantized Dimensional Ledger",
+    "url": "https://qdlphysics.org/benefits.html",
+    "description": "Potential practical and scientific benefits of QDL structural admissibility for model validation, measurement integrity, scientific software, reproducibility, and related applications.",
+    "author": {
+      "@type": "Person",
+      "name": "James D. Bourassa",
+      "sameAs": "https://orcid.org/0009-0008-0155-0051"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "QDL Physics Institute",
+      "url": "https://qdlphysics.org/"
+    },
+    "about": [
+      "Quantized Dimensional Ledger",
+      "structural admissibility",
+      "metrology",
+      "measurement integrity",
+      "model validation",
+      "scientific software",
+      "reproducibility"
+    ]
+  }
+  </script>
+
+
+  <style>
+
+    :root{
+      --bg-page:#f3f4f6;
+      --bg-card:#ffffff;
+      --border-soft:#e5e7eb;
+      --text-main:#0f172a;
+      --text-soft:#6b7280;
+      --text-muted:#475569;
+      --accent:#2563eb;
+      --accent-soft:#eff6ff;
+      --orange:#ea580c;
+      --orange-soft:#fff7ed;
+      --purple:#7c3aed;
+      --purple-soft:#f5f3ff;
+      --green:#16a34a;
+      --green-soft:#ecfdf5;
+      --amber:#d97706;
+      --amber-soft:#fffbeb;
+      --red:#b91c1c;
+      --red-soft:#fef2f2;
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg-page);
+      color:var(--text-main);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.65;
+    }
+
+
+    a{
+      color:#0369a1;
+      text-decoration:none;
+    }
+
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+
+    header{
+      background:#0f172a;
+      color:#e5e7eb;
+      border-bottom:1px solid #111827;
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+
+
+    .nav{
+      max-width:1100px;
+      margin:0 auto;
+      padding:.78rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:.65rem;
+    }
+
+
+    .logo-icon{
+      width:52px;
+      height:52px;
+      border-radius:10px;
+      border:1px solid #38bdf8;
+      background:#020617;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+
+    .logo-icon img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+
+    .logo-text-main{
+      font-weight:650;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+
+    .logo-text-sub{
+      font-size:.72rem;
+      color:#9ca3af;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+      font-size:.85rem;
+      flex-wrap:wrap;
+    }
+
+
+    .nav-links a{
+      color:#e5e7eb;
+      padding:.28rem .68rem;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+
+
+    .nav-links a:hover{
+      background:#111827;
+      text-decoration:none;
+    }
+
+
+    .nav-active{
+      border-color:rgba(56,189,248,.85) !important;
+      background:rgba(56,189,248,.10) !important;
+      color:#e0f2fe !important;
+    }
+
+
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:1.85rem 1.25rem 3.2rem;
+    }
+
+
+    .hero{
+      margin-bottom:1.8rem;
+      background:var(--bg-card);
+      border-radius:20px;
+      border:1px solid var(--border-soft);
+      box-shadow:0 10px 28px rgba(15,23,42,.06);
+      padding:1.8rem 1.7rem;
+    }
+
+
+    .hero-kicker{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.78rem;
+      color:#6b7280;
+      margin-bottom:.4rem;
+    }
+
+
+    .hero-title{
+      font-size:clamp(2rem,3vw,2.55rem);
+      line-height:1.14;
+      margin-bottom:.55rem;
+      letter-spacing:-0.02em;
+    }
+
+
+    .hero-sub{
+      font-size:.97rem;
+      color:#4b5563;
+      max-width:60rem;
+      margin-bottom:.72rem;
+    }
+
+
+    .hero-sub strong{
+      color:#111827;
+    }
+
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      font-size:.8rem;
+      margin-top:.9rem;
+    }
+
+
+    .hero-chip{
+      padding:.16rem .72rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      color:var(--text-muted);
+    }
+
+
+    .hero-actions,
+    .btn-row{
+      margin-top:1.05rem;
+      display:flex;
+      gap:.6rem;
+      flex-wrap:wrap;
+    }
+
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.58rem 1rem;
+      border-radius:999px;
+      border:1px solid #d1d5db;
+      background:#fff;
+      color:#111827;
+      font-size:.9rem;
+      font-weight:500;
+      white-space:nowrap;
+    }
+
+
+    .btn:hover{
+      text-decoration:none;
+      background:#f9fafb;
+    }
+
+
+    .btn-primary{
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff;
+      border:none;
+      box-shadow:0 10px 24px rgba(37,99,235,.25);
+    }
+
+
+    .btn-purple{
+      background:linear-gradient(135deg,#7c3aed,#6d28d9);
+      color:#fff;
+      border:none;
+      box-shadow:0 10px 24px rgba(124,58,237,.22);
+    }
+
+
+    .btn-orange{
+      background:linear-gradient(135deg,#f97316,#ea580c);
+      color:#fff;
+      border:none;
+      box-shadow:0 10px 24px rgba(234,88,12,.20);
+    }
+
+
+    .btn-primary:hover,
+    .btn-purple:hover,
+    .btn-orange:hover{
+      filter:brightness(1.03);
+      text-decoration:none;
+    }
+
+
+    .section{
+      margin-top:2.15rem;
+    }
+
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:baseline;
+      flex-wrap:wrap;
+      margin-bottom:1rem;
+    }
+
+
+    .section-title{
+      font-size:.96rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:#111827;
+    }
+
+
+    .section-kicker{
+      font-size:.83rem;
+      color:var(--text-soft);
+      max-width:42rem;
+    }
+
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+    }
+
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1rem;
+    }
+
+
+    .grid-4{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:1rem;
+    }
+
+
+    @media(max-width:980px){
+
+      .grid-4{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+    }
+
+
+    @media(max-width:900px){
+
+      .grid-2,
+      .grid-3{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    @media(max-width:640px){
+
+      .grid-4{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    .card{
+      background:var(--bg-card);
+      border-radius:18px;
+      border:1px solid var(--border-soft);
+      padding:1.08rem 1.1rem;
+      box-shadow:0 8px 24px rgba(15,23,42,.06);
+      font-size:.93rem;
+      color:#374151;
+    }
+
+
+    .card-title,
+    .card h3{
+      font-size:1.03rem;
+      font-weight:650;
+      margin-bottom:.35rem;
+      color:#111827;
+      line-height:1.35;
+    }
+
+
+    .card p{
+      margin-bottom:.58rem;
+    }
+
+
+    .card p:last-child{
+      margin-bottom:0;
+    }
+
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.42rem;
+      margin:.16rem 0 .72rem;
+    }
+
+
+    .pill{
+      border-radius:999px;
+      padding:.15rem .62rem;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      color:var(--text-muted);
+      font-size:.78rem;
+    }
+
+
+    .pill-accent{
+      border-color:rgba(37,99,235,.35);
+      background:#eff6ff;
+      color:#1d4ed8;
+    }
+
+
+    .pill-purple{
+      border-color:rgba(124,58,237,.35);
+      background:#f5f3ff;
+      color:#5b21b6;
+    }
+
+
+    .pill-orange{
+      border-color:rgba(234,88,12,.35);
+      background:#fff7ed;
+      color:#9a3412;
+    }
+
+
+    .pill-executed{
+      border-color:rgba(22,163,74,.35);
+      background:#ecfdf5;
+      color:#166534;
+    }
+
+
+    .pill-warn{
+      border-color:rgba(217,119,6,.35);
+      background:#fff7ed;
+      color:#9a3412;
+    }
+
+
+    .callout{
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      border-radius:16px;
+      padding:.88rem .98rem;
+      margin:.8rem 0;
+      color:#374151;
+      font-size:.9rem;
+    }
+
+
+    .callout.blue{
+      border-color:rgba(37,99,235,.25);
+      background:#eff6ff;
+      color:#172554;
+    }
+
+
+    .callout.green{
+      border-color:rgba(22,163,74,.28);
+      background:#ecfdf5;
+      color:#14532d;
+    }
+
+
+    .callout.orange{
+      border-color:rgba(234,88,12,.28);
+      background:#fff7ed;
+      color:#7c2d12;
+    }
+
+
+    .callout.warning{
+      border-color:rgba(217,119,6,.34);
+      background:#fffbeb;
+      color:#78350f;
+    }
+
+
+    .benefits-list{
+      list-style:decimal;
+      margin:.4rem 0 0 1.2rem;
+      font-size:.92rem;
+      color:#374151;
+    }
+
+
+    .benefits-list li{
+      margin-bottom:.82rem;
+    }
+
+
+    .benefit-title{
+      font-weight:650;
+      display:block;
+      margin-bottom:.12rem;
+      color:#111827;
+    }
+
+
+    .status-table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:.9rem;
+    }
+
+
+    .status-table td{
+      padding:.65rem .5rem;
+      border-bottom:1px solid #e5e7eb;
+      vertical-align:top;
+    }
+
+
+    .status-table tr:last-child td{
+      border-bottom:none;
+    }
+
+
+    .status-table td:first-child{
+      width:29%;
+      color:#111827;
+      font-weight:650;
+    }
+
+
+    /*
+      Practical-value feature
+    */
+
+    .value-feature{
+      background:linear-gradient(
+        145deg,
+        #07152b 0%,
+        #0f2747 58%,
+        #12355f 100%
+      );
+      color:#eaf2ff;
+      border:1px solid rgba(125,211,252,.34);
+      border-radius:24px;
+      padding:1.25rem;
+      box-shadow:0 20px 48px rgba(15,23,42,.18);
+    }
+
+
+    .value-eyebrow{
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      color:#bae6fd;
+      margin-bottom:.42rem;
+    }
+
+
+    .value-feature h2{
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.55rem,2.45vw,2.2rem);
+      line-height:1.15;
+      margin-bottom:.6rem;
+    }
+
+
+    .value-feature p{
+      color:#d8e5f5;
+      font-size:.92rem;
+      margin-bottom:.65rem;
+    }
+
+
+    .value-chain{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.45rem;
+      align-items:center;
+      margin:.85rem 0;
+    }
+
+
+    .value-node{
+      padding:.28rem .7rem;
+      border-radius:999px;
+      border:1px solid rgba(186,230,253,.34);
+      background:rgba(15,23,42,.36);
+      color:#e0f2fe;
+      font-size:.78rem;
+      font-weight:650;
+    }
+
+
+    .value-arrow{
+      color:#bae6fd;
+      font-size:.8rem;
+    }
+
+
+    @media(max-width:700px){
+
+      .value-arrow{
+        display:none;
+      }
+
+    }
+
+
+    /*
+      Application workflow
+    */
+
+    .workflow{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:.65rem;
+      margin-top:.85rem;
+    }
+
+
+    .workflow-step{
+      border:1px solid #dbe3ee;
+      background:#fff;
+      border-radius:15px;
+      padding:.8rem;
+      text-align:center;
+    }
+
+
+    .workflow-step strong{
+      display:block;
+      color:#111827;
+      font-size:.86rem;
+      margin-bottom:.18rem;
+    }
+
+
+    .workflow-step span{
+      display:block;
+      color:#64748b;
+      font-size:.78rem;
+      line-height:1.4;
+    }
+
+
+    @media(max-width:900px){
+
+      .workflow{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    /*
+      Evidence cards
+    */
+
+    .evidence-card{
+      border-color:rgba(37,99,235,.28);
+      background:linear-gradient(
+        180deg,
+        #fff 0%,
+        #f8fbff 100%
+      );
+    }
+
+
+    .evidence-card.purple{
+      border-color:rgba(124,58,237,.28);
+      background:linear-gradient(
+        180deg,
+        #fff 0%,
+        #fbfaff 100%
+      );
+    }
+
+
+    .meta{
+      font-size:.79rem;
+      color:#64748b;
+      margin-top:.5rem;
+    }
+
+
+    .note{
+      font-size:.82rem;
+      color:var(--text-soft);
+      margin-top:.85rem;
+      max-width:60rem;
+    }
+
+
+    footer{
+      border-top:1px solid var(--border-soft);
+      margin-top:3rem;
+      padding:1.2rem 1.25rem 1.8rem;
+      font-size:.8rem;
+      color:#6b7280;
+      background:#f9fafb;
+    }
+
+
+    .footer-grid{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+
+    .btn:focus-visible,
+    .nav-links a:focus-visible{
+      outline:3px solid #38bdf8;
+      outline-offset:3px;
+    }
+
+  </style>
+
 </head>
+
+
 
 <body>
 
+
 <header>
+
   <div class="nav">
+
     <div class="logo">
+
       <div class="logo-icon">
-        <img src="apple-touch-icon.png" alt="QDL Physics Institute emblem">
+
+        <img
+          src="apple-touch-icon.png"
+          alt="QDL Physics Institute emblem"
+        />
+
       </div>
+
+
       <div>
-        <div class="logo-text-main">QDL Physics Institute</div>
-        <div class="logo-text-sub">Quantized Dimensional Ledger</div>
+
+        <div class="logo-text-main">
+          QDL Physics Institute
+        </div>
+
+        <div class="logo-text-sub">
+          Quantized Dimensional Ledger
+        </div>
+
       </div>
+
     </div>
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
-      <a href="research.html">Research Program</a>
-      <a href="publications.html">Publications</a>
-      <a href="resources.html">Resources</a>
-      <a href="benefits.html" class="nav-active">Benefits</a>
-      <a href="institute.html">Institute</a>
+
+    <nav
+      class="nav-links"
+      aria-label="Main navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="qdl-in-5-minutes.html">
+        QDL in 5 Minutes
+      </a>
+
+      <a href="research.html">
+        Research Program
+      </a>
+
+      <a href="publications.html">
+        Publications
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a
+        href="benefits.html"
+        class="nav-active"
+      >
+        Benefits
+      </a>
+
+      <a href="institute.html">
+        Institute
+      </a>
+
     </nav>
+
   </div>
+
 </header>
+
+
 
 <main>
 
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+
   <section class="hero">
-    <div class="hero-kicker">Why QDL matters</div>
-    <h1 class="hero-title">Potential Benefits of the Quantized Dimensional Ledger</h1>
+
+    <div class="hero-kicker">
+      Why structural admissibility may matter
+    </div>
+
+
+    <h1 class="hero-title">
+      Potential Benefits of the Quantized Dimensional Ledger
+    </h1>
+
 
     <p class="hero-sub">
-      QDL is developed as a dimensional-closure and structural-admissibility framework: a way to test whether
-      physical models, measurement relations, operators, constants, and computational pipelines satisfy declared
-      closure rules before fitting, simulation, or deployment.
+
+      QDL is developed as a
+      <strong>
+        structural-admissibility and dimensional-closure framework
+      </strong>:
+
+      a way to ask whether physical expressions,
+      models,
+      measurement relations,
+      operators,
+      constants,
+      and computational pipelines are structurally coherent
+      before large amounts of fitting,
+      simulation,
+      interpretation,
+      certification,
+      or deployment are invested in them.
+
     </p>
 
+
     <p class="hero-sub">
-      The benefits below are stated conditionally. They describe what QDL could make possible if its framework,
-      benchmark records, proposed tests, and completion gates continue to survive mathematical review, empirical testing,
+
+      The potential practical value of this idea does not depend on
+      every QDL/QDC fundamental-physics proposal ultimately being correct.
+
+      A useful structural audit method could retain value in metrology,
+      software,
+      engineering,
+      model governance,
+      and scientific AI even if some deeper physical-completion branches
+      are later modified or rejected.
+
+    </p>
+
+
+    <p class="hero-sub">
+
+      The benefits below are therefore stated
+      <strong>conditionally</strong>.
+
+      They describe what QDL could make possible if its closure rules,
+      validation methods,
+      benchmark records,
+      and audit logic continue to survive mathematical scrutiny,
+      practical testing,
       and independent replication.
+
     </p>
+
 
     <div class="hero-meta">
-      <span class="hero-chip">Model pre-verification</span>
-      <span class="hero-chip">Dimensional closure</span>
-      <span class="hero-chip">Structural admissibility</span>
-      <span class="hero-chip">Metrology</span>
-      <span class="hero-chip">Measurement integrity</span>
-      <span class="hero-chip">Operator filtering</span>
-      <span class="hero-chip">Benchmark design</span>
-      <span class="hero-chip">AI-output checking</span>
-      <span class="hero-chip">Validation infrastructure</span>
+
+      <span class="hero-chip">
+        Model pre-verification
+      </span>
+
+      <span class="hero-chip">
+        Structural admissibility
+      </span>
+
+      <span class="hero-chip">
+        Metrology
+      </span>
+
+      <span class="hero-chip">
+        Measurement integrity
+      </span>
+
+      <span class="hero-chip">
+        Scientific software
+      </span>
+
+      <span class="hero-chip">
+        AI-output checking
+      </span>
+
+      <span class="hero-chip">
+        Operator auditing
+      </span>
+
+      <span class="hero-chip">
+        Reproducibility
+      </span>
+
+      <span class="hero-chip">
+        Validation infrastructure
+      </span>
+
     </div>
+
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
-      <a class="btn btn-orange" href="research.html">Research Program</a>
-      <a class="btn" href="framework.html">Framework</a>
-      <a class="btn" href="experiments.html">Experiments</a>
-      <a class="btn" href="resources.html">Resources</a>
+
+      <a
+        class="btn btn-primary"
+        href="#core-value"
+      >
+        Core Value
+      </a>
+
+      <a
+        class="btn btn-orange"
+        href="#applications"
+      >
+        Application Areas
+      </a>
+
+      <a
+        class="btn"
+        href="qdl-in-5-minutes.html"
+      >
+        QDL in 5 Minutes
+      </a>
+
+      <a
+        class="btn"
+        href="research.html"
+      >
+        Research Status
+      </a>
+
     </div>
+
   </section>
 
-  <section class="section" id="benefit-summary" style="margin-top:0;">
+
+
+  <!-- ============================================================
+       CORE VALUE PROPOSITION
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="core-value"
+    style="margin-top:0;"
+  >
+
     <div class="section-header">
-      <h2 class="section-title">Core Value Proposition</h2>
-      <p class="section-kicker">QDL is most useful where ordinary unit-checking is necessary but not sufficient.</p>
+
+      <h2 class="section-title">
+        Core Value Proposition
+      </h2>
+
+      <p class="section-kicker">
+        QDL is most useful where ordinary unit checking is necessary but not sufficient.
+      </p>
+
     </div>
+
 
     <div class="grid-3">
-      <div class="card" style="border-color:rgba(37,99,235,.34); background:#f8fbff;">
+
+
+      <div
+        class="card"
+        style="
+          border-color:rgba(37,99,235,.34);
+          background:#f8fbff;
+        "
+      >
+
         <div class="pill-row">
-          <span class="pill pill-accent">Before fitting</span>
+
+          <span class="pill pill-accent">
+            Before fitting
+          </span>
+
         </div>
-        <h3>Pre-filter models</h3>
+
+
+        <h3>
+          Pre-filter models
+        </h3>
+
+
         <p>
-          QDL asks whether a proposed term, relation, correction, or operator is structurally admissible before parameters are tuned.
+
+          Test whether a proposed term,
+          correction,
+          operator,
+          transformation,
+          or relation is structurally admissible before parameters are tuned.
+
         </p>
+
       </div>
 
-      <div class="card" style="border-color:rgba(22,163,74,.34); background:#f7fef9;">
+
+
+      <div
+        class="card"
+        style="
+          border-color:rgba(22,163,74,.34);
+          background:#f7fef9;
+        "
+      >
+
         <div class="pill-row">
-          <span class="pill pill-executed">Before deployment</span>
+
+          <span class="pill pill-executed">
+            Before deployment
+          </span>
+
         </div>
-        <h3>Audit measurement chains</h3>
+
+
+        <h3>
+          Audit measurement and modeling chains
+        </h3>
+
+
         <p>
-          Ledger-based audit traces can make hidden assumptions in measurement and modeling pipelines easier to inspect.
+
+          Make hidden dimensional assumptions,
+          conversions,
+          corrections,
+          transformations,
+          and model transitions easier to inspect.
+
         </p>
+
       </div>
 
-      <div class="card" style="border-color:rgba(234,88,12,.34); background:#fffaf5;">
+
+
+      <div
+        class="card"
+        style="
+          border-color:rgba(234,88,12,.34);
+          background:#fffaf5;
+        "
+      >
+
         <div class="pill-row">
-          <span class="pill pill-orange">Before overclaiming</span>
+
+          <span class="pill pill-orange">
+            Before overclaiming
+          </span>
+
         </div>
-        <h3>Separate claim status</h3>
+
+
+        <h3>
+          Separate claim status
+        </h3>
+
+
         <p>
-          The framework distinguishes definitions, theorems, conditional reconstructions, benchmark records, proposed tests, and open gates.
+
+          Distinguish theorem,
+          computation,
+          conditional reconstruction,
+          model interpretation,
+          benchmark result,
+          prediction,
+          and unresolved problem.
+
         </p>
+
       </div>
+
+
     </div>
+
   </section>
 
-  <section class="section" id="seven-benefits">
-    <div class="section-header">
-      <h2 class="section-title">Seven Potential Benefits</h2>
-      <p class="section-kicker">
-        Cross-domain advantages that could emerge if dimensional analysis is upgraded into a structural admissibility and validation layer.
+
+
+  <!-- ============================================================
+       PRACTICAL VALUE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="value-feature">
+
+      <div class="value-eyebrow">
+        The practical QDL idea
+      </div>
+
+
+      <h2>
+        Add a structural verification layer before downstream validation
+      </h2>
+
+
+      <p>
+
+        Many scientific workflows begin by checking syntax,
+        units,
+        numerical convergence,
+        or statistical fit.
+
+        QDL asks whether a structural-admissibility layer could be inserted
+        even earlier.
+
       </p>
+
+
+      <div class="value-chain">
+
+        <span class="value-node">
+          Declare representation
+        </span>
+
+        <span class="value-arrow">
+          →
+        </span>
+
+        <span class="value-node">
+          Assign ledger structure
+        </span>
+
+        <span class="value-arrow">
+          →
+        </span>
+
+        <span class="value-node">
+          Test closure
+        </span>
+
+        <span class="value-arrow">
+          →
+        </span>
+
+        <span class="value-node">
+          Audit transformations
+        </span>
+
+        <span class="value-arrow">
+          →
+        </span>
+
+        <span class="value-node">
+          Fit / simulate / deploy
+        </span>
+
+      </div>
+
+
+      <p>
+
+        If that extra layer proves reliable,
+        some invalid constructions could be rejected before expensive
+        downstream work begins,
+        while admissible constructions would gain a clearer audit trail.
+
+      </p>
+
     </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       SEVEN BENEFITS
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="seven-benefits"
+  >
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Seven Potential Benefits
+      </h2>
+
+      <p class="section-kicker">
+
+        Cross-domain advantages that could emerge if dimensional analysis
+        is successfully extended into a structural-admissibility layer.
+
+      </p>
+
+    </div>
+
 
     <div class="grid-2">
+
+
       <div class="card">
+
         <ol class="benefits-list">
-          <li>
-            <span class="benefit-title">Model pre-verification and fewer silent errors.</span>
-            A closure rule can reject dimensionally plausible but structurally invalid terms, reducing hidden mismatches
-            in actions, EFT expansions, correction terms, and measurement chains before simulation or data fitting.
-          </li>
+
 
           <li>
-            <span class="benefit-title">A common structural grammar across domains.</span>
-            The QDL ledger provides a shared representation layer for dimensional quantities, constants, operators,
-            measurement relations, gravitational parameters, and model corrections.
+
+            <span class="benefit-title">
+              Model pre-verification and fewer silent errors
+            </span>
+
+            A closure rule may be able to reject dimensionally plausible
+            but structurally inconsistent terms before simulation,
+            fitting,
+            or interpretation.
+
           </li>
 
-          <li>
-            <span class="benefit-title">Sharper constraints on EFT and SMEFT operator content.</span>
-            If closure truly filters admissible structures, operator tables acquire additional audit rules that can
-            flag strict-zero targets, compensator requirements, or candidate closure violations.
-          </li>
 
           <li>
-            <span class="benefit-title">A more principled organization of constants.</span>
-            Constants can be classified by ledger role: conversion factors, ratios, structural parameters, scale-setting
-            quantities, or closure-stable observables.
+
+            <span class="benefit-title">
+              A common structural grammar across domains
+            </span>
+
+            The ledger formalism can provide a shared representation layer
+            for physical quantities,
+            constants,
+            operators,
+            measurement relations,
+            model corrections,
+            and transformations.
+
           </li>
 
-          <li>
-            <span class="benefit-title">Better experiment and benchmark design.</span>
-            QDL encourages tests that target residual structure, scaling laws, closure failures, and discriminant signatures
-            rather than loosely searching for anomalies.
-          </li>
 
           <li>
-            <span class="benefit-title">Measurement integrity and instrumentation leverage.</span>
-            A ledger-audit approach could help verify scientific software, sensor fusion, calibrated pipelines, digital twins,
-            resonators, and other real systems where unit consistency alone does not guarantee structural coherence.
+
+            <span class="benefit-title">
+              Sharper operator and effective-theory audits
+            </span>
+
+            If QDL closure rules continue to survive source-anchored tests,
+            operator tables could acquire an additional structural screen
+            for forbidden terms,
+            compensator requirements,
+            or closure failures.
+
           </li>
 
+
           <li>
-            <span class="benefit-title">A disciplined bridge between foundations and engineering.</span>
-            QDL can be evaluated as both a foundations-of-physics program and a practical validation architecture:
-            even if some theoretical branches fail, the audit methodology may still have engineering value.
+
+            <span class="benefit-title">
+              A clearer organization of physical constants
+            </span>
+
+            Constants can be classified by structural role:
+            conversion,
+            normalization,
+            scale setting,
+            ratio,
+            closure relation,
+            or observable quantity.
+
           </li>
+
+
+          <li>
+
+            <span class="benefit-title">
+              Better benchmark and experiment design
+            </span>
+
+            QDL encourages predeclared model families,
+            residual-first analysis,
+            explicit null conditions,
+            and tests designed to distinguish alternatives rather than
+            merely search for anomalies.
+
+          </li>
+
+
+          <li>
+
+            <span class="benefit-title">
+              Measurement and software integrity
+            </span>
+
+            Ledger-based audits could help inspect scientific software,
+            sensor fusion,
+            calibration chains,
+            digital twins,
+            model updates,
+            and other workflows in which unit consistency alone does not
+            guarantee structural coherence.
+
+          </li>
+
+
+          <li>
+
+            <span class="benefit-title">
+              A disciplined bridge between foundations and engineering
+            </span>
+
+            The audit methodology can be evaluated separately from the
+            strongest fundamental-physics claims.
+
+            That means useful validation methods could survive even if some
+            speculative physical branches do not.
+
+          </li>
+
+
         </ol>
+
       </div>
 
-      <aside class="card" style="border-color:rgba(37,99,235,.30); background:#f8fbff;">
-        <div class="card-title">Best Reading Path for Benefits</div>
-        <p>
-          To evaluate these benefits without overclaiming, use the site in this order:
-        </p>
 
-        <ul class="ref-list">
-          <li>
-            <strong>1. Public introduction:</strong><br>
-            <a href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
-          </li>
-          <li>
-            <strong>2. Definitions and failure modes:</strong><br>
-            <a href="framework.html">Framework</a>
-          </li>
-          <li>
-            <strong>3. Technical architecture:</strong><br>
-            <a href="research.html">Research Program</a>
-          </li>
-          <li>
-            <strong>4. Evidence and tests:</strong><br>
-            <a href="experiments.html">Experiments</a>
-          </li>
-          <li>
-            <strong>5. DOI-backed record:</strong><br>
-            <a href="publications.html">Publications</a>
-          </li>
-          <li>
-            <strong>6. Support materials and tools:</strong><br>
-            <a href="resources.html">Resources</a>
-          </li>
-        </ul>
 
-        <div class="pill-row">
-          <span class="pill pill-accent">Admissibility</span>
-          <span class="pill">Auditability</span>
-          <span class="pill">Metrology</span>
-          <span class="pill">EFT / SMEFT</span>
-          <span class="pill">Experiments</span>
-          <span class="pill">Validation tools</span>
+      <aside
+        class="card"
+        style="
+          border-color:rgba(37,99,235,.30);
+          background:#f8fbff;
+        "
+      >
+
+        <div class="card-title">
+          A useful distinction
         </div>
 
-        <p class="note">
-          The benefits page is intentionally practical. It does not replace the formal Framework, Experiments, or Publications pages.
+
+        <p>
+
+          QDL currently has two very different value propositions.
+
         </p>
+
+
+        <div class="callout green">
+
+          <strong>
+            Methodological value:
+          </strong>
+
+          structural admissibility,
+          dimensional ledgers,
+          audit traces,
+          model checking,
+          reproducibility,
+          and measurement integrity.
+
+        </div>
+
+
+        <div class="callout warning">
+
+          <strong>
+            Fundamental-physics value:
+          </strong>
+
+          whether QDL/QDC can ultimately become a predictive unified
+          description of particles,
+          interactions,
+          gravity,
+          and quantum consistency.
+
+        </div>
+
+
+        <p>
+
+          The second claim is much stronger and remains an active
+          Completion-Gate research problem.
+
+          The first can be tested independently in practical workflows.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-primary"
+            href="qdl-in-5-minutes.html"
+          >
+            QDL in 5 Minutes
+          </a>
+
+          <a
+            class="btn"
+            href="research.html"
+          >
+            UFT Research Status
+          </a>
+
+        </div>
+
       </aside>
+
+
     </div>
+
   </section>
 
-  <section class="section" id="stakeholder-benefits">
+
+
+  <!-- ============================================================
+       BENEFITS BY AUDIENCE
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="stakeholder-benefits"
+  >
+
     <div class="section-header">
-      <h2 class="section-title">Benefits by Audience</h2>
-      <p class="section-kicker">Different readers will care about different parts of the same admissibility idea.</p>
+
+      <h2 class="section-title">
+        Benefits by Audience
+      </h2>
+
+      <p class="section-kicker">
+        Different users can evaluate different parts of the same admissibility idea.
+      </p>
+
     </div>
+
 
     <div class="grid-3">
-      <div class="card">
-        <div class="pill-row">
-          <span class="pill pill-accent">Theorists</span>
-        </div>
-        <h3>For physics and mathematical foundations</h3>
-        <p>
-          QDL offers a closure-first way to ask whether representations, operators, constants, and dimensional relations are structurally admissible before interpretation or fitting.
-        </p>
-      </div>
+
 
       <div class="card">
+
         <div class="pill-row">
-          <span class="pill pill-executed">Metrology</span>
+
+          <span class="pill pill-accent">
+            Theorists
+          </span>
+
         </div>
-        <h3>For measurement science</h3>
+
+
+        <h3>
+          Physics and mathematical foundations
+        </h3>
+
+
         <p>
-          QDL gives a language for treating measurement chains, physical constants, unit relations, and QMU ledgers as auditable structural objects.
+
+          QDL supplies a closure-first language for testing whether
+          representations,
+          operators,
+          constants,
+          transformations,
+          and candidate completion laws are structurally admissible
+          before physical interpretation.
+
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="pill-row">
-          <span class="pill pill-orange">Experiment</span>
-        </div>
-        <h3>For experimental design</h3>
-        <p>
-          QDL favors residual-first benchmarks and proposed discriminant tests with explicit success and failure conditions.
-        </p>
-      </div>
+
 
       <div class="card">
+
         <div class="pill-row">
-          <span class="pill pill-purple">Software</span>
+
+          <span class="pill pill-executed">
+            Metrology
+          </span>
+
         </div>
-        <h3>For scientific software</h3>
+
+
+        <h3>
+          Measurement science
+        </h3>
+
+
         <p>
-          QDL-style validation could help identify structurally invalid model transformations, hidden correction factors, or non-admissible pipeline steps.
+
+          QDL treats physical constants,
+          QMU ledgers,
+          conversion relationships,
+          and measurement chains as auditable structural objects.
+
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="pill-row">
-          <span class="pill">AI systems</span>
-        </div>
-        <h3>For AI scientific-output checking</h3>
-        <p>
-          A ledger-based admissibility layer could provide a mechanical check on whether generated physical expressions preserve declared dimensional and closure rules.
-        </p>
-      </div>
+
 
       <div class="card">
+
         <div class="pill-row">
-          <span class="pill">Engineering</span>
+
+          <span class="pill pill-orange">
+            Experimental science
+          </span>
+
         </div>
-        <h3>For model-integrity workflows</h3>
+
+
+        <h3>
+          Benchmark and test design
+        </h3>
+
+
         <p>
-          QDL may be useful wherever simulations, sensors, digital twins, calibration chains, or model updates need structural checks beyond unit consistency.
+
+          Predeclared nulls,
+          residual structure,
+          frozen controls,
+          and explicit success/failure conditions can reduce
+          post-hoc interpretation.
+
         </p>
+
       </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-purple">
+            Software
+          </span>
+
+        </div>
+
+
+        <h3>
+          Scientific software
+        </h3>
+
+
+        <p>
+
+          A QDL-style checker could flag non-admissible transformations,
+          hidden correction factors,
+          inconsistent regime transfers,
+          or structural loss inside modeling pipelines.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill">
+            AI systems
+          </span>
+
+        </div>
+
+
+        <h3>
+          Scientific AI-output checking
+        </h3>
+
+
+        <p>
+
+          Ledger rules could provide a machine-checkable layer for testing
+          whether AI-generated physical expressions preserve declared
+          dimensional and structural constraints.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill">
+            Engineering
+          </span>
+
+        </div>
+
+
+        <h3>
+          Model-integrity workflows
+        </h3>
+
+
+        <p>
+
+          Simulations,
+          sensors,
+          digital twins,
+          calibration chains,
+          derived quantities,
+          and multi-model systems may benefit from structural checks
+          beyond ordinary unit consistency.
+
+        </p>
+
+      </div>
+
+
     </div>
+
   </section>
 
-  <section class="section" id="claim-status">
+
+
+  <!-- ============================================================
+       COMPLETION-GATE LESSONS
+       ============================================================ -->
+
+  <section class="section">
+
     <div class="section-header">
-      <h2 class="section-title">Claim-Status Guardrails</h2>
-      <p class="section-kicker">The benefits are potential benefits, not proof that every QDL branch is complete.</p>
+
+      <h2 class="section-title">
+        What the Completion-Gate Program Adds
+      </h2>
+
+      <p class="section-kicker">
+        The UFT research program also acts as a stress test of the methodology itself.
+      </p>
+
     </div>
+
+
+    <div class="grid-3">
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Preregistration
+          </span>
+
+        </div>
+
+
+        <h3>
+          Freeze the test before seeing the result
+        </h3>
+
+
+        <p>
+
+          Major gates specify assumptions,
+          controls,
+          success criteria,
+          and failure conditions before execution.
+
+          This limits result-driven reinterpretation.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Fail closed
+          </span>
+
+        </div>
+
+
+        <h3>
+          Preserve negative results
+        </h3>
+
+
+        <p>
+
+          A failed strong gate remains a failed strong gate,
+          even when it produces useful mathematics or points toward
+          a better method.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Reproducibility
+          </span>
+
+        </div>
+
+
+        <h3>
+          Keep an executable record
+        </h3>
+
+
+        <p>
+
+          Frozen archives,
+          machine-readable records,
+          manifests,
+          checksums,
+          and verification scripts make the evolution of the program
+          more auditable.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="callout blue">
+
+      These practices are potentially useful well beyond QDL.
+
+      They are examples of how speculative or frontier research can be
+      organized so that unsuccessful routes remain informative without
+      being promoted into positive claims.
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       CLAIM STATUS
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="claim-status"
+  >
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Claim-Status Guardrails
+      </h2>
+
+      <p class="section-kicker">
+        Potential benefit is not the same thing as demonstrated deployment value.
+      </p>
+
+    </div>
+
 
     <div class="card">
+
       <table class="status-table">
+
+
         <tr>
-          <td>Already useful as method</td>
-          <td>Dimensional ledgers, closure checks, residual-first benchmark design, and model-audit workflows can be evaluated as methodology.</td>
+
+          <td>
+            Already testable as methodology
+          </td>
+
+          <td>
+
+            Ledger assignment,
+            dimensional closure,
+            structural-admissibility checks,
+            residual-first benchmarks,
+            audit traces,
+            and model-integrity workflows can be evaluated independently
+            of the full QDL/QDC UFT hypothesis.
+
+          </td>
+
         </tr>
+
+
         <tr>
-          <td>Peer-reviewed anchor</td>
-          <td>The metrology application has a first peer-reviewed journal anchor through the JTAP article.</td>
+
+          <td>
+            Peer-reviewed anchor
+          </td>
+
+          <td>
+
+            The QDL metrology foundation has a peer-reviewed publication
+            in the
+            <em>Journal of Theoretical and Applied Physics</em>.
+
+          </td>
+
         </tr>
+
+
         <tr>
-          <td>Open research claims</td>
-          <td>The flagship monograph, roadmap, QDC Completion Theorem, SMEFT audit companion, and charged-lepton sequence remain part of an open DOI-backed research record.</td>
+
+          <td>
+            Open research record
+          </td>
+
+          <td>
+
+            The broader QDL/QDC architecture,
+            Primitive Closure synthesis,
+            structural-to-dynamical completion program,
+            UFT archive,
+            and computational companions remain part of an open,
+            evolving research record.
+
+          </td>
+
         </tr>
+
+
         <tr>
-          <td>Executed benchmarks</td>
-          <td>Executed benchmark records are methodological and do not claim new physical effects.</td>
+
+          <td>
+            Fundamental UFT status
+          </td>
+
+          <td>
+
+            QDL/QDC is currently presented as a
+            <strong>conditional unified-field candidate</strong>,
+            not as a completed or experimentally confirmed unified field theory.
+
+          </td>
+
         </tr>
+
+
         <tr>
-          <td>Proposed tests</td>
-          <td>Laboratory discriminant tests remain proposed until independently executed.</td>
+
+          <td>
+            Structural completion
+          </td>
+
+          <td>
+
+            The program has accumulated substantial structural completion,
+            but unique cross-sector amplitude normalization remains open.
+
+          </td>
+
         </tr>
+
+
         <tr>
-          <td>Major open gates</td>
-          <td>Full gravity recovery, absolute masses, quark and neutrino sectors, gauge couplings, CKM/PMNS, dark-sector residuals, and cosmology remain open or conditional.</td>
+
+          <td>
+            Particle and gravity status
+          </td>
+
+          <td>
+
+            Explicit model-level particle capacity and conditional
+            Einstein–Cartan/GR universality results exist,
+            but full observed-particle phenomenology,
+            vacuum selection,
+            G,
+            Λ,
+            and absolute normalization are not uniquely derived.
+
+          </td>
+
         </tr>
+
+
+        <tr>
+
+          <td>
+            Quantum-measure status
+          </td>
+
+          <td>
+
+            The QM5R3 Completion-Gate sequence has made substantial
+            mathematical and computational progress,
+            but global continuum completion remains an active proof problem.
+
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>
+            Experimental status
+          </td>
+
+          <td>
+
+            A distinctive,
+            independently confirmed,
+            nature-level QDL prediction remains an open objective.
+
+          </td>
+
+        </tr>
+
+
       </table>
+
     </div>
+
   </section>
 
-  <section class="section" id="applications">
+
+
+  <!-- ============================================================
+       APPLICATION AREAS
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="applications"
+  >
+
     <div class="section-header">
-      <h2 class="section-title">Application Areas</h2>
-      <p class="section-kicker">Where the framework may have practical value even before every foundational branch is resolved.</p>
+
+      <h2 class="section-title">
+        Application Areas
+      </h2>
+
+      <p class="section-kicker">
+        Where structural admissibility may have practical value.
+      </p>
+
     </div>
+
 
     <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Model Integrity Toolkit</div>
-        <p>
-          QDL can support a model-integrity workflow: assign ledger vectors, declare allowed transforms,
-          test closure, record audit traces, classify failures, and recommend repairs or rejection.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="resources.html#executable-infrastructure">Executable Infrastructure</a>
-          <a class="btn" href="qdl-calculator.html">QDL Calculator</a>
-        </div>
-      </div>
+
 
       <div class="card">
-        <div class="card-title">Measurement Integrity Engine</div>
-        <p>
-          QDL can support measurement-chain review by making constants, conversions, corrections, and hidden assumptions explicit in a ledger-based audit.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="resources.html#measurement-integrity-engine">Measurement Integrity Engine</a>
-          <a class="btn" href="https://doi.org/10.57647/jtap.2026.2004.05" target="_blank" rel="noopener noreferrer">JTAP Metrology Anchor</a>
+
+        <div class="pill-row">
+
+          <span class="pill pill-accent">
+            Model validation
+          </span>
+
         </div>
+
+
+        <div class="card-title">
+          Model Integrity Toolkit
+        </div>
+
+
+        <p>
+
+          A practical workflow can assign ledger vectors,
+          declare allowed transformations,
+          test closure,
+          record an audit trail,
+          classify failures,
+          and recommend review,
+          repair,
+          or rejection.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-primary"
+            href="resources.html"
+          >
+            Resources
+          </a>
+
+          <a
+            class="btn"
+            href="qdl-calculator.html"
+          >
+            QDL Calculator
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="card">
-        <div class="card-title">EFT / SMEFT Operator Governance</div>
-        <p>
-          The SMEFT Γ(O) audit companion is the main example of applying QDL to source-anchored operator classification and audit scaffolding.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="https://doi.org/10.5281/zenodo.20357001" target="_blank" rel="noopener noreferrer">SMEFT Audit Companion</a>
-          <a class="btn" href="publications.html#smeft-audit-companion">Publication Entry</a>
-        </div>
-      </div>
+
 
       <div class="card">
-        <div class="card-title">Experiments and Benchmarks</div>
-        <p>
-          The practical experimental benefit is discipline: pre-declared model families, residual-first analysis, and proposed tests with explicit failure conditions.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-orange" href="experiments.html">Experiments</a>
-          <a class="btn" href="publications.html#benchmarks">Benchmark Records</a>
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Metrology
+          </span>
+
         </div>
+
+
+        <div class="card-title">
+          Measurement Integrity
+        </div>
+
+
+        <p>
+
+          QDL can make constants,
+          unit conversions,
+          correction terms,
+          derived quantities,
+          and hidden dimensional assumptions explicit inside a
+          measurement-chain audit.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-primary"
+            href="https://doi.org/10.57647/jtap.2026.2004.05"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Peer-Reviewed Metrology Paper
+          </a>
+
+        </div>
+
       </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-purple">
+            Scientific AI
+          </span>
+
+        </div>
+
+
+        <div class="card-title">
+          AI-Assisted Scientific Checking
+        </div>
+
+
+        <p>
+
+          A machine-readable admissibility layer could check candidate
+          equations or transformations produced by AI systems before
+          those outputs are accepted into a scientific workflow.
+
+        </p>
+
+
+        <p class="note">
+
+          This is a proposed application direction,
+          not a claim that QDL presently certifies arbitrary AI-generated
+          physics.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-accent">
+            EFT / SMEFT
+          </span>
+
+        </div>
+
+
+        <div class="card-title">
+          Operator Governance
+        </div>
+
+
+        <p>
+
+          QDL closure-vector methods can be tested as a supplementary
+          structural audit on operator bases,
+          mixing,
+          compensators,
+          and transformation rules.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="https://doi.org/10.5281/zenodo.20357001"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            SMEFT Audit Companion
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-orange">
+            Benchmarks
+          </span>
+
+        </div>
+
+
+        <div class="card-title">
+          Experimental and Computational Test Design
+        </div>
+
+
+        <p>
+
+          The strongest methodological benefit may be discipline:
+          freeze the comparison,
+          declare the allowed model family,
+          identify the residual or fingerprint,
+          and specify what would count as failure.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-orange"
+            href="resources.html#benchmarks"
+          >
+            Benchmark Archives
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Reproducibility
+          </span>
+
+        </div>
+
+
+        <div class="card-title">
+          Research Audit Infrastructure
+        </div>
+
+
+        <p>
+
+          Public source bundles,
+          manifests,
+          checksum ledgers,
+          frozen preregistrations,
+          machine-readable outputs,
+          and independent verifier scripts can make a research program
+          easier to inspect and reproduce.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="resources.html#reproducibility"
+          >
+            Reproducibility Resources
+          </a>
+
+        </div>
+
+      </div>
+
+
     </div>
+
   </section>
 
-  <section class="section" id="what-qdl-is-not">
+
+
+  <!-- ============================================================
+       WORKFLOW
+       ============================================================ -->
+
+  <section class="section">
+
     <div class="section-header">
-      <h2 class="section-title">What This Page Is Not Claiming</h2>
-      <p class="section-kicker">The value proposition is strongest when its limits are explicit.</p>
+
+      <h2 class="section-title">
+        Example Validation Workflow
+      </h2>
+
+      <p class="section-kicker">
+        A possible practical implementation of the QDL audit idea.
+      </p>
+
     </div>
+
+
+    <div
+      class="card"
+      style="
+        border-color:rgba(37,99,235,.30);
+        background:#f8fbff;
+      "
+    >
+
+      <div class="workflow">
+
+
+        <div class="workflow-step">
+
+          <strong>
+            1. Declare
+          </strong>
+
+          <span>
+            Define quantities, basis, scope, and allowed transformations.
+          </span>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <strong>
+            2. Encode
+          </strong>
+
+          <span>
+            Assign dimensional or typed ledger vectors.
+          </span>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <strong>
+            3. Test
+          </strong>
+
+          <span>
+            Apply homogeneity, closure, and admissibility rules.
+          </span>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <strong>
+            4. Audit
+          </strong>
+
+          <span>
+            Identify failure location, residual, or hidden assumption.
+          </span>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+          <strong>
+            5. Decide
+          </strong>
+
+          <span>
+            Certify, warn, repair, reject, or escalate for review.
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+      <p class="note">
+
+        This is an application architecture,
+        not a universal certification standard.
+
+        The usefulness of any implementation would have to be established
+        through domain-specific validation and comparison with existing
+        methods.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       EVIDENCE BASE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Current Evidence &amp; Research Context
+      </h2>
+
+      <p class="section-kicker">
+        Three public records provide the clearest context for these potential benefits.
+      </p>
+
+    </div>
+
 
     <div class="grid-3">
-      <div class="card">
-        <div class="card-title">Not a replacement for experiment</div>
+
+
+      <div class="card evidence-card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Peer-reviewed
+          </span>
+
+        </div>
+
+
+        <h3>
+
+          <a
+            href="https://doi.org/10.57647/jtap.2026.2004.05"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            The Quantized Dimensional Ledger for Metrology
+          </a>
+
+        </h3>
+
+
         <p>
-          QDL can suggest admissibility filters and discriminant tests, but physical claims still require experimental or observational support.
+
+          The peer-reviewed foundation for QDL dimensional closure,
+          QMU ledgers,
+          and physical-constant interpretation in measurement science.
+
         </p>
+
+
+        <div class="meta">
+          DOI: 10.57647/jtap.2026.2004.05
+        </div>
+
       </div>
 
-      <div class="card">
-        <div class="card-title">Not a claim of completed unification</div>
+
+
+      <div class="card evidence-card purple">
+
+        <div class="pill-row">
+
+          <span class="pill pill-purple">
+            Major synthesis
+          </span>
+
+        </div>
+
+
+        <h3>
+
+          <a
+            href="https://doi.org/10.5281/zenodo.21813133"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Primitive Closure and the Architecture of Physical Admissibility
+          </a>
+
+        </h3>
+
+
         <p>
-          The QDC Completion Theorem identifies finite gates; it does not claim that all constants, masses, sectors, and gravitational dynamics are already complete.
+
+          The major long-form synthesis linking primitive closure,
+          physical admissibility,
+          QDL/QDC architecture,
+          completion physics,
+          and claim-status discipline.
+
         </p>
+
+
+        <div class="meta">
+          Version 1.2.1 · DOI: 10.5281/zenodo.21813133
+        </div>
+
       </div>
 
-      <div class="card">
-        <div class="card-title">Not merely unit-checking</div>
+
+
+      <div class="card evidence-card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-orange">
+            UFT research archive
+          </span>
+
+        </div>
+
+
+        <h3>
+
+          <a
+            href="https://doi.org/10.5281/zenodo.21894736"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Toward a QDL Unified Field Theory
+          </a>
+
+        </h3>
+
+
         <p>
-          The benefit being proposed is stronger than dimensional homogeneity: a closure-admissibility screen for structure, transformations, operators, and pipelines.
+
+          The frozen V1.0 record of the Completion-Gate program,
+          reproducibility architecture,
+          current theorem/computation status,
+          and open physical-closure problems.
+
         </p>
+
+
+        <div class="meta">
+          DOI: 10.5281/zenodo.21894736
+        </div>
+
       </div>
+
+
     </div>
+
   </section>
+
+
+
+  <!-- ============================================================
+       WHAT THIS PAGE IS NOT CLAIMING
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="what-qdl-is-not"
+  >
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        What This Page Is Not Claiming
+      </h2>
+
+      <p class="section-kicker">
+        The value proposition is strongest when its limits remain explicit.
+      </p>
+
+    </div>
+
+
+    <div class="grid-3">
+
+
+      <div class="card">
+
+        <div class="card-title">
+          Not a replacement for experiment
+        </div>
+
+
+        <p>
+
+          Structural admissibility can suggest filters,
+          diagnostics,
+          or tests.
+
+          Physical claims still require empirical or observational support.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="card-title">
+          Not a claim of completed unification
+        </div>
+
+
+        <p>
+
+          The current QDL/QDC program is a conditional unified-field
+          candidate with substantial structural progress and significant
+          remaining physical-closure problems.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="card-title">
+          Not merely unit checking
+        </div>
+
+
+        <p>
+
+          The proposed benefit is stronger than dimensional homogeneity:
+          it is a structural-admissibility screen for representations,
+          transformations,
+          operators,
+          and modeling pipelines.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="card-title">
+          Not automatic certification
+        </div>
+
+
+        <p>
+
+          Passing a QDL-style closure test would not automatically certify
+          a model as physically correct,
+          statistically valid,
+          safe,
+          or suitable for deployment.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="card-title">
+          Not proof from computational success
+        </div>
+
+
+        <p>
+
+          A successful internal gate or numerical benchmark establishes
+          only what that frozen model and test demonstrate.
+
+          It is not experimental confirmation of QDL as fundamental physics.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="card-title">
+          Not dependent on the UFT succeeding
+        </div>
+
+
+        <p>
+
+          Structural-audit methods can be evaluated on their own merits.
+
+          Their usefulness does not logically require every QDL/QDC
+          unified-field hypothesis to survive.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       WHAT WOULD ESTABLISH PRACTICAL VALUE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        What Would Establish Practical Value?
+      </h2>
+
+      <p class="section-kicker">
+        Concrete tests for the benefits claim itself.
+      </p>
+
+    </div>
+
+
+    <div class="grid-2">
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-executed">
+            Would strengthen the case
+          </span>
+
+        </div>
+
+
+        <h3>
+          Evidence to seek
+        </h3>
+
+
+        <ul class="benefits-list">
+
+          <li>
+            Independent reproduction of QDL structural audits.
+          </li>
+
+          <li>
+            Examples where QDL detects real structural failures missed by
+            ordinary unit checking.
+          </li>
+
+          <li>
+            Reduced error rates or review time in measurement,
+            modeling,
+            or software workflows.
+          </li>
+
+          <li>
+            Successful source-anchored operator audits with clear
+            false-positive and false-negative behavior.
+          </li>
+
+          <li>
+            Useful machine-readable implementations that can be tested
+            against existing validation systems.
+          </li>
+
+          <li>
+            External users obtaining the same audit result from the same
+            frozen specification.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <div class="pill-row">
+
+          <span class="pill pill-warn">
+            Would weaken the case
+          </span>
+
+        </div>
+
+
+        <h3>
+          Failure conditions
+        </h3>
+
+
+        <ul class="benefits-list">
+
+          <li>
+            Closure classifications that fail on known admissible or
+            inadmissible constructions.
+          </li>
+
+          <li>
+            Rules that can only be specified after the desired answer is known.
+          </li>
+
+          <li>
+            High false-positive rates that reject valid models.
+          </li>
+
+          <li>
+            High false-negative rates that add no value beyond ordinary
+            dimensional analysis.
+          </li>
+
+          <li>
+            Inability to produce reproducible audit traces.
+          </li>
+
+          <li>
+            No measurable improvement over existing validation methods.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       WHERE TO GO NEXT
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Where to Go Next
+      </h2>
+
+      <p class="section-kicker">
+        Use the rest of the seven-page site according to what you want to evaluate.
+      </p>
+
+    </div>
+
+
+    <div class="grid-3">
+
+
+      <div class="card">
+
+        <h3>
+          QDL in 5 Minutes
+        </h3>
+
+
+        <p>
+
+          For a concise introduction to QDL,
+          QDC,
+          structural admissibility,
+          and the present physical-completion program.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-primary"
+            href="qdl-in-5-minutes.html"
+          >
+            Read Introduction
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Research Program
+        </h3>
+
+
+        <p>
+
+          For the living QDL/QDC scientific status,
+          Completion-Gate Series,
+          strongest positive results,
+          and current open problems.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-orange"
+            href="research.html"
+          >
+            Research Program
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Publications
+        </h3>
+
+
+        <p>
+
+          For peer-reviewed papers,
+          Zenodo archives,
+          monographs,
+          datasets,
+          and permanent DOI records.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="publications.html"
+          >
+            Publications
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Resources
+        </h3>
+
+
+        <p>
+
+          For reproducibility archives,
+          benchmarks,
+          graphics,
+          tools,
+          computational records,
+          and supporting materials.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="resources.html"
+          >
+            Resources
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Institute
+        </h3>
+
+
+        <p>
+
+          For the Institute mission,
+          founder information,
+          research philosophy,
+          identifiers,
+          and contact details.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="institute.html"
+          >
+            Institute
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Home
+        </h3>
+
+
+        <p>
+
+          Return to the main QDL Physics Institute overview and
+          current research announcements.
+
+        </p>
+
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="index.html"
+          >
+            Home
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       BOTTOM LINE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div
+      class="card"
+      style="
+        border-color:rgba(37,99,235,.34);
+        background:#f8fbff;
+      "
+    >
+
+      <div class="pill-row">
+
+        <span class="pill pill-accent">
+          Bottom line
+        </span>
+
+      </div>
+
+
+      <div class="card-title">
+        The practical QDL proposition can be tested independently of the strongest foundational claims.
+      </div>
+
+
+      <p>
+
+        If structural admissibility consistently catches meaningful
+        modeling,
+        measurement,
+        or transformation errors that ordinary unit checking does not,
+        QDL could become useful as a validation layer even before the
+        fundamental QDL/QDC research program is complete.
+
+      </p>
+
+
+      <p>
+
+        If it does not provide reproducible additional discrimination,
+        then the practical benefits claim should be reduced accordingly.
+
+      </p>
+
+
+      <div class="callout blue">
+
+        <strong>
+          The standard is therefore not whether QDL sounds unifying.
+        </strong>
+
+        The practical standard is whether it improves real scientific
+        reasoning,
+        auditability,
+        validation,
+        or error detection in reproducible tests.
+
+      </div>
+
+    </div>
+
+  </section>
+
 
 </main>
 
+
+
 <footer>
+
   <div class="footer-grid">
-    <div>© QDL Physics Institute</div>
-    <div>Last updated: July 2026 — benefits page aligned with Framework, Experiments, Research Program hub, peer-reviewed JTAP anchor, and seven-item navigation.</div>
-    <div><a href="qdl-calculator.html">QDL Calculator</a></div>
+
     <div>
-      Contact:
-      <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>
+      © 2026 QDL Physics Institute
     </div>
+
+
+    <div>
+
+      Last updated: August 11, 2026
+      — benefits page aligned with the current QDL/QDC research status,
+      seven-page site structure,
+      Primitive Closure synthesis,
+      consolidated UFT record,
+      peer-reviewed metrology anchor,
+      and reproducibility program.
+
+    </div>
+
+
+    <div>
+
+      <a href="research.html">
+        Research Program
+      </a>
+
+      ·
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+    </div>
+
+
+    <div>
+
+      Contact:
+
+      <a href="mailto:james.bourassa@qdlphysics.org">
+        james.bourassa@qdlphysics.org
+      </a>
+
+    </div>
+
   </div>
+
 </footer>
 
+
 </body>
+
 </html>
