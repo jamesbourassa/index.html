@@ -1,18 +1,2761 @@
 <!DOCTYPE html>
- <html lang="en"> <head> <meta charset="utf-8"/> <link href="favicon.ico" rel="icon" type="image/x-icon"/> <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/> <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/> <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/> <link href="site.webmanifest" rel="manifest"/> <title>QDL in 5 Minutes | QDL Physics Institute</title> <meta content="width=device-width, initial-scale=1" name="viewport"/> <meta content="A concise, equation-light introduction to the Quantized Dimensional Ledger (QDL), centered on the QDL Lattice interpretation, closure-persistent recurrence, physical law as persistence under closure, structural admissibility, dimensional closure, the Quantized Dimensional Cell, predictive compression, claim-status discipline, and where to start." name="description"/> <meta content="James D. Bourassa" name="author"/> <meta content="website" property="og:type"/> <meta content="QDL in 5 Minutes" property="og:title"/> <meta content="A concise introduction to the Quantized Dimensional Ledger: QDL Lattice, physical persistence under closure, structural admissibility, predictive compression, and claim-status discipline." property="og:description"/> <meta content="integrated-worldview-qdl-lattice.png" property="og:image"/> <meta content="QDL Physics Institute" property="og:site_name"/> <meta content="summary_large_image" name="twitter:card"/> <meta content="integrated-worldview-qdl-lattice.png" name="twitter:image"/> <link href="https://qdlphysics.org/qdl-in-5-minutes.html" rel="canonical"/> <style> :root{ --bg-page:#f3f4f6; --bg-card:#ffffff; --border-soft:#e5e7eb; --text-main:#0f172a; --text-soft:#6b7280; --text-muted:#475569; --accent:#2563eb; --purple:#7c3aed; --orange:#ea580c; --green:#16a34a; } *{box-sizing:border-box;margin:0;padding:0;} html{scroll-behavior:smooth;} body{ font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg-page); color:var(--text-main); -webkit-font-smoothing:antialiased; line-height:1.65; } a{color:#0369a1;text-decoration:none;} a:hover{text-decoration:underline;} header{ background:#0f172a; color:#e5e7eb; border-bottom:1px solid #111827; position:sticky; top:0; z-index:50; } .nav{ max-width:1100px; margin:0 auto; padding:.78rem 1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; } .logo{ display:flex; align-items:center; gap:.65rem; } .logo-icon{ width:52px; height:52px; border-radius:10px; border:1px solid #38bdf8; background:#020617; display:flex; align-items:center; justify-content:center; overflow:hidden; } .logo-icon img{ width:100%; height:100%; object-fit:contain; display:block; } .logo-text-main{ font-weight:650; letter-spacing:.06em; text-transform:uppercase; font-size:.82rem; } .logo-text-sub{ font-size:.72rem; color:#9ca3af; letter-spacing:.08em; text-transform:uppercase; } .nav-links{ display:flex; align-items:center; gap:.8rem; font-size:.85rem; flex-wrap:wrap; } .nav-links a{ color:#e5e7eb; padding:.28rem .68rem; border-radius:999px; border:1px solid transparent; } .nav-links a:hover{ background:#111827; text-decoration:none; } .nav-active{ border-color:rgba(56,189,248,.85) !important; background:rgba(56,189,248,.10) !important; color:#e0f2fe !important; } main{ max-width:1100px; margin:0 auto; padding:1.85rem 1.25rem 3.2rem; } .hero{ margin-bottom:1.8rem; background:var(--bg-card); border-radius:20px; border:1px solid var(--border-soft); box-shadow:0 10px 28px rgba(15,23,42,.06); padding:1.7rem 1.6rem; } .hero-kicker{ text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; color:#6b7280; margin-bottom:.4rem; } .hero-title{ font-size:clamp(2rem,3vw,2.55rem); line-height:1.12; margin-bottom:.55rem; letter-spacing:-0.02em; } .hero-sub{ font-size:.97rem; color:#4b5563; max-width:60rem; margin-bottom:.75rem; } .hero-sub strong{color:#111827;} .hero-meta{ margin-top:.95rem; display:flex; flex-wrap:wrap; gap:.5rem; font-size:.8rem; } .hero-chip{ padding:.18rem .68rem; border-radius:999px; border:1px solid #e5e7eb; background:#f9fafb; color:var(--text-muted); } .hero-actions, .btn-row{ display:flex; flex-wrap:wrap; gap:.58rem; margin-top:1rem; } .btn{ display:inline-flex; align-items:center; justify-content:center; padding:.58rem 1rem; border-radius:999px; border:1px solid #d1d5db; background:#fff; color:#111827; font-size:.88rem; font-weight:500; white-space:nowrap; } .btn:hover{ background:#f9fafb; text-decoration:none; } .btn-primary{ background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#fff; border:none; box-shadow:0 10px 24px rgba(37,99,235,.25); } .btn-purple{ background:linear-gradient(135deg,#7c3aed,#6d28d9); color:#fff; border:none; box-shadow:0 10px 24px rgba(124,58,237,.22); } .btn-orange{ background:linear-gradient(135deg,#f97316,#ea580c); color:#fff; border:none; box-shadow:0 10px 24px rgba(234,88,12,.20); } .btn-primary:hover, .btn-purple:hover, .btn-orange:hover{ filter:brightness(1.03); text-decoration:none; } .hero-figure{ margin:1rem 0 1rem; max-width:60rem; background:#020617; border-radius:18px; padding:.65rem; border:1px solid rgba(56,189,248,.28); } .hero-figure img{ width:100%; height:auto; display:block; border-radius:13px; border:1px solid rgba(148,163,184,.28); background:#fff; } .hero-figure figcaption{ margin-top:.55rem; font-size:.8rem; color:#cbd5e1; line-height:1.5; } .section{ margin-top:2rem; } .section-header{ display:flex; justify-content:space-between; gap:1rem; align-items:baseline; flex-wrap:wrap; margin-bottom:1rem; } .section-title{ font-size:.96rem; text-transform:uppercase; letter-spacing:.16em; color:#111827; } .section-kicker{ font-size:.83rem; color:var(--text-soft); max-width:42rem; } .grid{ display:grid; grid-template-columns:minmax(0,1.58fr) minmax(0,1.15fr); gap:1rem; align-items:start; } .grid-2{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; } .grid-3{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; } @media (max-width:900px){ .grid,.grid-2,.grid-3{grid-template-columns:1fr;} } .card{ background:var(--bg-card); border-radius:18px; border:1px solid var(--border-soft); box-shadow:0 8px 24px rgba(15,23,42,.06); padding:1.05rem 1.08rem; font-size:.92rem; } .card h2, .card h3{ font-size:1rem; margin-bottom:.4rem; color:#111827; } .card h3.spaced{ margin-top:.95rem; } .card p{ margin-bottom:.58rem; color:#374151; line-height:1.62; } .card p:last-child{ margin-bottom:0; } ul.tight, ol.tight{ margin:.35rem 0 0 1.1rem; color:#374151; line-height:1.55; } ul.tight li, ol.tight li{ margin-bottom:.45rem; } .callout{ border:1px solid #e5e7eb; background:#f9fafb; border-radius:14px; padding:.85rem .95rem; margin:.7rem 0 .95rem; } .callout.blue{ border-color:rgba(37,99,235,.22); background:rgba(37,99,235,.055); } .callout.purple{ border-color:rgba(124,58,237,.25); background:#fbfaff; } .callout.orange{ border-color:rgba(234,88,12,.28); background:#fff7ed; } .callout.green{ border-color:rgba(22,163,74,.28); background:#ecfdf5; } .callout strong{ color:#111827; } .pill{ border-radius:999px; padding:.14rem .55rem; border:1px solid #e5e7eb; background:#ffffff; color:#111827; font-weight:700; font-size:.78rem; letter-spacing:.03em; display:inline-block; width:fit-content; margin-right:.3rem; margin-bottom:.25rem; } .pill.blue{ border-color:rgba(37,99,235,.30); background:rgba(37,99,235,.08); color:#1e3a8a; } .pill.purple{ border-color:rgba(124,58,237,.30); background:rgba(124,58,237,.08); color:#5b21b6; } .pill.orange{ border-color:rgba(234,88,12,.30); background:#fff7ed; color:#9a3412; } .pill.green{ border-color:rgba(22,163,74,.30); background:#ecfdf5; color:#166534; } .pill.gray{ border-color:#e5e7eb; background:#f8fafc; color:#334155; } .linklist{ margin-top:.4rem; display:grid; gap:.45rem; } .paper-list{ margin-top:.45rem; display:grid; gap:.75rem; } .paper-item{ padding-bottom:.7rem; border-bottom:1px solid #e5e7eb; } .paper-item:last-child{ border-bottom:none; padding-bottom:0; } .paper-meta{ font-size:.8rem; color:#6b7280; line-height:1.5; margin-top:.18rem; } .status-grid{ display:grid; gap:.55rem; margin-top:.55rem; } .status-row{ border:1px solid #e5e7eb; border-radius:12px; padding:.65rem .75rem; background:#ffffff; } .status-row strong{ display:block; color:#111827; margin-bottom:.18rem; } .status-row span{ color:#4b5563; font-size:.86rem; line-height:1.45; } code.inline{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.86em; background:#f1f5f9; border:1px solid #e2e8f0; padding:.08rem .28rem; border-radius:6px; color:#0f172a; } .lattice-chain{ display:flex; flex-wrap:wrap; gap:.45rem; margin:.7rem 0 .75rem; } .lattice-node{ border:1px solid rgba(37,99,235,.28); background:#eff6ff; color:#1e3a8a; border-radius:999px; padding:.25rem .65rem; font-size:.78rem; font-weight:600; } .lattice-arrow{ color:#64748b; padding:.25rem 0; font-size:.78rem; } @media (max-width:700px){ .lattice-arrow{display:none;} } .note{ font-size:.82rem; color:#6b7280; line-height:1.5; margin-top:.75rem; } footer{ border-top:1px solid #e5e7eb; background:#f9fafb; padding:1.2rem 1.25rem 1.8rem; margin-top:3rem; font-size:.8rem; color:#6b7280; } .footer-inner{ max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:center; } 
-/* QDL Visual Guide additions */
-.qvg-hero{background:linear-gradient(145deg,#07152b 0%,#0f2747 58%,#12355f 100%);color:#eaf2ff;border:1px solid rgba(125,211,252,.34);border-radius:24px;padding:1.25rem;box-shadow:0 20px 48px rgba(15,23,42,.18)}
-.qvg-hero h2,.qvg-hero h3{color:#fff}.qvg-hero p{color:#d8e5f5}.qvg-eyebrow{font-size:.76rem;text-transform:uppercase;letter-spacing:.17em;color:#bae6fd;margin-bottom:.42rem}
-.qvg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.qvg-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #dbe3ee;border-radius:20px;box-shadow:0 9px 26px rgba(15,23,42,.07);color:inherit}.qvg-card:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 13px 32px rgba(15,23,42,.10)}
-.qvg-poster{aspect-ratio:16/9;width:100%;object-fit:cover;display:block;background:#020617;border-bottom:1px solid #dbe3ee}.qvg-body{padding:1rem 1.05rem 1.05rem;display:flex;flex-direction:column;gap:.52rem;flex:1}.qvg-step{display:inline-flex;align-items:center;gap:.45rem;font-size:.76rem;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:#1d4ed8}.qvg-step-number{width:1.65rem;height:1.65rem;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#eff6ff;border:1px solid rgba(37,99,235,.28)}
-.qvg-title{font-size:1.08rem;line-height:1.3;color:#111827;margin:0}.qvg-desc{font-size:.9rem;line-height:1.55;color:#475569;margin:0}.qvg-meta{font-size:.79rem;color:#64748b;margin-top:auto}.qvg-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.28rem}.qvg-actions a{display:inline-flex;align-items:center;justify-content:center;padding:.5rem .8rem;border-radius:999px;border:1px solid #d1d5db;background:#fff;color:#111827;font-size:.82rem;font-weight:650}.qvg-actions a:hover{text-decoration:none;background:#f8fafc}.qvg-actions a.qvg-primary{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border:none}
-.qvg-path{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;margin:.8rem 0}.qvg-node{padding:.34rem .72rem;border-radius:999px;border:1px solid rgba(37,99,235,.28);background:#eff6ff;color:#1e3a8a;font-size:.8rem;font-weight:650}.qvg-arrow{color:#64748b}.qvg-callout{border:1px solid rgba(37,99,235,.26);background:#f8fbff;border-radius:18px;padding:1rem 1.05rem}.qvg-callout h3{margin:0 0 .35rem;color:#111827;font-size:1.02rem}.qvg-callout p{margin:0 0 .55rem;color:#475569;font-size:.91rem}.qvg-callout p:last-child{margin-bottom:0}.qvg-mini{display:grid;grid-template-columns:190px minmax(0,1fr);gap:1rem;align-items:center}.qvg-mini img{width:100%;border-radius:14px;border:1px solid rgba(15,23,42,.14);background:#020617}.qvg-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}.qvg-strip a{display:block;border:1px solid #e5e7eb;border-radius:15px;padding:.85rem;background:#fff;color:inherit}.qvg-strip a:hover{text-decoration:none;border-color:rgba(37,99,235,.4)}.qvg-strip strong{display:block;color:#111827;margin-bottom:.18rem}.qvg-strip span{font-size:.84rem;color:#64748b}.qvg-focus:focus-visible,.btn:focus-visible,.link-btn:focus-visible{outline:3px solid #38bdf8;outline-offset:3px}
-@media(max-width:900px){.qvg-grid,.qvg-strip{grid-template-columns:1fr}.qvg-mini{grid-template-columns:1fr}.qvg-mini img{max-width:520px}}
-</style> </head> <body> <header> <div class="nav"> <div class="logo"> <div class="logo-icon"> <img alt="QDL Physics Institute emblem" src="apple-touch-icon.png"/> </div> <div> <div class="logo-text-main">QDL Physics Institute</div> <div class="logo-text-sub">Quantized Dimensional Ledger</div> </div> </div> <nav aria-label="Main navigation" class="nav-links"> <a href="index.html">Home</a> <a class="nav-active" href="qdl-in-5-minutes.html">QDL in 5 Minutes</a> <a href="research.html">Research Program</a> <a href="publications.html">Publications</a> <a href="resources.html">Resources</a> <a href="benefits.html">Benefits</a> <a href="institute.html">Institute</a> </nav> </div> </header> <main> <section class="hero"> <div class="hero-kicker">First-pass overview · equation-light orientation</div> <h1 class="hero-title">QDL in 5 Minutes</h1> <p class="hero-sub"> The <strong>Quantized Dimensional Ledger</strong> is a proposed structural-admissibility framework for physics, metrology, and model governance. Its simplest public picture is the <strong>QDL Lattice</strong>: space is modeled not as absolute emptiness, but as a closure-compatible lattice of recurrence. </p> <p class="hero-sub"> In this picture, particles are persistent localized modes of that same structure, composite particles are confined multi-channel modes, and geometry is investigated as a possible large-scale response of collective closure stress. The current flagship synthesis is the monograph <em>Physical Law as the Minimal Architecture of Persistence Under Closure</em>. </p> <figure class="hero-figure"> <img alt="Integrated QDL worldview showing the QDL Lattice leading to localized closure modes, triadic baryons, collective stress, and effective geometry" src="integrated-worldview-qdl-lattice.png"/> <figcaption> The QDL Lattice is the proposed closure-compatible recurrence background. Localized and composite particle modes are treated as persistent reorganizations of that background, while effective geometry is investigated as a large-scale collective response. </figcaption> </figure> <div class="hero-meta"> <span class="hero-chip">QDL Lattice</span> <span class="hero-chip">Closure-Persistent Recurrence</span> <span class="hero-chip">Physical Persistence Under Closure</span> <span class="hero-chip">Structural Admissibility</span> <span class="hero-chip">Predictive Compression</span> <span class="hero-chip">Dimensional Closure</span> <span class="hero-chip">QDC Geometry</span> <span class="hero-chip">Measurement Integrity</span> <span class="hero-chip">EFT / SMEFT Audits</span> <span class="hero-chip">Claim-Status Firewalls</span> </div> <div class="hero-actions"> <a class="btn btn-orange" href="qdl-structural-admissibility-animation.html">Watch the Structural Primer</a> <a class="btn btn-primary" href="research.html">Research Program</a> <a class="btn" href="framework.html">Framework</a> <a class="btn" href="experiments.html">Experiments</a> <a class="btn btn-purple" href="https://doi.org/10.5281/zenodo.20940986" rel="noopener noreferrer" target="_blank">Flagship Monograph</a> <a class="btn" href="qdl-calculator.html">QDL Calculator</a> </div> </section> <section class="section" id="animation">
-<div class="section-header"><h2 class="section-title">Animated Introduction: How QDL Works</h2><p class="section-kicker">Begin with the structural-admissibility method before entering the substrate worldview.</p></div>
-<div class="qvg-callout qvg-mini">
-<img alt="Poster frame for the QDL Structural Admissibility animation" src="qdl-structural-admissibility-poster.png"/>
-<div><h3>QDL Structural Admissibility in 5 Minutes</h3><p>A real orbital construction is converted into a five-slot ledger vector only after the basis, target, allowed transforms, and scope have been declared. The animation then compares admissible and non-admissible vectors and shows why dimensional agreement alone is not enough.</p><div class="btn-row"><a class="btn btn-orange" href="qdl-structural-admissibility-animation.html">Watch the Primer</a><a class="btn btn-primary" href="animations.html">Open the Three-Part Visual Guide</a><a class="btn" href="qdl-calculator.html">Try the Calculator</a></div></div>
-</div>
-<div class="qvg-strip" style="margin-top:1rem;"><a href="qdl-structural-admissibility-animation.html"><strong>1 · How QDL works</strong><span>Structural admissibility and ledger vectors</span></a><a href="qdl-planck-worldview-animation.html"><strong>2 · What QDL/QDC proposes</strong><span>Conceptual Planck-scale worldview</span></a><a href="qdl-l3f2-evidence-to-worldview-animation.html"><strong>3 · Why L³F² matters</strong><span>Evidence-to-worldview argument</span></a></div>
-</section> <section class="section"> <div class="grid"> <div class="card"> <div aria-label="Core QDL picture" class="callout purple" role="note"> <p style="margin:0 0 .45rem 0;"> <span class="pill purple">The core picture</span> </p> <p style="margin:0;"> QDL models space not as absolute emptiness, but as a closure-compatible <strong>QDL Lattice</strong> of recurrence. Particles are persistent localized modes of that same structure, and geometry is investigated as a possible large-scale response of collective closure stress. </p> </div> <div aria-label="QDL Lattice hierarchy" class="lattice-chain"> <span class="lattice-node">QDL Lattice</span> <span class="lattice-arrow">→</span> <span class="lattice-node">Localized particle modes</span> <span class="lattice-arrow">→</span> <span class="lattice-node">Confined composite modes</span> <span class="lattice-arrow">→</span> <span class="lattice-node">Collective stress</span> <span class="lattice-arrow">→</span> <span class="lattice-node">Effective geometry</span> </div> <div aria-label="Claim status" class="callout" role="note"> <p style="margin:0;"> <span class="pill gray">Claim status</span> This is a substrate interpretation and research architecture. It is not a claim that microscopic lattice cells have already been directly observed, or that spacetime, spin, gravity, and the full particle spectrum have already been completely derived. </p> </div> <h2>1) What problem does QDL address?</h2> <p> Many failures in physics, engineering, standards work, and model-driven systems begin upstream of numerical fitting. A construction may be mathematically writable, computationally convenient, or empirically adjustable while still carrying hidden structural problems: incompatible dimensional assumptions, invalid transformations, silent regime shifts, or loss of measurement meaning. </p> <ul class="tight"> <li>Dimensional or unit structure may be treated as bookkeeping rather than as a constraint.</li> <li>Models may extrapolate outside the regime where their representations remain physically meaningful.</li> <li>Measurement chains may preserve numerical outputs while losing structural traceability.</li> <li>Effective theories may contain terms that are syntactically available but require explicit closure auditing.</li> </ul> <h3 class="spaced">2) What is the core idea?</h3> <p> QDL treats admissibility as a structural question. Before asking whether a model can be fitted, QDL asks whether the construction is coherent under its own declared dimensional ledger and whether it remains coherent under the transformations, compositions, and interpretations it claims to support. </p> <div aria-label="Core QDL question" class="callout blue" role="note"> <p style="margin:0;"> <strong>Core QDL question:</strong> Is this construction structurally admissible before we fit, optimize, certify, publish, or deploy it? </p> </div> <p> This turns dimensional reasoning from a post-hoc consistency check into an upstream filter. In the formal papers, QDL uses lattice structure, closure maps, residual classes, and admissibility-preserving transformations. In plain terms, it asks whether the structure of the representation survives the operations being performed on it. </p> <h3 class="spaced">3) What is the Quantized Dimensional Cell?</h3> <p> The <strong>Quantized Dimensional Cell</strong>, or <strong>QDC</strong>, is the proposed closure unit around which QDL organizes dimensional recurrence. In the current QDL program, the Planck-normalized closure cell is represented by the dimensional structure <code class="inline">L³F²</code>, where length and frequency supply the primitive recurrence axes. </p> <p> The toroidal QDC papers develop this as a compact closure-space geometry: not as a claim that the universe has already been proven to be literally toroidal, but as a candidate representation for closure-stable recurrence, sector assignment, and residual filtering. </p> <div aria-label="QDC summary" class="callout" role="note"> <p style="margin:0;"> <span class="pill blue">QDC</span> The QDC is the proposed closure cell used to test whether dimensional constructions, operators, thresholds, and physical representations remain admissible across scale and transformation. </p> </div> <h3 class="spaced">4) What is predictive compression?</h3> <p> Predictive compression is the monograph’s main standard for evaluating QDL claims. A theory does not become stronger simply by using one word for many things. It becomes stronger only when a smaller declared structure does real work. </p> <ul class="tight"> <li>It determines a consequence not separately inserted.</li> <li>It generates several linked consequences from one common input.</li> <li>It excludes an otherwise plausible alternative.</li> <li>It exposes what remains underdetermined instead of hiding it.</li> </ul> <h3 class="spaced">5) What does QDL do in practice?</h3> <ul class="tight"> <li><strong>Flags structural inadmissibility early</strong> before downstream validation work.</li> <li><strong>Makes hidden assumptions explicit</strong> by forcing the representation to declare its dimensional ledger.</li> <li><strong>Clarifies regime boundaries</strong> where extrapolation or model transfer becomes structurally risky.</li> <li><strong>Audits measurement chains</strong> for closure loss across transformations, conversions, and derived quantities.</li> <li><strong>Supports EFT and SMEFT review</strong> by classifying operator structures through closure-vector and residual logic.</li> <li><strong>Separates claim levels</strong> so theorem, reconstruction, ansatz, audit, residual, and open-target claims are not confused.</li> </ul> <h3 class="spaced">6) Where does QDL currently apply?</h3> <p> The current QDL program is organized around several active application layers. </p> <div class="status-grid"> <div class="status-row"> <strong>QDL Lattice interpretation</strong> <span>The public-facing substrate picture: a closure-compatible recurrence background supporting localized modes, composite modes, collective stress, and possible effective geometry.</span> </div> <div class="status-row"> <strong>Flagship synthesis</strong> <span>The monograph frames physical law as the minimal architecture of persistence under closure and defines the program’s predictive-compression standard.</span> </div> <div class="status-row"> <strong>Metrology and measurement-chain integrity</strong> <span>QDL began with dimensional closure, QMU ledgers, and the ontology of physical constants as applied to measurement structure.</span> </div> <div class="status-row"> <strong>QDC geometry and toroidal closure</strong> <span>The toroidal QDC papers develop a Planck-normalized closure-cell representation and a geometric substrate-mode hypothesis.</span> </div> <div class="status-row"> <strong>Planck-scale substrate interpretation</strong> <span>The substrate capstone frames QDL as a residual-first closure-admissibility theory of physical persistence.</span> </div> <div class="status-row"> <strong>QDC Completion Theorem</strong> <span>The completion-theorem spine organizes Standard-Model admissibility, primitive three-family recurrence, charged-lepton closure, gravitational recurrence, and open proof gates.</span> </div> <div class="status-row"> <strong>EFT / SMEFT operator governance</strong> <span>The SMEFT audit work develops source-anchored closure-vector classification for representative Warsaw-basis operator mixing.</span> </div> <div class="status-row"> <strong>Mass-spectrum and charged-lepton architecture</strong> <span>The charged-lepton sequence treats Koide structure, phase selection, and mass-occupancy relations as controlled pre-theorem architecture rather than as a completed mass theorem.</span> </div> </div> <h3 class="spaced">7) What QDL is not</h3> <ul class="tight"> <li>Not a replacement for quantum field theory, general relativity, statistics, or experiment.</li> <li>Not a claim that all constants, masses, particles, or cosmological parameters have already been derived.</li> <li>Not a claim that microscopic QDL Lattice cells have already been directly observed.</li> <li>Not a data-fitting method or curve-fitting program.</li> <li>Not a declaration that every proposed QDL extension is established physics.</li> <li>Not dependent on one dataset, one numerical coincidence, or one speculative interpretation.</li> </ul> <h3 class="spaced">8) How should claims be read?</h3> <p> A central discipline of the current QDL program is the use of claim-status firewalls. QDL papers distinguish strict theorem, conditional theorem, restricted minimality theorem, constrained branch, ansatz, audit result, residual diagnostic, conjecture, and future-test target. </p> <div aria-label="Claim-status firewall" class="callout" role="note"> <p style="margin:0;"> <span class="pill gray">Important</span> QDL is strongest where it provides reproducible structural audits, closure rules, admissibility tests, or controlled reconstruction layers. Speculative extensions are marked as conditional or future-test targets. </p> </div> <h3 class="spaced">9) Why might this matter?</h3> <p> If the QDL closure program continues to hold across independent examples, it could strengthen dimensional reasoning from unit consistency into a deeper structural filter on admissible physical representation. That would be useful not only in foundational physics, but also in metrology, model certification, scientific AI, engineering review, and multi-scale simulation. </p> <p> The near-term test is not whether QDL explains everything. The near-term test is whether it can repeatedly identify, classify, or constrain structures that ordinary dimensional bookkeeping does not make explicit. </p> <div aria-label="Bottom line" class="callout blue" role="note"> <p style="margin:0;"> <span class="pill blue">Bottom line</span> QDL is a structural-admissibility framework grounded in a closure-first picture of physical persistence. It asks whether a construction is dimensionally and representationally coherent before major effort is invested in fitting, interpretation, certification, or deployment. </p> </div> <p class="note"> For collaboration, review, pilot applications, or technical correspondence, contact <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a>. </p> </div> <aside class="card"> <h2>Start here, then go deeper</h2> <p> This page is the quick orientation layer. The animation is the fastest visual overview. The flagship monograph is the full conceptual synthesis. The roadmap paper is the best compact map of the supporting technical program. </p> <div class="callout orange" style="margin-top:.65rem;"> <p style="margin:0 0 .35rem 0;"> <strong>Visual overview</strong> </p> <p style="margin:0 0 .6rem 0;color:#374151;"> Watch the production-ready Planck-worldview animation first, then return here for the explanatory text. </p> <a class="btn btn-orange" href="animations.html">Open the Visual Guide</a> </div> <div class="callout" style="margin-top:.65rem;"> <p style="margin:0 0 .35rem 0;"> <strong>Recommended reading path</strong> </p> <ol class="tight"> <li>Watch the animation.</li> <li>Read this page.</li> <li>Use the QDL Lattice picture to understand the public-facing architecture.</li> <li>Read the Framework page for definitions and failure modes.</li> <li>Read the Experiments page for executed benchmarks and proposed tests.</li> <li>Read the flagship monograph for the full synthesis.</li> <li>Read the roadmap paper for the program architecture.</li> <li>Use the metrology paper for the accepted measurement-chain entry point.</li> <li>Use the toroidal QDC, substrate, and QDC Completion Theorem records for the physics-architecture layer.</li> </ol> </div> <div class="callout" style="margin-top:.65rem;"> <p style="margin:0 0 .35rem 0;"> <strong>Site navigation</strong> </p> <div class="linklist"> <a href="index.html">Home — flagship overview</a> <a href="qdl-in-5-minutes.html">QDL in 5 Minutes — quick introduction</a> <a href="research.html">Research Program — Framework, Experiments, and completion spine</a> <a href="publications.html">Publications — full DOI record and paper hierarchy</a> <a href="resources.html">Resources — tools, graphics, datasets, and supporting materials</a> <a href="benefits.html">Benefits — practical value and claim-status limits</a> <a href="institute.html">Institute — mission, founder, contact, and identifiers</a> </div> </div> <h3 class="spaced">Current core entry papers</h3> <div class="paper-list"> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20940986" rel="noopener noreferrer" target="_blank"> <strong>Physical Law as the Minimal Architecture of Persistence Under Closure</strong> </a> <div class="paper-meta"> 2026 · Open Research Monograph · DOI: 10.5281/zenodo.20940986<br/> Flagship synthesis: predictive compression, closure ontology, QDL/QDC construction, spin-2 obstruction, and vacuum-energy theorem target. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20461142" rel="noopener noreferrer" target="_blank"> <strong>From Closure Admissibility to Physical Selection</strong> </a> <div class="paper-meta"> 2026 · Zenodo · DOI: 10.5281/zenodo.20461142<br/> Canonical roadmap and program-architecture record. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.57647/jtap.2026.2004.05" rel="noopener noreferrer" target="_blank"> <strong>The Quantized Dimensional Ledger for Metrology</strong> </a> <div class="paper-meta"> 2026 · Journal of Theoretical and Applied Physics · DOI: 10.57647/jtap.2026.2004.05<br/> Peer-reviewed journal article and metrology entry point. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20346814" rel="noopener noreferrer" target="_blank"> <strong>Planck-Scale Fluctuation Closure as the Substrate Interpretation of QDL</strong> </a> <div class="paper-meta"> 2026 · Zenodo · DOI: 10.5281/zenodo.20346814<br/> Substrate capstone on physical persistence, thresholds, vacuum filtering, and EFT audits. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20367493" rel="noopener noreferrer" target="_blank"> <strong>The Toroidal QDC Knot</strong> </a> <div class="paper-meta"> 2026 · Zenodo · DOI: 10.5281/zenodo.20367493<br/> Geometric substrate-mode keystone for toroidal QDC closure. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20692677" rel="noopener noreferrer" target="_blank"> <strong>The QDC Completion Theorem</strong> </a> <div class="paper-meta"> 2026 · Zenodo · DOI: 10.5281/zenodo.20692677<br/> Completion-theorem spine for matter-basis minimality, three-family recurrence, charged-lepton closure, and gravitational recurrence. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20357001" rel="noopener noreferrer" target="_blank"> <strong>QDL SMEFT Γ(O) Audit Companion v1.0</strong> </a> <div class="paper-meta"> 2026 · Zenodo dataset · DOI: 10.5281/zenodo.20357001<br/> Machine-readable operator-governance audit companion. </div> </div> <div class="paper-item"> <a href="https://doi.org/10.5281/zenodo.20328260" rel="noopener noreferrer" target="_blank"> <strong>QDL Charged-Lepton Mass Spectrum</strong> </a> <div class="paper-meta"> 2026 · Zenodo · DOI: 10.5281/zenodo.20328260<br/> Charged-lepton mass-spectrum synthesis and numerical spectrum application. </div> </div> </div> <h3 class="spaced">For different readers</h3> <div class="status-grid"> <div class="status-row"> <strong>New readers</strong> <span>Use the animation, this page, the QDL Lattice picture, flagship monograph, and roadmap. Do not start with the most technical SMEFT or charged-lepton papers.</span> </div> <div class="status-row"> <strong>Physicists and reviewers</strong> <span>Start with Framework, Experiments, the monograph, roadmap, metrology article, toroidal QDC geometry, substrate capstone, QDC Completion Theorem, and SMEFT audit.</span> </div> <div class="status-row"> <strong>Metrology and standards readers</strong> <span>Start with the accepted metrology paper and then the measurement-chain sections of the roadmap and substrate capstone.</span> </div> <div class="status-row"> <strong>Engineering, AI, and governance readers</strong> <span>Focus on structural admissibility, measurement-chain integrity, model-integrity tooling, and audit outputs.</span> </div> </div> <h3 class="spaced">What would strengthen QDL?</h3> <ul class="tight"> <li>Independent reproduction of QDL closure audits.</li> <li>Clear examples where QDL flags structural failures missed by ordinary dimensional checks.</li> <li>Operational benchmarks for measurement chains, EFT operators, and model-transfer regimes.</li> <li>Successful narrowing of residual classes into falsifiable or externally testable predictions.</li> </ul> <h3 class="spaced">What would weaken QDL?</h3> <ul class="tight"> <li>Failure of closure classifications to reproduce known admissible/inadmissible structures.</li> <li>Dependence on post-hoc fitting rather than prior structural constraints.</li> <li>Ambiguous claim boundaries between theorem, ansatz, reconstruction, and speculation.</li> <li>Inability to generate reproducible audits beyond illustrative examples.</li> </ul> <div class="callout" style="margin-top:.85rem;"> <p style="margin:0 0 .35rem 0;"><strong>Suggested informal citation line</strong></p> <p style="margin:0;color:#374151;line-height:1.55;"> Bourassa, J. D., <em>Quantized Dimensional Ledger (QDL)</em>, QDL Physics Institute. See the Publications page and linked DOI records for formal papers and archival artifacts. </p> </div> <p class="note"> This page is intentionally brief. It is designed to orient readers before they enter the full paper sequence. </p> </aside> </div> </section> </main> <footer> <div class="footer-inner"> <span>© QDL Physics Institute</span> <span>Last updated: July 2026 — QDL in 5 Minutes aligned with Framework, Experiments, Research Program hub, animation link, and seven-item navigation.</span> <span><a href="qdl-calculator.html">QDL Calculator</a></span> <span>Contact: <a href="mailto:james.bourassa@qdlphysics.org">james.bourassa@qdlphysics.org</a></span> </div> </footer> </body> </html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8"/>
+
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="site.webmanifest" rel="manifest"/>
+
+  <title>
+    QDL in 5 Minutes | Quantized Dimensional Ledger & QDL/QDC | QDL Physics Institute
+  </title>
+
+  <meta
+    content="width=device-width, initial-scale=1"
+    name="viewport"
+  />
+
+  <meta
+    content="A concise introduction to the Quantized Dimensional Ledger and QDL/QDC research program: primitive closure, structural admissibility, the Quantized Dimensional Cell, current unified-field candidate, Completion-Gate Series, particle capacity, gravity, prediction, and open physical-closure problems."
+    name="description"
+  />
+
+  <meta
+    content="James D. Bourassa"
+    name="author"
+  />
+
+  <link
+    href="https://qdlphysics.org/qdl-in-5-minutes.html"
+    rel="canonical"
+  />
+
+  <meta
+    content="website"
+    property="og:type"
+  />
+
+  <meta
+    content="QDL in 5 Minutes | QDL Physics Institute"
+    property="og:title"
+  />
+
+  <meta
+    content="A concise introduction to QDL/QDC: primitive closure, structural admissibility, the QDC master core, current unified-field candidate, Completion-Gate Series, and the remaining physical-closure problems."
+    property="og:description"
+  />
+
+  <meta
+    content="https://qdlphysics.org/qdl-uft-candidate-2026.png"
+    property="og:image"
+  />
+
+  <meta
+    content="Current QDL Unified Field Theory Candidate infographic"
+    property="og:image:alt"
+  />
+
+  <meta
+    content="QDL Physics Institute"
+    property="og:site_name"
+  />
+
+  <meta
+    content="summary_large_image"
+    name="twitter:card"
+  />
+
+  <meta
+    content="https://qdlphysics.org/qdl-uft-candidate-2026.png"
+    name="twitter:image"
+  />
+
+  <meta
+    content="Current QDL Unified Field Theory Candidate infographic"
+    name="twitter:image:alt"
+  />
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "QDL in 5 Minutes",
+    "url": "https://qdlphysics.org/qdl-in-5-minutes.html",
+    "description": "A concise public introduction to the Quantized Dimensional Ledger and QDL/QDC unified-field completion research program.",
+    "author": {
+      "@type": "Person",
+      "name": "James D. Bourassa",
+      "sameAs": "https://orcid.org/0009-0008-0155-0051"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "QDL Physics Institute",
+      "url": "https://qdlphysics.org/"
+    },
+    "image": "https://qdlphysics.org/qdl-uft-candidate-2026.png",
+    "about": [
+      "Quantized Dimensional Ledger",
+      "Quantized Dimensional Cell",
+      "QDL/QDC",
+      "primitive closure",
+      "structural admissibility",
+      "unified field theory"
+    ]
+  }
+  </script>
+
+
+  <style>
+
+    :root{
+      --bg-page:#f3f4f6;
+      --bg-card:#ffffff;
+      --border-soft:#e5e7eb;
+      --text-main:#0f172a;
+      --text-soft:#6b7280;
+      --text-muted:#475569;
+      --accent:#2563eb;
+      --accent-soft:#eff6ff;
+      --purple:#7c3aed;
+      --purple-soft:#f5f3ff;
+      --orange:#ea580c;
+      --orange-soft:#fff7ed;
+      --green:#16a34a;
+      --green-soft:#ecfdf5;
+      --amber:#d97706;
+      --amber-soft:#fffbeb;
+      --red:#b91c1c;
+      --red-soft:#fef2f2;
+    }
+
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg-page);
+      color:var(--text-main);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.65;
+    }
+
+
+    a{
+      color:#0369a1;
+      text-decoration:none;
+    }
+
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+
+    header{
+      background:#0f172a;
+      color:#e5e7eb;
+      border-bottom:1px solid #111827;
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+
+
+    .nav{
+      max-width:1100px;
+      margin:0 auto;
+      padding:.78rem 1.25rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:.65rem;
+    }
+
+
+    .logo-icon{
+      width:52px;
+      height:52px;
+      border-radius:10px;
+      border:1px solid #38bdf8;
+      background:#020617;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+
+    .logo-icon img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+
+    .logo-text-main{
+      font-weight:650;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+
+    .logo-text-sub{
+      font-size:.72rem;
+      color:#9ca3af;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+      font-size:.85rem;
+      flex-wrap:wrap;
+    }
+
+
+    .nav-links a{
+      color:#e5e7eb;
+      padding:.28rem .68rem;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+
+
+    .nav-links a:hover{
+      background:#111827;
+      text-decoration:none;
+    }
+
+
+    .nav-active{
+      border-color:rgba(56,189,248,.85) !important;
+      background:rgba(56,189,248,.10) !important;
+      color:#e0f2fe !important;
+    }
+
+
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:1.85rem 1.25rem 3.2rem;
+    }
+
+
+    .hero{
+      margin-bottom:1.8rem;
+      background:var(--bg-card);
+      border-radius:20px;
+      border:1px solid var(--border-soft);
+      box-shadow:0 10px 28px rgba(15,23,42,.06);
+      padding:1.8rem 1.7rem;
+    }
+
+
+    .hero-kicker{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.78rem;
+      color:#6b7280;
+      margin-bottom:.4rem;
+    }
+
+
+    .hero-title{
+      font-size:clamp(2.05rem,3vw,2.65rem);
+      line-height:1.12;
+      margin-bottom:.58rem;
+      letter-spacing:-0.02em;
+    }
+
+
+    .hero-sub{
+      font-size:.98rem;
+      color:#4b5563;
+      max-width:60rem;
+      margin-bottom:.72rem;
+    }
+
+
+    .hero-sub strong{
+      color:#111827;
+    }
+
+
+    .hero-meta{
+      margin-top:.95rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      font-size:.8rem;
+    }
+
+
+    .hero-chip{
+      padding:.18rem .68rem;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      color:var(--text-muted);
+    }
+
+
+    .hero-actions,
+    .btn-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.58rem;
+      margin-top:1rem;
+    }
+
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.58rem 1rem;
+      border-radius:999px;
+      border:1px solid #d1d5db;
+      background:#fff;
+      color:#111827;
+      font-size:.88rem;
+      font-weight:500;
+      white-space:nowrap;
+    }
+
+
+    .btn:hover{
+      background:#f9fafb;
+      text-decoration:none;
+    }
+
+
+    .btn-primary{
+      background:linear-gradient(135deg,#2563eb,#1d4ed8);
+      color:#fff;
+      border:none;
+      box-shadow:0 10px 24px rgba(37,99,235,.25);
+    }
+
+
+    .btn-purple{
+      background:linear-gradient(135deg,#7c3aed,#6d28d9);
+      color:#fff;
+      border:none;
+      box-shadow:0 10px 24px rgba(124,58,237,.22);
+    }
+
+
+    .btn-orange{
+      background:linear-gradient(135deg,#f97316,#ea580c);
+      color:#fff;
+      border:none;
+      box-shadow:0 10px 24px rgba(234,88,12,.20);
+    }
+
+
+    .btn-primary:hover,
+    .btn-purple:hover,
+    .btn-orange:hover{
+      filter:brightness(1.03);
+      text-decoration:none;
+    }
+
+
+    .section{
+      margin-top:2.15rem;
+    }
+
+
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:baseline;
+      flex-wrap:wrap;
+      margin-bottom:1rem;
+    }
+
+
+    .section-title{
+      font-size:.96rem;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:#111827;
+    }
+
+
+    .section-kicker{
+      font-size:.83rem;
+      color:var(--text-soft);
+      max-width:42rem;
+    }
+
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+    }
+
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1rem;
+    }
+
+
+    @media(max-width:900px){
+
+      .grid-2,
+      .grid-3{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    .card{
+      background:var(--bg-card);
+      border-radius:18px;
+      border:1px solid var(--border-soft);
+      box-shadow:0 8px 24px rgba(15,23,42,.06);
+      padding:1.08rem 1.12rem;
+      font-size:.93rem;
+    }
+
+
+    .card h2,
+    .card h3{
+      color:#111827;
+      line-height:1.35;
+      margin-bottom:.4rem;
+    }
+
+
+    .card h2{
+      font-size:1.12rem;
+    }
+
+
+    .card h3{
+      font-size:1rem;
+    }
+
+
+    .card p{
+      margin-bottom:.58rem;
+      color:#374151;
+      line-height:1.62;
+    }
+
+
+    .card p:last-child{
+      margin-bottom:0;
+    }
+
+
+    .callout{
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      border-radius:15px;
+      padding:.88rem .98rem;
+      margin:.75rem 0;
+      color:#374151;
+      font-size:.91rem;
+    }
+
+
+    .callout.blue{
+      border-color:rgba(37,99,235,.24);
+      background:#eff6ff;
+      color:#172554;
+    }
+
+
+    .callout.purple{
+      border-color:rgba(124,58,237,.25);
+      background:#faf7ff;
+    }
+
+
+    .callout.orange{
+      border-color:rgba(234,88,12,.28);
+      background:#fff7ed;
+    }
+
+
+    .callout.green{
+      border-color:rgba(22,163,74,.28);
+      background:#ecfdf5;
+    }
+
+
+    .callout.warning{
+      border-color:rgba(217,119,6,.32);
+      background:#fffbeb;
+      color:#78350f;
+    }
+
+
+    .callout strong{
+      color:#111827;
+    }
+
+
+    .pill{
+      border-radius:999px;
+      padding:.14rem .55rem;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      color:#111827;
+      font-weight:700;
+      font-size:.76rem;
+      letter-spacing:.02em;
+      display:inline-block;
+      width:fit-content;
+      margin-right:.3rem;
+      margin-bottom:.25rem;
+    }
+
+
+    .pill.blue{
+      border-color:rgba(37,99,235,.30);
+      background:#eff6ff;
+      color:#1e3a8a;
+    }
+
+
+    .pill.purple{
+      border-color:rgba(124,58,237,.30);
+      background:#f5f3ff;
+      color:#5b21b6;
+    }
+
+
+    .pill.orange{
+      border-color:rgba(234,88,12,.30);
+      background:#fff7ed;
+      color:#9a3412;
+    }
+
+
+    .pill.green{
+      border-color:rgba(22,163,74,.30);
+      background:#ecfdf5;
+      color:#166534;
+    }
+
+
+    .pill.gray{
+      border-color:#e5e7eb;
+      background:#f8fafc;
+      color:#334155;
+    }
+
+
+    ul.tight,
+    ol.tight{
+      margin:.4rem 0 .2rem 1.15rem;
+      color:#374151;
+      line-height:1.55;
+    }
+
+
+    ul.tight li,
+    ol.tight li{
+      margin-bottom:.43rem;
+    }
+
+
+    code.inline{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
+      "Liberation Mono",monospace;
+      font-size:.88em;
+      background:#f1f5f9;
+      border:1px solid #e2e8f0;
+      padding:.08rem .28rem;
+      border-radius:6px;
+      color:#0f172a;
+    }
+
+
+    /*
+      Main current QDL/QDC figure
+    */
+
+    .uft-feature{
+      background:linear-gradient(
+        145deg,
+        #07152b 0%,
+        #0f2747 58%,
+        #12355f 100%
+      );
+      color:#eaf2ff;
+      border:1px solid rgba(125,211,252,.34);
+      border-radius:24px;
+      padding:1.25rem;
+      box-shadow:0 20px 48px rgba(15,23,42,.20);
+    }
+
+
+    .uft-eyebrow{
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      color:#bae6fd;
+      margin-bottom:.42rem;
+    }
+
+
+    .uft-feature h2{
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.55rem,2.45vw,2.2rem);
+      line-height:1.15;
+      margin-bottom:.6rem;
+    }
+
+
+    .uft-feature p{
+      color:#d8e5f5;
+      font-size:.92rem;
+      margin-bottom:.65rem;
+    }
+
+
+    .uft-figure{
+      margin:1.05rem 0 .25rem;
+      background:#fff;
+      border:1px solid rgba(186,230,253,.46);
+      border-radius:20px;
+      padding:.65rem;
+    }
+
+
+    .uft-figure img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:13px;
+    }
+
+
+    .uft-figure figcaption{
+      color:#475569;
+      font-size:.81rem;
+      line-height:1.5;
+      padding:.65rem .35rem .2rem;
+    }
+
+
+    .uft-figure figcaption strong{
+      color:#0f172a;
+    }
+
+
+    /*
+      Five-minute sequence
+    */
+
+    .step-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+    }
+
+
+    @media(max-width:820px){
+
+      .step-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    .step-card{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:18px;
+      padding:1rem;
+      box-shadow:0 7px 20px rgba(15,23,42,.05);
+    }
+
+
+    .step-number{
+      width:2rem;
+      height:2rem;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#eff6ff;
+      color:#1d4ed8;
+      border:1px solid rgba(37,99,235,.28);
+      font-weight:750;
+      margin-bottom:.55rem;
+    }
+
+
+    .step-card h3{
+      color:#111827;
+      font-size:1.02rem;
+      margin-bottom:.35rem;
+    }
+
+
+    .step-card p{
+      color:#475569;
+      font-size:.9rem;
+      line-height:1.58;
+    }
+
+
+    /*
+      Flow strip
+    */
+
+    .flow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.45rem;
+      align-items:center;
+      margin:.8rem 0;
+    }
+
+
+    .flow-node{
+      border:1px solid rgba(37,99,235,.28);
+      background:#eff6ff;
+      color:#1e3a8a;
+      border-radius:999px;
+      padding:.27rem .68rem;
+      font-size:.78rem;
+      font-weight:650;
+    }
+
+
+    .flow-arrow{
+      color:#64748b;
+      font-size:.8rem;
+    }
+
+
+    @media(max-width:700px){
+
+      .flow-arrow{
+        display:none;
+      }
+
+    }
+
+
+    /*
+      Status cards
+    */
+
+    .status-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.75rem;
+    }
+
+
+    @media(max-width:760px){
+
+      .status-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+
+    .status-row{
+      border:1px solid #e5e7eb;
+      border-radius:15px;
+      padding:.8rem;
+      background:#fff;
+    }
+
+
+    .status-row strong{
+      display:block;
+      color:#111827;
+      margin-bottom:.2rem;
+      font-size:.92rem;
+    }
+
+
+    .status-row span{
+      color:#4b5563;
+      font-size:.85rem;
+      line-height:1.48;
+    }
+
+
+    /*
+      Public records
+    */
+
+    .record{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:18px;
+      padding:1rem;
+      box-shadow:0 7px 20px rgba(15,23,42,.05);
+    }
+
+
+    .record h3{
+      font-size:1rem;
+      line-height:1.35;
+      margin-bottom:.35rem;
+      color:#111827;
+    }
+
+
+    .record p{
+      color:#475569;
+      font-size:.87rem;
+      margin-bottom:.45rem;
+    }
+
+
+    .record-meta{
+      font-size:.78rem;
+      color:#64748b;
+    }
+
+
+    .note{
+      font-size:.82rem;
+      color:#6b7280;
+      line-height:1.5;
+      margin-top:.75rem;
+    }
+
+
+    footer{
+      border-top:1px solid #e5e7eb;
+      background:#f9fafb;
+      padding:1.2rem 1.25rem 1.8rem;
+      margin-top:3rem;
+      font-size:.8rem;
+      color:#6b7280;
+    }
+
+
+    .footer-inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+
+    .btn:focus-visible,
+    .nav-links a:focus-visible,
+    .uft-figure a:focus-visible{
+      outline:3px solid #38bdf8;
+      outline-offset:3px;
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+
+      <div class="logo-icon">
+
+        <img
+          alt="QDL Physics Institute emblem"
+          src="apple-touch-icon.png"
+        />
+
+      </div>
+
+
+      <div>
+
+        <div class="logo-text-main">
+          QDL Physics Institute
+        </div>
+
+        <div class="logo-text-sub">
+          Quantized Dimensional Ledger
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <nav
+      aria-label="Main navigation"
+      class="nav-links"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a
+        class="nav-active"
+        href="qdl-in-5-minutes.html"
+      >
+        QDL in 5 Minutes
+      </a>
+
+      <a href="research.html">
+        Research Program
+      </a>
+
+      <a href="publications.html">
+        Publications
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="benefits.html">
+        Benefits
+      </a>
+
+      <a href="institute.html">
+        Institute
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+
+  <section class="hero">
+
+    <div class="hero-kicker">
+      First-pass overview · August 2026
+    </div>
+
+
+    <h1 class="hero-title">
+      QDL in 5 Minutes
+    </h1>
+
+
+    <p class="hero-sub">
+
+      The <strong>Quantized Dimensional Ledger</strong>, or
+      <strong>QDL</strong>, begins with a simple idea:
+
+      before a physical model is fitted to data,
+      ask whether its dimensional and structural relationships are
+      internally admissible.
+
+    </p>
+
+
+    <p class="hero-sub">
+
+      The broader QDL/QDC research program asks a more ambitious question:
+
+      can the same closure principles be extended from dimensional
+      admissibility into an explicit physical architecture for fields,
+      localized particles, composite particles, gravity, and ultimately
+      a unified theory?
+
+    </p>
+
+
+    <p class="hero-sub">
+
+      The present answer is:
+
+      <strong>
+        QDL/QDC is a conditional unified-field candidate undergoing
+        active theorem, computation, reproducibility, and falsification
+        testing.
+      </strong>
+
+      It is not presented as a completed or experimentally confirmed
+      unified field theory.
+
+    </p>
+
+
+    <div class="hero-meta">
+
+      <span class="hero-chip">
+        Primitive closure
+      </span>
+
+      <span class="hero-chip">
+        Structural admissibility
+      </span>
+
+      <span class="hero-chip">
+        QDL
+      </span>
+
+      <span class="hero-chip">
+        QDC
+      </span>
+
+      <span class="hero-chip">
+        Physical completion
+      </span>
+
+      <span class="hero-chip">
+        Particle capacity
+      </span>
+
+      <span class="hero-chip">
+        Gravity
+      </span>
+
+      <span class="hero-chip">
+        Completion-Gate Series
+      </span>
+
+    </div>
+
+
+    <div class="hero-actions">
+
+      <a
+        class="btn btn-primary"
+        href="#five-minute-path"
+      >
+        Start the 5-Minute Overview
+      </a>
+
+      <a
+        class="btn btn-orange"
+        href="research.html"
+      >
+        Current Research Status
+      </a>
+
+      <a
+        class="btn btn-purple"
+        href="https://doi.org/10.5281/zenodo.21813133"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Primitive Closure
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       CURRENT UFT PICTURE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="uft-feature">
+
+      <div class="uft-eyebrow">
+        The current picture
+      </div>
+
+
+      <h2>
+        From QDL Architecture to a Conditional Unified-Field Candidate
+      </h2>
+
+
+      <p>
+
+        The current research program combines the structural QDL
+        architecture with a selected QDC master core and an expanding
+        set of structural completion laws.
+
+        This is the present working route toward a QDL unified-field
+        theory.
+
+      </p>
+
+
+      <figure class="uft-figure">
+
+        <a
+          href="qdl-uft-candidate-2026.png"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Open the full-size Current QDL Unified Field Theory Candidate infographic"
+        >
+
+          <img
+            src="qdl-uft-candidate-2026.png"
+            alt="Current QDL unified-field candidate architecture showing QDL Architecture, selected QDC Master Core, current structural completion, shared-field recurrence geometry, single-QDC lepton channel, three-QDC composite channel, and conditional electron, proton, and neutron model interpretations."
+            loading="eager"
+            decoding="async"
+          />
+
+        </a>
+
+
+        <figcaption>
+
+          <strong>
+            Current QDL/QDC model architecture.
+          </strong>
+
+          The electron, proton, and neutron labels show present
+          model interpretations of the single-QDC and three-QDC channels.
+
+          They are not claims that microscopic QDC particle ontology
+          has been experimentally established.
+
+          Cross-sector amplitude normalization and complete
+          phenomenological closure remain open.
+
+        </figcaption>
+
+      </figure>
+
+
+      <div class="btn-row">
+
+        <a
+          class="btn btn-primary"
+          href="qdl-uft-candidate-2026.png"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Open Full-Size Infographic
+        </a>
+
+        <a
+          class="btn"
+          href="research.html"
+        >
+          Technical Status
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       FIVE-MINUTE PATH
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="five-minute-path"
+  >
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        The Five-Minute Path
+      </h2>
+
+      <p class="section-kicker">
+        Six ideas explain most of the current QDL/QDC program.
+      </p>
+
+    </div>
+
+
+    <div class="step-grid">
+
+
+      <!-- STEP 1 -->
+
+      <div class="step-card">
+
+        <div class="step-number">
+          1
+        </div>
+
+        <h3>
+          Start with primitive closure
+        </h3>
+
+        <p>
+
+          QDL treats physical representation as more than symbolic
+          bookkeeping.
+
+          A model has a declared dimensional structure,
+          and operations on that model should preserve the structure
+          required for the physical interpretation being claimed.
+
+        </p>
+
+        <p>
+
+          In the basic QDL ledger,
+          three length-like slots and two frequency-like slots form
+          the primitive typed architecture.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- STEP 2 -->
+
+      <div class="step-card">
+
+        <div class="step-number">
+          2
+        </div>
+
+        <h3>
+          Structural admissibility comes before fitting
+        </h3>
+
+        <p>
+
+          Ordinary dimensional analysis asks whether units match.
+
+          QDL asks a stronger question:
+
+          does the construction remain admissible under the declared
+          transformations, compositions, residual conditions,
+          and physical interpretation?
+
+        </p>
+
+        <p>
+
+          This is the practical QDL idea already used in metrology,
+          measurement-chain analysis,
+          operator audits,
+          and model-validation work.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- STEP 3 -->
+
+      <div class="step-card">
+
+        <div class="step-number">
+          3
+        </div>
+
+        <h3>
+          The QDC is the candidate physical carrier
+        </h3>
+
+        <p>
+
+          The <strong>Quantized Dimensional Cell</strong>,
+          or <strong>QDC</strong>,
+          is the proposed physical recurrence carrier developed inside
+          the broader QDL program.
+
+        </p>
+
+        <p>
+
+          Its characteristic dimensional structure is associated with
+
+          <code class="inline">
+            L³F²
+          </code>,
+
+          while the current master-core research develops explicit local,
+          reversible recurrence and field constructions on top of that
+          architecture.
+
+        </p>
+
+        <p>
+
+          QDL does not claim that a microscopic QDC has already been
+          directly observed.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- STEP 4 -->
+
+      <div class="step-card">
+
+        <div class="step-number">
+          4
+        </div>
+
+        <h3>
+          Architecture alone is not enough
+        </h3>
+
+        <p>
+
+          A structural framework does not automatically determine
+          a complete physical theory.
+
+          The present program therefore separates
+          <strong>structural completion</strong> from
+          <strong>amplitude completion</strong>.
+
+        </p>
+
+        <div class="callout blue">
+
+          <strong>
+            P<sub>completion</sub>
+            =
+            P<sub>structural</sub>
+            +
+            P<sub>amplitude</sub>
+          </strong>
+
+        </div>
+
+        <p>
+
+          Structural completion has advanced substantially.
+
+          Unique cross-sector coefficient normalization and absolute
+          physical amplitudes remain open.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- STEP 5 -->
+
+      <div class="step-card">
+
+        <div class="step-number">
+          5
+        </div>
+
+        <h3>
+          The model now has particle and gravity capacity
+        </h3>
+
+        <p>
+
+          The current QDL/QDC program contains explicit finite-model
+          mechanisms for localized excitations,
+          composite channels,
+          gauge dressing,
+          compact closure-flux defects,
+          and collective geometric response.
+
+        </p>
+
+        <p>
+
+          Under declared completion assumptions,
+          the gravity branch can enter the
+          Einstein–Cartan / general-relativistic universality class
+          with two local tensor modes.
+
+        </p>
+
+        <p>
+
+          These are important capacity results,
+          but they do not yet establish the complete electron,
+          proton,
+          neutron,
+          or gravitational phenomenology of nature.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- STEP 6 -->
+
+      <div class="step-card">
+
+        <div class="step-number">
+          6
+        </div>
+
+        <h3>
+          Every major claim must survive a gate
+        </h3>
+
+        <p>
+
+          The current research is organized as a
+          <strong>Completion-Gate Series</strong>.
+
+          Each gate freezes its assumptions and success conditions
+          before execution.
+
+        </p>
+
+        <p>
+
+          A gate can pass,
+          fail,
+          or produce useful mathematics without satisfying its
+          strongest physical objective.
+
+          A failed gate is retained as part of the research record
+          rather than rewritten as a success.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       THE WHOLE PROGRAM IN ONE LINE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="card">
+
+      <h2>
+        The whole program in one line
+      </h2>
+
+
+      <div class="flow">
+
+        <span class="flow-node">
+          Primitive Closure
+        </span>
+
+        <span class="flow-arrow">
+          →
+        </span>
+
+        <span class="flow-node">
+          QDL Architecture
+        </span>
+
+        <span class="flow-arrow">
+          →
+        </span>
+
+        <span class="flow-node">
+          QDC Master Core
+        </span>
+
+        <span class="flow-arrow">
+          →
+        </span>
+
+        <span class="flow-node">
+          Structural Completion
+        </span>
+
+        <span class="flow-arrow">
+          →
+        </span>
+
+        <span class="flow-node">
+          Physical Predictions
+        </span>
+
+        <span class="flow-arrow">
+          →
+        </span>
+
+        <span class="flow-node">
+          Experiment / Replication
+        </span>
+
+      </div>
+
+
+      <div class="callout warning">
+
+        <strong>
+          Present status:
+        </strong>
+
+        the program has moved well beyond dimensional bookkeeping,
+        but the final arrows are not yet closed.
+
+        Unique amplitude normalization,
+        complete particle phenomenology,
+        the global quantum measure,
+        distinctive experimental confirmation,
+        and unaffiliated replication remain open.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       WHAT IS CURRENTLY STRONGEST?
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        What Is Currently Strongest?
+      </h2>
+
+      <p class="section-kicker">
+        A public-language summary of the current research layers.
+      </p>
+
+    </div>
+
+
+    <div class="status-grid">
+
+
+      <div class="status-row">
+
+        <strong>
+          Architecture
+        </strong>
+
+        <span>
+
+          The typed closure and structural-admissibility framework is the
+          most mature layer of the program.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Explicit dynamics
+        </strong>
+
+        <span>
+
+          The research contains executable local and reversible
+          QDC recurrence/operator models rather than only a qualitative
+          substrate picture.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Structural completion
+        </strong>
+
+        <span>
+
+          The current constitutive completion program extends through
+          PDCL and the numbered stack C1–C9-R.
+
+          C10-X has not been admitted.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Particle capacity
+        </strong>
+
+        <span>
+
+          Localized one-QDC channels,
+          three-QDC composite capacity,
+          stable compact defects,
+          and gauge dressing have explicit finite-model constructions.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Gravity
+        </strong>
+
+        <span>
+
+          Conditional collective dynamics can reproduce the
+          Einstein–Cartan / GR universality class under declared
+          assumptions.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Quantum measure
+        </strong>
+
+        <span>
+
+          A long Completion-Gate sequence has reduced the current
+          determinant-line problem to a much narrower mathematical
+          certification frontier.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Prediction
+        </strong>
+
+        <span>
+
+          A blinded CORE8A spectral fingerprint has been frozen for
+          external replication,
+          but unaffiliated execution is still pending.
+
+        </span>
+
+      </div>
+
+
+      <div class="status-row">
+
+        <strong>
+          Peer review
+        </strong>
+
+        <span>
+
+          The metrology foundation of QDL has a peer-reviewed published
+          anchor in the
+          <em>Journal of Theoretical and Applied Physics</em>.
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       WHAT IS STILL OPEN?
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        What Is Still Open?
+      </h2>
+
+      <p class="section-kicker">
+        The main barriers between the current candidate and a completed physical theory.
+      </p>
+
+    </div>
+
+
+    <div class="grid-2">
+
+
+      <div class="card">
+
+        <span class="pill orange">
+          Fundamental selection
+        </span>
+
+        <h3>
+          Unique physical vacuum
+        </h3>
+
+        <p>
+
+          The program still needs a non-arbitrary selection of the
+          physical vacuum / Lorentz orbit.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill orange">
+          Fundamental normalization
+        </span>
+
+        <h3>
+          Amplitude completion
+        </h3>
+
+        <p>
+
+          A deeper principle must still determine the physically required
+          cross-sector coefficients and absolute normalization.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill orange">
+          Particle physics
+        </span>
+
+        <h3>
+          Full particle phenomenology
+        </h3>
+
+        <p>
+
+          Complete masses,
+          flavor,
+          mixing,
+          exchange statistics,
+          hadronic structure,
+          and observed-particle identification remain incomplete.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill orange">
+          Quantum consistency
+        </span>
+
+        <h3>
+          Global chiral measure
+        </h3>
+
+        <p>
+
+          The determinant-line / quantum-measure Completion-Gate sequence
+          remains active.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill orange">
+          Prediction
+        </span>
+
+        <h3>
+          A distinctive nature-level result
+        </h3>
+
+        <p>
+
+          The program still seeks a parameter-free observable that was
+          not used to construct the theory and is subsequently confirmed
+          by data.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill orange">
+          Independent scrutiny
+        </span>
+
+        <h3>
+          External replication
+        </h3>
+
+        <p>
+
+          A frozen blind replication package exists,
+          but genuinely unaffiliated replication has not yet been completed.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       PARTICLE PICTURE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        What About Electrons, Protons, and Neutrons?
+      </h2>
+
+      <p class="section-kicker">
+        The current model interpretation, with the claim boundary made explicit.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <p>
+
+        The current QDL/QDC physical picture explores two main channels:
+
+      </p>
+
+
+      <div class="grid-2">
+
+
+        <div class="callout blue">
+
+          <span class="pill blue">
+            Single QDC
+          </span>
+
+          <p>
+
+            Lepton-like states are modeled as localized single-QDC
+            excitations carrying internal orientation and field structure.
+
+          </p>
+
+        </div>
+
+
+        <div class="callout orange">
+
+          <span class="pill orange">
+            Three QDCs
+          </span>
+
+          <p>
+
+            Nucleon-like states are modeled as three-QDC composites
+            coupled through a shared field geometry and triadic
+            composition condition.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="callout warning">
+
+        <strong>
+          Claim boundary:
+        </strong>
+
+        the electron,
+        proton,
+        and neutron identifications shown in QDL graphics are
+        <strong>model interpretations</strong>.
+
+        They are not yet experimentally established statements that the
+        observed particles are literally composed of QDCs.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       GRAVITY
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="grid-2">
+
+
+      <div class="card">
+
+        <span class="pill blue">
+          Gravity
+        </span>
+
+        <h2>
+          Does QDL reproduce general relativity?
+        </h2>
+
+        <p>
+
+          There is a positive but conditional result.
+
+          Under a declared Lorentz-orbit order parameter,
+          a nondegenerate coframe,
+          a positive Einstein coefficient,
+          auxiliary torsion,
+          and suppressed higher-curvature terms,
+          the collective QDL-compatible dynamics enter the
+          Einstein–Cartan / general-relativistic universality class.
+
+        </p>
+
+        <p>
+
+          That produces the familiar two local tensor modes.
+
+        </p>
+
+        <div class="callout warning">
+
+          This is not a derivation of general relativity from
+          dimensional closure alone.
+
+          Newton's constant,
+          the cosmological constant,
+          the physical vacuum,
+          and absolute normalization remain open.
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <span class="pill purple">
+          Quantum structure
+        </span>
+
+        <h2>
+          Why is the quantum-measure work important?
+        </h2>
+
+        <p>
+
+          A chiral gauge theory needs more than a classical field
+          construction.
+
+          Its quantum measure must also be globally consistent.
+
+        </p>
+
+        <p>
+
+          The current QM5R3 Completion-Gate sequence has developed exact
+          determinant-line identities,
+          continuum connection formulas,
+          finite source-space reductions,
+          and complex analyticity certificates.
+
+        </p>
+
+        <p>
+
+          The full technical story belongs on the
+          <a href="research.html">
+            Research Program
+          </a>
+          page.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       WHAT QDL IS NOT
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        What QDL Does Not Currently Claim
+      </h2>
+
+      <p class="section-kicker">
+        The claim-status firewall is part of the methodology.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <ul class="tight">
+
+        <li>
+
+          QDL is <strong>not</strong> presently claimed to be a completed
+          final theory of nature.
+
+        </li>
+
+        <li>
+
+          QDL does <strong>not</strong> presently derive every
+          Standard Model mass,
+          mixing angle,
+          coupling,
+          or parameter.
+
+        </li>
+
+        <li>
+
+          QDL does <strong>not</strong> presently derive the numerical
+          values of Newton's constant or the cosmological constant from
+          closure alone.
+
+        </li>
+
+        <li>
+
+          QDL does <strong>not</strong> claim that microscopic QDC cells
+          have been directly observed.
+
+        </li>
+
+        <li>
+
+          QDL does <strong>not</strong> treat an internal numerical match
+          or successful computational gate as experimental confirmation.
+
+        </li>
+
+        <li>
+
+          QDL does <strong>not</strong> convert a failed gate into a
+          successful physical claim.
+
+        </li>
+
+      </ul>
+
+
+      <div class="callout green">
+
+        <strong>
+          The stronger claim is methodological:
+        </strong>
+
+        the program attempts to keep exact results,
+        conditional results,
+        finite-model constructions,
+        interpretations,
+        predictions,
+        and unresolved problems visibly separated.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       WHY IT MATTERS
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Why Might QDL Matter?
+      </h2>
+
+      <p class="section-kicker">
+        Even before a final unified theory is established.
+      </p>
+
+    </div>
+
+
+    <div class="grid-3">
+
+
+      <div class="card">
+
+        <span class="pill blue">
+          Metrology
+        </span>
+
+        <h3>
+          Better structural checking
+        </h3>
+
+        <p>
+
+          QDL can be used to ask whether a measurement or model remains
+          structurally meaningful rather than merely dimensionally homogeneous.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill purple">
+          Theory
+        </span>
+
+        <h3>
+          Fewer arbitrary constructions
+        </h3>
+
+        <p>
+
+          Closure and admissibility conditions can eliminate mathematically
+          available structures before large amounts of fitting or
+          interpretation are invested in them.
+
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="pill green">
+          Reproducibility
+        </span>
+
+        <h3>
+          Explicit failure conditions
+        </h3>
+
+        <p>
+
+          Preregistered gates,
+          machine-readable ledgers,
+          public archives,
+          and frozen controls make the research program easier to audit.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="callout blue">
+
+      <strong>
+        The central scientific test is simple:
+      </strong>
+
+      does QDL ultimately constrain or predict physical structure that
+      conventional dimensional bookkeeping alone does not,
+      and do those predictions survive independent scrutiny?
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       PUBLIC RECORDS
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Three Good Places to Go Next
+      </h2>
+
+      <p class="section-kicker">
+        Current public entry points.
+      </p>
+
+    </div>
+
+
+    <div class="grid-3">
+
+
+      <div class="record">
+
+        <span class="pill purple">
+          Major synthesis
+        </span>
+
+        <h3>
+
+          <a
+            href="https://doi.org/10.5281/zenodo.21813133"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Primitive Closure and the Architecture of Physical Admissibility
+          </a>
+
+        </h3>
+
+        <p>
+
+          The major long-form synthesis of primitive closure,
+          physical admissibility,
+          QDL/QDC architecture,
+          and the broader physical-completion program.
+
+        </p>
+
+        <div class="record-meta">
+          Version 1.2.1 · Zenodo · DOI: 10.5281/zenodo.21813133
+        </div>
+
+      </div>
+
+
+
+      <div class="record">
+
+        <span class="pill orange">
+          Consolidated UFT record
+        </span>
+
+        <h3>
+
+          <a
+            href="https://doi.org/10.5281/zenodo.21894736"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Toward a QDL Unified Field Theory
+          </a>
+
+        </h3>
+
+        <p>
+
+          Frozen V1.0 status archive of the theorems,
+          computational gates,
+          reproducibility record,
+          and open physical-closure problems.
+
+        </p>
+
+        <div class="record-meta">
+          Dataset · Zenodo · DOI: 10.5281/zenodo.21894736
+        </div>
+
+      </div>
+
+
+
+      <div class="record">
+
+        <span class="pill green">
+          Peer-reviewed
+        </span>
+
+        <h3>
+
+          <a
+            href="https://doi.org/10.57647/jtap.2026.2004.05"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            The Quantized Dimensional Ledger for Metrology
+          </a>
+
+        </h3>
+
+        <p>
+
+          Peer-reviewed QDL foundation for dimensional closure,
+          QMU ledgers,
+          and the ontology of physical constants.
+
+        </p>
+
+        <div class="record-meta">
+          Journal of Theoretical and Applied Physics · 2026
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       SITE PATH
+       ============================================================ -->
+
+  <section class="section">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Where Should I Go From Here?
+      </h2>
+
+      <p class="section-kicker">
+        The seven-page QDL Physics Institute structure.
+      </p>
+
+    </div>
+
+
+    <div class="grid-3">
+
+
+      <div class="card">
+
+        <h3>
+          Research Program
+        </h3>
+
+        <p>
+
+          For the current technical status,
+          Completion-Gate sequence,
+          strongest positive results,
+          and open physical-closure problems.
+
+        </p>
+
+        <div class="btn-row">
+
+          <a
+            class="btn btn-primary"
+            href="research.html"
+          >
+            Research Program
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Publications
+        </h3>
+
+        <p>
+
+          For the full peer-reviewed,
+          Zenodo,
+          monograph,
+          dataset,
+          and manuscript record.
+
+        </p>
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="publications.html"
+          >
+            Publications
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Resources
+        </h3>
+
+        <p>
+
+          For graphics,
+          computational archives,
+          reproducibility records,
+          benchmarks,
+          tools,
+          and supporting materials.
+
+        </p>
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="resources.html"
+          >
+            Resources
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Benefits
+        </h3>
+
+        <p>
+
+          For possible applications of structural admissibility in
+          measurement,
+          modeling,
+          scientific software,
+          engineering,
+          and AI-supported science.
+
+        </p>
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="benefits.html"
+          >
+            Benefits
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Institute
+        </h3>
+
+        <p>
+
+          For the Institute mission,
+          research philosophy,
+          founder information,
+          identifiers,
+          and contact details.
+
+        </p>
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="institute.html"
+          >
+            Institute
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Home
+        </h3>
+
+        <p>
+
+          Return to the main public overview and current QDL/QDC
+          announcements.
+
+        </p>
+
+        <div class="btn-row">
+
+          <a
+            class="btn"
+            href="index.html"
+          >
+            Home
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       BOTTOM LINE
+       ============================================================ -->
+
+  <section class="section">
+
+    <div
+      class="card"
+      style="
+        border-color:rgba(37,99,235,.34);
+        background:#f8fbff;
+      "
+    >
+
+      <span class="pill blue">
+        Bottom line
+      </span>
+
+
+      <h2>
+        QDL is now both a structural-admissibility framework and an active physical-completion research program.
+      </h2>
+
+
+      <p>
+
+        Its strongest established role is structural:
+
+        identifying and testing closure,
+        admissibility,
+        representation,
+        and finite-model constraints.
+
+      </p>
+
+
+      <p>
+
+        Its more ambitious QDL/QDC branch asks whether those constraints,
+        together with a selected recurrence core and completion physics,
+        can ultimately produce a unique,
+        predictive,
+        independently confirmed unified theory.
+
+      </p>
+
+
+      <p>
+
+        That second task is still underway.
+
+      </p>
+
+
+      <div class="btn-row">
+
+        <a
+          class="btn btn-primary"
+          href="research.html"
+        >
+          See Where the Research Stands Now
+        </a>
+
+        <a
+          class="btn btn-purple"
+          href="https://doi.org/10.5281/zenodo.21813133"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Read Primitive Closure
+        </a>
+
+        <a
+          class="btn"
+          href="https://doi.org/10.5281/zenodo.21894736"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Open the UFT Research Record
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <span>
+      © 2026 QDL Physics Institute
+    </span>
+
+
+    <span>
+
+      Last updated: August 11, 2026
+      — QDL in 5 Minutes aligned with the current
+      QDL/QDC Unified Field Theory Completion-Gate Series,
+      Primitive Closure synthesis,
+      consolidated UFT research record,
+      and current claim-status firewall.
+
+    </span>
+
+
+    <span>
+
+      <a href="research.html">
+        Research Program
+      </a>
+
+      ·
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+    </span>
+
+
+    <span>
+
+      Contact:
+
+      <a href="mailto:james.bourassa@qdlphysics.org">
+        james.bourassa@qdlphysics.org
+      </a>
+
+    </span>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
