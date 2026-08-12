@@ -21,7 +21,7 @@
   />
 
   <meta
-    content="A concise introduction to the Quantized Dimensional Ledger and QDL/QDC research program: primitive closure, structural admissibility, the Quantized Dimensional Cell, current unified-field candidate, Completion-Gate Series, particle capacity, gravity, prediction, and open physical-closure problems."
+    content="A concise introduction to the Quantized Dimensional Ledger and QDL/QDC research program: primitive closure, structural admissibility, the L³F²-to-Standard-Model structural spine, the Quantized Dimensional Cell, current unified-field candidate, particle capacity, gravity, prediction, and open physical-closure problems."
     name="description"
   />
 
@@ -46,7 +46,7 @@
   />
 
   <meta
-    content="A concise introduction to QDL/QDC: primitive closure, structural admissibility, the QDC master core, current unified-field candidate, Completion-Gate Series, and the remaining physical-closure problems."
+    content="A concise introduction to QDL/QDC: primitive closure, structural admissibility, the L³F²-to-Standard-Model structural spine, the QDC master core, current unified-field candidate, Completion-Gate Series, and remaining physical-closure problems."
     property="og:description"
   />
 
@@ -87,7 +87,7 @@
     "@type": "WebPage",
     "name": "QDL in 5 Minutes",
     "url": "https://qdlphysics.org/qdl-in-5-minutes.html",
-    "description": "A concise public introduction to the Quantized Dimensional Ledger and QDL/QDC unified-field completion research program.",
+    "description": "A concise public introduction to the Quantized Dimensional Ledger, the L³F²-to-Standard-Model structural spine, and the QDL/QDC unified-field completion research program.",
     "author": {
       "@type": "Person",
       "name": "James D. Bourassa",
@@ -105,6 +105,7 @@
       "QDL/QDC",
       "primitive closure",
       "structural admissibility",
+      "Standard Model architecture",
       "unified field theory"
     ]
   }
@@ -781,6 +782,159 @@
 
 
     /*
+      Structural spine and animation pathway
+    */
+
+    .structural-spine{
+      background:linear-gradient(145deg,#061326 0%,#0b2343 56%,#12375f 100%);
+      color:#eaf4ff;
+      border:1px solid rgba(56,189,248,.34);
+      border-radius:24px;
+      padding:1.25rem;
+      box-shadow:0 18px 46px rgba(15,23,42,.18);
+    }
+
+    .structural-spine .spine-eyebrow{
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      color:#bae6fd;
+      margin-bottom:.42rem;
+    }
+
+    .structural-spine h2{
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.55rem,2.45vw,2.2rem);
+      line-height:1.15;
+      margin-bottom:.55rem;
+    }
+
+    .structural-spine p{
+      color:#d8e5f5;
+      font-size:.92rem;
+      margin-bottom:.65rem;
+    }
+
+    .spine-chain{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:stretch;
+      justify-content:center;
+      gap:.42rem;
+      margin:1rem 0 .9rem;
+    }
+
+    .spine-node{
+      flex:1 1 130px;
+      min-width:110px;
+      min-height:82px;
+      border:1px solid rgba(186,230,253,.30);
+      background:rgba(2,6,23,.44);
+      border-radius:15px;
+      padding:.65rem .55rem;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .spine-symbol{
+      font-family:"Cambria Math","STIX Two Math","Times New Roman",serif;
+      font-weight:700;
+      color:#fff;
+      font-size:1.14rem;
+      line-height:1.15;
+    }
+
+    .spine-label{
+      color:#bfdbfe;
+      font-size:.68rem;
+      line-height:1.25;
+      margin-top:.3rem;
+    }
+
+    .spine-arrow{
+      color:#7dd3fc;
+      font-weight:800;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 .05rem;
+    }
+
+    .spine-boundary{
+      border:1px solid rgba(251,191,36,.36);
+      background:rgba(120,53,15,.20);
+      color:#fef3c7 !important;
+      border-radius:15px;
+      padding:.78rem .9rem;
+      margin-top:.82rem;
+      font-size:.86rem !important;
+      line-height:1.55;
+    }
+
+    .spine-boundary strong{
+      color:#fff7d6;
+    }
+
+    .visual-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1rem;
+    }
+
+    .visual-card{
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:18px;
+      padding:1rem;
+      box-shadow:0 7px 20px rgba(15,23,42,.05);
+    }
+
+    .visual-step{
+      width:1.8rem;
+      height:1.8rem;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#0f172a;
+      color:#e0f2fe;
+      font-size:.75rem;
+      font-weight:800;
+      margin-bottom:.55rem;
+    }
+
+    .visual-card h3{
+      color:#111827;
+      font-size:1rem;
+      line-height:1.35;
+      margin-bottom:.35rem;
+    }
+
+    .visual-card p{
+      color:#475569;
+      font-size:.88rem;
+      line-height:1.55;
+      margin-bottom:.55rem;
+    }
+
+    @media(max-width:900px){
+      .visual-grid{grid-template-columns:1fr;}
+    }
+
+    @media(max-width:720px){
+      .spine-arrow{display:none;}
+      .spine-chain{display:grid;grid-template-columns:1fr 1fr;}
+    }
+
+    @media(max-width:480px){
+      .spine-chain{grid-template-columns:1fr;}
+    }
+
+    /*
       Status cards
     */
 
@@ -1012,10 +1166,9 @@
 
       The broader QDL/QDC research program asks a more ambitious question:
 
-      can the same closure principles be extended from dimensional
-      admissibility into an explicit physical architecture for fields,
-      localized particles, composite particles, gravity, and ultimately
-      a unified theory?
+      can the same closure principles select nontrivial physical architecture
+      and then be extended into explicit dynamics for fields, localized
+      particles, composite particles, gravity, and ultimately a unified theory?
 
     </p>
 
@@ -1055,6 +1208,10 @@
       </span>
 
       <span class="hero-chip">
+        Standard-Model architecture
+      </span>
+
+      <span class="hero-chip">
         Physical completion
       </span>
 
@@ -1084,6 +1241,13 @@
 
       <a
         class="btn btn-orange"
+        href="#visual-pathway"
+      >
+        Watch the Visual Pathway
+      </a>
+
+      <a
+        class="btn"
         href="research.html"
       >
         Current Research Status
@@ -1097,6 +1261,114 @@
       >
         Primitive Closure
       </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       STRUCTURAL SPINE
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="structural-spine"
+  >
+
+    <div class="structural-spine">
+
+      <div class="spine-eyebrow">
+        The compact QDL structural route
+      </div>
+
+      <h2>
+        From L³F² to Standard-Model representation structure
+      </h2>
+
+      <p>
+        One of the strongest current results can be summarized as a six-stage
+        structural spine. It begins with the L³F² dimensional anchor and,
+        inside the declared QDL construction premises, proceeds through the
+        QDC closure character, the 3+2 gauge architecture, hypercharge, the
+        minimal chiral matter sector, and Higgs-doublet quantum numbers.
+      </p>
+
+      <div
+        aria-label="QDL structural spine from L cubed F squared to the Higgs representation"
+        class="spine-chain"
+      >
+
+        <div class="spine-node">
+          <div class="spine-symbol">L³F²</div>
+          <div class="spine-label">dimensional anchor</div>
+        </div>
+
+        <div class="spine-arrow" aria-hidden="true">⇒</div>
+
+        <div class="spine-node">
+          <div class="spine-symbol">C<sub>QDC</sub></div>
+          <div class="spine-label">closure character</div>
+        </div>
+
+        <div class="spine-arrow" aria-hidden="true">⇒</div>
+
+        <div class="spine-node">
+          <div class="spine-symbol">S(U(3)×U(2))</div>
+          <div class="spine-label">3+2 gauge architecture</div>
+        </div>
+
+        <div class="spine-arrow" aria-hidden="true">⇒</div>
+
+        <div class="spine-node">
+          <div class="spine-symbol">Y</div>
+          <div class="spine-label">hypercharge generator</div>
+        </div>
+
+        <div class="spine-arrow" aria-hidden="true">⇒</div>
+
+        <div class="spine-node">
+          <div class="spine-symbol">Λ²V ⊕ V*</div>
+          <div class="spine-label">minimal chiral matter sector</div>
+        </div>
+
+        <div class="spine-arrow" aria-hidden="true">⇒</div>
+
+        <div class="spine-node">
+          <div class="spine-symbol">H</div>
+          <div class="spine-label">Higgs-doublet representation</div>
+        </div>
+
+      </div>
+
+      <p class="spine-boundary">
+        <strong>Claim boundary:</strong> L³F² is the dimensional anchor.
+        The later arrows are results within declared QDL premises and
+        construction rules; they are not consequences of dimensional analysis
+        alone. H denotes the selected Higgs-doublet representation and quantum
+        numbers. It does not yet determine the Higgs potential, electroweak
+        vacuum expectation value, absolute masses, Yukawa matrices, or coupling
+        values.
+      </p>
+
+      <div class="btn-row">
+
+        <a
+          class="btn btn-primary"
+          href="qdl-l3f2-evidence-to-worldview-animation.html"
+        >
+          Watch the Structural Route
+        </a>
+
+        <a
+          class="btn"
+          href="research.html"
+        >
+          Current Technical Status
+        </a>
+
+      </div>
 
     </div>
 
@@ -1125,11 +1397,11 @@
       <p>
 
         The current research program combines the structural QDL
-        architecture with a selected QDC master core and an expanding
-        set of structural completion laws.
+        architecture—including the status-controlled route from L³F² into
+        Standard-Model representation structure—with a selected QDC master
+        core and an expanding set of structural completion laws.
 
-        This is the present working route toward a QDL unified-field
-        theory.
+        This is the present working route toward a QDL unified-field theory.
 
       </p>
 
@@ -1159,11 +1431,13 @@
             Current QDL/QDC model architecture.
           </strong>
 
-          The electron, proton, and neutron labels show present
-          model interpretations of the single-QDC and three-QDC channels.
+          The electron is shown as the present single-QDC localized-excitation
+          model channel. The proton and neutron are shown as three-QDC
+          composites coupled through the shared A<sub>2</sub> field, with the
+          neutron represented as the neutral variant.
 
-          They are not claims that microscopic QDC particle ontology
-          has been experimentally established.
+          These labels are model interpretations, not claims that microscopic
+          QDC particle ontology has been experimentally established.
 
           Cross-sector amplitude normalization and complete
           phenomenological closure remain open.
@@ -1200,6 +1474,124 @@
 
 
   <!-- ============================================================
+       VISUAL PATHWAY
+       ============================================================ -->
+
+  <section
+    class="section"
+    id="visual-pathway"
+  >
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        Prefer to Watch It?
+      </h2>
+
+      <p class="section-kicker">
+        The three animations move from the conservative audit layer to the
+        broader physical interpretation.
+      </p>
+
+    </div>
+
+    <div class="visual-grid">
+
+      <div class="visual-card">
+
+        <div class="visual-step">1</div>
+
+        <span class="pill blue">Structural screen</span>
+
+        <h3>
+          QDL Structural Admissibility in 5 Minutes
+        </h3>
+
+        <p>
+          See how a real construction becomes a five-slot ledger vector, how
+          exact closure is tested, and why matching aggregate dimensions do
+          not necessarily imply structural admissibility.
+        </p>
+
+        <div class="btn-row">
+          <a
+            class="btn btn-primary"
+            href="qdl-structural-admissibility-animation.html"
+          >
+            Watch Animation 1
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="visual-card">
+
+        <div class="visual-step">2</div>
+
+        <span class="pill purple">Evidence → architecture</span>
+
+        <h3>
+          From GM to the QDC
+        </h3>
+
+        <p>
+          Follow the L³F² signature from operational gravity into compact
+          recurrence and the status-controlled structural chain through
+          S(U(3)×U(2)), hypercharge, chiral matter, and H.
+        </p>
+
+        <div class="btn-row">
+          <a
+            class="btn btn-purple"
+            href="qdl-l3f2-evidence-to-worldview-animation.html"
+          >
+            Watch Animation 2
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="visual-card">
+
+        <div class="visual-step">3</div>
+
+        <span class="pill orange">Model interpretation</span>
+
+        <h3>
+          A QDL/QDC Worldview of the Planck Scale
+        </h3>
+
+        <p>
+          Continue into the proposed physical picture of QDC recurrence,
+          single-QDC lepton channels, three-QDC shared-field hadron channels,
+          fields, gravity, vacuum filtering, and measurement records.
+        </p>
+
+        <div class="btn-row">
+          <a
+            class="btn btn-orange"
+            href="qdl-planck-worldview-animation.html"
+          >
+            Watch Animation 3
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="note">
+      Recommended order: Structural Admissibility → From GM to the QDC →
+      Planck Worldview.
+    </p>
+
+  </section>
+
+
+
+  <!-- ============================================================
        FIVE-MINUTE PATH
        ============================================================ -->
 
@@ -1228,31 +1620,22 @@
 
       <div class="step-card">
 
-        <div class="step-number">
-          1
-        </div>
+        <div class="step-number">1</div>
 
         <h3>
           Start with primitive closure
         </h3>
 
         <p>
-
           QDL treats physical representation as more than symbolic
-          bookkeeping.
-
-          A model has a declared dimensional structure,
-          and operations on that model should preserve the structure
-          required for the physical interpretation being claimed.
-
+          bookkeeping. A model has a declared dimensional structure, and
+          operations on that model should preserve the structure required for
+          the physical interpretation being claimed.
         </p>
 
         <p>
-
-          In the basic QDL ledger,
-          three length-like slots and two frequency-like slots form
-          the primitive typed architecture.
-
+          In the basic QDL ledger, three length-like slots and two
+          frequency-like slots form the primitive typed architecture.
         </p>
 
       </div>
@@ -1263,33 +1646,23 @@
 
       <div class="step-card">
 
-        <div class="step-number">
-          2
-        </div>
+        <div class="step-number">2</div>
 
         <h3>
           Structural admissibility comes before fitting
         </h3>
 
         <p>
-
-          Ordinary dimensional analysis asks whether units match.
-
-          QDL asks a stronger question:
-
-          does the construction remain admissible under the declared
-          transformations, compositions, residual conditions,
-          and physical interpretation?
-
+          Ordinary dimensional analysis asks whether units match. QDL asks a
+          stricter question: does the construction remain admissible under the
+          declared basis, target, transformations, compositions, residual
+          conditions, and physical interpretation?
         </p>
 
         <p>
-
-          This is the practical QDL idea already used in metrology,
-          measurement-chain analysis,
-          operator audits,
-          and model-validation work.
-
+          This upstream screen is the practical core already used in QDL
+          metrology, measurement-chain analysis, operator audits, and
+          model-validation work.
         </p>
 
       </div>
@@ -1300,42 +1673,28 @@
 
       <div class="step-card">
 
-        <div class="step-number">
-          3
-        </div>
+        <div class="step-number">3</div>
 
         <h3>
-          The QDC is the candidate physical carrier
+          The structural program reaches Standard-Model architecture
         </h3>
 
         <p>
-
-          The <strong>Quantized Dimensional Cell</strong>,
-          or <strong>QDC</strong>,
-          is the proposed physical recurrence carrier developed inside
-          the broader QDL program.
-
+          The current QDL construction has a compact status-controlled route:
         </p>
 
-        <p>
-
-          Its characteristic dimensional structure is associated with
-
-          <code class="inline">
-            L³F²
-          </code>,
-
-          while the current master-core research develops explicit local,
-          reversible recurrence and field constructions on top of that
-          architecture.
-
-        </p>
+        <div class="callout blue">
+          <strong>
+            L³F² ⇒ C<sub>QDC</sub> ⇒ S(U(3)×U(2)) ⇒ Y
+            ⇒ Λ²V ⊕ V* ⇒ H
+          </strong>
+        </div>
 
         <p>
-
-          QDL does not claim that a microscopic QDC has already been
-          directly observed.
-
+          After the L³F² anchor, the arrows are results inside declared QDL
+          premises. H means the selected Higgs-doublet representation and
+          quantum numbers—not yet the Higgs potential, vacuum scale, absolute
+          Higgs mass, Yukawa matrices, or coupling values.
         </p>
 
       </div>
@@ -1346,27 +1705,21 @@
 
       <div class="step-card">
 
-        <div class="step-number">
-          4
-        </div>
+        <div class="step-number">4</div>
 
         <h3>
-          Architecture alone is not enough
+          The QDC master core turns architecture toward dynamics
         </h3>
 
         <p>
-
-          A structural framework does not automatically determine
-          a complete physical theory.
-
-          The present program therefore separates
-          <strong>structural completion</strong> from
-          <strong>amplitude completion</strong>.
-
+          The <strong>Quantized Dimensional Cell</strong>, or
+          <strong>QDC</strong>, is the proposed physical recurrence carrier
+          developed inside the broader QDL program. The selected master-core
+          branch supplies explicit local and reversible recurrence/field
+          structure rather than only a qualitative substrate picture.
         </p>
 
-        <div class="callout blue">
-
+        <div class="callout purple">
           <strong>
             P<sub>completion</sub>
             =
@@ -1374,16 +1727,12 @@
             +
             P<sub>amplitude</sub>
           </strong>
-
         </div>
 
         <p>
-
-          Structural completion has advanced substantially.
-
-          Unique cross-sector coefficient normalization and absolute
-          physical amplitudes remain open.
-
+          Structural completion has advanced substantially. Unique cross-sector
+          coefficient normalization and absolute physical amplitudes remain
+          open.
         </p>
 
       </div>
@@ -1394,42 +1743,25 @@
 
       <div class="step-card">
 
-        <div class="step-number">
-          5
-        </div>
+        <div class="step-number">5</div>
 
         <h3>
           The model now has particle and gravity capacity
         </h3>
 
         <p>
-
-          The current QDL/QDC program contains explicit finite-model
-          mechanisms for localized excitations,
-          composite channels,
-          gauge dressing,
-          compact closure-flux defects,
-          and collective geometric response.
-
+          The current model picture contains a localized single-QDC lepton
+          channel and three-QDC composite channels coupled through a shared
+          A<sub>2</sub> field. In the present graphical interpretation, the
+          electron occupies the single-QDC channel; proton and neutron are
+          charged and neutral variants of the three-QDC shared-field channel.
         </p>
 
         <p>
-
-          Under declared completion assumptions,
-          the gravity branch can enter the
-          Einstein–Cartan / general-relativistic universality class
-          with two local tensor modes.
-
-        </p>
-
-        <p>
-
-          These are important capacity results,
-          but they do not yet establish the complete electron,
-          proton,
-          neutron,
-          or gravitational phenomenology of nature.
-
+          Under declared completion assumptions, the gravity branch can enter
+          the Einstein–Cartan / general-relativistic universality class with two
+          local tensor modes. These are capacity and conditional results, not
+          complete observed-particle or gravity phenomenology.
         </p>
 
       </div>
@@ -1440,34 +1772,23 @@
 
       <div class="step-card">
 
-        <div class="step-number">
-          6
-        </div>
+        <div class="step-number">6</div>
 
         <h3>
           Every major claim must survive a gate
         </h3>
 
         <p>
-
-          The current research is organized as a
-          <strong>Completion-Gate Series</strong>.
-
-          Each gate freezes its assumptions and success conditions
-          before execution.
-
+          The research is organized as a <strong>Completion-Gate Series</strong>.
+          Each gate freezes assumptions and success conditions before
+          execution. A gate can pass, fail, or produce useful mathematics
+          without satisfying its strongest physical objective.
         </p>
 
         <p>
-
-          A gate can pass,
-          fail,
-          or produce useful mathematics without satisfying its
-          strongest physical objective.
-
-          A failed gate is retained as part of the research record
-          rather than rewritten as a success.
-
+          The endpoint is not another internal match. It is a distinctive,
+          no-fit physical prediction that survives independent replication and
+          experiment.
         </p>
 
       </div>
@@ -1491,70 +1812,32 @@
         The whole program in one line
       </h2>
 
-
       <div class="flow">
 
-        <span class="flow-node">
-          Primitive Closure
-        </span>
-
-        <span class="flow-arrow">
-          →
-        </span>
-
-        <span class="flow-node">
-          QDL Architecture
-        </span>
-
-        <span class="flow-arrow">
-          →
-        </span>
-
-        <span class="flow-node">
-          QDC Master Core
-        </span>
-
-        <span class="flow-arrow">
-          →
-        </span>
-
-        <span class="flow-node">
-          Structural Completion
-        </span>
-
-        <span class="flow-arrow">
-          →
-        </span>
-
-        <span class="flow-node">
-          Physical Predictions
-        </span>
-
-        <span class="flow-arrow">
-          →
-        </span>
-
-        <span class="flow-node">
-          Experiment / Replication
-        </span>
+        <span class="flow-node">Primitive Closure</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Structural Admissibility</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Structural SM Route</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">QDC Master Core</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Physical Completion</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Prediction / Replication</span>
 
       </div>
 
-
       <div class="callout warning">
 
-        <strong>
-          Present status:
-        </strong>
+        <strong>Present status:</strong>
 
-        the program has moved well beyond dimensional bookkeeping,
-        but the final arrows are not yet closed.
-
-        Unique amplitude normalization,
-        complete particle phenomenology,
-        the global quantum measure,
-        distinctive experimental confirmation,
-        and unaffiliated replication remain open.
+        the structural side of the program is substantially stronger than the
+        final physical-closure side. The L³F²-to-representation chain provides
+        a compact architecture result within declared premises, while unique
+        amplitude normalization, the physical vacuum, complete particle
+        phenomenology, the global quantum measure, distinctive experimental
+        confirmation, and unaffiliated replication remain open.
 
       </div>
 
@@ -1595,7 +1878,9 @@
         <span>
 
           The typed closure and structural-admissibility framework is the
-          most mature layer of the program.
+          most mature layer of the program. Within declared QDL premises, it
+          now includes the compact route from L³F² through C<sub>QDC</sub>,
+          S(U(3)×U(2)), Y, Λ²V ⊕ V*, and the Higgs-doublet representation.
 
         </span>
 
@@ -1803,12 +2088,10 @@
 
         <p>
 
-          Complete masses,
-          flavor,
-          mixing,
-          exchange statistics,
-          hadronic structure,
-          and observed-particle identification remain incomplete.
+          The selected H representation does not yet determine the Higgs
+          potential or electroweak vacuum scale. Complete masses, Yukawa/flavor
+          structure, mixing, exchange statistics, hadronic structure, and
+          observed-particle identification remain incomplete.
 
         </p>
 
@@ -1895,7 +2178,8 @@
       </h2>
 
       <p class="section-kicker">
-        The current model interpretation, with the claim boundary made explicit.
+        The same current particle picture used in the UFT graphical abstract
+        and website animations.
       </p>
 
     </div>
@@ -1904,26 +2188,24 @@
     <div class="card">
 
       <p>
-
-        The current QDL/QDC physical picture explores two main channels:
-
+        The present QDL/QDC model picture distinguishes a localized single-QDC
+        channel from a three-QDC shared-field composite channel.
       </p>
 
 
-      <div class="grid-2">
-
+      <div class="grid-3">
 
         <div class="callout blue">
 
           <span class="pill blue">
-            Single QDC
+            Electron model
           </span>
 
+          <h3>Single-QDC localized excitation</h3>
+
           <p>
-
-            Lepton-like states are modeled as localized single-QDC
-            excitations carrying internal orientation and field structure.
-
+            The electron is modeled as a localized single-QDC excitation with
+            internal orientation, recurrence, and field structure.
           </p>
 
         </div>
@@ -1932,36 +2214,47 @@
         <div class="callout orange">
 
           <span class="pill orange">
-            Three QDCs
+            Proton model
           </span>
 
+          <h3>Three-QDC charged composite</h3>
+
           <p>
-
-            Nucleon-like states are modeled as three-QDC composites
-            coupled through a shared field geometry and triadic
-            composition condition.
-
+            The proton is modeled as three QDC constituents coupled through a
+            shared A<sub>2</sub> field and a triadic composition condition, in
+            the charged composite variant.
           </p>
 
         </div>
 
+
+        <div class="callout purple">
+
+          <span class="pill purple">
+            Neutron model
+          </span>
+
+          <h3>Three-QDC neutral composite</h3>
+
+          <p>
+            The neutron uses the same three-QDC shared-field architecture in
+            the neutral variant.
+          </p>
+
+        </div>
 
       </div>
 
 
       <div class="callout warning">
 
-        <strong>
-          Claim boundary:
-        </strong>
+        <strong>Claim boundary:</strong>
 
-        the electron,
-        proton,
-        and neutron identifications shown in QDL graphics are
-        <strong>model interpretations</strong>.
-
-        They are not yet experimentally established statements that the
-        observed particles are literally composed of QDCs.
+        these electron, proton, and neutron assignments are
+        <strong>model interpretations</strong>. They are not yet experimentally
+        established statements that the observed particles are literally QDC
+        excitations or composites. Complete masses, form factors, scattering,
+        flavor structure, and precision phenomenology must still be recovered.
 
       </div>
 
@@ -2111,6 +2404,15 @@
           mixing angle,
           coupling,
           or parameter.
+
+        </li>
+
+        <li>
+
+          Selecting the Higgs-doublet representation H does
+          <strong>not</strong> yet derive the Higgs potential, electroweak
+          vacuum expectation value, absolute Higgs mass, Yukawa matrices,
+          or electroweak coupling values.
 
         </li>
 
@@ -2639,23 +2941,22 @@
 
       <p>
 
-        Its strongest established role is structural:
-
-        identifying and testing closure,
-        admissibility,
-        representation,
-        and finite-model constraints.
+        Its strongest current role is structural: identifying and testing
+        closure, admissibility, representation, and finite-model constraints.
+        Within declared QDL premises, that layer now includes the compact
+        structural route from L³F² through the 3+2 gauge, hypercharge, chiral
+        matter, and Higgs-doublet representations.
 
       </p>
 
 
       <p>
 
-        Its more ambitious QDL/QDC branch asks whether those constraints,
-        together with a selected recurrence core and completion physics,
-        can ultimately produce a unique,
-        predictive,
-        independently confirmed unified theory.
+        Its more ambitious QDL/QDC branch asks whether that structural
+        architecture, together with the selected recurrence core and completion
+        physics, can uniquely determine amplitudes, vacuum, particle
+        phenomenology, gravity, and predictions—and then survive independent
+        experimental scrutiny.
 
       </p>
 
@@ -2716,12 +3017,11 @@
 
     <span>
 
-      Last updated: August 11, 2026
-      — QDL in 5 Minutes aligned with the current
-      QDL/QDC Unified Field Theory Completion-Gate Series,
-      Primitive Closure synthesis,
-      consolidated UFT research record,
-      and current claim-status firewall.
+      Last updated: August 12, 2026
+      — QDL in 5 Minutes aligned with the current structural spine,
+      three-animation visual pathway, QDL/QDC particle picture,
+      Unified Field Theory Completion-Gate Series, Primitive Closure synthesis,
+      consolidated UFT research record, and current claim-status firewall.
 
     </span>
 
