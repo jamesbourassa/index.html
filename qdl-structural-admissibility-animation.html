@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>QDL Structural Admissibility in 5 Minutes | Animation</title>
-<link rel="canonical" href="https://qdlphysics.org/qdl-structural-admissibility-animation.html">
-
-<meta content="An entry-level QDL animation explaining structural admissibility, 3L+2F ledger vectors, the QDC closure direction, admissible and inadmissible worked examples, metrology, physics, and model governance." name="description"/>
-<meta content="James D. Bourassa, QDL Physics Institute" name="author"/>
-<meta content="#040812" name="theme-color"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QDL Structural Admissibility in 5 Minutes | Animation v1.3</title>
+<meta name="description" content="An entry-level QDL animation explaining structural admissibility, 3L+2F ledger vectors, the QDC closure direction, admissible and inadmissible worked examples, metrology, physics, and model governance.">
+<meta name="author" content="James D. Bourassa, QDL Physics Institute">
+<meta name="theme-color" content="#040812">
 <style>
 :root{--bg:#040812;--panel:#071326;--text:#eef7ff;--muted:#a9bfd6;--cyan:#69dcff;--green:#7beeb0;--amber:#ffc35e;--red:#ff7a8a;--violet:#b9a7ff}
 *{box-sizing:border-box}
@@ -38,50 +35,52 @@ canvas{display:block;width:100%;height:100%}
 .card{border:1px solid rgba(105,220,255,.2);background:rgba(5,12,27,.72);border-radius:18px;padding:18px 20px}.tx{margin-top:18px}.tx summary{cursor:pointer;color:var(--cyan);font-weight:900}.tx p{margin:9px 0;color:#d5e4f2;line-height:1.55}.foot{margin-top:24px;color:var(--muted);font-size:.9rem;line-height:1.5}
 @media(max-width:980px){.links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:780px){.links{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.time{text-align:right}.stage{border-radius:16px}.caption{min-height:138px}.scene-nav{display:none}}
-
-.series-nav{margin-top:24px;border:1px solid rgba(105,220,255,.25);background:rgba(5,12,27,.82);border-radius:18px;padding:18px 20px}.series-nav h2{margin:0 0 8px;color:#69dcff;font-size:1.08rem}.series-nav p{margin:0 0 12px;color:#d5e4f2;line-height:1.5}.series-links{display:flex;gap:10px;flex-wrap:wrap}.series-links a{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;border:1px solid rgba(105,220,255,.38);background:rgba(5,15,31,.94);color:#eef7ff;font-weight:850;text-decoration:none}.series-links a.primary{border-color:rgba(123,238,176,.55);background:rgba(7,35,34,.88);color:#ddffed}.series-links a:focus-visible{outline:3px solid #69dcff;outline-offset:3px}
 </style>
 </head>
 <body>
 <main class="wrap">
-<div class="top"><a href="index.html">QDL Physics Institute</a><span class="badge">Entry animation · structural admissibility</span></div>
-<p class="kicker">QDL animation series · start here</p>
-<h1>QDL Structural Admissibility in 5 Minutes</h1>
-<p class="lede">A first introduction to the Quantized Dimensional Ledger: how quantities become five-slot ledger vectors, how a declared closure rule classifies candidate structures, and why an expression can be dimensionally familiar yet structurally inadmissible.</p>
-<section aria-label="QDL structural admissibility animation" class="stage">
-<div class="canvas-wrap"><canvas height="900" id="c" width="1600"></canvas></div>
-<div aria-live="polite" class="caption">
-<div class="caption-head"><div class="caption-title" id="capTitle">Ready</div><span class="status" id="capStatus">Press Play</span></div>
-<p class="caption-body" id="capBody">This entry-level animation introduces the structural screen that comes before the QDL/QDC worldview animations.</p>
-</div>
-</section>
-<div class="controls">
-<div class="buttons"><button class="btn" id="play">Play</button><button class="btn" id="pause">Pause</button><button class="btn" id="replay">Replay</button><button class="btn" id="example">Worked Example</button></div>
-<input aria-label="Animation timeline" class="seek" id="seek" max="340" min="0" step="0.1" type="range" value="0"/>
-<div class="time" id="time">0:00 / 5:40</div>
-</div>
-<div aria-label="Scene navigation" class="scene-nav" id="sceneNav"></div>
-<section aria-label="QDL learning sequence" class="links">
-<a class="link-card" href="qdl-in-5-minutes.html"><strong>Read: QDL in 5 Minutes</strong><span>Equation-light overview of the framework, scope, and claim boundaries.</span></a>
-<a class="link-card" href="qdl-calculator.html"><strong>Use the QDL Calculator</strong><span>Enter ledger vectors and test them under a declared closure rule.</span></a>
-<a class="link-card" href="qdl-planck-worldview-animation.html"><strong>Next: Planck Worldview</strong><span>The accessible visual picture of QDL/QDC recurrence, particles, fields, and geometry.</span></a>
-<a class="link-card" href="qdl-l3f2-evidence-to-worldview-animation.html"><strong>Then: From GM to the QDC</strong><span>The evidence-to-worldview argument with explicit claim-status boundaries.</span></a>
-</section>
-<details class="card tx"><summary>Full timed transcript</summary>
-<p><strong>0:00–0:18 — Before fitting.</strong> QDL asks a prior question: is the construction structurally admissible before it is fitted, optimized, certified, published, or deployed?</p>
-<p><strong>0:18–0:45 — Upstream failures.</strong> A model may be numerically convenient while hiding a dimensional mismatch, an undeclared transformation, a regime shift, or a loss of measurement meaning.</p>
-<p><strong>0:45–1:25 — Begin with a real construction.</strong> A measured orbit supplies a semi-major axis a and period P. From n = 2π/P, the reconstructed gravitational parameter is μ = a³n². Before encoding it, the audit declares the basis, target, allowed transforms, and scope.</p>
-<p><strong>1:25–2:00 — Convert the construction.</strong> The five factors a·a·a·n·n are assigned to the declared slots (L₁,L₂,L₃,F₁,F₂), producing v(μ) = (1,1,1,1,1). The slot assignment is part of the audit configuration, not something inferred after the result.</p>
-<p><strong>2:00–2:30 — Closure rule.</strong> In the public calculator demonstration, the QDC direction is q = (1,1,1,1,1), corresponding to L³F². Exact membership requires v = kq for an integer k, under the declared transforms.</p>
-<p><strong>2:30–3:05 — Admissible vector.</strong> The orbital construction gives vₐ = (1,1,1,1,1) = q. Its transverse remainder is zero, so it is admissible under the declared rule.</p>
-<p><strong>3:05–3:50 — Non-admissible vector.</strong> The comparison vector vᵦ = (2,1,0,1,1) still aggregates to L³F², but it does not equal kq. It decomposes as q + (1,0,−1,0,0), leaving a nonzero transverse remainder.</p>
-<p><strong>3:50–4:20 — Same dimensions, different structure.</strong> Ordinary dimensional projection collapses both examples to L³F². The ledger retains the directional allocation and distinguishes closure from mere aggregate dimensional agreement.</p>
-<p><strong>4:20–4:50 — Application layers.</strong> The same upstream logic can be used for physics operators, metrology and measurement chains, and model governance or scientific-AI validation.</p>
-<p><strong>4:50–5:20 — Governance workflow.</strong> Declare the basis, target, transforms, and scope; encode the construction; compute closure; then proceed, repair, or exclude under the stated rule.</p>
-<p><strong>5:20–5:40 — Closing.</strong> QDL does not replace dynamics or empirical validation. It adds a structural screen before downstream reliance.</p>
-</details>
-<p class="foot">© QDL Physics Institute. This animation demonstrates the public structural-admissibility rule used by the QDL Calculator, beginning with the orbital construction μ = a³n² before encoding it as a ledger vector. “Excluded” means excluded under the declared rule and transform set; it does not automatically mean empirically false.</p>
-<section aria-label="QDL Visual Guide navigation" class="series-nav"><h2>Part 1 of 3 · Structural method</h2><p>You are at the beginning of the visual sequence. Continue to the conceptual QDL/QDC worldview after the ledger method is clear.</p><div class="series-links"><a href="animations.html">Visual Guide</a><a class="primary" href="qdl-planck-worldview-animation.html">Next: QDL/QDC Worldview →</a></div></section></main>
+  <div class="top"><a href="/">QDL Physics Institute</a><span class="badge">Entry animation · structural admissibility · v1.3</span></div>
+  <p class="kicker">QDL animation series · start here</p>
+  <h1>QDL Structural Admissibility in 5 Minutes</h1>
+  <p class="lede">A first introduction to the Quantized Dimensional Ledger: how quantities become five-slot ledger vectors, how a declared closure rule classifies candidate structures, and why an expression can be dimensionally familiar yet structurally inadmissible.</p>
+
+  <section class="stage" aria-label="QDL structural admissibility animation">
+    <div class="canvas-wrap"><canvas id="c" width="1600" height="900"></canvas></div>
+    <div class="caption" aria-live="polite">
+      <div class="caption-head"><div id="capTitle" class="caption-title">Ready</div><span id="capStatus" class="status">Press Play</span></div>
+      <p id="capBody" class="caption-body">This entry-level animation introduces the structural screen that comes before the QDL/QDC worldview animations.</p>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div class="buttons"><button id="play" class="btn">Play</button><button id="pause" class="btn">Pause</button><button id="replay" class="btn">Replay</button><button id="example" class="btn">Worked Example</button></div>
+    <input id="seek" class="seek" type="range" min="0" max="340" value="0" step="0.1" aria-label="Animation timeline">
+    <div id="time" class="time">0:00 / 5:40</div>
+  </div>
+  <div id="sceneNav" class="scene-nav" aria-label="Scene navigation"></div>
+
+  <section class="links" aria-label="QDL learning sequence">
+    <a class="link-card" href="/qdl-in-5-minutes"><strong>Read: QDL in 5 Minutes</strong><span>Equation-light overview of the framework, scope, and claim boundaries.</span></a>
+    <a class="link-card" href="/qdl-calculator"><strong>Use the QDL Calculator</strong><span>Enter ledger vectors and test them under a declared closure rule.</span></a>
+    <a class="link-card" href="/qdl-l3f2-evidence-to-worldview-animation.html"><strong>Next: From GM to the QDC</strong><span>The status-controlled derivation spine from L³F² through the conditional Standard-Model architecture.</span></a>
+    <a class="link-card" href="/qdl-planck-worldview-animation.html"><strong>Then: Planck Worldview</strong><span>The accessible physical interpretation of QDL/QDC recurrence, particles, fields, and geometry.</span></a>
+  </section>
+
+  <details class="card tx"><summary>Full timed transcript</summary>
+    <p><strong>0:00–0:18 — Before fitting.</strong> QDL asks a prior question: is the construction structurally admissible before it is fitted, optimized, certified, published, or deployed?</p>
+    <p><strong>0:18–0:45 — Upstream failures.</strong> A model may be numerically convenient while hiding a dimensional mismatch, an undeclared transformation, a regime shift, or a loss of measurement meaning.</p>
+    <p><strong>0:45–1:25 — Begin with a real construction.</strong> A measured orbit supplies a semi-major axis a and period P. From n = 2π/P, the reconstructed gravitational parameter is μ = a³n². Before encoding it, the audit declares the basis, target, allowed transforms, and scope.</p>
+    <p><strong>1:25–2:00 — Convert the construction.</strong> The five factors a·a·a·n·n are assigned to the declared slots (L₁,L₂,L₃,F₁,F₂), producing v(μ) = (1,1,1,1,1). The slot assignment is part of the audit configuration, not something inferred after the result.</p>
+    <p><strong>2:00–2:30 — Closure rule.</strong> In the public calculator demonstration, the QDC direction is q = (1,1,1,1,1), corresponding to L³F². Exact membership requires v = kq for an integer k, under the declared transforms.</p>
+    <p><strong>2:30–3:05 — Admissible vector.</strong> The orbital construction gives vₐ = (1,1,1,1,1) = q. Its transverse remainder is zero, so it is admissible under the declared rule.</p>
+    <p><strong>3:05–3:50 — Non-admissible vector.</strong> The comparison vector vᵦ = (2,1,0,1,1) still aggregates to L³F², but it does not equal kq. It decomposes as q + (1,0,−1,0,0), leaving a nonzero transverse remainder.</p>
+    <p><strong>3:50–4:20 — Same dimensions, different structure.</strong> Ordinary dimensional projection collapses both examples to L³F². The ledger retains the directional allocation and distinguishes closure from mere aggregate dimensional agreement.</p>
+    <p><strong>4:20–4:50 — Application layers.</strong> The same upstream logic can be used for physics operators, metrology and measurement chains, and model governance or scientific-AI validation.</p>
+    <p><strong>4:50–5:20 — Governance workflow.</strong> Declare the basis, target, transforms, and scope; encode the construction; compute closure; then proceed, repair, or exclude under the stated rule.</p>
+    <p><strong>5:20–5:40 — Closing.</strong> QDL does not replace dynamics or empirical validation. It adds a structural screen before downstream reliance.</p>
+  </details>
+  <p class="foot">© QDL Physics Institute. This animation demonstrates the public structural-admissibility rule used by the QDL Calculator, beginning with the orbital construction μ = a³n² before encoding it as a ledger vector. “Excluded” means excluded under the declared rule and transform set; it does not automatically mean empirically false.</p>
+</main>
 <script>
 (()=>{
 'use strict';
@@ -168,7 +167,14 @@ function iconMetrology(cx,cy,color){ctx.strokeStyle=color;ctx.lineWidth=5;ctx.be
 function iconGovernance(cx,cy,color){ctx.strokeStyle=color;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(cx,cy-62);ctx.lineTo(cx+56,cy-36);ctx.lineTo(cx+43,cy+34);ctx.lineTo(cx,cy+65);ctx.lineTo(cx-43,cy+34);ctx.lineTo(cx-56,cy-36);ctx.closePath();ctx.stroke();ctx.beginPath();ctx.moveTo(cx-22,cy);ctx.lineTo(cx-4,cy+18);ctx.lineTo(cx+30,cy-22);ctx.stroke();}
 function drawApplications(t,s){titleBanner(s.title,'The formal output is a pre-dynamical classification, not a substitute for the downstream science',s.status,s.color);const xs=[285,800,1315],cols=[C.cyan,C.amber,C.violet],titles=['Physics','Metrology','Model governance'],bodies=['Screen operators, terms, and model transfers before fitting or phenomenology.','Audit unit conversions, derived quantities, and measurement-chain traceability.','Declare assumptions, allowed transforms, regime boundaries, and claim status before reliance.'];for(let i=0;i<3;i++){panel(xs[i]-225,205,450,520,titles[i],bodies[i],cols[i],{titleMax:31,bodyMax:25});if(i===0)iconPhysics(xs[i],390,cols[i]);else if(i===1)iconMetrology(xs[i],390,cols[i]);else iconGovernance(xs[i],390,cols[i]);}panel(260,775,1080,70,'','The same ledger logic can become executable validation infrastructure for scientific software, AI outputs, sensor fusion, and digital twins.',C.green,{bodyMax:21});}
 function drawWorkflow(t,s){titleBanner(s.title,'The rule is useful only when its premises and outputs remain visible',s.status,s.color);const labels=['1. DECLARE','2. ENCODE','3. COMPUTE','4. CLASSIFY','5. ACT'],subs=['basis · target · transforms · scope','map the construction to v ∈ ℤ⁵','membership · remainder · optional Δ','admissible or excluded under the rule','proceed · repair · reject · rescope'],cols=[C.cyan,C.violet,C.green,C.amber,C.red];for(let i=0;i<5;i++){const x=50+i*310;panel(x,230,270,300,labels[i],subs[i],cols[i],{titleMax:27,bodyMax:23});if(i<4)arrow(x+278,380,x+302,380,'rgba(169,191,214,.7)',4);}panel(180,620,1240,150,'Governance firewall','“Excluded” means excluded by the declared structural rule. It does not automatically mean empirically false. Conversely, a structural pass does not establish correct dynamics or agreement with data.',C.red,{bodyMax:27});}
-function drawClosing(t,s){titleBanner(s.title,'Begin with the ledger; then move toward the physical interpretation',s.status,s.color);equationBox(160,205,1280,130,'Declare → Encode → Test closure → Classify → Then fit or interpret','QDL STRUCTURAL-ADMISSIBILITY WORKFLOW',C.green,{max:36});const cards=[['1','Structural admissibility','This animation'],['2','QDL/QDC Planck worldview','Accessible physical picture'],['3','From GM to the QDC','Evidence-to-worldview argument']];for(let i=0;i<3;i++){const x=90+i*510;fillRR(x,430,450,250,22,'rgba(5,13,29,.96)',i===0?C.green:i===1?C.cyan:C.violet,2.4);fitWrapped(cards[i][0],x+20,450,80,80,{max:54,min:40,weight:'950',color:i===0?C.green:i===1?C.cyan:C.violet});fitWrapped(cards[i][1],x+110,445,315,92,{max:27,min:22,weight:'950',color:C.text,align:'left'});fitWrapped(cards[i][2],x+35,555,380,75,{max:22,min:20,weight:'750',color:C.muted});if(i<2)arrow(x+460,555,x+500,555,'rgba(169,191,214,.72)',5);}panel(300,760,1000,80,'','Use the calculator to change the vector, target, congruence weights, modulus, or admissibility mode.',C.amber,{bodyMax:22});}
+function drawClosing(t,s){
+  titleBanner(s.title,'Begin with the structural screen; then follow the status-controlled physical route',s.status,s.color);
+  equationBox(95,190,1410,118,'L³F²  ⇒  C_QDC  ⇒  S(U(3)×U(2))  ⇒  Y  ⇒  Λ²V ⊕ V*  ⇒  H','CURRENT QDL ARCHITECTURE SPINE — WITHIN DECLARED PREMISES AFTER L³F²',C.green,{max:31,min:22});
+  panel(180,335,1240,95,'Claim boundary','The chain previews the flagship reconstruction. H denotes the selected Higgs-doublet representation/quantum numbers; the Higgs potential, vacuum scale, absolute masses, and couplings remain downstream dynamical gates.',C.red,{titleMax:22,bodyMax:19});
+  const cards=[['1','Structural admissibility','This animation'],['2','From GM to the QDC','Evidence → exact classifications → conditional reconstruction'],['3','QDL/QDC Planck worldview','Physical interpretation and open dynamics']];
+  for(let i=0;i<3;i++){const x=90+i*510;fillRR(x,475,450,235,22,'rgba(5,13,29,.96)',i===0?C.green:i===1?C.violet:C.cyan,2.4);fitWrapped(cards[i][0],x+20,493,80,70,{max:50,min:38,weight:'950',color:i===0?C.green:i===1?C.violet:C.cyan});fitWrapped(cards[i][1],x+110,490,315,88,{max:26,min:21,weight:'950',color:C.text,align:'left'});fitWrapped(cards[i][2],x+35,590,380,76,{max:20,min:18,weight:'750',color:C.muted});if(i<2)arrow(x+460,585,x+500,585,'rgba(169,191,214,.72)',5);}
+  panel(265,755,1070,85,'','Use the QDL Calculator to audit the structural rule; use the flagship animation to inspect exactly where the physical premises enter.',C.amber,{bodyMax:21});
+}
 function render(t){background(t);const s=sceneAt(t),local=t-s.start;if(s.start===0)drawOpening(local,s);else if(s.start===18)drawFailures(local,s);else if(s.start===45)drawConstruction(local,s);else if(s.start===85)drawLedger(local,s);else if(s.start===120)drawRule(local,s);else if(s.start===150)drawPass(local,s);else if(s.start===185)drawFail(local,s);else if(s.start===230)drawCompare(local,s);else if(s.start===260)drawApplications(local,s);else if(s.start===290)drawWorkflow(local,s);else drawClosing(local,s);capTitle.textContent=s.title;capBody.textContent=s.body;capStatus.textContent=s.status;capStatus.style.color=s.color;seek.value=t;timeEl.textContent=fmt(t)+' / 5:40';[...sceneNav.children].forEach((b,i)=>b.classList.toggle('active',scenes[i]===s));}
 function play(){if(playing)return;playing=true;startStamp=null;playBtn.textContent='Playing';raf=requestAnimationFrame(tick);}function pause(){playing=false;playBtn.textContent='Play';if(raf)cancelAnimationFrame(raf);render(elapsed);}function replay(){elapsed=0;render(0);play();}function tick(now){if(!playing)return;if(startStamp===null)startStamp=now-elapsed*1000;elapsed=Math.min(DUR,(now-startStamp)/1000);render(elapsed);if(elapsed>=DUR){playing=false;playBtn.textContent='Play';return;}raf=requestAnimationFrame(tick);}
 scenes.forEach(s=>{const b=document.createElement('button');b.className='scene-chip';b.textContent=fmt(s.start)+' '+s.short;b.onclick=()=>{pause();elapsed=s.start+.05;render(elapsed);};sceneNav.appendChild(b);});

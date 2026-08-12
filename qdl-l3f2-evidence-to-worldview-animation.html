@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>From GM to the QDC | L³F² Evidence-to-Worldview Animation</title>
-<link rel="canonical" href="https://qdlphysics.org/qdl-l3f2-evidence-to-worldview-animation.html">
-
-<meta content="A QDL/QDC evidence-to-worldview animation: orbital GM, cosmological and Planck-scale L³F² identities, compact recurrence, toroidal QDC structure, conditional Standard-Model reconstruction, family index, worldview, and open failure gates." name="description"/>
-<meta content="James D. Bourassa, QDL Physics Institute" name="author"/>
-<meta content="#040812" name="theme-color"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From GM to the QDC | L³F² Evidence-to-Worldview Animation v1.4</title>
+<meta name="description" content="A QDL/QDC evidence-to-worldview animation: orbital GM, cosmological and Planck-scale L³F² identities, compact recurrence, toroidal QDC structure, conditional Standard-Model reconstruction, family index, worldview, and open failure gates.">
+<meta name="author" content="James D. Bourassa, QDL Physics Institute">
+<meta name="theme-color" content="#040812">
 <style>
 :root{--bg:#040812;--panel:#071326;--text:#eef7ff;--muted:#a9bfd6;--cyan:#69dcff;--green:#7beeb0;--amber:#ffc35e;--red:#ff7a8a;--violet:#b9a7ff}
 *{box-sizing:border-box}
@@ -36,55 +33,58 @@ canvas{display:block;width:100%;height:100%}
 .card{border:1px solid rgba(105,220,255,.2);background:rgba(5,12,27,.72);border-radius:18px;padding:18px 20px}.card h2{margin:0 0 10px;color:var(--cyan);font-size:1.08rem}.card p,.card li{color:#d5e4f2;line-height:1.56}.card p{margin:0 0 11px}.card ul{margin:8px 0 0;padding-left:20px}.tx{margin-top:18px}.tx summary{cursor:pointer;color:var(--cyan);font-weight:900}.tx p{margin:9px 0}.foot{margin-top:24px;color:var(--muted);font-size:.9rem;line-height:1.5}
 @media(max-width:980px){.legend-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:780px){.legend-grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.time{text-align:right}.stage{border-radius:16px}.caption{min-height:132px}.scene-nav{display:none}}
-
-.series-nav{margin-top:24px;border:1px solid rgba(105,220,255,.25);background:rgba(5,12,27,.82);border-radius:18px;padding:18px 20px}.series-nav h2{margin:0 0 8px;color:#69dcff;font-size:1.08rem}.series-nav p{margin:0 0 12px;color:#d5e4f2;line-height:1.5}.series-links{display:flex;gap:10px;flex-wrap:wrap}.series-links a{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;border:1px solid rgba(105,220,255,.38);background:rgba(5,15,31,.94);color:#eef7ff;font-weight:850;text-decoration:none}.series-links a.primary{border-color:rgba(123,238,176,.55);background:rgba(7,35,34,.88);color:#ddffed}.series-links a:focus-visible{outline:3px solid #69dcff;outline-offset:3px}
 </style>
 </head>
 <body>
 <main class="wrap">
-<div class="top"><a href="index.html">QDL Physics Institute</a><span class="badge">Flagship animation · evidence to worldview</span></div>
-<p class="kicker">QDL/QDC animation series · L³F² architecture</p>
-<h1>From <em>GM</em> to the QDC</h1>
-<p class="lede">How the dimensional signature L³F² appears in measured gravity, motivates a compact recurrence construction, becomes embodied in a toroidal QDC, and supports a conditional route toward Standard-Model structure and the broader QDL/QDC worldview.</p>
-<section aria-label="From GM to the QDC animation" class="stage">
-<div class="canvas-wrap"><canvas height="900" id="c" width="1600"></canvas></div>
-<div aria-live="polite" class="caption">
-<div class="caption-head"><div class="caption-title" id="capTitle">Ready</div><span class="status" id="capStatus">Press Play</span></div>
-<p class="caption-body" id="capBody">The animation begins with operational gravitational identities and moves step by step toward the QDL/QDC worldview.</p>
-</div>
-</section>
-<div class="controls">
-<div class="buttons"><button class="btn" id="play">Play</button><button class="btn" id="pause">Pause</button><button class="btn" id="replay">Replay</button><button class="btn" id="poster">Worldview Frame</button></div>
-<input aria-label="Animation timeline" class="seek" id="seek" max="450" min="0" step="0.1" type="range" value="0"/>
-<div class="time" id="time">0:00 / 7:30</div>
-</div>
-<div aria-label="Scene navigation" class="scene-nav" id="sceneNav"></div>
-<section aria-label="Claim-status key" class="status-key">
-<h2>Claim-status key</h2>
-<div class="legend-grid">
-<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--green)"></span>Established identity</div><p>Standard physics, direct measurement relation, or exact dimensional identity.</p></div>
-<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--cyan)"></span>Exact within premises</div><p>A theorem or finite classification inside the explicitly declared construction class.</p></div>
-<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--violet)"></span>Conditional result</div><p>Requires an additional physical premise that has not yet been independently established.</p></div>
-<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--amber)"></span>Model interpretation</div><p>A proposed QDL/QDC physical reading of an exact or conditional mathematical structure.</p></div>
-<div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--red)"></span>Open gate</div><p>A mathematical, dynamical, numerical, competitor, continuum, or empirical test still unresolved.</p></div>
-</div>
-<a class="research-cta" href="research.html"><span>Explore the benchmark and failure-gate program</span><span aria-hidden="true">→</span></a>
-</section>
-<details class="card tx"><summary>Full timed transcript</summary>
-<p><strong>0:00–0:18 — Opening.</strong> Begin with what is directly measured. The QDL/QDC argument starts not with a microscopic picture, but with a dimensional structure already present in gravitational physics.</p>
-<p><strong>0:18–0:55 — Orbital gravity.</strong> Astronomers commonly reconstruct the gravitational parameter μ = GM from orbital length and recurrence: μ = a³n² = 4π²a³/P². Its dimensional type is L³F².</p>
-<p><strong>0:55–1:30 — Across scale.</strong> The same type occurs in the critical-density mass parameter, GM = ½H²R³, and in the Planck identity GMₚ = Lₚ³Fₚ². Recurrence across scale is a structural clue, not proof of one mechanism.</p>
-<p><strong>1:30–2:05 — Meaning of the exponents.</strong> F means frequency, not force. QDL asks whether the primitive exponents three and two can be represented as three independent spatial-span channels and two independent recurrence-wave channels. This is an explicit model postulate.</p>
-<p><strong>2:05–2:45 — Recurrence to torus.</strong> Three spatial-span channels and two recurrence-wave channels form T⁵ = (S¹)⁵, naturally separated as T³L × T²F. A toroidal QDC embodies the same closure type through spatial occupancy times two recurrence frequencies.</p>
-<p><strong>2:45–3:20 — Planck boundary.</strong> The reduced Compton scale and Schwarzschild scale meet at m = mₚ/√2. QDL places the QDC hypothesis near the regime where localization, recurrence, and gravitational self-coupling can no longer be treated independently.</p>
-<p><strong>3:20–4:35 — Standard-Model architecture.</strong> Under declared recurrence, Hermitian, unimodular, exterior-sector, and orientation premises, the 3+2 carrier leads to S(U(3)×U(2)), the observed hypercharge generator, a minimal fifteen-state chiral sector, anomaly cancellation, and Higgs-doublet quantum numbers. A general two-block classification independently selects p+q = 5 and the non-Abelian split {3,2}.</p>
-<p><strong>4:35–5:15 — Three generations.</strong> The closure character defines a four-torus. Under the declared horizontal construction, integral curvature data yield a chiral Dirac index of magnitude three. The theorem is conditional on the physical sector-selection principle.</p>
-<p><strong>5:15–6:25 — Worldview.</strong> The proposed QDL/QDC picture organizes substrate, particles, fields, and records as different persistence regimes of closure-filtered recurrence.</p>
-<p><strong>6:25–7:05 — Trefoil firewall.</strong> A trefoil hadron is a candidate morphology, not an established proton ontology. Baryon number, Hopf charge, and knot class must remain distinct until a model-specific dynamical construction connects them.</p>
-<p><strong>7:05–7:30 — Claim ledger and closing.</strong> The animation closes by separating established anchors, exact results within premises, conditional reconstructions, model interpretations, no-go results, and open empirical gates.</p>
-</details>
-<p class="foot">© QDL Physics Institute. This animation is a claim-status-controlled visualization. It does not present the toroidal substrate, three-family sector selection, trefoil nucleon morphology, or complete QDL/QDC worldview as experimentally established facts.</p>
-<section aria-label="QDL Visual Guide navigation" class="series-nav"><h2>Part 3 of 3 · Evidence and failure gates</h2><p>The visual sequence is complete. Continue to the formal Framework, Calculator, Research Program, and Experiments pages.</p><div class="series-links"><a href="qdl-planck-worldview-animation.html">← Back: QDL/QDC Worldview</a><a href="animations.html">Visual Guide</a><a class="primary" href="framework.html">Continue to Framework →</a></div></section></main>
+  <div class="top"><a href="/">QDL Physics Institute</a><span class="badge">Flagship animation · evidence to worldview · v1.4</span></div>
+  <p class="kicker">QDL/QDC animation series · L³F² architecture</p>
+  <h1>From <em>GM</em> to the QDC</h1>
+  <p class="lede">How the dimensional signature L³F² appears in measured gravity, motivates a compact recurrence construction, becomes embodied in a toroidal QDC, and supports a conditional route toward Standard-Model structure and the broader QDL/QDC worldview.</p>
+
+  <section class="stage" aria-label="From GM to the QDC animation">
+    <div class="canvas-wrap"><canvas id="c" width="1600" height="900"></canvas></div>
+    <div class="caption" aria-live="polite">
+      <div class="caption-head"><div id="capTitle" class="caption-title">Ready</div><span id="capStatus" class="status">Press Play</span></div>
+      <p id="capBody" class="caption-body">The animation begins with operational gravitational identities and moves step by step toward the QDL/QDC worldview.</p>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div class="buttons"><button id="play" class="btn">Play</button><button id="pause" class="btn">Pause</button><button id="replay" class="btn">Replay</button><button id="poster" class="btn">Worldview Frame</button></div>
+    <input id="seek" class="seek" type="range" min="0" max="450" value="0" step="0.1" aria-label="Animation timeline">
+    <div id="time" class="time">0:00 / 7:30</div>
+  </div>
+  <div id="sceneNav" class="scene-nav" aria-label="Scene navigation"></div>
+
+  <section class="status-key" aria-label="Claim-status key">
+    <h2>Claim-status key</h2>
+    <div class="legend-grid">
+      <div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--green)"></span>Established identity</div><p>Standard physics, direct measurement relation, or exact dimensional identity.</p></div>
+      <div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--cyan)"></span>Exact within premises</div><p>A theorem or finite classification inside the explicitly declared construction class.</p></div>
+      <div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--violet)"></span>Conditional result</div><p>Requires an additional physical premise that has not yet been independently established.</p></div>
+      <div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--amber)"></span>Model interpretation</div><p>A proposed QDL/QDC physical reading of an exact or conditional mathematical structure.</p></div>
+      <div class="legend-item"><div class="legend-label"><span class="legend-dot" style="background:var(--red)"></span>Open gate</div><p>A mathematical, dynamical, numerical, competitor, continuum, or empirical test still unresolved.</p></div>
+    </div>
+    <a class="research-cta" href="/research.html"><span>Explore the benchmark and failure-gate program</span><span aria-hidden="true">→</span></a>
+  </section>
+
+
+  <details class="card tx"><summary>Full timed transcript</summary>
+    <p><strong>0:00–0:18 — Opening.</strong> Begin with what is directly measured. The QDL/QDC argument starts not with a microscopic picture, but with a dimensional structure already present in gravitational physics.</p>
+    <p><strong>0:18–0:55 — Orbital gravity.</strong> Astronomers commonly reconstruct the gravitational parameter μ = GM from orbital length and recurrence: μ = a³n² = 4π²a³/P². Its dimensional type is L³F².</p>
+    <p><strong>0:55–1:30 — Across scale.</strong> The same type occurs in the critical-density mass parameter, GM = ½H²R³, and in the Planck identity GMₚ = Lₚ³Fₚ². Recurrence across scale is a structural clue, not proof of one mechanism.</p>
+    <p><strong>1:30–2:05 — Meaning of the exponents.</strong> F means frequency, not force. QDL asks whether the primitive exponents three and two can be represented as three independent spatial-span channels and two independent recurrence-wave channels. This is an explicit model postulate.</p>
+    <p><strong>2:05–2:45 — Recurrence to torus.</strong> Three spatial-span channels and two recurrence-wave channels form T⁵ = (S¹)⁵, naturally separated as T³L × T²F. A toroidal QDC embodies the same closure type through spatial occupancy times two recurrence frequencies.</p>
+    <p><strong>2:45–3:20 — Planck boundary.</strong> The reduced Compton scale and Schwarzschild scale meet at m = mₚ/√2. QDL places the QDC hypothesis near the regime where localization, recurrence, and gravitational self-coupling can no longer be treated independently.</p>
+    <p><strong>3:20–4:35 — Standard-Model architecture.</strong> Under declared recurrence, Hermitian, unimodular, exterior-sector, orientation, and Yukawa-admissibility premises, the structural route is L³F² ⇒ C_QDC ⇒ S(U(3)×U(2)) ⇒ Y ⇒ Λ²V ⊕ V* ⇒ H. Here H denotes the selected Higgs-doublet representation/quantum numbers, not a derived Higgs potential or electroweak vacuum scale. A general two-block classification independently selects p+q = 5 and the non-Abelian split {3,2}.</p>
+    <p><strong>4:35–5:15 — Three generations.</strong> The closure character defines a four-torus. Under the declared horizontal construction, integral curvature data yield a chiral Dirac index of magnitude three. The theorem is conditional on the physical sector-selection principle.</p>
+    <p><strong>5:15–6:25 — Worldview.</strong> The proposed QDL/QDC picture organizes substrate, particles, fields, and records as different persistence regimes of closure-filtered recurrence.</p>
+    <p><strong>6:25–7:05 — Trefoil firewall.</strong> A trefoil hadron is a candidate morphology, not an established proton ontology. Baryon number, Hopf charge, and knot class must remain distinct until a model-specific dynamical construction connects them.</p>
+    <p><strong>7:05–7:30 — Claim ledger and closing.</strong> The animation closes by separating established anchors, exact results within premises, conditional reconstructions, model interpretations, no-go results, and open empirical gates.</p>
+  </details>
+  <p class="foot">© QDL Physics Institute. This animation is a claim-status-controlled visualization. It does not present the toroidal substrate, three-family sector selection, trefoil nucleon morphology, or complete QDL/QDC worldview as experimentally established facts.</p>
+</main>
 <script>
 (()=>{
 'use strict';
@@ -102,7 +102,7 @@ const scenes=[
  {start:90,end:125,short:'3 + 2 meaning',title:'What the exponents mean in QDL',status:'Model postulate',color:COLORS.amber,body:'F means frequency, not mechanical force. QDL explicitly postulates that the primitive exponents may be represented as three length-type and two frequency-type compact recurrence channels.'},
  {start:125,end:165,short:'Torus',title:'Compact recurrence leads to a torus',status:'Conditional construction',color:COLORS.violet,body:'Three spatial-span channels and two recurrence-wave channels form T⁵ = (S¹)⁵, separated into a typed 3+2 structure. A toroidal QDC embodies spatial occupancy multiplied by two recurrence frequencies.'},
  {start:165,end:200,short:'Planck boundary',title:'Why place the QDC near the Planck scale?',status:'Exact threshold + interpretation',color:COLORS.cyan,body:'The reduced Compton scale and Schwarzschild scale meet at m = mₚ/√2. The equality is exact; identifying the boundary with a toroidal QDC substrate is a physical interpretation.'},
- {start:200,end:275,short:'SM structure',title:'From 3+2 recurrence to Standard-Model architecture',status:'Exact within premises',color:COLORS.green,body:'Within the declared construction, the 3+2 carrier yields S(U(3)×U(2)), the hypercharge generator, a minimal fifteen-state chiral sector, anomaly cancellation, Higgs quantum numbers, and canonical Abelian normalization.'},
+ {start:200,end:275,short:'SM structure',title:'From 3+2 recurrence to Standard-Model architecture',status:'Exact within premises',color:COLORS.green,body:'Within the declared construction, the current structural spine is L³F² ⇒ C_QDC ⇒ S(U(3)×U(2)) ⇒ Y ⇒ Λ²V ⊕ V* ⇒ H. H means the selected Higgs-doublet representation/quantum numbers; the Higgs potential and absolute electroweak scale remain open.'},
  {start:275,end:315,short:'Three families',title:'A conditional route to three generations',status:'Conditional index theorem',color:COLORS.violet,body:'The closure relation defines a four-torus. Under ambient descent and the declared sector-selection conditions, the twisted Dirac index has magnitude three, giving three zero modes of one chirality.'},
  {start:315,end:385,short:'Worldview',title:'The QDL/QDC worldview',status:'Model interpretation',color:COLORS.cyan,body:'The proposed worldview treats substrate, particles, fields, and records as distinct persistence regimes of closure-filtered Planck-scale recurrence. This extended scene pauses on the complete architecture so each layer can be read before the animation advances.'},
  {start:385,end:425,short:'Trefoil firewall',title:'Topological picture versus physical hypothesis',status:'Open dynamical gates',color:COLORS.red,body:'A trefoil hadron remains a candidate morphology. Baryon number, Hopf charge, and knot class are distinct invariants and cannot be identified by visual analogy alone.'},
@@ -330,23 +330,26 @@ function chainBox(x,y,w,h,txt,color,sub=''){
   if(sub)fitWrapped(sub,x+14,y+h-38,w-28,28,{max:18,min:18,weight:'800',color});
 }
 function drawSM(t,s){
-  titleBanner(s.title,'The exact finite chain is separated from the physical premises that define its scope',s.status,s.color);
-  const y=195,gap=25;
+  titleBanner(s.title,'The structural spine is exact within its declared construction; the physical premises remain visible',s.status,s.color);
+  const y=190;
   const boxes=[
-    {x:45,w:190,txt:'L³F²',c:COLORS.cyan},
-    {x:260,w:280,txt:'C_QDC =\n2ΣL − 3ΣF',c:COLORS.green},
-    {x:565,w:290,txt:'S(U(3) × U(2))',c:COLORS.violet},
-    {x:880,w:390,txt:'Y =\ndiag(−⅓, −⅓, −⅓,\n+½, +½)',c:COLORS.amber},
-    {x:1295,w:260,txt:'Λ²V ⊕ V*',c:COLORS.red}
+    {x:35,w:170,txt:'L³F²',c:COLORS.cyan},
+    {x:235,w:205,txt:'C_QDC',c:COLORS.green},
+    {x:470,w:260,txt:'S(U(3) × U(2))',c:COLORS.violet},
+    {x:760,w:170,txt:'Y',c:COLORS.amber},
+    {x:960,w:285,txt:'Λ²V ⊕ V*',c:COLORS.red},
+    {x:1275,w:290,txt:'H',c:COLORS.green}
   ];
   for(let i=0;i<boxes.length;i++){
-    const b=boxes[i];chainBox(b.x,y,b.w,145,b.txt,b.c);
-    if(i<boxes.length-1)arrow(b.x+b.w+7,y+72,boxes[i+1].x-7,y+72,'rgba(169,191,214,.72)',4);
+    const b=boxes[i];chainBox(b.x,y,b.w,120,b.txt,b.c);
+    if(i<boxes.length-1)arrow(b.x+b.w+6,y+60,boxes[i+1].x-6,y+60,'rgba(169,191,214,.72)',4);
   }
-  panel(50,390,470,275,'Declared premises','Minimal recurrence; Hermitian amplitudes; type-frame covariance; unimodularity; exterior-sector admissibility; orientation selection.',COLORS.cyan,{bodyMax:25});
-  panel(565,390,470,275,'Finite selection result','The general two-block anomaly classification selects p + q = 5. Requiring two non-Abelian blocks and state minimality selects the unordered split {3,2}.',COLORS.green,{bodyMax:24});
-  panel(1080,390,470,275,'Structural outcomes','Faithful Z₆ global group; observed hypercharge ratios; one minimal 15-state chiral generation; anomaly cancellation; Higgs-doublet quantum numbers; charged-Yukawa admissibility.',COLORS.amber,{bodyMax:23});
-  equationBox(305,710,990,120,'SU(3)C × SU(2)L × U(1)Y  /  Z₆','CONDITIONAL STANDARD-MODEL GLOBAL STRUCTURE',COLORS.green);
+  equationBox(70,345,670,118,'C_QDC = 2ΣL − 3ΣF','CLOSURE CHARACTER / ZERO-RESIDUE CONDITION',COLORS.green,{max:31});
+  equationBox(860,345,670,118,'Y = diag(−⅓, −⅓, −⅓, +½, +½)','SELECTED HYPERCHARGE GENERATOR',COLORS.amber,{max:29});
+  panel(50,505,470,230,'Declared premises','Minimal recurrence; Hermitian amplitudes; type-frame covariance; unimodularity; exterior-sector admissibility; orientation selection; charged-Yukawa admissibility.',COLORS.cyan,{bodyMax:23});
+  panel(565,505,470,230,'Finite selection result','The general two-block anomaly classification selects p + q = 5. Requiring two non-Abelian blocks and state minimality selects the unordered split {3,2}.',COLORS.green,{bodyMax:23});
+  panel(1080,505,470,230,'Structural outcomes','Faithful Z₆ global group; observed hypercharge ratios; one minimal 15-state chiral generation; anomaly cancellation; Higgs-doublet representation/quantum numbers; charged-Yukawa admissibility.',COLORS.amber,{bodyMax:21});
+  panel(210,770,1180,82,'What H does not yet mean','This step does not derive the Higgs potential, electroweak vev, absolute masses, CKM/PMNS matrices, or gauge-coupling values. Those remain dynamical/selection gates.',COLORS.red,{titleMax:20,bodyMax:18});
 }
 function drawFamily(t,s){
   titleBanner(s.title,'Three arises as a topological index inside the declared horizontal construction',s.status,s.color);
