@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>QDL Structural Admissibility in 5 Minutes | Animation v1.3</title>
+<title>QDL Structural Admissibility in 5 Minutes | Animation v1.4</title>
 <meta name="description" content="An entry-level QDL animation explaining structural admissibility, 3L+2F ledger vectors, the QDC closure direction, admissible and inadmissible worked examples, metrology, physics, and model governance.">
 <meta name="author" content="James D. Bourassa, QDL Physics Institute">
 <meta name="theme-color" content="#040812">
@@ -39,7 +39,7 @@ canvas{display:block;width:100%;height:100%}
 </head>
 <body>
 <main class="wrap">
-  <div class="top"><a href="/">QDL Physics Institute</a><span class="badge">Entry animation · structural admissibility · v1.3</span></div>
+  <div class="top"><a href="/">QDL Physics Institute</a><span class="badge">Entry animation · structural admissibility · v1.4</span></div>
   <p class="kicker">QDL animation series · start here</p>
   <h1>QDL Structural Admissibility in 5 Minutes</h1>
   <p class="lede">A first introduction to the Quantized Dimensional Ledger: how quantities become five-slot ledger vectors, how a declared closure rule classifies candidate structures, and why an expression can be dimensionally familiar yet structurally inadmissible.</p>
@@ -170,9 +170,9 @@ function drawWorkflow(t,s){titleBanner(s.title,'The rule is useful only when its
 function drawClosing(t,s){
   titleBanner(s.title,'Begin with the structural screen; then follow the status-controlled physical route',s.status,s.color);
   equationBox(95,190,1410,118,'L³F²  ⇒  C_QDC  ⇒  S(U(3)×U(2))  ⇒  Y  ⇒  Λ²V ⊕ V*  ⇒  H','CURRENT QDL ARCHITECTURE SPINE — WITHIN DECLARED PREMISES AFTER L³F²',C.green,{max:31,min:22});
-  panel(180,335,1240,95,'Claim boundary','The chain previews the flagship reconstruction. H denotes the selected Higgs-doublet representation/quantum numbers; the Higgs potential, vacuum scale, absolute masses, and couplings remain downstream dynamical gates.',C.red,{titleMax:22,bodyMax:19});
+  panel(180,325,1240,145,'Claim boundary','The chain previews the flagship reconstruction. H denotes the selected Higgs-doublet representation and quantum numbers. The Higgs potential, vacuum scale, absolute masses, and couplings remain downstream dynamical gates.',C.red,{titleMax:22,bodyMax:20});
   const cards=[['1','Structural admissibility','This animation'],['2','From GM to the QDC','Evidence → exact classifications → conditional reconstruction'],['3','QDL/QDC Planck worldview','Physical interpretation and open dynamics']];
-  for(let i=0;i<3;i++){const x=90+i*510;fillRR(x,475,450,235,22,'rgba(5,13,29,.96)',i===0?C.green:i===1?C.violet:C.cyan,2.4);fitWrapped(cards[i][0],x+20,493,80,70,{max:50,min:38,weight:'950',color:i===0?C.green:i===1?C.violet:C.cyan});fitWrapped(cards[i][1],x+110,490,315,88,{max:26,min:21,weight:'950',color:C.text,align:'left'});fitWrapped(cards[i][2],x+35,590,380,76,{max:20,min:18,weight:'750',color:C.muted});if(i<2)arrow(x+460,585,x+500,585,'rgba(169,191,214,.72)',5);}
+  for(let i=0;i<3;i++){const x=90+i*510;fillRR(x,495,450,215,22,'rgba(5,13,29,.96)',i===0?C.green:i===1?C.violet:C.cyan,2.4);fitWrapped(cards[i][0],x+20,510,80,62,{max:46,min:36,weight:'950',color:i===0?C.green:i===1?C.violet:C.cyan});fitWrapped(cards[i][1],x+110,507,315,80,{max:25,min:20,weight:'950',color:C.text,align:'left'});fitWrapped(cards[i][2],x+35,595,380,70,{max:19,min:18,weight:'750',color:C.muted});if(i<2)arrow(x+460,602,x+500,602,'rgba(169,191,214,.72)',5);}
   panel(265,755,1070,85,'','Use the QDL Calculator to audit the structural rule; use the flagship animation to inspect exactly where the physical premises enter.',C.amber,{bodyMax:21});
 }
 function render(t){background(t);const s=sceneAt(t),local=t-s.start;if(s.start===0)drawOpening(local,s);else if(s.start===18)drawFailures(local,s);else if(s.start===45)drawConstruction(local,s);else if(s.start===85)drawLedger(local,s);else if(s.start===120)drawRule(local,s);else if(s.start===150)drawPass(local,s);else if(s.start===185)drawFail(local,s);else if(s.start===230)drawCompare(local,s);else if(s.start===260)drawApplications(local,s);else if(s.start===290)drawWorkflow(local,s);else drawClosing(local,s);capTitle.textContent=s.title;capBody.textContent=s.body;capStatus.textContent=s.status;capStatus.style.color=s.color;seek.value=t;timeEl.textContent=fmt(t)+' / 5:40';[...sceneNav.children].forEach((b,i)=>b.classList.toggle('active',scenes[i]===s));}
