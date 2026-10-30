@@ -1,4108 +1,1150 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="utf-8"/>
-
-  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
-  <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-  <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-  <link href="site.webmanifest" rel="manifest"/>
-
-  <title>
-    Publications | QDL Physics Institute
-  </title>
-
-  <meta
-    content="width=device-width, initial-scale=1"
-    name="viewport"
-  />
-
-  <meta
-    content="Publications and open research records from the QDL Physics Institute: peer-reviewed work, Primitive Closure, the consolidated QDL unified-field research record, QDL/QDC completion archives, computational companions, technical papers, datasets, benchmarks, books, and reproducibility records."
-    name="description"
-  />
-
-  <meta
-    content="James D. Bourassa"
-    name="author"
-  />
-
-  <link
-    href="https://qdlphysics.org/publications.html"
-    rel="canonical"
-  />
-
-  <meta
-    content="website"
-    property="og:type"
-  />
-
-  <meta
-    content="QDL Publications & Open Research Record | QDL Physics Institute"
-    property="og:title"
-  />
-
-  <meta
-    content="Peer-reviewed work, major QDL/QDC syntheses, the consolidated unified-field research record, Zenodo datasets, completion archives, computational companions, technical papers, and reproducibility records."
-    property="og:description"
-  />
-
-  <meta
-    content="https://qdlphysics.org/qdl-uft-candidate-2026.png"
-    property="og:image"
-  />
-
-  <meta
-    content="Current QDL Unified Field Theory Candidate infographic"
-    property="og:image:alt"
-  />
-
-  <meta
-    content="QDL Physics Institute"
-    property="og:site_name"
-  />
-
-  <meta
-    content="summary_large_image"
-    name="twitter:card"
-  />
-
-  <meta
-    content="https://qdlphysics.org/qdl-uft-candidate-2026.png"
-    name="twitter:image"
-  />
-
-  <meta
-    content="Current QDL Unified Field Theory Candidate infographic"
-    name="twitter:image:alt"
-  />
-
-
-  <!-- Publications collection structured data -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="James D. Bourassa">
+  <meta name="theme-color" content="#0f172a">
+  <title>Publications &amp; Open Research | QDL Physics Institute</title>
+  <meta name="description" content="QDL Physics Institute publications: peer-reviewed metrology, dimensional-closure mathematics, reproducibility datasets, research monographs, historical unified-field studies and independently reviewable scientific records.">
+  <link rel="canonical" href="https://qdlphysics.org/publications.html">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QDL Publications and Evidence-Classified Research Archive">
+  <meta property="og:description" content="Peer-reviewed work, mathematical monographs, code and datasets, conditional physics manuscripts and archived historical research.">
+  <meta property="og:url" content="https://qdlphysics.org/publications.html">
+  <meta property="og:site_name" content="QDL Physics Institute">
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "QDL Physics Institute Publications and Open Research Record",
-    "url": "https://qdlphysics.org/publications.html",
-    "description": "Peer-reviewed publications, monographs, datasets, completion archives, computational companions, benchmarks, and DOI-backed research records from the QDL Physics Institute.",
-    "author": {
-      "@type": "Person",
-      "name": "James D. Bourassa",
-      "sameAs": "https://orcid.org/0009-0008-0155-0051"
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"QDL Physics Institute Publications and Open Research",
+    "url":"https://qdlphysics.org/publications.html",
+    "dateModified":"2026-10-30",
+    "author":{
+      "@type":"Person",
+      "name":"James D. Bourassa",
+      "sameAs":"https://orcid.org/0009-0008-0155-0051"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "QDL Physics Institute",
-      "url": "https://qdlphysics.org/"
-    },
-    "image": "https://qdlphysics.org/qdl-uft-candidate-2026.png",
-    "about": [
-      "Quantized Dimensional Ledger",
-      "Quantized Dimensional Cell",
-      "QDL/QDC",
-      "primitive closure",
-      "structural admissibility",
-      "unified field theory",
-      "reproducible computational physics"
-    ]
+    "publisher":{
+      "@type":"Organization",
+      "name":"QDL Physics Institute",
+      "url":"https://qdlphysics.org/"
+    }
   }
   </script>
 
-
   <style>
-
     :root{
-      --bg-page:#f3f4f6;
-      --bg-card:#ffffff;
-      --border-soft:#e5e7eb;
-      --text-main:#0f172a;
-      --text-soft:#6b7280;
-      --text-muted:#475569;
-      --accent:#2563eb;
-      --accent-soft:#eff6ff;
-      --link:#0369a1;
-      --orange:#ea580c;
-      --orange-soft:#fff7ed;
-      --purple:#7c3aed;
-      --purple-soft:#f5f3ff;
-      --green:#16a34a;
-      --green-soft:#ecfdf5;
-      --amber:#d97706;
-      --amber-soft:#fffbeb;
-      --red:#b91c1c;
-      --red-soft:#fef2f2;
+      --bg:#f3f4f6;
+      --ink:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+      --blue:#2563eb;
+      --navy:#10243e
     }
-
-
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:var(--bg-page);
-      color:var(--text-main);
-      -webkit-font-smoothing:antialiased;
-      line-height:1.65;
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif
     }
-
-
-    a{
-      color:var(--link);
-      text-decoration:none;
+    a{color:#075e9a;text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus-visible{
+      outline:3px solid #38bdf8;
+      outline-offset:3px
     }
-
-
-    a:hover{
-      text-decoration:underline;
+    .skip{
+      position:absolute;left:-9999px;top:8px;
+      background:#fff;padding:10px;z-index:99
     }
-
-
+    .skip:focus{left:8px}
     header{
       background:#0f172a;
-      color:#e5e7eb;
-      border-bottom:1px solid #111827;
-      position:sticky;
-      top:0;
-      z-index:50;
+      color:#e2e8f0;
+      border-bottom:1px solid #334155
     }
-
-
     .nav{
-      max-width:1100px;
-      margin:0 auto;
-      padding:.78rem 1.25rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-      flex-wrap:wrap;
+      max-width:1140px;margin:auto;padding:12px 20px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;flex-wrap:wrap
     }
-
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:.65rem;
+    .brand{
+      display:flex;align-items:center;gap:12px;color:#fff
     }
-
-
-    .logo-icon{
-      width:52px;
-      height:52px;
-      border-radius:10px;
-      border:1px solid #38bdf8;
-      background:#020617;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
+    .brand:hover{text-decoration:none}
+    .brand img{
+      width:52px;height:52px;
+      border:1px solid #38bdf8;border-radius:10px
     }
-
-
-    .logo-icon img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      display:block;
+    .brand b{
+      display:block;font-size:.85rem;
+      text-transform:uppercase;letter-spacing:.06em
     }
-
-
-    .logo-text-main{
-      font-weight:650;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-      font-size:.82rem;
+    .brand small{
+      display:block;font-size:.72rem;text-transform:uppercase;
+      letter-spacing:.07em;color:#cbd5e1
     }
-
-
-    .logo-text-sub{
-      font-size:.72rem;
-      color:#9ca3af;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+    nav{display:flex;flex-wrap:wrap;gap:4px}
+    nav a{
+      color:#e2e8f0;font-size:.85rem;
+      padding:7px 10px;border-radius:8px
     }
-
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-      font-size:.85rem;
-      flex-wrap:wrap;
+    nav a:hover,nav a.active{
+      color:#fff;background:#1e3a5f;text-decoration:none
     }
-
-
-    .nav-links a{
-      color:#e5e7eb;
-      padding:.28rem .68rem;
-      border-radius:999px;
-      border:1px solid transparent;
-    }
-
-
-    .nav-links a:hover{
-      background:#111827;
-      text-decoration:none;
-    }
-
-
-    .nav-active{
-      border-color:rgba(56,189,248,.85) !important;
-      background:rgba(56,189,248,.10) !important;
-      color:#e0f2fe !important;
-    }
-
-
     main{
-      max-width:1100px;
-      margin:0 auto;
-      padding:1.85rem 1.25rem 3.2rem;
+      max-width:1140px;margin:auto;
+      padding:30px 20px 64px
     }
-
-
+    section{margin-top:40px;scroll-margin-top:15px}
     .hero{
-      background:var(--bg-card);
-      border-radius:20px;
-      border:1px solid var(--border-soft);
-      box-shadow:0 10px 28px rgba(15,23,42,.06);
-      padding:1.8rem 1.7rem;
-      margin-bottom:1.8rem;
+      margin-top:0;
+      background:linear-gradient(130deg,#fff,#eff6ff);
+      border:1px solid var(--border);
+      border-radius:22px;padding:35px;
+      box-shadow:0 12px 30px #0f172a0b
     }
-
-
-    .hero-kicker{
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      font-size:.78rem;
-      color:#6b7280;
-      margin-bottom:.4rem;
+    .kicker{
+      font-size:.76rem;color:#475569;letter-spacing:.13em;
+      font-weight:700;text-transform:uppercase
     }
-
-
-    .hero-title{
-      font-size:clamp(2.05rem,3vw,2.65rem);
-      line-height:1.12;
-      margin-bottom:.58rem;
-      letter-spacing:-0.02em;
+    h1,h2,h3{line-height:1.25}
+    h1{
+      font-size:clamp(2rem,3.7vw,2.9rem);
+      margin:12px 0 16px
     }
-
-
-    .hero-sub{
-      font-size:.98rem;
-      color:#4b5563;
-      max-width:60rem;
-      margin-bottom:.72rem;
+    h2{
+      font-size:clamp(1.45rem,2.5vw,1.95rem);
+      margin:0 0 9px
     }
-
-
-    .hero-sub strong{
-      color:#111827;
+    h3{font-size:1.08rem;margin:0 0 10px}
+    p{margin:9px 0}
+    .lead{font-size:1.08rem;max-width:900px}
+    .muted{color:var(--muted)}
+    .actions{
+      display:flex;flex-wrap:wrap;gap:9px;margin-top:20px
     }
-
-
-    .hero-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.5rem;
-      font-size:.8rem;
-      margin-top:.9rem;
-    }
-
-
-    .hero-chip{
-      padding:.16rem .72rem;
-      border-radius:999px;
-      border:1px solid #e5e7eb;
-      background:#f9fafb;
-      color:var(--text-muted);
-    }
-
-
-    .hero-actions,
-    .btn-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.58rem;
-      margin-top:1rem;
-    }
-
-
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:.58rem 1rem;
-      border-radius:999px;
-      border:1px solid #d1d5db;
-      background:#fff;
-      color:#111827;
-      font-size:.88rem;
-      font-weight:500;
-      white-space:nowrap;
+      display:inline-block;padding:9px 15px;
+      background:#fff;border:1px solid #cbd5e1;
+      border-radius:999px;color:#0f172a;
+      font-weight:650;font-size:.88rem
     }
-
-
-    .btn:hover{
-      background:#f9fafb;
-      text-decoration:none;
-    }
-
-
+    .btn:hover{background:#f8fafc;text-decoration:none}
     .btn-primary{
-      background:linear-gradient(135deg,#2563eb,#1d4ed8);
-      color:#fff;
-      border:none;
-      box-shadow:0 10px 24px rgba(37,99,235,.25);
+      background:var(--blue);border-color:var(--blue);color:#fff
     }
-
-
-    .btn-purple{
-      background:linear-gradient(135deg,#7c3aed,#6d28d9);
-      color:#fff;
-      border:none;
-      box-shadow:0 10px 24px rgba(124,58,237,.22);
+    .btn-primary:hover{
+      background:#1d4ed8;color:#fff
     }
-
-
-    .btn-orange{
-      background:linear-gradient(135deg,#f97316,#ea580c);
-      color:#fff;
-      border:none;
-      box-shadow:0 10px 24px rgba(234,88,12,.20);
+    .section-intro{
+      max-width:940px;color:var(--muted);margin:0 0 18px
     }
-
-
-    .btn-primary:hover,
-    .btn-purple:hover,
-    .btn-orange:hover{
-      filter:brightness(1.03);
-      text-decoration:none;
-    }
-
-
-    .section{
-      margin-top:2.15rem;
-    }
-
-
-    .section-header{
-      display:flex;
-      justify-content:space-between;
-      gap:1rem;
-      align-items:baseline;
-      flex-wrap:wrap;
-      margin-bottom:1rem;
-    }
-
-
-    .section-title{
-      font-size:.96rem;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      color:#111827;
-    }
-
-
-    .section-kicker{
-      font-size:.83rem;
-      color:var(--text-soft);
-      max-width:44rem;
-    }
-
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:1rem;
-    }
-
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:1rem;
-    }
-
-
-    .grid-4{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:1rem;
-    }
-
-
-    @media(max-width:980px){
-
-      .grid-4{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-    }
-
-
-    @media(max-width:920px){
-
-      .grid-2,
-      .grid-3{
-        grid-template-columns:1fr;
-      }
-
-    }
-
-
-    @media(max-width:640px){
-
-      .grid-4{
-        grid-template-columns:1fr;
-      }
-
-    }
-
-
+    .grid-2,.grid-3{display:grid;gap:16px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
     .card{
-      background:var(--bg-card);
-      border-radius:18px;
-      border:1px solid var(--border-soft);
-      padding:1.08rem 1.1rem;
-      box-shadow:0 8px 24px rgba(15,23,42,.06);
-      font-size:.93rem;
-      color:#374151;
+      min-width:0;background:#fff;
+      border:1px solid var(--border);
+      border-radius:17px;padding:22px;
+      box-shadow:0 7px 22px #0f172a09
     }
-
-
-    .card-title,
-    .card h3{
-      font-size:1.03rem;
-      font-weight:650;
-      margin-bottom:.35rem;
-      color:#111827;
-      line-height:1.38;
-    }
-
-
-    .card p{
-      margin-bottom:.58rem;
-    }
-
-
-    .card p:last-child{
-      margin-bottom:0;
-    }
-
-
-    .tagrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.42rem;
-      margin:.14rem 0 .68rem;
-    }
-
-
+    .card p,.card li{font-size:.93rem;color:#334155}
+    .card p:last-child{margin-bottom:0}
     .tag{
-      font-size:.74rem;
-      padding:.16rem .55rem;
-      border-radius:999px;
-      border:1px solid #e5e7eb;
-      background:#f9fafb;
-      color:#4b5563;
-      white-space:nowrap;
+      display:inline-block;border:1px solid #bfdbfe;
+      border-radius:999px;padding:3px 9px;color:#1e40af;
+      background:#eff6ff;font-size:.73rem;
+      font-weight:650;margin-bottom:9px
     }
-
-
-    .tag-accent{
-      border-color:rgba(37,99,235,.35);
-      background:#eff6ff;
-      color:#1d4ed8;
+    .tag-green{
+      border-color:#bbf7d0;background:#ecfdf5;color:#166534
     }
-
-
-    .tag-purple{
-      border-color:rgba(124,58,237,.35);
-      background:#f5f3ff;
-      color:#5b21b6;
+    .tag-amber{
+      border-color:#fde68a;background:#fffbeb;color:#92400e
     }
-
-
-    .tag-orange{
-      border-color:rgba(234,88,12,.35);
-      background:#fff7ed;
-      color:#9a3412;
+    .tag-grey{
+      border-color:#cbd5e1;background:#f8fafc;color:#475569
     }
-
-
-    .tag-peer,
-    .tag-executed{
-      border-color:rgba(22,163,74,.35);
-      background:#ecfdf5;
-      color:#166534;
+    .note{font-size:.83rem!important;color:#64748b!important}
+    .bibliography{display:grid;gap:10px}
+    .record{
+      padding:14px 16px;border:1px solid var(--border);
+      border-radius:12px;background:#fff
     }
-
-
-    .tag-hypothesis{
-      border-color:rgba(217,119,6,.35);
-      background:#fff7ed;
-      color:#9a3412;
+    .record strong{
+      display:block;line-height:1.4;font-size:.94rem
     }
-
-
-    .tag-historical{
-      border-color:#cbd5e1;
+    .record small{
+      display:block;color:#64748b;
+      margin-top:5px;font-size:.81rem
+    }
+    .notice{
       background:#f8fafc;
-      color:#475569;
+      border-left:4px solid #64748b;
+      border-radius:10px;padding:15px 18px;
+      margin-top:17px
     }
-
-
-    .meta,
-    .doi{
-      font-size:.79rem;
-      color:#64748b;
-      margin-top:.48rem;
-      line-height:1.45;
+    .table-scroll{overflow-x:auto}
+    table{
+      width:100%;border-collapse:collapse;font-size:.91rem
     }
-
-
-    .note{
-      font-size:.82rem;
-      color:var(--text-soft);
-      margin-top:.85rem;
-      max-width:60rem;
+    td,th{
+      padding:11px;text-align:left;
+      vertical-align:top;border-bottom:1px solid var(--border)
     }
-
-
-    .callout{
-      border:1px solid #e5e7eb;
-      background:#f9fafb;
-      border-radius:16px;
-      padding:.88rem .98rem;
-      margin:.8rem 0;
-      color:#374151;
-      font-size:.9rem;
+    th{background:#f8fafc;font-size:.83rem}
+    tr:last-child td{border-bottom:0}
+    details{
+      margin-top:12px;padding:13px 16px;
+      background:#fff;border:1px solid var(--border);
+      border-radius:12px
     }
-
-
-    .callout.blue{
-      border-color:rgba(37,99,235,.25);
-      background:#eff6ff;
-      color:#172554;
-    }
-
-
-    .callout.green{
-      border-color:rgba(22,163,74,.28);
-      background:#ecfdf5;
-      color:#14532d;
-    }
-
-
-    .callout.warning{
-      border-color:rgba(217,119,6,.34);
-      background:#fffbeb;
-      color:#78350f;
-    }
-
-
-    /*
-      Publication status table
-    */
-
-    .status-table{
-      width:100%;
-      border-collapse:collapse;
-      font-size:.9rem;
-    }
-
-
-    .status-table td{
-      padding:.66rem .5rem;
-      border-bottom:1px solid #e5e7eb;
-      vertical-align:top;
-    }
-
-
-    .status-table tr:last-child td{
-      border-bottom:none;
-    }
-
-
-    .status-table td:first-child{
-      width:28%;
-      color:#111827;
-      font-weight:650;
-    }
-
-
-    /*
-      New-release feature
-    */
-
-    .release-feature{
-      background:linear-gradient(
-        145deg,
-        #07152b 0%,
-        #0f2747 58%,
-        #12355f 100%
-      );
-      color:#eaf2ff;
-      border:1px solid rgba(125,211,252,.34);
-      border-radius:24px;
-      padding:1.25rem;
-      box-shadow:0 20px 48px rgba(15,23,42,.20);
-    }
-
-
-    .release-eyebrow{
-      font-size:.76rem;
-      text-transform:uppercase;
-      letter-spacing:.17em;
-      color:#bae6fd;
-      margin-bottom:.42rem;
-    }
-
-
-    .release-feature h2{
-      color:#fff;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(1.55rem,2.45vw,2.2rem);
-      line-height:1.15;
-      margin-bottom:.6rem;
-    }
-
-
-    .release-feature p{
-      color:#d8e5f5;
-      font-size:.92rem;
-      margin-bottom:.65rem;
-    }
-
-
-    /*
-      UFT figure
-    */
-
-    .uft-figure{
-      margin:1rem 0 .2rem;
-      background:#fff;
-      border:1px solid rgba(186,230,253,.46);
+    summary{cursor:pointer;font-weight:700}
+    details .bibliography{margin-top:14px}
+    .dark{
       border-radius:20px;
-      padding:.65rem;
+      background:linear-gradient(135deg,#08172c,#183d66);
+      color:#fff;padding:28px
     }
-
-
-    .uft-figure img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:13px;
+    .dark p{color:#e2e8f0}
+    .dark a:not(.btn){color:#bfdbfe}
+    .citation{
+      padding:13px 15px;background:#f8fafc;
+      border:1px solid var(--border);
+      border-radius:11px;font-size:.9rem;
+      overflow-wrap:anywhere
     }
-
-
-    .uft-figure figcaption{
-      color:#475569;
-      font-size:.81rem;
-      line-height:1.5;
-      padding:.65rem .35rem .2rem;
+    .book{display:flex;gap:18px;align-items:start}
+    .book img{
+      width:118px;height:auto;
+      border-radius:8px;border:1px solid var(--border)
     }
-
-
-    .uft-figure figcaption strong{
-      color:#0f172a;
-    }
-
-
-    /*
-      Featured records
-    */
-
-    .featured-record{
-      border-color:rgba(37,99,235,.32);
-      background:linear-gradient(
-        180deg,
-        #fff 0%,
-        #f8fbff 100%
-      );
-    }
-
-
-    .featured-record.purple{
-      border-color:rgba(124,58,237,.32);
-      background:linear-gradient(
-        180deg,
-        #fff 0%,
-        #fbfaff 100%
-      );
-    }
-
-
-    .featured-record.green{
-      border-color:rgba(22,163,74,.32);
-      background:linear-gradient(
-        180deg,
-        #fff 0%,
-        #f7fef9 100%
-      );
-    }
-
-
-    /*
-      Reading pathway
-    */
-
-    .pathway{
-      display:grid;
-      gap:.78rem;
-    }
-
-
-    .pathway-step{
-      display:grid;
-      grid-template-columns:2.6rem minmax(0,1fr);
-      gap:.8rem;
-      align-items:start;
-      padding:.9rem;
-      border:1px solid #e5e7eb;
-      border-radius:16px;
-      background:#fff;
-    }
-
-
-    .pathway-number{
-      width:2.2rem;
-      height:2.2rem;
-      border-radius:999px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-      color:#1d4ed8;
-      background:#eff6ff;
-      border:1px solid rgba(37,99,235,.25);
-    }
-
-
-    .pathway-number.purple{
-      color:#5b21b6;
-      background:#f5f3ff;
-      border-color:rgba(124,58,237,.25);
-    }
-
-
-    .pathway-number.orange{
-      color:#9a3412;
-      background:#fff7ed;
-      border-color:rgba(234,88,12,.25);
-    }
-
-
-    .pathway-number.green{
-      color:#166534;
-      background:#ecfdf5;
-      border-color:rgba(22,163,74,.25);
-    }
-
-
-    .pathway-step h3{
-      font-size:.98rem;
-      margin-bottom:.18rem;
-      color:#111827;
-    }
-
-
-    .pathway-step p{
-      font-size:.88rem;
-      color:#4b5563;
-      margin-bottom:.2rem;
-    }
-
-
-    /*
-      Publication entries
-    */
-
-    .publication-list{
-      display:grid;
-      gap:.9rem;
-    }
-
-
-    .publication{
-      background:#fff;
-      border:1px solid #e5e7eb;
-      border-radius:17px;
-      padding:1rem;
-      box-shadow:0 7px 20px rgba(15,23,42,.05);
-    }
-
-
-    .publication h3{
-      font-size:1rem;
-      line-height:1.38;
-      color:#111827;
-      margin-bottom:.3rem;
-    }
-
-
-    .publication p{
-      color:#475569;
-      font-size:.87rem;
-      line-height:1.57;
-      margin-bottom:.42rem;
-    }
-
-
-    .publication-meta{
-      color:#64748b;
-      font-size:.79rem;
-      line-height:1.45;
-    }
-
-
-    /*
-      Citation box
-    */
-
-    .citation-box{
-      background:#f8fafc;
-      border:1px solid #e2e8f0;
-      border-radius:14px;
-      padding:.85rem .9rem;
-      font-size:.87rem;
-      color:#334155;
-      margin-top:.75rem;
-      overflow-wrap:anywhere;
-    }
-
-
-    /*
-      Book
-    */
-
-    .book-wrap{
-      display:grid;
-      grid-template-columns:140px minmax(0,1fr);
-      gap:1rem;
-      align-items:start;
-    }
-
-
-    .book-cover{
-      width:140px;
-      border-radius:10px;
-      border:1px solid rgba(15,23,42,.12);
-      background:#fff;
-      overflow:hidden;
-      box-shadow:0 10px 22px rgba(15,23,42,.08);
-    }
-
-
-    .book-cover img{
-      width:100%;
-      display:block;
-    }
-
-
-    @media(max-width:700px){
-
-      .book-wrap{
-        grid-template-columns:1fr;
-      }
-
-    }
-
-
     footer{
-      border-top:1px solid var(--border-soft);
-      margin-top:3rem;
-      padding:1.2rem 1.25rem 1.8rem;
-      font-size:.8rem;
-      color:#6b7280;
-      background:#f9fafb;
+      background:#e8edf4;border-top:1px solid #cbd5e1
     }
-
-
-    .footer-grid{
-      max-width:1100px;
-      margin:0 auto;
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-      justify-content:space-between;
-      align-items:center;
+    .footer{
+      max-width:1140px;margin:auto;padding:24px 20px;
+      display:flex;flex-wrap:wrap;justify-content:space-between;
+      gap:18px;color:#475569;font-size:.84rem
     }
-
-
-    .btn:focus-visible,
-    .nav-links a:focus-visible,
-    .uft-figure a:focus-visible{
-      outline:3px solid #38bdf8;
-      outline-offset:3px;
+    @media(max-width:900px){
+      .grid-3{
+        grid-template-columns:repeat(2,minmax(0,1fr))
+      }
     }
-
+    @media(max-width:690px){
+      .grid-2,.grid-3{grid-template-columns:1fr}
+      .hero{padding:24px}
+      .book{flex-direction:column}
+      main{padding:20px 14px 45px}
+    }
   </style>
-
 </head>
 
-
-
 <body>
-
+<a class="skip" href="#main">Skip to main content</a>
 
 <header>
-
   <div class="nav">
-
-    <div class="logo">
-
-      <div class="logo-icon">
-
-        <img
-          src="apple-touch-icon.png"
-          alt="QDL Physics Institute emblem"
-        />
-
-      </div>
-
-
-      <div>
-
-        <div class="logo-text-main">
-          QDL Physics Institute
-        </div>
-
-        <div class="logo-text-sub">
-          Quantized Dimensional Ledger
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <nav
-      class="nav-links"
-      aria-label="Main navigation"
-    >
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="qdl-in-5-minutes.html">
-        QDL in 5 Minutes
-      </a>
-
-      <a href="research.html">
-        Research Program
-      </a>
-
-      <a
-        href="publications.html"
-        class="nav-active"
-      >
-        Publications
-      </a>
-
-      <a href="resources.html">
-        Resources
-      </a>
-
-      <a href="benefits.html">
-        Benefits
-      </a>
-
-      <a href="institute.html">
-        Institute
-      </a>
-
+    <a class="brand" href="index.html">
+      <img src="apple-touch-icon.png" alt="QDL Physics Institute emblem">
+      <span>
+        <b>QDL Physics Institute</b>
+        <small>Quantized Dimensional Ledger</small>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="qdl-in-5-minutes.html">QDL in 5 Minutes</a>
+      <a href="research.html">Research Program</a>
+      <a class="active" aria-current="page" href="publications.html">Publications</a>
+      <a href="resources.html">Resources</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="institute.html">Institute</a>
     </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="kicker">Scientific Publications · Open Research · October 30, 2026</div>
+  <h1>QDL Publications &amp; Open Research Record</h1>
+  <p class="lead">
+    A documented scholarly and computational record spanning
+    peer-reviewed metrology, dimensional-closure mathematics,
+    reproducible software and datasets, and exploratory
+    foundational physics.
+  </p>
+  <p>
+    The entries below are classified by
+    <strong>publication and evidence status</strong>.
+    A peer-reviewed journal article, a Zenodo monograph,
+    a computational dataset and an internal working manuscript
+    are not equivalent forms of scientific validation.
+  </p>
+  <p>
+    This page preserves historical work without treating
+    the QDC spacetime-substrate hypothesis as experimentally
+    established. The <a href="research.html">Research Program</a>
+    governs the current physical interpretation of earlier records.
+  </p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#peer-reviewed">Peer-Reviewed Publication</a>
+    <a class="btn" href="#mathematical">Mathematical Research</a>
+    <a class="btn" href="#computational">Code &amp; Datasets</a>
+    <a class="btn" href="#historical">UFT &amp; Historical Records</a>
+    <a class="btn" href="#full-bibliography">Full Technical Bibliography</a>
+  </div>
+</section>
+
+<section id="publication-status">
+  <h2>Publication Status and Evidence Classification</h2>
+  <p class="section-intro">
+    The primary source should always be read alongside
+    its date, declared assumptions and review status.
+  </p>
+  <div class="card table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Record class</th>
+          <th>What it establishes</th>
+          <th>What it does not establish</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Peer-reviewed journal article</strong></td>
+          <td>Published scholarship evaluated through the journal's editorial and review process.</td>
+          <td>Independent validation of all downstream software, QDC ontology or physical unification.</td>
+        </tr>
+        <tr>
+          <td><strong>Open mathematical monograph</strong></td>
+          <td>Accessible definitions, proofs and conditional model results for external checking.</td>
+          <td>Journal peer review or experimental necessity.</td>
+        </tr>
+        <tr>
+          <td><strong>Code / dataset / verification archive</strong></td>
+          <td>Reproducible examples, programs and declared-model tests.</td>
+          <td>Independent physical replication or superiority over established tools.</td>
+        </tr>
+        <tr>
+          <td><strong>Conditional physical research</strong></td>
+          <td>Explicit theories and calculations made under specified assumptions.</td>
+          <td>That Nature selects those assumptions.</td>
+        </tr>
+        <tr>
+          <td><strong>Historical or internal manuscript</strong></td>
+          <td>A dated research record and documented development of ideas.</td>
+          <td>A current physical conclusion or public peer-reviewed publication.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="peer-reviewed">
+  <h2>1. Peer-Reviewed Journal Publication</h2>
+  <p class="section-intro">
+    The principal externally published scholarly anchor
+    for the QDL program.
+  </p>
+  <article class="card" style="border-top:4px solid #16a34a">
+    <span class="tag tag-green">Peer-reviewed · Journal article · 2026</span>
+    <h3>
+      The Quantized Dimensional Ledger for Metrology:
+      Dimensional Closure, QMU Ledgers, and the
+      Ontology of Physical Constants
+    </h3>
+    <p>
+      <strong>James D. Bourassa</strong>.
+      <em>Journal of Theoretical and Applied Physics</em>,
+      volume 20, issue 3, pp. 310–318 (2026).
+      Publisher's issue date: June 30, 2026.
+    </p>
+    <p>
+      Introduces QDL's 3L+2F dimensional framework,
+      QMU measurement ledgers and proposed structural
+      treatment of physical constants. The paper's
+      emphasis is conceptual and metrological rather
+      than a new dynamical field equation.
+    </p>
+    <p class="note">
+      Publication of this paper does not constitute
+      independent experimental confirmation of a
+      physical QDC substrate. Technical clarification
+      of ledger interpretation and normalization is
+      tracked separately; no published correction is
+      asserted here.
+    </p>
+    <div class="citation">
+      <strong>Suggested citation:</strong>
+      Bourassa, J. D. (2026).
+      <em>
+        The Quantized Dimensional Ledger for Metrology:
+        Dimensional Closure, QMU Ledgers, and the
+        Ontology of Physical Constants.
+      </em>
+      Journal of Theoretical and Applied Physics,
+      20(3), 310–318.
+      <a href="https://doi.org/10.57647/jtap.2026.2004.05"
+         target="_blank" rel="noopener noreferrer">
+        https://doi.org/10.57647/jtap.2026.2004.05
+      </a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary"
+         href="https://doi.org/10.57647/jtap.2026.2004.05"
+         target="_blank" rel="noopener noreferrer">
+        Publisher Article and DOI
+      </a>
+    </div>
+  </article>
+</section>
+
+<section id="mathematical">
+  <h2>2. Core Mathematical Publications</h2>
+  <p class="section-intro">
+    The most useful mathematical references for evaluating
+    QDL independently of its proposed spacetime ontology.
+  </p>
+
+  <div class="grid-2">
+
+    <article class="card">
+      <span class="tag">Open research monograph · v1.2.1</span>
+      <h3>Primitive Closure and the Architecture of Physical Admissibility</h3>
+      <p>
+        Comprehensive research synthesis connecting
+        declared dimensional closure, structural
+        admissibility, conditional QDC models and
+        explicit open physical questions.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.21813133"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.21813133
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Mathematical research record</span>
+      <h3>Integer Lattice Structure of Dimensional Quantities</h3>
+      <p>
+        Foundational algebraic analysis of QDL's
+        integer-vector representation of dimensional quantities.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.18970320"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.18970320
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Mathematical research record</span>
+      <h3>
+        The Quantized Dimensional Ledger:
+        A Lattice Structure for Dimensional Closure
+        in Physical Theories
+      </h3>
+      <p>
+        An early account of the lattice perspective
+        and declared closure constraints.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.18981850"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.18981850
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Operator classification · Preprint</span>
+      <h3>Ledger-Closure Constraints on the SMEFT</h3>
+      <p>
+        Applies a lattice-theoretic framework to
+        proposed operator exclusions and Wilson-coefficient
+        relations under declared assumptions.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.17780443"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.17780443
+        </a>
+      </p>
+    </article>
 
   </div>
 
-</header>
+  <div class="notice">
+    <strong>Mathematical reading note:</strong>
+    Exact identities such as the rank-four closure
+    parametrization and CONTACT-37 involution follow
+    from specified definitions. Their correctness does
+    not by itself establish novel physics or scientific
+    priority over related existing mathematics.
+  </div>
+</section>
 
+<section id="computational">
+  <h2>3. Computational Companions and Reproducibility</h2>
+  <p class="section-intro">
+    Executable and machine-readable work suitable for
+    targeted independent mathematical or software review.
+  </p>
 
+  <div class="grid-3">
 
-<main>
+    <article class="card">
+      <span class="tag">Computational companion</span>
+      <h3>QDL/QDC Computational Companion I</h3>
+      <p>
+        Finite closure-ledger examples, recurrence
+        structures and related reproducibility controls.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.20777498"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo: 20777498
+        </a>
+      </p>
+    </article>
 
+    <article class="card">
+      <span class="tag">Source-anchored dataset</span>
+      <h3>QDL SMEFT Γ(O) Audit Companion v1.0</h3>
+      <p>
+        A representative subset for closure-vector
+        classification of Warsaw-basis operator mixing
+        and audit categories.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.20357001"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo: 20357001
+        </a>
+      </p>
+    </article>
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
+    <article class="card">
+      <span class="tag">Completion and verification archive</span>
+      <h3>QDL Structural-to-Dynamical Completion Program</h3>
+      <p>
+        Theorem, audit, reproducibility and falsification
+        records documenting declared finite-model tests.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.21753200"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo: 21753200
+        </a>
+      </p>
+    </article>
 
-  <section class="hero">
+  </div>
 
-    <div class="hero-kicker">
-      Peer Review · Monographs · Zenodo · Datasets · Reproducibility
+  <div class="card" style="margin-top:16px">
+    <h3>Public Calculator and Measurement Integrity Development</h3>
+    <p>
+      The <a href="qdl-calculator.html">QDL Admissibility Calculator</a>
+      is an interactive demonstration. Later Measurement
+      Integrity Engine prototypes include internally tested
+      structural rules, calibration workflows and audit traces.
+      These prototypes are research software; independent
+      comparative performance against strong conventional
+      validators has not been established.
+    </p>
+    <p class="note">
+      The U.S. provisional patent filing of May 3, 2026,
+      with computer-program appendix, is a documented
+      intellectual-property filing, not a peer-reviewed
+      publication or issued patent.
+    </p>
+  </div>
+</section>
+
+<section id="historical">
+  <h2>4. Unified-Field Syntheses and Historical Research Records</h2>
+  <p class="section-intro">
+    Important program history, organized by publication
+    status rather than implied physical completion.
+  </p>
+
+  <div class="grid-2">
+
+    <article class="card">
+      <span class="tag tag-amber">Open historical research · August 2026</span>
+      <h3>Toward a QDL Unified Field Theory</h3>
+      <p>
+        Consolidated Theorems, Computational Gates,
+        Reproducibility Records, and Open Physical-Closure
+        Problems, version V1.0. A frozen historical snapshot,
+        not the current October scientific conclusion.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.21894736"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.21894736
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag tag-amber">Earlier open monograph</span>
+      <h3>Physical Law as the Minimal Architecture of Persistence Under Closure</h3>
+      <p>
+        Historical theoretical synthesis on predictive
+        compression, persistence under closure,
+        ontology and vacuum energy.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.20940986"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.20940986
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag tag-amber">Historical conditional model</span>
+      <h3>The QDC Completion Theorem</h3>
+      <p>
+        Earlier synthesis of matter-basis minimality,
+        family automorphisms, charged-lepton closure
+        and gravitational recurrence. The title describes
+        its original model scope, not a completed UFT theorem.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.20692677"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo DOI: 10.5281/zenodo.20692677
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag tag-grey">Internal working reference · October 27, 2026</span>
+      <h3>Quantized Dimensional Ledger Unified Field Theory — Version 2.1</h3>
+      <p>
+        <em>Complete Mathematical and Physical-Status Synthesis.</em>
+        Integrates CONTACT-37, Phase IV Emergent Universality,
+        finite spectra, particle and gravity models, and reasons
+        physical QDC identification remains open.
+      </p>
+      <p class="note">
+        A complete internal manuscript exists. This page
+        does not describe it as peer-reviewed or provide
+        an unverified public DOI. Qualified evaluators
+        may request the current reference from the author.
+      </p>
+    </article>
+
+  </div>
+
+  <div class="notice">
+    <strong>October synthesis note:</strong>
+    The historical program also records a V1.6 synthesis
+    and later V1.7/V2.0 working editions.
+    Public-deposit metadata for the reported V1.6 DOI
+    was not independently verified in this page update;
+    rather than give an uncertain public link, the
+    Institute's author can provide the provenance record
+    on request.
+  </div>
+</section>
+
+<section id="full-bibliography">
+  <h2>5. Selected Technical Bibliography</h2>
+  <p class="section-intro">
+    The following original DOI links from the earlier
+    Publications page are retained. They document
+    research development under each work's original
+    assumptions. Expansion of an entry does not
+    imply peer review or external physical validation.
+  </p>
+
+  <details open>
+    <summary>
+      Dimensional closure, numerical ledgers,
+      operators and research methods
+    </summary>
+
+    <div class="bibliography">
+
+      <div class="record">
+        <strong>
+          From Closure Admissibility to Physical Selection:
+          A Roadmap for the Quantized Dimensional Ledger Program
+        </strong>
+        <small>
+          Research roadmap ·
+          <a href="https://doi.org/10.5281/zenodo.20461142">
+            10.5281/zenodo.20461142
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          The Quantized Dimensional Ledger as a Structural
+          and Numerical Closure Program for Fundamental Physics
+        </strong>
+        <small>
+          Review and roadmap ·
+          <a href="https://doi.org/10.5281/zenodo.20076081">
+            10.5281/zenodo.20076081
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          QDL Numerical Ledger Companion: Reference Ledger,
+          Closure Targets, and Executable Checks
+        </strong>
+        <small>
+          Numerical companion ·
+          <a href="https://doi.org/10.5281/zenodo.20086069">
+            10.5281/zenodo.20086069
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          QDL Operator Governance as a Reproducible SMEFT Matrix Audit
+        </strong>
+        <small>
+          Conditional operator audit ·
+          <a href="https://doi.org/10.5281/zenodo.20087107">
+            10.5281/zenodo.20087107
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          Lessons from the QDL Closure Sequence:
+          Strong Claims, Open Residuals, and Falsification Tests
+        </strong>
+        <small>
+          Historical methodological synthesis ·
+          <a href="https://doi.org/10.5281/zenodo.20098982">
+            10.5281/zenodo.20098982
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          The Neutral Matching Unit in QDL Closure Grammar
+        </strong>
+        <small>
+          Selected binary–ternary sector and Z6 grading study ·
+          <a href="https://doi.org/10.5281/zenodo.20098523">
+            10.5281/zenodo.20098523
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          Quantized Dimensional Closure:
+          Compton Realization and Operator Sector Selection
+        </strong>
+        <small>
+          Dimensional and conditional operator analysis ·
+          <a href="https://doi.org/10.5281/zenodo.20100436">
+            10.5281/zenodo.20100436
+          </a>
+        </small>
+      </div>
+
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      Particle representations, spectra and electroweak
+      or flavor studies
+    </summary>
+
+    <div class="bibliography">
+
+      <div class="record">
+        <strong>
+          QDL Spectrum Selection as a Conditional Standard Model Theorem
+        </strong>
+        <small>
+          Gauge seeds, hypercharge and one-generation matter ·
+          <a href="https://doi.org/10.5281/zenodo.20086341">
+            10.5281/zenodo.20086341
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>QDL Electroweak Numerical Closure</strong>
+        <small>
+          Scheme-declared reconstruction study ·
+          <a href="https://doi.org/10.5281/zenodo.20089936">
+            10.5281/zenodo.20089936
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>QDL Flavor Closure as a Conditional Rank Theorem</strong>
+        <small>
+          Three generations, Yukawa depth and mixing ·
+          <a href="https://doi.org/10.5281/zenodo.20090053">
+            10.5281/zenodo.20090053
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          QDL Charged-Lepton Mass Spectrum:
+          A Synthesis of Derived Structure and
+          Phenomenological Radial Closure
+        </strong>
+        <small>
+          Phenomenological reconstruction,
+          not a confirmed blind prediction ·
+          <a href="https://doi.org/10.5281/zenodo.20328260">
+            10.5281/zenodo.20328260
+          </a>
+        </small>
+      </div>
+
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      QDC geometry, gravitational and cosmological models
+    </summary>
+
+    <div class="bibliography">
+
+      <div class="record">
+        <strong>
+          Planck-Scale Fluctuation Closure as the
+          Substrate Interpretation of the Quantized Dimensional Ledger
+        </strong>
+        <small>
+          Earlier conditional substrate capstone ·
+          <a href="https://doi.org/10.5281/zenodo.20346814">
+            10.5281/zenodo.20346814
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          The Toroidal QDC Knot:
+          A Closure-Stable Geometric Substrate Mode
+        </strong>
+        <small>
+          Earlier toroidal model ·
+          <a href="https://doi.org/10.5281/zenodo.20367493">
+            10.5281/zenodo.20367493
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          The Quantized Dimensional Cell in Gravitational Dynamics:
+          GM, Keplerian Closure, and Dimensional Admissibility
+        </strong>
+        <small>
+          Dimensional interpretation,
+          not a new gravity measurement ·
+          <a href="https://doi.org/10.5281/zenodo.20026718">
+            10.5281/zenodo.20026718
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>QDL Closure of Classical Gravity</strong>
+        <small>
+          Conditional Einstein–Hilbert, Bianchi
+          and geodesic model studies ·
+          <a href="https://doi.org/10.5281/zenodo.20088462">
+            10.5281/zenodo.20088462
+          </a>
+        </small>
+      </div>
+
+      <div class="record">
+        <strong>
+          QDL Cosmological Closure as a Horizon-Screened Curvature Ansatz
+        </strong>
+        <small>
+          Conditional vacuum-energy and dark-sector model ·
+          <a href="https://doi.org/10.5281/zenodo.20090219">
+            10.5281/zenodo.20090219
+          </a>
+        </small>
+      </div>
+
+    </div>
+  </details>
+</section>
+
+<section id="benchmarks">
+  <h2>6. Benchmarks and Null Tests</h2>
+  <p class="section-intro">
+    Public-data and methodology studies, separate
+    from claims of novel physical effects.
+  </p>
+
+  <div class="grid-3">
+
+    <article class="card">
+      <span class="tag">Benchmark archive</span>
+      <h3>Benchmarks &amp; Null Tests</h3>
+      <p>Preserved model-evaluation and falsification materials.</p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.18057668"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo: 18057668
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Public-data benchmark</span>
+      <h3>NV ODMR Benchmark</h3>
+      <p>
+        A reusable optical-detection magnetic-resonance
+        analysis example.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.18069870"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo: 18069870
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">Residual-first benchmark</span>
+      <h3>Optical Cavity Resonance Traces</h3>
+      <p>
+        Public-data example emphasizing residual
+        comparisons and model adequacy.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.18076864"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo: 18076864
+        </a>
+      </p>
+    </article>
+
+  </div>
+
+  <p class="note">
+    The September Historical Predictions Ledger and
+    HP-01 prospective test are maintained as scientific
+    prediction-governance work; they are not counted here
+    as peer-reviewed experimental confirmations.
+    Refer to
+    <a href="research.html#predictions">
+      Current Research: Predictions
+    </a>.
+  </p>
+</section>
+
+<section id="books">
+  <h2>7. Books and Accessible Introductions</h2>
+
+  <article class="card book">
+
+    <img src="book-cover.png"
+         alt="Cover of The Quantized Dimensional Ledger"
+         loading="lazy">
+
+    <div>
+      <span class="tag">Book-length introduction</span>
+      <h3>
+        The Quantized Dimensional Ledger:
+        A Structural Framework for Dimensional Coherence in Physics
+      </h3>
+      <p>
+        A reader-facing introduction to the QDL framework
+        and its proposed interpretations.
+        Read alongside the October 2026
+        <a href="research.html">scientific-status statement</a>.
+      </p>
+      <p>
+        <a href="https://doi.org/10.5281/zenodo.18902770"
+           target="_blank" rel="noopener noreferrer">
+          Zenodo book record: 18902770
+        </a>
+        ·
+        <a href="https://www.amazon.com/dp/B0GHZJHT36"
+           target="_blank" rel="noopener noreferrer">
+          Amazon Kindle listing
+        </a>
+      </p>
     </div>
 
+  </article>
+</section>
 
-    <h1 class="hero-title">
-      QDL Publications &amp; Open Research Record
-    </h1>
+<section id="reviewer-path">
+  <h2>Recommended Reading Path for Independent Review</h2>
 
+  <div class="card">
+    <ol>
+      <li>
+        <strong>Published foundation:</strong>
+        <a href="https://doi.org/10.57647/jtap.2026.2004.05">
+          JTAP metrology article
+        </a>
+        and any subsequent publisher-posted clarification.
+      </li>
+      <li>
+        <strong>Exact mathematical basis:</strong>
+        <a href="https://doi.org/10.5281/zenodo.21813133">
+          Primitive Closure
+        </a>
+        and
+        <a href="https://doi.org/10.5281/zenodo.18970320">
+          Integer Lattice Structure
+        </a>.
+      </li>
+      <li>
+        <strong>Computation and auditability:</strong>
+        <a href="https://doi.org/10.5281/zenodo.20777498">
+          Computational Companion
+        </a>
+        and
+        <a href="https://doi.org/10.5281/zenodo.20357001">
+          SMEFT audit dataset
+        </a>.
+      </li>
+      <li>
+        <strong>Historical physics record:</strong>
+        <a href="https://doi.org/10.5281/zenodo.21894736">
+          August V1.0 UFT archive
+        </a>,
+        then the October 27 V2.1 internal synthesis by request.
+      </li>
+      <li>
+        <strong>Current claims and proposed independent tests:</strong>
+        <a href="research.html">Research Program</a>
+        and the frozen prediction definitions.
+      </li>
+    </ol>
+    <p class="note">
+      Reviewers should not interpret mathematical
+      correspondences, benchmark agreement or
+      internal program milestones as experimentally
+      confirmed physical unification.
+    </p>
+  </div>
+</section>
 
-    <p class="hero-sub">
+<section id="independent-review">
+  <div class="dark">
 
-      This page provides the public bibliographic and research-archive
-      record of the QDL Physics Institute.
+    <h2>Research Access and Independent Evaluation</h2>
 
-      It includes peer-reviewed work,
-      major research syntheses,
-      Zenodo datasets,
-      theorem and completion archives,
-      computational companions,
-      technical papers,
-      benchmarks,
-      books,
-      and earlier foundational records.
-
+    <p>
+      The Institute welcomes independent written assessment
+      of exact mathematical results, source code, datasets,
+      structural-admissibility methods and carefully delimited
+      physical hypotheses. A useful first assessment would
+      distinguish mathematical correctness, software
+      reproducibility, novelty over prior art and demonstrated
+      value relative to conventional methods.
     </p>
 
-
-    <p class="hero-sub">
-
-      The current QDL/QDC publication hierarchy is centered on three
-      primary anchors:
-
-      the peer-reviewed metrology foundation,
-
-      <strong>
-        <em>
-          Primitive Closure and the Architecture of Physical Admissibility
-        </em>
-      </strong>,
-
-      and the frozen consolidated record
-
-      <strong>
-        <em>
-          Toward a QDL Unified Field Theory
-        </em>.
-      </strong>
-
+    <p>
+      <strong>Current physical-status boundary:</strong>
+      no independently identified physical QDC carrier,
+      uniquely selected physical parent law or independently
+      confirmed QDL-specific no-fit experimental prediction.
     </p>
 
-
-    <p class="hero-sub">
-
-      The living scientific interpretation of these publications is
-      maintained on the
-      <a href="research.html">
-        Research Program
+    <div class="actions">
+      <a class="btn btn-primary"
+         href="mailto:james.bourassa@qdlphysics.org?subject=QDL%20Research%20Publication%20or%20Technical%20Review">
+        Contact the Institute
       </a>
-      page.
-
-      Older papers remain part of the public development record but
-      should be read in light of the current claim-status boundaries.
-
-    </p>
-
-
-    <div class="hero-meta">
-
-      <span class="hero-chip">
-        Peer-reviewed publication
-      </span>
-
-      <span class="hero-chip">
-        Primitive Closure
-      </span>
-
-      <span class="hero-chip">
-        Consolidated UFT record
-      </span>
-
-      <span class="hero-chip">
-        Completion-Gate archives
-      </span>
-
-      <span class="hero-chip">
-        Computational companions
-      </span>
-
-      <span class="hero-chip">
-        Technical papers
-      </span>
-
-      <span class="hero-chip">
-        Datasets
-      </span>
-
-      <span class="hero-chip">
-        Benchmarks
-      </span>
-
-      <span class="hero-chip">
-        Reproducibility
-      </span>
-
-      <span class="hero-chip">
-        Books
-      </span>
-
-    </div>
-
-
-    <div class="hero-actions">
-
-      <a
-        class="btn btn-primary"
-        href="#current-anchors"
-      >
-        Current Major Records
+      <a class="btn" href="resources.html">
+        Technical Resources
       </a>
-
-      <a
-        class="btn btn-purple"
-        href="#primitive-closure"
-      >
-        Primitive Closure
-      </a>
-
-      <a
-        class="btn btn-orange"
-        href="#uft-record"
-      >
-        UFT Research Record
-      </a>
-
-      <a
-        class="btn"
-        href="#technical-record"
-      >
-        Technical Record
-      </a>
-
-      <a
-        class="btn"
-        href="#benchmarks"
-      >
-        Benchmarks
-      </a>
-
-      <a
-        class="btn"
-        href="https://zenodo.org/communities/qdl-physics-institute/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <a class="btn"
+         href="https://zenodo.org/communities/qdl-physics-institute/"
+         target="_blank" rel="noopener noreferrer">
         Zenodo Community
       </a>
-
+      <a class="btn"
+         href="https://orcid.org/0009-0008-0155-0051"
+         target="_blank" rel="noopener noreferrer">
+        Author ORCID
+      </a>
     </div>
 
-  </section>
-
-
-
-  <!-- ============================================================
-       CURRENT PUBLICATION ARCHITECTURE
-       ============================================================ -->
-
-  <section
-    class="section"
-    style="margin-top:0;"
-  >
-
-    <div class="release-feature">
-
-      <div class="release-eyebrow">
-        Current publication architecture · August 2026
-      </div>
-
-
-      <h2>
-        From Peer-Reviewed Foundation to Unified-Field Completion Record
-      </h2>
-
-
-      <p>
-
-        The QDL publication record now has a clearer hierarchy than
-        earlier versions of this page.
-
-        The metrology article supplies the peer-reviewed QDL foundation.
-
-        <em>
-          Primitive Closure and the Architecture of Physical Admissibility
-        </em>
-        provides the major long-form synthesis.
-
-        <em>
-          Toward a QDL Unified Field Theory
-        </em>
-        provides the frozen theorem,
-        gate,
-        reproducibility,
-        and open-problem snapshot.
-
-        The living Completion-Gate Series records subsequent progress.
-
-      </p>
-
-
-      <figure class="uft-figure">
-
-        <a
-          href="qdl-uft-candidate-2026.png"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Open full-size Current QDL Unified Field Theory Candidate infographic"
-        >
-
-          <img
-            src="qdl-uft-candidate-2026.png"
-            alt="Current QDL unified-field candidate architecture showing QDL Architecture, selected QDC Master Core, structural completion, shared-field recurrence geometry, and conditional particle-capacity interpretations."
-            loading="lazy"
-            decoding="async"
-          />
-
-        </a>
-
-
-        <figcaption>
-
-          <strong>
-            Current QDL/QDC unified-field candidate.
-          </strong>
-
-          This is the preferred current high-level visual for the
-          research program.
-
-          Electron,
-          proton,
-          and neutron labels represent present model interpretations,
-          not experimentally established QDC ontology.
-
-          Unique amplitude normalization and complete phenomenological
-          closure remain open.
-
-        </figcaption>
-
-      </figure>
-
-
-      <div class="btn-row">
-
-        <a
-          class="btn btn-primary"
-          href="research.html"
-        >
-          Current Research Status
-        </a>
-
-        <a
-          class="btn"
-          href="qdl-uft-candidate-2026.png"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Open Full-Size Infographic
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       STATUS MAP
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Publication Status Map
-      </h2>
-
-      <p class="section-kicker">
-        Different records carry different levels of scientific status.
-      </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <table class="status-table">
-
-
-        <tr>
-
-          <td>
-            Peer-reviewed work
-          </td>
-
-          <td>
-
-            The
-            <em>
-              Journal of Theoretical and Applied Physics
-            </em>
-            metrology article is the current peer-reviewed journal anchor
-            for QDL.
-
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            Major synthesis
-          </td>
-
-          <td>
-
-            <em>
-              Primitive Closure and the Architecture of Physical Admissibility
-            </em>
-            is the principal current long-form QDL synthesis.
-
-            It is an open Zenodo scholarly record,
-            not a peer-reviewed journal article.
-
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            Consolidated UFT record
-          </td>
-
-          <td>
-
-            <em>
-              Toward a QDL Unified Field Theory
-            </em>
-            is a frozen Version V1.0 dataset / research archive
-            consolidating theorems,
-            computational gates,
-            reproducibility records,
-            and open physical-closure problems.
-
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            Completion archives
-          </td>
-
-          <td>
-
-            QDL/QDC completion and computational records preserve
-            theorem,
-            audit,
-            falsification,
-            verifier,
-            and machine-readable evidence.
-
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            Technical Zenodo papers
-          </td>
-
-          <td>
-
-            Earlier QDL papers document the evolution of the program
-            across spectrum selection,
-            electroweak and flavor closure,
-            operator governance,
-            gravity,
-            cosmology,
-            QDC realization,
-            and related branches.
-
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            Benchmarks
-          </td>
-
-          <td>
-
-            Executed benchmark records are methodological or residual-first
-            studies.
-
-            They do not automatically constitute evidence for a new
-            physical effect.
-
-          </td>
-
-        </tr>
-
-
-        <tr>
-
-          <td>
-            Living scientific status
-          </td>
-
-          <td>
-
-            The
-            <a href="research.html">
-              Research Program
-            </a>
-            controls the current interpretation of the archive,
-            especially where later Completion Gates have changed or
-            narrowed earlier claims.
-
-          </td>
-
-        </tr>
-
-
-      </table>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       CURRENT MAJOR ANCHORS
-       ============================================================ -->
-
-  <section
-    class="section"
-    id="current-anchors"
-  >
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Current Major Research Anchors
-      </h2>
-
-      <p class="section-kicker">
-        The four records most useful for understanding the present program.
-      </p>
-
-    </div>
-
-
-    <div class="grid-2">
-
-
-      <!-- PEER REVIEWED -->
-
-      <article class="card featured-record green">
-
-        <div class="tagrow">
-
-          <span class="tag tag-peer">
-            Peer-reviewed
-          </span>
-
-          <span class="tag">
-            Metrology
-          </span>
-
-          <span class="tag">
-            2026
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.57647/jtap.2026.2004.05"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Quantized Dimensional Ledger for Metrology:
-            Dimensional Closure, QMU Ledgers,
-            and the Ontology of Physical Constants
-          </a>
-
-        </div>
-
-
-        <p>
-
-          The first peer-reviewed journal anchor for QDL.
-
-          This paper develops dimensional closure,
-          QMU ledgers,
-          measurement relations,
-          and the structural interpretation of physical constants.
-
-        </p>
-
-
-        <div class="doi">
-          Journal of Theoretical and Applied Physics · 2026 ·
-          DOI: 10.57647/jtap.2026.2004.05
-        </div>
-
-
-        <div class="btn-row">
-
-          <a
-            class="btn btn-primary"
-            href="https://doi.org/10.57647/jtap.2026.2004.05"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Open Published Article
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- PRIMITIVE CLOSURE -->
-
-      <article
-        class="card featured-record purple"
-        id="primitive-closure"
-      >
-
-        <div class="tagrow">
-
-          <span class="tag tag-purple">
-            Major synthesis
-          </span>
-
-          <span class="tag">
-            Version 1.2.1
-          </span>
-
-          <span class="tag">
-            Open Access
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.21813133"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Primitive Closure and the Architecture of Physical Admissibility
-          </a>
-
-        </div>
-
-
-        <p>
-
-          The principal current long-form synthesis of the QDL research
-          program.
-
-          It brings together primitive closure,
-          structural admissibility,
-          QDL/QDC architecture,
-          recurrence,
-          completion physics,
-          particle capacity,
-          gravity,
-          claim boundaries,
-          and open research gates.
-
-        </p>
-
-
-        <div class="doi">
-          Bourassa, J. D. (2026) · Zenodo · Version 1.2.1 ·
-          DOI: 10.5281/zenodo.21813133
-        </div>
-
-
-        <div class="citation-box">
-
-          <strong>
-            Suggested citation:
-          </strong>
-          <br/>
-
-          Bourassa, J. D. (2026).
-          <em>
-            Primitive Closure and the Architecture of Physical Admissibility
-          </em>
-          (Version 1.2.1).
-          Zenodo.
-          https://doi.org/10.5281/zenodo.21813133
-
-        </div>
-
-
-        <div class="btn-row">
-
-          <a
-            class="btn btn-purple"
-            href="https://doi.org/10.5281/zenodo.21813133"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Open Primitive Closure
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- UFT RECORD -->
-
-      <article
-        class="card featured-record"
-        id="uft-record"
-      >
-
-        <div class="tagrow">
-
-          <span class="tag tag-orange">
-            Consolidated UFT record
-          </span>
-
-          <span class="tag">
-            Dataset
-          </span>
-
-          <span class="tag">
-            Version V1.0
-          </span>
-
-          <span class="tag">
-            August 10, 2026
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.21894736"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Toward a QDL Unified Field Theory:
-            Consolidated Theorems,
-            Computational Gates,
-            Reproducibility Records,
-            and Open Physical-Closure Problems
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Frozen public status record of the present QDL/QDC
-          unified-field program.
-
-          It consolidates architecture,
-          constitutive completion,
-          particle and gravity status,
-          computational gates,
-          quantum-measure work,
-          reproducibility records,
-          claim-strength boundaries,
-          and open physical-closure problems.
-
-        </p>
-
-
-        <p class="callout warning">
-
-          The archive presents QDL/QDC as a
-          <strong>
-            conditional unified-field candidate
-          </strong>,
-          not as a completed or experimentally established
-          unified field theory.
-
-        </p>
-
-
-        <div class="doi">
-          Bourassa, J. D. (2026) · Zenodo · Version V1.0 ·
-          DOI: 10.5281/zenodo.21894736
-        </div>
-
-
-        <div class="citation-box">
-
-          <strong>
-            Suggested citation:
-          </strong>
-          <br/>
-
-          Bourassa, J. D. (2026).
-          <em>
-            Toward a QDL Unified Field Theory:
-            Consolidated Theorems,
-            Computational Gates,
-            Reproducibility Records,
-            and Open Physical-Closure Problems
-          </em>
-          (Version V1.0) [Dataset].
-          Zenodo.
-          https://doi.org/10.5281/zenodo.21894736
-
-        </div>
-
-
-        <div class="btn-row">
-
-          <a
-            class="btn btn-orange"
-            href="https://doi.org/10.5281/zenodo.21894736"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Open UFT Research Record
-          </a>
-
-          <a
-            class="btn"
-            href="research.html"
-          >
-            Current Live Status
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- STRUCTURAL TO DYNAMICAL -->
-
-      <article class="card featured-record">
-
-        <div class="tagrow">
-
-          <span class="tag tag-executed">
-            Completion archive
-          </span>
-
-          <span class="tag">
-            Reproducibility
-          </span>
-
-          <span class="tag">
-            Falsification
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.21753200"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Structural-to-Dynamical Completion Program:
-            Theorem, Audit, Reproducibility, and Falsification Archive
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Public theorem and evidence archive documenting the
-          structural-to-dynamical completion program,
-          including frozen gate logic,
-          reproducibility records,
-          and explicit failure boundaries.
-
-        </p>
-
-
-        <div class="doi">
-          Zenodo · Version V1.0 ·
-          DOI: 10.5281/zenodo.21753200
-        </div>
-
-
-        <div class="btn-row">
-
-          <a
-            class="btn btn-primary"
-            href="https://doi.org/10.5281/zenodo.21753200"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Open Completion Archive
-          </a>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       COMPUTATIONAL COMPANION
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Current Computational &amp; Reproducibility Records
-      </h2>
-
-      <p class="section-kicker">
-        Machine-readable and audit-oriented companions to the research program.
-      </p>
-
-    </div>
-
-
-    <div class="grid-2">
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-executed">
-            Computational companion
-          </span>
-
-          <span class="tag">
-            Dataset
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20777498"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL/QDC Computational Companion I
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Public computational companion containing finite closure ledgers,
-          recurrence structures,
-          ordered-pair phase domains,
-          QDC balance,
-          baryon charge residues,
-          and related reproducibility controls.
-
-        </p>
-
-
-        <div class="doi">
-          Zenodo · Version 1.0 ·
-          DOI: 10.5281/zenodo.20777498
-        </div>
-
-
-        <div class="btn-row">
-
-          <a
-            class="btn btn-primary"
-            href="https://doi.org/10.5281/zenodo.20777498"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Open Computational Companion
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Operator audit
-          </span>
-
-          <span class="tag">
-            Dataset
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20357001"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL SMEFT Γ(O) Audit Companion v1.0:
-            A Representative Source-Anchored Subset for
-            Closure-Vector Classification of Warsaw-Basis Operator Mixing
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Machine-readable source-anchored audit subset for
-          closure-vector classification of SMEFT operator mixing,
-          including verification taxonomy and reproducible operator records.
-
-        </p>
-
-
-        <div class="doi">
-          Zenodo dataset ·
-          DOI: 10.5281/zenodo.20357001
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       RECOMMENDED READING PATH
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Recommended Reading Path
-      </h2>
-
-      <p class="section-kicker">
-        A current five-step route through the QDL publication record.
-      </p>
-
-    </div>
-
-
-    <div
-      class="card"
-      style="
-        border-color:rgba(37,99,235,.34);
-        background:#f8fbff;
-      "
-    >
-
-      <div class="pathway">
-
-
-        <div class="pathway-step">
-
-          <div class="pathway-number">
-            1
-          </div>
-
-          <div>
-
-            <h3>
-              <a
-                href="https://doi.org/10.57647/jtap.2026.2004.05"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                The Quantized Dimensional Ledger for Metrology
-              </a>
-            </h3>
-
-            <p>
-
-              Start with the peer-reviewed QDL foundation:
-              dimensional closure,
-              QMU ledgers,
-              constants,
-              and measurement relations.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="pathway-step">
-
-          <div class="pathway-number purple">
-            2
-          </div>
-
-          <div>
-
-            <h3>
-
-              <a
-                href="https://doi.org/10.5281/zenodo.21813133"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Primitive Closure and the Architecture of Physical Admissibility
-              </a>
-
-            </h3>
-
-            <p>
-
-              Use the major synthesis for the broadest integrated account
-              of primitive closure,
-              QDL/QDC architecture,
-              physical admissibility,
-              and completion physics.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="pathway-step">
-
-          <div class="pathway-number orange">
-            3
-          </div>
-
-          <div>
-
-            <h3>
-
-              <a
-                href="https://doi.org/10.5281/zenodo.21894736"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Toward a QDL Unified Field Theory
-              </a>
-
-            </h3>
-
-            <p>
-
-              Read the frozen V1.0 theorem,
-              gate,
-              reproducibility,
-              status,
-              and open-problem record.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="pathway-step">
-
-          <div class="pathway-number green">
-            4
-          </div>
-
-          <div>
-
-            <h3>
-
-              <a
-                href="https://doi.org/10.5281/zenodo.21753200"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Structural-to-Dynamical Completion Program
-              </a>
-
-            </h3>
-
-            <p>
-
-              Examine the theorem,
-              audit,
-              reproducibility,
-              and falsification archive supporting the active
-              completion program.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="pathway-step">
-
-          <div class="pathway-number">
-            5
-          </div>
-
-          <div>
-
-            <h3>
-              <a href="research.html">
-                Living Completion-Gate Status
-              </a>
-            </h3>
-
-            <p>
-
-              Use the Research Program page for scientific progress
-              after the frozen UFT V1.0 cutoff.
-
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       EARLIER MAJOR SYNTHESIS
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Earlier Major Synthesis
-      </h2>
-
-      <p class="section-kicker">
-        An important predecessor to the current Primitive Closure synthesis.
-      </p>
-
-    </div>
-
-
-    <article class="card">
-
-      <div class="tagrow">
-
-        <span class="tag tag-historical">
-          Earlier synthesis
-        </span>
-
-        <span class="tag">
-          June 2026
-        </span>
-
-        <span class="tag">
-          Open research monograph
-        </span>
-
-      </div>
-
-
-      <div class="card-title">
-
-        <a
-          href="https://doi.org/10.5281/zenodo.20940986"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Physical Law as the Minimal Architecture of Persistence Under Closure:
-          Predictive Compression,
-          Ontological Unification,
-          and the Vacuum-Energy Problem
-        </a>
-
-      </div>
-
-
-      <p>
-
-        This monograph was an important intermediate synthesis of the
-        QDL program and introduced the broader persistence-under-closure
-        framing and predictive-compression standard.
-
-      </p>
-
-
-      <p>
-
-        It remains part of the research history,
-        but the more recent
-        <em>
-          Primitive Closure and the Architecture of Physical Admissibility
-        </em>
-        is now the preferred comprehensive synthesis for the current program.
-
-      </p>
-
-
-      <div class="doi">
-        DOI: 10.5281/zenodo.20940986
-      </div>
-
-
-      <div class="btn-row">
-
-        <a
-          class="btn"
-          href="https://doi.org/10.5281/zenodo.20940986"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Open Earlier Monograph
-        </a>
-
-      </div>
-
-    </article>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       TECHNICAL RECORD
-       ============================================================ -->
-
-  <section
-    class="section"
-    id="technical-record"
-  >
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Selected Technical QDL Record
-      </h2>
-
-      <p class="section-kicker">
-        Major branch-specific papers supporting the broader program.
-      </p>
-
-    </div>
-
-
-    <div class="publication-list">
-
-
-      <!-- ROADMAP -->
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Roadmap
-          </span>
-
-          <span class="tag">
-            Program architecture
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20461142"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            From Closure Admissibility to Physical Selection:
-            A Roadmap for the Quantized Dimensional Ledger Program
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier program-architecture synthesis connecting closure
-          admissibility,
-          physical selection,
-          claim-status firewalls,
-          failure modes,
-          and validation paths.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20461142
-        </div>
-
-      </article>
-
-
-
-      <!-- SUBSTRATE CAPSTONE -->
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Substrate architecture
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20346814"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Planck-Scale Fluctuation Closure as the Substrate Interpretation
-            of the Quantized Dimensional Ledger:
-            A QDL Capstone on Physical Persistence,
-            Compton–Gravity Thresholds,
-            Mass-Ratio Closure,
-            Vacuum Filtering,
-            and EFT Audits
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier substrate-capstone formulation of QDL as a
-          residual-first closure-admissibility theory of physical persistence.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20346814
-        </div>
-
-      </article>
-
-
-
-      <!-- TOROIDAL -->
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            QDC geometry
-          </span>
-
-          <span class="tag">
-            Toroidal recurrence
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20367493"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Toroidal QDC Knot:
-            A Closure-Stable Geometric Substrate Mode
-            for the Quantized Dimensional Ledger
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Compact two-cycle toroidal recurrence construction
-          used in an earlier QDL/QDC substrate branch.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20367493
-        </div>
-
-      </article>
-
-
-
-      <!-- QDC COMPLETION THEOREM -->
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-orange">
-            Completion theorem
-          </span>
-
-          <span class="tag">
-            June 2026
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20692677"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The QDC Completion Theorem:
-            Matter-Basis Minimality,
-            Three-Family Automorphism,
-            Charged-Lepton Closure,
-            and Gravitational Recurrence
-            in the Quantized Dimensional Ledger
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier theorem-level completion map connecting QDC architecture
-          to Standard-Model admissibility,
-          family structure,
-          charged-lepton closure,
-          gravitational recurrence,
-          and explicit remaining proof gates.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20692677
-        </div>
-
-      </article>
-
-
-
-      <!-- MASS SPECTRUM -->
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Mass spectrum
-          </span>
-
-          <span class="tag">
-            Charged leptons
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20328260"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Charged-Lepton Mass Spectrum:
-            A Synthesis of Derived Structure
-            and Phenomenological Radial Closure
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Numerical mass-spectrum application separating
-          occupancy-amplitude closure,
-          charged-lepton geometry,
-          relational phase structure,
-          and phenomenological radial closure.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20328260
-        </div>
-
-      </article>
-
-
-
-      <!-- GRAVITATIONAL QDC -->
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            QDC realization
-          </span>
-
-          <span class="tag">
-            Gravity
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20026718"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Quantized Dimensional Cell in Gravitational Dynamics:
-            GM, Keplerian Closure, and Dimensional Admissibility
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Develops the dimensional structure of
-          μ = GM,
-          Keplerian closure,
-          and a physically concrete QDC-form gravitational realization.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20026718
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       EARLIER CORE CLOSURE SEQUENCE
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Earlier Core Closure Sequence
-      </h2>
-
-      <p class="section-kicker">
-        Technical papers documenting the development of the QDL closure program.
-      </p>
-
-    </div>
-
-
-    <div class="publication-list">
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-historical">
-            Earlier roadmap
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20076081"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Quantized Dimensional Ledger as a Structural
-            and Numerical Closure Program for Fundamental Physics:
-            A Review and Roadmap for Spectrum,
-            Constants,
-            Operators,
-            Gravity,
-            Cosmology,
-            and Residual Tests
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier review and roadmap organizing QDL around
-          structural closure,
-          numerical closure,
-          residual tests,
-          spectrum,
-          constants,
-          operators,
-          gravity,
-          and cosmology.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20076081
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-historical">
-            Numerical ledger
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20086069"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Numerical Ledger Companion:
-            Reference Ledger,
-            Closure Targets,
-            and Executable Checks for the
-            Quantized Dimensional Ledger Program
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Reference ledger and executable-check companion supporting
-          early electroweak,
-          flavor,
-          gravitational,
-          and cosmological closure reconstructions.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20086069
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Spectrum selection
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20086341"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Spectrum Selection as a Conditional Standard Model Theorem:
-            Gauge Seed Minimality,
-            Hypercharge Closure,
-            Anomaly Cancellation,
-            and a Single Generation
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Conditional Standard-Model spectrum-selection branch based on
-          gauge-seed minimality,
-          hypercharge closure,
-          anomaly cancellation,
-          and one-generation matter completion.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20086341
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Electroweak closure
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20089936"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Electroweak Numerical Closure:
-            Scheme-Declared Reconstructions of the Higgs Mass,
-            Effective Weak Mixing Angle,
-            Fine-Structure Constant,
-            and Fermi Scale
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Scheme-declared numerical reconstructions within the earlier
-          electroweak branch.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20089936
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Flavor closure
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20090053"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Flavor Closure as a Conditional Rank Theorem:
-            Three Generations,
-            Yukawa Depth,
-            CKM Leakage,
-            and PMNS Neutral-Flavor Closure
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier flavor branch covering generation rank,
-          Yukawa depth,
-          CKM leakage,
-          and PMNS neutral-flavor closure.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20090053
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Operator governance
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20087107"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Operator Governance as a Reproducible SMEFT Matrix Audit:
-            Modular Sector Selection,
-            Anomalous-Dimension Closure,
-            and Violation Taxonomy
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Reproducible SMEFT matrix-audit branch connecting QDL
-          closure classification to operator mixing and violation taxonomy.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20087107
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Classical gravity
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20088462"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Closure of Classical Gravity:
-            Einstein–Hilbert Minimality,
-            Bianchi Conservation,
-            Geodesic Motion,
-            Keplerian QDC Recovery,
-            and the Planck–Electroweak Hierarchy
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier classical-gravity branch covering
-          Einstein–Hilbert minimality,
-          conservation,
-          geodesic motion,
-          Keplerian recovery,
-          and hierarchy structure.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20088462
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-hypothesis">
-            Cosmological ansatz
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20090219"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            QDL Cosmological Closure as a Horizon-Screened Curvature Ansatz:
-            Vacuum-Energy Residuals,
-            Cosmic Horizon Ledgers,
-            and Dark-Sector Separation
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Earlier conditional cosmological branch emphasizing
-          horizon-screened curvature,
-          vacuum residuals,
-          cosmic horizon ledgers,
-          and dark-sector separation.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20090219
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       CLOSURE GRAMMAR AND QDC REALIZATIONS
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Closure Grammar &amp; QDC Realizations
-      </h2>
-
-      <p class="section-kicker">
-        Additional records sharpening closure grammar and physical QDC interpretations.
-      </p>
-
-    </div>
-
-
-    <div class="publication-list">
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Closure grammar
-          </span>
-
-          <span class="tag">
-            Falsification
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20098982"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Lessons from the QDL Closure Sequence:
-            Strong Claims,
-            Open Residuals,
-            Falsification Tests,
-            and the Emergence of a Compact Closure Grammar
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Consolidates lessons from the earlier closure sequence,
-          including strong claims,
-          unresolved residuals,
-          falsification tests,
-          and compact closure grammar.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20098982
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Neutral matching
-          </span>
-
-          <span class="tag">
-            Z6 grading
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20098523"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Neutral Matching Unit in QDL Closure Grammar:
-            A Uniqueness Theorem for 1/18 from Binary–Ternary Sector Coupling,
-            Z6 Operator Grading,
-            and Electroweak Residual Preservation
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Develops an earlier closure-grammar branch involving
-          binary–ternary sector matching,
-          Z6 grading,
-          and electroweak residual structure.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20098523
-        </div>
-
-      </article>
-
-
-
-      <article class="publication">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Compton realization
-          </span>
-
-          <span class="tag">
-            Operator selection
-          </span>
-
-        </div>
-
-
-        <h3>
-
-          <a
-            href="https://doi.org/10.5281/zenodo.20100436"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Quantized Dimensional Closure:
-            Compton Realization and Operator Sector Selection
-          </a>
-
-        </h3>
-
-
-        <p>
-
-          Connects dimensional closure to Compton localization-frequency
-          structure and operator-sector selection.
-
-        </p>
-
-
-        <div class="publication-meta">
-          Zenodo · DOI: 10.5281/zenodo.20100436
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       EARLIER FOUNDATIONS
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Earlier Foundational Papers
-      </h2>
-
-      <p class="section-kicker">
-        Early DOI-backed records establishing the mathematical QDL framework.
-      </p>
-
-    </div>
-
-
-    <div class="grid-3">
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-historical">
-            Lattice foundation
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.18970320"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Integer Lattice Structure of Dimensional Quantities:
-            The Algebraic Structure of the Quantized Dimensional Ledger
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Early algebraic and lattice-theoretic foundation for representing
-          dimensional quantities as integer vectors.
-
-        </p>
-
-
-        <div class="doi">
-          DOI: 10.5281/zenodo.18970320
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-historical">
-            Closure formalism
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.18981850"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            The Quantized Dimensional Ledger:
-            A Lattice Structure for Dimensional Closure in Physical Theories
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Early formal statement of dimensional closure as a
-          structural-admissibility condition.
-
-        </p>
-
-
-        <div class="doi">
-          DOI: 10.5281/zenodo.18981850
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-historical">
-            SMEFT application
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.17780443"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ledger-Closure Constraints on the SMEFT:
-            A Lattice-Theoretic Derivation of Operator Exclusions
-            and Wilson-Coefficient Relations
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Early application of QDL closure ideas to effective
-          field-theory operator structure.
-
-        </p>
-
-
-        <div class="doi">
-          DOI: 10.5281/zenodo.17780443
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       BENCHMARKS
-       ============================================================ -->
-
-  <section
-    class="section"
-    id="benchmarks"
-  >
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Executed Benchmark Records
-      </h2>
-
-      <p class="section-kicker">
-        Reproducible methodological records; these do not claim new physical effects.
-      </p>
-
-    </div>
-
-
-    <div class="grid-3">
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-executed">
-            Executed benchmark
-          </span>
-
-          <span class="tag">
-            Residual-first
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.18057668"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Benchmarks &amp; Null Tests
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Residual-first model-adequacy testing under declared
-          model families and parameter budgets.
-
-        </p>
-
-
-        <div class="doi">
-          DOI: 10.5281/zenodo.18057668
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-executed">
-            Executed benchmark
-          </span>
-
-          <span class="tag">
-            NV ODMR
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.18069870"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            NV ODMR Benchmark
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Public-data methodological benchmark structured for
-          replication and residual-first interpretation.
-
-        </p>
-
-
-        <div class="doi">
-          DOI: 10.5281/zenodo.18069870
-        </div>
-
-      </article>
-
-
-
-      <article class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-executed">
-            Executed benchmark
-          </span>
-
-          <span class="tag">
-            Optical cavity
-          </span>
-
-        </div>
-
-
-        <div class="card-title">
-
-          <a
-            href="https://doi.org/10.5281/zenodo.18076864"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Residual-First Benchmarking of Optical Cavity Resonance Traces
-            Using Public Data:
-            A Falsifiable Template for Model Adequacy Testing
-          </a>
-
-        </div>
-
-
-        <p>
-
-          Optical-cavity resonance benchmark designed as a reproducible
-          template for model-adequacy testing.
-
-        </p>
-
-
-        <div class="doi">
-          DOI: 10.5281/zenodo.18076864
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-    <div class="callout blue">
-
-      Benchmark records are preserved because null results,
-      failed comparisons,
-      and methodological tests are part of the Institute's
-      reproducibility history.
-
-      They should not be cited as evidence for a new QDL physical effect
-      unless the individual record explicitly establishes one.
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       BOOKS
-       ============================================================ -->
-
-  <section
-    class="section"
-    id="books"
-  >
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Books &amp; Reader-Facing Syntheses
-      </h2>
-
-      <p class="section-kicker">
-        Accessible materials alongside the formal research archive.
-      </p>
-
-    </div>
-
-
-    <article class="card">
-
-      <div class="book-wrap">
-
-
-        <div class="book-cover">
-
-          <img
-            src="book-cover.png"
-            alt="Cover of The Quantized Dimensional Ledger"
-          />
-
-        </div>
-
-
-        <div>
-
-          <div class="tagrow">
-
-            <span class="tag tag-purple">
-              Book
-            </span>
-
-            <span class="tag tag-historical">
-              Earlier synthesis
-            </span>
-
-          </div>
-
-
-          <div class="card-title">
-
-            <a
-              href="https://doi.org/10.5281/zenodo.18902770"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              The Quantized Dimensional Ledger:
-              A Structural Framework for Dimensional Coherence in Physics
-            </a>
-
-          </div>
-
-
-          <p>
-
-            Reader-facing book-length introduction to the QDL program.
-
-            It remains useful background.
-
-            Readers seeking the current comprehensive technical synthesis
-            should use
-            <em>
-              Primitive Closure and the Architecture of Physical Admissibility
-            </em>.
-
-          </p>
-
-
-          <div class="doi">
-            DOI: 10.5281/zenodo.18902770
-          </div>
-
-
-          <div class="btn-row">
-
-            <a
-              class="btn btn-purple"
-              href="https://www.amazon.com/dp/B0GHZJHT36"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Amazon Kindle
-            </a>
-
-            <a
-              class="btn"
-              href="https://doi.org/10.5281/zenodo.18902770"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Zenodo Book Record
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </article>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       HOW TO CITE / INTERPRET
-       ============================================================ -->
-
-  <section class="section">
-
-    <div class="section-header">
-
-      <h2 class="section-title">
-        Citation &amp; Interpretation Guidance
-      </h2>
-
-      <p class="section-kicker">
-        Use the record that actually supports the claim being cited.
-      </p>
-
-    </div>
-
-
-    <div class="grid-3">
-
-
-      <div class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-peer">
-            Journal citation
-          </span>
-
-        </div>
-
-
-        <h3>
-          For peer-reviewed QDL claims
-        </h3>
-
-
-        <p>
-
-          Cite the JTAP metrology article when referring to the
-          peer-reviewed dimensional-closure,
-          QMU-ledger,
-          or physical-constant work.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-purple">
-            Synthesis citation
-          </span>
-
-        </div>
-
-
-        <h3>
-          For the broad QDL architecture
-        </h3>
-
-
-        <p>
-
-          Cite
-          <em>
-            Primitive Closure and the Architecture of Physical Admissibility
-          </em>
-          for the major integrated theoretical synthesis.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-orange">
-            Status citation
-          </span>
-
-        </div>
-
-
-        <h3>
-          For UFT status and open problems
-        </h3>
-
-
-        <p>
-
-          Cite
-          <em>
-            Toward a QDL Unified Field Theory
-          </em>
-          for the frozen V1.0 theorem,
-          computational-gate,
-          reproducibility,
-          and open-problem status.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-executed">
-            Computational citation
-          </span>
-
-        </div>
-
-
-        <h3>
-          For reproducibility
-        </h3>
-
-
-        <p>
-
-          Cite the relevant computational companion,
-          completion archive,
-          or dataset rather than citing only a later narrative summary.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-historical">
-            Historical citation
-          </span>
-
-        </div>
-
-
-        <h3>
-          For earlier QDL branches
-        </h3>
-
-
-        <p>
-
-          Cite the original DOI-backed record,
-          while checking the current Research Program for later
-          refinements or claim-boundary changes.
-
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="tagrow">
-
-          <span class="tag tag-accent">
-            Current interpretation
-          </span>
-
-        </div>
-
-
-        <h3>
-          For the live scientific position
-        </h3>
-
-
-        <p>
-
-          Use
-          <a href="research.html">
-            Research Program
-          </a>
-          as the current status layer.
-
-          Frozen publications should not be silently rewritten to reflect
-          later gates.
-
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       FULL ARCHIVE / PUBLIC ACCESS
-       ============================================================ -->
-
-  <section class="section">
-
-    <div
-      class="card"
-      style="
-        border-color:rgba(37,99,235,.34);
-        background:#f8fbff;
-      "
-    >
-
-      <div class="tagrow">
-
-        <span class="tag tag-accent">
-          Public archive
-        </span>
-
-      </div>
-
-
-      <div class="card-title">
-        QDL Physics Institute Zenodo Community
-      </div>
-
-
-      <p>
-
-        The publications listed on this page are selected anchors rather
-        than an attempt to reproduce every individual QDL record inline.
-
-        The Institute's Zenodo community provides the broader public
-        DOI-backed archive.
-
-      </p>
-
-
-      <p>
-
-        Older papers remain available as part of the development history.
-
-        The current program should be interpreted through the newer
-        Primitive Closure synthesis,
-        consolidated UFT record,
-        Completion-Gate archive,
-        and living Research Program status.
-
-      </p>
-
-
-      <div class="btn-row">
-
-        <a
-          class="btn btn-primary"
-          href="https://zenodo.org/communities/qdl-physics-institute/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Browse QDL Zenodo Community
-        </a>
-
-        <a
-          class="btn"
-          href="resources.html"
-        >
-          Resources &amp; Reproducibility
-        </a>
-
-        <a
-          class="btn"
-          href="research.html"
-        >
-          Current Research Status
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ============================================================
-       FINAL STATUS NOTE
-       ============================================================ -->
-
-  <section class="section">
-
-    <div
-      class="card"
-      style="
-        border-color:rgba(217,119,6,.32);
-        background:#fffbeb;
-      "
-    >
-
-      <div class="tagrow">
-
-        <span class="tag tag-hypothesis">
-          Publication-status note
-        </span>
-
-      </div>
-
-
-      <div class="card-title">
-        Open publication does not imply peer review, and publication does not imply experimental confirmation.
-      </div>
-
-
-      <p>
-
-        Most QDL/QDC records are open research manuscripts,
-        datasets,
-        computational archives,
-        or monographs deposited for public scrutiny and reproducibility.
-
-        Their scientific status is determined by the content of the
-        individual record,
-        its proof or computational evidence,
-        its assumptions,
-        its claim-status declarations,
-        and any subsequent independent review or replication.
-
-      </p>
-
-
-      <p>
-
-        The Institute currently describes QDL/QDC as a
-        <strong>
-          conditional unified-field candidate
-        </strong>.
-
-        The public record contains substantial structural and
-        computational progress,
-        but unique amplitude normalization,
-        complete particle phenomenology,
-        global quantum closure,
-        distinctive experimental confirmation,
-        and unaffiliated replication remain open.
-
-      </p>
-
-    </div>
-
-  </section>
-
+  </div>
+</section>
 
 </main>
 
-
-
 <footer>
-
-  <div class="footer-grid">
+  <div class="footer">
 
     <div>
-      © 2026 QDL Physics Institute
+      <strong>© 2026 QDL Physics Institute</strong>
+      <p>Independent research · Huntley, Illinois, USA</p>
     </div>
 
-
     <div>
-
-      Last updated: August 11, 2026
-      — publication hierarchy updated for
-      Primitive Closure,
-      the consolidated QDL UFT V1.0 record,
-      Structural-to-Dynamical Completion archive,
-      Computational Companion I,
-      peer-reviewed JTAP anchor,
-      and current seven-page website structure.
-
-    </div>
-
-
-    <div>
-
-      Zenodo:
-
-      <a
-        href="https://zenodo.org/communities/qdl-physics-institute/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        QDL Community Archive
+      James D. Bourassa ·
+      <a href="https://orcid.org/0009-0008-0155-0051">
+        ORCID 0009-0008-0155-0051
       </a>
-
+      <p>
+        <a href="mailto:james.bourassa@qdlphysics.org">
+          james.bourassa@qdlphysics.org
+        </a>
+      </p>
     </div>
 
-
     <div>
-
-      Contact:
-
-      <a href="mailto:james.bourassa@qdlphysics.org">
-        james.bourassa@qdlphysics.org
-      </a>
-
+      <a href="index.html">Home</a>
+      ·
+      <a href="research.html">Research</a>
+      ·
+      <a href="resources.html">Resources</a>
+      <p>Scientific bibliography reviewed October 30, 2026</p>
     </div>
 
   </div>
-
 </footer>
 
-
 </body>
-
 </html>
