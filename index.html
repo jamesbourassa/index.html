@@ -103,6 +103,16 @@
     .pathway div{border:1px solid #bfdbfe;border-radius:12px;padding:14px;background:#f8fbff}
     .pathway strong{display:block;color:#0f172a}
     .pathway span{display:block;color:#475569;font-size:.83rem}
+    /* One-Year Report video: styles scoped to this page section */
+    .report-animation{margin-top:24px;padding-top:22px;border-top:1px solid var(--border)}
+    .report-animation h3{margin:0 0 8px}
+    .report-animation p{color:var(--muted)}
+    .report-animation video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:14px;border:1px solid #28618d;background:#061529;box-shadow:0 8px 26px rgba(15,23,42,.12)}
+    .report-animation details{margin-top:16px;color:#334155}
+    .report-animation summary{cursor:pointer;font-weight:650;color:var(--navy2)}
+    .report-animation ol{padding-left:1.5rem}
+    .report-animation .static-fallback{display:none;width:100%;height:auto;border-radius:14px;border:1px solid var(--border)}
+    @media (prefers-reduced-motion:reduce){.report-animation video{display:none}.report-animation .static-fallback{display:block}}
     figure{margin:20px 0 0}
     figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block}
     figcaption{color:#64748b;font-size:.85rem;margin-top:10px}
@@ -142,6 +152,7 @@
       <p><strong>One year of research:</strong> The November 2026 One-Year Report documents the development of QDL from dimensional closure to Network-First emergence and the current four-goal discovery program.</p>
       <div class="actions">
         <a class="btn btn-primary" href="QDL_One_Year_Report_2026.pdf" target="_blank" rel="noopener noreferrer">Read the One-Year Report (PDF)</a>
+        <a class="btn" href="#one-year-animation">Watch the One-Year Animation</a>
         <a class="btn btn-dark" href="#cross-scale">Explore Network-First Research</a>
         <a class="btn" href="qdl-calculator.html">Try the QDL Calculator</a>
         <a class="btn" href="#goals">Current Research Goals</a>
@@ -161,6 +172,26 @@
           </a>
           <figcaption>QDL One-Year Report: foundational mathematics, physical benchmarks, observable-first discovery, reproducible research, and the next scientific goals.</figcaption>
         </figure>
+        <!-- One-Year Report animation: media files reside beside index.html -->
+        <div class="report-animation" id="one-year-animation" aria-label="QDL One-Year Report animated overview">
+          <h3>From Dimensional Closure to Network-First Emergence</h3>
+          <p>A 60-second visual overview of the QDL Physics Institute's first year of research.</p>
+          <video controls autoplay muted loop playsinline preload="metadata" poster="QDL_One_Year_Animation_Poster.jpg" aria-label="Animated five-scene scientific overview of the QDL One-Year Report">
+            <source src="QDL_One_Year_Animated_Overview_60s.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="QDL_One_Year_Animated_Overview_60s.mp4">Open the MP4 video.</a>
+          </video>
+          <img class="static-fallback" src="QDL_One_Year_Animation_Poster.jpg" alt="QDL One-Year Report graphical abstract summarizing foundations, mathematics, Network-First hypothesis, physical benchmarks, microscopic origin and next goals." loading="lazy">
+          <details>
+            <summary>Read the animation transcript</summary>
+            <ol>
+              <li><strong>0–10 seconds — Primary network.</strong> Collective interactions come first. A shared medium connects localized degrees of freedom.</li>
+              <li><strong>10–20 seconds — Mathematical closure.</strong> Five-node three-plus-two reference graph; six cross-links and two independent graph cycles; closure normal (2,2,2,−3,−3).</li>
+              <li><strong>20–35 seconds — Emergent topology.</strong> An illustrative revolving toroidal field; magnetic hopfions provide a physical benchmark.</li>
+              <li><strong>35–46 seconds — Microscopic origin.</strong> Gauge fields, fermion zero modes, Pfaffian tests and vacuum selection.</li>
+              <li><strong>46–60 seconds — The next discovery.</strong> Complete the microscopic vacuum, derive the physical closure relation, make a new prediction, and test it independently. The animation concludes with the One-Year Report graphical abstract.</li>
+            </ol>
+          </details>
+        </div>
         <div class="actions"><a class="btn btn-primary" href="QDL_One_Year_Report_2026.pdf" target="_blank" rel="noopener noreferrer">Open Complete Report (PDF)</a><a class="btn" href="#goals">View the Four Goals</a></div>
       </div>
     </section>
